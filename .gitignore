@@ -1,0 +1,4 @@
+node_modules
+
+# add vscode settings to gitingore
+.vscode/settings.json
