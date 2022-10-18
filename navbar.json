@@ -1,0 +1,50 @@
+{
+    "_id": "62d3f1ad1a10cde6440c9920",
+    "Administration": {
+      "AboutUs": [],
+      "Leadership": [],
+      "Cells": [],
+      "Committees": [],
+      "GoverningBodies": []
+    },
+    "Academics": {
+      "Departments": [],
+      "AcademicSystem": [],
+      "ProgrammeofStudy": [],
+      "Centers": [],
+      "AcademicServices": [],
+      "AcademicFacilities": [],
+      "Convocation": [],
+      "OtherLinks": []
+    },
+    "Admissions": {
+      "ProspectiveStudents": [],
+      "JoinNitj": [],
+      "AntiRagging": [],
+      "InstitueProspectus": []
+    },
+    "LifeAtNITJ": {
+      "ClubsandSocities": [],
+      "Accommodation": [],
+      "NitJFestivals": [],
+      "Scholarships": [],
+      "CampusAmmenities": [],
+      "HealthAndWellness": []
+    },
+    "Research": {
+      "Researches": [
+        {
+          "id": "17e3d087-e437-42fc-a515-6a8dd602efdb",
+          "name": "unity",
+          "link": "link"
+        }
+      ],
+      "Incubations": [],
+      "Consultancies": [],
+      "UpcomingEvents": []
+    },
+    "Alumni": {
+      "Alumni": []
+    },
+    "__v": 0
+  }
