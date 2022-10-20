@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['*.html'],
+  content: ['*.html', './**/*.html'],
   theme: {
     container: {
       // you can configure the container to be centered
@@ -20,10 +20,18 @@ module.exports = {
     extend: {
       keyframes: {
         images: {
-          '0%': { 'background-image': "url('./public/assets/images/IMG_0195.JPG')" },
-          '33.33%': { 'background-image': "url('./public/assets/images/IMG_0196.JPG')" },
-          '66.66%': { 'background-image': "url('./public/assets/images/IMG_0198.JPG')" },
-          '100%': { 'background-image': "url('./public/assets/images/IMG_0195.JPG')" },
+          '0%': {
+            'background-image': "url('./public/assets/images/IMG_0195.JPG')",
+          },
+          '33.33%': {
+            'background-image': "url('./public/assets/images/IMG_0196.JPG')",
+          },
+          '66.66%': {
+            'background-image': "url('./public/assets/images/IMG_0198.JPG')",
+          },
+          '100%': {
+            'background-image': "url('./public/assets/images/IMG_0195.JPG')",
+          },
         },
         shake: {
           '0%, 100%': {
