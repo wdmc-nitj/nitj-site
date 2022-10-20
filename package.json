@@ -6,18 +6,18 @@
     "serve": "http-server ./ -p 3000",
     "build:css": "tailwind build -i css/src/style.css -o style.css",
     "watch:css": "tailwindcss -i css/src/style.css -o css/output.css --watch",
-    "dev": "npm-run-all --parallel watch:css serve"
+    "start": "concurrently \"yarn watch:css\" \"yarn serve\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^14.1.1",
-    "npm-run-all": "^4.1.5",
     "tailwindcss": "^3.0.24"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.0",
+    "concurrently": "^7.4.0",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "repository": {
