@@ -1,0 +1,72 @@
+
+.footer{
+    font-family: 'Inter', sans-serif;
+    background-color:  #f9f9f9 !important;
+    background-image: url('./images/footer-background.jpg');
+    background-size: cover;
+}
+@media  only screen and (max-width:1050px) {
+    .eventsbox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+    .framed {
+ 
+      background: url('./images/Rectangle.png');
+      background-size: cover;
+      
+      }
+      .btn2{
+          border: 3px solid #FEB702;
+          display: inline;
+          padding: 8px;
+          border-radius: 5px;
+          margin-top: 14% !important;
+      }
+      hr.new5 {
+        border: 2px solid #2167A7;
+        border-radius: 5px;
+      }
+      .btn2:hover{
+          background-color: #FEB702;;
+      }
+      .btn2 a:hover{
+          color: white;
+      }
+      @media  only screen and (max-width:1050px) {
+          .eventsbox{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+          }
+      
+          .footer{
+              display: flex;
+              flex-direction: column;
+          }
+      
+      
+      }
+
+ 
+      #background-nitj{
+        background: url('./images/nitj-alumni-background.jpg');
+        background-size: cover;
+        width: 85%;
+      }
+  
+      .sidebar{
+        background-color:rgb(244,244,244);
+      }

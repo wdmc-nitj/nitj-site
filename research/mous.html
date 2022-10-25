@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon and title -->
+  <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
+  <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+  <!-- RESEARCH -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./tabs.css">
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <style>
+    /* Customizing the Scrollbar */
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+    }
+
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: hsla(201, 96%, 26%);
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #212121;
+    }
+
+    /* Gallery Effects */
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      line-height: 0;
+    }
+
+    .box>img {
+      width: 100%;
+      height: 100%;
+      border: 0.2rem solid white;
+      border-radius: 8px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: ease 0.75s;
+    }
+
+    .box:hover {
+      flex: 1 1 30%;
+      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .box:hover>img {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .base-image {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      mask-image: linear-gradient(0deg, white, white, white, transparent);
+      -webkit-mask-image: linear-gradient(0deg, white, white, white, transparent);
+      background-color: #cccccc;
+      height: 400px;
+      background-position: 0% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .base-image-2 {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      background-color: #cccccc;
+      height: 300px;
+      background-position: 58% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .main-shadow {
+      text-shadow: rgb(0 0 0) 6px -1px 5px;
+    }
+
+    .carousel-open:checked+.carousel-item {
+      position: static;
+      opacity: 100;
+    }
+
+    .carousel-item {
+      -webkit-transition: opacity 0.9s ease-in-out;
+      transition: opacity 1s ease-in-out 0.2s;
+    }
+
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3,
+    #carousel-4:checked~.control-4 {
+      display: block;
+    }
+
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+  </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <script src="./header.js"></script>
+  
+    <div class="flex w-[100%] justify-between sidebar h-[100%]">
+      <div class="wrapper w-[15%] mt-[15%]">
+        <div class="tabs p-2 rounded fixed w-[15%]" id="sidetab">
+          <ul>
+            <li class="active2 bg-blue-100 mb-1">
+              <span class="text">International Institutes</span>
+            </li>
+            <li class="bg-blue-100 mb-1">
+              <span class="text">Industries</span>
+            </li>
+            <li class="bg-blue-100 mb-1">
+                <span class="text">Indian Institutes</span>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--international institutes-->
+        <div class="w-[80%] mt-[15%]">
+            <div class="tab_wrap active2 mr-8" style="display: block;">
+                <table class="table-fixed shadow-lg bg-white w-[100%]">
+                    <thead class="text-left">
+                        
+                      <tr>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[10%]">S. No.</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[40%]">Name of organization</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Date of MOUs</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Validity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">1.</td>
+                        <td class="border px-8 py-2 text-sm">Centrale Lille, France</td>
+                        <td class="border px-8 py-2 text-sm">10-03-2018</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">2.</td>
+                        <td class="border px-8 py-2 text-sm">The University of Florence, Italy</td>
+                        <td class="border px-8 py-2 text-sm">11-05-2018</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">3.</td>
+                        <td class="border px-8 py-2 text-sm">University of Bath, United Kingdom</td>
+                        <td class="border px-8 py-2 text-sm">10-07-2019</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">4.</td>
+                        <td class="border px-8 py-2 text-sm">The University of Missouri, Kansas City United State</td>
+                        <td class="border px-8 py-2 text-sm">09-03-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">5.</td>
+                        <td class="border px-8 py-2 text-sm">University Abderrahmane Mira-Bejaia (Algeria)</td>
+                        <td class="border px-8 py-2 text-sm">12-01-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>        
+
+            
+            <!--industries-->
+            <div class="tab_wrap mr-8" style="display: none;">
+                <table class="table-fixed shadow-lg bg-white w-[100%]">
+                    <thead class="text-left">
+                        
+                      <tr>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[10%]">S. No.</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[40%]">Name of organization</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Date of MOUs</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Validity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">1.</td>
+                        <td class="border px-8 py-2 text-sm">Luminous Power Technology Pvt. Ltd.</td>
+                        <td class="border px-8 py-2 text-sm">05-03-2016</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">2.</td>
+                        <td class="border px-8 py-2 text-sm">Ministry of Housing and Urban Poverty Alleviation, New Delhi</td>
+                        <td class="border px-8 py-2 text-sm">23-03-2016</td>
+                        <td class="border px-8 py-2 text-sm">One year</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">3.</td>
+                        <td class="border px-8 py-2 text-sm">V. K Group of Companies, Jalandhar</td>
+                        <td class="border px-8 py-2 text-sm">29-12-2016</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">4.</td>
+                        <td class="border px-8 py-2 text-sm">ValeurHR E-Solutions Pvt. Ltd.</td>
+                        <td class="border px-8 py-2 text-sm">29-12-2016</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">5.</td>
+                        <td class="border px-8 py-2 text-sm">Sapient Consulting Pvt. Ltd., Maharashtra-Mumbai</td>
+                        <td class="border px-8 py-2 text-sm">05-01-2018</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">6.</td>
+                        <td class="border px-8 py-2 text-sm">Indian Space Research Organisation (ISRO)</td>
+                        <td class="border px-8 py-2 text-sm">17-01-2019</td>
+                        <td class="border px-8 py-2 text-sm">Two years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">7.</td>
+                        <td class="border px-8 py-2 text-sm">Department of Science , Technology & Environment (Govt. of Punjab)</td>
+                        <td class="border px-8 py-2 text-sm">11-05-2019</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">8.</td>
+                        <td class="border px-8 py-2 text-sm">KISCO India Private Limited (KIPL), Chandigarh</td>
+                        <td class="border px-8 py-2 text-sm">11-11-2019</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">9.</td>
+                        <td class="border px-8 py-2 text-sm">Vyakti Vikas Kendra India, Bangalore</td>
+                        <td class="border px-8 py-2 text-sm">25-11-2019</td>
+                        <td class="border px-8 py-2 text-sm">One year</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">10.</td>
+                        <td class="border px-8 py-2 text-sm">Higher Education Funding Agency</td>
+                        <td class="border px-8 py-2 text-sm">13-07-2020</td>
+                        <td class="border px-8 py-2 text-sm">Three years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">11.</td>
+                        <td class="border px-8 py-2 text-sm">CSIR-Indian Institute of Petroleum, Dehradun</td>
+                        <td class="border px-8 py-2 text-sm">06-08-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">12.</td>
+                        <td class="border px-8 py-2 text-sm">The Green Builders</td>
+                        <td class="border px-8 py-2 text-sm">15-09-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">13.</td>
+                        <td class="border px-8 py-2 text-sm">Oorja Energy Engineering Services Hyderabad Pvt. Ltd.</td>
+                        <td class="border px-8 py-2 text-sm">15-09-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">14.</td>
+                        <td class="border px-8 py-2 text-sm">Education Counselling Training & Recruitment (ECTR) , Gurdashpur</td>
+                        <td class="border px-8 py-2 text-sm">10-09-2021</td>
+                        <td class="border px-8 py-2 text-sm">One year</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">15.</td>
+                        <td class="border px-8 py-2 text-sm">MTAB Technology Center Private Limited</td>
+                        <td class="border px-8 py-2 text-sm">30-09-2021</td>
+                        <td class="border px-8 py-2 text-sm">Two years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">16.</td>
+                        <td class="border px-8 py-2 text-sm">Research For Resurgence Foundation, Nagpur</td>
+                        <td class="border px-8 py-2 text-sm">27-10-2021</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">17.</td>
+                        <td class="border px-8 py-2 text-sm">Research For Resurgence Foundation, Nagpur</td>
+                        <td class="border px-8 py-2 text-sm">27-10-2021</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">18.</td>
+                        <td class="border px-8 py-2 text-sm">Central Tool Room Ludhiana</td>
+                        <td class="border px-8 py-2 text-sm">28-03-2022</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">19.</td>
+                        <td class="border px-8 py-2 text-sm">Cryptowire University</td>
+                        <td class="border px-8 py-2 text-sm">21-04-2022</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">20.</td>
+                        <td class="border px-8 py-2 text-sm">Heartfulness Education Trust, (HET) Vijaywada</td>
+                        <td class="border px-8 py-2 text-sm">26-04-2022</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                    </tbody>
+                  </table>
+  
+            </div>       
+  
+            <!--Indian institutes-->
+            <div class="tab_wrap mr-8" style="display: none;">
+                <table class="table-fixed shadow-lg bg-white w-[100%]">
+                    <thead class="text-left">
+                        
+                      <tr>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[10%]">S. No.</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[40%]">Name of organization</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Date of MOUs</th>
+                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Validity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">1.</td>
+                        <td class="border px-8 py-2 text-sm">Indian Institute of Technology, Mandi</td>
+                        <td class="border px-8 py-2 text-sm">04-07-2017</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">2.</td>
+                        <td class="border px-8 py-2 text-sm">Atal Bihari Vajpayee Govt. Institute of Engg. & Technology, Pragatinagar,Shimla</td>
+                        <td class="border px-8 py-2 text-sm">23-02-2018</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">3.</td>
+                        <td class="border px-8 py-2 text-sm">NIT Agartala, Tripura</td>
+                        <td class="border px-8 py-2 text-sm">17-01-2019</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">4.</td>
+                        <td class="border px-8 py-2 text-sm">Indian Institute of Technology, Mandi</td>
+                        <td class="border px-8 py-2 text-sm">30-07-2019</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">5.</td>
+                        <td class="border px-8 py-2 text-sm">University of Petroleum and Energy Studies, Dehradun</td>
+                        <td class="border px-8 py-2 text-sm">11-11-2019</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">6.</td>
+                        <td class="border px-8 py-2 text-sm">CSIR-Indian Institute of Petroleum, Dehradun</td>
+                        <td class="border px-8 py-2 text-sm">06-08-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">7.</td>
+                        <td class="border px-8 py-2 text-sm">Sardar Swaran Singh National Institute of Bio-Energy</td>
+                        <td class="border px-8 py-2 text-sm">18-08-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">8.</td>
+                        <td class="border px-8 py-2 text-sm">Khalsa College of Engineering & Technology, Amritsar</td>
+                        <td class="border px-8 py-2 text-sm">13-11-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">9.</td>
+                        <td class="border px-8 py-2 text-sm">National Institute of Technical Teachers Traning and Research, Chandigarh</td>
+                        <td class="border px-8 py-2 text-sm">02-12-2020</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">10.</td>
+                        <td class="border px-8 py-2 text-sm">National Institute of Fashion Technology, Kangra</td>
+                        <td class="border px-8 py-2 text-sm">28-12-2020</td>
+                        <td class="border px-8 py-2 text-sm">Three years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">11.</td>
+                        <td class="border px-8 py-2 text-sm">Rajiv Gandhi National Institute of Youth Development, Chennai</td>
+                        <td class="border px-8 py-2 text-sm">31-12-2020</td>
+                        <td class="border px-8 py-2 text-sm">Six years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">12.</td>
+                        <td class="border px-8 py-2 text-sm">CSIR-Institute of Himalayan Bioresource Technology Palampur</td>
+                        <td class="border px-8 py-2 text-sm">05-01-2021</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">13.</td>
+                        <td class="border px-8 py-2 text-sm">Rustamji Institute of Technology,BSF Academy</td>
+                        <td class="border px-8 py-2 text-sm">08-03-2021</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">14.</td>
+                        <td class="border px-8 py-2 text-sm">Government Hydro Engineering College, Bilaspur</td>
+                        <td class="border px-8 py-2 text-sm">15-03-2021</td>
+                        <td class="border px-8 py-2 text-sm">Three years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">15.</td>
+                        <td class="border px-8 py-2 text-sm">Guru Nank Dev Engineering College (GNDEC), Ludhiana</td>
+                        <td class="border px-8 py-2 text-sm">29-07-2021</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">16.</td>
+                        <td class="border px-8 py-2 text-sm">Jawaharlal Nehru Government Engineering College Sundernagar, Distt. Mandi, H.P</td>
+                        <td class="border px-8 py-2 text-sm">02-08-2021</td>
+                        <td class="border px-8 py-2 text-sm">Three years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">17.</td>
+                        <td class="border px-8 py-2 text-sm">Government Millennium Polytechnic, Chamba</td>
+                        <td class="border px-8 py-2 text-sm">02-10-2021</td>
+                        <td class="border px-8 py-2 text-sm">Three years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">18.</td>
+                        <td class="border px-8 py-2 text-sm">Government Polytechnic, Rohru, Distt. Shimla</td>
+                        <td class="border px-8 py-2 text-sm">02-10-2021</td>
+                        <td class="border px-8 py-2 text-sm">Three years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">19.</td>
+                        <td class="border px-8 py-2 text-sm">Indian Institute of Technology, Ropar, Rupnagar</td>
+                        <td class="border px-8 py-2 text-sm">19-11-2021</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">20.</td>
+                        <td class="border px-8 py-2 text-sm">Technology and Innovation Hub (AWaDH)IIT, Ropar</td>
+                        <td class="border px-8 py-2 text-sm">19-11-2021</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">21.</td>
+                        <td class="border px-8 py-2 text-sm">Technology and Innovation Hub (AWaDH)IIT, Ropar</td>
+                        <td class="border px-8 py-2 text-sm">05-09-2022</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">22.</td>
+                        <td class="border px-8 py-2 text-sm">Indian Institute of Information Technology Design and Manufacturing</td>
+                        <td class="border px-8 py-2 text-sm">30-09-2022</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                      <tr>
+                        <td class="border px-8 py-2 text-sm">23.</td>
+                        <td class="border px-8 py-2 text-sm">Sant Longowal Institute of Engineering & Technology</td>
+                        <td class="border px-8 py-2 text-sm">04-10-2022</td>
+                        <td class="border px-8 py-2 text-sm">Five years</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>        
+        </div>
+    </div>
+
+<div class="base-image hidden overflow-hidden lg:block "></div>
+<div class="relative bottom-0">
+
+<script src="./footer.js"></script>
+</div>
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var slideIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {
+          slideIndex = 1;
+        }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 2500);
+      }
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      //   return new Tooltip(tooltipTriggerEl);
+      // });
+    </script>
+    <script src="./app.js"></script>
+  <script src="./tabs.js"></script>
+  </body>
+  </html>
