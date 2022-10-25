@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+*{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+.wrapper{
+    display: flex !important;
+	justify-content: space-between;
+	width: 100%;
+}
+.tabs{
+	width: 16%;
+}
+
+.content{
+	width: 78%;
+}
+.tabs ul{
+	display: flex;
+    flex-direction: column;
+	border-radius: 3px;
+	margin-bottom: 25px;
+	box-shadow: 2px 2px 2px rgb(108, 173, 235);
+}
+
+.tabs ul li{
+	width: 100%;
+	padding: 10px;
+	font-family: 'Barlow', sans-serif !important;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: #3b3b3b;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+}
+
+
+
+.tabs ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+
+.tabs ul li:hover,
+.tabs ul li.active2{
+	background: rgb(42, 120, 193);
+	color: #ffffff;
+	border: 2px solid rgb(82, 82, 79);
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active2:before{
+	opacity: 1;
+}
+
+
+.programmes-heading{
+	color: white !important;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.tab_wrap .title{
+	font-size: 2rem;
+	margin-bottom: 15px;
+padding-bottom:2px;
+border-bottom: 2px solid black;
+display: inline-block;
+}
+
+.tab_wrap .tab_content p{
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 10px;
+}
+
+
+         ::-webkit-scrollbar {
+             width: 10px;
+         }
+ 
+ .right ::-webkit-scrollbar-thumb{
+     background-color: #2776c0;
+     height: 3px !important;
+     border-radius: 4px;
+     height: 1rem;
+ 
+ 
+ }
+ 
+ 
+ 
+ .right ::-webkit-scrollbar-track {
+     background-color: #ebebeb;
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+ }
+ 
+ 
+         ::-webkit-scrollbar-thumb {
+             background-color: rgba(30, 58, 138, 1);
+             border-radius: 10px;
+         }
+ 
+         ::-webkit-scrollbar-thumb:hover {
+             background-color: gray;
+         }
+ 
+         ::-webkit-resizer {
+             background-color: #ffffff;
+         }
+ 
+         .material-symbols-outlined {
+             font-variation-settings: "FILL"0, "wght"300, "GRAD"0, "opsz"20;
+         }
+ 
+         .bg-color {
+             background-color: white;
+         }
+ 
+         .bg-color-1 {
+             background-color: rgb(42, 120, 193);
+         }
+ 
+		 .bg-accent {
+			--tw-bg-opacity: 1;
+			background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
+		  }
+

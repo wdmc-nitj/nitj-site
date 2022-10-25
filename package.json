@@ -18,7 +18,8 @@
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.0",
     "concurrently": "^7.4.0",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "yarn": "^1.22.19"
   },
   "repository": {
     "type": "git",

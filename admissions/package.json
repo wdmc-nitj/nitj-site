@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.16",
@@ -37,4 +38,21 @@
   },
   "homepage": "https://github.com/sushant-dhuria/admission#readme",
   "description": ""
+=======
+  "name": "pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "vite"
+  },
+  "author": "sushant",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1",
+    "vite": "^3.1.8"
+  }
+>>>>>>> e259f77c7eff1738cf6d00dabee248aebca00e7a
 }
