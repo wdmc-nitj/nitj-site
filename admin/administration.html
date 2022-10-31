@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Adminstration - NITJ</title>
+
+    <script src="app.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        .titlebg {
+            background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Style the tab */
+        .tab {
+            color: white;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: hsla(201, 96%, 32%);
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            color: black;
+            background-color: hsla(242, 83%, 98%);
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            color: black;
+            background-color: hsla(242, 83%, 98%);
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* Transition on tab content */
+        .tabcontent {
+            animation: fadeEffect 1s;
+            /* Fading effect takes 1 second */
+        }
+        @keyframes fadeEffect {
+
+            /* Go from zero to full opacity */
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./common template/header.js"></script>
+
+    <div class="flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
+        <div>
+            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+                <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">Adminstration</p>
+            </div>
+            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="https://nitj.netlify.app/"
+                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">Adminstration</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <div id="academic-adminstration" class="scroll-mt-44 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Academic Adminstration</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+        <div class="px-4 lg:px-[11%]">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Dean')" id="defaultOpen1">Dean</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-P')">Associate Dean PG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-U')">Associate Dean UG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-E')">Associate Dean Examination</button>
+            </div>
+
+            <div id="Dean" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/da.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Harsh K Verma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Dean Academic</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>da@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690301</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690453</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-P" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as1.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Monica Sikka</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - PG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.dapg@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>09872995546</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690932</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-U" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as2.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Rakesh K. Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - UG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.daug@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>8288012020</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-E" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as3.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Raghaw Raman Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - Examination</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>coe@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="student-welfare" class="scroll-mt-44 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Student Welfare</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+        <div class="px-4 lg:px-[11%]">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab1(event, 'Dean-s')" id="defaultOpen2">Dean</button>
+                <button class="tablinks" onclick="openTab1(event, 'Associate-Dean-P-s')">Associate Dean PG</button>
+                <button class="tablinks" onclick="openTab1(event, 'Associate-Dean-U-s')">Associate Dean UG</button>
+                <button class="tablinks" onclick="openTab1(event, 'Associate-Dean-E-s')">Associate Dean Examination</button>
+            </div>
+
+            <div id="Dean-s" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="">
+                        <img src="img/da.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Harsh K Verma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Dean Academic</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>da@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690301</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690453</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-P-s" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as1.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Monica Sikka</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - PG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.dapg@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>09872995546</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690932</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-U-s" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as2.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Rakesh K. Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - UG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.daug@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>8288012020</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-E-s" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as3.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Raghaw Raman Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - Examination</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>coe@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="faculty-welfare" class="scroll-mt-44 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Faculty Welfare</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+        <div class="px-4 lg:px-[11%]">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Dean-f')">Dean</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-P-f')">Associate Dean PG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-U-f')">Associate Dean UG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-E-f')">Associate Dean Examination</button>
+            </div>
+
+            <div id="Dean-f" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="">
+                        <img src="img/da.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Harsh K Verma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Dean Academic</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>da@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690301</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690453</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-P-f" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as1.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Monica Sikka</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - PG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.dapg@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>09872995546</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690932</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-U-f" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as2.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Rakesh K. Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - UG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.daug@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>8288012020</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-E-f" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as3.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Raghaw Raman Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - Examination</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>coe@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="planning-development" class="scroll-mt-44 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Planning & Development</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+        <div class="px-4 lg:px-[11%]">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Dean-pd')">Dean</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-P-pd')">Associate Dean PG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-U-pd')">Associate Dean UG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-E-pd')">Associate Dean Examination</button>
+            </div>
+
+            <div id="Dean-pd" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="">
+                        <img src="img/da.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Harsh K Verma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Dean Academic</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>da@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690301</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690453</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-P-pd" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as1.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Monica Sikka</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - PG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.dapg@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>09872995546</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690932</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-U-pd" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as2.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Rakesh K. Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - UG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.daug@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>8288012020</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-E-pd" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as3.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Raghaw Raman Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - Examination</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>coe@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="research-consultancy" class="scroll-mt-44 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Research & Consultancy</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+        <div class="px-4 lg:px-[11%]">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Dean-rc')">Dean</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-P-rc')">Associate Dean PG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-U-rc')">Associate Dean UG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-E-rc')">Associate Dean Examination</button>
+            </div>
+
+            <div id="Dean-rc" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="">
+                        <img src="img/da.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Harsh K Verma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Dean Academic</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>da@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690301</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690453</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-P-rc" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as1.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Monica Sikka</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - PG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.dapg@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>09872995546</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690932</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-U-rc" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as2.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Rakesh K. Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - UG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.daug@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>8288012020</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-E-rc" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as3.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Raghaw Raman Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - Examination</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>coe@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="international-affairs" class="scroll-mt-44 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">International Affairs</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+        <div class="px-4 lg:px-[11%]">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Dean-ia')">Dean</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-P-ia')">Associate Dean PG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-U-ia')">Associate Dean UG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-E-ia')">Associate Dean Examination</button>
+            </div>
+
+            <div id="Dean-ia" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="">
+                        <img src="img/da.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Harsh K Verma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Dean Academic</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>da@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690301</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690453</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-P-ia" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as1.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Monica Sikka</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - PG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.dapg@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>09872995546</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>01812690932</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-U-ia" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as2.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Rakesh K. Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - UG</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>as.daug@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>8288012020</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Associate-Dean-E-ia" class="tabcontent">
+                <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+                    <div class="m-auto">
+                        <img src="img/as3.jpg" alt="">
+                    </div>
+                    <div class="lg:basis-3/4">
+                        <div class="flex flex-col items-start">
+                            <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Dr Raghaw Raman Sharma</p>
+                            <p class="text-gray-400 text-[12px] lg:text-[16px]">Associate Dean Academic - Examination</p>
+                            <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
+                            <div class="w-[100%] flex flex-col gap-[4px]">
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>coe@nitj.ac.in</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
+                                    <p class="">: &nbsp; &nbsp;</p>
+                                    <p>-</p>
+                                </div>
+                                <div class="mt-1 lg:mt-4">
+                                    <a class="text-accent transition ease-in-out duration-300 "
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="./common template/footer.js"></script>
+    <script>
+        function openTab(evt, deanName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(deanName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Default open
+        document.getElementById("defaultOpen1").click();
+
+        function openTab1(evt, deanName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(deanName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // // Default open
+        // document.getElementById("defaultOpen2").click();
+    </script>
+
+</body>
+
+</html>
