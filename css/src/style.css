@@ -25,6 +25,7 @@
     vertical-align: super;
   }
 }
+
 @layer utilities {
   .animate-delay {
     animate-delay: 100ms;
@@ -36,24 +37,35 @@
   .main-slider-text h2 {
     animation: rotate 8s ease-in-out 500ms infinite;
   }
-  @keyframes rotate {
-    10% {
-      transform: translateY(-7%);
+  @media screen and (max-width: 992px) {
+    .main-slider-text {
+      height: 95px;
     }
-    33.33% {
-      transform: translateY(0%);
+  }
+  @media screen and (max-width: 576px) {
+    .main-slider-text {
+      height: 80px;
     }
-    43.33% {
-      transform: translateY(-107%);
-    }
-    66.66% {
-      transform: translateY(-100%);
-    }
-    76.66% {
-      transform: translateY(-207%);
-    }
-    100% {
-      transform: translateY(-200%);
-    }
+  }
+}
+
+@keyframes rotate {
+  10% {
+    transform: translateY(-7%);
+  }
+  33.33% {
+    transform: translateY(0%);
+  }
+  43.33% {
+    transform: translateY(-107%);
+  }
+  66.66% {
+    transform: translateY(-100%);
+  }
+  76.66% {
+    transform: translateY(-207%);
+  }
+  100% {
+    transform: translateY(-200%);
   }
 }
