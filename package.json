@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "http-server ./ -p 3000",
     "build:css": "tailwind build -i css/src/style.css -o style.css",
-    "watch:css": "tailwindcss -i css/src/style.css -o css/output.css --watch",
+    "watch:css": "tailwindcss -i css/src/style.css -o style.css --watch",
     "start": "concurrently \"yarn watch:css\" \"yarn serve\""
   },
   "keywords": [],
