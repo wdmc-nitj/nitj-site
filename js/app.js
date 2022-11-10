@@ -67,7 +67,25 @@ function openDropdown() {
   }
 }
 function openDropdown2() {
+  var dropdown = document.getElementById('dropdown3')
+  if (dropdown.classList.contains('hidden')) {
+  } else {
+    dropdown.classList.add('hidden')
+  }
   var dropdown = document.getElementById('dropdown2')
+  if (dropdown.classList.contains('hidden')) {
+    dropdown.classList.remove('hidden')
+  } else {
+    dropdown.classList.add('hidden')
+  }
+}
+function openDropdown3() {
+  var dropdown = document.getElementById('dropdown2')
+  if (dropdown.classList.contains('hidden')) {
+  } else {
+    dropdown.classList.add('hidden')
+  }
+  var dropdown = document.getElementById('dropdown3')
   if (dropdown.classList.contains('hidden')) {
     dropdown.classList.remove('hidden')
   } else {
