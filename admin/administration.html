@@ -11,8 +11,7 @@
     <script src="app.js" defer></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css" />
 
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -91,12 +90,12 @@
 </head>
 
 <body>
-    <script src="./common template/header.js"></script>
+    <script src="../common template/header.js"></script>
 
-    <div class="flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
+    <div class="flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] mb-24">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-                <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">Adminstration</p>
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Adminstration</p>
             </div>
             <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center">
@@ -123,15 +122,16 @@
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
             </div>
         </div>
+
         <div class="px-4 lg:px-[11%]">
             <div class="tab">
-                <button class="tablinks active" onclick="openTab(event, 'Dean')" id="defaultOpen1">Dean</button>
-                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-P')">Associate Dean PG</button>
-                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-U')">Associate Dean UG</button>
-                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-E')">Associate Dean Examination</button>
+                <button class="" onclick="openDean('firstDean')">Dean</button>
+                <button class="" onclick="openDean('Associate-Dean-P')">Associate Dean PG</button>
+                <button class="" onclick="openDean()">Associate Dean UG</button>
+                <button class="" onclick="openDean()">Associate Dean Examination</button>
             </div>
 
-            <div id="Dean" class="tabcontent block">
+            <div id="firstDean" class="block">
                 <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
                     <div class="m-auto">
                         <img src="img/da.jpg" alt="">
@@ -167,7 +167,7 @@
                 </div>
             </div>
 
-            <div id="Associate-Dean-P" class="tabcontent">
+            <div id="Associate-Dean-P" class="">
                 <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
                     <div class="m-auto">
                         <img src="img/as1.jpg" alt="">
@@ -754,7 +754,6 @@
             </div>
         </div>
         
-
         <div id="research-consultancy" class="scroll-mt-44 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
             <div class="w-full flex flex-col items-start">
                 <p class="font2 font-medium text-[28px] lg:text-[44px]">Research & Consultancy</p>
@@ -1076,41 +1075,53 @@
 
 
     <script src="app.js"></script>
-    <script src="./common template/footer.js"></script>
+    <script src="../common template/footer.js"></script>
+
     <script>
-        function openTab(evt, deanName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+        function openDean(eyed) {
+            var x = document.getElementById(eyed);
+            if(x.style.display==="none") {
+                x.style.display = "block";
             }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            else {
+                x.style.display = "none";
             }
-            document.getElementById(deanName).style.display = "block";
-            evt.currentTarget.className += " active";
         }
+
+
+        
+        // function openTab(evt, deanName) {
+        //     var i, tabcontent, tablinks;
+        //     tabcontent = document.getElementsByClassName("tabcontent");
+        //     for (i = 0; i < tabcontent.length; i++) {
+        //         tabcontent[i].style.display = "none";
+        //     }
+        //     tablinks = document.getElementsByClassName("tablinks");
+        //     for (i = 0; i < tablinks.length; i++) {
+        //         tablinks[i].className = tablinks[i].className.replace(" active", "");
+        //     }
+        //     document.getElementById(deanName).style.display = "block";
+        //     evt.currentTarget.className += " active";
+        // }
 
         // Default open
-        // document.getElementById("defaultOpen1").click();
+        //document.getElementById("defaultOpen1,defaultOpen2").click();
+        //document.querySelectorAll("firstDean").click(); 
 
-        function openTab1(evt, deanName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(deanName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
+        // function openTab1(evt, deanName) {
+        //     var i, tabcontent, tablinks;
+        //     tabcontent = document.getElementsByClassName("tabcontent");
+        //     for (i = 0; i < tabcontent.length; i++) {
+        //         tabcontent[i].style.display = "none";
+        //     }
+        //     tablinks = document.getElementsByClassName("tablinks");
+        //     for (i = 0; i < tablinks.length; i++) {
+        //         tablinks[i].className = tablinks[i].className.replace(" active", "");
+        //     }
+        //     document.getElementById(deanName).style.display = "block";
+        //     evt.currentTarget.className += " active";
+        // }
 
-        // // Default open
-        // document.getElementById("defaultOpen2").click();
     </script>
 
 </body>
