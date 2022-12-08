@@ -25,7 +25,6 @@ window.onscroll = function () {
         institute_name[i].classList.remove('sm:text-xl')
         institute_name[i].classList.add('sm:text-lg')
         institute_name[i].classList.add('tracking-widest')
-        console.log(institute_name)
       } else if (institute_name[i].classList.contains('sm:text-lg')) {
         institute_name[i].classList.remove('sm:text-lg')
         institute_name[i].classList.add('sm:text-sm')
