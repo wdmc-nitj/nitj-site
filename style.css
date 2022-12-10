@@ -977,16 +977,16 @@ sup {
   margin-top: 1rem;
 }
 
-.mt-64 {
-  margin-top: 16rem;
-}
-
 .mb-24 {
   margin-bottom: 6rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mt-64 {
+  margin-top: 16rem;
 }
 
 .mt-12 {
@@ -1199,6 +1199,10 @@ sup {
 
 .mr-8 {
   margin-right: 2rem;
+}
+
+.mb-\[32px\] {
+  margin-bottom: 32px;
 }
 
 .block {
@@ -2770,6 +2774,10 @@ sup {
   padding-bottom: 10px;
 }
 
+.pt-\[112px\] {
+  padding-top: 112px;
+}
+
 .pt-3 {
   padding-top: 0.75rem;
 }
@@ -2796,6 +2804,14 @@ sup {
 
 .pt-\[16px\] {
   padding-top: 16px;
+}
+
+.pb-\[32px\] {
+  padding-bottom: 32px;
+}
+
+.pb-\[16px\] {
+  padding-bottom: 16px;
 }
 
 .pl-5 {
@@ -3037,6 +3053,26 @@ sup {
 
 .leading-\[155\.02\%\] {
   line-height: 155.02%;
+}
+
+.leading-\[27px\] {
+  line-height: 27px;
+}
+
+.leading-\[44px\] {
+  line-height: 44px;
+}
+
+.leading-\[42px\] {
+  line-height: 42px;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
+}
+
+.leading-\[41px\] {
+  line-height: 41px;
 }
 
 .tracking-wide {
@@ -4315,6 +4351,10 @@ sup {
     padding-right: 40px;
   }
 
+  .md\:pt-\[144px\] {
+    padding-top: 144px;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
@@ -4389,12 +4429,12 @@ sup {
     margin-right: 1rem;
   }
 
-  .lg\:mt-32 {
-    margin-top: 8rem;
-  }
-
   .lg\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .lg\:mt-32 {
+    margin-top: 8rem;
   }
 
   .lg\:mt-8 {
@@ -4459,6 +4499,10 @@ sup {
 
   .lg\:h-\[50vh\] {
     height: 50vh;
+  }
+
+  .lg\:h-\[3px\] {
+    height: 3px;
   }
 
   .lg\:h-\[200px\] {
@@ -4591,6 +4635,10 @@ sup {
     gap: 48px;
   }
 
+  .lg\:gap-\[16px\] {
+    gap: 16px;
+  }
+
   .lg\:overflow-y-scroll {
     overflow-y: scroll;
   }
@@ -4661,6 +4709,10 @@ sup {
 
   .lg\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .lg\:pt-\[144px\] {
+    padding-top: 144px;
   }
 
   .lg\:pt-24 {
@@ -4740,6 +4792,14 @@ sup {
     font-size: 17px;
   }
 
+  .lg\:text-\[68px\] {
+    font-size: 68px;
+  }
+
+  .lg\:text-\[32px\] {
+    font-size: 32px;
+  }
+
   .lg\:text-\[64px\] {
     font-size: 64px;
   }
@@ -4764,8 +4824,16 @@ sup {
     font-size: 26px;
   }
 
+  .lg\:text-\[54px\] {
+    font-size: 54px;
+  }
+
   .lg\:leading-\[35px\] {
     line-height: 35px;
+  }
+
+  .lg\:leading-\[27px\] {
+    line-height: 27px;
   }
 
   .lg\:scrollbar-default {
