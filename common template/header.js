@@ -352,24 +352,24 @@ id="nav-menu" style="display: none">
                         <ul class="flex flex-col gap-1 px-2 font-normal text-black">
                           <li class="hover:text-[#FF6600]">
                             <a href="/admin/index.html#vision-mission">Vision, Mission & Quality Policy</a>
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            Virtual Tour
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            Institute History
-                          </li>
-                          <li class="hover:text-[#FF6600]">
+                            </li>
+                            <li class="hover:text-[#FF6600]">
+                            <a href="/admin/virtualtour.html">Virtual Tour</a>
+                            </li>
+                            <li class="hover:text-[#FF6600]">
+                            <a href="/admin/index.html#history">Institute History</a>
+                            </li>
+                            <li class="hover:text-[#FF6600]">
                             Explore NITJ
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            NITJ Rankings & Awards
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            Institute Prospectus
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            Location
+                            </li>
+                            <li class="hover:text-[#FF6600]">
+                            <a href="/admin/ranking.html">NITJ Rankings & Awards</a>
+                            </li>
+                            <li class="hover:text-[#FF6600]">
+                            <a href="https://drive.google.com/file/d/1iQraSeXVHabN4_Y_4rUK3cUET7TiR7ts/view?usp=sharing">Institute Prospectus</a>
+                            </li>
+                            <li class="hover:text-[#FF6600]">
+                            <a href="/admin/location.html">Location</a>
                           </li>
                         </ul>
                       </div>
@@ -386,37 +386,37 @@ id="nav-menu" style="display: none">
                     <div class="h-full rounded-b-xl bg-white">
                       <ul class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
                         <li class="hover:text-[#FF6600]">
-                          Organisational Chart
+                          <a href="/admin/oc.html">Organisational Chart</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Chariperson
+                          <a href="/admin/Chairperson.html">Chairperson</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Director
+                        <a href="/admin/director.html">Director</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Registrar
+                        <a href="/admin/registrar.html">Registrar</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Academic administration
+                        <a href="/admin/administration.html#academic-administration">Academic administration</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Student Welfare
+                        <a href="/admin/administration.html#student-welfare">Student Welfare</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Faculty Welfare
+                        <a href="/admin/administration.html#faculty-welfare">Faculty Welfare</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Planning and Development
+                        <a href="/admin/administration.html#planning-developement">Planning & Development</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
                           Research and Consultancy
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          International Affairs
+                        <a href="/admin/administration.html#research-consultancy">Research & Consultancy</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Hostel Administration
+                        <a href="/admin/hostel.html">Hostel Administration</a>
                         </li>
                       </ul>
                     </div>
@@ -431,22 +431,22 @@ id="nav-menu" style="display: none">
                     <div class="h-full rounded-b-xl bg-white">
                       <ul class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
                         <li class="hover:text-[#FF6600]">
-                          NIT Council
+                        <a href="/admin/council.html">NIT Council</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Board of Governors
+                        <a href="/admin/governors.html">Board of Governors</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Senate
+                        <a href="/admin/senate.html">Senate</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Standing Committee of the Senate
+                        <a href="/admin/senate.html">Standing committee of the senate</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Finance Committee
+                        <a href="/admin/senate.html">Finance committee</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Building and Works Committee
+                        <a href="/admin/senate.html">Building & works committee</a>
                         </li>
                       </ul>
                     </div>
@@ -461,32 +461,30 @@ id="nav-menu" style="display: none">
                     <div class="h-full rounded-b-xl bg-white">
                       <ul class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
                         <li class="hover:text-[#FF6600]">
-                          E-Cell
+                        <a href="/admin/e-cell.html">E-Cell</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Equal Opportunities and
-                          SC/ST/OBC/PwD cell
+                        <a href="/admin/staff-g-cell.html">Equal Opportunities and
+                        SC/ST/OBC/PwD Cell</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Rajbhasha Cell
+                        <a href="/admin/staff-g-cell.html">Rajbhasha Cell</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          RTI Cell
+                        <a href="/admin/staff-g-cell.html">RTI Cell</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Student Grievances Cell
+                        <a href="/admin/student-g-cell.html">Student Grievances Cell</a>                        </li>
+                        <li class="hover:text-[#FF6600]">
+                        <a href="/admin/faculty-g-cell.html">Faculty Grievances Cell</a>                        </li>
+                        <li class="hover:text-[#FF6600]">
+                          <a href="/admin/staff-g-cell.html">Staff Grievances Cell</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Faculty Grievances Cell
+                        <a href="/admin/public-g-cell.html">Public Grievances Cell</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Staff Grievances Cell
-                        </li>
-                        <li class="hover:text-[#FF6600]">
-                          Public Grievances
-                        </li>
-                        <li class="hover:text-[#FF6600]">
-                          Women Cell
+                        <a href="/admin/women-cell.html">Women Cell</a>
                         </li>
                       </ul>
                     </div>
@@ -501,19 +499,19 @@ id="nav-menu" style="display: none">
                     <div class="h-full rounded-b-xl bg-white">
                       <ul class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
                         <li class="hover:text-[#FF6600]">
-                          Institute Development
+                        <a href="/admin/committees.html#institute-development">Institute Development Committee</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Internal Complaint
+                        <a href="/admin/committees.html#internal-complaint">Internal Complaint Committee</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Print, Digital Media and Newsletter
+                        <a href="/admin/committees.html#print-digital">Print, Digital Media and Newsletter</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Social Media
+                        <a href="/admin/committees.html#social-media">Social Media</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          Website Development and Management
+                        <a href="/admin/committees.html#website-management">Website Development and Management</a>
                         </li>
                       </ul>
                     </div>
