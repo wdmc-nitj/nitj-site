@@ -31,3 +31,5 @@ fetch('https://wdmc.onrender.com/news/')
       newsCards.appendChild(newsCard)
     })
   })
+
+

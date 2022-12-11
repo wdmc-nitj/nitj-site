@@ -359,3 +359,38 @@ function close_menu() {
       sideMenu.setAttribute("style", "display:none;");
     }
 }
+
+
+// News Cards Auto Scroll
+
+const newsCardsContainer = document.getElementById('news-cards')
+let cardContainerTop = newsCardsContainer.scrollTop
+
+
+let my_time;
+setTimeout('pageScroll()', 1500);
+
+
+
+
+let direction = true
+function pageScroll() {
+  let currTop = cardContainerTop
+
+  
+  if (true) {
+    let curr = 0
+    if (direction) {
+      curr = newsCardsContainer.scrollTop + 1
+    }
+    else {
+      curr = newsCardsContainer.scrollTop - 1
+    }
+    newsCardsContainer.scrollTop = curr
+    cardContainerTop = curr
+  }
+  if (cardContainerTop == currTop) {
+    direction = !direction
+  }
+  my_time = setTimeout('pageScroll()', 20);
+}
