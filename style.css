@@ -1770,6 +1770,10 @@ sup {
   scroll-margin-top: 11rem;
 }
 
+.scroll-mt-40 {
+  scroll-margin-top: 10rem;
+}
+
 .list-disc {
   list-style-type: disc;
 }
