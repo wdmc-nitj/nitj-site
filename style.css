@@ -1389,6 +1389,10 @@ sup {
   min-height: 700px;
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1552,6 +1556,10 @@ sup {
 
 .w-\[10\%\] {
   width: 10%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .min-w-full {
