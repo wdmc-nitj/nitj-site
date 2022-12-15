@@ -934,10 +934,6 @@ sup {
   margin-left: -1rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -976,6 +972,10 @@ sup {
 
 .mb-24 {
   margin-bottom: 6rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .mb-4 {
@@ -3091,11 +3091,6 @@ sup {
   color: hsl(242 83% 7% / 0.8);
 }
 
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .text-purple-500 {
   --tw-text-opacity: 1;
   color: rgb(168 85 247 / var(--tw-text-opacity));
@@ -3193,6 +3188,11 @@ sup {
 
 .text-\[\#ffffffcc\] {
   color: #ffffffcc;
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .text-opacity-100 {
