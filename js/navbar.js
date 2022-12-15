@@ -153,13 +153,4 @@ function navbarhelper(array,dropdown){
 
     dropdown.appendChild(bigCol)
   
-    // if(array[1] == false){
-    //   prevCol = col;
-    //   bigCol.appendChild(prevCol)
-    // }
-    // else{
-      
-    //   bigCol.appendChild(col)
-    
-    // }
 }
