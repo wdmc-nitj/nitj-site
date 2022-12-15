@@ -1438,6 +1438,10 @@ sup {
   min-height: 700px;
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1678,6 +1682,10 @@ sup {
 
 .basis-10\/12 {
   flex-basis: 83.333333%;
+}
+
+.basis-1 {
+  flex-basis: 0.25rem;
 }
 
 .table-fixed {

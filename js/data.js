@@ -66,44 +66,61 @@ fetch('https://wdmc.onrender.com/testimonial/get/all')
       `
         testimonial.appendChild(testimonialCard)
     })
-fetch('https://wdmc.onrender.com/latestEvent/get/all')
-    .then((response) => response.json())
-    .then((data) => {
-        const date = new Date(data.updatedAt);
+
+function dateManipulator(data) {
+  const date = new Date(data);
         const year = date.getFullYear();
         const day = date.getDate();
         const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY", "AUG", "SEPT", "OCT", "NOV", "DEC"];
         const month = months[date.getMonth()];
-        const FullDate = month + " " + day + "," + year;
+  const FullDate = month + " " + day + "," + year;
+  return FullDate
+}
 
-        const latestEventCards = document.getElementById('cards')
-        data.forEach((latestEvents) => {
-            const latestEvent = document.createElement('div')
-            latestEvent.setAttribute(
-                'class',
-                'scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth'
+
+fetch('https://wdmc.onrender.com/latestEvent/get/all')
+    .then((response) => response.json())
+    .then((data) => {
+        
+
+        const cards = document.getElementById('cards')
+      data.forEach((e) => {
+          console.log(e)
+            const card = document.createElement('div')
+            card.setAttribute(
+                'id', 'card'
             )
-            latestEvent.innerHTML = `
-              <div id="card">
-              <div class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
-            <div class = "flex h-full w-full flex-col p-2.5" >
-         <img class = "h-44 w-full object-cover rounded-lg" src = "AAQIECBAgUBYQsMqgyhEgQIAAAQIEBCw9QIAAAQIECBAoCwhYZVDlCBAgQIAAAQIClh4gQIAAAQIECJQFBKwyqHIECBAgQIAAAQFLDxAgQIAAAQIEygICVhlUOQIECBAgQICAgKUHCBAgQIAAAQJlAQGrDKocAQIECBAgQEDA0gMECBAgQIAAgbKAgFUGVY4AAQIECBAgIGDpAQIECBAgQIBAWUDAKoMqR4AAAQIECBAQsPQAAQIECBAgQKAsIGCVQZUjQIAAAQIECAhYeoAAAQIECBAgUBYQsMqgyhEgQIAAAQIEBCw9QIAAAQIECBAoCwhYZVDlCBAgQIAAAQIClh4gQIAAAQIECJQFBKwyqHIECBAgQIAAAQFLDxAgQIAAAQIEygICVhlUOQIECBAgQICAgKUHCBAgQIAAAQJlAQGrDKocAQIECBAgQEDA0gMECBAgQIAAgbKAgFUGVY4AAQIECBAgIGDpAQIECBAgQIBAWUDAKoMqR4AAAQIECBAQsPQAAQIECBAgQKAsIGCVQZUjQIAAAQIECAhYeoAAAQIECBAgUBYQsMqgyhEgQIAAAQIEBCw9QIAAAQIECBAoCwhYZVDlCBAgQIAAAQIClh4gQIAAAQIECJQFBKwyqHIECBAgQIAAAQFLDxAgQIAAAQIEygICVhlUOQIECBAgQICAgKUHCBAgQIAAAQJlAQGrDKocAQIECBAgQEDA0gMECBAgQIAAgbKAgFUGVY4AAQIECBAgIGDpAQIECBAgQIBAWUDAKoMqR4AAAQIECBAQsPQAAQIECBAgQKAsIGCVQZUjQIAAAQIECAhYeoAAAQIECBAgUBYQsMqgyhEgQIAAAQIEBCw9QIAAAQIECBAoCwhYZVDlCBAgQIAAAQIClh4gQIAAAQIECJQFBKwyqHIECBAgQIAAAQFLDxAgQIAAAQIEygICVhlUOQIECBAgQICAgKUHCBAgQIAAAQJlAQGrDKocAQIECBAgQEDA0gMECBAgQIAAgbKAgFUGVY4AAQIECBAgIGDpAQIECBAgQIBAWUDAKoMqR4AAAQIECBAQsPQAAQIECBAgQKAsIGCVQZUjQIAic8Q3AAAAGElEQVQAAQIECAhYeoAAAQIECBAgUBb4P1dRPzH7+HphAAAAAElFTkSuQmCC" 
-        />
-         <div class = "flex flex-col space-y-5 p-4">
-         <p class = "text-sm font-bold uppercase text-gray-900 opacity-50" >${FullDate} <
-         /p> 
-         <p class = "text-lg line-clamp-3 font-semibold text-gray-900">
-         ${latestEvents.title} </p> 
-     <div class = "mt-auto flex whitespace-nowrap items-center justify-start space-x-3" 
-        <a class = "cursor-pointer font-medium text-sky-500 hover:text-sky-600" > Read More & rarr; </a> </div> 
-        </div> 
-        </div> 
-        </div>
-        </div>
+        card.setAttribute('class', "min-h-full")
+            card.innerHTML = `
+              
+            <div
+                class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent h-full w-60">
+                <div class="flex h-full w-full flex-col p-2.5">
+                  <img class="h-44 w-full object-cover rounded-lg" src="./public/assets/images/img1.png" />
+                  <div class="flex flex-col space-y-5 p-4">
+                    <p class="text-sm font-bold uppercase text-gray-900 opacity-50">
+                        ${dateManipulator(e.updatedAt)}
+                    </p>
+                    <p class="text-lg line-clamp-3 font-semibold text-gray-900">
+                      ${e.title}
+                    </p>
+                    <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
+                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
       `
-            latestEventCards.appendChild(latestEvent)
+            cards.appendChild(card)
         })
     })
+
+
+
+ 
+              
+
 
 fetch('https://wdmc.onrender.com/administration/get/all')
     .then((response) => response.json())
