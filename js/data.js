@@ -50,7 +50,6 @@ fetch('https://wdmc.onrender.com/testimonial/get/all')
         //      <p class='ml-2 text-sm text-gray-600 font-bold'>CEO, Vector</p>
         //    </div>
         //  </div>
-        console.log(data)
         const testimonial = document.getElementById('testimonial')
         const testimonialCard = document.createElement('div')
         testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
@@ -135,8 +134,6 @@ fetch('https://wdmc.onrender.com/administration/get/all')
 //         </div>
 //       </div>
 // </div>
-
-    console.log(data)
     
         const directorMessage = document.getElementById("director-message")
         
@@ -148,7 +145,7 @@ fetch('https://wdmc.onrender.com/administration/get/all')
 
     // msg.setAttribute('class', 'flex flex-col')
     msg.innerHTML = `
-        <img src="${data[0].image}" class="h-32 w-32 rounded-xl shadow-lg"
+        <img src="${data[0].image}" class="h-32 w-32 rounded-xl shadow-lg object-cover"
     alt="Director's Image" />
   <div id="content" class="flex flex-col space-y-4">
     <div class="flex space-x-4 items-center justify-start group">
@@ -174,49 +171,21 @@ fetch('https://wdmc.onrender.com/administration/get/all')
   })
   
 
+fetch('https://wdmc.onrender.com/ranking/get/all')
+  .then((response) => response.json())
+  .then((data) => {
+    const statsData = data[0].Ranking
+    console.log(statsData)
+    const element = document.getElementById('placement-stats')
 
 
-
-
-// `< section id = "placement-stats"
-// class = "my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat" >
-//     <div class = "bg-dark-purple/70" >
-//     <div class = "container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0" >
-//     <h1 class = "text-5xl font-bold uppercase text-white" > #numbers < br / >
-//     <span style = " -webkit - text - stroke: 1 px# ffffff!important; 
-//     -webkit - text - fill - color: transparent;
-// " class="inline - block ">that prove</span>NITJ
-//     </h1> <div class = "grid grid-cols-2 gap-10 text-white md:max-w-sm"id = "stats" >
-//     <div class = "number" >
-//     <h1 class = "text-5xl font-bold uppercase" > < span > 995 < /span>+</h1 >
-//     <p class = "text-lg uppercase" > Students placed < /p> </div> 
-//     <div class = "number" >
-//     <h1 class = "text-5xl font-bold uppercase" > < span > 150 < /span>+</h1 >
-//     <p class = "text-lg uppercase" > Companies visited < /p> </div> 
-//     <div class = "number" >
-//     <h1 class = "text-5xl font-bold uppercase" > < span > 1.2 < /span> CR</h1 >
-//     < p class = "text-lg uppercase" > Highest package < /p> </div> 
-//     <div class = "number" >
-//     <h1 class = "text-5xl font-bold uppercase" > < span > 15 < /span>+</h1 >
-//     <p class = "text-lg uppercase" > startups < /p> 
-//     </div> 
-//     </div> 
-//     </div> 
-//     </div> 
-//     </section>`
-// fetch('https://wdmc.onrender.com/ranking/get/all')
-//     .then((response) => response.json())
-//     .then((data) => {
-//             // //////////////////////
-//             // Original News Card Element
-//             // //////////////////////
-//             // <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
-//             //   <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
-//             //     <p class="w-full text-lg font-semibold">This is a headline</p>
-//             //     <p class="w-full line-clamp-2">
-//             //       Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-//             //       ipsum dolor sit 2
-//             //     </p>
-//             //   </div>
-//             // </div>
-//             const placementStats = document.getElementById('placement-stats')
+    for (const metric in statsData) {
+      const stat = document.createElement('div')
+      stat.setAttribute('class', 'number')
+      stat.innerHTML = `
+      <h1 class="text-5xl font-bold uppercase">${statsData[metric]}</h1>
+      <p class="text-lg uppercase">${metric}</p>
+      `
+      element.appendChild(stat)
+    }
+  })

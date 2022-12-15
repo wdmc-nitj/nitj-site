@@ -1624,6 +1624,7 @@
           <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
             onclick="slideCards('left')"></i>
           <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth">
+            <!-- ///////////////// -->
             <div id="card">
               <div
                 class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
@@ -1647,6 +1648,7 @@
                 </div>
               </div>
             </div>
+            <!-- /////////// -->
             <div id="card">
               <div
                 class="flex flex-col items-start justify-start overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
@@ -1781,7 +1783,7 @@
           </span>
         </div>
         <div class="flex flex-col space-y-4 py-6 px-2 overflow-scroll h-[29rem]" id="news-cards">
-          <!-- Data coming from the API -->
+          <!-- Data from the API -->
           <!-- TODO : Add auto scrolling -->
           <!-- TODO : Add loading state -->
         </div>
@@ -1797,8 +1799,8 @@
   <!-- === News Section Ends === -->
   <!-- === Directors message starts === -->
 
-  <div id = "director-message" class="container mx-auto my-10">
-
+  <div id="director-message" class="container mx-auto my-10">
+    <!-- Data from API -->
   </div>
   <!-- === Admission Section Starts === -->
 
@@ -2198,7 +2200,7 @@
   </div>
 
   <!-- Institute in Numbers section -->
-  <section id="placement-stats"
+  <section
     class="my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
     <div class="bg-dark-purple/70">
       <div
@@ -2211,23 +2213,8 @@
               " class="inline-block">that prove</span>
           NITJ
         </h1>
-        <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="stats">
-          <div class="number">
-            <h1 class="text-5xl font-bold uppercase"><span>995</span>+</h1>
-            <p class="text-lg uppercase">Students placed</p>
-          </div>
-          <div class="number">
-            <h1 class="text-5xl font-bold uppercase"><span>150</span>+</h1>
-            <p class="text-lg uppercase">Companies visited</p>
-          </div>
-          <div class="number">
-            <h1 class="text-5xl font-bold uppercase"><span>1.2</span> CR</h1>
-            <p class="text-lg uppercase">Highest package</p>
-          </div>
-          <div class="number">
-            <h1 class="text-5xl font-bold uppercase"><span>15</span>+</h1>
-            <p class="text-lg uppercase">startups</p>
-          </div>
+        <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
+          <!-- Data From API -->
         </div>
       </div>
     </div>
