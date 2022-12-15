@@ -1,3 +1,5 @@
+// TODO : use promise.all to fetch all data at once
+
 fetch('https://wdmc.onrender.com/news/')
   .then((response) => response.json())
   .then((data) => {
@@ -32,4 +34,36 @@ fetch('https://wdmc.onrender.com/news/')
     })
   })
 
-
+fetch('https://wdmc.onrender.com/testimonial/get/all')
+  .then((response) => response.json())
+  .then((data) => {
+    // //////////////////////
+    // Original Element
+    // //////////////////////
+    //  <div class='text-xl flex flex-col gap-5'>
+    //    <p>
+    //      One of the best educational institutes in Punjab. Experienced faculty and
+    //      staff with modern classrooms
+    //    </p>
+    //    <div>
+    //      <p class='text-lg font-bold text-accent'>- Ria Mehta</p>
+    //      <p class='ml-2 text-sm text-gray-600 font-bold'>CEO, Vector</p>
+    //    </div>
+    //  </div>
+    console.log(data)
+    const testimonial = document.getElementById('testimonial')
+    const testimonialCard = document.createElement('div')
+    testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
+    testimonialCard.innerHTML = `
+            <div class='text-xl flex flex-col gap-5'>
+              <p>
+                ${data[0].messageText}
+              </p>
+              <div>
+                <p class='text-lg font-bold text-accent'>- ${data[0].name}</p>
+                <p class='ml-2 text-sm text-gray-600 font-bold'>${data[0].designation}</p>
+              </div>
+            </div>
+      `
+    testimonial.appendChild(testimonialCard)
+  })

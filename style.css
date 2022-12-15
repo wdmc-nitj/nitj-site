@@ -604,6 +604,11 @@ sup {
   position: relative;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -887,20 +892,8 @@ sup {
   margin-bottom: 2.5rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
+.-ml-4 {
+  margin-left: -1rem;
 }
 
 .ml-2 {
@@ -933,6 +926,10 @@ sup {
 
 .mr-\[6px\] {
   margin-right: 6px;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mt-4 {
@@ -1039,6 +1036,10 @@ sup {
   margin-left: 6%;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .ml-\[2\%\] {
   margin-left: 2%;
 }
@@ -1089,6 +1090,10 @@ sup {
 
 .mr-14 {
   margin-right: 3.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mr-6 {
@@ -1149,6 +1154,10 @@ sup {
 
 .ml-0 {
   margin-left: 0px;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mb-12 {
@@ -1618,12 +1627,12 @@ sup {
   flex-basis: 66.666667%;
 }
 
-.basis-1\/4 {
-  flex-basis: 25%;
-}
-
 .basis-3\/5 {
   flex-basis: 60%;
+}
+
+.basis-1\/4 {
+  flex-basis: 25%;
 }
 
 .basis-3\/12 {
@@ -1726,6 +1735,10 @@ sup {
 
 .scroll-mt-44 {
   scroll-margin-top: 11rem;
+}
+
+.scroll-mt-40 {
+  scroll-margin-top: 10rem;
 }
 
 .list-disc {
@@ -1931,12 +1944,6 @@ sup {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-2\.5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.625rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.625rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-12 > :not([hidden]) ~ :not([hidden]) {
@@ -2146,10 +2153,6 @@ sup {
 .border-blue-700 {
   --tw-border-opacity: 1;
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
-}
-
-.border-accent\/50 {
-  border-color: hsl(201 96% 32% / 0.5);
 }
 
 .border-purple-500 {
@@ -2495,10 +2498,6 @@ sup {
   padding: 1.5rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-\[25px\] {
   padding: 25px;
 }
@@ -2616,11 +2615,6 @@ sup {
   padding-right: 1.5rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -2639,6 +2633,11 @@ sup {
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-\[6\%\] {
@@ -2697,8 +2696,8 @@ sup {
   padding-top: 2rem;
 }
 
-.pt-10 {
-  padding-top: 2.5rem;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .pb-2 {
@@ -3061,11 +3060,6 @@ sup {
 
 .text-dark-purple\/80 {
   color: hsl(242 83% 7% / 0.8);
-}
-
-.text-purple-50 {
-  --tw-text-opacity: 1;
-  color: rgb(250 245 255 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -3532,11 +3526,6 @@ sup {
 .hover\:bg-blue-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-blue-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-black:hover {
@@ -4343,10 +4332,6 @@ sup {
     display: none;
   }
 
-  .lg\:h-96 {
-    height: 24rem;
-  }
-
   .lg\:h-\[5px\] {
     height: 5px;
   }
@@ -4399,7 +4384,6 @@ sup {
     width: -moz-fit-content;
     width: fit-content;
   }
-
   .lg\:w-\[85\%\] {
     width: 85%;
   }
@@ -4456,24 +4440,12 @@ sup {
     flex-direction: row;
   }
 
-  .lg\:flex-col {
-    flex-direction: column;
-  }
-
   .lg\:items-start {
     align-items: flex-start;
   }
 
-  .lg\:items-stretch {
-    align-items: stretch;
-  }
-
   .lg\:gap-5 {
     gap: 1.25rem;
-  }
-
-  .lg\:gap-0 {
-    gap: 0px;
   }
 
   .lg\:gap-12 {
@@ -4498,30 +4470,6 @@ sup {
 
   .lg\:gap-\[16px\] {
     gap: 16px;
-  }
-
-  .lg\:overflow-y-scroll {
-    overflow-y: scroll;
-  }
-
-  .lg\:whitespace-normal {
-    white-space: normal;
-  }
-
-  .lg\:rounded-tr-none {
-    border-top-right-radius: 0px;
-  }
-
-  .lg\:rounded-br-none {
-    border-bottom-right-radius: 0px;
-  }
-
-  .lg\:rounded-tl-none {
-    border-top-left-radius: 0px;
-  }
-
-  .lg\:rounded-bl-none {
-    border-bottom-left-radius: 0px;
   }
 
   .lg\:border-r {
@@ -4687,15 +4635,6 @@ sup {
 
   .lg\:leading-\[27px\] {
     line-height: 27px;
-  }
-
-  .lg\:scrollbar-default {
-    -ms-overflow-style: auto;
-    scrollbar-width: auto;
-  }
-
-  .lg\:scrollbar-default::-webkit-scrollbar {
-    display: block;
   }
 }
 
