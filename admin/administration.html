@@ -125,13 +125,13 @@
 
         <div class="px-4 lg:px-[11%]">
             <div class="tab">
-                <button class="" onclick="openDean('firstDean')">Dean</button>
-                <button class="" onclick="openDean('Associate-Dean-P')">Associate Dean PG</button>
-                <button class="" onclick="openDean()">Associate Dean UG</button>
-                <button class="" onclick="openDean()">Associate Dean Examination</button>
+                <button class="tablinks active" onclick="openTab(event,'firstDean-sw')">Dean</button>
+                <button class="tablinks " onclick="openTab(event,'Associate-Dean-P-sw')">Associate Dean PG</button>
+                <button class="tablinks " onclick="openTab(event,'Associate-Dean-U-sw')">Associate Dean UG</button>
+                <button class="tablinks " onclick="openTab(event,'Associate-Dean-E-sw')">Associate Dean Examination</button>
             </div>
 
-            <div id="firstDean" class="block">
+            <div id="firstDean-sw" class="tabcontent block">
                 <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
                     <div class="m-auto">
                         <img src="img/da.jpg" alt="">
@@ -167,7 +167,7 @@
                 </div>
             </div>
 
-            <div id="Associate-Dean-P" class="">
+            <div id="Associate-Dean-P-sw" class="tabcontent">
                 <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
                     <div class="m-auto">
                         <img src="img/as1.jpg" alt="">
@@ -203,7 +203,7 @@
                 </div>
             </div>
 
-            <div id="Associate-Dean-U" class="tabcontent">
+            <div id="Associate-Dean-U-sw" class="tabcontent">
                 <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
                     <div class="m-auto">
                         <img src="img/as2.jpg" alt="">
@@ -239,7 +239,7 @@
                 </div>
             </div>
 
-            <div id="Associate-Dean-E" class="tabcontent">
+            <div id="Associate-Dean-E-sw" class="tabcontent">
                 <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
                     <div class="m-auto">
                         <img src="img/as3.jpg" alt="">
@@ -285,10 +285,10 @@
         </div>
         <div class="px-4 lg:px-[11%]">
             <div class="tab">
-                <button class="tablinks active" onclick="openTab1(event, 'Dean-s')" id="defaultOpen2">Dean</button>
-                <button class="tablinks" onclick="openTab1(event, 'Associate-Dean-P-s')">Associate Dean PG</button>
-                <button class="tablinks" onclick="openTab1(event, 'Associate-Dean-U-s')">Associate Dean UG</button>
-                <button class="tablinks" onclick="openTab1(event, 'Associate-Dean-E-s')">Associate Dean Examination</button>
+                <button class="tablinks active" onclick="openTab(event, 'Dean-s')" id="defaultOpen2">Dean</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-P-s')">Associate Dean PG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-U-s')">Associate Dean UG</button>
+                <button class="tablinks" onclick="openTab(event, 'Associate-Dean-E-s')">Associate Dean Examination</button>
             </div>
 
             <div id="Dean-s" class="tabcontent block">
@@ -1078,49 +1078,31 @@
     <script src="../common template/footer.js"></script>
 
     <script>
-        function openDean(eyed) {
-            var x = document.getElementById(eyed);
-            if(x.style.display==="none") {
-                x.style.display = "block";
-            }
-            else {
-                x.style.display = "none";
+        
+        function openDeans() {
+            const deans = ['firstDean-sw','Dean-ia', 'Dean-rc', 'Dean-pd', 'Dean-f', 'Dean-s']
+            for (let i = 0; i < deans.length; i++) {
+                document.getElementById(deans[i]).style.display = "block";
             }
         }
-
-
         
-        // function openTab(evt, deanName) {
-        //     var i, tabcontent, tablinks;
-        //     tabcontent = document.getElementsByClassName("tabcontent");
-        //     for (i = 0; i < tabcontent.length; i++) {
-        //         tabcontent[i].style.display = "none";
-        //     }
-        //     tablinks = document.getElementsByClassName("tablinks");
-        //     for (i = 0; i < tablinks.length; i++) {
-        //         tablinks[i].className = tablinks[i].className.replace(" active", "");
-        //     }
-        //     document.getElementById(deanName).style.display = "block";
-        //     evt.currentTarget.className += " active";
-        // }
+        function openTab(evt, deanName) {
+             var i, tabcontent, tablinks;
+             tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    if(tabcontent[i].id[tabcontent[i].id.length-1] == deanName[deanName.length-1]){
+                        tabcontent[i].style.display = "none";
+                    }
+                }
+             tablinks = document.getElementsByClassName("tablinks");
+             for (i = 0; i < tablinks.length; i++) {
+                 tablinks[i].className = tablinks[i].className.replace(" active", "");
+             }
+             document.getElementById(deanName).style.display = "block";
+             evt.currentTarget.className += " active";
+         }
 
-        // Default open
-        //document.getElementById("defaultOpen1,defaultOpen2").click();
-        //document.querySelectorAll("firstDean").click(); 
-
-        // function openTab1(evt, deanName) {
-        //     var i, tabcontent, tablinks;
-        //     tabcontent = document.getElementsByClassName("tabcontent");
-        //     for (i = 0; i < tabcontent.length; i++) {
-        //         tabcontent[i].style.display = "none";
-        //     }
-        //     tablinks = document.getElementsByClassName("tablinks");
-        //     for (i = 0; i < tablinks.length; i++) {
-        //         tablinks[i].className = tablinks[i].className.replace(" active", "");
-        //     }
-        //     document.getElementById(deanName).style.display = "block";
-        //     evt.currentTarget.className += " active";
-        // }
+         document.addEventListener("load", openDeans())
 
     </script>
 
