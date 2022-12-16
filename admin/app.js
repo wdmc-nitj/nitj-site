@@ -25,7 +25,7 @@ window.onscroll = function () {
         institute_name[i].classList.remove('sm:text-xl')
         institute_name[i].classList.add('sm:text-lg')
         institute_name[i].classList.add('tracking-widest')
-        console.log(institute_name)
+        // console.log(institute_name)
       } else if (institute_name[i].classList.contains('sm:text-lg')) {
         institute_name[i].classList.remove('sm:text-lg')
         institute_name[i].classList.add('sm:text-sm')
@@ -203,61 +203,61 @@ function slideResearch(direction) {
 // ///////////////////////////
 // Admission Section Tabs
 
-const openCourse = (e) => {
-  let tabcontent = document.getElementsByClassName('courseContent')
-  let tablinks = document.getElementsByClassName('tab-link')
+// const openCourse = (e) => {
+//   let tabcontent = document.getElementsByClassName('courseContent')
+//   let tablinks = document.getElementsByClassName('tab-link')
 
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.add('hidden')
-  }
+//   for (let i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].classList.add('hidden')
+//   }
 
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-    tablinks[i].classList.remove('bg-accent', 'text-white')
-  }
-  e.classList.remove('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-  e.classList.add('bg-accent', 'text-white')
-  document.getElementById(e.dataset.course).classList.remove('hidden')
-}
+//   for (let i = 0; i < tablinks.length; i++) {
+//     tablinks[i].classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
+//     tablinks[i].classList.remove('bg-accent', 'text-white')
+//   }
+//   e.classList.remove('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
+//   e.classList.add('bg-accent', 'text-white')
+//   document.getElementById(e.dataset.course).classList.remove('hidden')
+// }
 
-const notificationTabs = (e) => {
-  let tabcontent = document.getElementsByClassName('notice-content')
-  let tablinks = document.getElementsByClassName('notif-link')
+// const notificationTabs = (e) => {
+//   let tabcontent = document.getElementsByClassName('notice-content')
+//   let tablinks = document.getElementsByClassName('notif-link')
 
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.add('hidden')
-  }
+//   for (let i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].classList.add('hidden')
+//   }
 
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
-    tablinks[i].classList.remove(
-      'bg-blue-100',
-      'text-accent',
-      'hover:bg-blue-200'
-    )
-  }
-  e.classList.remove('hover:bg-blue-50', 'text-slate-400')
-  e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-  document.getElementById(e.dataset.notif).classList.remove('hidden')
-}
+//   for (let i = 0; i < tablinks.length; i++) {
+//     tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
+//     tablinks[i].classList.remove(
+//       'bg-blue-100',
+//       'text-accent',
+//       'hover:bg-blue-200'
+//     )
+//   }
+//   e.classList.remove('hover:bg-blue-50', 'text-slate-400')
+//   e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
+//   document.getElementById(e.dataset.notif).classList.remove('hidden')
+// }
 
 // ///////////////////////////
 // Image Slider Animation::
 
 // const mainText = document.getElementById('main-slider-text')
-const mainImg = document.getElementById('main-image')
-const slider = [
-  ['The Place of transformation', './public/assets/images/IMG_0196.JPG'],
-  ['78th IN OVERALL NIRF RANKING', './public/assets/images/IMG_0198.JPG'],
-  ['49th IN ENGINEERING NIRF', './public/assets/images/IMG_0195.JPG'],
-]
+// const mainImg = document.getElementById('main-image')
+// const slider = [
+//   ['The Place of transformation', './public/assets/images/IMG_0196.JPG'],
+//   ['78th IN OVERALL NIRF RANKING', './public/assets/images/IMG_0198.JPG'],
+//   ['49th IN ENGINEERING NIRF', './public/assets/images/IMG_0195.JPG'],
+// ]
 
-let i = 0
-setInterval(() => {
-  // mainText.innerText = slider[i % slider.length][0]
-  mainImg.style.backgroundImage = `url('${slider[i % slider.length][1]}')`
-  i++
-}, 2000)
+// let i = 0
+// setInterval(() => {
+//   // mainText.innerText = slider[i % slider.length][0]
+//   mainImg.style.backgroundImage = `url('${slider[i % slider.length][1]}')`
+//   i++
+// }, 2000)
 
 // Animate the numbers on the stats section
 // const stats = document.getElementById('placement-stats')
@@ -276,16 +276,16 @@ setInterval(() => {
 //   }
 // })
 
-function isInViewPort(el) {
-  const rect = el.getBoundingClientRect()
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  )
-}
+// function isInViewPort(el) {
+//   const rect = el.getBoundingClientRect()
+//   return (
+//     rect.top >= 0 &&
+//     rect.left >= 0 &&
+//     rect.bottom <=
+//       (window.innerHeight || document.documentElement.clientHeight) &&
+//     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//   )
+// }
 
 // assumes integer values for start and end
 
