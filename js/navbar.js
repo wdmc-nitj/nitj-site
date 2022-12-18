@@ -5,6 +5,7 @@ async function getNavbar(){
   d = await obj.json();
   console.log()
   createNav(d)
+  createNavMob(d)
 }
 
 async function createNav(obj){
@@ -94,7 +95,7 @@ async function createNav(obj){
       )
       dropdown6.setAttribute('id','drop-down')
       dropdown6.innerHTML = ``
-  data["Research"].forEach((array) => {
+  data["LifeatNITJ"].forEach((array) => {
     navbarhelper(array,dropdown6)
   })
   menu6.appendChild(LifeatNITJ)

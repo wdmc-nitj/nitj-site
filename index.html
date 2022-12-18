@@ -167,175 +167,17 @@
 <body class="font-body text-dark-purple scroll-smooth">
   <!-- Menu for mobile starts-->
   <div class=" z-50 p-0 top-0 flex items-start justify-start h-full w-full fixed bg-transparent backdrop-blur-2xl"
-    id="nav-menu" style="display: none">
-    <div id="menu" class="h-screen w-3/4 z-10 relative" onclick="close_menu();">
-      <div class="menu-content w-3/4 z-40 bg-accent h-full relative" onclick="keep_menu_open();z=1;">
-        <div class="top-bar h-1/6">
-          <div class="menu-btn z-50 flex justify-end py-4 px-4" onclick="z=0;close_menu();">
-            <div class="line bg-white w-[20px] h-[2px] rotate-45 absolute"></div>
-            <div class="line bg-white w-[20px] h-[2px] -rotate-45"></div>
+    id="nav-menu" style="display: none" onclick="priority=4;executor();">
+    <div id="menu" class="h-screen w-2/3 z-10 relative" onclick="priority=3;executor();">
+      <div id="menu-content" class="menu-content z-50 bg-accent h-full relative" onclick="priority=2;executor();">
+        <!-- cross button-->
+        <div class="top-bar">
+          <div class="menu-btn z-50 flex justify-end py-4 px-4">
+            <div class="line bg-white w-[20px] h-[2px] rotate-45 absolute" onclick="priority=1;executor();"></div>
+            <div class="line bg-white w-[20px] h-[2px] -rotate-45" onclick="priority=1;executor();"></div>
           </div>
         </div>
-        <button id="dropdown-button" data-dropdown-toggle="dropdown"
-          class="z-10 w-full inline-flex flex-shrink-0 items-center border border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-          type="button" onclick="openDropdown()">
-          Administration
-          <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </button>
-        <div id="dropdown"
-          class="absolute z-10 w-full hidden divide-y divide-gray-100 rounded bg-white shadow dark:bg-gray-700"
-          data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
-          <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-            <li>
-              <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                class="z-10 w-full inline-flex flex-shrink-0 items-center border border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-                type="button" onclick="openDropdown2()">
-                About Us
-                <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </button>
-              <div id="dropdown2"
-                class="absolute z-10 w-full hidden divide-y divide-gray-100 rounded bg-white shadow dark:bg-gray-700"
-                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
-                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Vision, Mission & Quality Values
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Virtual Tour
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Institute History
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Explore NITJ
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      NITJ Rankings & Awards
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Institute Prospectus
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Location
-                    </button>
-                  </li>
-                </ul>
-              </div>
-          </ul>
-          <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-            <li>
-              <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                class="z-10 w-full inline-flex flex-shrink-0 items-center border border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-                type="button" onclick="openDropdown3()">
-                Leadership
-                <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </button>
-              <div id="dropdown3"
-                class="absolute z-10 w-full hidden divide-y divide-gray-100 rounded bg-white shadow dark:bg-gray-700"
-                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
-                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Organizational Chart
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Chairperson
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Director
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Registrar
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Academic administration
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Student Welfare
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Faculty Welfare
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Planning and Development
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Research and Consultancy
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      International Affairs
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button"
-                      class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                      Hostel Administration
-                    </button>
-                  </li>
-                </ul>
-              </div>
-          </ul>
-        </div>
+        
         <div
           class="extra-links absolute bottom-1.5 left-0 w-full select-none flex flex-col align-middle justify-center">
           <a class="text-center text-white" href="/">Privacy Policy</a>
@@ -353,16 +195,6 @@
       <div class="container mx-auto flex flex-row justify-between">
         <div class="basis-1/2">
           <div class="flex flex-row justify-center gap-4 sm:gap-6">
-            <div class="flex items-center">
-              <a href="/index.html" class="hidden sm:block pl-1.5 text-xs">
-              <span class="material-symbols-outlined" style="
-                    font-variation-settings: 'FILL' 0, 'wght' 200, 'grad' 0,
-                      'opzs' 40;
-                  ">
-                home
-              </span>
-              </a>
-            </div>
             <div class="flex items-center">
               <span class="material-symbols-outlined" style="
                     font-variation-settings: 'FILL' 0, 'wght' 200, 'grad' 0,
@@ -500,10 +332,18 @@
     <div class="sm:block bg-accent drop-shadow-lg z-40">
       <div class="container">
         <div class="z-40 flex h-7 sm:h-10 max-w-screen px-4 flex-row justify-between bg-accent text-lg text-white">
-          <div class="flex items-center sm:hidden" onclick="open_menu();">
-            <span class="material-symbols-outlined"
-              style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> menu </span>
-          </div>
+          <div class="flex items-center sm:hidden h-full" >
+            <span class="material-symbols-outlined pr-2"
+              style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;' onclick="open_menu();"> menu </span>
+              <a href="/index.html" class="h-full">
+                <span class="material-symbols-outlined" style="
+                      font-variation-settings: 'FILL' 0, 'wght' 200, 'grad' 0,
+                        'opzs' 40;
+                    ">
+                  home
+                </span>
+                </a>
+            </div>
           <div class="sm:hidden block">
             <button type="button"
               class="block material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border sm:hover:h-10 sm:hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
@@ -512,7 +352,17 @@
             </button>
           </div>
           <div class="basis-2/5 hidden sm:block">
-            <div class="flex w-full flex-row justify-between px-10">
+            <div class="flex w-full flex-row justify-between px-4">
+              <div class="flex items-center">
+                <a href="/index.html" class="hidden sm:block text-xs">
+                <span class="material-symbols-outlined" style="
+                      font-variation-settings: 'FILL' 0, 'wght' 200, 'grad' 0,
+                        'opzs' 40;
+                    ">
+                  home
+                </span>
+                </a>
+              </div>
               <div id="menu-1" class="group cursor-default hover:bg-blue-800">
                 <div id="Administration" class="p-1.5 font-medium uppercase">Administration</div>
                 <!-- <div id="drop-down"
@@ -3186,6 +3036,7 @@
 
   <script src="./js/app.js"></script>
   <script src="./js/navbar.js"></script>
+  <script src="./js/navbar-mobile.js"></script>
 </body>
 
 </html>
