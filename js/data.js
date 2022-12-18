@@ -245,7 +245,7 @@ fetch('https://wdmc.onrender.com/administration/get/all')
     ${data[0].messageText}
       </p>
     <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
-      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read All &rarr;</a>
+      <a href = "/admin/director" class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read All &rarr;</a>
     </div>
 `
     directorMessage.appendChild(msg)
