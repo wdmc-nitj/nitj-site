@@ -360,7 +360,7 @@ id="nav-menu" style="display: none">
                             <a href="/admin/index.html#history">Institute History</a>
                             </li>
                             <li class="hover:text-[#FF6600]">
-                            Explore NITJ
+                            <a href="/admin/explore.html">Explore NITJ</a>
                             </li>
                             <li class="hover:text-[#FF6600]">
                             <a href="/admin/ranking.html">NITJ Rankings & Awards</a>
@@ -389,7 +389,7 @@ id="nav-menu" style="display: none">
                           <a href="/admin/oc.html">Organisational Chart</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                          <a href="/admin/Chairperson.html">Chairperson</a>
+                          <a href="/admin/chairperson.html">Chairperson</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
                         <a href="/admin/director.html">Director</a>
@@ -407,16 +407,17 @@ id="nav-menu" style="display: none">
                         <a href="/admin/administration.html#faculty-welfare">Faculty Welfare</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                        <a href="/admin/administration.html#planning-developement">Planning & Development</a>
+                        <a href="/admin/administration.html#planning-development">Planning & Development</a>
                         </li>
-                        <li class="hover:text-[#FF6600]">
-                          Research and Consultancy
-                        </li>
+                        
                         <li class="hover:text-[#FF6600]">
                         <a href="/admin/administration.html#research-consultancy">Research & Consultancy</a>
                         </li>
                         <li class="hover:text-[#FF6600]">
-                        <a href="/admin/hostel.html">Hostel Administration</a>
+                        <a href="/admin/administration.html#international-affairs">International Affairs</a>
+                        </li>
+                        <li class="hover:text-[#FF6600]">
+                        <a href="/admin/hostels.html">Hostel Administration</a>
                         </li>
                       </ul>
                     </div>
