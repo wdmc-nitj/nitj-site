@@ -54,8 +54,8 @@ npm install yarn --global
   > Details about this part are given below
 - Publish your branch to github, by using the below commands: 
   1. `git add .`
-  2. `git commit -m "{{message about the commit}}"
-  3. `git push --set-upstream origin {{branch-name}}
+  2. `git commit -m "{{message about the commit}}"`
+  3. `git push --set-upstream origin {{branch-name}}`
 - Open this repo on github you will send an option on the top to create a pull request
 - Select the options and create a PR with appropirate message
 
