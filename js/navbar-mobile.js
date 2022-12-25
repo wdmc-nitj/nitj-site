@@ -35,6 +35,11 @@ function keep_menu_open(){
   if (sideMenu.style.display == "block") {
     sideMenu.setAttribute("style", "display:block;");
   }
+  if(onmenu){
+  closeDropDowns();
+  openDropDowns(1);
+  }
+  onmenu=true;
 }
 function close_menu() {
     if (sideMenu.style.display == "block"){
@@ -45,9 +50,16 @@ function close_menu() {
 dropdownmenus = document.getElementsByClassName("DropDowns")
 subdropdownmenus = document.getElementsByClassName("subDropDowns")
 dropdownmenubuttons = document.getElementsByClassName("dropdown-buttons")
+subdropdownmenubuttons = document.getElementsByClassName("subDropButtons")
+droparrows = document.getElementsByClassName("DropArrows")
 function openDropDowns(id) {
   for(var i=0;i<dropdownmenubuttons.length;i++){
-    console.log(dropdownmenubuttons)
+      if(dropdownmenubuttons[i].children[0].classList.contains('rotate-180')){
+      dropdownmenubuttons[i].children[0].classList.remove('rotate-180');
+      }
+      else{
+        dropdownmenubuttons[i].children[0].classList.add('rotate-180')
+      }
     if(dropdownmenubuttons[i].id[dropdownmenubuttons[i].id.length-1] < id[id.length-1]){
       if (dropdownmenubuttons[i].classList.contains('hidden')) {
         dropdownmenubuttons[i].classList.remove('hidden')
@@ -72,9 +84,20 @@ function openDropDowns(id) {
   }
   }
 }
+function closeDropDowns() {
+  for(var i=0;i<dropdownmenus.length;i++){
+    dropdownmenus[i].classList.add('hidden')
+  }
+}
 
 function openSubDropDowns(id) {
-  for(var i=0;i<subdropdownmenus.length;i++){
+  for(var i=0;i<subdropdownmenubuttons.length;i++){
+    if(subdropdownmenubuttons[i].children[0].classList.contains('rotate-180')){
+      subdropdownmenubuttons[i].children[0].classList.remove('rotate-180');
+      }
+      else{
+        subdropdownmenubuttons[i].children[0].classList.add('rotate-180')
+      }
   if(id[id.length-1] == subdropdownmenus[i].id[subdropdownmenus[i].id.length-1] && id[id.length-2] == subdropdownmenus[i].id[subdropdownmenus[i].id.length-2]){
     if (subdropdownmenus[i].classList.contains('hidden')) {
       subdropdownmenus[i].classList.remove('hidden')
@@ -87,6 +110,7 @@ function openSubDropDowns(id) {
   }
   }
 }
+
 navnames = ["Administration","Acadmeics","Admissions","Research","Alumni","LifeatNITJ"]
 async function createNavMob(obj){
     let data = await obj
@@ -95,8 +119,8 @@ async function createNavMob(obj){
     const dropdownbutton1 = document.createElement('button')
         dropdownbutton1.setAttribute('id',`dropdown-button${i+1}`)
         dropdownbutton1.setAttribute('type','button')
-        dropdownbutton1.setAttribute('onclick','openDropDowns(this.id)')
-        dropdownbutton1.setAttribute('class','dropdown-buttons z-10 w-full inline-flex flex-shrink-0 items-center border border-gray-300 py-2.5 px-4 text-center text-sm font-medium bg-white text-black hover:bg-blue-800 focus:bg-blue-800 focus:text-white')
+        dropdownbutton1.setAttribute('onclick','onmenu=false;openDropDowns(this.id);')
+        dropdownbutton1.setAttribute('class','dropdown-buttons capitalize z-10 w-full inline-flex flex-shrink-0 items-center border border-gray-300 py-2.5 px-4 text-center text-sm font-medium bg-white text-black hover:bg-blue-800 focus:bg-blue-800 focus:text-white')
         dropdownbutton1.innerHTML = `${navnames[i]}
         <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -105,7 +129,7 @@ async function createNavMob(obj){
         </svg>`
     const dropdown1 = document.createElement('div')
     dropdown1.setAttribute('id',`dropdown${i+1}`)
-    dropdown1.setAttribute('class','DropDowns absolute top-20 z-10 w-full hidden rounded bg-white shadow')
+    dropdown1.setAttribute('class','DropDowns capitalize absolute top-18 z-10 w-full hidden rounded bg-white shadow')
     data[navnames[i]].forEach((array,i) => {
       navbarmobilehelper(array,dropdownbutton1,i,dropdown1)
     })
@@ -116,13 +140,13 @@ async function createNavMob(obj){
 
 function navbarmobilehelper(array,dropdownbutton,i,dropdown1){
   const droplist = document.createElement('ul')
-  droplist.setAttribute('class','py-1 text-sm font-semibold text-black')
+  droplist.setAttribute('class','text-sm font-semibold text-black')
   const listele = document.createElement('li')
   const subdropdownbutton = document.createElement('button')
   subdropdownbutton.setAttribute('id',`subdropdown-button-${dropdownbutton.id[dropdownbutton.id.length-1]}${i+1}`)
         subdropdownbutton.setAttribute('type','button')
-        subdropdownbutton.setAttribute('onclick','openSubDropDowns(this.id)')
-        subdropdownbutton.setAttribute('class','z-10 w-full inline-flex flex-shrink-0 items-center py-1.5 px-4 text-center text-sm font-medium bg-white text-black hover:bg-blue-800 focus:bg-blue-800 focus:text-white')
+        subdropdownbutton.setAttribute('onclick','onmenu=false;openSubDropDowns(this.id)')
+        subdropdownbutton.setAttribute('class','subDropButtons capitalize border border-gray-300 z-10 w-full inline-flex flex-shrink-0 items-center py-1.5 px-4 text-center text-sm font-medium bg-white text-black hover:bg-blue-800 focus:bg-blue-800 focus:text-white')
         subdropdownbutton.innerHTML = `${array[0]}
         <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -131,16 +155,16 @@ function navbarmobilehelper(array,dropdownbutton,i,dropdown1){
         </svg>`
   const subDropDown = document.createElement('div')
   subDropDown.setAttribute('id',`subdropdown${dropdownbutton.id[dropdownbutton.id.length-1]}${i+1}`)
-  subDropDown.setAttribute('class','subDropDowns absolute z-10 w-full hidden divide-y divide-gray-100 rounded bg-white shadow')
+  subDropDown.setAttribute('class','subDropDowns normal-case absolute z-10 w-full hidden divide-y divide-gray-100 rounded bg-white shadow')
   
   const subDropDownList = document.createElement('ul')
-  subDropDownList.setAttribute('class','py-1 text-sm font-semibold text-black')
+  subDropDownList.setAttribute('class','text-sm font-semibold text-black')
 
   const subListEle = document.createElement('li')
   for(var i=2;i<array.length;i++){
     const ListEle = document.createElement('button')
     ListEle.setAttribute('type','button')
-    ListEle.setAttribute('class','inline-flex w-full py-1 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white')
+    ListEle.setAttribute('class','inline-flex w-full py-1 px-4 border border-gray hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-left')
     ListEle.innerHTML = `<a href="${array[i]["link"]}">${array[i]["name"]}</a>
       `
     subListEle.appendChild(ListEle)
