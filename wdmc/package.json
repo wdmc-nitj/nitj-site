@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "name": "wdmc",
+  "description": "Go to backend directory and run \"npm install\"\r to install the dependancies and node_module folder wil be installed in your backend directory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddhantgupta385/WDMC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddhantgupta385/WDMC/issues"
+  },
+  "homepage": "https://github.com/siddhantgupta385/WDMC#readme"
+}
