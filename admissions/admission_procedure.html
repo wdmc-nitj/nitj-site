@@ -30,10 +30,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <!--alpine js-->
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"
-    ></script>
+  <script
+  defer
+  src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"
+></script>
 
     <style>
       /* Customizing the Scrollbar */
@@ -159,24 +159,11 @@
         text-align: center;
         z-index: 10;
       }
-      @media (max-width: 650px) {
-        .side_Bar_Hide {
-          display: none;
-        }
-     
+      @media(max-width:650px){
+      .side_Bar_Hide{
+        display: none;
       }
-
-      .titlebg {
-          background: linear-gradient(
-              90.09deg,
-              rgba(0, 0, 0, 0.7) 0.08%,
-              rgba(255, 255, 255, 0) 99.11%
-            ),
-            url(../admin/img/about_top.jpg);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
-        }
+}
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -184,102 +171,45 @@
   <body>
     <script src="../common template/header.js"></script>
 
-    <div
-      class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
-    >
-      <p
-        class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
-      >
-        Admission Procedure
-      </p>
-    </div>
-    <nav
-      class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
-      aria-label="Breadcrumb"
-    >
-      <ol class="inline-flex items-center">
-        <li class="inline-flex items-center">
-          <a
-            href="https://nitj.netlify.app/"
-            class="inline-flex items-center text-sm font-medium hover:text-gray-900"
-          >
-            <a href="#" class="text-lg font-medium ml-2">Home</a>
-          </a>
-        </li>
-        <li aria-current="page">
-          <div class="inline-flex items-center">
-            <i
-              style="
-                color: rgb(128, 128, 128);
-                font-size: 12px;
-                margin-left: 12px;
-              "
-              class="fa-solid fa-angle-right ml-2"
-            ></i>
-            <a href="#" class="text-lg font-medium ml-2">Admissions</a>
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="inline-flex items-center">
-            <i
-              style="
-                color: rgb(128, 128, 128);
-                font-size: 12px;
-                margin-left: 12px;
-              "
-              class="fa-solid fa-angle-right ml-2"
-            ></i>
-            <a href="#" class="text-lg font-medium ml-2">Admission Procedure</a>
-          </div>
-        </li>
-      </ol>
-    </nav>
-
     <!-- DropDown -->
-    <div class="sm:hidden flex flex-col justify-center items-center">
-      <div
-        x-data="{dropdownMenu: false}"
-        class="block lg:hidden mx-auto lg:mt-[15%] mt-[10%] w-[60%]"
-      >
+    <div class="sm:hidden flex flex-col mt-[-9%] justify-center items-center ">
+      <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
         <!-- Dropdown toggle button -->
         <button
           @click="dropdownMenu = ! dropdownMenu"
-          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%] mt-10 mb-4"
+          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4"
         >
-          <span class="mx-auto"
-            >Select Course <i class="fa-solid fa-caret-down"></i>
-          </span>
+          <span class="mx-auto">Select Course <i class="fa-solid fa-caret-down"></i> </span>
         </button>
         <!-- Dropdown list -->
-        <div x-show="dropdownMenu" class="tabs2 p-2 rounded w-[100%]">
-          <ul>
-            <li
-              x-on:click="dropdownMenu = ! dropdownMenu"
-              class="active2 bg-blue-100 mb-1"
-            >
-              <span class="text">UG Programme</span>
-            </li>
-            <li
-              x-on:click="dropdownMenu = ! dropdownMenu"
-              class="bg-blue-100 mb-1"
-            >
-              <span class="text">PG Programme</span>
-            </li>
-          </ul>
+        <div
+          x-show="dropdownMenu"
+          class="tabs2  p-2 rounded w-[100%]"
+        >
+            <ul>
+              <li x-on:click="dropdownMenu = ! dropdownMenu" class="active2 bg-blue-100 mb-1">
+                <span class="text">UG Programme</span>
+              </li>
+              <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
+                <span class="text" >PG Programme</span>
+              </li>
+            </ul>
+          
         </div>
       </div>
-    </div>
-    <!-- DropDown -->
+  
+  
+  </div>
+  <!-- DropDown -->
 
-    <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
-      <div
-        class="side_Bar_Hide lg:w-[15%] w-[25%]"
-      >
-        <div
-          class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] w-[20%] hidden sticky top-40"
-          id="sidetab"
-        >
 
+
+
+
+
+    <div class="flex lg:w-[100%] w-full  mt-5 justify-between sidebar h-[100%]">
+      <div class="wrapper side_Bar_Hide  md:mt-[18%] sm:mt-[25%] lg:mt-[14%]  lg:w-[15%] w-[20%] mt-[5%]">
+        <div class="tabs  p-2 side_Bar_Hide rounded fixed lg:w-[20%] sm:w-[22%] " id="sidetab">
           <ul>
             <li class="active2 bg-blue-100 mb-1">
               <span class="text font-bold text-lg">UG Programme</span>
@@ -291,10 +221,9 @@
         </div>
       </div>
 
-      <div
-        class="lg:w-[75%] md:w-[65%] ml-[-8%] md:mt-[18%] sm:mt-[25%] lg:mt-[3%] mb-[5%]"
-      >
-        <div class="tab_wrap w-full" style="display: block">
+      
+      <div class="lg:w-[75%] md:w-[65%] ml-[-8%]md:mt-[18%] sm:mt-[25%] lg:mt-[14%]  mb-[5%] ">
+        <div class="tab_wrap  w-full " style="display: block">
           <div class="lg:text-center text-left mb-4">
             <h1
               class="font-sans text-3xl text-[#2776c0] font-semibold tracking-wide"
@@ -307,13 +236,13 @@
               <div
                 class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans whitespace-nowrap"
               >
-                <span class="text-[#2776c0]">Admission</span> Procedure
+                <span class="text-[#2776c0] ">Admission</span> Procedure
               </div>
               <div class="mt-4">
                 <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
                   <div class="flex md:contents">
                     <div
-                      class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      class="col-start-2 col-end-4 mr-10  md:mx-auto relative"
                     >
                       <div class="h-full w-6 flex items-center justify-center">
                         <div
@@ -329,11 +258,9 @@
                       </div>
                     </div>
                     <!-- col-start-4 col-end-13  rounded-t-xl  mr-auto  w-full -->
-                    <div
-                      class="col-start-4 col-end-13 my-3 lg:mr-auto lg:w-[90%] w-[70%]"
-                    >
+                    <div class="col-start-4 col-end-13 my-3  lg:mr-auto  lg:w-[90%] w-[70%] ">
                       <div
-                        class="bg-[#0077b6] col-start-4 lg:col-end-auto p-4 rounded-t-xl mr-auto shadow-md lg:w-[90%]"
+                        class="bg-[#0077b6] col-start-4 lg:col-end-auto  p-4 rounded-t-xl mr-auto shadow-md lg:w-[90%]  "
                       >
                         <a
                           href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
@@ -357,7 +284,9 @@
                           class="order-1 rounded-lg shadow-xl"
                         >
                           <div>
-                            <h3 class="mb-3 text-black text-xl">JOSAA/CSAB</h3>
+                            <h3 class="mb-3 font text-black text-xl">
+                              JOSAA/CSAB
+                            </h3>
                           </div>
                         </a>
                       </div>
@@ -385,7 +314,7 @@
                       class="col-start-4 col-end-13 rounded-t-xl my-3 mr-auto w-full"
                     >
                       <div
-                        class="bg-[#1c77c3] col-start-4 col-end-13 p-4 rounded-t-xl mr-auto shadow-md lg:w-[90%]"
+                        class="bg-[#1c77c3] col-start-4 col-end-13 p-4 rounded-t-xl mr-auto shadow-md lg:w-[90%]  "
                       >
                         <h3 class="font-bold text-white text-xl">
                           <span class="text-2xl">2.</span> Institute reporting
@@ -514,8 +443,8 @@
           </div>
         </div>
 
-        <div class="tab_wrap ml-[-20px] w-full" style="display: none">
-          <div class="text-center mb-4">
+        <div class="tab_wrap ml-[-20px] w-full  " style="display: none">
+          <div class=" text-center mb-4">
             <h1
               class="font-sans text-3xl text-[#2776c0] font-semibold tracking-wide"
             >
@@ -523,17 +452,15 @@
             </h1>
           </div>
 
-          <div class="lg:w-[50%] w-[90%]">
+          <div class="lg:w-[50%] w-[90%]   ">
             <div>
               <div
                 class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
               >
                 <span class="text-[#2776c0] pl-5">M.Tech</span> CCMT
               </div>
-              <div class="mt-4">
-                <div
-                  class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50"
-                >
+              <div class="mt-4  ">
+                <div class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50">
                   <div class="flex md:contents">
                     <div
                       class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
@@ -550,9 +477,7 @@
                       </div>
                     </div>
                     <!-- col-start-4 col-end-12  rounded-t-xl  mr-auto  w-full -->
-                    <div
-                      class="col-start-4 col-end-12 my-3 mr-auto lg:w-[90%] w-[70%]"
-                    >
+                    <div class="col-start-4 col-end-12 my-3 mr-auto lg:w-[90%] w-[70%]">
                       <div
                         class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full lg:w-[90%]"
                       >
@@ -570,7 +495,7 @@
                       </div>
 
                       <div
-                        class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md lg:w-[90%]"
+                        class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md lg:w-[90%] "
                       >
                         <a
                           href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
@@ -729,7 +654,7 @@
             </div>
           </div>
 
-          <div class="lg:mt-[2%] mt-[4%] lg:ml-[45%] lg:w-[50%] w-[90%]">
+          <div class="lg:mt-[2%] mt-[4%] lg:ml-[45%]  lg:w-[50%] w-[90%]">
             <div>
               <div
                 class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
@@ -737,9 +662,7 @@
                 <span class="text-[#2776c0]">M.Tech</span> Self-Sponsored
               </div>
               <div class="mt-4">
-                <div
-                  class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50"
-                >
+                <div class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50">
                   <div class="flex md:contents">
                     <div
                       class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
@@ -933,7 +856,7 @@
             </div>
           </div>
 
-          <div class="lg:w-[50%] w-[90%]">
+          <div class="lg:w-[50%] w-[90%] ">
             <div>
               <div
                 class="heading ml-6 text-[28px] font-semibold border-black border-b-2 inline font-sans"
@@ -941,9 +864,7 @@
                 <span class="text-[#2776c0]">MSC</span>
               </div>
               <div class="mt-4">
-                <div
-                  class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50"
-                >
+                <div class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50">
                   <div class="flex md:contents">
                     <div
                       class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
@@ -1155,9 +1076,7 @@
                 <span class="text-[#2776c0]">MBA</span>
               </div>
               <div class="mt-4">
-                <div
-                  class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50"
-                >
+                <div class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50">
                   <div class="flex md:contents">
                     <div
                       class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
@@ -1203,7 +1122,7 @@
                           class="order-1 rounded-lg shadow-xl"
                         >
                           <div>
-                            <h3 class="mb-3 font-bold text-black text-xl">
+                            <h3 class="mb-3 font text-black text-xl">
                               Online Application Form
                             </h3>
                           </div>
@@ -1372,9 +1291,7 @@
                 <span class="text-[#2776c0]">PhD</span>
               </div>
               <div class="mt-4">
-                <div
-                  class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50"
-                >
+                <div class="flex flex-col lg:-ml-5 md:grid grid-cols-12 text-gray-50">
                   <div class="flex md:contents">
                     <div
                       class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
@@ -1420,7 +1337,7 @@
                           class="order-1 rounded-lg shadow-xl"
                         >
                           <div>
-                            <h3 class="mb-3 font-bold text-black text-xl">
+                            <h3 class="mb-3 font text-black text-xl">
                               Online Application Form
                             </h3>
                           </div>
@@ -1592,7 +1509,7 @@
       src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
       charset="utf-8"
     ></script>
-
+ 
     <script src="../js/app.js"></script>
     <script src="./tabs.js"></script>
   </body>
