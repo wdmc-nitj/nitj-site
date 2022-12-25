@@ -1,4 +1,5 @@
 window.onscroll = function () {
+  const insti_name_cont = document.getElementById('instituteNameContainer')
   const institute_name = document.getElementsByClassName('institute_name')
   const full_navbar = document.getElementsByTagName('header')
   const logo = document.getElementById('logo_250')
@@ -9,6 +10,9 @@ window.onscroll = function () {
   // resAutoScroll()
 
   if (window.scrollY > 100) {
+    insti_name_cont.classList.remove("sm:h-20","sm:max-h-20")
+    insti_name_cont.classList.add("sm:h-10","sm:max-h-10")
+    // insti_name_cont.classList.add(' sm:max-h-20')
     topbar.style.transform = 'translateY(-50px)'
     for (let i = 0; i < diff_lang.length; i++) {
       diff_lang[i].classList.remove('mt-7')
@@ -32,6 +36,8 @@ window.onscroll = function () {
       }
     }
   } else {
+    insti_name_cont.classList.remove("sm:h-10","sm:max-h-10")
+    insti_name_cont.classList.add("sm:h-20","sm:max-h-20")
     logo.style.width = '120px'
     logo.style.height = '120px'
     topbar.style.transform = 'translateY(0)'
