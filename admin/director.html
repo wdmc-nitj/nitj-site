@@ -116,7 +116,7 @@
 
         <div class="flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
             <div class="lg:basis-1/3 flex items-center">
-                <img src="img/Director___NITJ.png" alt="">
+                <div id="image"></div>
             </div>
             <div class="lg:basis-2/3">
                 <div class="flex flex-col items-start">
@@ -224,18 +224,20 @@
           `<p>${result[0].contact.Email}</p>
          `
          document.getElementById("telno").innerHTML = 
-          `<p>${result[0].contact.TelNo}</p>`  
+          `<p>${result[0].contact["Tel No."]}</p>`  
          document.getElementById("epabx").innerHTML = 
           `<p>${result[0].contact.EPABX}</p>` 
          document.getElementById("extn").innerHTML = 
-          `<p>${result[0].contact.Extn}</p> ` 
+          `<p>${result[0].contact["Extn."]}</p> ` 
          document.getElementById("fax").innerHTML = 
           `<p>${result[0].contact.Fax}</p>` 
           document.getElementById("message").innerHTML =
          ` <p class="text-gray-800 lg:text-[21px] lg:leading-[35px] text-justify">${result[0].messageText}</p>`
          document.getElementById("name1").innerHTML =
          ` <span class="font-semibold">${result[0].name}</span>`
-        
+         document.getElementById("image").innerHTML =
+        ` <img src="${result[0].image}" alt="">`
+        // img/Director___NITJ.png
       }
       callAPi()
   </script>
