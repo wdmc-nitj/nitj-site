@@ -810,7 +810,7 @@ id="nav-menu" style="display: none">
                             Discover Student Life
                           </li>
                           <li class="hover:text-[#FF6600]">
-                           <a href="/admissions/courses_offered.html" target="_blank"> Courses Offered </a>
+                           <a href="/admissions/courses_offered.html"> Courses Offered </a>
                           </li>
                           <li class="hover:text-[#FF6600]">
                             How to Apply
