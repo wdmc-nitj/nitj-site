@@ -221,18 +221,19 @@
   .side_Bar_Hide{
     margin-top: 155px;
   }
-
 }
 
 .titlebg {
-            background: linear-gradient(90.09deg,
-                    rgba(0, 0, 0, 0.7) 0.08%,
-                    rgba(255, 255, 255, 0) 99.11%),
-                url(../admin/img/about_top.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+        background: linear-gradient(
+            90.09deg,
+            rgba(0, 0, 0, 0.7) 0.08%,
+            rgba(255, 255, 255, 0) 99.11%
+          ),
+          url('./img/about_top.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
   </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -242,9 +243,9 @@
   <body>
     <script src="../common template/header.js"></script>
 
-    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-32 lg:mt-32">
+    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
       <p class="font2 font-bold sm:text-[35px] lg:text-[60px] uppercase text-white leading-[1]">
-          MoUs
+         MOUs
       </p>
   </div>
   <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -255,6 +256,12 @@
                   <a href="#" class="text-lg font-medium ml-2">Home</a>
               </a>
           </li>
+          <li class="inline-flex items-center">
+            <a href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                <a href="#" class="text-lg font-medium ml-2">Research</a>
+            </a>
+        </li>
           <li aria-current="page">
               <div class="inline-flex items-center">
                   <i style="
@@ -262,27 +269,15 @@
               font-size: 12px;
               margin-left: 12px;
             " class="fa-solid fa-angle-right ml-2"></i>
-                  <a href="#" class="text-lg font-medium ml-2">Research</a>
-              </div>
-          </li>
-          <li aria-current="page">
-              <div class="inline-flex items-center">
-                  <i style="
-              color: rgb(128, 128, 128);
-              font-size: 12px;
-              margin-left: 12px;
-            " class="fa-solid fa-angle-right ml-2"></i>
-                  <a href="#" class="text-lg font-medium ml-2">MoUs</a>
+                  <a href="#" class="text-lg font-medium ml-2">Mous</a>
               </div>
           </li>
       </ol>
   </nav>
 
-  <div class="lg:mt-[-12%] md:mt-[-3%] mt-[-28%]"" >
-
 <!-- DropDown -->
     <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
-    <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
+    <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto mt-4 w-[60%]">
       <!-- Dropdown toggle button -->
       <button
         @click="dropdownMenu = ! dropdownMenu"
@@ -297,40 +292,36 @@
       >
           <ul>
             <li x-on:click="dropdownMenu = ! dropdownMenu" class="active2 bg-blue-100 mb-1">
-              <span class="text">International Institutes</span>
+              <span class="text dropContent1"  onclick=dropDownContentOnClick1() >International Institutes</span>
             </li>
             <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
-              <span class="text">Industries</span>
+              <span class="text dropContent2" onclick=dropDownContentOnClick2()>Industries</span>
             </li>
             <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
-              <span class="text">Indian Institutes</span>
+              <span class="text dropContent3" onclick=dropDownContentOnClick3()>Indian Institutes</span>
             </li>
           </ul>
         
       </div>
     </div>
 
-    <div class="flex items-center p-2 bg-accent text-[12px] tracking-wider font-light text-white rounded-md w-[70%]  mb-4" style="display: block;">
-        <span><i class="fa-solid fa-angles-right"><span  id="category"> International Institutes</span></i></span>
+    <div class="flex items-center p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
+        <span class="px-[15px]"><i class="fa-solid fa-angles-right text-[16px] "> <span class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="category">International Institutes</span></i></span>
     </div>
-    <div class="flex items-center p-2 bg-accent text-[12px] tracking-wider font-light text-white rounded-md w-[70%]  mb-4" style="display: none;">
-      <span><i class="fa-solid fa-angles-right"><span id="category"> International Institutes</span></i></span>
-  </div>
-  <div class="flex items-center p-2 bg-accent text-[12px] tracking-wider font-light text-white rounded-md w-[70%]  mb-4" style="display: none;">
-    <span><i class="fa-solid fa-angles-right"><span  id="category"> International Institutes</span></i></span>
-</div>
+
 
 </div>
 
 <!-- DropDown -->
 
 
-<div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
+  
+<div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col mx-auto">
   <div
     class="side_Bar_Hide lg:w-[15%] w-[25%]"
   >
     <div
-      class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
+      class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%]  w-[20%] hidden sticky top-40"
       id="sidetab"
     >
           <ul>
@@ -348,9 +339,9 @@
       </div>
 
       <!--international institutes-->
-        <div class="content  lg:w-[80%] w-[100%] mx-[5%] lg:mt-[15%] mt-[5%]">
-            <div class="tab_wrap active2 mr-8 rounded-lg shadow-sm " style="display: block;">
-              <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
+        <div class="content  lg:w-[80%] w-[95%] mx-auto ">
+            <div class="tab_wrap active2 mx-auto rounded-lg shadow-sm " style="display: block;">
+              <div class=" overflow-x-auto mx-auto rounded-lg shadow-sm mb-[5%]">
                 <table class=" shadow-lg bg-white w-[100%]">
                     <thead class="text-left">
                         
@@ -399,8 +390,8 @@
 
             
             <!--industries-->
-            <div class="tab_wrap mr-8 rounded-lg shadow-sm" style="display: none;">
-              <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
+            <div class="tab_wrap mx-auto rounded-lg shadow-sm" style="display: none;">
+              <div class=" overflow-auto mx-auto rounded-lg shadow-sm mb-[5%]">
                 <table class="shadow-lg bg-white w-[100%] ">
                     <thead class="text-left">
                         
@@ -538,8 +529,8 @@
             </div>       
   
             <!--Indian institutes-->
-            <div class="tab_wrap mr-8m rounded-lg shadow-sm" style="display: none;">
-              <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
+            <div class="tab_wrap  rounded-lg shadow-sm" style="display: none;">
+              <div class=" overflow-auto mx-auto rounded-lg shadow-sm mb-[5%]">
                 <table class="shadow-lg bg-white w-[100%]">
                     <thead class="text-left">
                         
@@ -695,13 +686,67 @@
             </div>        
         </div>
     </div>
-</div>
+
 <div class="base-image hidden overflow-hidden lg:block "></div>
 <div class="relative bottom-0">
 
 <script src="../common template/footer.js"></script>
 </div>
-   
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script>
+      function dropDownContentOnClick1(){
+        let strings = document.getElementsByClassName("dropContent1");
+        let head=document.getElementById("category");
+        // console.log("asjks"+head.innerHTML)
+        head.innerHTML=strings[0].innerHTML
+
+        // for(let i=0;i<strings.length;i++){
+        //   console.log(strings[i].innerHTML);
+        //   if(strings[i].innerHTML==='International Institutes'){
+        //     head.innerHTML='International Institutes';
+        //   }else if(strings[i].innerHTML==='Industries'){
+        //     head.innerHTML='Industries';
+        //   }else if(strings[i].innerHTML==='Indian Institutes'){
+        //     head.innerHTML='Indian Institutes';
+        //   }
+        // }
+      }
+      function dropDownContentOnClick2(){
+        let strings = document.getElementsByClassName("dropContent2");
+        let head=document.getElementById("category");
+        console.log("asjks"+head.innerHTML)
+        head.innerHTML=strings[0].innerHTML
+      }
+      function dropDownContentOnClick3(){
+        let strings = document.getElementsByClassName("dropContent3");
+        let head=document.getElementById("category");
+        console.log("asjks"+head.innerHTML)
+        head.innerHTML=strings[0].innerHTML
+      }
+    </script>
+    <script type="text/javascript">
+      var slideIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {
+          slideIndex = 1;
+        }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 2500);
+      }
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      //   return new Tooltip(tooltipTriggerEl);
+      // });
+    </script>
     <script src="../admin/app.js"></script>
   <script src="./tabs.js"></script>
   </body>

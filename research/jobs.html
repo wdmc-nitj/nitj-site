@@ -232,12 +232,50 @@
         background-position: center;
         background-size: cover;
       }
+      .titlebg {
+          background: linear-gradient(
+              90.09deg,
+              rgba(0, 0, 0, 0.7) 0.08%,
+              rgba(255, 255, 255, 0) 99.11%
+            ),
+            url(../admin/img/about_top.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
     </style>
   </head>
   <body>
     <script src="../common template/header.js"></script>
     
-    <div class="px-4 lg:px-[11%] my-64">
+    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+      <p class="font2 font-bold sm:text-[35px] lg:text-[60px] uppercase text-white leading-[1]">
+         Jobs
+      </p>
+  </div>
+  <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center">
+          <li class="inline-flex items-center">
+              <a href="https://nitj.netlify.app/"
+                  class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                  <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+          </li>
+       
+          <li aria-current="page">
+              <div class="inline-flex items-center">
+                  <i style="
+              color: rgb(128, 128, 128);
+              font-size: 12px;
+              margin-left: 12px;
+            " class="fa-solid fa-angle-right ml-2"></i>
+                  <a href="#" class="text-lg font-medium ml-2">Jobs</a>
+              </div>
+          </li>
+      </ol>
+  </nav>
+
+    <div class="px-4 lg:px-[11%] my-4">
       <div class="tab">
         <button class="tablinks active" onclick="openTab(event,'firstDean-sw')">
           Faculty
