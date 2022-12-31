@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon and title -->
+    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png" />
+    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+    <!-- RESEARCH -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tabs.css" />
+
+    <!--alpine js-->
+    <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <style>
+        /* Customizing the Scrollbar */
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-resizer {
+            background-color: #ffffff;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: hsla(201, 96%, 26%);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #212121;
+        }
+
+        /* Gallery Effects */
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            line-height: 0;
+        }
+
+        .box>img {
+            width: 100%;
+            height: 100%;
+            border: 0.2rem solid white;
+            border-radius: 8px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            transition: ease 0.75s;
+        }
+
+        .box:hover {
+            flex: 1 1 30%;
+            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .box:hover>img {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .base-image {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            mask-image: linear-gradient(0deg, white, white, white, transparent);
+            -webkit-mask-image: linear-gradient(0deg,
+                    white,
+                    white,
+                    white,
+                    transparent);
+            background-color: #cccccc;
+            height: 400px;
+            background-position: 0% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .base-image-2 {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            background-color: #cccccc;
+            height: 300px;
+            background-position: 58% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-shadow {
+            text-shadow: rgb(0 0 0) 6px -1px 5px;
+        }
+
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.9s ease-in-out;
+            transition: opacity 1s ease-in-out 0.2s;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3,
+        #carousel-4:checked~.control-4 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .active2 {
+            background-color: rgb(42, 120, 193);
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg,
+                    rgba(0, 0, 0, 0.7) 0.08%,
+                    rgba(255, 255, 255, 0) 99.11%),
+                url('./img/about_top.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <script src="../common template/header.js"></script>
+
+    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+        <p class="font2 font-bold sm:text-[35px] lg:text-[60px] uppercase text-white leading-[1]">
+            Intellectual Property Rights
+        </p>
+    </div>
+    <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+                <a href="https://nitj.netlify.app/"
+                    class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                    <a href="#" class="text-lg font-medium ml-2">Home</a>
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="inline-flex items-center">
+                    <i style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              " class="fa-solid fa-angle-right ml-2"></i>
+                    <a href="#" class="text-lg font-medium ml-2">Research</a>
+                </div>
+            </li>
+            <li aria-current="page">
+                <div class="inline-flex items-center">
+                    <i style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              " class="fa-solid fa-angle-right ml-2"></i>
+                    <a href="#" class="text-lg font-medium ml-2">Intellectual Property Rights</a>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="flex flex-col items-start p-2 ml-[2%]">
+        <h1 class="font2 font-medium border-b-2 border-accent text-[28px] lg:text-[32px] px-2">
+            Intellectual Property Rights
+        </h1>
+    </div>
+
+    <div class="ml-[5%] mr-[5%]">
+        <div class=" font-normal font2 mt-3 text-[18px] lg:text-[20px] px-4 text-red-600">
+            <a href="https://www.nitj.ac.in/nitj_files/links/IPR_Policy_2022_241122_6347.pdf" target="_blank"><span> <i
+                        class="fa-solid fa-angles-right text-[16px] "></i> Intellectual Property Rights (IPR)
+                    Policy</span></a>
+        </div>
+
+        <div class="w-full flex flex-col items-start p-2">
+            <p class="font2 font-medium border-b-2 border-accent text-[26px] lg:text-[25px] px-2">
+                List of IPR's Granted or in Process:
+            </p>
+        </div>
+        <div class="px-5">
+            <table>
+                <tbody>
+                    <tr class="">
+                        <td scope="col" class="w-[60%]">Patents Granted</td>
+                        <td class="px-12">04</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="w-[60%]">Patents in process</td>
+                        <td class="px-12">21</td>
+                    </tr>
+                    <tr class="">
+                        <td scope="col" class="w-[60%]">Design Granted</td>
+                        <td class="px-12">05</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="w-[60%]">Design In Process</td>
+                        <td class="px-12">01</td>
+                    </tr>
+                    <tr class="">
+                        <td scope="col" class="w-[60%]">Copyright Granted</td>
+                        <td class="px-12">07</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="w-[60%]">Copyright In Process</td>
+                        <td class="px-12">02</td>
+                    </tr>
+                    <tr class="">
+                        <td scope="col" class="w-[60%]">Computer Software</td>
+                        <td class="px-12">05</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class=" text-right text-red-500  mr-4">
+            <p>Updated on 08-12-2019</p>
+        </div>
+
+        <div
+            class="overflow-x-auto relative shadow-lg rounded-lg sm:rounded-lg  mr-4 ml-4  mt-4 bg-pink-200 mb-8">
+            <table class="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
+                <thead
+                    class="text-xs lg:text-base text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">
+                            Sr. No.
+                        </th>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">Title of IPR</th>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">Patent/Design/Copy Right number with year
+                            of grant/file</th>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">Inventor/ Inventors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">1.</td>
+                        <td class="py-4 px-6">Earthquake Alarm</td>
+                        <td class="py-4 px-6"> <span class=" text-red-800">Granted:</span> Patent No 220748 (2004)*</td>
+                        <td class="py-4 px-6">KS Nagla</td>
+                    </tr>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">2.</td>
+                        <td class="py-4 px-6">Mechanism to Clean Bird Dropping (Garbage) within a Cage type Poultry Farm
+                        </td>
+                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 210090 (2007)</td>
+                        <td class="py-4 px-6">KS Nagla</td>
+                    </tr>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">3.</td>
+                        <td class="py-4 px-6">A leg exerciser machine </td>
+                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 280792 (2014)</td>
+                        <td class="py-4 px-6">K S Nagla, Moin Uddin Amandeep S Kalra, Akshay Kathyial</td>
+                    </tr>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">4.</td>
+                        <td class="py-4 px-6">Intelligent Induction Hardening Machine</td>
+                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No. 320045 (2019)</td>
+                        <td class="py-4 px-6">Amit Kohli, KS Nagla, Hari Singh</td>
+                    </tr>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">1.</td>
+                        <td class="py-4 px-6">Earthquake Alarm</td>
+                        <td class="py-4 px-6"> <span class=" text-red-800">Granted:</span> Patent No 220748 (2004)*</td>
+                        <td class="py-4 px-6">KS Nagla</td>
+                    </tr>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">2.</td>
+                        <td class="py-4 px-6">Mechanism to Clean Bird Dropping (Garbage) within a Cage type Poultry Farm
+                        </td>
+                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 210090 (2007)</td>
+                        <td class="py-4 px-6">KS Nagla</td>
+                    </tr>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">3.</td>
+                        <td class="py-4 px-6">A leg exerciser machine </td>
+                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 280792 (2014)</td>
+                        <td class="py-4 px-6">K S Nagla, Moin Uddin Amandeep S Kalra, Akshay Kathyial</td>
+                    </tr>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">4.</td>
+                        <td class="py-4 px-6">Intelligent Induction Hardening Machine</td>
+                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No. 320045 (2019)</td>
+                        <td class="py-4 px-6">Amit Kohli, KS Nagla, Hari Singh</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class=" ml-4  mt-4 mb-4 text-red-600">
+            <div class="mb-2">
+                Dr. K S Nagla <br>
+                Faculty Coordinator IPR Cell NITJ
+            </div>
+            <div>
+                Dr. S K Sinha <br>
+                Dean R & C
+            </div>
+        </div>
+    </div>
+
+
+    <div class="base-image hidden overflow-hidden lg:block"></div>
+    <div class="relative bottom-0">
+        <script src="../common template/footer.js"></script>
+    </div>
+
+    <script src="../admin/app.js"></script>
+    <script src="./tabs.js"></script>
+</body>
+
+</html>

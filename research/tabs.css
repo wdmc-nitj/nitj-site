@@ -9,7 +9,8 @@
 }
 
 .wrapper{
-    display: flex !important;
+    /* display: flex !important; */
+	display: flex;
 	justify-content: space-between;
 	width: 100%;
 }
@@ -44,7 +45,6 @@
 }
 
 
-
 .tabs ul li:last-child{
 	border-right: 0px;
 }
@@ -72,6 +72,8 @@
 .tabs ul li.active2:before{
 	opacity: 1;
 }
+
+
 
 
 .programmes-heading{

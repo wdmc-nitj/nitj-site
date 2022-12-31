@@ -5,6 +5,7 @@ async function getNavbar(){
   d = await obj.json();
   console.log()
   createNav(d)
+  createNavMob(d)
 }
 
 async function createNav(obj){
@@ -94,7 +95,7 @@ async function createNav(obj){
       )
       dropdown6.setAttribute('id','drop-down')
       dropdown6.innerHTML = ``
-  data["Research"].forEach((array) => {
+  data["LifeatNITJ"].forEach((array) => {
     navbarhelper(array,dropdown6)
   })
   menu6.appendChild(LifeatNITJ)
@@ -119,12 +120,12 @@ function navbarhelper(array,dropdown){
     block.setAttribute('class','min-h-full')
 
     const head = document.createElement('div')
-    head.setAttribute('class','rounded-b-xl h-full overflow-clip  bg-accent hover:bg-orange-500')
+    head.setAttribute('class','rounded-b-xl h-full overflow-clip  bg-accent hover:bg-orange-500 uppercase')
     head.setAttribute('id','head')
     head.innerHTML=`<div class="p-2 text-center"><a href='/admin/index.html'>${array[0]}</a></div>`
 
     const listdiv = document.createElement('div')
-    listdiv.setAttribute('class','h-full rounded-b-xl bg-white')
+    listdiv.setAttribute('class','h-full rounded-b-xl bg-white normal-case')
     listdiv.innerHTML = ``
 
     const list = document.createElement('ul')
