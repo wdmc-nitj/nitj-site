@@ -684,6 +684,22 @@ sup {
   left: 90%;
 }
 
+.top-\[60\%\] {
+  top: 60%;
+}
+
+.top-\[40\%\] {
+  top: 40%;
+}
+
+.top-\[10\%\] {
+  top: 10%;
+}
+
+.top-\[12\%\] {
+  top: 12%;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -744,12 +760,16 @@ sup {
   margin: 0.5rem;
 }
 
-.m-5 {
-  margin: 1.25rem;
+.m-6 {
+  margin: 1.5rem;
 }
 
 .m-auto {
   margin: auto;
+}
+
+.m-5 {
+  margin: 1.25rem;
 }
 
 .m-\[auto\] {
@@ -2861,6 +2881,16 @@ sup {
   line-height: 1;
 }
 
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-\[24px\] {
   font-size: 24px;
 }
@@ -3184,6 +3214,11 @@ sup {
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.text-\[\#0369A0\] {
+  --tw-text-opacity: 1;
+  color: rgb(3 105 160 / var(--tw-text-opacity));
 }
 
 .text-opacity-100 {
