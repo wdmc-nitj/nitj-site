@@ -1,6 +1,6 @@
 document.write(`
 
-<div class=" z-50 p-0 top-0 flex items-start justify-start h-full w-full z-10 fixed bg-transparent backdrop-blur-2xl"
+<div class=" p-0 top-0 flex items-start justify-start h-full w-full z-10 fixed bg-transparent backdrop-blur-2xl"
 id="nav-menu" style="display: none">
 <div id="menu" class="h-screen w-3/4 z-10 relative" onclick="close_menu();">
   <div class="menu-content w-3/4 z-40 bg-accent h-full relative" onclick="keep_menu_open();z=1;">
@@ -197,7 +197,7 @@ id="nav-menu" style="display: none">
               ">
             engineering
           </span>
-          <a href="" class="hidden sm:block pl-1.5 text-xs">Jobs</a>
+          <a href="/research/jobs.html" class="hidden sm:block pl-1.5 text-xs">Jobs</a>
         </div>
         <div class="flex items-center">
           <span class="material-symbols-outlined" style="
@@ -810,22 +810,22 @@ id="nav-menu" style="display: none">
                             Discover Student Life
                           </li>
                           <li class="hover:text-[#FF6600]">
-                           <a href="./admissions/courses_offered.html" target="_blank"> Courses Offered </a>
+                           <a href="/admissions/courses_offered.html"> Courses Offered </a>
                           </li>
                           <li class="hover:text-[#FF6600]">
                             How to Apply
                           </li>
                           <li class="hover:text-[#FF6600]">
-                           <a href="./admissions/admission_procedure.html" target="_blank"> Admissions Process </a>
+                          <a href="/admissions/admission_procedure.html"> Admissions Process </a>
                           </li>
                           <li class="hover:text-[#FF6600]">
-                            Virtual Tour
+                           <a href="/admin/virtualtour.html"> Virtual Tour </a>
                           </li>
                           <li class="hover:text-[#FF6600]">
-                           <a href="./admissions/foreign.html" target="_blank"> International Students </a>
+                          <a href="/admissions/index.html#foreign_admissions"> International Students </a>
                           </li>
                           <li class="hover:text-[#FF6600] md:font-bold py-2">
-                            Contact Details for Admission
+                           <a href="/admissions/contactDetails.html"> Contact Details for Admission </a>
                           </li>
                         </ul>
                       </div>
@@ -861,23 +861,23 @@ id="nav-menu" style="display: none">
                     <div id="head" class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
                       <div class="p-2 text-center">JOIN NITJ</div>
                       <div class="h-full rounded-b-xl bg-white">
-                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                          <li class="hover:text-[#FF6600]">
-                            <a href="/admissions/index.html">B.Tech Admission</a>
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            <a href="/admissions/mtech_ccmt.html">M.Tech Admission</a>
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            <a href="/admissions/msc.html">Msc Admission</a>
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            <a href="/admissions/mba.html">MBA Admission</a>
-                          </li>
-                          <li class="hover:text-[#FF6600]">
-                            <a href="/admissions/phd.html">Ph.D Admission</a>
-                          </li>
-                        </ul>
+                      <ul class="flex flex-col gap-1 px-2 font-normal text-black" id="admissionpages">
+                      <li class="hover:text-[#FF6600]">
+                        <a href="/admissions/index.html#btech" >B.Tech Admission</a>
+                      </li>
+                      <li class=" over:text-[#FF6600]">
+                        <a href="/admissions/index.html#mtech">M.Tech Admission</a>
+                      </li>
+                      <li class="hover:text-[#FF6600]">
+                        <a href="/admissions/index.html#msc">Msc Admission</a>
+                      </li>
+                      <li class="hover:text-[#FF6600]">
+                        <a  href="/admissions/index.html#mba">MBA Admission</a>
+                      </li>
+                      <li class="hover:text-[#FF6600]" >
+                        <a  href="/admissions/index.html#phd">Ph.D Admission</a>
+                      </li>
+                    </ul>
                       </div>
                     </div>
                   </div>
@@ -893,16 +893,16 @@ id="nav-menu" style="display: none">
                             <a href="/admissions/admission_procedure.html">B.Tech</a>
                           </li>
                           <li class="hover:text-[#FF6600]">
-                            <a href="./admissions/src/prospectus.pdf"  target="_blank"> M.Tech </a>
+                            <a href="/admissions/src/prospectus.pdf"  target="_blank"> M.Tech </a>
                           </li>
                           <li class="hover:text-[#FF6600]">
-                            <a href="./admissions/src/prospectus.pdf"  target="_blank"> M.Sc. </a>
+                            <a href="/admissions/src/prospectus.pdf"  target="_blank"> M.Sc. </a>
                           </li>
                           <li class="hover:text-[#FF6600]">
-                            <a href="./admissions/src/prospectus.pdf"  target="_blank">MBA </a>
+                            <a href="/admissions/src/prospectus.pdf"  target="_blank">MBA </a>
                           </li>
                           <li class="hover:text-[#FF6600]">
-                            <a href="./admissions/src/prospectus.pdf"  target="_blank"> Ph.D </a>
+                            <a href="/admissions/src/prospectus.pdf"  target="_blank"> Ph.D </a>
                           </li>
                         </ul>
                       </div>
@@ -929,23 +929,28 @@ id="nav-menu" style="display: none">
                         <div id="head" class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
                           <div class="p-2 text-center">RESEARCH @ NITJ</div>
                           <div class="h-full rounded-b-xl bg-white">
-                            <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                              <li class="hover:text-[#FF6600]">
-                              <a href="https://vidwan.inflibnet.ac.in/searchc/search" target="_blank">  VIDWAN (IRINS Instance) </a>
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                Research Publications
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                Research Jobs
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                Internships
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                Sponsored Research Projects
-                              </li>
-                            </ul>
+                          <ul class="flex flex-col gap-1 px-2 font-normal text-black">
+                          <li class="hover:text-[#FF6600]">
+                          <a href="https://vidwan.inflibnet.ac.in/searchc/search" target="_blank">  VIDWAN (IRINS Instance) </a>
+                          </li>
+                          <li class="hover:text-[#FF6600]">
+                          <a href="/research/research_publications.html"> Research Publications</a>
+                           
+                          </li>
+                          <li class="hover:text-[#FF6600]">
+                            <a href="/research/jobs.html">
+                             Research Jobs </a>
+                          </li>
+                          <li class="hover:text-[#FF6600]">
+                          <a href="/research/jobs.html">
+                          Internships </a>
+                           
+                          </li>
+                          <li class="hover:text-[#FF6600]">
+                          <a href="/research/researchProjects.html">   Sponsored Research Projects</a>
+                           
+                          </li>
+                        </ul>
                           </div>
                         </div>
                       </div>
@@ -958,19 +963,25 @@ id="nav-menu" style="display: none">
                           <div class="h-full rounded-b-xl bg-white">
                             <ul class="flex flex-col gap-1 px-2 font-normal text-black">
                               <li class="hover:text-[#FF6600]">
-                                STI Hub
+                               <a href="/research/sti_hub.html"> STI Hub </a>
                               </li>
                               <li class="hover:text-[#FF6600]">
-                                E-Cell
+                              <a href="/admin/e-cell.html">E-Cell</a>
                               </li>
                               <li class="hover:text-[#FF6600]">
+                              <a href="/research/InnovationClub.html">
                                 Innovation Club
+                                </a>
                               </li>
                               <li class="hover:text-[#FF6600]">
+                              <a href="/research/InstituteInnovationCouncil.html">
                                 Institute Innovation Council
+                                </a>
                               </li>
                               <li class="hover:text-[#FF6600]">
+                              <a href="/research/TechnologyBusinessIncubator.html">
                                 Technology Business Incubator
+                                </a>
                               </li>
                             </ul>
                           </div>
@@ -986,15 +997,16 @@ id="nav-menu" style="display: none">
                           <div class="p-2 text-center">CONSULTANCY @ NITJ</div>
                           <div class="h-full rounded-b-xl bg-white">
                             <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                              <li class="hover:text-[#FF6600]">
-                                Consultancy works
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                <a href="/research/mous.html">MoUs</a>
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                IPRs
-                              </li>
+                            <li class="hover:text-[#FF6600]">
+                            <a href="/research/consultancy.html">  Consultancy works</a>
+                            
+                            </li>
+                            <li class="hover:text-[#FF6600]">
+                              <a href="/research/mous.html">MoUs</a>
+                            </li>
+                            <li class="hover:text-[#FF6600]">
+                             <a href="/research/iprs.html">IPRs</a>
+                            </li>
                               <li class="hover:text-[#FF6600]">
                                 Find an Expert
                               </li>
@@ -1012,20 +1024,20 @@ id="nav-menu" style="display: none">
                         <div id="head" class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
                           <div class="p-2 text-center">UPCOMING EVENTS</div>
                           <div class="h-full rounded-b-xl bg-white">
-                            <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                              <li class="hover:text-[#FF6600]">
-                                Conferences
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                Seminars
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                STC/ FDP
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                Workshops
-                              </li>
-                            </ul>
+                          <ul class="flex flex-col gap-1 px-2 font-normal text-black">
+                          <li class="hover:text-[#FF6600]">
+                           <a href="/research/upcoming_conferences.html"> Conferences</a>
+                          </li>
+                          <li class="hover:text-[#FF6600]">
+                          <a href="/research/upcoming_seminars.html"> Seminars </a>
+                          </li>
+                          <li class="hover:text-[#FF6600]">
+                          <a href="/research/upcoming_stcfdp.html"> STC/ FDP </a>
+                          </li>
+                          <li class="hover:text-[#FF6600]">
+                          <a href="/research/upcoming_workshops.html"> Workshops </a>
+                          </li>
+                        </ul>
                           </div>
                         </div>
                       </div>

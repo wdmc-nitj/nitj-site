@@ -44,20 +44,28 @@ npm install yarn --global
 
 ## Contributing in the repo
 
-- Make a fork of this repo by clicking on the fork button in the top right corner on github
-- Clone the forked repo to your local machine by performing the above mentioned steps
+- Clone this repo to your local machine by performing the above mentioned steps
+- Create a separate branch, steps are mentioned below:
+  1. `git branch {{branch-name}}`
+  2. `git checkout {{branch-name}}`
+  3. Now the head of your local clone will be pointing to this branch
+
 - Make your changes
   > Details about this part are given below
-- Push your code to github
-- Create a pull request with the updated code
+- Publish your branch to github, by using the below commands: 
+  1. `git add .`
+  2. `git commit -m "{{message about the commit}}"`
+  3. `git push --set-upstream origin {{branch-name}}`
+- Open this repo on github you will send an option on the top to create a pull request
+- Select the options and create a PR with appropirate message
 
 ## Adding your code
 
 - Make a new folder in the `/root` directory
 - Put your files in that folder
-- Open `./index.html` present in the root directory
-- Press `CTRL + F` and search the name of the section that were assigned to work on
-- Add links in the required pages from the navbar itself
-  > This component is spaning upto 1340 lines
+- Use the navbar and footer files present in the `/common-template` folder
+- Just include the files as a script tag 
+- Get your links added in the database:
+  > Contact the backend guys of TEAM A 
 - Test your changes on localhost
 - Complete the contributing process

@@ -1,4 +1,5 @@
 window.onscroll = function () {
+  const insti_name_cont = document.getElementById('instituteNameContainer')
   const institute_name = document.getElementsByClassName('institute_name')
   const full_navbar = document.getElementsByTagName('header')
   const logo = document.getElementById('logo_250')
@@ -9,6 +10,9 @@ window.onscroll = function () {
   // resAutoScroll()
 
   if (window.scrollY > 100) {
+    insti_name_cont.classList.remove("sm:h-20","sm:max-h-20")
+    insti_name_cont.classList.add("sm:h-10","sm:max-h-10")
+    // insti_name_cont.classList.add(' sm:max-h-20')
     topbar.style.transform = 'translateY(-50px)'
     for (let i = 0; i < diff_lang.length; i++) {
       diff_lang[i].classList.remove('mt-7')
@@ -32,6 +36,8 @@ window.onscroll = function () {
       }
     }
   } else {
+    insti_name_cont.classList.remove("sm:h-10","sm:max-h-10")
+    insti_name_cont.classList.add("sm:h-20","sm:max-h-20")
     logo.style.width = '120px'
     logo.style.height = '120px'
     topbar.style.transform = 'translateY(0)'
@@ -59,32 +65,6 @@ window.onscroll = function () {
 
 function openDropdown() {
   var dropdown = document.getElementById('dropdown')
-  if (dropdown.classList.contains('hidden')) {
-    dropdown.classList.remove('hidden')
-  } else {
-    dropdown.classList.add('hidden')
-  }
-}
-function openDropdown2() {
-  var dropdown = document.getElementById('dropdown3')
-  if (dropdown.classList.contains('hidden')) {
-  } else {
-    dropdown.classList.add('hidden')
-  }
-  var dropdown = document.getElementById('dropdown2')
-  if (dropdown.classList.contains('hidden')) {
-    dropdown.classList.remove('hidden')
-  } else {
-    dropdown.classList.add('hidden')
-  }
-}
-function openDropdown3() {
-  var dropdown = document.getElementById('dropdown2')
-  if (dropdown.classList.contains('hidden')) {
-  } else {
-    dropdown.classList.add('hidden')
-  }
-  var dropdown = document.getElementById('dropdown3')
   if (dropdown.classList.contains('hidden')) {
     dropdown.classList.remove('hidden')
   } else {
@@ -335,30 +315,6 @@ function isInViewPort(el) {
 //   timer = setInterval(run, stepTime)
 //   run()
 // }
-
-var sideMenu = document.querySelector('#nav-menu')
-var crossBtn = document.querySelector('#nav-menu .menu-btn')
-var y = 0
-var z = 0
-function open_menu() {
-  console.log('open')
-  if (sideMenu.style.display == 'none') {
-    sideMenu.setAttribute('style', 'display:block;')
-  }
-}
-function keep_menu_open() {
-  console.log('keeping open')
-  if (sideMenu.style.display == 'block') {
-    sideMenu.setAttribute('style', 'display:block;')
-  }
-}
-function close_menu() {
-  console.log('close')
-  console.log(z)
-  if (sideMenu.style.display == 'block' && z == 0) {
-    sideMenu.setAttribute('style', 'display:none;')
-  }
-}
 
 // News Cards Auto Scroll
 

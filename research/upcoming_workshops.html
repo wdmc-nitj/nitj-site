@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon and title -->
+  <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
+  <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+  <!-- RESEARCH -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./tabs.css">
+
+  <!--alpine js-->
+  <script
+  defer
+  src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"
+></script>
+
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  <style>
+    /* Customizing the Scrollbar */
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+    }
+
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: hsla(201, 96%, 26%);
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #212121;
+    }
+
+    /* Gallery Effects */
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      line-height: 0;
+    }
+
+    .box>img {
+      width: 100%;
+      height: 100%;
+      border: 0.2rem solid white;
+      border-radius: 8px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: ease 0.75s;
+    }
+
+    .box:hover {
+      flex: 1 1 30%;
+      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .box:hover>img {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .base-image {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      mask-image: linear-gradient(0deg, white, white, white, transparent);
+      -webkit-mask-image: linear-gradient(0deg, white, white, white, transparent);
+      background-color: #cccccc;
+      height: 400px;
+      background-position: 0% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .base-image-2 {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      background-color: #cccccc;
+      height: 300px;
+      background-position: 58% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .main-shadow {
+      text-shadow: rgb(0 0 0) 6px -1px 5px;
+    }
+
+    .carousel-open:checked+.carousel-item {
+      position: static;
+      opacity: 100;
+    }
+
+    .carousel-item {
+      -webkit-transition: opacity 0.9s ease-in-out;
+      transition: opacity 1s ease-in-out 0.2s;
+    }
+
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3,
+    #carousel-4:checked~.control-4 {
+      display: block;
+    }
+
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .active2{
+	background-color: rgb(42, 120, 193);
+}
+.tabs2 ul{
+	display: flex;
+    flex-direction: column;
+	border-radius: 3px;
+	margin-bottom: 25px;
+	box-shadow: 2px 2px 2px rgb(108, 173, 235);
+}
+
+.tabs2 ul li{
+	width: 100%;
+	padding: 10px;
+	font-family: 'Barlow', sans-serif !important;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: #3b3b3b;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+}
+
+
+
+
+.tabs2 ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs2 ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+
+.tabs2 ul li:hover,
+.tabs2 ul li.active2{
+	background: rgb(42, 120, 193);
+	color: #ffffff;
+	border: 2px solid rgb(82, 82, 79);
+}
+
+.tabs2 ul li:hover:before,
+.tabs2 ul li.active2:before{
+	opacity: 1;
+}
+
+@media(max-width:768px){
+  .side_Bar_Hide{
+    display: none;
+  }
+}
+@media (min-width:768px) and (max-width:1000px) {
+  .side_Bar_Hide{
+    margin-top: 155px;
+  }
+
+}
+
+.titlebg {
+            background: linear-gradient(90.09deg,
+                    rgba(0, 0, 0, 0.7) 0.08%,
+                    rgba(255, 255, 255, 0) 99.11%),
+                url(../admin/img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+  </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+
+  
+  <body>
+    <script src="../common template/header.js"></script>
+    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+      <p class="font2 font-bold sm:text-[35px] lg:text-[60px] uppercase text-white leading-[1]">
+        Workshops
+      </p>
+  </div>
+  <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center">
+          <li class="inline-flex items-center">
+              <a href="https://nitj.netlify.app/"
+                  class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                  <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+          </li>
+          <li aria-current="page">
+              <div class="inline-flex items-center">
+                  <i style="
+              color: rgb(128, 128, 128);
+              font-size: 12px;
+              margin-left: 12px;
+            " class="fa-solid fa-angle-right ml-2"></i>
+                  <a href="#" class="text-lg font-medium ml-2">Research</a>
+              </div>
+          </li>
+          <li aria-current="page">
+              <div class="inline-flex items-center">
+                  <i style="
+              color: rgb(128, 128, 128);
+              font-size: 12px;
+              margin-left: 12px;
+            " class="fa-solid fa-angle-right ml-2"></i>
+                  <a href="#" class="text-lg font-medium ml-2"> Workshops</a>
+              </div>
+          </li>
+      </ol>
+  </nav> 
+ <div class="flex lg:flex-row lg:flex flex-col mt-11 justify-between align-middle px-[2%]">
+<div class=" flex flex-col lg:w-[45%] w-[80%] mx-auto justify-center align-middle">
+  <div class="text-[32px] lg:mb-2 mb-4 font-semibold lg:w-[70%]"> Upcoming workshops
+  <div class="h-1 w-[60%] bg-accent"></div>  
+  </div>
+<div class="lg:flex shadow rounded-lg border w-[85%] mb-4 border-gray-400">
+    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner mx-auto">
+      <div class="text-center tracking-wide">
+        <!--date-->
+        <div class="text-white font-bold text-4xl ">24</div>
+        <div class="text-white font-normal text-2xl">Sept</div>
+      </div>
+    </div>
+    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+      <div class="flex flex-row lg:justify-start justify-center">
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+         <!--time-->
+          <i class="far fa-clock"></i> 1:30 PM
+        </div>
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+          Organiser : IHC
+        </div>
+      </div>
+      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+        Title of workshop
+      </div>
+
+      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+       <!--address / location-->
+        Central Seminar Hall
+      </div>
+    </div>
+   
+  </div>
+  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
+    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner  mx-auto">
+      <div class="text-center tracking-wide">
+        <!--date-->
+        <div class="text-white font-bold text-4xl ">24</div>
+        <div class="text-white font-normal text-2xl">Sept</div>
+      </div>
+    </div>
+    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+      <div class="flex flex-row lg:justify-start justify-center">
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+         <!--time-->
+          <i class="far fa-clock"></i> 1:30 PM
+        </div>
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+          Organiser : IHC
+        </div>
+      </div>
+      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+        Title of workshop
+      </div>
+
+      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+       <!--address / location-->
+        Central Seminar Hall
+      </div>
+    </div>
+   
+  </div>
+  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
+    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner  mx-auto">
+      <div class="text-center tracking-wide">
+        <!--date-->
+        <div class="text-white font-bold text-4xl ">24</div>
+        <div class="text-white font-normal text-2xl">Sept</div>
+      </div>
+    </div>
+    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+      <div class="flex flex-row lg:justify-start justify-center">
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+         <!--time-->
+          <i class="far fa-clock"></i> 1:30 PM
+        </div>
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+          Organiser : IHC
+        </div>
+      </div>
+      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+        Title of workshop
+      </div>
+
+      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+       <!--address / location-->
+        Central Seminar Hall
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+
+<div class=" flex flex-col lg:w-[45%]  w-[80%] mx-auto">
+  <div class="text-[32px] lg:mb-2 mb-4 font-semibold lg:w-[70%]"> workshops Organized
+  <div class="h-1 w-[60%] bg-accent"></div>  
+  </div>
+<div class="lg:flex shadow rounded-lg border w-[85%] mb-4 border-gray-400">
+    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner">
+      <div class="text-center tracking-wide">
+        <!--date-->
+        <div class="text-white font-bold text-4xl ">24</div>
+        <div class="text-white font-normal text-2xl">Sept</div>
+      </div>
+    </div>
+    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+      <div class="flex flex-row lg:justify-start justify-center">
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+         <!--time-->
+          <i class="far fa-clock"></i> 1:30 PM
+        </div>
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+          Organiser : IHC
+        </div>
+      </div>
+      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+        Title of workshop
+      </div>
+
+      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+       <!--address / location-->
+        Central Seminar Hall
+      </div>
+    </div>
+   
+  </div>
+  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
+    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner">
+      <div class="text-center tracking-wide">
+        <!--date-->
+        <div class="text-white font-bold text-4xl ">24</div>
+        <div class="text-white font-normal text-2xl">Sept</div>
+      </div>
+    </div>
+    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+      <div class="flex flex-row lg:justify-start justify-center">
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+         <!--time-->
+          <i class="far fa-clock"></i> 1:30 PM
+        </div>
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+          Organiser : IHC
+        </div>
+      </div>
+      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+        Title of workshop
+      </div>
+
+      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+       <!--address / location-->
+        Central Seminar Hall
+      </div>
+    </div>
+   
+  </div>
+  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
+    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner">
+      <div class="text-center tracking-wide">
+        <!--date-->
+        <div class="text-white font-bold text-4xl ">24</div>
+        <div class="text-white font-normal text-2xl">Sept</div>
+      </div>
+    </div>
+    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+      <div class="flex flex-row lg:justify-start justify-center">
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+         <!--time-->
+          <i class="far fa-clock"></i> 1:30 PM
+        </div>
+        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+          Organiser : IHC
+        </div>
+      </div>
+      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+        Title of workshop
+      </div>
+
+      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+       <!--address / location-->
+        Central Seminar Hall
+      </div>
+    </div>
+   
+  </div>
+</div>
+ </div>
+
+ <div class="basis-3/5 w-[90%] mx-auto mt-4">
+  <div>
+    <div class="mb-10 flex items-center justify-start space-x-6 group">
+      <h1 class="uppercase text-4xl font-semibold text-accent">
+        Photo <span class="text-dark-purple">Gallery</span>
+      </h1>
+      <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+        style="font-size: 40px; color: var(--accent)">
+        imagesmode
+      </span>
+    </div>
+    <div class="flex h-[22vh] w-full">
+      <div class="box">
+        <img src="./img/img5.png" />
+      </div>
+      <div class="box">
+        <img src="./img/img5.png" />
+      </div>
+      <div class="box">
+         <img src="./img/img5.png" />
+      </div>
+      <div class="box hidden lg:block">
+         <img src="./img/img5.png" />
+      </div>
+    </div>
+
+    <div class="flex h-[22vh] w-full">
+      <div class="box">
+        <img src="./img/img4.png" />
+      </div>
+      <div class="box">
+        <img src="./img/img4.png" />
+      </div>
+      <div class="box">
+        <img src="./img/img4.png" />
+      </div>
+      <div class="box hidden lg:block">
+        <img src="./img/img4.png" />
+      </div>
+    </div>
+
+ 
+  </div>
+ 
+</div>
+
+  <div class="base-image hidden overflow-hidden lg:block "></div>
+<div class="relative bottom-0">
+
+<script src="../common template/footer.js"></script>
+</div>
+   
+    <script src="../admin/app.js"></script>
+
+  </body>
+  </html>
