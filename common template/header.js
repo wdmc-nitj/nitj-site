@@ -366,7 +366,7 @@ id="nav-menu" style="display: none">
                             <a href="/admin/ranking.html">NITJ Rankings & Awards</a>
                             </li>
                             <li class="hover:text-[#FF6600]">
-                            <a href="https://drive.google.com/file/d/1iQraSeXVHabN4_Y_4rUK3cUET7TiR7ts/view?usp=sharing">Institute Prospectus</a>
+                            <a href="https://drive.google.com/file/d/1iQraSeXVHabN4_Y_4rUK3cUET7TiR7ts/view?usp=sharing" target="_blank">Institute Prospectus</a>
                             </li>
                             <li class="hover:text-[#FF6600]">
                             <a href="/admin/location.html">Location</a>
