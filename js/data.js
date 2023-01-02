@@ -117,12 +117,15 @@ fetch('https://wdmc.onrender.com/latestEvent/get/all')
                     </p>
                     </div>
                     <div class="pt-5 mt-auto whitespace-nowrap">
-                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More &rarr;</a>
+                      <a
+                      href = "/template/index.html?id=${
+                        e._id
+                      }?category=latestEvent" 
+                      class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More &rarr;</a>
                     </div>
                   </div>
                 </div>
               </div>
-
       `
       cards.appendChild(card)
     })
@@ -175,7 +178,9 @@ fetch('https://wdmc.onrender.com/researchHighlights/get/all')
                       ${e.desc}
                     </p>
                     <div class="mt-auto pt-5 flex whitespace-nowrap items-center justify-start space-x-3">
-                      <a class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More &rarr;</a>
+                      <a
+                       href = "/template/index.html?id=${e._id}?category=researchHighlights" 
+                      class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More &rarr;</a>
                     </div>
                   </div>
                 </div>
