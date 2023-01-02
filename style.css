@@ -652,14 +652,6 @@ sup {
   bottom: 0px;
 }
 
-.top-\[21\%\] {
-  top: 21%;
-}
-
-.right-\[2\%\] {
-  right: 2%;
-}
-
 .top-\[40vh\] {
   top: 40vh;
 }
@@ -744,15 +736,11 @@ sup {
   margin: 0.5rem;
 }
 
-.m-5 {
-  margin: 1.25rem;
-}
-
-.m-auto {
+.m-\[auto\] {
   margin: auto;
 }
 
-.m-\[auto\] {
+.m-auto {
   margin: auto;
 }
 
@@ -1284,14 +1272,6 @@ sup {
   height: 22vh;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
-.h-\[55\%\] {
-  height: 55%;
-}
-
 .h-\[67px\] {
   height: 67px;
 }
@@ -1381,6 +1361,10 @@ sup {
   height: 400px;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-\[780px\] {
   height: 780px;
 }
@@ -1400,7 +1384,6 @@ sup {
 .h-\[20px\] {
   height: 20px;
 }
-
 
 .h-44 {
   height: 11rem;
@@ -1480,14 +1463,6 @@ sup {
 }
 
 .w-3\/5 {
-  width: 60%;
-}
-
-.w-\[50px\] {
-  width: 50px;
-}
-
-.w-\[60\%\] {
   width: 60%;
 }
 
@@ -1595,6 +1570,10 @@ sup {
   width: 45%;
 }
 
+.w-\[50px\] {
+  width: 50px;
+}
+
 .w-\[10\%\] {
   width: 10%;
 }
@@ -1679,11 +1658,9 @@ sup {
   flex-basis: 83.333333%;
 }
 
-
 .basis-full {
   flex-basis: 100%;
 }
-
 
 .table-fixed {
   table-layout: fixed;
@@ -1954,17 +1931,6 @@ sup {
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
 
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -2007,7 +1973,6 @@ sup {
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
-
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -2105,10 +2070,6 @@ sup {
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.rounded-\[50\%\] {
-  border-radius: 50%;
 }
 
 .rounded-md {
@@ -2357,11 +2318,6 @@ sup {
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#0369A0\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 105 160 / var(--tw-bg-opacity));
 }
 
 .bg-slate-800 {
