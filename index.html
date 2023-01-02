@@ -2264,31 +2264,18 @@
           </div>
           <div class="flex h-[22vh] w-full">
             <div class="box">
-              <img src="./public/assets/images/img1.png" onclick="showModal('./public/assets/images/img1.png')"/>
+              <img src="./public/assets/images/img1.png" />
             </div>
             <div class="box">
-              <img src="./public/assets/images/img2.png" onclick="showModal('./public/assets/images/img2.png')"/>
+              <img src="./public/assets/images/img2.png" />
             </div>
             <div class="box">
-              <img src="./public/assets/images/img3.png" onclick="showModal('./public/assets/images/img3.png')"/>
+              <img src="./public/assets/images/img3.png" />
             </div>
             <div class="box hidden lg:block">
-              <img src="./public/assets/images/img4.png" onclick="showModal('./public/assets/images/img4.png')" />
+              <img src="./public/assets/images/img4.png" />
             </div>
           </div>
-
-      <div id="modal"  class=" hidden fixed top-0 left-0 z-80 w-full h-full flex justify-center items-center" style="backdrop-filter: blur(5px);">
-          <!-- The close button -->
-         <a class="fixed z-90  text-white text-4xl font-bold bg-[#0369A0] top-[21%] right-[2%] rounded-[50%] center w-[50px] text-center h-12 align-middle cursor-pointer" href="javascript:void(0)"
-              onclick="closeModal()" >&times;</a>
-
-          <!-- A big image will be displayed here -->
-          <a href="javascript:prevImage('modal-img')"  class=" text-5xl m-5 font-bold cursor-pointer ">&lt;</a>
-         
-          <img id="modal-img" class="w-[60%] h-[55%] m-auto rounded-lg" onblur="closeModal()">
-
-          <a href="javascript:nextImage('modal-img')" class=" text-5xl m-5 font-bold cursor-pointer hover:scale-110">></a>
-      </div>
 
           <div class="flex h-[22vh] w-full">
             <div class="box">
@@ -2480,83 +2467,6 @@
       // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       //   return new Tooltip(tooltipTriggerEl);
       // });
-  </script>
-    <script>
-
-      var modal = document.getElementById("modal");
-
-      var modalImg = document.getElementById("modal-img");
-
-
-      function showModal(src) {
-          modal.classList.remove('hidden');
-          modalImg.src = src;
-      }
-
-      // close button 
-      function closeModal() {
-          modal.classList.add('hidden');
-      }
-  </script>
-
-  <script>
-
-// getNavbar();
-
-// async function getNavbar(){
-//   let obj=await fetch('https://wdmc.onrender.com/navbar');
-//   d = await obj.json();
-//   console.log()
-//   createNav(d)
-// }
-
-
-    var imgArray = new Array();
-
-    for(var i=1;i<=11;i++){
-      imgArray[i] = new Image();
-      imgArray[i].src = './public/assets/images/img'+i+'.png';
-    }
-   
-
-
-   function nextImage(element)
-{
-    var img = document.getElementById(element);
-
-    for(var i = 1; i < imgArray.length;i++)
-    {
-        if(imgArray[i].src == img.src) 
-        {
-            if(i === imgArray.length-1){
-                document.getElementById(element).src = imgArray[1].src;
-                break;
-            }
-            document.getElementById(element).src = imgArray[i+1].src;
-            break;
-        }
-    }
-}
-
-function prevImage(element)
-{
-    var img = document.getElementById(element);
-
-    for(var i = 1; i < imgArray.length;i++)
-    {
-        if(imgArray[i].src == img.src) 
-        {
-            if(i === 1){
-                document.getElementById(element).src = imgArray[imgArray.length-1].src;
-                break;
-            }
-            document.getElementById(element).src = imgArray[i-1].src;
-            break;
-        }
-    }
-}
-
-
   </script>
 
   <script src="./js/app.js"></script>
