@@ -46,7 +46,7 @@
         }
 
         .material-symbols-outlined {
-            font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+            font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
         }
 
         ::-webkit-scrollbar {
@@ -123,16 +123,16 @@
                 <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">Chief Warden</p>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
                     <div>
-                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr Shailendra Bajpai</p>
+                     <div id="c_name"></div>   <!-- <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr Shailendra Bajpai</p> -->
                         <!-- <p class="text-sm">Department of Industrial & Production Engg</p> -->
                         <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
                         <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                             <i class="fa-solid fa-envelope"></i>
-                            <p class="text-sm text-gray-500 my-1">chiefwarden@nitj.ac.in</p>
+                           <div id="c_email"></div> <!-- <p class="text-sm text-gray-500 my-1">chiefwarden@nitj.ac.in</p> -->
                         </div>
                         <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                             <i class="fa-solid fa-location-dot"></i>
-                            <p class="text-sm my-1">0181-5037820</p>
+                        <div id ="c_phone"></div> <!-- <p class="text-sm my-1">0181-5037820</p> -->
                         </div>
                     </div>
                 </div>
@@ -141,16 +141,17 @@
                 <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">Deputy Chief Warden</p>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
                     <div>
-                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr Ranchan Chauhan</p>
+                       <div id ="cd_name"></div> <!-- <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr Ranchan Chauhan</p> -->
                         <!-- <p class="text-sm">Department of Industrial & Production Engg</p> -->
                         <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
                         <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                             <i class="fa-solid fa-envelope"></i>
-                            <p class="text-sm text-gray-500 my-1">dcw@nitj.ac.in</p>
+                        </div id="cd_email"></div> <!-- <p class="text-sm text-gray-500 my-1">dcw@nitj.ac.in</p> -->
                         </div>
                         <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                             <i class="fa-solid fa-location-dot"></i>
-                            <p class="text-sm my-1">+91-181-5037726</p>
+                            <div id="cd_phone"></div>
+                             <!-- <p class="text-sm my-1">+91-181-5037726</p> -->
                         </div>
                     </div>
                 </div>
@@ -352,6 +353,37 @@
           </div>
      
 </div>
+<script>
+  async function callAPi(){
+      let result = await fetch('https://wdmc.onrender.com/administration/639ff483f6453929c05e5cf5');
+      result = await result.json();
+      console.log(result);
+      document.getElementById("c_name").innerHTML = 
+      `
+      <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+     ` 
+     document.getElementById("c_email").innerHTML =  
+     `<p class="text-sm text-gray-500 my-1">${result[0].contact.Email}</p>
+     `
+     document.getElementById("c_phone").innerHTML = 
+      `
+      <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>`  
+  
+  }
+  callAPi()
+</script>
+<script>
+  async function callAPi(){
+      let result = await fetch('https://wdmc.onrender.com/administration/639ff55ef6453929c05e5cf7');
+      result = await result.json();
+      console.log(result);
+      document.getElementById("cd_name").innerHTML = `<p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p> ` 
+     document.getElementById("cd_email").innerHTML =`<p class="text-sm text-gray-500 my-1">${result[0].contact.Email}</p>`
+     document.getElementById("cd_phone").innerHTML =`<p class="text-sm my-1">${result[0].contact["Tel No."]}</p>`  
+  
+  }
+  callAPi()
+</script>
     <script src="app.js"></script>
     <script src="../common template/footer.js"></script>
 </body>
