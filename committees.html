@@ -833,7 +833,7 @@
               </div> -->
             </div>
             <div id="sm_member_3">
-              <p
+              <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
               >
                 Prof. A K Jain
@@ -853,7 +853,7 @@
               >
                 <i class="fa-solid fa-location-dot"></i>
                 <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
-              </div>
+              </div> -->
             </div>
             <div id="sm_member_4">
               <!-- <p
@@ -1331,7 +1331,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639e77acef89635c157fdc5e"
+          "https://wdmc.onrender.com/administration/63a74cec4c7ef3865628add5"
         );
         result = await result.json();
         console.log(result);
@@ -1359,7 +1359,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639eb810b0fdf8663ae3d621"
+          "https://wdmc.onrender.com/administration/63a74d394c7ef3865628add7"
         );
         result = await result.json();
         console.log(result);
@@ -1379,11 +1379,52 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639eb8efb0fdf8663ae3d624"
+          "https://wdmc.onrender.com/administration/63a751544c7ef3865628adef"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("icc_member_3").innerHTML = `
+            <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+                        <p class="text-sm">${result[0].designation}</p>
+                        <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
+                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                        </div>
+                     
+           `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc.onrender.com/administration/63a74dc44c7ef3865628add9"
         );
         result = await result.json();
         console.log(result);
         document.getElementById("icc_member_4").innerHTML = `
+            <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+                        <p class="text-sm">${result[0].designation}</p>
+                        <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
+                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                        </div>
+                     
+           `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc.onrender.com/administration/63a750c64c7ef3865628adeb"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("icc_member_6").innerHTML = `
             <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                         <p class="text-sm">${result[0].designation}</p>
                         <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
@@ -1449,7 +1490,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639e77acef89635c157fdc5e"
+          "https://wdmc.onrender.com/administration/639ebfab1abac50c0b5e1c21"
         );
         result = await result.json();
         console.log(result);
@@ -1476,7 +1517,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639eb810b0fdf8663ae3d621"
+          "https://wdmc.onrender.com/administration/639ec2041abac50c0b5e1c34"
         );
         result = await result.json();
         console.log(result);
@@ -1496,7 +1537,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639e77acef89635c157fdc5e"
+          "https://wdmc.onrender.com/administration/639ec2531abac50c0b5e1c36"
         );
         result = await result.json();
         console.log(result);
@@ -1512,10 +1553,7 @@
                             <i class="fa-solid fa-phone"></i>
                             <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>
                         </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-fax"></i>
-                            <p class="text-sm my-1">${result[0].contact.Fax}</p>
-                        </div>
+                      
            `;
       }
       callAPi();
@@ -1523,7 +1561,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639eb810b0fdf8663ae3d621"
+          "https://wdmc.onrender.com/administration/639ec2981abac50c0b5e1c38"
         );
         result = await result.json();
         console.log(result);
@@ -1534,6 +1572,10 @@
                         <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                             <i class="fa-solid fa-envelope"></i>
                             <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                        </div>
+                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <i class="fa-solid fa-phone"></i>
+                            <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>
                         </div>
                        
            `;
@@ -1570,7 +1612,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639e77acef89635c157fdc5e"
+          "https://wdmc.onrender.com/administration/639ebf421abac50c0b5e1c1f"
         );
         result = await result.json();
         console.log(result);
@@ -1582,14 +1624,6 @@
                             <i class="fa-solid fa-envelope"></i>
                             <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
                         </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-phone"></i>
-                            <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-fax"></i>
-                            <p class="text-sm my-1">${result[0].contact.Fax}</p>
-                        </div>
            `;
       }
       callAPi();
@@ -1597,7 +1631,7 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639eb810b0fdf8663ae3d621"
+          "https://wdmc.onrender.com/administration/639ebfab1abac50c0b5e1c21"
         );
         result = await result.json();
         console.log(result);
@@ -1609,6 +1643,10 @@
                             <i class="fa-solid fa-envelope"></i>
                             <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
                         </div>
+                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <i class="fa-solid fa-phone"></i>
+                            <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>
+                        </div>
                         
            `;
       }
@@ -1617,11 +1655,11 @@
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639eb8efb0fdf8663ae3d624"
+          "https://wdmc.onrender.com/administration/639ec0001abac50c0b5e1c23"
         );
         result = await result.json();
         console.log(result);
-        document.getElementById("sm_member_4").innerHTML = `
+        document.getElementById("sm_member_3").innerHTML = `
             <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                         <p class="text-sm">${result[0].designation}</p>
                         <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
@@ -1633,10 +1671,34 @@
       }
       callAPi();
     </script>
+    639ec0001abac50c0b5e1c23
     <script>
       async function callAPi() {
         let result = await fetch(
-          "https://wdmc.onrender.com/administration/639eb9891abac50c0b5e1bd0"
+          "https://wdmc.onrender.com/administration/639ec0651abac50c0b5e1c25"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("sm_member_4").innerHTML = `
+            <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+                        <p class="text-sm">${result[0].designation}</p>
+                        <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
+                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                        </div>
+                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <i class="fa-solid fa-phone"></i>
+                            <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>
+                        </div>
+           `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc.onrender.com/administration/639ec0c61abac50c0b5e1c2e"
         );
         result = await result.json();
         console.log(result);
@@ -1652,10 +1714,7 @@
                             <i class="fa-solid fa-phone"></i>
                             <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>
                         </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-fax"></i>
-                            <p class="text-sm my-1">${result[0].contact.Fax}</p>
-                        </div>
+                     
            `;
       }
       callAPi();
