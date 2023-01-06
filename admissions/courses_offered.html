@@ -17,7 +17,7 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="./public/assets/images/nitj-logo.png"
+      href="../public/assets/images/logo_250.png"
     />
     <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
     <!-- Google Fonts  -->
@@ -175,13 +175,89 @@
         font-weight: 600;
         color: var(--dark);
       }
+      .titlebg {
+        background: linear-gradient(
+            90.09deg,
+            rgba(0, 0, 0, 0.7) 0.08%,
+            rgba(255, 255, 255, 0) 99.11%
+          ),
+          url(../admin/img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
     </style>
   </head>
 
   <body class="font-body text-dark-purple scroll-smooth">
-    <script src="./header.js"></script>
+    <script src="../common template/header.js"></script>
+    <div
+      class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+    >
+      <p
+        class="font2 font-bold sm:text-[30px] lg:text-[88px] uppercase text-white leading-[1]"
+      >
+        Courses Offered
+      </p>
+    </div>
+    <nav
+      class="flex px-2 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+      aria-label="Breadcrumb"
+    >
+      <ol class="inline-flex items-center">
+        <li class="inline-flex items-center">
+          <a
+            href="https://nitj.netlify.app/"
+            class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+          >
+            <a href="#" class="text-lg font-medium ml-2">Home</a>
+          </a>
+        </li>
+        <li aria-current="page">
+          <div class="inline-flex items-center">
+            <i
+              style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              "
+              class="fa-solid fa-angle-right ml-2"
+            ></i>
+            <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="inline-flex items-center">
+            <i
+              style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              "
+              class="fa-solid fa-angle-right ml-2"
+            ></i>
+            <a href="#" class="text-lg font-medium ml-2"
+              >Prospective Students</a
+            >
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="inline-flex items-center">
+            <i
+              style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              "
+              class="fa-solid fa-angle-right ml-2"
+            ></i>
+            <a href="#" class="text-lg font-medium ml-2">Courses Offered</a>
+          </div>
+        </li>
+      </ol>
+    </nav>
     <div>
-      <div class="mt-40">
+      <div class="">
         <h1
           class="text-4xl text-center tracking-wide font-semibold font-sans mt-5"
         >
@@ -195,7 +271,7 @@
     </div> -->
       <div class="mt-7 mb-11 mx-auto shdw w-[80%]">
         <table
-          class="text-xl border-separate [border-spacing:0.1rem]"
+          class="text-xl border-separate [border-spacing:0.1rem] text-[12px] md:text-[18px]"
           style="width: 100%"
         >
           <tr class="bg-blue-400 hover:bg-blue-400 hover:text-black">
@@ -213,14 +289,20 @@
               Bio Technology
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -230,11 +312,15 @@
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -244,11 +330,15 @@
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -257,14 +347,20 @@
               Chemical Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -274,10 +370,14 @@
             <td class="text-center"></td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
           </tr>
 
@@ -286,14 +386,20 @@
               Civil Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -302,14 +408,20 @@
               Computer Science and Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -318,12 +430,16 @@
               Electrical Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -332,14 +448,20 @@
               Electronics and Comm. Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -350,10 +472,14 @@
             <td class="text-center"></td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -362,14 +488,20 @@
               Instrumentation and Control Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -378,14 +510,20 @@
               Industrial and Production Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -394,12 +532,16 @@
               Information Technology
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -411,10 +553,14 @@
             <td class="text-center"></td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
           </tr>
           <tr class="bg-[#f8f9fa]">
@@ -422,14 +568,20 @@
               Mechanical Engineering
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -439,10 +591,14 @@
             <td class="text-center"></td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
           </tr>
           <tr class="bg-[#f8f9fa]">
@@ -450,14 +606,20 @@
               Textile Technology
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
             <td class="text-center">
-              <i class="fa-solid fa-check text-3xl text-blue-600"></i>
+              <i
+                class="fa-solid fa-check text-xl md:text-3xl text-blue-600"
+              ></i>
             </td>
             <td class="text-center"></td>
           </tr>
@@ -465,31 +627,12 @@
       </div>
     </div>
     <div class="base-image hidden overflow-hidden lg:block"></div>
-    <script src="footer.js"></script>
+    <script src="../common template/footer.js"></script>
     <script
       src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
       charset="utf-8"
     ></script>
-    <script type="text/javascript">
-      var slideIndex = 0;
-      carousel();
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > x.length) {
-          slideIndex = 1;
-        }
-        x[slideIndex - 1].style.display = "block";
-        setTimeout(carousel, 2500);
-      }
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-    </script>
-    <script src="./app.js"></script>
+
+    <script src="../js/app.js"></script>
   </body>
 </html>

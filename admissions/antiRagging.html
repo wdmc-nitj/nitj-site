@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anymous" referrerpolicy="-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../public/assets/images/logo_250.png" />
+    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS linking -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+        /* Customizing the Scrollbar */
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-resizer {
+            background-color: #ffffff;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: hsla(201, 96%, 26%);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #212121;
+        }
+
+        /* Gallery Effects */
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            line-height: 0;
+        }
+
+        .box>img {
+            width: 100%;
+            height: 100%;
+            border: 0.2rem solid white;
+            border-radius: 8px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            transition: ease 0.75s;
+        }
+
+        .box:hover {
+            flex: 1 1 30%;
+            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .box:hover>img {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .base-image {
+            margin-top: 40px;
+            background-image: url("../public/assets/images/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            mask-image: linear-gradient(0deg, white, white, white, transparent);
+            -webkit-mask-image: linear-gradient(0deg,
+                    white,
+                    white,
+                    white,
+                    transparent);
+            background-color: #cccccc;
+            height: 400px;
+            background-position: 0% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .base-image-2 {
+            margin-top: 40px;
+            background-image: url("public/assets/images/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            background-color: #cccccc;
+            height: 300px;
+            background-position: 58% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-shadow {
+            text-shadow: rgb(0 0 0) 6px -1px 5px;
+        }
+
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.9s ease-in-out;
+            transition: opacity 1s ease-in-out 0.2s;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3,
+        #carousel-4:checked~.control-4 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #menu .menu-content ul li.selected a {
+            color: hsla(201, 96%, 26%);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        #menu .menu-content .extra-links a.extra-selected {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg,
+                    rgba(0, 0, 0, 0.7) 0.08%,
+                    rgba(255, 255, 255, 0) 99.11%),
+                url(../admin/img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="font-body text-dark-purple scroll-smooth">
+    <script src="../common template/header.js"></script>
+    <div
+        class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
+        <p class="font2 font-bold sm:text-[30px] lg:text-[88px] uppercase text-white leading-[1]">
+            Anti Ragging
+        </p>
+    </div>
+    <nav class="flex px-2 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+                <a href="https://nitj.netlify.app/"
+                    class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                    <a href="#" class="text-lg font-medium ml-2">Home</a>
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="inline-flex items-center">
+                    <i style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              " class="fa-solid fa-angle-right ml-2"></i>
+                    <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+                </div>
+            </li>
+            <li aria-current="page">
+                <div class="inline-flex items-center">
+                    <i style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              " class="fa-solid fa-angle-right ml-2"></i>
+                    <a href="#" class="text-lg font-medium ml-2">Anti Ragging</a>
+                </div>
+            </li>
+            <li aria-current="page">
+                <div class="inline-flex items-center">
+                    <i style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              " class="fa-solid fa-angle-right ml-2"></i>
+                    <a href="#" class="text-lg font-medium ml-2">Anti Ragging Act</a>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <div class="">
+
+        <div class="mx-auto w-[80%] my-4 rounded-lg p-2 border-2 border-accent shadow-xl">
+            <div class="text-[24px] font-semibold text-accent">Ragging is a crime!!!</div>
+            <div>
+                Ragging is strictly prohibited. Ragging is a cognizable offence under the law, at par with rape and
+                other atrocities against women and ill treatment of persons belonging to the SC/ST. Anyone who indulges
+                in this crime will be severely dealt with and an F.I.R will be lodged against the guilty as per Supreme
+                Court of India and Ministry of Education (Shiksha Mantralaya) directives. At the time of registration,
+                students and their parents have given and undertaking that he/she will not indulge in the unlawful
+                activity of ragging. We request all the students to be watchful and help the administration in all
+                possible ways, to root out ragging in all its forms. For any emergency, please contact the following at:
+                <span class="text-accent font-semibold">
+                    <a href="https://www.nitj.ac.in/nitj_files/links/8th_Duty_Roster_of_Anti_Ragging_Squad_68727.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </span>
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="base-image hidden overflow-hidden lg:block"></div>
+    <div class="relative bottom-0">
+        <script src="../common template/footer.js"></script>
+    </div>
+    <script src="../js/app.js"></script>
+
+</body>
+
+</html>

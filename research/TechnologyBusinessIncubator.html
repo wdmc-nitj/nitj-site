@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon and title -->
+    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png" />
+    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+    <!-- RESEARCH -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tabs.css" />
+
+    <!--alpine js-->
+    <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <style>
+        /* Customizing the Scrollbar */
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-resizer {
+            background-color: #ffffff;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: hsla(201, 96%, 26%);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #212121;
+        }
+
+        /* Gallery Effects */
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            line-height: 0;
+        }
+
+        .box>img {
+            width: 100%;
+            height: 100%;
+            border: 0.2rem solid white;
+            border-radius: 8px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            transition: ease 0.75s;
+        }
+
+        .box:hover {
+            flex: 1 1 30%;
+            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .box:hover>img {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .base-image {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            mask-image: linear-gradient(0deg, white, white, white, transparent);
+            -webkit-mask-image: linear-gradient(0deg,
+                    white,
+                    white,
+                    white,
+                    transparent);
+            background-color: #cccccc;
+            height: 400px;
+            background-position: 0% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .base-image-2 {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            background-color: #cccccc;
+            height: 300px;
+            background-position: 58% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-shadow {
+            text-shadow: rgb(0 0 0) 6px -1px 5px;
+        }
+
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.9s ease-in-out;
+            transition: opacity 1s ease-in-out 0.2s;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3,
+        #carousel-4:checked~.control-4 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .active2 {
+            background-color: rgb(42, 120, 193);
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg,
+                    rgba(0, 0, 0, 0.7) 0.08%,
+                    rgba(255, 255, 255, 0) 99.11%),
+                url(../admin/img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <script src="../common template/header.js"></script>
+
+    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+        <p class="font2 font-bold sm:text-[35px] lg:text-[60px] uppercase text-white leading-[1]">
+            Technology Business Incubator
+        </p>
+    </div>
+    <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+                <a href="https://nitj.netlify.app/"
+                    class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                    <a href="#" class="text-lg font-medium ml-2">Home</a>
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="inline-flex items-center">
+                    <i style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              " class="fa-solid fa-angle-right ml-2"></i>
+                    <a href="#" class="text-lg font-medium ml-2">Research</a>
+                </div>
+            </li>
+            <li aria-current="page">
+                <div class="inline-flex items-center">
+                    <i style="
+                color: rgb(128, 128, 128);
+                font-size: 12px;
+                margin-left: 12px;
+              " class="fa-solid fa-angle-right ml-2"></i>
+                    <a href="#" class="text-lg font-medium ml-2">Technology Business Incubator</a>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="flex flex-col items-start p-2">
+        <p class="font2 font-medium text-[28px] lg:text-[32px] px-2">
+            Technology Business Incubator
+            <div class="bg-accent w-[20%] h-[3px] mb-4 mt-2"></div>
+        </p>
+        
+    </div>
+    <div class="flex flex-row mr-[5%] ml-[5%] mb-6">
+        <div class="">
+            <img src="./img/TBILogo.jpg" alt="TBI_image">
+        </div>
+        <div class=" mx-4 bg-slate-50 rounded-r-md shadow-lg px-2 py-3 w-full"><span
+                class=" text-lg  font-medium">Technology Business Incubator (TBI)</span> has been established at Dr B R
+            Ambedkar National Institute of Technology Jalandhar with the support of Department of Science and
+            Technology. TBI has been registered as a Society under the Societies Registration Act, 1860 with the name
+            ‘NITJ Technology Business Incubator’. NITJ Technology Business Incubator has a separate Board of Governors
+            for laying down the policies and procedures so as to govern the activities for better working towards
+            achieving its objectives.</div>
+    </div>
+
+    <div class="ml-[15%] mr-[5%] mb-6  bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+        <p class="mb-2">
+            <a href=" https://www.nitj.ac.in/tbi
+                " class="text-red-500" target="_black"><i class="fa-solid fa-angles-right text-[16px] "></i>  Website: https://www.nitj.ac.in/tbi <span
+                    class=" text-accent"><i class="fa-solid fa-arrow-up-right-from-square"></i></span> </a>
+        </p>
+        <p>
+            <a
+                href="https://www.nitj.ac.in/nitj_files/News/Policy_and_Procedures_for_NITJ_Technology_Business_Incubator_19021888691.pdf"><i class="fa-solid fa-angles-right text-[16px] "></i> Policy
+                and Procedures for NITJ Technology Business Incubator <span class=" text-accent"><i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></span> </a>
+        </p>
+    </div>
+
+
+
+
+    <div class="w-full flex flex-col items-start p-2">
+        <p class="font2 font-medium border-b-2 border-accent text-[24px] lg:text-[28px] px-2">
+            Objectives of NITJ Technology Business Incubator:
+        </p>
+    </div>
+
+    <div class="mb-6">
+        <ol>
+            <li class="mb-2">
+                <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+                    <i class="fa-solid fa-angles-right text-[16px] "></i> To setup a vibrant startup ecosystem so as to
+                    align itself with our country’s major policy initiatives of Make in India and Start-up India;
+                    Stand-up India.
+                </div>
+            </li>
+            <li class="mb-2">
+                <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+                    <i class="fa-solid fa-angles-right text-[16px] "></i> To set up incubator facilities, provide cost
+                    effective infrastructural support and value added services to startups like mentoring, legal,
+                    financial, technical, intellectual property related.
+                </div>
+            </li>
+            <li class="mb-2">
+                <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+                    <i class="fa-solid fa-angles-right text-[16px] "></i> To support NITJ in creating a platform to
+                    nurture creativity, innovation and entrepreneurial skills of faculty and students.
+                </div>
+            </li>
+            <li class="mb-2">
+                <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+                    <i class="fa-solid fa-angles-right text-[16px] "></i> To provide a platform for speedy
+                    commercialization of technologies developed by NITJ or by any other academic/technical/R&D
+                    institution or by an individual.
+                </div>
+            </li>
+            <li class="mb-2">
+                <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+                    <i class="fa-solid fa-angles-right text-[16px] "></i> To build a close and pragmatic collaboration
+                    between the educational institutions, research institutions, management institutions on the one hand
+                    and industry and other user organisations on the other.
+                </div>
+            </li>
+            <li class="mb-2">
+                <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+                    <i class="fa-solid fa-angles-right text-[16px] "></i> To facilitate the dissemination of information
+                    by organising conferences, seminars, lecture series, workshops and boot-camps, hackathons etc.
+                </div>
+            </li>
+            <li class="mb-2">
+                <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+                    <i class="fa-solid fa-angles-right text-[16px] "></i> To generally do and perform all the above acts
+                    and such other things as may be deemed incidental or conducive to the attainment of the above
+                    objects or of any of them or any allied objects or which may advantageously or conveniently be
+                    combined with the programme of the Society in a profitable way.
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="base-image hidden overflow-hidden lg:block"></div>
+    <div class="relative bottom-0">
+        <script src="../common template/footer.js"></script>
+    </div>
+
+    <script src="../admin/app.js"></script>
+    <script src="./tabs.js"></script>
+</body>
+
+</html>
