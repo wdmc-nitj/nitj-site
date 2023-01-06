@@ -975,10 +975,6 @@ sup {
   margin-top: 1rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -989,6 +985,10 @@ sup {
 
 .mt-64 {
   margin-top: 16rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mt-12 {
@@ -1055,12 +1055,12 @@ sup {
   margin-top: 24rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
 .mt-\[100px\] {
   margin-top: 100px;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
 }
 
 .mt-8 {
@@ -4353,12 +4353,12 @@ sup {
     line-height: 2.5rem;
   }
 
-  .sm\:text-\[35px\] {
-    font-size: 35px;
-  }
-
   .sm\:text-\[30px\] {
     font-size: 30px;
+  }
+
+  .sm\:text-\[35px\] {
+    font-size: 35px;
   }
 
   .sm\:text-\[14px\] {
@@ -4690,6 +4690,10 @@ sup {
     margin-right: 1rem;
   }
 
+  .lg\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
   .lg\:mt-4 {
     margin-top: 1rem;
   }
@@ -4700,10 +4704,6 @@ sup {
 
   .lg\:mt-32 {
     margin-top: 8rem;
-  }
-
-  .lg\:mb-32 {
-    margin-bottom: 8rem;
   }
 
   .lg\:mt-0 {
@@ -5107,10 +5107,6 @@ sup {
     font-size: 16px;
   }
 
-  .lg\:text-\[88px\] {
-    font-size: 88px;
-  }
-
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -5147,6 +5143,10 @@ sup {
 
   .lg\:text-\[2em\] {
     font-size: 2em;
+  }
+
+  .lg\:text-\[88px\] {
+    font-size: 88px;
   }
 
   .lg\:text-\[60px\] {
