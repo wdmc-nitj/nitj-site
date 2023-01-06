@@ -696,6 +696,14 @@ sup {
   top: 9%;
 }
 
+.top-\[8\%\] {
+  top: 8%;
+}
+
+.top-\[11\%\] {
+  top: 11%;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -1478,6 +1486,10 @@ sup {
   height: 8rem;
 }
 
+.h-\[70\%\] {
+  height: 70%;
+}
+
 .max-h-14 {
   max-height: 3.5rem;
 }
@@ -1693,6 +1705,10 @@ sup {
 
 .w-32 {
   width: 8rem;
+}
+
+.w-\[75\%\] {
+  width: 75%;
 }
 
 .min-w-full {
@@ -3122,6 +3138,16 @@ sup {
   font-size: 32px;
 }
 
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -3411,6 +3437,10 @@ sup {
 
 .opacity-50 {
   opacity: 0.5;
+}
+
+.opacity-10 {
+  opacity: 0.1;
 }
 
 .shadow-md {
