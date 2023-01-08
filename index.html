@@ -2264,44 +2264,59 @@
             </span>
           </div>
           <div class="flex h-[22vh] w-full">
-            <div class="box">
-              <img src="./public/assets/images/img1.png" />
+
+            <div class="box ">
+              <img src="./public/assets/images/img1.png" onclick="showModal('./public/assets/images/img1.png')" >
             </div>
             <div class="box">
-              <img src="./public/assets/images/img2.png" />
+              <img src="./public/assets/images/img2.png" onclick="showModal('./public/assets/images/img2.png')"/>
             </div>
             <div class="box">
-              <img src="./public/assets/images/img3.png" />
+              <img src="./public/assets/images/img3.png" onclick="showModal('./public/assets/images/img3.png')"/>
             </div>
             <div class="box hidden lg:block">
-              <img src="./public/assets/images/img4.png" />
+              <img src="./public/assets/images/img4.png" onclick="showModal('./public/assets/images/img4.png')" />
+            </div>
+          </div>
+
+
+      <div id="modal"  class=" hidden fixed top-[8%] left-0 z-[39] w-full h-full flex  items-center " style="backdrop-filter: blur(6px);background-color:rgba(0, 0, 0, 0.7);">
+          <!-- The close button -->
+         <a class="fixed z-90  text-white text-4xl font-bold bg-[#0369A0] top-[10%] right-[2%] rounded-[50%] center w-[50px] text-center h-12 align-middle cursor-pointer" href="javascript:void(0)"
+              onclick="closeModal()" >&times;</a>
+
+          <!-- A big image will be displayed here -->
+          <a href="javascript:prevImage('modal-img')"  class="text-[#0369A0] text-8xl m-5 font-bold cursor-pointer ">&lt;</a>
+         
+          <img id="modal-img" class="w-[75%] h-[70%] m-auto rounded-lg" >
+
+          <a href="javascript:nextImage('modal-img')" class="text-[#0369A0] text-8xl m-5 font-bold cursor-pointer hover:scale-110">></a>
+      </div>
+
+          <div class="flex h-[22vh] w-full">
+            <div class="box">
+              <img src="./public/assets/images/img5.png" onclick="showModal('./public/assets/images/img5.png')"/>
+            </div>
+            <div class="box">
+              <img src="./public/assets/images/img6.png" onclick="showModal('./public/assets/images/img6.png')"/>
+            </div>
+            <div class="box">
+              <img src="./public/assets/images/img7.png" onclick="showModal('./public/assets/images/img7.png')"/>
+            </div>
+            <div class="box hidden lg:block">
+              <img src="./public/assets/images/img8.png" onclick="showModal('./public/assets/images/img8.png')"/>
             </div>
           </div>
 
           <div class="flex h-[22vh] w-full">
             <div class="box">
-              <img src="./public/assets/images/img5.png" />
+              <img src="./public/assets/images/img9.png" onclick="showModal('./public/assets/images/img9.png')"/>
             </div>
             <div class="box">
-              <img src="./public/assets/images/img6.png" />
+              <img src="./public/assets/images/img10.png" onclick="showModal('./public/assets/images/img10.png')"/>
             </div>
             <div class="box">
-              <img src="./public/assets/images/img7.png" />
-            </div>
-            <div class="box hidden lg:block">
-              <img src="./public/assets/images/img8.png" />
-            </div>
-          </div>
-
-          <div class="flex h-[22vh] w-full">
-            <div class="box">
-              <img src="./public/assets/images/img9.png" />
-            </div>
-            <div class="box">
-              <img src="./public/assets/images/img10.png" />
-            </div>
-            <div class="box">
-              <img src="./public/assets/images/img11.png" />
+              <img src="./public/assets/images/img11.png" onclick="showModal('./public/assets/images/img11.png')"/>
             </div>
             <div class="box hidden lg:block">
               <img src="./public/assets/images/danceClub.png" style="opacity: 1" />
@@ -2469,6 +2484,85 @@
       //   return new Tooltip(tooltipTriggerEl);
       // });
   </script>
+
+    <script>
+
+      let modal = document.getElementById("modal");
+
+      let modalImg = document.getElementById("modal-img");
+
+
+      function showModal(src) {
+          modal.classList.remove('hidden');
+          modalImg.src = src;
+      }
+
+      // close button 
+      function closeModal() {
+          modal.classList.add('hidden');
+      }
+  </script>
+
+  <script>
+
+// getNavbar();
+
+// async function getNavbar(){
+//   let obj=await fetch('https://wdmc.onrender.com/navbar');
+//   d = await obj.json();
+//   console.log()
+//   createNav(d)
+// }
+
+
+    let imgArray = new Array();
+
+    for(let i=1;i<=11;i++){
+      imgArray[i] = new Image();
+      imgArray[i].src = './public/assets/images/img'+i+'.png';
+    }
+   
+
+
+   function nextImage(element)
+{
+    let img = document.getElementById(element);
+
+    for(let i = 1; i < imgArray.length;i++)
+    {
+        if(imgArray[i].src == img.src) 
+        {
+            if(i === imgArray.length-1){
+                document.getElementById(element).src = imgArray[1].src;
+                break;
+            }
+            document.getElementById(element).src = imgArray[i+1].src;
+            break;
+        }
+    }
+}
+
+function prevImage(element)
+{
+    let img = document.getElementById(element);
+
+    for(let i = 1; i < imgArray.length;i++)
+    {
+        if(imgArray[i].src == img.src) 
+        {
+            if(i === 1){
+                document.getElementById(element).src = imgArray[imgArray.length-1].src;
+                break;
+            }
+            document.getElementById(element).src = imgArray[i-1].src;
+            break;
+        }
+    }
+}
+
+
+  </script>
+
 
   <script src="./js/app.js"></script>
   <script src="./js/navbar.js"></script>
