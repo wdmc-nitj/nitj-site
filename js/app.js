@@ -69,7 +69,7 @@ const openCourse = (e) => {
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
 
-const notificationTabs = (e) => {
+function notificationTabs(e) {
   let tabcontent = document.getElementsByClassName('notice-content')
   let tablinks = document.getElementsByClassName('notif-link')
 
@@ -90,6 +90,14 @@ const notificationTabs = (e) => {
   document.getElementById(e.dataset.notif).classList.remove('hidden')
 }
 
+const tabLinks = document.getElementsByClassName('notif-link')
+
+for (const link of tabLinks) {
+  link.addEventListener('click', () => {
+    console.log(link)
+    notificationTabs(link)
+  })
+}
 // ///////////////////////////
 // Image Slider Animation::
 
@@ -101,7 +109,7 @@ setTimeout(newsCardsScroll, 1000)
 
 // Publication Cards Auto Scroll
 
-setTimeout(publicationCardsScroll, 1000)
+// setTimeout(publicationCardsScroll, 1000)
 
 // Scroll to top Button
 

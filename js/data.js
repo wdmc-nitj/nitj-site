@@ -270,3 +270,28 @@ fetch('https://wdmc.onrender.com/ranking/get/all')
       element.appendChild(stat)
     }
   })
+
+fetch('https://wdmc.onrender.com/publication/get/all')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+    const parentDiv = document.getElementById('publication-cards')
+    data.forEach((e) => {
+      const content = e.Publication
+      const div = document.createElement('div')
+      div.setAttribute('id', 'publication-card')
+      div.innerHTML = `  
+      <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
+            <p>
+            ${content.authors} 
+            <br>
+             ${content.desc}
+            </p>
+            <a href="${content.url}"
+              class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+              More Details
+            </a>
+          </div>`
+      e.show && parentDiv.appendChild(div)
+    })
+  })

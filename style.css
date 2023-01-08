@@ -1511,6 +1511,10 @@ sup {
   height: 0.25rem;
 }
 
+.h-\[35rem\] {
+  height: 35rem;
+}
+
 .max-h-14 {
   max-height: 3.5rem;
 }
@@ -2153,6 +2157,21 @@ sup {
 .divide-slate-300 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-divide-opacity));
+}
+
+.divide-gray-400 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-divide-opacity));
+}
+
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-divide-opacity));
+}
+
+.divide-gray-300 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-divide-opacity));
 }
 
 .self-end {
@@ -3442,16 +3461,16 @@ sup {
   text-underline-offset: 4px;
 }
 
-.opacity-50 {
-  opacity: 0.5;
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .opacity-90 {
   opacity: 0.9;
 }
 
-.opacity-60 {
-  opacity: 0.6;
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-md {
@@ -3559,14 +3578,14 @@ sup {
   transition-duration: 150ms;
 }
 
-.transition-transform {
-  transition-property: transform;
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
+.transition-transform {
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
