@@ -109,7 +109,7 @@ setTimeout(newsCardsScroll, 1000)
 
 // Publication Cards Auto Scroll
 
-// setTimeout(publicationCardsScroll, 1000)
+setTimeout(publicationCardsScroll, 1000)
 
 // Scroll to top Button
 
