@@ -157,6 +157,15 @@
 </head>
 
 <body class="font-body relative text-dark-purple scroll-smooth">
+  <button id="scroll-to-top-button"
+    class="hidden z-30 opacity-60 hover:opacity-100 transition-all bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full fixed right-0 bottom-0 mr-6 mb-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+    </svg>
+
+  </button>
+
   <!-- Menu for mobile starts-->
   <div class=" z-50 p-0 top-0 flex items-start justify-start h-full w-full fixed bg-transparent backdrop-blur-2xl"
     id="nav-menu" style="display: none" onclick="priority=4;executor();">
@@ -1485,11 +1494,12 @@
         <!-- Cards -->
         <div class="flex flex-row relative">
           <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
-            onclick="slideCards('left')"></i>
+            onclick="slideCards(this, 'left')"></i>
           <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth h-[27rem]">
             <!-- Data from API -->
           </div>
-          <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer" onclick="slideCards('right')"></i>
+          <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
+            onclick="slideCards(this, 'right')"></i>
         </div>
         <div class="flex items-end w-fit">
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/template/index.html?id=0?category=latestEvent">
@@ -1961,12 +1971,12 @@
         <!-- Cards -->
         <div class="flex flex-row relative">
           <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
-            onclick="slideResearch('left')"></i>
+            onclick="slideCards(this,'left')"></i>
           <div id="slides" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth h-[25rem]">
             <!-- Data from API -->
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
-            onclick="slideResearch('right')"></i>
+            onclick="slideCards(this,'right')"></i>
         </div>
         <div class="flex items-end w-fit pb-2 lg:pb-0">
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]"
@@ -2465,12 +2475,13 @@
     var tooltipTriggerList = [].slice.call(
       document.querySelectorAll('[data-bs-toggle="tooltip"]')
     );
-      // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      //   return new Tooltip(tooltipTriggerEl);
-      // });
+    // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    //   return new Tooltip(tooltipTriggerEl);
+    // });
+
   </script>
 
-  <script src="./js/app.js"></script>
+  <script type="module" src="./js/app.js"></script>
   <script src="./js/navbar.js"></script>
   <script src="./js/navbar-mobile.js"></script>
 </body>

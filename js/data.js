@@ -95,7 +95,6 @@ fetch('https://wdmc.onrender.com/latestEvent/get/all')
   .then((data) => {
     const cards = document.getElementById('cards')
     data.forEach((e) => {
-      console.log(e)
       const card = document.createElement('div')
       card.setAttribute('id', 'card')
       card.setAttribute('class', 'min-h-full')
@@ -163,7 +162,6 @@ fetch('https://wdmc.onrender.com/researchHighlights/get/all')
 
     const cards = document.getElementById('slides')
     data.forEach((e) => {
-      console.log(e)
       const card = document.createElement('div')
       card.setAttribute('id', 'card')
       card.setAttribute('class', 'min-h-full')
@@ -260,7 +258,6 @@ fetch('https://wdmc.onrender.com/ranking/get/all')
   .then((response) => response.json())
   .then((data) => {
     const statsData = data[0].Ranking
-    console.log(statsData)
     const element = document.getElementById('placement-stats')
 
     for (const metric in statsData) {
