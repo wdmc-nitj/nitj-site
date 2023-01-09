@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+    
+    <link rel="icon" type="favicon" href="logo.9b9f200a.png">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://kit.fontawesome.com/46aac33939.js" crossorigin="anonymous"></script>
+
+
+    <title>Alumni Page</title>
+  <script type="module" crossorigin src="index.74d163d3.js"></script>
+  <link rel="stylesheet" href="index.c96f9c98.css">
+</head>
+<body>
+
+<!--NAVBAR BEGINS-->
+  <nav class="bg-[#3E3C3C] lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
+    <div class="flex justify-around p-1 items-center  ">
+        <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
+          src="logo.9b9f200a.png" alt="logo">
+          <div class="text-xs sm:text-base w-[17.5rem] lg:w-[19rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-white  cursor-pointer"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</div>
+    
+      <span class="text-3xl cursor-pointer text-white mx-2 mr-3 lg:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-[#3E3C3C] w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
+      </li>
+      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">EVENTS</a>
+      </li>
+      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+        <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
+      </li>
+      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">NEWS</a>
+      </li>
+
+      <a href="register.html">
+        <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-white rounded hover:-translate-y-1 hover:scale-110 ">
+          REGISTER
+        </button>
+      </a>
+      
+    </ul>
+  </nav>
+<!-- NAVBAR ENDS -->
+
+
+
+
+
+
+
+
+<!--Carousel BEGINS-->
+
+<div id="controls-carousel" class="relative" data-carousel="static">
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden rounded-lg lg:h-96">
+       <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="1.59a4ad61.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+          <img src="2.cd7ed11d.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="3.3e79954a.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="4.3c2b0926.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+  </div>
+  <!-- Slider controls -->
+  <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          <span class="sr-only">Previous</span>
+      </span>
+  </button>
+  <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <span class="sr-only">Next</span>
+      </span>
+  </button>
+</div>
+<!--CarouseL ENDS-->
+
+
+
+
+<!--Student alumini relation box starts-->
+<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] rounded-xl mx-auto top-[-10rem] z-40 relative shadow-xl shadow-gray-700">
+
+  <h2 class="font-bold text-base sm:text-lg lg:text-2xl my-3 sm:my-5 text-black text-center font-sans">STUDENT ALUMNI RELATIONS CELL (SARC NITJ)</h2>
+
+  
+
+  <p class=" font-normal font-[Poppins] text-xs sm:text-base lg:text-xl text-center md:tracking-wide md:leading-loose lg:leading-loose text-[#000000B2] my-5 sm:my-9 lg:my-19">
+    <i class="fa-sharp fa-solid fa-quote-left text-xl sm:text-5xl lg:text-6xl text-[#FEB7028C] mx-3"></i>
+    SARC provides platform for students to interact with well settled alumni's of NITJ. It aids in gaining career advice and gives them direction towards better future by organising annual alumni meet. It renders students with career guidance and tailoring them for their future endeavours. Catering to the betterment of alumni-student relationship of Institute. To furnish alumni with a platform to interact with the students on a one to one basis and connect them with the Institute and provide career advice to prepare for the real world.
+  </p>
+
+  <hr class="border-[3px] sm:border-[0.3rem] lg:border-[0.5rem] w-full border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
+
+  <div class="bg-[#2167A7] w-full h-40 sm:h-[12rem] lg:h-[18rem] xl:h-[19rem] border-2 lg:border-4 border-[#FFD66E] rounded-md mb-4 sm:mb-8 lg:mb-16 p-0 lg:p-4">
+    <div class="flex justify-between sm:justify-around relative top-16 sm:top-[5.5rem] lg:top-28 mx-2">
+      <div class="w-[16vw] h-16 sm:h-[5rem] lg:h-[7rem] xl:h-[8rem] bg-[#277BC7] shadow-md static inset-y-44 rounded-md p-1 lg:p-2 text-center">
+          <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">11,000</h1>
+          <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">TOTAL ALUMINI</h1>
+      </div>
+
+      <div class="w-[16vw] h-16 sm:h-[5rem] lg:h-[7rem] xl:h-[8rem] bg-[#277BC7] shadow-md static inset-y-44 rounded-md p-1 lg:p-2 text-center">
+        <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">100</h1>
+        <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">CLUBS</h1>
+      </div>
+
+      <div class="w-[16vw] h-16 sm:h-[5rem] lg:h-[7rem] xl:h-[8rem] bg-[#277BC7] shadow-md static inset-y-44 rounded-md p-1 lg:p-2 text-center">
+        <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">134</h1>
+        <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">TOTAL ORGANISATIONS</h1>
+      </div>
+  </div>
+
+  </div>
+</div>
+<!--Student alumini relation box ends-->
+
+
+
+
+<!--NEWS-->
+<div id="controls-carousel" class="relative" data-carousel="static">
+  <!-- Carousel wrapper -->
+  <div class="relative h-96 overflow-hidden rounded-lg lg:h-[40rem]">
+       <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="2.cd7ed11d.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+          <img src="3.3e79954a.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="4.3c2b0926.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="1.59a4ad61.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+  </div>
+  <!-- Slider controls -->
+  <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          <span class="sr-only">Previous</span>
+      </span>
+  </button>
+  <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <span class="sr-only">Next</span>
+      </span>
+  </button>
+</div>
+<!--NEWS-->
+
+
+<!--Blank space-->
+<!--
+<div class="w-[100vw] h-[7rem]">
+</div>
+-->
+<!--Blank space-->
+
+
+
+
+<!--RECENT EVENT STARTS-->
+<div class="p-3 sm:p-5 bg-[#f5f5f5] bg-[url('recentbg.05531c32.png')] bg-center ">
+  
+  <div class="mx-5 sm:mx-12 lg:mx-20 mt-5 sm:mt-14 lg:mt-20 flex align-middle">
+    <div>
+        <div class="text-[#2167A7] text-xl sm:text-2xl lg:text-[1.75rem] font-bold lg:ml-4 mb-4 lg:mb-8 w-44 sm:w-52 lg:w-64">
+            RECENT EVENTS
+        </div>
+    </div>
+    <div class="w-full mt-3 lg:mt-2">
+      <hr class="border-[0.2rem] lg:border-[0.22rem] -rotate-1  border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
+    </div>
+  </div>
+
+  <h2 class="text-lg sm:text-xl lg:text-[1.6rem] font-bold mt-3 sm:mt-8 lg:mt-14 mb-4 sm:mb-5 lg:mb-8 mx-5 sm:mx-12 lg:ml-24 align-left">Reunite 22</h2>
+
+  <div class="mx-5 sm:mx-12 lg:mx-24 flex mb-16 lg:mb-20">
+    <div class="w-[40vw] sm:w-[25vw] lg:w-[20vw] text-[#2167A7] text-xs sm:text-sm lg:text-[1.1rem]">
+      <div class="my-1 sm:my-2">
+        <h1 class="font-semibold">17 December, 2022</h1>
+      </div>
+
+      <div class="flex my-1 sm:my-2">
+        <i class="fa-solid fa-clock mr-3 my-1"></i>
+        <h1 class="">8:30 AM</h1>
+      </div>
+        
+      <div class="flex my-1 sm:my-2">
+        <i class="fa-solid fa-location-dot mr-3 my-1"></i>
+        <h1 class="">Jalandhar</h1>
+      </div>
+      
+    </div>
+
+    <div class="w-[45vw] sm:w-[35vw] lg:w-[20vw]">
+
+      <p class="text-xs sm:text-sm sm:leading-6 lg:text-[1.1rem] my-1 sm:my-2">The Annual Alumni meet for the batches of 1995, 1996 and 1997. It marked the silver jubilee of the class of 1997.</p>
+    </div>
+  </div>
+
+
+  <button class="ml-8 sm:ml-28 lg:ml-44 mb-12 sm:mb-16 lg:mb-24 bg-white px-7 sm:px-12 py-2 sm:py-3 lg:py-4 border-2 border-[#FEB702] rounded-lg text-[#2167A7] text-sm sm:text-base hover:-translate-y-1 hover:scale-110" type="button">View All Events</button>
+
+</div>
+
+<!--RECENT EVENTS ENDS-->
+
+
+
+
+
+
+<div id="default-carousel" class="relative" data-carousel="static">
+  <!-- Carousel wrapper -->
+  <div class="relative h-[30rem] overflow-hidden rounded-lg lg:h-[50rem]">
+    <!-- Item 1 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <span class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">
+
+      </span>
+
+        <!--Notable Alumni starts-->
+          <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
+            <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
+              <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
+            </div>
+
+            <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
+              <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
+                <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="alumni image.6b4ced94.png" alt="alumni image">
+              </div>
+
+              <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
+                  <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Upasna Taku</h1>
+              
+                  <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Co founder, mobikwik</h1>
+
+                  <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (ICE)  |  2004-2008</h2>
+
+                <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
+                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                      <a href="https://www.facebook.com/" target="_blank">
+                          <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
+                      </a>
+                  </div>
+                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                      <a href="https://twitter.com/" target="_blank">
+                          <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
+                      </a>
+                  </div>
+                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                      <a href="https://in.linkedin.com/" target="_blank" >
+                          <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
+                      </a>
+                  </div>
+                </div>
+
+
+                <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
+                  <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Management Science and Engineering from Stanford University</p>
+                </div>
+
+                <div class="text-center">
+                  <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+                </div> 
+
+              </div>
+            </div>
+          </div>
+
+          <!--Notable Alumni Ends-->
+
+          
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+      <!--Notable Alumni starts-->
+      <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
+        <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
+          <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
+        </div>
+
+        <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
+          <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
+            <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="alumni image.6b4ced94.png" alt="alumni image">
+          </div>
+
+          <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
+              <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Upasna Taku</h1>
+          
+              <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Co founder, mobikwik</h1>
+
+              <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (ICE)  |  2004-2008</h2>
+
+            <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
+              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                  <a href="https://www.facebook.com/" target="_blank">
+                      <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
+                  </a>
+              </div>
+              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                  <a href="https://twitter.com/" target="_blank">
+                      <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
+                  </a>
+              </div>
+              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                  <a href="https://in.linkedin.com/" target="_blank" >
+                      <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
+                  </a>
+              </div>
+            </div>
+
+
+            <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
+              <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Management Science and Engineering from Stanford University</p>
+            </div>
+
+            <div class="text-center">
+              <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+            </div> 
+
+          </div>
+        </div>
+      </div>
+
+      <!--Notable Alumni Ends-->
+
+
+
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      
+      <!--Notable Alumni starts-->
+        <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
+          <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
+            <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
+          </div>
+
+          <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
+            <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
+              <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="alumni image.6b4ced94.png" alt="alumni image">
+            </div>
+
+            <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
+                <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Upasna Taku</h1>
+            
+                <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Co founder, mobikwik</h1>
+
+                <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (ICE)  |  2004-2008</h2>
+
+              <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://in.linkedin.com/" target="_blank" >
+                        <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
+                    </a>
+                </div>
+              </div>
+
+
+              <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
+                <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Management Science and Engineering from Stanford University</p>
+              </div>
+
+              <div class="text-center">
+                <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+              </div> 
+
+            </div>
+          </div>
+        </div>
+
+      <!--Notable Alumni Ends-->
+
+          
+      </div>
+
+
+
+  </div>
+  <!-- Slider indicators -->
+  <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+  </div>
+  <!-- Slider controls -->
+  <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          <span class="sr-only">Previous</span>
+      </span>
+  </button>
+  <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <span class="sr-only">Next</span>
+      </span>
+  </button>
+</div>
+
+<!--Notable Alumni slider view ends-->
+
+
+
+
+
+<!--Footer image starts-->
+<div class="w-full">
+  <img src="footer image.3185e9f5.png" alt="footer image">
+</div>
+<!--Footer image ends-->
+
+
+<!-- === FOOTER Starts === -->
+<div class="flex flex-col justify-between bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
+  <div class="flex basis-1/3 flex-col border-y-gray-300 p-[25px] lg:border-r lg:border-zinc-400">
+    <div class="flex flex-row items-center gap-x-[10px] pb-3">
+      <img src="logo.9b9f200a.png" alt="NITJ logo" class="h-[67px] w-[67px]" />
+      <p class="font-semibold text-white lg:text-[20px]">
+        Dr. B R Ambedkar National Institute of Technology, Jalandhar
+      </p>
+    </div>
+
+    <div class="p-[20px]">
+      <div class="pb-[6px] lg:w-[85%]">
+        <i class="fas fa-location-dot pr-[8px]"></i><span class="opacity-90">G.T Road, Amritsar Bypass, Jalandhar,
+          Punjab, India-144027</span>
+      </div>
+      <div class="flex flex-row pb-[6px]">
+        <i class="fas fa-envelope mt-1 pr-[8px]"></i>
+        <h3 class="opacity-90">webmaster@nitj.ac.in</h3>
+      </div>
+      <div class="align-center flex flex-row pb-[14px]">
+        <i class="fas fa-phone mt-1 pr-[8px]"></i>
+        <h3 class="opacity-90">
+          +91-0181-5037855, 2690301, 2690453, 3082000
+        </h3>
+      </div>
+      <div id="social-links" class="flex flex-col bg-slate-800">
+        <div class="flex flex-row gap-10 mt-4">
+          <div class="text-l text-white">
+            <a href="https://www.facebook.com/NITJofficial/" target="_blank">
+              <i class="fa-brands fa-facebook text-[21px] hover:text-sky-500"></i></a>
+          </div>
+          <div class="text-l text-white">
+            <a href="https://twitter.com/NITJofficial" target="_blank">
+              <i class="fab fa-twitter text-[21px] hover:text-sky-500"></i></a>
+          </div>
+          <div class="text-l text-white">
+            <a href="https://in.linkedin.com/school/dr-b-r-ambedkar-national-institute-of-technology-jalandhar-official/"
+              target="_blank">
+              <i class="fa-brands fa-linkedin text-[21px] hover:text-sky-500"></i></a>
+          </div>
+          <div class="text-l text-white">
+            <a href="https://www.instagram.com/nitjofficial/?hl=en" target="_blank">
+              <i class="fa-brands fa-instagram text-[21px] hover:text-sky-500"></i></a>
+          </div>
+          <div class="text-l text-white">
+            <a href="https://www.youtube.com/c/NITJOfficial" target="_blank">
+              <i class="fa-brands fa-youtube text-[21px] hover:text-sky-500"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden basis-2/3 p-[25px] lg:block">
+    <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
+    <div class="flex flex-row p-[15px]">
+      <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+        <a href="#" class="hover:text-sky-500 hover:underline">Admission</a>
+        <br />
+        <a href="#" class="hover:text-sky-500 hover:underline">UnderGrad Courses</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">PostGrad Courses</a>
+        <br />
+        <a href="#" class="hover:text-sky-500 hover:underline">Departments</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Academic Calender</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Clubs And Societies</a>
+        <br />
+        <a href="#" class="hover:text-sky-500 hover:underline">Campus Life</a>
+      </div>
+      <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+        <a href="#" class="hover:text-sky-500 hover:underline">Faculty</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Staff</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Recruitment</a>
+        <br />
+        <a href="#" class="hover:text-sky-500 hover:underline">Research</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Patent</a>
+      </div>
+      <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+        <a href="#" class="hover:text-sky-500 hover:underline">Institute Prospectus(2019-2020)</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Annual Reports</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">MOM</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">UGC Act</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">NIT Act and statutes</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Pension</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Ministry of Education Notifications</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Annual Property Return</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">Rules/Policies</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">ARIIA(2020-2021)</a>
+      </div>
+      <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+        <a href="#" class="hover:text-sky-500 hover:underline">ARIIA (2020-2021)</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">NIRF-2022</a>
+        <a href="#" class="hover:text-sky-500 hover:underline">NewsLetter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div
+  class="border-t border-zinc-400 flex flex-col bg-slate-800 px-20 p-[20px] text-center text-white lg:flex-row justify-between">
+  <div class="pb-[10px] text-[12px] lg:pb-0 lg:text-[15px]">
+    &#169; Copyright 2022, All Rights Reserved NIT Jalandhar
+  </div>
+
+  <div class="text-[12px] lg:text-[15px]">
+    <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">Other NITs</a>
+    |
+    <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">MoU</a>
+    |
+    <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">GIAN</a>
+    |
+    <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">TEQIP</a>
+    |
+    <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">Anti Ragging</a>
+    |
+    <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">Terms of Use</a>
+    |
+    <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">Credits</a>
+  </div>
+</div>
+<!-- === FOOTER Ends === -->
+
+
+
+
+
+
+<script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
+  <script>
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+  </script>
+
+
+
+</body>
+</html>
