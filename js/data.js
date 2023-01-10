@@ -311,7 +311,7 @@ fetch('https://wdmc.onrender.com/photoGallery/')
 
     let i = 0
 
-    images.forEach((img) => {
+    images.forEach((img, key) => {
       // img.image.link
       if (i > 2) {
         i = 0
@@ -319,10 +319,19 @@ fetch('https://wdmc.onrender.com/photoGallery/')
       const imgContainer = document.createElement('div')
       imgContainer.classList.add('box')
       imgContainer.innerHTML = `
-        <img src="${img.image.link}" />
+        <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
       rows[i].append(imgContainer)
+      // imgContainer.addEventListener('click', (e) => {
+      //   const imgSample = document.getElementById('sample-img')
+
+      //   imgSample.src = e.srcElement.currentSrc
+      // })
       i++
     })
     parentDiv.append(firstRow, secondRow, thirdRow)
   })
+
+// function hideThis(e) {
+//   e.querySelector('img').src = ''
+// }
