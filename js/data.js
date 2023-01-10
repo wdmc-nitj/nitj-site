@@ -300,8 +300,8 @@ fetch('https://wdmc.onrender.com/publication/get/all')
 fetch('https://wdmc.onrender.com/photoGallery/')
   .then((res) => res.json())
   .then((data) => {
-    const images = data[0].image
-    console.log(images)
+    const images = data
+    console.log(data)
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
     const secondRow = document.createElement('div')
@@ -310,18 +310,19 @@ fetch('https://wdmc.onrender.com/photoGallery/')
     rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
 
     let i = 0
-    for (let img in images) {
+
+    images.forEach((img) => {
+      // img.image.link
       if (i > 2) {
         i = 0
       }
       const imgContainer = document.createElement('div')
       imgContainer.classList.add('box')
       imgContainer.innerHTML = `
-        <img src="${images[img]}" />
+        <img src="${img.image.link}" />
         `
       rows[i].append(imgContainer)
       i++
-    }
+    })
     parentDiv.append(firstRow, secondRow, thirdRow)
-    console.log(parentDiv)
   })
