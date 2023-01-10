@@ -4,7 +4,7 @@ import {
   pageTitleUpdater,
   getParams,
   normalCaseMaker,
-} from './utils.js'
+} from './utils/routingUtils.js'
 
 const [id, category] = getParams()
 
