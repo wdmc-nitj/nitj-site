@@ -1,6 +1,7 @@
 // TODO : use promise.all to fetch all data at once
+const baseURL = 'https://wdmc.onrender.com'
 
-fetch('https://wdmc.onrender.com/news/')
+fetch(`${baseURL}/news/`)
   .then((response) => response.json())
   .then((data) => {
     // //////////////////////
@@ -33,8 +34,7 @@ fetch('https://wdmc.onrender.com/news/')
       newsCards.appendChild(newsCard)
     })
   })
-
-fetch('https://wdmc.onrender.com/testimonial/get/all')
+fetch(`${baseURL}/testimonial/get/all`)
   .then((response) => response.json())
   .then((data) => {
     // //////////////////////
@@ -89,8 +89,7 @@ function dateManipulator(data) {
   const FullDate = month + ' ' + day + ',' + year
   return FullDate
 }
-
-fetch('https://wdmc.onrender.com/latestEvent/get/all')
+fetch(`${baseURL}/latestEvent/get/all`)
   .then((response) => response.json())
   .then((data) => {
     const cards = document.getElementById('cards')
@@ -129,8 +128,7 @@ fetch('https://wdmc.onrender.com/latestEvent/get/all')
       cards.appendChild(card)
     })
   })
-
-fetch('https://wdmc.onrender.com/researchHighlights/get/all')
+fetch(`${baseURL}/researchHighlights/get/all`)
   .then((response) => response.json())
   .then((data) => {
     // ///////////////
@@ -188,8 +186,7 @@ fetch('https://wdmc.onrender.com/researchHighlights/get/all')
       cards.appendChild(card)
     })
   })
-
-fetch('https://wdmc.onrender.com/administration/get/all')
+fetch(`${baseURL}/administration/get/all`)
   .then((response) => response.json())
   .then((data) => {
     // Original Element
@@ -253,8 +250,7 @@ fetch('https://wdmc.onrender.com/administration/get/all')
 `
     directorMessage.appendChild(msg)
   })
-
-fetch('https://wdmc.onrender.com/ranking/get/all')
+fetch(`${baseURL}/ranking/get/all`)
   .then((response) => response.json())
   .then((data) => {
     const statsData = data[0].Ranking
