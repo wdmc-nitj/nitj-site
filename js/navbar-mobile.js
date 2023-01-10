@@ -37,7 +37,7 @@ function keep_menu_open(){
   }
   if(onmenu){
   closeDropDowns();
-  openDropDowns(1);
+  openDropDowns(9);
   }
   onmenu=true;
 }
@@ -54,13 +54,8 @@ subdropdownmenubuttons = document.getElementsByClassName("subDropButtons")
 droparrows = document.getElementsByClassName("DropArrows")
 function openDropDowns(id) {
   for(var i=0;i<dropdownmenubuttons.length;i++){
-      if(dropdownmenubuttons[i].children[0].classList.contains('rotate-180')){
-      dropdownmenubuttons[i].children[0].classList.remove('rotate-180');
-      }
-      else{
-        dropdownmenubuttons[i].children[0].classList.add('rotate-180')
-      }
-    if(dropdownmenubuttons[i].id[dropdownmenubuttons[i].id.length-1] < id[id.length-1]){
+      
+    if(dropdownmenubuttons[i].id[dropdownmenubuttons[i].id.length-1] != id[id.length-1]){
       if (dropdownmenubuttons[i].classList.contains('hidden')) {
         dropdownmenubuttons[i].classList.remove('hidden')
       } else {
@@ -68,6 +63,12 @@ function openDropDowns(id) {
       }
     }
     else {
+      if(dropdownmenubuttons[i].children[0].classList.contains('rotate-180')){
+        dropdownmenubuttons[i].children[0].classList.remove('rotate-180');
+        }
+        else{
+          dropdownmenubuttons[i].children[0].classList.add('rotate-180')
+        }
       dropdownmenubuttons[i].classList.remove('hidden')
     }
   }
@@ -86,19 +87,23 @@ function openDropDowns(id) {
 }
 function closeDropDowns() {
   for(var i=0;i<dropdownmenus.length;i++){
+    dropdownmenubuttons[i].classList.add('hidden')
+    dropdownmenubuttons[i].children[0].classList.remove('rotate-180');
+    subdropdownmenus[i].classList.add('hidden')
+    subdropdownmenubuttons[i].children[0].classList.remove('rotate-180');
     dropdownmenus[i].classList.add('hidden')
   }
 }
 
 function openSubDropDowns(id) {
   for(var i=0;i<subdropdownmenubuttons.length;i++){
+  if(id[id.length-1] == subdropdownmenus[i].id[subdropdownmenus[i].id.length-1] && id[id.length-2] == subdropdownmenus[i].id[subdropdownmenus[i].id.length-2]){
     if(subdropdownmenubuttons[i].children[0].classList.contains('rotate-180')){
       subdropdownmenubuttons[i].children[0].classList.remove('rotate-180');
       }
       else{
         subdropdownmenubuttons[i].children[0].classList.add('rotate-180')
       }
-  if(id[id.length-1] == subdropdownmenus[i].id[subdropdownmenus[i].id.length-1] && id[id.length-2] == subdropdownmenus[i].id[subdropdownmenus[i].id.length-2]){
     if (subdropdownmenus[i].classList.contains('hidden')) {
       subdropdownmenus[i].classList.remove('hidden')
     }else {
@@ -121,7 +126,7 @@ async function createNavMob(obj){
         dropdownbutton1.setAttribute('type','button')
         dropdownbutton1.setAttribute('onclick','onmenu=false;openDropDowns(this.id);')
         dropdownbutton1.setAttribute('class','dropdown-buttons capitalize z-10 w-full inline-flex flex-shrink-0 items-center border border-gray-300 py-2.5 px-4 text-center text-sm font-medium bg-white text-black hover:bg-blue-800 focus:bg-blue-800 focus:text-white')
-        dropdownbutton1.innerHTML = `${navnames[i]}
+        dropdownbutton1.innerHTML = `${navnames[i] == "LifeatNITJ" ? "Life at NITJ" : navnames[i]}
         <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
