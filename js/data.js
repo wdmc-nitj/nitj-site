@@ -37,6 +37,7 @@ fetch(`${baseURL}/news/`)
 fetch(`${baseURL}/testimonial/get/all`)
   .then((response) => response.json())
   .then((data) => {
+    console.log(data)
     // //////////////////////
     // Original Element
     // //////////////////////
@@ -51,9 +52,13 @@ fetch(`${baseURL}/testimonial/get/all`)
     //    </div>
     //  </div>
     const testimonial = document.getElementById('testimonial')
+    const testimonialImg = document.createElement('img')
+    testimonialImg.src = data[0].image
+    testimonialImg.setAttribute('class', 'object-cover rounded-lg h-28 w-28')
     const testimonialCard = document.createElement('div')
     testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
     testimonialCard.innerHTML = `
+    
             <div class='text-xl flex flex-col gap-5'>
               <p>
                 ${data[0].messageText}
@@ -64,7 +69,7 @@ fetch(`${baseURL}/testimonial/get/all`)
               </div>
             </div>
       `
-    testimonial.appendChild(testimonialCard)
+    testimonial.append(testimonialImg, testimonialCard)
   })
 
 function dateManipulator(data) {
