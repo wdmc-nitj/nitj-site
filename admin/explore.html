@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore - NITJ</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font-family: 'Barlow', sans-serif;
+    font-family: 'Poppins', sans-serif; -->
+
+  <style>
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar-thumb {
+      background-color: #212121;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: gray;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 2px;
+    }
+
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+    }
+
+    .font2 {
+      font-family: 'Barlow', sans-serif;
+    }
+
+    :root {
+      --primary-color: #fff;
+      --background-color: #212121;
+
+      --blue-color: #0369A1;
+      --light-blue-color: #F6F6FE;
+      --purple-color: #040320;
+      --font1: 'Poppins', sans-serif;
+      --font2: 'Barlow', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-body {
+      font-family: var(--font1);
+    }
+
+    .titlebg {
+      background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/about_top.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    #gal1 {
+      animation: fadeEffect 1s;
+      /* Fading effect takes 1 second */
+    }
+
+    @keyframes fadeEffect {
+
+      /* Go from zero to full opacity */
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script src="../common template/header.js"></script>
+
+  <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
+    <div>
+      <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">Explore</p>
+      </div>
+      <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center">
+          <li class="inline-flex items-center">
+            <a href="https://nitj.netlify.app/"
+              class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+              <a href="#" class="text-lg font-medium ml-2">Home</a>
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="inline-flex items-center">
+              <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                class="fa-solid fa-angle-right ml-2"></i>
+              <a href="#" class="text-lg font-medium ml-2">Explore</a>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="overflow-hidden text-gray-700" id="gallery">
+      <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+        <div class="flex flex-wrap -m-1 md:-m-2 h-[60vh] lg:h-[80vh]">
+          <div class="flex flex-wrap w-1/2">
+            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="img/IMG-20220721-WA0020.jpg" id="gal1">
+            </div>
+            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="img/IMG-20220721-WA0021.jpg" id="gal2">
+            </div>
+            <div class="w-full h-[40vh] lg:h-[50vh] p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="img/IMG-20220721-WA0022.jpg" id="gal3">
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/2">
+            <div class="w-full h-[40vh] lg:h-[50vh] p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="img/IMG-20220721-WA0023.jpg" id="gal4">
+            </div>
+            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="img/IMG-20220721-WA0024.jpg" id="gal5">
+            </div>
+            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="img/IMG-20220721-WA0027.jpg" id="gal6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="flex gap-4 items-stretch overflow-x-scroll mx-[11%]" id="imgContainer">
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0020.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0021.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0022.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0023.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0024.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0027.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0028.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0020.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0021.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0022.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0023.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0024.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0027.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0028.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0020.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0021.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0022.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0023.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0024.jpg" alt=""></div></div>
+      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0027.jpg" alt=""></div></div>
+    </div> -->
+  </div>
+
+
+  <script src="app.js"></script>
+  <script src="../common template/footer.js"></script>
+  <script>
+    // Image change script
+    let gallery = document.getElementById('gallery');
+    let arr = ['img/IMG-20220721-WA0024.jpg', 'img/IMG-20220721-WA0027.jpg', 'img/IMG-20220721-WA0023.jpg',
+      'img/IMG-20220721-WA0021.jpg', 'img/IMG-20220721-WA0022.jpg', 'img/IMG-20220721-WA0020.jpg'
+    ];
+
+    let k = 0;
+
+    function setgal() {
+      if (k == 6) k = 0;
+
+      console.log("Inside gal... " + k);
+      for (let i = 0; i < 6; i++) {
+        document.getElementById('gal' + `${i+1}`).src = arr[(i + k) % 6];
+      }
+      k++;
+    }
+
+    setInterval(setgal, 2500);
+  </script>
+
+  <!-- <script>
+    // auto scroll script
+    const imgContainer = document.getElementById('imgContainer');
+    const imgScrollWidth = imgContainer.scrollWidth;
+
+    window.addEventListener('load', () => {
+      self.setInterval(() => {
+        if (imgContainer.scrollLeft !== imgScrollWidth) {
+          imgContainer.scrollTo(imgContainer.scrollLeft + 2, 0);
+        }
+      }, 1);
+    });
+    
+  </script> -->
+</body>
+
+</html>

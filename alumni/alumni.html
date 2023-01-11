@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alumni</title>
+    <link rel="stylesheet" href="./jobs.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Google Fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Customizing the Scrollbar */
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-resizer {
+        background-color: #ffffff;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: hsla(201, 96%, 26%);
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #212121;
+      }
+
+      /* Gallery Effects */
+      .box {
+        flex: 1;
+        overflow: hidden;
+        transition: 0.5s;
+        line-height: 0;
+      }
+
+      .box > img {
+        width: 100%;
+        height: 100%;
+        border: 0.2rem solid white;
+        border-radius: 8px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        transition: ease 0.75s;
+      }
+
+      .box:hover {
+        flex: 1 1 30%;
+        /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .box:hover > img {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
+
+      .base-image {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        mask-image: linear-gradient(0deg, white, white, white, transparent);
+        -webkit-mask-image: linear-gradient(
+          0deg,
+          white,
+          white,
+          white,
+          transparent
+        );
+        background-color: #cccccc;
+        height: 400px;
+        background-position: 0% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .base-image-2 {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        background-color: #cccccc;
+        height: 300px;
+        background-position: 58% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .main-shadow {
+        text-shadow: rgb(0 0 0) 6px -1px 5px;
+      }
+
+      .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+      }
+
+      .carousel-item {
+        -webkit-transition: opacity 0.9s ease-in-out;
+        transition: opacity 1s ease-in-out 0.2s;
+      }
+
+      #carousel-1:checked ~ .control-1,
+      #carousel-2:checked ~ .control-2,
+      #carousel-3:checked ~ .control-3,
+      #carousel-4:checked ~ .control-4 {
+        display: block;
+      }
+
+      .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+      }
+    </style>
+  </head>
+
+  <body class="font-body text-dark-purple scroll-smooth">
+    <!-- Menu for mobile starts-->
+    <script src="../common template/header.js"></script>
+    <div class="w-[100%] flex h-[100%] justify-between">
+      <div class="w-[15%] bg-[#f8fbff] mt-[11%] sidebar">
+        <aside
+          class="w-[15%] h-[10vh] bg-[#f8fbff] border-r-2 fixed sidebar"
+          aria-label="Sidebar"
+        >
+          <div class="overflow-y-auto py-4 px-3 bg-[#f8fbff] rounded sidebar">
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <i class="fa-solid fa-info text-gray-500"></i>
+                  <span
+                    class="flex-1 ml-3 whitespace-nowrap text-[18px] text-gray-500 font-semibold"
+                    >About us
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <i class="fa-solid fa-calendar-days text-gray-500"></i>
+                  <span
+                    class="flex-1 ml-3 whitespace-nowrap text-gray-500 text-[18px] font-semibold"
+                    >Events</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <i class="fa-solid fa-link text-gray-500"></i>
+                  <span
+                    class="flex-1 ml-3 whitespace-nowrap text-[18px] text-gray-500 font-semibold"
+                    >Communities</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <i class="fa-solid fa-hand text-gray-500"></i>
+                  <span
+                    class="flex-1 ml-3 whitespace-nowrap text-[18px] text-gray-500 font-semibold"
+                    >Giving Back</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <i class="fa-solid fa-newspaper text-gray-500"></i>
+                  <span
+                    class="flex-1 ml-3 whitespace-nowrap text-[18px] text-gray-500 font-semibold"
+                    >News</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <i class="fa-regular fa-user text-gray-500"></i>
+                  <span
+                    class="flex-1 ml-3 whitespace-nowrap text-[18px] text-gray-500 font-semibold"
+                    >Login</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="w-[85%]">
+        <div class="w-[100%] h-[80vh] lg:mb-[35vh] mb-[25vh]">
+          <div id="background-nitj" class="h-[100%] w-[100%] absolute">
+            <div
+              class="box lg:h-[75vh] lg:w-[45vw] w-[65%] h-[50%] bg-[#FFFFFF] relative lg:top-[50vh] top-[40vh] mx-auto border-2 border-[#277BC7] rounded-md"
+            >
+              <div class="mt-[5%] font-bold text-center text-[18px] font-sans">
+                Dr. B R Ambedkar National Institute of Tecnology Jalandhar
+              </div>
+              <div class="px-4">
+                <div>
+                  <i
+                    class="fa-sharp fa-2x fa-solid fa-quote-left mt-8 text-yellow-400"
+                  ></i>
+                </div>
+                <div class="text-[16px] text-gray-500 leading-6 mx-auto">
+                  The Alumni Relations office at NIT Jalandhar consists of a
+                  dedicated team of staff members headed by Prof. XYZ In
+                  addition, a team of enthusiastic student volunteers assists
+                  the office with various activities and events. Please feel
+                  free to get in touch with us. It would be a pleasure to
+                  connect with you.
+                </div>
+              </div>
+              <div
+                class="bg-accent h-[40%] w-[90%] mx-auto text-center justify-evenly align-middle my-12 border-[1px] rounded border-yellow-400 flex"
+              >
+                <div
+                  class="w-[25%] bg-[#277BC7] rounded-md h-[50%] my-auto flex justify-center hover:h-[55%] hover:w-[27%]"
+                >
+                  <div class="my-8 text-white mx-auto leading-4">
+                    <div class="flex-col">
+                      <div>5000+</div>
+                      <span class="text-gray-200"> Alumnis </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-[25%] bg-[#277BC7] rounded-md h-[50%] my-auto flex justify-center hover:h-[55%] hover:w-[27%]"
+                >
+                  <div class="my-8 text-white mx-auto leading-4">
+                    <div class="flex-col">
+                      <div>21+</div>
+                      <span class="text-gray-200"> Startups </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-[25%] bg-[#277BC7] rounded-md h-[50%] my-auto flex justify-center hover:h-[55%] hover:w-[27%]"
+                >
+                  <div class="my-8 text-white mx-auto leading-4">
+                    <div class="flex-col">
+                      <div>50+</div>
+                      <span class="text-gray-200"> Alumnis Talk </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-16 mt-[5%]">
+          <div
+            id="carouselDarkVariant"
+            class="carousel slide carousel-fade carousel-dark relative px-100"
+            data-bs-ride="carousel"
+          >
+            <!-- Indicators -->
+            <div
+              class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
+            >
+              <button
+                data-bs-target="#carouselDarkVariant"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                data-bs-target="#carouselDarkVariant"
+                data-bs-slide-to="1"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                data-bs-target="#carouselDarkVariant"
+                data-bs-slide-to="2"
+                aria-label="Slide 1"
+              ></button>
+            </div>
+
+            <!-- Inner -->
+            <div class="carousel-inner relative w-full overflow-hidden">
+              <!-- Single item -->
+              <div class="carousel-item active relative float-left w-full">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp"
+                  class="block w-full"
+                  alt="Motorbike Smoke"
+                />
+                <div class="carousel-caption md:block absolute">
+                  <div
+                    id="text"
+                    class="inline-block relative left-2/3 bottom-4 bg-[#0369a1] border-2 border-solid border-orange-300 w-2/5 h-max"
+                  >
+                    <h5 class="text-3xl m-2 font-bold text-white">
+                      HEADLINE 1
+                    </h5>
+                    <p class="m-4 text-lg text-white">
+                      Some representative placeholder content for the first
+                      slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Single item -->
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp"
+                  class="block w-full"
+                  alt="Mountaintop"
+                />
+                <div class="carousel-caption md:block absolute">
+                  <div
+                    id="text"
+                    class="inline-block relative left-2/3 bottom-4 bg-[#0369a1] border-2 border-solid border-orange-300 w-2/5 h-1/2"
+                  >
+                    <h5 class="text-3xl m-2 font-bold text-white">
+                      HEADLINE 2
+                    </h5>
+                    <p class="m-4 text-lg text-white">
+                      Some representative placeholder content for the second
+                      slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Single item -->
+              <div class="carousel-item relative float-left w-full">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(45).webp"
+                  class="block w-full"
+                  alt="Woman Reading a Book"
+                />
+                <div class="carousel-caption md:block absolute">
+                  <div
+                    id="text"
+                    class="inline-block relative left-2/3 bottom-4 bg-[#0369a1] border-2 border-solid border-orange-300 w-2/5 h-1/2"
+                  >
+                    <h5 class="text-3xl m-2 font-bold text-white">
+                      HEADLINE 3
+                    </h5>
+                    <p class="m-4 text-lg text-white">
+                      Some representative placeholder content for the third
+                      slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Inner -->
+
+            <!-- Controls -->
+            <button
+              class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+              type="button"
+              data-bs-target="#carouselDarkVariant"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+              type="button"
+              data-bs-target="#carouselDarkVariant"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!--events sec-->
+
+        <div class="framed mb-[5%]">
+          <div class="ml-[5%] flex align-middle">
+            <div>
+              <div
+                class="text-[#2167A7] lg:text-[28px] text-[18px] font-bold mb-[8%] mt-4 lg:mb-8"
+              >
+                ALUMNI <span class="text-black px-2">EVENTS</span>
+              </div>
+            </div>
+            <div class="w-[80%] mt-8 ml-3 lg:ml-0"><hr class="new5" /></div>
+          </div>
+          <div>
+            <div class="eventsbox flex justify-evenly w-[100%]">
+              <div class="left flex-col lg:w-[35%] w-[70%]">
+                <div
+                  class="heading text-[24px] font-semibold mb-3 border-b-2 border-[#2167A7]"
+                >
+                  Event Name
+                </div>
+
+                <div class="flex justify-between">
+                  <div class="info w-[40%] mb-6">
+                    <div
+                      class="date text-[#2167A7] lg:text-[20px] text-[14px] font-semibold mb-1"
+                    >
+                      30 July,2022
+                    </div>
+
+                    <div
+                      class="time text-[#2167A7] mb-1 text-[18px] font-semibold"
+                    >
+                      <i class="fas fa-clock text-[#2167A7]"></i> 5:00 PM
+                    </div>
+
+                    <div
+                      class="location text-[#2167A7] text-[16px] font-semibold"
+                    >
+                      <i class="fas fa-location-dot text-[#2167A7] mb-4"></i>
+                      Jalandhar
+                    </div>
+                  </div>
+
+                  <div class="about w-[70%] text-[12px] lg:text-[16px]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laboriosam voluptates reprehenderit consequatur velit
+                    perferendis aperiam alias sed molestias recusandae tempore.
+                  </div>
+                </div>
+              </div>
+
+              <div class="right flex-col lg:w-[35%] w-[70%]">
+                <div
+                  class="heading text-[24px] font-semibold mb-3 border-b-2 border-[#2167A7]"
+                >
+                  Event Name
+                </div>
+
+                <div class="flex justify-between">
+                  <div class="info w-[40%]">
+                    <div
+                      class="date text-[#2167A7] lg:text-[20px] text-[14px] font-semibold mb-1"
+                    >
+                      30 July,2022
+                    </div>
+
+                    <div
+                      class="time text-[#2167A7] mb-1 text-[18px] font-semibold"
+                    >
+                      <i class="fas fa-clock text-[#2167A7]"></i> 5:00 PM
+                    </div>
+
+                    <div
+                      class="location text-[#2167A7] text-[16px] font-semibold"
+                    >
+                      <i class="fas fa-location-dot text-[#2167A7]"></i>
+                      Jalandhar
+                    </div>
+                  </div>
+
+                  <div class="about w-[70%] text-[12px] lg:text-[16px]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laboriosam voluptates reprehenderit consequatur velit
+                    perferendis aperiam alias sed molestias recusandae tempore.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="btn2 lg:text-[20px] text-[14px] font-semibold relative 2xl:top-[10%] lg:top-[45%] top-[20%] left-10 bg-slate-50"
+            >
+              <a href="#" class="text-[#2167A7]">View All Events</a>
+            </div>
+          </div>
+        </div>
+
+        <!--notable alumni-->
+        <div
+          class="mt-[5%] bg-[#2167A7] lg:px-[162px] pt-5 flex flex-row"
+          id="mainPart"
+        >
+          <div
+            class="flex-auto m-auto w-72 relative overflow-hidden rounded-lg"
+            id="box1"
+          >
+            <img
+              id="imgpart"
+              class="object-cover my-5 h-[400px] w-[65%] cursor-pointer rounded-xl border-2 border-yellow-100"
+              src="./images/notable-alumni.jpeg"
+              alt=""
+            />
+            <div class="writtren absolute top-0 left-0 mx-[3px] my-6">
+              <h4 class="tracking-wide text-2xl -my-8 font-semibold text-white">
+                NOTABLE
+              </h4>
+              <h4
+                class="tracking-wide text-2xl my-5 py-1 font-semibold text-white"
+              >
+                ALUMNI
+              </h4>
+            </div>
+          </div>
+
+          <div class="flex-auto w-60 m-auto mr-14 text-[#FFFFFF]" id="box2">
+            <div
+              class="m-auto mt-10 pl-3 text-center tracking-widest font-bold text-white text-4xl"
+            >
+              Miss XYZ
+            </div>
+            <div
+              class="text-center text-[#ffffffcc] mx-20 mt-1 tracking-wide text-1xl"
+            >
+              DESIGNATION
+            </div>
+
+            <div
+              class="lg:flex-row flex justify-center mt-2 tex lg:top-[80%] lg:left-[8%] top-[20%] left-[90%]"
+            >
+              <div class="mr-6 text-white text-l p-3 m-3">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="socialIcons fa-brands fa-facebook text-[30px]"></i
+                ></a>
+              </div>
+              <div class="mr-6 text-white text-l p-3 m-3">
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="socialIcons fab fa-twitter text-[30px]"></i
+                ></a>
+              </div>
+              <div class="mr-6 text-white text-l p-3 m-3">
+                <a href="https://in.linkedin.com/" target="_blank" class="">
+                  <i class="socialIcons fa-brands fa-linkedin text-[30px]"></i
+                ></a>
+              </div>
+            </div>
+            <div class="mt-1 text-center">
+              <span class="mx-4">BTech(IT)</span>
+              <span class="mx-4">2013-2017</span>
+            </div>
+
+            <div class="mt-1 tracking-wide p-3 text-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum id, adipisci officiis beatae obcaecati aliquam magni
+              laboriosam odit repudiandae sint consequuntur laudantium doloribus
+              non sed totam fugiat exercitationem porro quam.
+            </div>
+            <div class="text-center">
+              <button
+                class="text-white btn tracking-wide w-48 h-12 font-bold bg-[#329dff99] p-2 border-[1px] border-[#FFFFFF] rounded-[5px] border-solid mb-4"
+              >
+                Find Alumni
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="main mx-auto w-[90%] h-[780px] mt-[5%]">
+          <form>
+            <div
+              class="search border border-3 bg-[#FFFFFF] shadow-[1px_4px_9px_rgba(0, 0, 0, 0.25)] px-[32px] py-[20px] md:grid grid-cols-3 justify-between"
+            >
+              <div class="flex gap-[8px] items-center">
+                <i class="fa fa-envelope-open" style="color: #2167a7"></i>
+                <input
+                  class="w-[80%] p-[5px] md:w-[330px] md:border-r-[1px] border-[1px] md:border-black"
+                  type="text"
+                  placeholder="Skills, Designation, Companies"
+                />
+              </div>
+
+              <div class="flex gap-[8px] items-center mt-[8px] md:mt-0">
+                <span class="px-2"></span>
+                <i class="fa-solid fa-location-dot" style="color: #2167a7"></i>
+                <input
+                  class="w-[80%] p-[5px] md:w-[330px] md:border-r-[1px] border-[1px] md:border-black"
+                  type="text"
+                  placeholder="Location"
+                />
+              </div>
+              <div class="justify-self-end">
+                <button
+                  class="mt-[16px] w-full py-1 rounded-[3px] bg-[#2167A7] text-white md:px-[92px] md:py-[15px] md:mt-0 md:rounded-[5px] md:text-[20px] hover:opacity-90"
+                  type="submit"
+                >
+                  Find Job
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="featured mt-[40px] mb-[80px] md:flex items-center">
+            <div
+              class="text-[20px] font-medium mb-[16px] md:text-[24px] text-[#2167A7] basis-2/3"
+            >
+              Featured Companies
+            </div>
+
+            <div class="cards grid md:grid-cols-3 gap-3 md:gap-10 md:w-screen">
+              <div
+                class="px-[32px] md:px-[16px] py-[10px] border-[1px] border-[#2167A7] rounded-[3px] bg-white bg-opacity-[61] flex gap-[32px] cursor-pointer hover:opacity-75"
+              >
+                <img src="./images/company_logo.png" class="object-contain" />
+                <div
+                  class="flex items-center gap-[64px] ml-[32px] md:grid md:grid-rows-2 md:gap-0 md:ml-0"
+                >
+                  <p class="text-[20px] font-[500]">Company A</p>
+                  <p class="text-[16px] font-[200]">2 Jobs</p>
+                </div>
+              </div>
+              <div
+                class="px-[32px] md:px-[16px] py-[10px] border-[1px] border-[#2167A7] rounded-[3px] bg-white bg-opacity-[61] flex gap-[32px] cursor-pointer hover:opacity-75"
+              >
+                <img src="./images/company_logo.png" class="object-contain" />
+                <div
+                  class="flex items-center gap-[64px] ml-[32px] md:grid md:grid-rows-2 md:gap-0 md:ml-0"
+                >
+                  <p class="text-[20px] font-[500]">Company A</p>
+                  <p class="text-[16px] font-[200]">2 Jobs</p>
+                </div>
+              </div>
+              <div
+                class="px-[32px] md:px-[16px] py-[10px] border-[1px] border-[#2167A7] rounded-[3px] bg-white bg-opacity-[61] flex gap-[32px] cursor-pointer hover:opacity-75"
+              >
+                <img src="./images/company_logo.png" class="object-contain" />
+                <div
+                  class="flex items-center gap-[64px] ml-[32px] md:grid md:grid-rows-2 md:gap-0 md:ml-0"
+                >
+                  <p class="text-[20px] font-[500]">Company A</p>
+                  <p class="text-[16px] font-[200]">2 Jobs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards grid grid-rows gap-[16px] md:gap-[40px]">
+            <div
+              class="cardOne text-white py-[24px] pl-[64px] pr-[96px] bg-[#2167A7] rounded-[3px] grid grid-cols-2 md:flex items-center cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300"
+            >
+              <img src="./images/logo2.png" />
+              <div class="basis-1/3 md:px-[40px]">
+                <p class="text-[20px] font-[600]">Company Name</p>
+                <p class="text-[14px] font-[200] pt-1">Position</p>
+              </div>
+              <p
+                class="pt-[16px] md:pt-0 text-[16px] leading-[155.02%] col-span-2"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.Lorem Ipsum is Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
+            </div>
+            <div
+              class="cardOne text-white py-[24px] pl-[64px] pr-[96px] bg-[#2167A7] rounded-[3px] grid grid-cols-2 md:flex items-center cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300"
+            >
+              <img src="./images/logo2.png" />
+              <div class="basis-1/3 md:px-[40px]">
+                <p class="text-[20px] font-[600]">Company Name</p>
+                <p class="text-[14px] font-[200] pt-1">Position</p>
+              </div>
+              <p
+                class="pt-[16px] md:pt-0 text-[16px] leading-[155.02%] col-span-2"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.Lorem Ipsum is Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
+            </div>
+            <div
+              class="cardOne text-white py-[24px] pl-[64px] pr-[96px] bg-[#2167A7] rounded-[3px] grid grid-cols-2 md:flex items-center cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300"
+            >
+              <img src="./images/logo2.png" />
+              <div class="basis-1/3 md:px-[40px]">
+                <p class="text-[20px] font-[600]">Company Name</p>
+                <p class="text-[14px] font-[200] pt-1">Position</p>
+              </div>
+              <p
+                class="pt-[16px] md:pt-0 text-[16px] leading-[155.02%] col-span-2"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.Lorem Ipsum is Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-start space-x-6 group"></div>
+        <div class="mt-[10%] ml-[5%] lg:flex lg:align-middle">
+          <div>
+            <div
+              class="text-[#2167A7] lg:text-[26px] text-[18px] font-bold mt-[10%] lg:ml-4 lg:mb-8"
+            >
+              PHOTO
+              <span class="text-black">GALLERY</span>
+            </div>
+          </div>
+          <div class="w-[70%] mt-8 ml-3 lg:ml-0"><hr class="new5" /></div>
+        </div>
+        <div class="lg:flex justify-between align-middle w-[100%]">
+          <div class="basis-3/5 lg:w-[40%] w-[100%] mx-auto lg:mx-0 ml-6">
+            <div class="flex-col">
+              <div class="flex lg:h-[20vh] h-[25vh] w-full">
+                <div class="box">
+                  <img src="./images/al2.png" />
+                </div>
+                <div class="box">
+                  <img src="./images/al1.png" />
+                </div>
+                <div class="box">
+                  <img src="./images/al2.png" />
+                </div>
+              </div>
+
+              <div class="flex lg:h-[20vh] h-[25vh] w-full">
+                <div class="box">
+                  <img src="./images/al2.png" />
+                </div>
+                <div class="box">
+                  <img src="./images/al2.png" />
+                </div>
+                <div class="box hidden lg:block">
+                  <img src="./images/al2.png" />
+                </div>
+              </div>
+
+              <div class="flex lg:h-[20vh] h-[25vh] w-full">
+                <div class="box">
+                  <img src="./images/al2.png" />
+                </div>
+                <div class="box">
+                  <img src="./images/al2.png" />
+                </div>
+                <div class="box">
+                  <img src="./images/al2.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:my-auto lg:w-[45%] w-[100%] lg:mx-0 mx-auto ml-6">
+            <iframe
+              width="390"
+              height="275"
+              src="https://www.youtube.com/embed/NUXQLPJ_SU4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <!--donation-->
+        <div
+          class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-[5%]"
+        >
+          <div
+            class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('img/support.png')] bg-center bg-cover"
+          >
+            <div class="text-white text-[1.7rem]">
+              <h1 class="text-3xl font-bold uppercase text-white">
+                #SUPPORT <br />
+                <span
+                  style="
+                    -webkit-text-stroke: 1px #ffffff !important;
+                    -webkit-text-fill-color: transparent;
+                  "
+                  class="inline-block"
+                  >Growth at</span
+                >
+                NITJ
+              </h1>
+            </div>
+            <div class="self-center">
+              <button class="bg-blue-100 p-2 rounded-lg font-extrabold">
+                DONATE NOW &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="w-[100%] mt-[8%] h-[40vh] bg-[#fff] relative bottom-0">
+      <div
+        class="footer design w-[100%] flex justify-between"
+        style="border-top: 2px solid #2167a7"
+      >
+        <div class="sec1 lg:w-[40%] w-[80%] ml-[160px] flex mt-8">
+          <img
+            src="./images/nitj-logo.png"
+            alt=""
+            class="w-[15vh] h-[15vh] 2xl:w-[10vh] 2xl:h-[10vh]"
+          />
+          <div class="ml-2">
+            <div class="head font-bold text-[16px] mb-2 font-">
+              Dr. BR Ambedkar National Institute of Technology, Jalandhar
+            </div>
+            <div class="subhead text-[12px] font-semibold">
+              Standing tall since 1987,NIT Jalandhar is steadily sailing through
+              the millennium change and has emerged into one of the most
+              prominent institutions of India
+            </div>
+            <a href="#" class="text-[14px] font-bold">KNOW MORE</a>
+          </div>
+        </div>
+
+        <div
+          class="sec2 lg:w-[55%] 2xl:w-[45%] w-[90%] mt-8 mx-8 flex justify-between ml-8 mr-[160px]"
+        >
+          <div class="quicklinks w-[45%] lg:ml-[5%]">
+            <h2
+              class="font-bold lg:w-[40%] w-[70%] border-b-2 rounded-md border-[#2167A7] mb-4 text-black"
+            >
+              Quick Links
+            </h2>
+            <ul class="lg:text-[15px] text-[12px]">
+              <li class="mb-[8px] hover:text-yellow-600 font-semibold">
+                <a href="#">NITJ-HOME</a>
+              </li>
+              <li class="mb-[8px] hover:text-yellow-600 font-semibold">
+                <a href="#">Upcoming Events</a>
+              </li>
+              <li class="mb-[8px] hover:text-yellow-600 font-semibold">
+                <a href="#">Find Alumni</a>
+              </li>
+              <li class="mb-[8px] hover:text-yellow-600 font-semibold">
+                <a href="#">Find Jobs</a>
+              </li>
+              <li class="mb-[8px] hover:text-yellow-600 font-semibold">
+                <a href="#">Donate</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[#2167A7] border-b-2 border-[#2167A7] hover:text-orange-700 hover:border-orange-700"
+                  >Faculty Alumni Co-ordinator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-[50%]">
+            <h2
+              class="font-bold w-[70%] lg:w-[50%] border-b-2 rounded-md border-[#2167A7] mb-4 text-black"
+            >
+              Get in Touch
+            </h2>
+
+            <div
+              class="mb-2 hover:text-yellow-500 font-bold lg:text-[18px] text-[14px]"
+            >
+              <a href="#">NITJ ALUMNI ASSOCIATION</a>
+            </div>
+            <div class="flex align-middle justify-center">
+              <i
+                class="fas fa-house-chimney mr-2 mb-2 lg:text-[14px] text-[14px]"
+              ></i>
+              Main Campus,NITJ G.T Road, Amritsar Bypass,Jalandhar,
+              Punjab-144027
+            </div>
+            <div class="ml-6">
+              <div
+                class="mb-1 hover:text-yellow-500 font-semibold mt-3 text-[16px]"
+              >
+                <a href="#">Dr Manoj Kumar</a>
+              </div>
+              <h3 class="text-[#2167A7] text-[12px] font-bold">
+                Chief Alumni Co-ordinator
+              </h3>
+              <div class="flex align-middle">
+                <i class="fas fa-envelope mt-2 mr-2"></i>
+                <div class="mt-1 text-[13px]">alumni@nitj.ac.in</div>
+              </div>
+
+              <div class="flex align-middle text-[13px]">
+                <i class="fas fa-phone mt-2 mr-2"></i>
+                <div class="mt-1 mb-8">123456789</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      var slideIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {
+          slideIndex = 1;
+        }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 2500);
+      }
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      //   return new Tooltip(tooltipTriggerEl);
+      // });
+    </script>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon and title -->
+  <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
+  <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+  <!-- RESEARCH -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  <style>
+    body {
+      scrollbar-color: #fff #fff;
+    }
+
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(30, 58, 138, 1);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: gray;
+    }
+
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: gray;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #212121;
+    }
+
+    /* Gallery Effects */
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      line-height: 0;
+    }
+
+    .box>img {
+      width: 100%;
+      height: 100%;
+      border: 0.2rem solid white;
+      border-radius: 8px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: ease 0.75s;
+    }
+
+    .box:hover {
+      flex: 1 1 30%;
+      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .box:hover>img {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .base-image {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      mask-image: linear-gradient(0deg, white, transparent);
+      -webkit-mask-image: linear-gradient(0deg, white, transparent);
+      background-color: #cccccc;
+      height: 400px;
+      background-position: 0% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .base-image-2 {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      background-color: #cccccc;
+      height: 300px;
+      background-position: 58% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .main-shadow {
+      text-shadow: rgb(0 0 0) 6px -1px 5px;
+    }
+
+    .carousel-open:checked+.carousel-item {
+      position: static;
+      opacity: 100;
+    }
+
+    .carousel-item {
+      -webkit-transition: opacity 0.9s ease-in-out;
+      transition: opacity 1s ease-in-out 0.2s;
+    }
+
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3,
+    #carousel-4:checked~.control-4 {
+      display: block;
+    }
+
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body class="font-body text-dark-purple">
+  <script src="../common template/header.js"></script>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5781c79d8afbac9fb28cb047bd980c4686014e7b
+
+
+
+
+  <!-- Corousel -->
+  <div id="" style="background-image:url('https://www.annauniv.edu/scstcell/nw-img/6.jpg') ;"
+    class="mt-20 h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center">
+    <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
+      <div class="flex flex-col items-center justify-center container h-full">
+        <div class="flex flex-col gap-10">
+          <h2 class="uppercase text-white text-4xl text-center">
+            <span class="font-bold">NITJ</span> SC ST Cell
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End - Corousel -->
+
+  <!-- Sc-St Cell start -->
+  <div class=" ">
+    <div class="my-2 w-12/12 mx-auto md:w-7/12  px-2">
+      <h1 class="uppercase my-4 text-blue-600 font-bold text-2xl">sc st cell</h1>
+      <p class="mt-5 text-[1rem]">SC ST cell has been constituted in the institute as per the instructions of Government
+        of
+        India, Ministry of Personal, Public Grievances and Pension (Department of Personal and Training) vide office
+        memorandum No. 43011/153/2010-Estt. (Res) dated 4 th January, 2013. </p>
+    </div>
+    <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+      <h1 class="text-xl text-blue-600 font-bold">Functions of SC-ST Cell </h1>
+      <div class="ml-3 md:ml-6">
+        <div class="my-2">
+          1. <p class="inline">Grievances redress for the grievances of SC/ST students and employees and render them
+            necessary help in solving their academic as well as administrative problems.</p>
+        </div>
+        <div class="my-2">
+          2. <p class="inline">Monitors and evaluates the reservation policies and other programs intended for SC/STs by
+            the Government of India for their effective implementation at Dr BR Ambedkar National Institute of
+            Technology Jalandhar.</p>
+        </div>
+        <div class="my-2">
+          3. <p class="inline">Suggests the follow-up measures to the administration of the Institute for achieving the
+            objectives and targets laid down by Ministry of Education (Shiksha Mantralaya) for the empowerment of SC/STs
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+      <h1 class="text-xl font-bold text-blue-600">Online Complaint Portal </h1>
+      <p class="my-2">URL - <a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/sc_st_cell/complaints">https://www.nitj.ac.in/sc_st_cell/complaints</a></p>
+    </div>
+    <div class="my-6 md:w-7/12 w-12/12 mx-auto px-2">
+      <div class="overflow-x-auto relative">
+        <h1 class="text-xl text-blue-600 font-bold my-2">Chairman</h1>
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" class="py-3 text-white px-6">
+                Name
+              </th>
+              <th scope="col" class="py-3 px-6 text-white">
+                Email ID
+              </th>
+              <th scope="col" class="py-3 px-6 text-white">
+                Mobile
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">Dr Ramesh K Sunkaria</p>
+                <p class="mt-2 font-sm font-normal">Associate Professor <br>
+                  Department of Electronics and Comm. Engg. <br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                sunkariark@nitj.ac.in
+              </td>
+              <td class="py-4 px-6 text-white">
+                +91-9780979984
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="my-6 md:w-7/12 w-12/12 mx-auto px-2">
+      <div class="overflow-x-auto relative">
+        <h1 class="text-xl text-blue-600 font-bold my-2">Liaison Officers</h1>
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" class="py-3 text-white px-6">
+              </th>
+              <th scope="col" class="py-3 px-6 text-white">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">Dr Ramesh K Sunkaria</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1">Dr Deepti Kakkar</span> <br>
+                  Assistant Professor <br>
+                  Department of Electronics and Comm. Engg. <br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar <br>
+                  <br>
+                  Phone: 0181-2690301 <br>
+                  Email: scstcell@nitj.ac.in
+                </p>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">SC</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1">Dr Ramesh K Sunkaria</span> <br>
+                  Associate Professor <br>
+                  Department of Electronics and Comm. Engg. <br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar <br>
+                  <br>
+                  Phone: 0181-2690301 <br>
+                  Email: scstcell@nitj.ac.in
+                </p>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">ST</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1">Dr Sumer Singh Meena</span> <br>
+                  Assistant Professor <br>
+                  Department of Bio-Technology <br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar <br>
+                  <br>
+                  Phone: 0181-2690301 <br>
+                  Email: scstcell@nitj.ac.in
+                </p>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">OBC</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1"> Dr Rakesh Kumar</span> <br>
+                  Assistant Professor <br>
+                  Department of Chemistry <br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar <br>
+                  <br>
+                  Phone: 0181-2690301 <br>
+                  Email: scstcell@nitj.ac.in
+                </p>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">SC ST Cell Staff</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1">Ms. Gurpreet Kaur</span> <br>
+                  Office Staff <br>
+                  SC ST Cell <br>
+                  <br>
+                  Phone: 0181-2690301, Ext.: 1271 <br>
+                  Email: scstcell@nitj.ac.in <br>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Sc-St Cell End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="../common template/footer.js"></script>
+  <!-- === FOOTER Ends === -->
+  <script>
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1;
+      }
+      x[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 2500);
+    }
+  </script>
+  <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
+  </script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

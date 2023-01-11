@@ -1,0 +1,3563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon and title- -->
+    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png" />
+    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tabs.css" />
+    <!--alpine js-->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"
+    ></script>
+
+    <!-- Google Fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <style>
+      body {
+        scrollbar-color: #fff #fff;
+      }
+
+      /* Customizing the Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: gray;
+      }
+
+      ::-webkit-resizer {
+        background-color: #ffffff;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #212121;
+      }
+
+      /* Gallery Effects */
+      .box {
+        flex: 1;
+        overflow: hidden;
+        transition: 0.5s;
+        line-height: 0;
+      }
+
+      .box > img {
+        width: 100%;
+        height: 100%;
+        border: 0.2rem solid white;
+        border-radius: 8px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        transition: ease 0.75s;
+      }
+
+      .box:hover {
+        flex: 1 1 30%;
+        /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .box:hover > img {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
+
+      .base-image {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        mask-image: linear-gradient(0deg, white, transparent);
+        -webkit-mask-image: linear-gradient(0deg, white, transparent);
+        background-color: #cccccc;
+        height: 400px;
+        background-position: 0% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .base-image-2 {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        background-color: #cccccc;
+        height: 300px;
+        background-position: 58% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .main-shadow {
+        text-shadow: rgb(0 0 0) 6px -1px 5px;
+      }
+
+      .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+      }
+
+      .carousel-item {
+        -webkit-transition: opacity 0.9s ease-in-out;
+        transition: opacity 1s ease-in-out 0.2s;
+      }
+
+      #carousel-1:checked ~ .control-1,
+      #carousel-2:checked ~ .control-2,
+      #carousel-3:checked ~ .control-3,
+      #carousel-4:checked ~ .control-4 {
+        display: block;
+      }
+
+      .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+      }
+      .titlebg {
+        background: linear-gradient(
+            90.09deg,
+            rgba(0, 0, 0, 0.7) 0.08%,
+            rgba(255, 255, 255, 0) 99.11%
+          ),
+          url(../admin/img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body class="font-body text-dark-purple">
+    <script src="../common template/header.js"></script>
+
+    <div>
+      <div class="tab_wrap2" style="display: block" id="btechtab">
+        <div
+          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+        >
+          <p
+            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
+          >
+            B.TECH
+          </p>
+        </div>
+        <nav
+          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2"
+                  >B.Tech Admission</a
+                >
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!--Mtech Programme (ccmt)-->
+
+      <div class="tab_wrap2" style="display: none" id="mtechtab">
+        <div
+          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+        >
+          <p
+            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
+          >
+            M.TECH
+          </p>
+        </div>
+        <nav
+          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2"
+                  >M.Tech Admission</a
+                >
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="tab_wrap2" style="display: none">
+        <div
+          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+        >
+          <p
+            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
+          >
+            M.TECH (Self Sponsored)
+          </p>
+        </div>
+        <nav
+          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2"
+                  >M.Tech Admission</a
+                >
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="tab_wrap2" style="display: none" id="msctab">
+        <div
+          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+        >
+          <p
+            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
+          >
+            M.Sc.
+          </p>
+        </div>
+        <nav
+          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">MSc Admission</a>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="tab_wrap2" style="display: none" id="mbatab">
+        <div
+          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+        >
+          <p
+            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
+          >
+            M.B.A
+          </p>
+        </div>
+        <nav
+          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">MBA Admission</a>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="tab_wrap2" style="display: none" id="phdtab">
+        <div
+          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+        >
+          <p
+            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
+          >
+            PHD
+          </p>
+        </div>
+        <nav
+          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">PHD Admission</a>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="tab_wrap2" style="display: none" id="foreignadmissiontab">
+        <div
+          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
+        >
+          <p
+            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
+          >
+            Foreign Admissions
+          </p>
+        </div>
+        <nav
+          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href="https://nitj.netlify.app/"
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="#" class="text-lg font-medium ml-2">Home</a>
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2"
+                  >Foreign Admission</a
+                >
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
+      <div class="lg:w-[15%] w-[25%]">
+        <div
+          class="tabs p-2 rounded lg:block lg:w-[100%] w-[20%] hidden sticky top-40"
+          id="sidetab"
+        >
+          <ul>
+            <li class="active2 bg-blue-100 mb-1" id="btechsidetab">
+              <span class="text">B.Tech.</span>
+            </li>
+            <li class="bg-blue-100 mb-1" id="mtechsidetab">
+              <span class="text">M.Tech. (CCMT)</span>
+            </li>
+            <li class="bg-blue-100 mb-1">
+              <span class="text">M.Tech. (Self Sponsored)</span>
+            </li>
+
+            <li class="bg-blue-100 mb-1" id="mscsidetab">
+              <span class="text">M.Sc.</span>
+            </li>
+
+            <li class="bg-blue-100 mb-1" id="mbasidetab">
+              <span class="text">M.B.A.</span>
+            </li>
+
+            <li class="bg-blue-100 mb-1" id="phdsidetab">
+              <span class="text">Ph.D.</span>
+            </li>
+            <li class="bg-blue-100" id="foreignsidetab">
+              <span class="text">Foreign Admissions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        x-data="{dropdownMenu: false}"
+        class="block lg:hidden mx-auto w-[60%]"
+      >
+        <!-- Dropdown toggle button -->
+        <button
+          @click="dropdownMenu = ! dropdownMenu"
+          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%] mt-10 mb-4"
+        >
+          <span class="mx-auto"
+            >Select Course <i class="fa-solid fa-caret-down"></i>
+          </span>
+        </button>
+        <!-- Dropdown list -->
+        <div x-show="dropdownMenu" class="tabs2 p-2 rounded w-[100%]">
+          <ul>
+            <li class="active2 bg-blue-100 mb-1" id="resp_sidetab_btech">
+              <span class="text">B.Tech.</span>
+            </li>
+            <li class="bg-blue-100 mb-1" id="resp_sidetab_mtech">
+              <span class="text">M.Tech. (CCMT)</span>
+            </li>
+            <li class="bg-blue-100 mb-1">
+              <span class="text">M.Tech. (Self Sponsored)</span>
+            </li>
+
+            <li class="bg-blue-100 mb-1" id="resp_sidetab_msc">
+              <span class="text">M.Sc.</span>
+            </li>
+
+            <li class="bg-blue-100 mb-1" id="resp_sidetab_mba">
+              <span class="text">M.B.A.</span>
+            </li>
+
+            <li class="bg-blue-100 mb-1" id="resp_sidetab_phd">
+              <span class="text">Ph.D.</span>
+            </li>
+            <li class="bg-blue-100" id="resp_sidetab_foreign_admissions">
+              <span class="text">Foreign Admissions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:w-[80%] w-[90%] mx-auto">
+        <div class="content w-[100%] mx-auto">
+          <div class="tab_wrap" style="display: block" id="btech">
+            <div class="lg:flex lg:justify-between">
+              <div
+                class="tab_content lg:w-[40%] w-[100%] text-center lg:text-left"
+              >
+                <!--start admission page guyz -->
+
+                <div
+                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Modes</span> of Admission
+                </div>
+
+                <div class="underline3 w-[100%] mb-[4%]"></div>
+
+                <div class="section flex-col">
+                  <div class="right w-[100%] mx-auto">
+                    <div
+                      class="modes_of_admission mb-8 flex justify-between lg:block"
+                    >
+                      <div class="mode flex-col mb-4 w-[80%] text-left">
+                        <div
+                          class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                        >
+                          JOSAA / CSAB
+                        </div>
+                        <ul class="text-left">
+                          <li>
+                            <i class="fa-solid fa-chevron-right mr-2"></i>
+                            <a
+                              href="https://josaa.nic.in/"
+                              target="_blank"
+                              class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                            >
+                              JOSAA
+                            </a>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-chevron-right mr-2"></i>
+                            <a
+                              href="https://csab.nic.in/"
+                              target="_blank"
+                              class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                            >
+                              CSAB
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="mode flex-col mb-4 w-[80%] text-left">
+                        <div
+                          class="mode-head rounded-md bg-[#0369A1] inline-block mb-2 p-1 shadow-md text-[14px] text-white font-bold"
+                        >
+                          Foreign Admission
+                        </div>
+                        <ul class="text-left">
+                          <li>
+                            <i class="fa-solid fa-chevron-right mr-2"></i>
+                            <a
+                              href="https://www.dasanit.org/dasa2022/"
+                              target="_blank"
+                              class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                            >
+                              DASA
+                            </a>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-chevron-right mr-2"></i>
+                            <a
+                              href="https://iccr.gov.in/home"
+                              target="_blank"
+                              class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                            >
+                              ICCR
+                            </a>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-chevron-right mr-2"></i>
+                            <a
+                              href="https://studyinindia.gov.in/"
+                              target="_blank"
+                              class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                            >
+                              Study in India
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--admission updates-->
+                  <div
+                    class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                  >
+                    <span class="text-[#2776c0]">Admission</span> Updates
+                  </div>
+
+                  <div
+                    class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh] mb-32 lg:mb-0"
+                  >
+                    <div class="head bg-[#0369A1] text-white p-2">
+                      UG Admissions (2022- 2026)
+                    </div>
+                    <div class="admission overflow-auto h-[50vh]">
+                      <ul
+                        class="text-[14px] leading-8 ml-[2%] text-left"
+                        id="ug-updates"
+                      >
+                        <!--Admission update data coming from backend-->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--flow chart-->
+              <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
+                <div>
+                  <div
+                    class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                  >
+                    <span class="text-[#2776c0]">Admission</span> Procedure
+                  </div>
+                  <div class="mt-4">
+                    <div
+                      class="flex flex-col md:grid grid-cols-12 text-gray-50"
+                    >
+                      <div class="flex md:contents">
+                        <div
+                          class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                        >
+                          <div
+                            class="h-full w-6 flex items-center justify-center"
+                          >
+                            <div
+                              class="h-full w-1 bg-color-1 pointer-events-none"
+                            ></div>
+                          </div>
+                          <div
+                            class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                          >
+                            <i class="fas fa-check-circle text-white"></i>
+                          </div>
+                        </div>
+                        <!-- col-start-4 col-end-12  rounded-t-xl  mr-auto  w-full -->
+                        <div
+                          class="col-start-4 col-end-12 my-3 mr-auto w-[90%]"
+                        >
+                          <div
+                            class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-[90%]"
+                          >
+                            <a
+                              href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                              target="_blank"
+                              class="order-1 rounded-lg shadow-xl"
+                            >
+                              <div>
+                                <h3 class="font-bold text-white text-xl">
+                                  <span
+                                    class="text-[#f6f7f9] font-bold text-lg px-2"
+                                    >1.</span
+                                  >
+                                  JOSAA/CSAB
+                                </h3>
+                              </div>
+                            </a>
+                          </div>
+
+                          <div
+                            class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-[90%]"
+                          >
+                            <ul>
+                              <li class="text-black">
+                                <a
+                                  href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                                  target="_blank"
+                                >
+                                  JoSAA counselling: 1-6 rounds
+                                </a>
+                              </li>
+
+                              <li class="text-black">
+                                <a
+                                  href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                                  target="_blank"
+                                >
+                                  CSAB counselling: 1-2 rounds
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex md:contents">
+                        <div
+                          class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                        >
+                          <div
+                            class="h-full w-6 flex items-center justify-center"
+                          >
+                            <div
+                              class="h-full w-1 bg-blue-200 pointer-events-none"
+                            ></div>
+                          </div>
+                          <div
+                            class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                          >
+                            <i class="fas fa-check-circle text-white"></i>
+                            <!--  <span class="text-[#f5f6f7] font-bold text-lg">2</span> -->
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                        >
+                          <div
+                            class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                          >
+                            <h3 class="font-bold text-white text-xl">
+                              <span
+                                class="text-[#f6f7f9] font-bold text-lg px-2"
+                                >2.
+                              </span>
+                              Institute reporting Online/Physical
+                            </h3>
+                          </div>
+                          <div
+                            class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                          >
+                            <ul
+                              class="text-sm leading-snug tracking-wide text-black text-opacity-100"
+                            >
+                              <li>
+                                <a href="" target="_blank">
+                                  Online registration
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank"> Upload photo </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank">
+                                  Upload documents
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank">
+                                  Document verification
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank"> Fee payment </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank">
+                                  Download NITJ provisional letter
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex md:contents">
+                        <div
+                          class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                        >
+                          <div
+                            class="h-full w-6 flex items-center justify-center"
+                          >
+                            <div
+                              class="h-full w-1 bg-color-1 pointer-events-none"
+                            ></div>
+                          </div>
+                          <div
+                            class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-200 shadow text-center"
+                          >
+                            <i class="fas fa-check-circle text-white"></i>
+                            <!-- <span class="text-[#2776c0] font-bold text-lg">3</span> -->
+                          </div>
+                        </div>
+                        <div class="col-start-4 col-end-12 my-3 mr-auto w-full">
+                          <div
+                            class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                          >
+                            <h3 class="font-bold text-white text-xl">
+                              <span
+                                class="text-[#f6f7f9] font-bold text-lg px-2"
+                                >3.
+                              </span>
+                              Issue of:
+                            </h3>
+                          </div>
+                          <div
+                            class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                          >
+                            <ul
+                              class="text-sm font-medium leading-snug tracking-wide text-black text-opacity-100"
+                            >
+                              <li>
+                                <a href="" target="_blank"> Roll number </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank">
+                                  Official E-mail ID
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank">
+                                  Internet access ID
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex md:contents">
+                        <div
+                          class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                        >
+                          <div
+                            class="h-full w-6 flex items-center justify-center"
+                          >
+                            <div
+                              class="h-full w-1 bg-blue-200 pointer-events-none"
+                            ></div>
+                          </div>
+                          <div
+                            class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                          >
+                            <i class="fas fa-check-circle text-white"></i>
+                            <!-- <span class="text-[#f6f7f9] font-bold  text-lg">4</span> -->
+                          </div>
+                        </div>
+                        <div
+                          class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                        >
+                          <div
+                            class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                          >
+                            <h3 class="font-bold text-white text-xl">
+                              <span
+                                class="text-[#f6f7f9] font-bold text-lg px-2"
+                                >4.
+                              </span>
+                              Orientation / Commmencement of Classes
+                            </h3>
+                          </div>
+                          <div
+                            class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                          >
+                            <ul
+                              class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+                            >
+                              <li>
+                                <a href="" target="_blank">
+                                  Orientation program
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank"
+                                  >Commencement of classes
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--important links section-->
+            <div
+              class="lg:flex-row flex flex-col justify-between mt-8 align-middle w-[100%] mx-auto"
+            >
+              <div class="flex-col w-full mb-32 lg:mb-8">
+                <div
+                  class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-4"
+                >
+                  Important Links
+                </div>
+
+                <div
+                  class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%]"
+                >
+                  <ul class="h-[22vh] w-[100%] leading-8">
+                    <li>
+                      <a
+                        href="https://www.nitj.ac.in/erp/login"
+                        target="_blank"
+                        class="ml-[3%] hover:text-orange-600"
+                        >Fee Payment</a
+                      >
+                      <hr class="border-1 border-gray-300" />
+                    </li>
+                    <li>
+                      <a
+                        href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                        target="_blank"
+                        class="ml-[3%] hover:text-orange-600"
+                        >Seat Matrix</a
+                      >
+                      <hr class="border-1 border-gray-300" />
+                    </li>
+                    <li>
+                      <a
+                        href="https://josaa.admissions.nic.in/Applicant/seatallotmentresult/currentorcr.aspx"
+                        class="ml-[3%] hover:text-orange-600"
+                        >Cutoff 2022</a
+                      >
+                      <hr class="border-1 border-gray-300" />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.nitj.ac.in/nitj_files/downloads/Prospectus_2018-2019_18080273488.pdf"
+                        target="_blank"
+                        class="ml-[3%] hover:text-orange-600"
+                        >Academic Brochure</a
+                      >
+                      <hr class="border-1 border-gray-300" />
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/7"
+                        target="_blank"
+                        class="ml-[3%] hover:text-orange-600"
+                        >Institute Policy</a
+                      >
+                      <hr class="border-1 border-gray-300" />
+                    </li>
+
+                    <li>
+                      <a
+                        href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_Admission-B_87203.pdf"
+                        target="_blank"
+                        class="ml-[3%] hover:text-orange-600"
+                        >Frequently Asked Questions</a
+                      >
+                      <hr class="border-1 border-gray-300" />
+                    </li>
+
+                    <li>
+                      <a
+                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/96"
+                        class="ml-[3%] hover:text-orange-600"
+                        >Anti Ragging</a
+                      >
+                      <hr class="border-1 border-gray-300" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex-col w-full mb-8">
+                <div
+                  class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-2"
+                >
+                  Helpline Numbers for B.Tech Admissions:
+                </div>
+
+                <div class="lg:w-[80%] w-[100%]">
+                  <table
+                    cellpadding="6"
+                    cellspacing="0"
+                    class="table table-bordered table-striped"
+                  >
+                    <tbody>
+                      <tr>
+                        <ul>
+                          <li class="px-1">
+                            <span class="bg-[#0369A1] text-[#0369A1] mr-1"
+                              >|</span
+                            ><span style="font-size: 14px"
+                              ><span style="color: #000000"
+                                ><span style="font-size: 14px" class="px-1"
+                                  >6284017194 (Ms. Param, 8 AM to 6 PM, For
+                                  queries in English and Hindi)</span
+                                ></span
+                              ></span
+                            >
+                          </li>
+                          <li class="px-1">
+                            <span class="bg-[#0369A1] text-[#0369A1] mr-1"
+                              >|</span
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >9653532648 (Mr. Deepak, 8 AM to 8 PM, For
+                                queries in Hindi)</span
+                              ></span
+                            >
+                          </li>
+                          <li class="px-1">
+                            <span class="bg-[#0369A1] text-[#0369A1] mr-1"
+                              >|</span
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >9781545787 (Mr. Gagan, 8 AM to 8 PM, For
+                                queries in Punjabi)</span
+                              ></span
+                            >
+                          </li>
+                          <li class="px-1">
+                            <span class="bg-[#0369A1] text-[#0369A1] mr-1"
+                              >|</span
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >9464518174 (Mr. Karan, 8 AM to 8 PM, For
+                                queries in Punjabi)</span
+                              ></span
+                            ><br />
+                          </li>
+                          <li class="px-1">
+                            <span class="bg-[#0369A1] text-[#0369A1] mr-1"
+                              >|</span
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >9855589610 (Mr. Ashwani Sharma, Helpline
+                                Coordinator, For queries in English and
+                                Hindi)</span
+                              ></span
+                            >
+                          </li>
+                        </ul>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Mtech Programme (ccmt)-->
+
+        <div class="tab_wrap" style="display: none" id="mtech">
+          <div class="lg:flex lg:justify-between">
+            <div
+              class="tab_content lg:w-[40%] w-[100%] text-center lg:text-left"
+            >
+              <!--start admission page guyz -->
+
+              <div
+                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+              >
+                <span class="text-[#2776c0]">Modes</span> of Admission
+              </div>
+
+              <div class="underline3 w-[100%] mb-[4%]"></div>
+
+              <div class="section flex-col">
+                <div class="right w-[100%] mx-auto">
+                  <div
+                    class="modes_of_admission mb-8 flex justify-between lg:block"
+                  >
+                    <div class="mode flex-col mb-4 w-[85] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                      >
+                        CCMT
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://ccmt.admissions.nic.in/"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Home Page of CCMT
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mode flex-col mb-4 w-[80] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block mb-2 p-1 shadow-md text-[14px] text-white font-bold"
+                      >
+                        Foreign Admission
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://iccr.gov.in/home"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            ICCR
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://studyinindia.gov.in/"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Study in India
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!--admission updates-->
+                <div
+                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans lg:mb-0 mb-24"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Updates
+                </div>
+
+                <div
+                  class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh] mb-32 lg:mb-0"
+                >
+                  <div class="head bg-[#0369A1] text-white p-2">
+                    PG Admissions (2022- 2023)
+                  </div>
+                  <div class="admission overflow-auto h-[50vh]">
+                    <ul 
+                      class="text-[14px] leading-8 ml-[2%] text-left"
+                      id="mtech-ccmt-updates"
+                    >
+                      <!--Admission update data coming from backend-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--flow chart-->
+            <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
+              <div>
+                <div
+                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Procedure
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <!-- col-start-4 col-end-12  rounded-t-xl  mr-auto  w-full -->
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-[90%]">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="font-bold text-white text-xl">
+                                1. CCMT
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="mb-3 text-black">CCMT</h3>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            2. Institute reporting Online/Physical
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Online registration
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Upload photo </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Upload documents </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Document verification
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Fee payment </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Download NITJ provisional letter
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-200 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-full">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            3. Issue of:
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm font-medium leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank"> Roll number </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Official E-mail ID
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Internet access ID
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            4. Orientation / Commmencement of Classes
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Orientation program
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"
+                                >Commencement of classes
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--important links section-->
+          <div
+            class="lg:flex-row flex flex-col justify-between mt-8 align-middle w-[100%] mx-auto"
+          >
+            <div class="flex-col w-full mb-32 lg:mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-4"
+              >
+                Important Links
+              </div>
+
+              <div
+                class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%]"
+              >
+                <ul class="h-[22vh] w-[100%] leading-8">
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/erp/login"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Fee Payment</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Seat Matrix</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Cutoff 2022</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/downloads/Prospectus_2018-2019_18080273488.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Academic Brochure</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/7"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Institute Policy</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_Admission-B_87203.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Frequently Asked Questions</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Anti Ragging</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex-col w-full mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-2"
+              >
+                Helpline Numbers for M.Tech Admissions:
+              </div>
+
+              <div class="lg:w-[80%] w-[100%]">
+                <table
+                  cellpadding="6"
+                  cellspacing="0"
+                  class="table table-bordered table-striped"
+                >
+                  <tbody>
+                    <tr>
+                      <ul>
+                        <li class="px-1">
+                          <span class="bg-[#0369A1] text-[#0369A1] mr-1">|</span
+                          ><span style="font-size: 14px"
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >M.Tech / M.Sc. Admission Helplines:
+                                +91-8968140769, 0181-5037777
+                              </span></span
+                            ></span
+                          >
+                        </li>
+                      </ul>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--MTech self sponsored section-->
+        <div class="tab_wrap" style="display: none" id="mtech">
+          <div class="lg:flex lg:justify-between">
+            <div
+              class="tab_content lg:w-[40%] w-[100%] text-center lg:text-left"
+            >
+              <!--start admission page guyz -->
+
+              <div
+                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+              >
+                <span class="text-[#2776c0]">Modes</span> of Admission
+              </div>
+
+              <div class="underline3 w-[100%] mb-[4%]"></div>
+
+              <div class="section flex-col">
+                <div class="right w-[100%] mx-auto">
+                  <div
+                    class="modes_of_admission mb-8 flex justify-between lg:block"
+                  >
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                      >
+                        Self Sponsored
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Online Application Form for M.Tech (Self-Sponsored)
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Application Form for M.Tech (Self-Sponsored) Spot
+                            Round Admission
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block mb-2 p-1 shadow-md text-[14px] text-white font-bold"
+                      >
+                        Foreign Admission
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://iccr.gov.in/home"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            ICCR
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://studyinindia.gov.in/"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Study in India
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!--admission updates-->
+                <div
+                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Updates
+                </div>
+
+                <div
+                  class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh]mb-32 lg:mb-0"
+                >
+                  <div class="head bg-[#0369A1] text-white p-2">
+                    PG Admissions (2022- 2023)
+                  </div>
+                  <div class="admission overflow-auto h-[50vh]">
+                    <ul 
+                      class="text-[14px] leading-8 ml-[2%] text-left"
+                      id="mtech-self-updates">
+                      <!--Admission update data coming from backend-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--flow chart-->
+            <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
+              <div>
+                <div
+                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Procedure
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <!-- col-start-4 col-end-12  rounded-t-xl  mr-auto  w-full -->
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-[90%]">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="font-bold text-white text-xl">
+                                1. JOSAA/CSAB
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="mb-3 text-black">JOSAA/CSAB</h3>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            2. Institute reporting Online/Physical
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Online registration
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Upload photo </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Upload documents </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Document verification
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Fee payment </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Download NITJ provisional letter
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-full">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            3. Issue of:
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm font-medium leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank"> Roll number </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Official E-mail ID
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Internet access ID
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-300 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            4. Orientation / Commmencement of Classes
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Orientation program
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"
+                                >Commencement of classes
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--important links section-->
+          <div
+            class="lg:flex-row flex flex-col justify-between mt-8 align-middle w-[100%] mx-auto"
+          >
+            <div class="flex-col w-full mb-32 lg:mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-4"
+              >
+                Important Links
+              </div>
+
+              <div
+                class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%]"
+              >
+                <ul class="h-[22vh] w-[100%] leading-8">
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/erp/login"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Fee Payment</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Seat Matrix</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Cutoff 2022</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/downloads/Prospectus_2018-2019_18080273488.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Academic Brochure</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/7"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Institute Policy</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_Admission-B_87203.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Frequently Asked Questions</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Anti Ragging</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex-col w-full mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-2"
+              >
+                Helpline Numbers for M.Tech Admissions:
+              </div>
+
+              <div class="lg:w-[80%] w-[100%]">
+                <table
+                  cellpadding="6"
+                  cellspacing="0"
+                  class="table table-bordered table-striped"
+                >
+                  <tbody>
+                    <tr>
+                      <ul>
+                        <li class="px-1">
+                          <span class="bg-[#0369A1] text-[#0369A1] mr-1">|</span
+                          ><span style="font-size: 14px"
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >M.Tech / M.Sc. Admission Helplines:
+                                +91-8968140769, 0181-5037777
+                              </span></span
+                            ></span
+                          >
+                        </li>
+                      </ul>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--MSC -->
+        <div class="tab_wrap" style="display: none" id="msc">
+          <div class="lg:flex lg:justify-between">
+            <div
+              class="tab_content lg:w-[40%] w-[100%] text-center lg:text-left"
+            >
+              <!--start admission page guyz -->
+
+              <div
+                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+              >
+                <span class="text-[#2776c0]">Modes</span> of Admission
+              </div>
+
+              <div class="underline3 w-[100%] mb-[4%]"></div>
+
+              <div class="section flex-col">
+                <div class="right w-[100%] mx-auto">
+                  <div
+                    class="modes_of_admission mb-8 flex justify-between lg:block"
+                  >
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                      >
+                        CCMN
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://ccmn.admissions.nic.in/"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Home Page of CCMN
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Online Registration Form (M.Sc. Admissions - 2022)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block mb-2 p-1 shadow-md text-[14px] text-white font-bold"
+                      >
+                        Foreign Admission
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://iccr.gov.in/home"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            ICCR
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://studyinindia.gov.in/"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Study in India
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!--admission updates-->
+                <div
+                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Updates
+                </div>
+
+                <div
+                  class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh]mb-32 lg:mb-0"
+                >
+                  <div class="head bg-[#0369A1] text-white p-2">
+                    PG Admissions (2022- 2023)
+                  </div>
+                  <div class="admission overflow-auto lg:h-[45vh] h-[45vh]">
+                    <ul 
+                      class="text-[14px] leading-8 ml-[2%] text-left"
+                      id="msc-updates"
+                    >
+                      <!--Admission update data coming from backend-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--flow chart-->
+            <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
+              <div>
+                <div
+                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Procedure
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <!-- col-start-4 col-end-12  rounded-t-xl  mr-auto  w-full -->
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-[90%]">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="font-bold text-white text-xl">
+                                1. CCMN
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="mb-3 text-black">CCMN</h3>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            2. Institute reporting Online/Physical
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Online registration
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Upload photo </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Upload documents </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Document verification
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"> Fee payment </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Download NITJ provisional letter
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-full">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            3. Issue of:
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm font-medium leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank"> Roll number </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Official E-mail ID
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank">
+                                Internet access ID
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            4. Orientation / Commmencement of Classes
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Orientation program
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"
+                                >Commencement of classes
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--important links section-->
+          <div
+            class="lg:flex-row flex flex-col justify-between mt-8 align-middle w-[100%] mx-auto"
+          >
+            <div class="flex-col w-full mb-32 lg:mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-4"
+              >
+                Important Links
+              </div>
+
+              <div
+                class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%]"
+              >
+                <ul class="h-[22vh] w-[100%] leading-8">
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/erp/login"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Fee Payment</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Seat Matrix</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Cutoff 2022</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/downloads/Prospectus_2018-2019_18080273488.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Academic Brochure</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/7"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Institute Policy</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_Admission-B_87203.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Frequently Asked Questions</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Anti Ragging</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex-col w-full mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-2"
+              >
+                Helpline Numbers for Msc Admissions:
+              </div>
+
+              <div class="lg:w-[80%] w-[100%]">
+                <table
+                  cellpadding="6"
+                  cellspacing="0"
+                  class="table table-bordered table-striped"
+                >
+                  <tbody>
+                    <tr>
+                      <ul>
+                        <li class="px-1">
+                          <span class="bg-[#0369A1] text-[#0369A1] mr-1">|</span
+                          ><span style="font-size: 14px"
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >M.Tech / M.Sc. Admission Helplines:
+                                +91-8968140769, 0181-5037777
+                              </span></span
+                            ></span
+                          >
+                        </li>
+                      </ul>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--MBA Section-->
+
+        <div class="tab_wrap" style="display: none" id="mba">
+          <div class="lg:flex lg:justify-between">
+            <div
+              class="tab_content lg:w-[40%] w-[100%] text-center lg:text-left"
+            >
+              <!--start admission page guyz -->
+
+              <div
+                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+              >
+                <span class="text-[#2776c0]">Modes</span> of Admission
+              </div>
+
+              <div class="underline3 w-[100%] mb-[4%]"></div>
+
+              <div class="section flex-col">
+                <div class="right w-[100%] mx-auto">
+                  <div
+                    class="modes_of_admission mb-8 flex justify-between lg:block"
+                  >
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                      >
+                        Self Sponsored
+                      </div>
+                      <ul>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Advertisement for Admission to MBA
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Online Registration Form (MBA Admissions - 2022)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block mb-2 p-1 shadow-md text-[14px] text-white font-bold"
+                      >
+                        Foreign Admission
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://iccr.gov.in/home"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            ICCR
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://studyinindia.gov.in/"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Study in India
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!--admission updates-->
+                <div
+                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Updates
+                </div>
+
+                <div
+                  class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh]mb-32 lg:mb-0"
+                >
+                  <div class="head bg-[#0369A1] text-white p-2">
+                    PG Admissions (2022- 2023)
+                  </div>
+                  <div class="admission overflow-auto h-[50vh]">
+                    <ul 
+                      class="text-[14px] leading-8 ml-[2%] text-left"
+                      id="mba-updates"
+                    >
+                      <!--Admission update data coming from backend-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--flow chart-->
+            <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
+              <div>
+                <div
+                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Procedure
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-200 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <!-- col-start-4 col-end-12  rounded-t-xl  mr-auto  w-full -->
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-[90%]">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="font-bold text-white text-xl">
+                                1. Online Application Form
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="mb-3 text-black">
+                                Online Application Form
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            2. Selection Process
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank"
+                                >NITJ Entrance/Text/Interview</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-full">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            3. Fee Payment
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm font-medium leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank"> Selected Canditate</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            4. Institute Reporting(Online/Offline)
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Orientation program
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"
+                                >Commencement of classes
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--important links section-->
+          <div
+            class="lg:flex-row flex flex-col justify-between mt-8 align-middle w-[100%] mx-auto"
+          >
+            <div class="flex-col w-full mb-32 lg:mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-4"
+              >
+                Important Links
+              </div>
+
+              <div
+                class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%]"
+              >
+                <ul class="h-[22vh] w-[100%] leading-8">
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/erp/login"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Fee Payment</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Seat Matrix</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Cutoff 2022</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/downloads/Prospectus_2018-2019_18080273488.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Academic Brochure</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/7"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Institute Policy</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_Admission-B_87203.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Frequently Asked Questions</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/96"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Anti Ragging</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex-col w-full mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-2"
+              >
+                Helpline Numbers for MBA Admissions:
+              </div>
+
+              <div class="lg:w-[80%] w-[100%]">
+                <table
+                  cellpadding="6"
+                  cellspacing="0"
+                  class="table table-bordered table-striped"
+                >
+                  <tbody>
+                    <tr>
+                      <ul>
+                        <li class="px-1">
+                          <span class="bg-[#0369A1] text-[#0369A1] mr-1">|</span
+                          ><span style="font-size: 14px"
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >M.Tech / M.Sc. Admission Helplines:
+                                +91-8968140769, 0181-5037777
+                              </span></span
+                            ></span
+                          >
+                        </li>
+                      </ul>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--phd section-->
+        <div class="tab_wrap" style="display: none" id="phd">
+          <div class="lg:flex lg:justify-between">
+            <div
+              class="tab_content lg:w-[40%] w-[100%] text-center lg:text-left"
+            >
+              <!--start admission page guyz -->
+
+              <div
+                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+              >
+                <span class="text-[#2776c0]">Modes</span> of Admission
+              </div>
+
+              <div class="underline3 w-[100%] mb-[4%]"></div>
+
+              <div class="section flex-col">
+                <div class="right w-[100%] mx-auto">
+                  <div
+                    class="modes_of_admission mb-8 w-[100%] flex justify-between lg:block"
+                  >
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                      >
+                        Self Sponsored
+                      </div>
+                      <ul>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Online application form
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Advertisement for Admission to PhD (Full-Time,
+                            Part-Time and Self-Sponsored) Programme in
+                            Engineering, Sciences, Humanities and Management for
+                            the Academic Year 2022-2023 (Session July- 2022)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mode flex-col mb-4 w-[80%] text-left">
+                      <div
+                        class="mode-head rounded-md bg-[#0369A1] inline-block mb-2 p-1 shadow-md text-[14px] text-white font-bold"
+                      >
+                        Foreign Admission
+                      </div>
+                      <ul class="text-left">
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://iccr.gov.in/home"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            ICCR
+                          </a>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-chevron-right mr-2"></i>
+                          <a
+                            href="https://studyinindia.gov.in/"
+                            target="_blank"
+                            class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                          >
+                            Study in India
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!--admission updates-->
+                <div
+                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Updates
+                </div>
+
+                <div
+                  class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh] mb-32 lg:mb-0"
+                >
+                  <div class="head bg-[#0369A1] text-white p-2">
+                    PG Admissions (2022- 2023)
+                  </div>
+                  <div class="admission overflow-auto h-[50vh]">
+                    <ul 
+                      class="text-[14px] leading-8 ml-[2%] text-left"
+                      id="phd-updates"
+                    >
+                      <!--Admission update data coming from backend-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--flow chart-->
+            <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
+              <div>
+                <div
+                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                >
+                  <span class="text-[#2776c0]">Admission</span> Procedure
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <!-- col-start-4 col-end-12  rounded-t-xl  mr-auto  w-full -->
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-[90%]">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="font-bold text-white text-xl">
+                                1. Online Application Form
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-[90%]"
+                        >
+                          <a
+                            href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                            target="_blank"
+                            class="order-1 rounded-lg shadow-xl"
+                          >
+                            <div>
+                              <h3 class="mb-3 text-black">
+                                Online Application Form
+                              </h3>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            2. Selection Process
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank"
+                                >NITJ Entrance/Text/Interview</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-color-1 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div class="col-start-4 col-end-12 my-3 mr-auto w-full">
+                        <div
+                          class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            3. Fee Payment
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm font-medium leading-snug tracking-wide text-black text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank"> Selected Canditate</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex md:contents">
+                      <div
+                        class="col-start-2 col-end-4 mr-10 md:mx-auto relative"
+                      >
+                        <div
+                          class="h-full w-6 flex items-center justify-center"
+                        >
+                          <div
+                            class="h-full w-1 bg-blue-200 pointer-events-none"
+                          ></div>
+                        </div>
+                        <div
+                          class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center"
+                        >
+                          <i class="fas fa-check-circle text-white"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full"
+                      >
+                        <div
+                          class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full"
+                        >
+                          <h3 class="font-bold text-white text-xl">
+                            4. Institute Reporting(Online/Offline)
+                          </h3>
+                        </div>
+                        <div
+                          class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full"
+                        >
+                          <ul
+                            class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+                          >
+                            <li>
+                              <a href="" target="_blank">
+                                Orientation program
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" target="_blank"
+                                >Commencement of classes
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--important links section-->
+          <div
+            class="lg:flex-row flex flex-col justify-between mt-8 align-middle w-[100%] mx-auto"
+          >
+            <div class="flex-col w-full mb-32 lg:mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-4"
+              >
+                Important Links
+              </div>
+
+              <div
+                class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%]"
+              >
+                <ul class="h-[22vh] w-[100%] leading-8">
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/erp/login"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Fee Payment</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Seat Matrix</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a href="" class="ml-[3%] hover:text-orange-600"
+                      >Cutoff 2022</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/downloads/Prospectus_2018-2019_18080273488.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Academic Brochure</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/7"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Institute Policy</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_Admission-B_87203.pdf"
+                      target="_blank"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Frequently Asked Questions</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/96"
+                      class="ml-[3%] hover:text-orange-600"
+                      >Anti Ragging</a
+                    >
+                    <hr class="border-1 border-gray-300" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex-col w-full mb-8">
+              <div
+                class="head block bg-[#0369A1] text-white p-2 mr-[5%] lg:w-[80%] w-[100%] mt-2"
+              >
+                Helpline Numbers for PHD Admissions:
+              </div>
+
+              <div class="lg:w-[80%] w-[100%]">
+                <table
+                  cellpadding="6"
+                  cellspacing="0"
+                  class="table table-bordered table-striped"
+                >
+                  <tbody>
+                    <tr>
+                      <ul>
+                        <li class="px-1">
+                          <span class="bg-[#0369A1] text-[#0369A1] mr-1">|</span
+                          ><span style="font-size: 14px"
+                            ><span style="color: #000000"
+                              ><span style="font-size: 14px" class="px-1"
+                                >M.Tech / M.Sc. Admission Helplines:
+                                +91-8968140769, 0181-5037777
+                              </span></span
+                            ></span
+                          >
+                        </li>
+                      </ul>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--foreign admission-->
+
+        <div class="tab_wrap" style="display: none" id="foreign">
+          <div class="tab_content h-[60%]">
+            <div class="grid lg:grid-cols-2 gap-4 grid-cols-1">
+              <!--btech-->
+              <div class="">
+                <div
+                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                >
+                  <span class="text-[#2776c0]">B.Tech </span> Admission
+                </div>
+                <div class="mt-3 mode flex-col mb-4">
+                  <div
+                    class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                  >
+                    Modes
+                  </div>
+                  <ul class="ml-[6%]">
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://dasanit.org/dasa2022/"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                      >
+                        DASA</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://iccr.gov.in/home"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >ICCR</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://studyinindia.gov.in/"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >Study in India</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!--mtech-->
+              <div class="">
+                <div
+                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                >
+                  <span class="text-[#2776c0]">M.Tech</span> Admission
+                </div>
+                <div class="mt-3 mode flex-col mb-4">
+                  <div
+                    class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                  >
+                    Modes
+                  </div>
+                  <ul class="ml-[6%]">
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://iccr.gov.in/home"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >ICCR</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://studyinindia.gov.in/"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >Study in India</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!--mtech (ccmt)-->
+              <div class="">
+                <div
+                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                >
+                  <span class="text-[#2776c0]">M.Tech(CCMT)</span> Admission
+                </div>
+                <div class="mt-3 mode flex-col mb-4">
+                  <div
+                    class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                  >
+                    Modes
+                  </div>
+                  <ul class="ml-[6%]">
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://iccr.gov.in/home"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >ICCR</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://studyinindia.gov.in/"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >Study in India</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!--mba-->
+              <div class="">
+                <div
+                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                >
+                  <span class="text-[#2776c0]">M.B.A </span> Admission
+                </div>
+                <div class="mt-3 mode flex-col mb-4">
+                  <div
+                    class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
+                  >
+                    Modes
+                  </div>
+                  <ul class="ml-[6%]">
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://iccr.gov.in/home"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >ICCR</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right mr-2"></i>
+                      <a
+                        href="https://studyinindia.gov.in/"
+                        class="text-[#2776c0] hover:text-orange-600 md:text-[12px] sm:text-[14px] font-semibold"
+                        >Study in India</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="base-image hidden overflow-hidden lg:block"></div>
+    <div class="relative bottom-0">
+      <script src="../common template/footer.js"></script>
+    </div>
+    <script>
+      /*javascript for admission nav */
+
+
+    </script>
+    <script src="./js/admissions.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="./js/data.js" defer></script>
+    <script src="./tabs.js"></script>
+  </body>
+</html>
