@@ -253,16 +253,20 @@ fetch(`${baseURL}/administration/get/all`)
 fetch(`${baseURL}/ranking/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    const statsData = data[0].Ranking
+    console.log(data)
+    const statsData = data.map((stat) => stat.Ranking)
     const element = document.getElementById('placement-stats')
-
-    for (const metric in statsData) {
+    console.log(statsData)
+    statsData.map((statData) => {
+      // console.log(metric, stat, stat[metric])
       const stat = document.createElement('div')
       stat.setAttribute('class', 'number')
       stat.innerHTML = `
-      <h1 class="text-5xl font-bold uppercase">${statsData[metric]}</h1>
-      <p class="text-lg uppercase">${metric}</p>
+      <h1 class="text-5xl font-bold uppercase">${
+        Object.values(statData)[0]
+      }</h1>
+      <p class="text-lg uppercase">${Object.keys(statData)[0]}</p>
       `
       element.appendChild(stat)
-    }
+    })
   })
