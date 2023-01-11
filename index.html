@@ -347,9 +347,9 @@
             </a>
           </div>
           <div class="sm:hidden block">
-            <button type="button"
+            <button type="button" id="nav-search-btn"
               class="block material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border sm:hover:h-10 sm:hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
-              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search" onclick="showSearchPage(event)">
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search">
               search
             </button>
           </div>
@@ -1302,10 +1302,9 @@
                 </div>
               </div>
               <div class="flex basis-1/5 flex-row justify-center">
-                <button type="button"
+                <button type="button" id="nav-search-btn-v2"
                   class="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
-                  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
-                  onclick="showSearchPage(event)">
+                  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search">
                   search
                 </button>
               </div>
@@ -1317,9 +1316,9 @@
     <!-- NAV BAR ends-->
   </header>
   <!-- === Search bar starts === -->
-  <div id="search_page" class="absolute top-0 z-50 hidden h-full w-full content-center bg-transparent backdrop-blur-2xl"
-    onclick="showSearchPage(event)">
-    <form id="search_form" onclick="showSearchPage(event)">
+  <div id="search_page"
+    class="absolute top-0 z-50 hidden h-full w-full content-center bg-transparent backdrop-blur-2xl">
+    <form id="search_form">
       <div class="flex px-28">
         <label for="search-dropdown" class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
           Email</label>
@@ -1595,15 +1594,15 @@
         </div>
         <div class="ring-2 ring-accent rounded-xl p-5 flex flex-col items-center justify-center gap-5">
           <div class="flex items-stretch rounded-full ring-2 ring-accent overflow-hidden">
-            <p onclick="notificationTabs(this)" data-notif="student-corner"
+            <p data-notif="student-corner"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-accent font-semibold bg-blue-100 hover:bg-blue-200">
               Student's Corner
             </p>
-            <p onclick="notificationTabs(this)" data-notif="upcoming-events"
+            <p data-notif="upcoming-events"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-slate-400 font-semibold hover:bg-blue-50">
               Upcoming Events
             </p>
-            <p onclick="notificationTabs(this)" data-notif="tenders"
+            <p data-notif="tenders"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-slate-400 font-semibold hover:bg-blue-50">
               Tenders
             </p>
