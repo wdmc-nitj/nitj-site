@@ -36,6 +36,18 @@ function slideCards(e, direction) {
   }, 2)
 }
 
+document
+  .getElementById('nav-search-btn')
+  .addEventListener('click', (e) => showSearchPage(e))
+document
+  .getElementById('nav-search-btn-v2')
+  .addEventListener('click', (e) => showSearchPage(e))
+document
+  .getElementById('search_page')
+  .addEventListener('click', (e) => showSearchPage(e))
+document
+  .getElementById('search_form')
+  .addEventListener('click', (e) => showSearchPage(e))
 function showSearchPage(event) {
   if (event.target.id == 'search_form') {
     return
@@ -67,6 +79,14 @@ const openCourse = (e) => {
   e.classList.remove('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
   e.classList.add('bg-accent', 'text-white')
   document.getElementById(e.dataset.course).classList.remove('hidden')
+}
+
+let tablinks = document.getElementsByClassName('notif-link')
+
+for (let tab of tablinks) {
+  tab.addEventListener('click', () => {
+    notificationTabs(tab)
+  })
 }
 
 const notificationTabs = (e) => {
