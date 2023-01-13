@@ -1275,6 +1275,18 @@ sup {
   margin-left: 1.25rem;
 }
 
+.ml-\[4\%\] {
+  margin-left: 4%;
+}
+
+.-mt-7 {
+  margin-top: -1.75rem;
+}
+
+.ml-\[-10\%\] {
+  margin-left: -10%;
+}
+
 .block {
   display: block;
 }
@@ -1723,6 +1735,10 @@ sup {
 
 .w-\[11\%\] {
   width: 11%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
 }
 
 .min-w-full {
@@ -3426,8 +3442,17 @@ sup {
           text-decoration-color: hsla(201, 96%, 32%);
 }
 
+.decoration-\[\#0369a0\] {
+  -webkit-text-decoration-color: #0369a0;
+          text-decoration-color: #0369a0;
+}
+
 .decoration-0 {
   text-decoration-thickness: 0px;
+}
+
+.decoration-4 {
+  text-decoration-thickness: 4px;
 }
 
 .underline-offset-\[12px\] {
@@ -3436,6 +3461,10 @@ sup {
 
 .underline-offset-4 {
   text-underline-offset: 4px;
+}
+
+.underline-offset-8 {
+  text-underline-offset: 8px;
 }
 
 .opacity-60 {
@@ -4425,6 +4454,11 @@ sup {
     margin-right: auto;
   }
 
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:mr-6 {
     margin-right: 1.5rem;
   }
@@ -4499,6 +4533,10 @@ sup {
 
   .md\:w-\[100\%\] {
     width: 100%;
+  }
+
+  .md\:w-\[45\%\] {
+    width: 45%;
   }
 
   .md\:max-w-screen-xl {
@@ -5180,6 +5218,10 @@ sup {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-\[64px\] {
+    font-size: 64px;
   }
 
   .lg\:leading-\[35px\] {
