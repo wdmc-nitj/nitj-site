@@ -18,23 +18,9 @@ function openDropdown() {
   }
 }
 
-// Slide Cards on Scroll
-function slideCards(e, direction) {
-  // var container = document.getElementById('cards')
-  const container = e.parentNode.querySelector('div')
-  scrollCompleted = 0
-  var slideVar = setInterval(function () {
-    if (direction == 'left') {
-      container.scrollLeft -= container.clientWidth
-    } else {
-      container.scrollLeft += container.clientWidth
-    }
-    scrollCompleted += 100
-    if (scrollCompleted >= 1000) {
-      window.clearInterval(slideVar)
-    }
-  }, 2)
-}
+// document.getElementById("nitj-numbers").addEventListener('click', ()=>{
+//   window.location.replace('https://placement-q1bq.onrender.com/')
+// })
 
 document
   .getElementById('nav-search-btn')

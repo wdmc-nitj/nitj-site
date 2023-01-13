@@ -1399,7 +1399,7 @@
             class="main-slider-text transition-all uppercase font-bold text-white max-w-lg text-4xl sm:text-5xl lg:text-6xl text-center">
             <h2>THE PLACE OF <br> TRANSFORMATION</h2>
             <h2>85<sup>th</sup> IN OVERALL <br> NIRF RANKING</h2>
-            <h2>52<sup>th</sup> IN <br> ENGINEERING NIRF</h2>
+            <h2>52<sup>nd</sup> IN <br> ENGINEERING NIRF</h2>
           </div>
         </div>
 
@@ -1493,12 +1493,14 @@
         <!-- Cards -->
         <div class="flex flex-row relative">
           <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
-            onclick="slideCards(this, 'left')"></i>
+          onclick="slideCards(this,'left')"
+            ></i>
           <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth h-[27rem]">
             <!-- Data from API -->
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
-            onclick="slideCards(this, 'right')"></i>
+          onclick="slideCards(this,'right')"
+            ></i>
         </div>
         <div class="flex items-end w-fit">
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/template/index.html?id=0?category=latestEvent">
@@ -1933,25 +1935,29 @@
   </div>
 
   <!-- Institute in Numbers section -->
-  <section id="nitj-numbers"
-    class="my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
-    <div class="bg-dark-purple/70">
-      <div
-        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
-        <h1 class="text-5xl font-bold uppercase text-white">
-          #numbers <br />
-          <span style="
-                -webkit-text-stroke: 1px #ffffff !important;
-                -webkit-text-fill-color: transparent;
-              " class="inline-block">that prove</span>
-          NITJ
-        </h1>
-        <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
-          <!-- Data From API -->
+  <a href="https://placement-q1bq.onrender.com/
+  
+  ">
+    <section id="nitj-numbers"
+      class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+      <div class="bg-dark-purple/70">
+        <div
+          class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+          <h1 class="text-5xl font-bold uppercase text-white">
+            #numbers <br />
+            <span style="
+                  -webkit-text-stroke: 1px #ffffff !important;
+                  -webkit-text-fill-color: transparent;
+                " class="inline-block">that prove</span>
+            NITJ
+          </h1>
+          <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
+            <!-- Data From API -->
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </a>
   <!-- === Research Section Starts === -->
 
   <div id="research" class="my-20 scroll-mt-32">
@@ -2475,6 +2481,22 @@
     // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     //   return new Tooltip(tooltipTriggerEl);
     // });
+    function slideCards(e, direction) {
+  // var container = document.getElementById('cards')
+  const container = e.parentNode.querySelector('div')
+  scrollCompleted = 0
+  var slideVar = setInterval(function () {
+    if (direction == 'left') {
+      container.scrollLeft -= container.clientWidth
+    } else {
+      container.scrollLeft += container.clientWidth
+    }
+    scrollCompleted += 100
+    if (scrollCompleted >= 1000) {
+      window.clearInterval(slideVar)
+    }
+  }, 2)
+}
 
   </script>
 
