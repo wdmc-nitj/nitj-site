@@ -991,12 +991,12 @@ sup {
   margin-bottom: 1rem;
 }
 
-.mt-64 {
-  margin-top: 16rem;
-}
-
 .mb-24 {
   margin-bottom: 6rem;
+}
+
+.mt-64 {
+  margin-top: 16rem;
 }
 
 .mt-12 {
@@ -1363,10 +1363,6 @@ sup {
   height: 25rem;
 }
 
-.h-28 {
-  height: 7rem;
-}
-
 .h-fit {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1495,6 +1491,10 @@ sup {
   height: 20px;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
 .h-44 {
   height: 11rem;
 }
@@ -1577,16 +1577,8 @@ sup {
   width: fit-content;
 }
 
-.w-28 {
-  width: 7rem;
-}
-
 .w-2\/5 {
   width: 40%;
-}
-
-.w-3\/5 {
-  width: 60%;
 }
 
 .w-\[67px\] {
@@ -1699,6 +1691,10 @@ sup {
 
 .w-\[50px\] {
   width: 50px;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .w-32 {
@@ -4277,6 +4273,10 @@ sup {
     width: 100%;
   }
 
+  .sm\:w-3\/5 {
+    width: 60%;
+  }
+
   .sm\:max-w-lg {
     max-width: 32rem;
   }
@@ -5119,6 +5119,10 @@ sup {
     font-size: 16px;
   }
 
+  .lg\:text-\[88px\] {
+    font-size: 88px;
+  }
+
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -5155,10 +5159,6 @@ sup {
 
   .lg\:text-\[2em\] {
     font-size: 2em;
-  }
-
-  .lg\:text-\[88px\] {
-    font-size: 88px;
   }
 
   .lg\:text-\[60px\] {
