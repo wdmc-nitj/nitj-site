@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['*.html', './**/*.html', './admin/*.html', './js/*.js'],
+  content: ['*.html', './**/*.html', './js/*.js'],
   theme: {
     container: {
       // you can configure the container to be centered
