@@ -1401,6 +1401,10 @@ sup {
   height: 1px;
 }
 
+.h-\[237px\] {
+  height: 237px;
+}
+
 .h-\[3px\] {
   height: 3px;
 }
@@ -1595,6 +1599,10 @@ sup {
 
 .w-\[67px\] {
   width: 67px;
+}
+
+.w-\[185px\] {
+  width: 185px;
 }
 
 .w-\[100\%\] {
@@ -3001,6 +3009,14 @@ sup {
   padding-top: 1rem;
 }
 
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3156,6 +3172,14 @@ sup {
 
 .text-\[32px\] {
   font-size: 32px;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
 }
 
 .font-bold {
@@ -3879,6 +3903,11 @@ sup {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-accent:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
+}
+
 .hover\:p-2:hover {
   padding: 0.5rem;
 }
@@ -4507,6 +4536,18 @@ sup {
     display: none;
   }
 
+  .md\:h-32 {
+    height: 8rem;
+  }
+
+  .md\:h-64 {
+    height: 16rem;
+  }
+
+  .md\:h-\[237px\] {
+    height: 237px;
+  }
+
   .md\:w-\[65\%\] {
     width: 65%;
   }
@@ -4535,8 +4576,9 @@ sup {
     width: 100%;
   }
 
-  .md\:w-\[45\%\] {
-    width: 45%;
+
+  .md\:w-\[185px\] {
+    width: 185px;
   }
 
   .md\:max-w-screen-xl {
@@ -4589,6 +4631,10 @@ sup {
 
   .md\:gap-\[40px\] {
     gap: 40px;
+  }
+
+  .md\:gap-\[64px\] {
+    gap: 64px;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -4653,6 +4699,18 @@ sup {
     padding-top: 0px;
   }
 
+  .md\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .md\:pt-64 {
+    padding-top: 16rem;
+  }
+
   .md\:text-right {
     text-align: right;
   }
@@ -4676,6 +4734,11 @@ sup {
 
   .md\:text-\[24px\] {
     font-size: 24px;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:font-bold {
@@ -4968,6 +5031,10 @@ sup {
     width: 91.666667%;
   }
 
+  .lg\:w-\[52px\] {
+    width: 52px;
+  }
+
   .lg\:basis-3\/4 {
     flex-basis: 75%;
   }
@@ -5032,6 +5099,10 @@ sup {
     gap: 16px;
   }
 
+  .lg\:gap-\[8px\] {
+    gap: 8px;
+  }
+
   .lg\:border-r {
     border-right-width: 1px;
   }
@@ -5084,6 +5155,11 @@ sup {
   .lg\:py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .lg\:pb-0 {
