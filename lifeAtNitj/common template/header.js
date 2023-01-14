@@ -1191,7 +1191,7 @@ id="nav-menu" style="display: none">
                             <a href="/lifeAtNitj/HealthAndWellness.html#COUNSELLING SERVICES"  class="hover:text-[#FF6600]">
                                 Counselling Services
                                 </a>
-                              <a href="/lifeAtNitj/HealthAndWellness.html#FIT INDIA MOVEMENT"  class="hover:text-[#FF6600]">
+                              <a href="/lifeAtNitj/Fit.html"  class="hover:text-[#FF6600]">
                                 Fit India Movement Campaign
                                 </a>
                               <a href="/lifeAtNitj/HealthAndWellness.html#GYMNASIUM"  class="hover:text-[#FF6600]">
@@ -1206,7 +1206,7 @@ id="nav-menu" style="display: none">
                               <a href="/lifeAtNitj/HealthAndWellness.html#Sports"  class="hover:text-[#FF6600]">
                                 Sports and Recreation
                                 </a>
-                              <a href="/lifeAtNitj/HealthAndWellness.html#STUDENT GRIEVANCE CELL"  class="hover:text-[#FF6600] font-bold">
+                              <a href="/admin/student-g-cell.html"  class="hover:text-[#FF6600] font-bold">
                                 Student Grievence Cell
                                 </a>
                             </ul>
@@ -1259,7 +1259,7 @@ id="nav-menu" style="display: none">
                               <a href="/lifeAtNitj/hostel.html" class="hover:text-[#FF6600]">
                                 Hostel Guest House
                               </a>
-                              <a href="/lifeAtNitj/hostel.html" class="hover:text-[#FF6600]">
+                              <a href="/lifeAtNitj/Guest house.html" class="hover:text-[#FF6600]">
                                 Institute Guest House
                               </a>
                             </ul>
