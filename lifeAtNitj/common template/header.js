@@ -1120,25 +1120,25 @@ id="nav-menu" style="display: none">
                         <div id="head" class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
                           <div class="p-2 text-center">SCHOLARSHIPS</div>
                           <div class="h-full rounded-b-xl bg-white">
-                            <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                              <li class="hover:text-[#FF6600]">
-                                Dr. Pratap Singh Memorial Scholarhsip
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                MCM Scholarship
-                              </li>
-                              <li class="hover:text-[#FF6600]">
-                                Post Matric Scholarship
-                              </li>
-                            </ul>
-                            <ul class="flex flex-row px-2 font-normal text-black justify-between">
-                              <li class="hover:text-[#FF6600]">
-                                Siemens India Scholarship
-                              </li>
-                              <li class="hover:text-[#FF6600] font-bold whitespace-nowrap self-end">
-                                View All
-                              </li>
-                            </ul>
+                          <ul class="flex flex-col gap-1 px-2 font-normal text-black">
+                          <a href="https://www.nitj.ac.in/index.php/newOnNitj/scholar_detail/4" class="hover:text-[#FF6600]">
+                          Activity Schedule for Post Matric Scholarship (Ashirwad) for Academic Year 2016-17
+                          </a>
+                          <a href="https://www.nitj.ac.in/index.php/newOnNitj/scholar_detail/6" class="hover:text-[#FF6600]">
+                          2nd MCM Scholarship Announcement
+                            </a>
+                          <a href="https://www.nitj.ac.in/index.php/newOnNitj/scholar_detail/7" class="hover:text-[#FF6600]">
+                          Dr Partap Singh Memorial Scholarships
+                            </a>
+                        </ul>
+                        <ul class="flex flex-row px-2 font-normal text-black justify-between">
+                        <a href="https://www.nitj.ac.in/index.php/newOnNitj/scholar_detail/9" class="hover:text-[#FF6600]">
+                        Post Matric Scholarship for the year 2016-17
+                            </a>
+                          <li class="hover:text-[#FF6600] font-bold whitespace-nowrap self-end">
+                            View All
+                          </lo>
+                        </ul>
                           </div>
                         </div>
                       </div>
@@ -1250,18 +1250,18 @@ id="nav-menu" style="display: none">
                           <div class="p-2 text-center">ACCOMODATION</div>
                           <div class="h-full rounded-b-xl bg-white">
                             <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                              <li class="hover:text-[#FF6600]">
+                              <a href="/lifeAtNitj/hostel.html" class="hover:text-[#FF6600]">
                                 Boys Hostel
-                              </li>
-                              <li class="hover:text-[#FF6600]">
+                              </a>
+                              <a href="/lifeAtNitj/hostel.html" class="hover:text-[#FF6600]">
                                 Girls Hostel
-                              </li>
-                              <li class="hover:text-[#FF6600]">
+                              </a>
+                              <a href="/lifeAtNitj/hostel.html" class="hover:text-[#FF6600]">
                                 Hostel Guest House
-                              </li>
-                              <li class="hover:text-[#FF6600]">
+                              </a>
+                              <a href="/lifeAtNitj/hostel.html" class="hover:text-[#FF6600]">
                                 Institute Guest House
-                              </li>
+                              </a>
                             </ul>
                           </div>
                         </div>

@@ -87,7 +87,7 @@ async function createNav(obj){
   menu5.appendChild(dropdown5)
   
   const menu6 = document.getElementById('menu-6')
-  const LifeatNITJ = document.getElementById('Life at NITJ')
+  // const LifeatNITJ = document.getElementById('Life at NITJ')
   const dropdown6 = document.createElement('div')
       dropdown6.setAttribute(
         'class',
@@ -95,10 +95,10 @@ async function createNav(obj){
       )
       dropdown6.setAttribute('id','drop-down')
       dropdown6.innerHTML = ``
-  data["LifeatNITJ"].forEach((array) => {
-    navbarhelper(array,dropdown6)
-  })
-  menu6.appendChild(LifeatNITJ)
+  // data["LifeatNITJ"].forEach((array) => {
+  //   navbarhelper(array,dropdown6)
+  // })
+  // menu6.appendChild(LifeatNITJ)
   menu6.appendChild(dropdown6)
 
 
