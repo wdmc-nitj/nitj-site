@@ -165,7 +165,7 @@
     </div>
     <script>
         async function callAPi() {
-            let result = await fetch('https://wdmc.onrender.com/administration/63a9694ae409adbff760f814');
+            let result = await fetch('https://wdmc.onrender.com/administration?id=63a9694ae409adbff760f814');
             result = await result.json();
             console.log(result);
             document.getElementById("name").innerHTML =
