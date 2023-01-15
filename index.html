@@ -165,8 +165,6 @@
     </svg>
 
   </button>
-
-  <!-- Menu for mobile starts-->
   <div class=" z-50 p-0 top-0 flex items-start justify-start h-full w-full fixed bg-transparent backdrop-blur-2xl"
     id="nav-menu" style="display: none" onclick="priority=4;executor();">
     <div id="menu" class="h-screen w-2/3 z-10 relative" onclick="priority=3;executor();">
@@ -1523,7 +1521,7 @@
           <!-- TODO : Add loading state -->
         </div>
         <div class="flex items-end w-fit">
-          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="#">
+          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/template/index.html?id=0?category=news">
             <span class="font-semibold hover:underline">View All →</span>
           </a>
         </div>
@@ -1596,21 +1594,21 @@
         </div>
         <div class="ring-2 ring-accent rounded-xl p-5 flex flex-col items-center justify-center gap-5">
           <div class="flex items-stretch rounded-full ring-2 ring-accent overflow-hidden">
-            <p data-notif="student-corner"
+            <p data-notif="notice"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-accent font-semibold bg-blue-100 hover:bg-blue-200">
               Student's Corner
             </p>
-            <p data-notif="upcoming-events"
+            <p data-notif="upcomingEvent"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-slate-400 font-semibold hover:bg-blue-50">
               Upcoming Events
             </p>
-            <p data-notif="tenders"
+            <p data-notif="tender"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-slate-400 font-semibold hover:bg-blue-50">
               Tenders
             </p>
           </div>
           <div>
-            <div id="student-corner" class="notice-content px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
+            <div id="notice" class="notice-content px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
               <ul id="updates" class="flex list-disc flex-col justify-between divide-y-2">
                 <li class="py-4">
                   <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1716,7 +1714,7 @@
                 </a>
               </div>
             </div>
-            <div id="upcoming-events" class="notice-content hidden px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
+            <div id="upcomingEvent" class="notice-content hidden px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
               <ul id="updates" class="flex list-disc flex-col justify-between divide-y-2">
                 <li class="py-4">
                   <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -1822,7 +1820,7 @@
 
               </div>
             </div>
-            <div id="tenders" class="notice-content hidden px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
+            <div id="tender" class="notice-content hidden px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
               <ul id="updates" class="flex list-disc flex-col justify-between divide-y-2">
                 <li class="py-4">
                   <div class="inline-flex flex-col items-start justify-start space-y-4">
@@ -2010,98 +2008,13 @@
           </a>
         </div>
 
-        <div class="max-h-[35rem] flex items-center rounded-xl flex-col overflow-scroll" id="publication-cards">
-          <div class="pr-2">
-            <div class="flex flex-col divide-y-2 divide-slate-300">
-              <div id="publication-card" class="flex flex-col gap-4 py-2">
-                <p>
-                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of
-                  natural fibers and their application as reinforcing material
-                  in polymer composites-a review. Polymer Engineering and
-                  Science, 49(7), 1253–1272
-                </p>
-                <!-- <a href="#"
-                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-                  More Details
-                </a> -->
-              </div>
-              <div id="publication-card" class="flex flex-col gap-4 py-2">
-                <p>
-                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of
-                  natural fibers and their application as reinforcing material
-                  in polymer composites-a review. Polymer Engineering and
-                  Science, 49(7), 1253–1272
-                </p>
-                <!-- <a href="#"
-                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-                  More Details
-                </a> -->
-              </div>
-              <div id="publication-card" class="flex flex-col gap-4 py-2">
-                <p>
-                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of
-                  natural fibers and their application as reinforcing material
-                  in polymer composites-a review. Polymer Engineering and
-                  Science, 49(7), 1253–1272
-                </p>
-                <!-- <a href="#"
-                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-                  More Details
-                </a> -->
-              </div>
-              <div id="publication-card" class="flex flex-col gap-4 py-2">
-                <p>
-                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of
-                  natural fibers and their application as reinforcing material
-                  in polymer composites-a review. Polymer Engineering and
-                  Science, 49(7), 1253–1272
-                </p>
-                <!-- <a href="#"
-                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-                  More Details
-                </a> -->
-              </div>
-              <div id="publication-card" class="flex flex-col gap-4 py-2">
-                <p>
-                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of
-                  natural fibers and their application as reinforcing material
-                  in polymer composites-a review. Polymer Engineering and
-                  Science, 49(7), 1253–1272
-                </p>
-                <!-- <a href="#"
-                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-                  More Details
-                </a> -->
-              </div>
-              <div id="publication-card" class="flex flex-col gap-4 py-2">
-                <p>
-                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of
-                  natural fibers and their application as reinforcing material
-                  in polymer composites-a review. Polymer Engineering and
-                  Science, 49(7), 1253–1272
-                </p>
-                <!-- <a href="#"
-                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-                  More Details
-                </a> -->
-              </div>
-              <div id="publication-card" class="flex flex-col gap-4 py-2">
-                <p>
-                  Kalia, S., Kaith, B. S., & Kaur, I. (2009). Pretreatments of
-                  natural fibers and their application as reinforcing material
-                  in polymer composites-a review. Polymer Engineering and
-                  Science, 49(7), 1253–1272
-                </p>
-                <!-- <a href="#"
-                  class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-                  More Details
-                </a> -->
-              </div>
-            </div>
-          </div>
+        <div class="h-[35rem] flex rounded-xl flex-col overflow-scroll divide-y-2 divide-gray-300"
+          id="publication-cards">
+          <!-- Data from API -->
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!-- === Research Section Ends === -->
   <!-- === Placement Stats starts === -->
@@ -2266,7 +2179,7 @@
       </div>
 
       <div class="basis-3/5">
-        <div>
+        <div id="gallery">
           <div class="mb-10 flex items-center justify-start space-x-6 group">
             <h1 class="uppercase text-4xl font-semibold text-accent">
               Photo <span class="text-dark-purple">Gallery</span>
@@ -2276,7 +2189,8 @@
               imagesmode
             </span>
           </div>
-          <div class="flex h-[22vh] w-full">
+          <!-- images from API -->
+          <!-- <div class="flex h-[22vh] w-full">
             <div class="box">
               <img src="./public/assets/images/img1.png" />
             </div>
@@ -2289,9 +2203,9 @@
             <div class="box hidden lg:block">
               <img src="./public/assets/images/img4.png" />
             </div>
-          </div>
+          </div> -->
 
-          <div class="flex h-[22vh] w-full">
+          <!-- <div class="flex h-[22vh] w-full">
             <div class="box">
               <img src="./public/assets/images/img5.png" />
             </div>
@@ -2304,9 +2218,9 @@
             <div class="box hidden lg:block">
               <img src="./public/assets/images/img8.png" />
             </div>
-          </div>
+          </div> -->
 
-          <div class="flex h-[22vh] w-full">
+          <!-- <div class="flex h-[22vh] w-full">
             <div class="box">
               <img src="./public/assets/images/img9.png" />
             </div>
@@ -2319,7 +2233,7 @@
             <div class="box hidden lg:block">
               <img src="./public/assets/images/danceClub.png" style="opacity: 1" />
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="m-[auto] mt-[15px] flex flex-col items-center gap-[15px] lg:flex-row">
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/admin/explore.html">
@@ -2497,10 +2411,9 @@
     }
   }, 2)
 }
-
   </script>
 
-  <script type="module" src="./js/app.js"></script>
+  <script type="module" src="/js/app.js"></script>
   <script src="./js/navbar.js"></script>
   <script src="./js/navbar-mobile.js"></script>
 </body>
