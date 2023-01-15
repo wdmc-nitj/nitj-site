@@ -45,6 +45,7 @@ if (parseInt(id) === 0) {
   fetch(`${baseURL}/${category}?id=${id}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       titleDiv.innerHTML = data[0].title
       if (data[0].desc) desp.innerHTML = data[0].desc
       dateDiv.innerHTML = dateManipulator(data[0].updatedAt)

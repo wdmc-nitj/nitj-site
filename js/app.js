@@ -6,6 +6,7 @@ import {
   newsCardsScroll,
   publicationCardsScroll,
 } from './utils/app/scrollUtils.js'
+import notificationTabs from './utils/app/tabUits.js'
 
 window.onscroll = navbarUtil
 
@@ -18,23 +19,9 @@ function openDropdown() {
   }
 }
 
-// Slide Cards on Scroll
-function slideCards(e, direction) {
-  // var container = document.getElementById('cards')
-  const container = e.parentNode.querySelector('div')
-  scrollCompleted = 0
-  var slideVar = setInterval(function () {
-    if (direction == 'left') {
-      container.scrollLeft -= container.clientWidth
-    } else {
-      container.scrollLeft += container.clientWidth
-    }
-    scrollCompleted += 100
-    if (scrollCompleted >= 1000) {
-      window.clearInterval(slideVar)
-    }
-  }, 2)
-}
+// document.getElementById("nitj-numbers").addEventListener('click', ()=>{
+//   window.location.replace('https://placement-q1bq.onrender.com/')
+// })
 
 document
   .getElementById('nav-search-btn')
@@ -81,35 +68,14 @@ const openCourse = (e) => {
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
 
-let tablinks = document.getElementsByClassName('notif-link')
+const tabLinks = document.getElementsByClassName('notif-link')
 
-for (let tab of tablinks) {
-  tab.addEventListener('click', () => {
-    notificationTabs(tab)
+for (const link of tabLinks) {
+  link.addEventListener('click', () => {
+    console.log(link)
+    notificationTabs(link)
   })
 }
-
-const notificationTabs = (e) => {
-  let tabcontent = document.getElementsByClassName('notice-content')
-  let tablinks = document.getElementsByClassName('notif-link')
-
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.add('hidden')
-  }
-
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
-    tablinks[i].classList.remove(
-      'bg-blue-100',
-      'text-accent',
-      'hover:bg-blue-200'
-    )
-  }
-  e.classList.remove('hover:bg-blue-50', 'text-slate-400')
-  e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-  document.getElementById(e.dataset.notif).classList.remove('hidden')
-}
-
 // ///////////////////////////
 // Image Slider Animation::
 
