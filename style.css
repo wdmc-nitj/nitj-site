@@ -857,14 +857,14 @@ sup {
   margin-bottom: 1rem;
 }
 
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .my-8 {
@@ -1075,6 +1075,14 @@ sup {
   margin-top: 100px;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -1123,12 +1131,16 @@ sup {
   margin-left: 3%;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .ml-\[6\%\] {
   margin-left: 6%;
+}
+
+.ml-\[4\%\] {
+  margin-left: 4%;
+}
+
+.-mt-7 {
+  margin-top: -1.75rem;
 }
 
 .mt-\[11\%\] {
@@ -1279,10 +1291,6 @@ sup {
   margin-top: 2.75rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
 .block {
   display: block;
 }
@@ -1321,10 +1329,6 @@ sup {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .h-full {
@@ -1547,10 +1551,6 @@ sup {
   width: 1.5rem;
 }
 
-.w-20 {
-  width: 5rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1663,6 +1663,10 @@ sup {
 
 .w-\[80\] {
   width: 80;
+}
+
+.w-\[30\%\] {
+  width: 30%;
 }
 
 .w-\[15\%\] {
@@ -3147,6 +3151,10 @@ sup {
   font-size: 40px;
 }
 
+.text-\[45px\] {
+  font-size: 45px;
+}
+
 .text-\[14px\] {
   font-size: 14px;
 }
@@ -3165,10 +3173,6 @@ sup {
 
 .text-\[1rem\] {
   font-size: 1rem;
-}
-
-.text-\[45px\] {
-  font-size: 45px;
 }
 
 .text-\[32px\] {
@@ -3459,8 +3463,17 @@ sup {
           text-decoration-color: hsla(201, 96%, 32%);
 }
 
+.decoration-\[\#0369a0\] {
+  -webkit-text-decoration-color: #0369a0;
+          text-decoration-color: #0369a0;
+}
+
 .decoration-0 {
   text-decoration-thickness: 0px;
+}
+
+.decoration-4 {
+  text-decoration-thickness: 4px;
 }
 
 .underline-offset-\[12px\] {
@@ -3471,12 +3484,12 @@ sup {
   text-underline-offset: 4px;
 }
 
-.opacity-60 {
-  opacity: 0.6;
+.underline-offset-8 {
+  text-underline-offset: 8px;
 }
 
-.opacity-100 {
-  opacity: 1;
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .opacity-90 {
@@ -4415,20 +4428,12 @@ sup {
     line-height: 2.5rem;
   }
 
-  .sm\:text-\[30px\] {
-    font-size: 30px;
-  }
-
-  .sm\:text-\[35px\] {
-    font-size: 35px;
-  }
-
   .sm\:text-\[14px\] {
     font-size: 14px;
   }
 
-  .sm\:text-\[50px\] {
-    font-size: 50px;
+  .sm\:text-\[30px\] {
+    font-size: 30px;
   }
 
   .sm\:hover\:h-10:hover {
@@ -4468,6 +4473,11 @@ sup {
   .md\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .md\:mr-6 {
@@ -4520,6 +4530,10 @@ sup {
 
   .md\:w-\[65\%\] {
     width: 65%;
+  }
+
+  .md\:w-\[45\%\] {
+    width: 45%;
   }
 
   .md\:w-\[330px\] {
@@ -5236,12 +5250,12 @@ sup {
     font-size: 2em;
   }
 
-  .lg\:text-\[88px\] {
-    font-size: 88px;
+  .lg\:text-\[64px\] {
+    font-size: 64px;
   }
 
-  .lg\:text-\[60px\] {
-    font-size: 60px;
+  .lg\:text-\[88px\] {
+    font-size: 88px;
   }
 
   .lg\:text-\[26px\] {
@@ -5255,6 +5269,10 @@ sup {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:text-\[60px\] {
+    font-size: 60px;
   }
 
   .lg\:leading-\[35px\] {
