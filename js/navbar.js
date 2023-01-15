@@ -152,6 +152,6 @@ function navbarhelper(array,dropdown){
   
   array[1] ? prevCol.appendChild(col) : prevCol = bigCol
 
-    dropdown.appendChild(bigCol)
+  array[1] ? 0 : dropdown.appendChild(bigCol)
   
 }

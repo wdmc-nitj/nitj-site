@@ -87,19 +87,20 @@
 </head>
 
 <body>
+
     <script src="../common template/header.js"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
-        <div>
-            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
                 <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Director</p>
             </div>
-            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center">
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
                     <li class="inline-flex items-center">
-                        <a href=""
-                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
                         </a>
                     </li>
                     <li aria-current="page">
@@ -112,58 +113,65 @@
                 </ol>
             </nav>
         </div>
-
-        <div class="flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+        <!-- <p> Code by Bhavya Mittal </p> -->
+        <div class="container flex flex-col md:flex-row gap-[32px] md:gap-[64px] mb-8">
             <div class="lg:basis-1/3 flex items-center">
-                <img src="img/Director___NITJ.png" alt="">
+                <div id="image"></div>
             </div>
             <div class="lg:basis-2/3">
                 <div class="flex flex-col items-start">
-                    <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">Prof. Binod Kumar
-                        Kanaujia</p>
+                    <div id="name"> </div>
                     <p class="text-gray-400 text-[12px] lg:text-[16px]">Director, Dr. B R Ambedkar National Institute of
                         Technology, Jalandhar</p>
                     <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
+                    <div class="w-[100%] flex flex-col gap-[4px] text-sm md:text-lg">
                         <div class="flex flex-row">
                             <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                             <p class="">: &nbsp; &nbsp;</p>
-                            <p>director@nitj.ac.in</p>
+                            <div id="email"> </div>
+                            <!-- <p>director@nitj.ac.in</p> -->
                         </div>
                         <div class="flex flex-row">
                             <p class="basis-3/12 md:basis-1/12 font-semibold">Tel No.</p>
                             <p class="">: &nbsp; &nbsp;</p>
-                            <p>+91-181-2690802 (O)</p>
+                            <div id="telno"> </div>
+                            <!-- <p>+91-181-2690802 (O)</p> -->
                         </div>
                         <div class="flex flex-row">
                             <p class="basis-3/12 md:basis-1/12 font-semibold text-justify">EPABX</p>
                             <p class="">: &nbsp; &nbsp;</p>
-                            <p> +91-181-2690301,2690453</p>
+                            <div id="epabx"> </div>
+                            <!-- <p> +91-181-2690301,2690453</p> -->
                         </div>
                         <div class="flex flex-row">
                             <p class="basis-3/12 md:basis-1/12 font-semibold">Extn.</p>
                             <p class="">: &nbsp; &nbsp;</p>
-                            <p>1000 (O), 1002 (PA)</p>
+                            <div id="extn"> </div>
+                            <!-- <p>1000 (O), 1002 (PA)</p> -->
                         </div>
                         <div class="flex flex-row">
                             <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                             <p class="">: &nbsp; &nbsp;</p>
-                            <p>+91-181-2690932</p>
+                            <div id="fax"> </div>
+                            <!-- <p>+91-181-2690932</p> -->
                         </div>
                     </div>
                     <div class="mt-4 lg:mt-8">
-                        <a class="hover:bg-black hover:shadow-lg px-4 py-2 border-2 text-accent hover:text-white transition ease-in-out duration-300" href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/214">View profile →</a>
+                        <a
+                            class="text-sm md:text-md hover:bg-accent hover:shadow-lg px-3 lg:px-4 py-2 lg:py-2 border-2 border-accent text-accent hover:text-white transition ease-in-out duration-300">View
+                            profile →</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col items-start px-4 lg:px-[11%] gap-[20px] lg:gap-[48px]">
-            <div class="w-full flex flex-col items-start">
-                <p class="font2 font-medium text-[28px] lg:text-[44px]">Message</p>
-                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+        <div class="flex flex-col items-start px-4 lg:px-[11%] gap-[20px]">
+            <div class="w-full flex flex-col items-start lg:gap-[8px]">
+                <p class="font2 font-medium text-lg lg:text-[28px]">Message</p>
+                <div class="bg-accent w-full lg:w-[52px] h-[1px] lg:h-[5px]"></div>
             </div>
-            <p class="text-gray-800 lg:text-[21px] lg:leading-[35px] text-justify">
+            <div id="message"></div>
+            <!-- <p class="text-gray-800 lg:text-[21px] lg:leading-[35px] text-justify">
                 It is a privilege to lead Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar, one of
                 the national accolades and an outstanding institution of higher learning. NIT Jalandhar is ranked 49th
                 in the National Institutional Ranking Framework (NIRF), Band-Excellent in the Atal Ranking of
@@ -200,11 +208,41 @@
                 Wish you all the best.
                 <br> <br>
                 <span class="font-semibold">Prof. Binod Kumar Kanaujia</span>
-            </p>
+            </p> -->
+            <div id="name1"></div>
         </div>
 
     </div>
+    <script>
+        async function callAPi() {
+            let result = await fetch('https://wdmc.onrender.com/administration/6398228ae58d544e4a46ff34');
+            result = await result.json();
+            console.log(result);
+            document.getElementById("name").innerHTML =
+                `<p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
+         `
 
+            document.getElementById("email").innerHTML =
+                `<p>${result[0].contact.Email}</p>
+         `
+            document.getElementById("telno").innerHTML =
+                `<p>${result[0].contact["Tel No."]}</p>`
+            document.getElementById("epabx").innerHTML =
+                `<p>${result[0].contact.EPABX}</p>`
+            document.getElementById("extn").innerHTML =
+                `<p>${result[0].contact["Extn."]}</p> `
+            document.getElementById("fax").innerHTML =
+                `<p>${result[0].contact.Fax}</p>`
+            document.getElementById("message").innerHTML =
+                ` <p class="text-gray-800 lg:text-[21px] lg:leading-[35px] text-justify">${result[0].messageText}</p>`
+            document.getElementById("name1").innerHTML =
+                ` <span class="font-semibold">${result[0].name}</span>`
+            document.getElementById("image").innerHTML =
+                ` <img src="${result[0].image}" alt="">`
+            // img/Director___NITJ.png
+        }
+        callAPi()
+    </script>
 
     <script src="app.js"></script>
     <script src="../common template/footer.js"></script>

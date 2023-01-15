@@ -188,16 +188,16 @@
     <script src="../common template/header.js"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
-        <div>
-            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">About</p>
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- <p> Code by Bhavya Mittal </p> -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">About Us</p>
             </div>
-            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center">
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
                     <li class="inline-flex items-center">
-                        <a href=""
-                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
                         </a>
                     </li>
                     <li aria-current="page">
@@ -210,8 +210,8 @@
                 </ol>
             </nav>
         </div>
-
-        <div class="flex flex-col items-start px-4 lg:px-[11%] gap-[20px] lg:gap-[16px]">
+        <!-- <p> Code by Bhavya Mittal </p> -->
+        <div class="container flex flex-col items-start gap-[20px] lg:gap-[16px]">
             <div class="w-full flex flex-col items-start">
                 <p class="font2 font-medium text-[28px] lg:text-[32px]">Introduction</p>
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
@@ -237,7 +237,7 @@
                 Sciences.
             </p>
         </div>
-        <div id="vision-mission" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start px-4 lg:px-[11%]">
+        <div id="vision-mission" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start container">
             <div class="basis-1/3 flex flex-col items-start gap-[20px] lg:gap-[16px]">
                 <div class="w-full flex flex-col items-start">
                     <p class="font2 font-medium text-[28px] lg:text-[32px] ">Vision</p>
@@ -268,7 +268,7 @@
             </div>
         </div>
 
-        <div id="quality-policy" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start px-4 lg:px-[11%]">
+        <div id="quality-policy" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start container">
             <div class="basis-1/3 flex flex-col items-start gap-[28px] lg:gap-[32px]">
                 <div class="w-full flex flex-col items-start">
                     <p class="font2 font-medium text-[28px] lg:text-[32px]">Rankings</p>
@@ -287,7 +287,7 @@
                     <p class="font-medium text-[18px] lg:text-[18px]">TIMES ENGINEERING 2022</p>
                 </div>
                 <div>
-                    <a class="text-accent">View all rankings <span class="text-black"> →</span></a>
+                    <a href="ranking.html" class="text-accent">View all rankings <span class="text-black"> →</span></a>
                 </div>
             </div>
             <div class="basis-2/3 flex flex-col items-start gap-[20px] lg:gap-[16px] mt-12 lg:pl-[80px] lg:mt-0">
@@ -307,7 +307,7 @@
         </div>
 
         <div class="lg:hidden">
-            <div class="flex flex-col items-start px-4 lg:px-[11%] lg:py-[64px] lg:gap-[48px]">
+            <div class="flex flex-col items-start container lg:py-[64px] lg:gap-[48px]">
                 <div
                     class="w-[100%] flex flex-col lg:flex-row justify-between items-center lg:items-start gap-[24px] lg:gap-[64px]">
                     <div class="basis-1/2 flex flex-row gap-[16px] lg:gap-[64px]">
@@ -323,7 +323,8 @@
                             class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-building-columns text-[1.5em] lg:text-[2em]"></i>
                             <a href="https://dev-bhavya.github.io/nitj/governors.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">GOVERNING
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    GOVERNING
                                     BODIES</p>
                             </a>
                         </div>
@@ -333,16 +334,17 @@
                             class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-circle-nodes text-[1.5em] lg:text-[2em]"></i>
                             <a href="https://dev-bhavya.github.io/nitj/e-cell.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">CELLS</p>
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">CELLS
+                                </p>
                             </a>
                         </div>
                         <div
-                                class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
-                                <i class="fa-solid fa-id-card-clip text-[1.5em] lg:text-[2em]"></i>
-                                <a href="https://dev-bhavya.github.io/nitj/committees.html">
-                                    <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
-                                        COMMITTEES</p>
-                                </a>
+                            class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
+                            <i class="fa-solid fa-id-card-clip text-[1.5em] lg:text-[2em]"></i>
+                            <a href="https://dev-bhavya.github.io/nitj/committees.html">
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    COMMITTEES</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -350,7 +352,7 @@
         </div>
 
         <div class="hidden lg:block">
-            <div class="flex flex-col items-start px-4 lg:px-[11%] lg:py-[64px] lg:gap-[48px]">
+            <div class="flex flex-col items-start container lg:py-[64px] lg:gap-[48px]">
                 <div class="w-[100%] flex flex-col lg:flex-row justify-between items-center gap-[48px]">
                     <div class="basis-1/2 flex flex-row justify-between gap-[48px]">
                         <div
@@ -365,7 +367,8 @@
                             class="py-[6%] px-[10%] basis-1/2 tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-building-columns text-[1.5em] lg:text-[2em]"></i>
                             <a href="https://dev-bhavya.github.io/nitj/governors.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">GOVERNING
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    GOVERNING
                                     BODIES</p>
                             </a>
                         </div>
@@ -375,7 +378,8 @@
                             class="py-[6%] px-[10%] basis-1/2 tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-circle-nodes text-[1.5em] lg:text-[2em]"></i>
                             <a href="https://dev-bhavya.github.io/nitj/e-cell.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">CELLS<br>
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    CELLS<br>
                                     &nbsp;</p>
                             </a>
                         </div>
@@ -392,7 +396,8 @@
             </div>
         </div>
 
-        <div id="history" class="scroll-mt-32 flex flex-col items-start px-4 lg:px-[11%] gap-[20px] lg:gap-[16px] lg:text-[32px]">
+        <div id="history"
+            class="scroll-mt-32 flex flex-col items-start container gap-[20px] lg:gap-[16px] lg:text-[32px]">
             <div class="w-full flex flex-col items-start">
                 <p class="font2 font-medium text-[28px] lg:text-[32px]">Institute History</p>
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
@@ -433,7 +438,7 @@
             </p>
         </div>
 
-        <div class="px-4 lg:px-[11%]">
+        <div class="container">
             <div class="container flex h-[22vh] w-full">
                 <div class="box">
                     <img src="img/ci/CI (1).jpg" />
@@ -442,7 +447,7 @@
                     <img src="img/ci/CI (2).jpg" />
                 </div>
                 <div class="box hidden lg:block">
-                    <img src="img/ci/CI (3).jpg"/>
+                    <img src="img/ci/CI (3).jpg" />
                 </div>
                 <div class="box hidden lg:block">
                     <img src="img/ci/CI (4).jpg" />
@@ -510,7 +515,7 @@
             </div> -->
         </div>
 
-        <div class="hidden lg:block timeline px-4 lg:px-[11%]">
+        <div class="hidden lg:block timeline container">
             <div class="w-full flex flex-col items-start pb-[16px]">
                 <p class="font2 font-medium lg:text-[32px]">Timeline</p>
                 <div class="bg-accent lg:w-[111px] h-[3px]"></div>

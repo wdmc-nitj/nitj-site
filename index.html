@@ -219,7 +219,7 @@
                   ">
                 badge
               </span>
-              <a href="" class="hidden sm:block pl-1.5 text-xs">Placements</a>
+              <a href="https://placement-q1bq.onrender.com/" class="hidden sm:block pl-1.5 text-xs">Placements</a>
             </div>
             <div class="flex items-center">
               <span class="material-symbols-outlined" style="
@@ -345,9 +345,9 @@
             </a>
           </div>
           <div class="sm:hidden block">
-            <button type="button"
+            <button type="button" id="nav-search-btn"
               class="block material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border sm:hover:h-10 sm:hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
-              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search" onclick="showSearchPage(event)">
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search">
               search
             </button>
           </div>
@@ -1300,10 +1300,9 @@
                 </div>
               </div>
               <div class="flex basis-1/5 flex-row justify-center">
-                <button type="button"
+                <button type="button" id="nav-search-btn-v2"
                   class="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
-                  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
-                  onclick="showSearchPage(event)">
+                  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search">
                   search
                 </button>
               </div>
@@ -1315,9 +1314,9 @@
     <!-- NAV BAR ends-->
   </header>
   <!-- === Search bar starts === -->
-  <div id="search_page" class="absolute top-0 z-50 hidden h-full w-full content-center bg-transparent backdrop-blur-2xl"
-    onclick="showSearchPage(event)">
-    <form id="search_form" onclick="showSearchPage(event)">
+  <div id="search_page"
+    class="absolute top-0 z-50 hidden h-full w-full content-center bg-transparent backdrop-blur-2xl">
+    <form id="search_form">
       <div class="flex px-28">
         <label for="search-dropdown" class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
           Email</label>
@@ -1397,8 +1396,8 @@
           <div
             class="main-slider-text transition-all uppercase font-bold text-white max-w-lg text-4xl sm:text-5xl lg:text-6xl text-center">
             <h2>THE PLACE OF <br> TRANSFORMATION</h2>
-            <h2>78<sup>th</sup> IN OVERALL <br> NIRF RANKING</h2>
-            <h2>49<sup>th</sup> IN <br> ENGINEERING NIRF</h2>
+            <h2>85<sup>th</sup> IN OVERALL <br> NIRF RANKING</h2>
+            <h2>52<sup>nd</sup> IN <br> ENGINEERING NIRF</h2>
           </div>
         </div>
 
@@ -1492,12 +1491,14 @@
         <!-- Cards -->
         <div class="flex flex-row relative">
           <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
-            onclick="slideCards(this, 'left')"></i>
+          onclick="slideCards(this,'left')"
+            ></i>
           <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth h-[27rem]">
             <!-- Data from API -->
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
-            onclick="slideCards(this, 'right')"></i>
+          onclick="slideCards(this,'right')"
+            ></i>
         </div>
         <div class="flex items-end w-fit">
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/template/index.html?id=0?category=latestEvent">
@@ -1932,25 +1933,29 @@
   </div>
 
   <!-- Institute in Numbers section -->
-  <section id="nitj-numbers"
-    class="my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
-    <div class="bg-dark-purple/70">
-      <div
-        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
-        <h1 class="text-5xl font-bold uppercase text-white">
-          #numbers <br />
-          <span style="
-                -webkit-text-stroke: 1px #ffffff !important;
-                -webkit-text-fill-color: transparent;
-              " class="inline-block">that prove</span>
-          NITJ
-        </h1>
-        <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
-          <!-- Data From API -->
+  <a href="https://placement-q1bq.onrender.com/
+  
+  ">
+    <section id="nitj-numbers"
+      class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+      <div class="bg-dark-purple/70">
+        <div
+          class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+          <h1 class="text-5xl font-bold uppercase text-white">
+            #numbers <br />
+            <span style="
+                  -webkit-text-stroke: 1px #ffffff !important;
+                  -webkit-text-fill-color: transparent;
+                " class="inline-block">that prove</span>
+            NITJ
+          </h1>
+          <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
+            <!-- Data From API -->
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </a>
   <!-- === Research Section Starts === -->
 
   <div id="research" class="my-20 scroll-mt-32">
@@ -1986,9 +1991,7 @@
 
       <div id="testimonial"
         class="md:col-start-1 md:col-end-3 md:row-start-3 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 gap-5 ring-accent">
-        <img src="./public/assets/images/Testimonial DP.png" alt="DP" class="object-cover rounded-lg h-28 w-28" />
-        <!-- Data from backend -->
-        <!-- TODO : add a loading state -->
+        <!-- Data from API -->
       </div>
       <div id="publications"
         class="md:col-start-3 md:col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg">
@@ -2070,7 +2073,7 @@
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
                   <div class="w-2/5 bg-[url(./public/assets/images/DSC_Logo.svg)] bg-cover bg-center bg-no-repeat">
                   </div>
-                  <div class="flex flex-col p-6 w-3/5">
+                  <div class="flex flex-col p-6 w-full sm:w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
                       <h4 class="text-2xl font-bold uppercase">DSC NITJ</h4>
                       <div
@@ -2096,7 +2099,7 @@
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
                   <div class="w-2/5 bg-[url(./public/assets/images/rtist_logo.png)] bg-cover bg-center bg-no-repeat">
                   </div>
-                  <div class="flex flex-col p-6 w-3/5">
+                  <div class="flex flex-col p-6 w-full sm:w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
                       <h4 class="text-2xl font-bold uppercase">RTist</h4>
                       <div
@@ -2122,7 +2125,7 @@
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
                   <div class="w-2/5 bg-[url(./public/assets/images/DSC_Logo.svg)] bg-cover bg-center bg-no-repeat">
                   </div>
-                  <div class="flex flex-col p-6 w-3/5">
+                  <div class="flex flex-col p-6 w-full sm:w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
                       <h4 class="text-2xl font-bold uppercase">Criminalz Crew</h4>
                       <div
@@ -2146,7 +2149,7 @@
                   <div
                     class="w-2/5 bg-[url(./public/assets/images/mediacell_logo.png)] bg-cover bg-center bg-no-repeat">
                   </div>
-                  <div class="flex flex-col p-6 w-3/5">
+                  <div class="flex flex-col p-6 w-full sm:w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
                       <h4 class="text-2xl font-bold uppercase">Mediacell</h4>
                       <div
@@ -2392,6 +2395,22 @@
     // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     //   return new Tooltip(tooltipTriggerEl);
     // });
+    function slideCards(e, direction) {
+  // var container = document.getElementById('cards')
+  const container = e.parentNode.querySelector('div')
+  scrollCompleted = 0
+  var slideVar = setInterval(function () {
+    if (direction == 'left') {
+      container.scrollLeft -= container.clientWidth
+    } else {
+      container.scrollLeft += container.clientWidth
+    }
+    scrollCompleted += 100
+    if (scrollCompleted >= 1000) {
+      window.clearInterval(slideVar)
+    }
+  }, 2)
+}
   </script>
 
   <script type="module" src="/js/app.js"></script>

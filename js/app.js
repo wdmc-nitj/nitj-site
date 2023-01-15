@@ -19,24 +19,22 @@ function openDropdown() {
   }
 }
 
-// Slide Cards on Scroll
-function slideCards(e, direction) {
-  // var container = document.getElementById('cards')
-  const container = e.parentNode.querySelector('div')
-  scrollCompleted = 0
-  var slideVar = setInterval(function () {
-    if (direction == 'left') {
-      container.scrollLeft -= container.clientWidth
-    } else {
-      container.scrollLeft += container.clientWidth
-    }
-    scrollCompleted += 100
-    if (scrollCompleted >= 1000) {
-      window.clearInterval(slideVar)
-    }
-  }, 2)
-}
+// document.getElementById("nitj-numbers").addEventListener('click', ()=>{
+//   window.location.replace('https://placement-q1bq.onrender.com/')
+// })
 
+document
+  .getElementById('nav-search-btn')
+  .addEventListener('click', (e) => showSearchPage(e))
+document
+  .getElementById('nav-search-btn-v2')
+  .addEventListener('click', (e) => showSearchPage(e))
+document
+  .getElementById('search_page')
+  .addEventListener('click', (e) => showSearchPage(e))
+document
+  .getElementById('search_form')
+  .addEventListener('click', (e) => showSearchPage(e))
 function showSearchPage(event) {
   if (event.target.id == 'search_form') {
     return
@@ -69,27 +67,6 @@ const openCourse = (e) => {
   e.classList.add('bg-accent', 'text-white')
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
-
-// function notificationTabs(e) {
-//   let tabcontent = document.getElementsByClassName('notice-content')
-//   let tablinks = document.getElementsByClassName('notif-link')
-
-//   for (let i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].classList.add('hidden')
-//   }
-
-//   for (let i = 0; i < tablinks.length; i++) {
-//     tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
-//     tablinks[i].classList.remove(
-//       'bg-blue-100',
-//       'text-accent',
-//       'hover:bg-blue-200'
-//     )
-//   }
-//   e.classList.remove('hover:bg-blue-50', 'text-slate-400')
-//   e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-//   document.getElementById(e.dataset.notif).classList.remove('hidden')
-// }
 
 const tabLinks = document.getElementsByClassName('notif-link')
 
