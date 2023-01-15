@@ -16,7 +16,7 @@ async function createNav(obj){
   const dropdown1 = document.createElement('div')
       dropdown1.setAttribute(
         'class',
-        'absolute mt-0.5 hidden gap-5 bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden gap-5 bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown1.setAttribute('id','drop-down')
       dropdown1.innerHTML = ``
@@ -31,7 +31,7 @@ async function createNav(obj){
   const dropdown2 = document.createElement('div')
       dropdown2.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-28 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-28 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown2.setAttribute('id','drop-down')
       dropdown2.innerHTML = ``
@@ -46,7 +46,7 @@ async function createNav(obj){
   const dropdown3 = document.createElement('div')
       dropdown3.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-1/3 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-1/3 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown3.setAttribute('id','drop-down')
       dropdown3.innerHTML = ``
@@ -61,7 +61,7 @@ async function createNav(obj){
   const dropdown4 = document.createElement('div')
       dropdown4.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown4.setAttribute('id','drop-down')
       dropdown4.innerHTML = ``
@@ -76,7 +76,7 @@ async function createNav(obj){
   const dropdown5 = document.createElement('div')
       dropdown5.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown5.setAttribute('id','drop-down')
       dropdown5.innerHTML = ``
@@ -91,7 +91,7 @@ async function createNav(obj){
   const dropdown6 = document.createElement('div')
       dropdown6.setAttribute(
         'class',
-        'absolute mt-0.5 hidden gap-5 self-center  bg-white p-5 text-sm shadow-sm group-hover:flex right-0'
+        'absolute hidden gap-5 self-center  bg-white p-5 text-sm shadow-sm group-hover:flex right-0'
       )
       dropdown6.setAttribute('id','drop-down')
       dropdown6.innerHTML = ``
