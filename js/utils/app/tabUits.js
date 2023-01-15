@@ -7,7 +7,7 @@ export default async function notificationTabs(e) {
   for (let i = 0; i < tabcontent.length; i++) {
     tabcontent[i].classList.add('hidden')
   }
-  fetchTabContent(k)
+  // fetchTabContent(k)
   for (let i = 0; i < tablinks.length; i++) {
     tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
     tablinks[i].classList.remove(
