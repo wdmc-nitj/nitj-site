@@ -26,4 +26,4 @@ const frame = document.getElementById('main-frame')
 
 document.title = `${dict[dept]} Department | NIT Jalandhar`
 
-frame.setAttribute('src', `https://nitjdeptfrontend.onrender.com/${dept}/Home`)
+frame.setAttribute('src', `http://nitjintranet.ac.in:8081/${dept}/Home`)
