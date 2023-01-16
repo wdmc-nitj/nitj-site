@@ -6,8 +6,6 @@ import {
   normalCaseMaker,
 } from './utils/routingUtils.js'
 
-const baseURL = 'https://wdmc.onrender.com'
-
 const [id, category] = getParams()
 
 //   Putting Category in the page
@@ -21,7 +19,7 @@ const dateDiv = document.getElementById('date')
 if (parseInt(id) === 0) {
   titleDiv.innerHTML = 'All ' + normalCaseMaker(category)
   const list = document.getElementById('list')
-  fetch(`${baseURL}/${category}/get/all`)
+  fetch(`https://wdmc.onrender.com/${category}/get/all`)
     .then((response) => response.json())
     .then((data) => {
       data.forEach((e) => {
@@ -42,11 +40,18 @@ if (parseInt(id) === 0) {
       console.log(err)
     })
 } else {
-  fetch(`${baseURL}/${category}?id=${id}`)
+  fetch(`https://wdmc.onrender.com/${category}?id=${id}`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
-      titleDiv.innerHTML = data[0].title
+      let title=data[0].title;
+
+      if(title===undefined) title=category;
+      
+      else title=data[0].title;
+      
+      titleDiv.innerHTML = title.charAt(0).toUpperCase() + title.slice(1);
+
       if (data[0].desc) desp.innerHTML = data[0].desc
       dateDiv.innerHTML = dateManipulator(data[0].updatedAt)
       if (data[0].image)
