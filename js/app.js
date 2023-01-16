@@ -90,8 +90,11 @@ const openCourse = (e) => {
 //   e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
 //   document.getElementById(e.dataset.notif).classList.remove('hidden')
 // }
-
 const tabLinks = document.getElementsByClassName('notif-link')
+
+window.addEventListener('load', () => {
+  notificationTabs(tabLinks[0])
+})
 
 for (const link of tabLinks) {
   link.addEventListener('click', () => {

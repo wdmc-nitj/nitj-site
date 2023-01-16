@@ -260,18 +260,21 @@ fetch('https://wdmc.onrender.com/administration/get/all')
 fetch('https://wdmc.onrender.com/ranking/get/all')
   .then((response) => response.json())
   .then((data) => {
-    const statsData = data[0].Ranking
-    const element = document.getElementById('placement-stats')
+    console.log(data)
 
-    for (const metric in statsData) {
+    const element = document.getElementById('placement-stats')
+    data.forEach((e) => {
+      const rankings = e.Ranking
       const stat = document.createElement('div')
       stat.setAttribute('class', 'number')
-      stat.innerHTML = `
-      <h1 class="text-5xl font-bold uppercase">${statsData[metric]}</h1>
+      for (let metric in rankings) {
+        stat.innerHTML = `
+      <h1 class="text-5xl font-bold uppercase">${rankings[metric]}</h1>
       <p class="text-lg uppercase">${metric}</p>
       `
+      }
       element.appendChild(stat)
-    }
+    })
   })
 
 fetch('https://wdmc.onrender.com/publication/get/all')
