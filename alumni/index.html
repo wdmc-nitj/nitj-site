@@ -23,15 +23,17 @@
     <title>Alumni Page</title>
   <script type="module" crossorigin src="index.74d163d3.js"></script>
   <link rel="stylesheet" href="index.c96f9c98.css">
+  <!-- <link rel="stylesheet" href="/style.css"> -->
 </head>
 <body>
 
+  
 <!--NAVBAR BEGINS-->
   <nav class="bg-[#3E3C3C] lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
-    <div class="flex justify-around p-1 items-center  ">
+    <div class="flex justify-around p-1 items-center">
         <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
           src="logo.9b9f200a.png" alt="logo">
-          <div class="text-xs sm:text-base w-[17.5rem] lg:w-[19rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-white  cursor-pointer"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</div>
+          <div class="text-xs sm:text-base w-[17.5rem] lg:w-[19rem] h-[2.375rem] my-4 sm:my-5 ml-3 leading-5 text-white cursor-pointer"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</div>
     
       <span class="text-3xl cursor-pointer text-white mx-2 mr-3 lg:hidden block">
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
@@ -43,13 +45,13 @@
         <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
       </li>
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">EVENTS</a>
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500">EVENTS</a>
       </li>
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
         <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
       </li>
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">NEWS</a>
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500">NEWS</a>
       </li>
 
       <a href="register.html">
@@ -111,7 +113,7 @@
 
 
 <!--Student alumini relation box starts-->
-<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] rounded-xl mx-auto top-[-10rem] z-40 relative shadow-xl shadow-gray-700">
+<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] rounded-xl mx-auto top-[-10rem] z-20 relative shadow-xl shadow-gray-700">
 
   <h2 class="font-bold text-base sm:text-lg lg:text-2xl my-3 sm:my-5 text-black text-center font-sans">STUDENT ALUMNI RELATIONS CELL (SARC NITJ)</h2>
 
@@ -249,7 +251,7 @@
 
 
 
-<div id="default-carousel" class="relative container mx-auto" data-carousel="static">
+<div id="default-carousel" class="relative container mx-auto mb-24" data-carousel="static">
   <!-- Carousel wrapper -->
   <div class="relative h-[30rem] overflow-hidden rounded-md lg:h-[50rem]">
     <!-- Item 1 -->
@@ -463,7 +465,7 @@
 
 
 <!-- === FOOTER Starts === -->
-<div class="flex flex-col justify-between bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
+<!-- <div class="flex flex-col justify-between bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
   <div class="flex basis-1/3 flex-col border-y-gray-300 p-[25px] lg:border-r lg:border-zinc-400">
     <div class="flex flex-row items-center gap-x-[10px] pb-3">
       <img src="logo.9b9f200a.png" alt="NITJ logo" class="h-[67px] w-[67px]" />
@@ -582,7 +584,7 @@
     |
     <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">Credits</a>
   </div>
-</div>
+</div> -->
 <!-- === FOOTER Ends === -->
 
 
@@ -598,6 +600,9 @@
       e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
     }
   </script>
+
+<!-- <script type="module" src="../common template/header.js"></script> -->
+<script src="../common template/footer.js"></script>
 
 
 
