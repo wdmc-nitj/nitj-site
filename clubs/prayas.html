@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon and title -->
+    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
+    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+    <!-- RESEARCH -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <style>
+        body {
+            scrollbar-color: #fff #fff;
+        }
+
+        /* Customizing the Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(30, 58, 138, 1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: gray;
+        }
+
+        ::-webkit-resizer {
+            background-color: #ffffff;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: gray;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #212121;
+        }
+
+        /* Gallery Effects */
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            line-height: 0;
+        }
+
+        .box>img {
+            width: 100%;
+            height: 100%;
+            border: 0.2rem solid white;
+            border-radius: 8px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            transition: ease 0.75s;
+        }
+
+        .box:hover {
+            flex: 1 1 30%;
+            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .box:hover>img {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .base-image {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            mask-image: linear-gradient(0deg, white, transparent);
+            -webkit-mask-image: linear-gradient(0deg, white, transparent);
+            background-color: #cccccc;
+            height: 400px;
+            background-position: 0% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .base-image-2 {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            background-color: #cccccc;
+            height: 300px;
+            background-position: 58% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-shadow {
+            text-shadow: rgb(0 0 0) 6px -1px 5px;
+        }
+
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.9s ease-in-out;
+            transition: opacity 1s ease-in-out 0.2s;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3,
+        #carousel-4:checked~.control-4 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="font-body text-dark-purple">
+  <script src="../common template/header.js"></script>
+
+
+
+    <div class="h-auto block  ">
+        <div class="flex md:flex-row justify-center flex-col mt-20 py-20">
+            <div class="w-12/12 md:w-5/12 px-2">
+                <img src="https://images.tribuneindia.com/cms/gall_content/2018/4/2018_4$largeimg04_Wednesday_2018_005511122.jpg"
+                    alt="">
+            </div>
+            <div class="w-12/12 md:w-5/12 px-2">
+                <div class="ml-0  md:ml-10">
+                    <h1 class="text-2xl mt-10 font-bold">Prayas NITJ</h1>
+                    Greetings from NIT Jalandhar! It gives me an immense pleasure in writing this note for praising the
+                    efforts of Alumni and students for uplifting and educating the underprivileged kids. The effort is
+                    quite novel and it has brought changes in the lives of hundreds of students and their families.
+                    Faculty of NIT Jalandhar along-with staff are mentoring students for this noble cause. I
+                    congratulate them for this. Education is the most powerful weapon that can be used to change the
+                    society. What we sow in these kids today; will be reaped out in the near future. I congratulate the
+                    spirit of the students of PRAYAAS who regularly teach the kids of workers, immigrants and villagers
+                    and shape their future. I remember something Malala Yousafzai said- “One child, one teacher, one
+                    book and one pen CAN change the world.” I am quite sure these PRAYAAS kids would take our beloved
+                    INDIA to greater heights.
+                </div>
+                <div class="mt-4 fl">
+                    <a href="https://www.nitj.ac.in/prayaas/"
+                        class="ml-0 md:ml-10 px-2 rounded-lg mt-6  py-2 bg-blue-500 text-white hover:bg-blue-400">
+                        Prayas Website
+                    </a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+<<<<<<< HEAD
+    </div>
+    <div class="h-auto block border border-red-400 ">
+      <div class="flex md:flex-row justify-center flex-col mt-20 py-20">
+          <div class="w-12/12 md:w-5/12 px-2">
+              <img src="https://media.architecturaldigest.com/photos/57c7003fdc03716f7c8289dd/master/pass/IMG%20Worlds%20of%20Adventure%20-%201.jpg"
+                  alt="">
+          </div>
+          <div class="w-12/12 md:w-5/12 px-2">
+              <div class="ml-0  md:ml-10">
+                  <h1 class="text-2xl mt-10 font-bold">Prayas Club</h1>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magnam quae odit molestiae accusantium
+                  ea a similique praesentium nam dolores sint, libero non vel iure tempora doloremque autem qui omnis.
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, aliquid labore tempore ipsa
+                  fuga nihil quaerat tempora non cumque laudantium eum itaque blanditiis praesentium dolore officia,
+                  nisi placeat assumenda velit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, id
+                  cumque facere nisi odit sit doloremque adipisci. Possimus dolor eligendi aperiam quas rerum saepe
+                  natus numquam. Esse consectetur quisquam est!
+              </div>
+              <div class="mt-4 fl">
+                  <a href="https://www.nitj.ac.in/prayaas/"
+                      class="ml-0 md:ml-10 px-2 rounded-lg mt-6  py-2 bg-blue-500 text-white hover:bg-blue-400">
+                      Prayas Club
+                  </a>
+              </div>
+  
+          </div>
+      </div>
+  </div>
+
+    <div class="flex justify-center my-6">
+        <div class="md:w-9/12 w-ull">
+=======
+        
+        <div class="h-auto block">
+            <div class="flex md:flex-row justify-center flex-col mt-20 py-20">
+                <div class="w-12/12 md:w-5/12 px-2">
+                    <img src="https://media.architecturaldigest.com/photos/57c7003fdc03716f7c8289dd/master/pass/IMG%20Worlds%20of%20Adventure%20-%201.jpg"
+                        alt="">
+                </div>
+                <div class="w-12/12 md:w-5/12 px-2">
+                    <div class="ml-0  md:ml-10">
+                        <h1 class="text-2xl mt-10 font-bold">Prayas Club</h1>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magnam quae odit molestiae accusantium
+                        ea a similique praesentium nam dolores sint, libero non vel iure tempora doloremque autem qui omnis.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, aliquid labore tempore ipsa
+                        fuga nihil quaerat tempora non cumque laudantium eum itaque blanditiis praesentium dolore officia,
+                        nisi placeat assumenda velit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, id
+                        cumque facere nisi odit sit doloremque adipisci. Possimus dolor eligendi aperiam quas rerum saepe
+                        natus numquam. Esse consectetur quisquam est!
+                    </div>
+                    <div class="mt-4 fl">
+                        <a href="https://www.nitj.ac.in/prayaas/"
+                            class="ml-0 md:ml-10 px-2 rounded-lg mt-6  py-2 bg-blue-500 text-white hover:bg-blue-400">
+                            Prayas Club
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex justify-center my-6">
+          <div class="md:w-9/12 w-ull">
+>>>>>>> 5781c79d8afbac9fb28cb047bd980c4686014e7b
+            <div class="container grid grid-cols-3 gap-2 mx-auto">
+              <div class="w-full rounded">
+                <img src="https://www.nitj.ac.in/prayaas/images/pd-17-6.jpg"
+                alt="image">
+                </div>
+                <div class="w-full rounded">
+                    <img src="https://www.nitj.ac.in/prayaas/img/p4.jfif"
+                        alt="image">
+                </div>
+                <div class="w-full rounded">
+                    <img src="https://www.nitj.ac.in/prayaas/img/p5.jfif"
+                    alt="image">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- common template start -->
+            <!--common template End -->
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../common template/footer.js"></script>
+    <!-- === FOOTER Ends === -->
+    <script>
+        var slideIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+                slideIndex = 1;
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 2500);
+        }
+    </script>
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new Tooltip(tooltipTriggerEl);
+        });
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<<<<<<< HEAD
+
+
+ 
+=======
+>>>>>>> 5781c79d8afbac9fb28cb047bd980c4686014e7b
