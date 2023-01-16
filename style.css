@@ -993,6 +993,7 @@ sup {
 
 .mt-64 {
   margin-top: 16rem;
+
 }
 
 .mb-24 {
@@ -1001,6 +1002,10 @@ sup {
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mt-12 {
@@ -1215,16 +1220,16 @@ sup {
   margin-bottom: 8px;
 }
 
-.ml-0 {
-  margin-left: 0px;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
 }
 
 .mb-12 {
   margin-bottom: 3rem;
+}
+
+.ml-0 {
+  margin-left: 0px;
 }
 
 .mt-auto {
@@ -1291,6 +1296,9 @@ sup {
   margin-top: 2.75rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
 .block {
   display: block;
 }
@@ -3171,6 +3179,11 @@ sup {
   font-size: 13px;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-\[1rem\] {
   font-size: 1rem;
 }
@@ -4492,12 +4505,12 @@ sup {
     margin-left: 0px;
   }
 
-  .md\:ml-10 {
-    margin-left: 2.5rem;
-  }
-
   .md\:ml-6 {
     margin-left: 1.5rem;
+  }
+
+  .md\:ml-10 {
+    margin-left: 2.5rem;
   }
 
   .md\:mt-\[-3\%\] {
@@ -4544,18 +4557,13 @@ sup {
     width: 100vw;
   }
 
-  .md\:w-5\/12 {
-    width: 41.666667%;
-  }
-
-  .md\:w-9\/12 {
-    width: 75%;
-  }
-
   .md\:w-7\/12 {
     width: 58.333333%;
   }
 
+  .md\:w-5\/12 {
+    width: 41.666667%;
+  }
   .md\:w-\[100\%\] {
     width: 100%;
   }
@@ -4941,7 +4949,6 @@ sup {
   .lg\:w-\[300px\] {
     width: 300px;
   }
-
   .lg\:w-\[52px\] {
     width: 52px;
   }
@@ -5250,6 +5257,12 @@ sup {
     font-size: 2em;
   }
 
+  .lg\:text-\[88px\] {
+    font-size: 88px;
+  }
+
+  .lg\:text-\[60px\] {
+    font-size: 60px;
   .lg\:text-\[64px\] {
     font-size: 64px;
   }
