@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon and title -->
+    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png" />
+    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+    <!-- RESEARCH -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- Google Fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <script src="/style.css"></script> -->
+    <link rel="stylesheet" href="/style.css">
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <style>
+      body {
+        scrollbar-color: #fff #fff;
+      }
+
+      /* Customizing the Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: gray;
+      }
+
+      ::-webkit-resizer {
+        background-color: #ffffff;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #212121;
+      }
+
+      /* Gallery Effects */
+      .box {
+        flex: 1;
+        overflow: hidden;
+        transition: 0.5s;
+        line-height: 0;
+      }
+
+      .box > img {
+        width: 100%;
+        height: 100%;
+        border: 0.2rem solid white;
+        border-radius: 8px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        transition: ease 0.75s;
+      }
+
+      .box:hover {
+        flex: 1 1 30%;
+        /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .box:hover > img {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
+
+      .base-image {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        mask-image: linear-gradient(0deg, white, transparent);
+        -webkit-mask-image: linear-gradient(0deg, white, transparent);
+        background-color: #cccccc;
+        height: 400px;
+        background-position: 0% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .base-image-2 {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        background-color: #cccccc;
+        height: 300px;
+        background-position: 58% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .main-shadow {
+        text-shadow: rgb(0 0 0) 6px -1px 5px;
+      }
+
+      .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+      }
+
+      .carousel-item {
+        -webkit-transition: opacity 0.9s ease-in-out;
+        transition: opacity 1s ease-in-out 0.2s;
+      }
+
+      #carousel-1:checked ~ .control-1,
+      #carousel-2:checked ~ .control-2,
+      #carousel-3:checked ~ .control-3,
+      #carousel-4:checked ~ .control-4 {
+        display: block;
+      }
+
+      .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+      }
+    </style>
+  </head>
+
+  <body class="font-body text-dark-purple">
+    <!-- Header -->
+    <script type="module" src="/common template/header.js"></script>
+    <!-- === Search bar ends === -->
+    
+
+    <!-- common template start -->
+    <div class="h-auto block">
+      <div class="flex md:flex-row justify-center flex-col mt-20 py-20">
+        <div class="w-12/12 md:w-5/12 px-2">
+          <br>
+          <img
+            src="./common template/img/fit.png"  style="width: 700px; height:250px" 
+            alt=""
+          />
+        </div>
+        <div class="w-12/12 md:w-5/12 px-2">
+          <div class="ml-0 md:ml-10">
+            <h1 class="text-2xl mt-10 font-bold">Fit India Movement</h1>
+            The Campaign of Fit India Movement
+            <strong> "फिटनेस का डोज - आधा घंटा रोज"</strong> an initiative of
+            the Ministry of Youth Affairs and Sports (MYAS), Govt. of India has
+            been started at Dr. B. R. Ambedkar National Institute of Technology,
+            Jalandhar on December 1, 2020. The first event of the Campaign
+            "Jogging" was inaugurated by Prof. L. K. Awasthi, Director, NIT
+            Jalandhar. The number of other fitness activities/events like
+            Cricket, Badminton, Table Tennis, volleyball tournament etc. will be
+            organized on NITJ premises under this Campaign in the month of
+            December 2020.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center my-6">
+      <div class="md:w-9/12 w-ull">
+        <div class="container grid grid-cols-3 gap-2 mx-auto">
+          <div class="w-full rounded">
+            <img
+              src="https://pbs.twimg.com/media/FPlBK9TaMAYUiCf?format=jpg&name=4096x4096"
+              alt="image"
+            />
+          </div>
+          <div class="w-full rounded">
+            <img
+              src="https://www.nitj.ac.in/nitj_files/links/FI_01_8186.jpg"
+              alt="image"
+            />
+          </div>
+          <div class="w-full rounded">
+            <img
+              src="https://www.nitj.ac.in//images/photo_gallery/1_46_83496.jpg"
+              alt="image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="padding-left: 50px">
+        <h1 class="text-2xl mt-10 font-bold">Message By Director</h1>
+        <p>Dear Fellow Colleagues and Students!</p>
+<br>
+        <p>A healthy body is a healthy mind.</p>
+<br>
+        <p>
+          Health and fitness are two sides of the same coin. Without proper
+          health and fitness, one cannot have a feeling of physical, mental and
+          social wellbeing. It is the common understanding which everyone must
+          follow throughout the life for the wellness of their life and keep
+          body and mind functioning in balance. The fitness cannot be achieved
+          in a single day, one must devote some time every day and hence the
+          Ministry of Youth Affairs and Sports (MYAS), Govt. of India has
+          initiated the Fit India Campaign 'Fitness Ki Dose, Adha Ghanta Roz'.
+        </p>
+<br>
+        <p>
+          I urge you all to take care of your fitness and make it as a part of
+          your lifestyle and also motivate others even during this pandemic
+          situation by taking care of social distance. If we all are fit
+          physically, mentally and emotionally then our society will be healthy
+          and hence the nation. Such fitness is the key to keep India healthy
+          and prosperous. More 'fit' India, more 'hit' India, as quoted by
+          Hon'ble Prime Minister of India Sh Narendra Modi ji. He himself is
+          great example of fitness. He keeps himself fit despite following a
+          busy and hectic schedule.
+        </p>
+<br>
+        <p>
+          In the wake of COVID-19 pandemic, there’s been a lot of interest in
+          ways to strengthen one’s immune system, and yoga and herbal medicine
+          are going to play a pivotal role in building a first line of defence
+          against the deadly virus. Yoga and herbal medicine are one of the most
+          precious gifts given by the ancient Indian sages to humankind. Yoga
+          enhances our quest for a healthier planet. It has emerged as a force
+          for unity and deepens the bonds of humanity. Whereas herbal medicine
+          involves the medicinal use of plants to treat disease and enhance
+          general health and wellbeing. It aims to return the body to a state of
+          natural balance so that it can heal itself. These two superpowers can
+          strengthen human body to prepare itself to fight any disease. My
+          message to all of you is to follow these practices daily and keep your
+          body healthy naturally. To keep the body in good health is a duty,
+          otherwise we shall not be able to keep our mind strong and clear,
+          Buddha(563 BC-483 BC).
+        </p>
+<br>
+        <p>
+          While celebrating this campaign, let us also ensure we follow
+          practices like social distancing which will protect our own lives as
+          well as the lives of others. May this campaign also inspire us towards
+          focusing on personal fitness through the year, which would help
+          improve our overall health. As they say, "If it doesn’t challenge you,
+          it doesn’t change you". Keep challenging yourself to make the changes
+          for a healthier and a fitter individual.
+        </p>
+<br>
+        <p>I wish you all a very healthy life.</p>
+      </div>
+    </div>
+    <br />
+
+    <!--common template End -->
+
+    <script src="/common template/footer.js"></script>
+    <!-- === FOOTER Ends === -->
+    <script>
+      var slideIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {
+          slideIndex = 1;
+        }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 2500);
+      }
+    </script>
+    <script
+      src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new Tooltip(tooltipTriggerEl);
+      });
+    </script>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

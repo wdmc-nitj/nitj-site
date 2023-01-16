@@ -21,16 +21,16 @@ module.exports = {
       keyframes: {
         images: {
           '0%': {
-            'background-image': "url('./public/assets/images/IMG_0195.JPG')",
+            'background-image': "url('/public/assets/images/IMG_0195.JPG')",
           },
           '33.33%': {
-            'background-image': "url('./public/assets/images/IMG_0196.JPG')",
+            'background-image': "url('/public/assets/images/IMG_0196.JPG')",
           },
           '66.66%': {
-            'background-image': "url('./public/assets/images/IMG_0198.JPG')",
+            'background-image': "url('/public/assets/images/IMG_0198.JPG')",
           },
           '100%': {
-            'background-image': "url('./public/assets/images/IMG_0195.JPG')",
+            'background-image': "url('/public/assets/images/IMG_0195.JPG')",
           },
         },
         shake: {
