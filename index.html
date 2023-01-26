@@ -1200,95 +1200,9 @@
 
   <script type="module" src="/js/app.js"></script>
   <script src="./js/navbar.js"></script>
+  <script src="./js/footer.js"></script>
   <script src="./js/navbar-mobile.js"></script>
 
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/footer/get/all"
-      );
-      result = await result.json();
-      console.log(result);
-      // document.getElementById("quicklinks").innerHTML = footer;
-    
-      footer=`    
-      <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
-      
-      <div class="flex flex-row p-[15px]">
-        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`
-        ;
-      for(i = 0; i <1 ; i++) {
-      
-          for(var propName in result[i].links) {
-           
-            footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-            }
-          }
-          footer+='<br>';
-      
-    for(i = 1; i <3 ; i++) {
-      
-      for(var propName in result[i].links) {
-       
-        footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-        }
-      }
-      footer+='<br>';
-
-      for(i; i <6 ; i++) {
-      
-      for(var propName in result[i].links) {
-       
-        footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-        }
-      }
-      footer+='<br>';
-      for(i; i <7 ; i++) {
-      
-      for(var propName in result[i].links) {
-       
-        footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-        }
-      }
-      footer+=' </div> <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">';
-      for(i; i <10 ; i++) {
-      
-      for(var propName in result[i].links) {
-       
-        footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-        }
-      }
-      footer+='<br>';
-      for(i; i <12 ; i++) {
-      
-      for(var propName in result[i].links) {
-       
-        footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-        }
-      }
-      footer+=' </div> <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">';
-      for(i; i <22 ; i++) {
-      
-      for(var propName in result[i].links) {
-       
-        footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-        }
-      }
-      footer+=' </div> <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">';
-      for(i; i <result.length ; i++) {
-      
-      for(var propName in result[i].links) {
-       
-        footer+= ' <a href="'+result[i].links[propName]+'" class="hover:text-sky-500 hover:underline">'+propName+'</a>' ;
-        }
-      }footer+=' </div>  </div>';
-          
-
-
-  document.getElementById("quicklinks").innerHTML = footer;
-    }
-    callAPi();
-  </script>
-</body>
+  </body>
 
 </html>
