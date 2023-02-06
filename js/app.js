@@ -6,6 +6,7 @@ import {
   newsCardsScroll,
   publicationCardsScroll,
 } from './utils/app/scrollUtils.js'
+import notificationTabs from './utils/app/tabUits.js'
 
 window.onscroll = navbarUtil
 
@@ -36,18 +37,6 @@ function slideCards(e, direction) {
   }, 2)
 }
 
-document
-  .getElementById('nav-search-btn')
-  .addEventListener('click', (e) => showSearchPage(e))
-document
-  .getElementById('nav-search-btn-v2')
-  .addEventListener('click', (e) => showSearchPage(e))
-document
-  .getElementById('search_page')
-  .addEventListener('click', (e) => showSearchPage(e))
-document
-  .getElementById('search_form')
-  .addEventListener('click', (e) => showSearchPage(e))
 function showSearchPage(event) {
   if (event.target.id == 'search_form') {
     return
@@ -81,35 +70,38 @@ const openCourse = (e) => {
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
 
-let tablinks = document.getElementsByClassName('notif-link')
+// function notificationTabs(e) {
+//   let tabcontent = document.getElementsByClassName('notice-content')
+//   let tablinks = document.getElementsByClassName('notif-link')
 
-for (let tab of tablinks) {
-  tab.addEventListener('click', () => {
-    notificationTabs(tab)
+//   for (let i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].classList.add('hidden')
+//   }
+
+//   for (let i = 0; i < tablinks.length; i++) {
+//     tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
+//     tablinks[i].classList.remove(
+//       'bg-blue-100',
+//       'text-accent',
+//       'hover:bg-blue-200'
+//     )
+//   }
+//   e.classList.remove('hover:bg-blue-50', 'text-slate-400')
+//   e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
+//   document.getElementById(e.dataset.notif).classList.remove('hidden')
+// }
+const tabLinks = document.getElementsByClassName('notif-link')
+
+window.addEventListener('load', () => {
+  notificationTabs(tabLinks[0])
+})
+
+for (const link of tabLinks) {
+  link.addEventListener('click', () => {
+    console.log(link)
+    notificationTabs(link)
   })
 }
-
-const notificationTabs = (e) => {
-  let tabcontent = document.getElementsByClassName('notice-content')
-  let tablinks = document.getElementsByClassName('notif-link')
-
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.add('hidden')
-  }
-
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
-    tablinks[i].classList.remove(
-      'bg-blue-100',
-      'text-accent',
-      'hover:bg-blue-200'
-    )
-  }
-  e.classList.remove('hover:bg-blue-50', 'text-slate-400')
-  e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-  document.getElementById(e.dataset.notif).classList.remove('hidden')
-}
-
 // ///////////////////////////
 // Image Slider Animation::
 
