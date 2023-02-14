@@ -21,7 +21,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <style type="text/tailwindcss">
         @layer utilities {
         .content-auto {
@@ -167,1546 +168,319 @@
 </head>
 
 <body class="font-body text-dark-purple">
-    <div class="p-0 top-0 flex items-start justify-start h-full w-full z-10 fixed bg-transparent backdrop-blur-2xl"
-        id="nav-menu" style="display: none">
-        <div id="menu" class="h-screen w-3/4 z-10 relative" onclick="close_menu();">
-            <div class="menu-content w-3/4 z-40 bg-accent h-full relative" onclick="keep_menu_open();z=1;">
-                <div class="top-bar h-1/6">
-                    <div class="menu-btn z-50 flex justify-end py-4 px-4" onclick="z=0;close_menu();">
-                        <div class="line bg-white w-[20px] h-[2px] rotate-45 absolute"></div>
-                        <div class="line bg-white w-[20px] h-[2px] -rotate-45"></div>
-                    </div>
-                </div>
-                <ul class="flex flex-col items-start w-full px-1 py-0 z-50">
-                    <li class="menu-link selected w-full px-1 py-0 select-none text-white"><a href="">Home</a></li>
-                    <li class="menu-link w-full px-1 py-2 select-none text-white"><a href="">Contact Us</a></li>
-                    <li class="menu-link w-full px-1 py-2 select-none text-white"><a href="">About Us</a></li>
-                </ul>
-                <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                    class="z-10 inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-                    type="button" onclick="openDropdown()">
-                    All categories
-                    <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <div id="dropdown"
-                    class="absolute z-10 hidden w-44 translate-y-11 divide-y divide-gray-100 rounded bg-white shadow dark:bg-gray-700"
-                    data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-                        <li>
-                            <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                                class="z-10 inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-                                type="button" onclick="openDropdown2()">
-                                All categories
-                                <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                            <div id="dropdown2"
-                                class="absolute z-10 hidden w-44 translate-y-11 divide-y divide-gray-100 rounded bg-white shadow dark:bg-gray-700"
-                                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
-                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="dropdown-button">
-                                    <li>
-                                        <button type="button"
-                                            class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                            Links
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button"
-                                            class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                            Library
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button"
-                                            class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                            Research
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button"
-                                            class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                            Everything
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Links
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Library
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Research
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Everything
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <div
-                    class="extra-links absolute bottom-1.5 left-0 w-full select-none flex flex-col align-middle justify-center">
-                    <a class="text-center text-white" href="/">Privacy Policy</a>
+    <script type="module" src="../common template/header.js"></script>
 
-                    <a class="text-center text-white" href="/">Terms & conditions</a>
+
+
+    <!-- Corousel -->
+    <div id="" style="background-image:url('https://www.annauniv.edu/scstcell/nw-img/6.jpg') ;"
+        class="mt-20 h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center">
+        <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
+            <div class="flex flex-col items-center justify-center container h-full">
+                <div class="flex flex-col gap-10">
+                    <h2 class="uppercase text-white text-4xl text-center">
+                        <span class="font-bold">NITJ</span> "Zeal Society
+                        " CLUB
+                    </h2>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Menu for mobile ends-->
-    <header class="fixed bg-white top-0 right-0 left-0 z-50">
-        <!-- TOP NAV BAR stats -->
-        <div id="top_bar"
-            class="absolute top-0 right-0 left-0 transition-transform delay-200 h-7 bg-accent py-0.5 px-2 sm:px-12 text-xs uppercase text-white shadow-md">
-            <div class="container mx-auto flex flex-row justify-between">
-                <div class="basis-1/2">
-                    <div class="flex flex-row justify-center gap-4 sm:gap-6">
-                        <div class="flex items-center">
-                            <span class="material-symbols-outlined"
-                                style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> engineering
-                            </span>
-                            <a href="" class="hidden sm:block pl-1.5 text-xs">Jobs</a>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="material-symbols-outlined"
-                                style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'>
-                                add_business </span>
-                            <a href="" class="hidden sm:block pl-1.5 text-xs">Tenders</a>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="material-symbols-outlined"
-                                style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> badge
-                            </span>
-                            <a href="" class="hidden sm:block pl-1.5 text-xs">Placements</a>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="material-symbols-outlined"
-                                style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> event_note
-                            </span>
-                            <a href="" class="hidden sm:block pl-1.5 text-xs">Resources</a>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="material-symbols-outlined"
-                                style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'>
-                                psychology_alt </span>
-                            <a href="" class="hidden sm:block pl-1.5 text-xs">Help</a>
-                        </div>
-                    </div>
+    <!-- End - Corousel -->
+
+    <!-- we-can club Cell start -->
+    <!-- <<<<<<< HEAD -->
+    <!-- ======= -->
+    <div class=" ">
+        <div class="my-2 w-12/12 mx-auto md:w-7/12  px-2">
+            <h1 class="uppercase my-4 text-blue-600 font-bold text-2xl">"Zeal Society
+                " CLUB</h1>
+
+        </div>
+        <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+            <h1 class="text-xl text-blue-600 font-bold">Aims and Objectives of "Zeal Society
+                " </h1>
+            <div class="ml-3 md:ml-6">
+                <div class="my-2">
+                    1. <p class="inline">To develop intrapersonal and interpersonal skills.</p>
                 </div>
-                <div class="basis-1/2 sm:pl-8 pl-1">
-                    <div class="flex flex-row gap-4 justify-between">
-                        <div class="hidden sm:flex basis-1/6 gap-4 flex-row items-center">
-                            <a href='https://www.facebook.com/NITJofficial'><i
-                                    class="fa-brands fa-facebook text-lg"></i></a>
-                            <a href='https://www.instagram.com/nitjofficial/'><i
-                                    class="fa-brands fa-instagram text-lg"></i></a>
-                            <a href='https://twitter.com/NITJofficial'><i class="fa-brands fa-twitter text-lg"></i></a>
-                        </div>
-                        <div class="flex sm:basis-1/3 basis-1/2 justify-center items-center">
-                            <span class="material-symbols-outlined"
-                                style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> g_translate
-                            </span>
-                            <a href="" class="hidden sm:block pl-1">हिन्दी / <span class="text-lg">A</span>+A-</a>
-                        </div>
-                        <div class="flex sm:basis-1/3 basis-1/2 justify-center items-center">
-                            <span class="material-symbols-outlined"
-                                style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> contacts
-                            </span>
-                            <a href="" class="hidden sm:block pl-1.5 text-xs">ERP</a>
-                        </div>
-                    </div>
+                <div class="my-2">
+                    2. <p class="inline">To promote an in-depth understanding of soft skills and English language that
+                        lies beyond
+                        the ken of the syllabus.</p>
+                </div>
+                <div class="my-2">
+                    3. <p class="inline">To provide a platform to students for mutual exchange of ideas, knowledge and
+                        skills
+                        through ingenious and captivating monthly group activities such as group discussion, debate,
+                        quiz,
+                        documentary review, movie review, and role play.
+                    </p>
+                </div>
+                <div class="my-2">
+                    4. <p class="inline">To encourage the students to display their extra-curricular skills that would
+                        promote a
+                        healthy holistic development of the student.
+                    </p>
+                </div>
+                <div class="my-2">
+                    5. <p class="inline">To arrange competitions like elocution contest, essay writing, book review
+                        giving them an
+                        opportunity for self-expression.
+                    </p>
+                </div>
+                <div class="my-2">
+                    6. <p class="inline">To incorporate speech delivery enhancement activities.
+                    </p>
+                </div>
+                <div class="my-2">
+                    7. <p class="inline">To instill in the minds of the students the spirit of self-help, service
+                        sacrifice and
+                        cooperation.
+                    </p>
+                </div>
+                <div class="my-2">
+                    8. <p class="inline">To collaborate with other departments for extra and co-curricular activities
+                        related to
+                        language and soft skills.
+                    </p>
                 </div>
             </div>
         </div>
-        <!-- top nav bar ends -->
-        <!-- INSTITUTE LOGO & NAME starts -->
-        <div
-            class="relative sm:px-0 px-20 sm:w-full container p-0 left-[10px] sm:left-0 h-14 max-h-14 sm:h-max sm:max-h-max">
-            <div class="mySlides mt-7">
-                <div class="align-center flex flex-row justify-end sm:justify-between bg-white py-2.5">
-                    <div
-                        class="institute_name sm:max-w-lg sm:basis-1/2 justify-start text-center sm:text-lg font-semibold uppercase hidden sm:block">
-                        <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
-                    </div>
-                    <div
-                        class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-end sm:px-16 text-center text-sm sm:text-xl font-bold uppercase">
-                        <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mySlides mt-7">
-                <div class="align-center flex flex-row justify-end sm:justify-between bg-white py-2.5">
-                    <div
-                        class="institute_name sm:max-w-lg sm:basis-1/2 justify-center px-16 text-center sm:text-xl font-bold uppercase hidden sm:block">
-                        <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                    </div>
-                    <div
-                        class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-center sm:px-8 text-center text-sm sm:text-xl font-bold uppercase">
-                        <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mySlides mt-7">
-                <div class="align-center flex flex-row justify-end sm:justify-between bg-white py-2.5">
-                    <div
-                        class="institute_name sm:max-w-lg sm:basis-1/2 justify-center px-8 text-center sm:text-xl font-bold uppercase hidden sm:block">
-                        <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
-                    </div>
-                    <div
-                        class="institute_name flex sm:max-w-lg sm:basis-1/2 justify-center text-center text-xs sm:text-lg font-semibold uppercase">
-                        <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
-                    </div>
-                </div>
-            </div>
+        <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+            <h1 class="text-xl font-bold text-blue-600">Reports </h1>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/Imaginato_Report_120121_6623.pdf">"IMAGINATO"
+                    organized by We
+                    Can Club on December 26, 2021</a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/event_report-_hello_robin_98370.pdf">"HELLO ROBIN"
+                    organized by
+                    Zeal Society
+                    Club on November 13, 2021</a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/Event_Report_(Think_on_your_feet)-_We_Can_84320.pdf">"THINK
+                    ON
+                    YOUR FEET" organized by Zeal Society
+                    Club on October 30, 2021</a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/Event_report_bring_me_something_35695.pdf">"BRING ME
+                    SOMETHING"
+                    organized by Zeal Society
+                    Club on October 10, 2021</a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/REPORT-_Resume_Building_Workshop_56474.pdf">"HOW TO
+                    BUILD
+                    RESUME" organized by Zeal Society
+                    Club on April 04, 2021</a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/Event_Report-Taboo_2_62854.pdf">"TABOO - 2.0"
+                    organized by We
+                    Can Club on January 23, 2021 </a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/Mock_Interview_Event_Report-WeCan_31-01-2021_28597.pdf">"MOCK
+                    INTERVIEW" organized by Zeal Society
+                    Club on January 31, 2021 </a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/nitj_files/links/WeCan_Shipwreck_69954.pdf">"SHIPWRECK" organized by
+                    Zeal Society
+
+                    Club
+                    on October 11, 2020 </a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/361">"PRE PLACEMENT TALK" organized by Zeal
+                    Society
+
+                    Club on
+                    February 26, 2020 </a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/335">"THE REALMS OF DREAMS" organized by
+                    Zeal Society
+
+                    Club
+                    on February 5, 2020 </a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/330">"ICE BREAKER" organized by Zeal Society
+                    Club on
+                    January
+                    14, 2020 </a></p>
+            <p class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/299">"EXTEMPORE" organized by Zeal Society
+                    Club on
+                    October
+                    23, 2019 </a></p>
+
         </div>
-        <!-- INSTITUTE LOGO & NAME ends -->
-        <!-- Logo CONTAINER starts -->
-        <div class="absolute hidden sm:block left-[50px] z-50 mx-auto -translate-x-1/2 -translate-y-1/3 sm:translate-y-0 scale-75 sm:scale-100 sm:left-1/2"
-            style="width: 230px">
-            <img src="../public/assets/images/Rectangle 47 (1).png" alt="">
-        </div>
-        <div id="logo_250"
-            class="absolute h-[120px] aspect-square left-[50px] sm:left-1/2 scale-[0.40] sm:scale-100 -translate-y-1/3 top-9 sm:top-7 sm:translate-y-0 z-50 -translate-x-1/2 sm:py-0">
-            <img src="../public/assets/images/logo_250.png" alt="" />
-        </div>
-        <!-- Logo CONTAINER ends -->
-        <!-- NAV BAR starts-->
 
-
-        <div class="sm:block bg-accent drop-shadow-lg">
-            <div class="container">
-                <div
-                    class="z-100 flex h-7 sm:h-10 max-w-screen px-4 flex-row justify-between bg-accent text-lg text-white">
-                    <div class="flex items-center sm:hidden" onclick="open_menu();">
-                        <span class="material-symbols-outlined"
-                            style='font-variation-settings: "FILL" 0, "wght" 200, "grad" 0, "opzs" 40;'> menu </span>
-                    </div>
-                    <div class="sm:hidden block">
-                        <button type="button"
-                            class="block material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border sm:hover:h-10 sm:hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
-                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
-                            onclick="showSearchPage(event)">
-                            search
-                        </button>
-                    </div>
-                    <div class="basis-2/5 hidden sm:block">
-                        <div class="flex w-full flex-row justify-between px-10">
-                            <div class="group cursor-default hover:bg-blue-800">
-                                <div class="p-1.5 font-medium uppercase">Administration</div>
-                                <div id="drop-down"
-                                    class="absolute mt-0.5 hidden gap-5 bg-white p-5 text-sm shadow-sm group-hover:flex">
-                                    <div class="flex flex-col gap-5 items-center">
-                                        <div id="col"
-                                            class="flex flex-col w-52 gap-5 border-2 rounded-b-xl border-accent hover:bg-orange-500 hover:border-orange-500 ">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent hover:bg-orange-500">
-                                                    <div class="p-2 text-center"><a href='about.html'>ABOUT US</a></div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Vision, Mission & Quality Policy
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Virtual Tour
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Institute History
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Explore NITJ
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                NITJ Rankings & Awards
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Institute Prospectus
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Location
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img src="public/assets/images/logo_250.png" alt="" style="width: 100px;" />
-                                    </div>
-                                    <div id="col"
-                                        class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:border-orange-500 hover:bg-orange-500">
-                                        <div id="block" class="h-full">
-                                            <div id="head"
-                                                class="h-full rounded-b-xl overflow-clip  bg-accent hover:bg-orange-500">
-                                                <div class="p-2 text-center">LEADERSHIP</div>
-                                                <div class="h-full rounded-b-xl bg-white">
-                                                    <ul
-                                                        class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Organisational Chart
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Chariperson
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Director
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Registrar
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Academic administration
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Student Welfare
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Faculty Welfare
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Planning and Development
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Research and Consultancy
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            International Affairs
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Hostel Administration
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="col"
-                                        class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:border-orange-500 hover:bg-orange-500">
-                                        <div id="block" class="h-full">
-                                            <div id="head"
-                                                class="h-full rounded-b-xl overflow-clip  bg-accent hover:bg-orange-500">
-                                                <div class="p-2 text-center">GOVERNING BODIES</div>
-                                                <div class="h-full rounded-b-xl bg-white">
-                                                    <ul
-                                                        class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
-                                                        <li class="hover:text-[#FF6600]">
-                                                            NIT Council
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Board of Governors
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Senate
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Standing Committee of the Senate
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Finance Committee
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Building and Works Committee
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="col"
-                                        class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                        <div id="block" class="h-full">
-                                            <div id="head"
-                                                class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                <div class="p-2 text-center">CELLS</div>
-                                                <div class="h-full rounded-b-xl bg-white">
-                                                    <ul
-                                                        class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
-                                                        <li class="hover:text-[#FF6600]">
-                                                            E-Cell
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Equal Opportunities and
-                                                            SC/ST/OBC/PwD cell
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Rajbhasha Cell
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            RTI Cell
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Student Grievances Cell
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Faculty Grievances Cell
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Staff Grievances Cell
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Public Grievances
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Women Cell
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="col"
-                                        class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                        <div id="block" class="h-full">
-                                            <div id="head"
-                                                class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                <div class="p-2 text-center">COMMITTEES</div>
-                                                <div class="h-full rounded-b-xl bg-white">
-                                                    <ul
-                                                        class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Institute Development
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Internal Complaint
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Print, Digital Media and Newsletter
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Social Media
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Website Development and Management
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group cursor-default hover:bg-blue-800">
-                                <div class="p-1.5 font-medium uppercase">Academics</div>
-                                <div id="drop-down"
-                                    class="absolute mt-0.5 hidden -translate-x-28 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex">
-                                    <div id="col"
-                                        class="flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                        <div id="block" class="h-full">
-                                            <div id="head"
-                                                class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                <div class="p-2 text-center">DEPARTMENTS</div>
-                                                <div class="h-full rounded-b-xl bg-white">
-                                                    <ul
-                                                        class="flex flex-col gap-1  bg-white px-2 font-normal text-black">
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Biotechnology
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Chemistry
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Chemical Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Civil Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Computer Science and Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Electronics and Communication Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Electrical Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Humanities and Management
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Industrial and Production Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Information Technology
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Instrumentation and Control Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Mathematics
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Mechanical Engineering
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Physics
-                                                        </li>
-                                                        <li class="hover:text-[#FF6600]">
-                                                            Textile Technology
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-5">
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">CENTERS</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Center for Energy and Environment
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Center for Artificial Intelligence
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Center for Continuing Education
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="col"
-                                            class="h-full flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">ACADEMIC SYSTEM</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Academic Circulars & Notices
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Academic Calender
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Academic Regulations
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Curriculum
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Fee Structure
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                System of Evaluation and Grant of Division
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Standard Operationg Procedures (SOP)
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                UMC Rules
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                General FAQs
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-5">
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">ACADEMIC SERVICES</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Student Portal LOGIN
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Grade Sheets
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Timetable
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Upcoming Examination Schedules
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Results
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Online Application for Transcripts and Certificates
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Online Application for Verification of Degree
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                CGPA Criteria and Medium of Education
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Other Proformas
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Contact Details
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">ACADEMIC FACILITIES</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Central Library
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Computer Center
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Central Workshop
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Institute Instrumentation Center
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-5">
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">PROGRAMMERS OF STUDY</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Bachelor of Technology
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Master of Technology
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Master of Business Administration
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Master of Science
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Post Graduate Diploma
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Doctor of Philosophy
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">CONVOCATION</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Convocation 2022
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Past Convocations
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-60 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">OTHER LINKS</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                UGC Act- Rules and Regulations
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                NIT Act and Statutes
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Ministry of Education Notifications
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                National Education Policy 2020
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group cursor-default hover:bg-blue-800">
-                                <div class="p-1.5 font-medium uppercase">Admissions</div>
-                                <div id="drop-down"
-                                    class="absolute mt-0.5 hidden -translate-x-1/3 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex">
-                                    <div class="flex flex-col gap-5">
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">PROSPECTIVE STUDENTS</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Why NITJ?
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Explore NITJ
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Discover Student Life
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Courses Offered
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                How to Apply
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Admissions Process
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Virtual Tour
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                International Students
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600] md:font-bold py-2">
-                                                                Contact Details for Admission
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">ANTI RAGGING</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Anti Ragging Act
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Anti Ragging Affadvit
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Institute Anti-ragging Rules
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-5">
-                                        <div id="col"
-                                            class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">JOIN NITJ</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                B.Tech Admission
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                M.Tech Admission
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Msc Admission
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                MBA Admission
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Ph.D Admission
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="col"
-                                            class="h-full flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                            <div id="block" class="h-full">
-                                                <div id="head"
-                                                    class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                    <div class="p-2 text-center">&ThinSpace; INSTITUTE PROSPECTUS
-                                                        &ThinSpace;</div>
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                B.Tech
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                M.Tech
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                M.Sc.
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                MBA
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Ph.D
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="basis-2/5 hidden sm:block w-full">
-                        <div class="flex w-full flex-row justify-between">
-                            <div class="basis-4/5">
-                                <div class="flex flex-row justify-between">
-                                    <div class="group cursor-default hover:bg-blue-800">
-                                        <div class="p-1.5 font-medium uppercase">Research</div>
-                                        <div id="drop-down"
-                                            class="absolute mt-0.5 hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex">
-                                            <div class="flex flex-col gap-5">
-                                                <div id="col"
-                                                    class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">RESEARCH @ NITJ</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        VIDWAN (IRINS Instance)
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Research Publications
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Research Jobs
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Internships
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Sponsored Research Projects
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="col"
-                                                    class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">INCUBATION @ NITJ</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        STI Hub
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        E-Cell
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Innovation Club
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Institute Innovation Council
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Technology Business Incubator
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col gap-5">
-                                                <div id="col"
-                                                    class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">CONSULTANCY @ NITJ</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Consultancy works
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        MoUs
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        IPRs
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Find an Expert
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Central Research facilities
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="col"
-                                                    class="h-full flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">UPCOMING EVENTS</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Conferences
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Seminars
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        STC/ FDP
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Workshops
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="group cursor-default hover:bg-blue-800">
-                                        <div class="p-1.5 font-medium uppercase">Alumni</div>
-                                        <div id="drop-down"
-                                            class="absolute mt-0.5 hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex">
-                                            <div id="col"
-                                                class="h-full flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                <div id="block" class="h-full">
-                                                    <div class="h-full rounded-b-xl bg-white">
-                                                        <ul
-                                                            class="flex flex-col gap-1 px-2 py-2 font-normal text-black">
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Alumni Portal
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Alumni Registration
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Chapters
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Donation statistics and Reports
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Give Back
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600]">
-                                                                Impact
-                                                            </li>
-                                                            <li class="hover:text-[#FF6600] py-2 md:font-bold">
-                                                                Alumni Affairs Contact Details
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="group relative cursor-default hover:bg-blue-800">
-                                        <div class="p-1.5 font-medium uppercase">Life at NITJ</div>
-                                        <div id="drop-down"
-                                            class="absolute mt-0.5 hidden gap-5 self-center  bg-white p-5 text-sm shadow-sm group-hover:flex right-0">
-                                            <div class="flex flex-col gap-5">
-                                                <div id="col"
-                                                    class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">CLUBS & SOCITIES</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <a href="/clubs/yoga.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Heartfulness Mediation Club
-                                                                    </a>
-                                                                    <a href="/clubs/prayas.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Prayaas - A Campaign for Smile
-                                                                    </a>
-                                                                    <a href="/clubs/rtist.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        R-Tist Robotics Club
-                                                                    </a>
-                                                                    <a href="/clubs/spic.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        SPIC MACAY
-                                                                    </a>
-                                                                    <a href="/clubs/we-can.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        “We Can” Club
-                                                                    </a>
-                                                                    <a href="/clubs/yoga.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Yoga Club
-                                                                    </a>
-                                                                </ul>
-                                                                <ul
-                                                                    class="flex flex-row px-2 font-normal text-black justify-between">
-                                                                    <a href="/clubs/zeal.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Zeal Society
-                                                                    </a>
-                                                                    <li class="hover:text-[#FF6600] font-bold">
-                                                                        View All
-                                                                    </li>
-                                                                </ul>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="col"
-                                                    class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">SCHOLARSHIPS</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Dr. Pratap Singh Memorial Scholarhsip
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        MCM Scholarship
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Post Matric Scholarship
-                                                                    </li>
-                                                                </ul>
-                                                                <ul
-                                                                    class="flex flex-row px-2 font-normal text-black justify-between">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Siemens India Scholarship
-                                                                    </li>
-                                                                    <li
-                                                                        class="hover:text-[#FF6600] font-bold whitespace-nowrap self-end">
-                                                                        View All
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col gap-5">
-                                                <div id="col"
-                                                    class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">CAMPUS AMENITIES</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Banks & ATMs
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Canteens & Shops
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Central Seminar Hall
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Daily Commute
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Open Air Theater
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Post Office
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Students Actvity Center
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Wi-Fi Campus
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="col"
-                                                    class="h-full flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">HEALTH AND WELNESS</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Counselling Services
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Fit India Movement Campaign
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Gymnasium Center and Open Gyms
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Health Care Center
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Empanaelled Hospitals
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Sports and Recreation
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600] font-bold">
-                                                                        Student Grievence Cell
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-col gap-5 items-center">
-                                                <div id="col"
-                                                    class="flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">NITJ FESTIVALS</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <a href="/clubs/bharat_dhwani.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Foundation Day
-                                                                    </a>
-                                                                    <a href="/clubs/cultural.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Annual Cultural Fest
-                                                                    </a>
-                                                                    <a href="/clubs/tech_fest.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Annual Technical Fest
-                                                                    </a>
-                                                                    <a href="/clubs/athletic_fest.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Athletic Fest
-                                                                    </a>
-                                                                    <a href="/clubs/sports.html"
-                                                                        class="hover:text-[#FF6600]">
-                                                                        Sports Tournaments
-                                                                    </a>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="col"
-                                                    class="h-full flex flex-col rounded-b-xl w-52 gap-5  border-2 border-accent hover:bg-orange-500 hover:border-orange-500">
-                                                    <div id="block" class="h-full">
-                                                        <div id="head"
-                                                            class="h-full rounded-b-xl overflow-clip  bg-accent  hover:bg-orange-500">
-                                                            <div class="p-2 text-center">ACCOMODATION</div>
-                                                            <div class="h-full rounded-b-xl bg-white">
-                                                                <ul
-                                                                    class="flex flex-col gap-1 px-2 font-normal text-black">
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Boys Hostel
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Girls Hostel
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Hostel Guest House
-                                                                    </li>
-                                                                    <li class="hover:text-[#FF6600]">
-                                                                        Institute Guest House
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <img src="public/assets/images/logo_250.png" alt=""
-                                                    style="width: 100px;" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex basis-1/5 flex-row justify-center">
-                                <button type="button"
-                                    class="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
-                                    onclick="showSearchPage(event)">
-                                    search
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- NAV BAR ends-->
-    </header>
-    <!-- === Search bar starts === -->
-    <div id="search_page"
-        class="absolute top-0 z-50 hidden h-full w-full content-center bg-transparent backdrop-blur-2xl"
-        onclick="showSearchPage(event)">
-        <form id="search_form" onclick="showSearchPage(event)">
-            <div class="flex px-28">
-                <label for="search-dropdown"
-                    class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
-                    Email</label>
-                <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                    class="z-10 inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-                    type="button" onclick="openDropdown()">
-                    All categories
-                    <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <div id="dropdown"
-                    class="absolute z-10 hidden w-44 translate-y-11 divide-y divide-gray-100 rounded bg-white shadow dark:bg-gray-700"
-                    data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Faculty
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Links
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Library
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Research
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button"
-                                class="inline-flex w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Everything
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="relative w-full">
-                    <input type="search" id="search-dropdown"
-                        class="z-20 block w-full rounded-r-lg border border-l-2 border-gray-300 border-l-gray-50 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:border-l-gray-700 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500"
-                        placeholder="Search Faculty, Books, Events, Researches..." required="" />
-                    <button type="submit"
-                        class="absolute top-0 right-0 rounded-r-lg border border-blue-700 bg-blue-700 p-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-
-    <!-- common template start -->
-    <div class="h-auto block   ">
-        <div class="flex md:flex-row justify-center flex-col mt-20 py-20">
-            <div class="w-12/12 md:w-5/12 px-2">
-                <img src="https://www.nitj.ac.in/images/slider/BHARAT_DHWANI-1_84855.jpg" alt="">
-            </div>
-            <div class="w-12/12 md:w-5/12 px-2">
-                <div class="ml-0  md:ml-10">
-                    <h1 class="text-2xl mt-10 font-bold">Zeal Society</h1>
-                    Zeal Society is organizing a event "Be Aware Make Aware" from October 16 to October 30, 2021 for all
-                    colleges students. This event is dedicated to Mother Earth. You will be spreading awareness and get
-                    aware by taking part in events that will empower others. To break the barrier that exists between
-                    one’s mother tongue and the universal code for communication-English.
-                    To facilitate peer-learning and promote the growth of a networking mentality
-                    To help every fellow member realize his potential and make them capable of portraying themselves in
-                    the most enticing manner
-                </div>
-                <div class="mt-4">
-                    <a target="_blank" href="https://zeal.pythonanywhere.com/"
-                        class="ml-0 md:ml-10 px-2 rounded-lg mt-6  py-2 bg-blue-500 text-white">
-                        Zeal Society
-                    </a>
-                </div>
-
+        <div class="my-6 md:w-7/12 w-12/12 mx-auto px-2">
+            <div class="overflow-x-auto relative">
+                <h1 class="text-xl text-blue-600 font-bold my-2">Committee</h1>
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="py-3 text-white px-6">
+                            </th>
+                            <th scope="col" class="py-3 px-6 text-white">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+                            <th scope="row"
+                                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <p class="text-sm font-bold">Patron</p>
+                            </th>
+                            <td class="py-4 px-6 text-white">
+                                <p> <span class="font-bold text-[1rem] mb-1">Prof. Rajiv Kumar Garg</span> <br>
+                                    Director (I/C)<br>
+                                    Dr B R Ambedkar National Institute of Technology <br>
+                                    Jalandhar <br>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+                            <th scope="row"
+                                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <p class="text-sm font-bold">Faculty Coordinator</p>
+                            </th>
+                            <td class="py-4 px-6 text-white">
+                                <p> <span class="font-bold text-[1rem] mb-1">Dr. Sonia Chawla</span> <br>
+                                    Head Training Cell <br>
+                                    Dr B R Ambedkar National Institute of Technology <br>
+                                    Jalandhar <br>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+                            <th scope="row"
+                                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <p class="text-sm font-bold">Faculty Coordinator</p>
+                            </th>
+                            <td class="py-4 px-6 text-white">
+                                <p> <span class="font-bold text-[1rem] mb-1">Dr. Shyamkiran Kaur</span> <br>
+                                    Assistant Professor <br>
+                                    Department of Humanities and Management <br>
+                                    Dr B R Ambedkar National Institute of Technology <br>
+                                    Jalandhar <br>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+                            <th scope="row"
+                                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <p class="text-sm font-bold">Officers of the Club</p>
+                            </th>
+                            <td class="py-4 px-6 text-white">
+                                <p>President <br> Vice-President <br> Secretary <br> Treasurer <br> Marketing Head <br>
+                                    Publicity Head
+                                    <br> Four Core Members <br>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
-
-
-    <div class="flex justify-center my-6">
-        <div class="md:w-9/12 w-ull">
-            <div class="container grid grid-cols-3 gap-2 mx-auto">
-                <div class="w-full rounded">
-                    <img src="https://zeal.pythonanywhere.com/media/images/blog/8.png" alt="image">
-                </div>
-                <div class="w-full rounded">
-                    <img src="https://zeal.pythonanywhere.com/media/images/blog/7.png" alt="image">
-                </div>
-                <div class="w-full rounded">
-                    <img src="https://zeal.pythonanywhere.com/media/images/blog/5.png" alt="image">
-                </div>
+    <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+        <h1 class="text-xl text-blue-600 font-bold">Officers of the Club </h1>
+        <div class="ml-3 md:ml-6">
+            <div class="my-2">
+                1. <p class="inline">The Officers of the club shall consist of the following: President, Vice-President,
+                    Secretary, Treasurer, Marketing Head, Publicity Head and four Core Members.</p>
             </div>
-        </div>
-    </div>
-
-    <!--common template End -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="flex flex-col justify-between bottom-0 bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
-        <div class="flex basis-1/3 flex-col border-y-gray-300 p-[25px] lg:border-r lg:border-zinc-400">
-            <div class="flex flex-row items-center gap-x-[10px] pb-3">
-                <img src="./img/nitj-logo.png" alt="NITJ logo" class="h-[67px] w-[67px]" />
-                <p class="font-semibold text-white lg:text-[20px]">
-                    Dr. B R Ambedkar National Institute of Technology, Jalandhar
+            <div class="my-2">
+                2. <p class="inline">The Officers shall be appointed by the faculty coordinators for a period of six
+                    months on
+                    the basis of interview.</p>
+            </div>
+            <div class="my-2">
+                3. <p class="inline">Membership shall be confined to students/alumni of NITJ.
                 </p>
             </div>
-
-            <div class="p-[20px]">
-                <div class="pb-[6px] lg:w-[85%]">
-                    <i class="fas fa-location-dot pr-[8px]"></i><span class="opacity-90">G.T Road, Amritsar Bypass,
-                        Jalandhar,
-                        Punjab, India-144027</span>
-                </div>
-                <div class="flex flex-row pb-[6px]">
-                    <i class="fas fa-envelope mt-1 pr-[8px]"></i>
-                    <h3 class="opacity-90">webmaster@nitj.ac.in</h3>
-                </div>
-                <div class="align-center flex flex-row pb-[14px]">
-                    <i class="fas fa-phone mt-1 pr-[8px]"></i>
-                    <h3 class="opacity-90">
-                        +91-0181-5037855, 2690301, 2690453, 3082000
-                    </h3>
-                </div>
-                <div id="social-links" class="flex flex-col bg-slate-800">
-                    <div class="flex flex-row gap-10 mt-4">
-                        <div class="text-l text-white">
-                            <a href="https://www.facebook.com/NITJofficial/" target="_blank">
-                                <i class="fa-brands fa-facebook text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://twitter.com/NITJofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                                target="_blank">
-                                <i class="fab fa-twitter text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://in.linkedin.com/school/dr-b-r-ambedkar-national-institute-of-technology-jalandhar-official/"
-                                target="_blank">
-                                <i class="fa-brands fa-linkedin text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://www.instagram.com/nitjofficial/?hl=en" target="_blank">
-                                <i class="fa-brands fa-instagram text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://www.youtube.com/c/NITJOfficial" target="_blank">
-                                <i class="fa-brands fa-youtube text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="my-2">
+                4. <p class="inline">All Officers shall be eligible for re-appointment.
+                </p>
             </div>
-        </div>
-
-        <div class="hidden basis-2/3 p-[25px] lg:block">
-            <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
-            <div class="flex flex-row p-[15px]">
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Admission</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">UnderGrad Courses</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">PostGrad Courses</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Departments</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Academic Calender</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Clubs And Societies</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Campus Life</a>
-                </div>
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Faculty</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Staff</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Recruitment</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Research</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Patent</a>
-                </div>
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Institute Prospectus(2019-2020)</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Annual Reports</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">MOM</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">UGC Act</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">NIT Act and statutes</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Pension</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Ministry of Education Notifications</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Annual Property Return</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Rules/Policies</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">ARIIA(2020-2021)</a>
-                </div>
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">ARIIA (2020-2021)</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">NIRF-2022</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">NewsLetter</a>
+            <div class="my-2">
+                5. <p class="inline">The club may appoint other Officers from time to time and under such terms as it
+                    considers
+                    appropriate.
+                </p>
+            </div>
+            <div class="my-2">
+                6. <p class="inline">The club officers shall be required to actively participate in all Club activities.
+                </p>
+            </div>
+            <div class="my-2">
+                7. <p class="inline">The club officers shall have to conduct monthly events for the enhancement of soft
+                    skills
+                    of NITJ students.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-xl text-blue-600 font-bold">Meetings: </h2>
+                <div class="my-2">
+                    <p class="inline">• The Committee shall meet at such times as shall be decided from time to time by
+                        the
+                        faculty coordinators thereof but no less than two meetings shall be held in any one month.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    <div
-        class="border-t bottom-0 border-zinc-400 flex flex-col bg-slate-800 px-20 p-[20px] text-center text-white lg:flex-row justify-between">
-        <div class="pb-[10px] text-[12px] lg:pb-0 lg:text-[15px]">
-            &#169; Copyright 2022, All Rights Reserved NIT Jalandhar
-        </div>
-
-        <div class="text-[12px] lg:text-[15px]">
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Other NITs</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">MoU</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">GIAN</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">TEQIP</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Anti Ragging</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Terms of Use</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Credits</a>
+    <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+        <h1 class="text-xl text-blue-600 font-bold">Disciplinary Procedure </h1>
+        <div class="ml-3 md:ml-6">
+            <div class="my-2">
+                1. <p class="inline">The Disciplinary Board consists of faculty coordinators shall have the power to
+                    hear and
+                    determine any complaints against the club officers whether made by a Member of the Club or any
+                    student of
+                    NITJ.</p>
+            </div>
+            <div class="my-2">
+                2. <p class="inline">Any Member/Club Officer found to be in breach of these rules or held to have
+                    behaved in a
+                    manner damaging to the interests of the Club shall be admonished, suspended, fined, expelled or be
+                    the subject
+                    of such other penalty as the Club considers fit.</p>
+            </div>
         </div>
     </div>
-    <!-- === FOOTER Ends === -->
-    <script>
-        var slideIndex = 0;
-        carousel();
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1;
-            }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 2500);
-        }
-    </script>
-    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        var tooltipTriggerList = [].slice.call(
-            document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        );
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new Tooltip(tooltipTriggerEl);
-        });
-    </script>
+    </div>
+
+    <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+        <h1 class="text-xl text-blue-600 font-bold">Amendment of Constitution </h1>
+        <div class="ml-3 md:ml-6">
+            <div class="my-2">
+                <p class="inline">• Only the Patron or Faculty Coordinators will have power to alter or amend this
+                    Constitution
+                    and Rules.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="mt-6 mb-12 md:w-7/12 w-12/12 mx-auto px-2">
+        <h1 class="text-xl text-blue-600 font-bold">Connect With Us </h1>
+        <div class="mt-3 ml-3 md:ml-6">
+            <span class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.facebook.com/We-Can-NITJ"><i
+                        class="fa-brands fa-2xl fa-square-facebook text-black"></i> We-Can-NITJ</a> &nbsp;</span>
+            <span class="my-2"><a target="_blank" class="inline text-red-500"
+                    href="https://www.instagram.com/wecan_nitj/"><i
+                        class="fa-brands fa-2xl fa-square-instagram text-black"></i> wecan_nitj</a></p>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="/common template/footer.js" type="module"></script>
+
 
     <script src="app.js"></script>
 </body>
