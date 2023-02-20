@@ -1,11 +1,12 @@
-getNavbar();
-
-async function getNavbar(){
-  let obj=await fetch('https://wdmc.onrender.com/navbar');
-  d = await obj.json();
-  console.log()
-  createNav(d)
-  createNavMob(d)
+// getNavbar()
+import createNavMob from "./navbar-mobile.js"
+export default async function getNavbar(){
+  fetch('https://wdmc.onrender.com/navbar').then(async (res)=>
+    await res.json()).then((data)=>{
+    console.log(data)
+      createNav(data)
+      createNavMob(data)
+    })
 }
 
 async function createNav(obj){
@@ -131,7 +132,7 @@ function navbarhelper(array,dropdown){
     const list = document.createElement('ul')
     list.setAttribute('class','flex flex-col min-h-full gap-1 px-2 font-normal text-black')
 
-    for(i=2;i<array.length;i++){
+    for(let i=2;i<array.length;i++){
       const listItem = document.createElement('li')
       listItem.setAttribute('class','hover:text-[#FF6600]')
       listItem.innerHTML = `<a href="${array[i]["link"]}">${array[i]["name"]}</a>

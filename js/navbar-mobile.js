@@ -1,3 +1,4 @@
+
 var sideMenu = document.querySelector("#nav-menu");
 var crossBtn = document.querySelector("#nav-menu .menu-btn");
 var leastpri =5;
@@ -117,7 +118,7 @@ function openSubDropDowns(id) {
 }
 
 navnames = ["Administration","Acadmeics","Admissions","Research","Alumni","LifeatNITJ"]
-async function createNavMob(obj){
+export default async function createNavMob(obj){
     let data = await obj
     const menu1 = document.getElementById('menu-content')
     for(var i=0;i<navnames.length;i++){
