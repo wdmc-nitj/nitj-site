@@ -365,13 +365,13 @@
               </div>
               <div id="menu-1" class="group cursor-default hover:bg-blue-800">
                 <div id="Administration" class="p-1.5 font-medium uppercase">Administration</div>
-                </div>
+              </div>
               <div id="menu-2" class="group cursor-default hover:bg-blue-800">
                 <div id="Academics" class="p-1.5 font-medium uppercase">Academics</div>
-                </div>
+              </div>
               <div id="menu-3" class="group cursor-default hover:bg-blue-800">
                 <div id="Admissions" class="p-1.5 font-medium uppercase">Admissions</div>
-                </div>
+              </div>
             </div>
           </div>
           <div class="basis-2/5 hidden sm:block w-full">
@@ -380,13 +380,13 @@
                 <div class="flex flex-row justify-between">
                   <div id="menu-4" class="group cursor-default hover:bg-blue-800">
                     <div id="Research" class="p-1.5 font-medium uppercase">Research</div>
-                    </div>
+                  </div>
                   <div id="menu-5" class="group cursor-default hover:bg-blue-800">
                     <div id="Alumni" class="p-1.5 font-medium uppercase">Alumni</div>
-                    </div>
+                  </div>
                   <div id="menu-6" class="group relative cursor-default hover:bg-blue-800">
                     <div id="Life at NITJ" class="p-1.5 font-medium uppercase">Life at NITJ</div>
-                    </div>
+                  </div>
                 </div>
               </div>
               <div class="flex basis-1/5 flex-row justify-center">
@@ -581,14 +581,12 @@
         <!-- Cards -->
         <div class="flex flex-row relative">
           <i class="absolute top-1/2 -left-10 -translate-y-1/2 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer"
-          onclick="slideCards(this,'left')"
-            ></i>
+            onclick="slideCards(this,'left')"></i>
           <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth h-[27rem]">
             <!-- Data from API -->
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
-          onclick="slideCards(this,'right')"
-            ></i>
+            onclick="slideCards(this,'right')"></i>
         </div>
         <div class="flex items-end w-fit">
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/template/index.html?id=0?category=latestEvent">
@@ -708,8 +706,8 @@
                 </a>
               </div>
             </div>
-          
-            
+
+
           </div>
         </div>
       </div>
@@ -717,12 +715,10 @@
   </div>
 
   <!-- Institute in Numbers section -->
-  <a href="https://placement-q1bq.onrender.com/
-  
-  ">
+  <a href="https://placement-q1bq.onrender.com/" title="Placement Site">
     <section id="nitj-numbers"
-      class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
-      <div class="bg-dark-purple/70">
+      class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] group bg-cover bg-fixed bg-center bg-no-repeat">
+      <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40">
         <div
           class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
           <h1 class="text-5xl font-bold uppercase text-white">
@@ -773,10 +769,10 @@
         </div>
       </div>
 
-      <div id="testimonial"
-        class="md:col-start-1 md:col-end-3 md:row-start-3 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 gap-5 ring-accent">
+      <a href="/alumni/alumni.html" title="Alumni Site" id="testimonial"
+        class="md:col-start-1 md:col-end-3 md:row-start-3 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 hover:ring-4 transition-all duration-300 gap-5 ring-accent">
         <!-- Data from API -->
-      </div>
+      </a>
       <div id="publications"
         class="md:col-start-3 md:col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg">
         <div class="flex flex-col gap-3 mb-8">
@@ -803,8 +799,8 @@
   <!-- === Research Section Ends === -->
   <!-- === Placement Stats starts === -->
   <section id="institute-numbers"
-    class="scroll-mt-32 my-6 bg-[url('./public/assets/images/numbers_section.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
-    <div class="bg-dark-purple/70">
+    class="scroll-mt-32 my-6 bg-[url('./public/assets/images/numbers_section.jpg')] group bg-cover bg-fixed bg-center bg-no-repeat">
+    <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40">
       <div
         class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row-reverse md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
         <h1 class="text-5xl font-bold uppercase text-white md:text-right">
@@ -1093,7 +1089,7 @@
       
       <div class="flex flex-row p-[15px]">
         <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]"> -->
-          <!-- <a href="#" class="hover:text-sky-500 hover:underline">Admission</a>
+      <!-- <a href="#" class="hover:text-sky-500 hover:underline">Admission</a>
           <br />
           <a href="#" class="hover:text-sky-500 hover:underline">UnderGrad Courses</a>
           <a href="#" class="hover:text-sky-500 hover:underline">PostGrad Courses</a>
@@ -1181,25 +1177,26 @@
     //   return new Tooltip(tooltipTriggerEl);
     // });
     function slideCards(e, direction) {
-  // var container = document.getElementById('cards')
-  const container = e.parentNode.querySelector('div')
-  scrollCompleted = 0
-  var slideVar = setInterval(function () {
-    if (direction == 'left') {
-      container.scrollLeft -= container.clientWidth
-    } else {
-      container.scrollLeft += container.clientWidth
+      // var container = document.getElementById('cards')
+      const container = e.parentNode.querySelector('div')
+      scrollCompleted = 0
+      var slideVar = setInterval(function () {
+        if (direction == 'left') {
+          container.scrollLeft -= container.clientWidth
+        } else {
+          container.scrollLeft += container.clientWidth
+        }
+        scrollCompleted += 100
+        if (scrollCompleted >= 1000) {
+          window.clearInterval(slideVar)
+        }
+      }, 2)
     }
-    scrollCompleted += 100
-    if (scrollCompleted >= 1000) {
-      window.clearInterval(slideVar)
-    }
-  }, 2)
-}
   </script>
 
   <script type="module" src="/js/app.js"></script>
-  <script src="./js/navbar.js"></script>
+  <script type="module" src="./js/navbar.js"></script>
   <script src="./js/footer.js"></script>
-  <script src="./js/navbar-mobile.js"></script>
+  <script type="module" src="./js/navbar-mobile.js"></script>
+
 </html>
