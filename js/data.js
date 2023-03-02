@@ -100,8 +100,11 @@ function dateManipulator(data) {
 fetch(`${baseURL}/latestEvent/get/all`)
   .then((response) => response.json())
   .then((data) => {
+    let i = 6
     const cards = document.getElementById('cards')
     data.forEach((e) => {
+      i--
+      if (i <= 0) return
       const card = document.createElement('div')
       card.setAttribute('id', 'card')
       card.setAttribute('class', 'min-h-full')
