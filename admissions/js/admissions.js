@@ -2,6 +2,7 @@ let slug = window.location.href.match(/[^#]+/g)
 if(slug[slug.length-1]==="btech")
 {
   location.reload;
+
   document.getElementById("mtech").style.display="none";
   document.getElementById("msc").style.display="none";
   document.getElementById("mba").style.display="none";
@@ -22,6 +23,7 @@ if(slug[slug.length-1]==="btech")
 if(slug[slug.length-1]==="mtech")
 {
 location.reload;
+
 document.getElementById("btech").style.display="none";
 document.getElementById("msc").style.display="none";
 document.getElementById("mba").style.display="none";
@@ -44,6 +46,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
 else if(slug[slug.length-1]==="msc")
 {
 location.reload;
+
 document.getElementById("btech").style.display="none";
 document.getElementById("mtech").style.display="none";
 document.getElementById("mba").style.display="none";
@@ -64,6 +67,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
 else if(slug[slug.length-1]==="mba")
 {
 location.reload;
+
 document.getElementById("btech").style.display="none";
 document.getElementById("msc").style.display="none";
 document.getElementById("mtech").style.display="none";
@@ -84,6 +88,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
 else if(slug[slug.length-1]==="phd")
 {
 location.reload;
+
 document.getElementById("btech").style.display="none";
 document.getElementById("msc").style.display="none";
 document.getElementById("mba").style.display="none";
@@ -104,6 +109,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
 else if(slug[slug.length-1]==="foreign_admissions")
 {
 location.reload;
+
 document.getElementById("btech").style.display="none";
 document.getElementById("msc").style.display="none";
 document.getElementById("mba").style.display="none";
@@ -129,6 +135,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
   if(slug[slug.length-1]==="btech")
   {
     location.reload;
+  
     document.getElementById("mtech").style.display="none";
     document.getElementById("msc").style.display="none";
     document.getElementById("mba").style.display="none";
@@ -149,6 +156,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
   if(slug[slug.length-1]==="mtech")
   {
   location.reload;
+ 
   document.getElementById("btech").style.display="none";
   document.getElementById("msc").style.display="none";
   document.getElementById("mba").style.display="none";
@@ -171,6 +179,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
   else if(slug[slug.length-1]==="msc")
   {
   location.reload;
+ 
   document.getElementById("btech").style.display="none";
   document.getElementById("mtech").style.display="none";
   document.getElementById("mba").style.display="none";
@@ -191,6 +200,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
   else if(slug[slug.length-1]==="mba")
   {
   location.reload;
+ 
   document.getElementById("btech").style.display="none";
   document.getElementById("msc").style.display="none";
   document.getElementById("mtech").style.display="none";
@@ -211,6 +221,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
   else if(slug[slug.length-1]==="phd")
   {
   location.reload;
+
   document.getElementById("btech").style.display="none";
   document.getElementById("msc").style.display="none";
   document.getElementById("mba").style.display="none";
@@ -231,6 +242,7 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
   else if(slug[slug.length-1]==="foreign_admissions")
   {
   location.reload;
+  scrollY=0;
   document.getElementById("btech").style.display="none";
   document.getElementById("msc").style.display="none";
   document.getElementById("mba").style.display="none";
