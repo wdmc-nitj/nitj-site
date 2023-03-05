@@ -1681,7 +1681,9 @@
             }
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
+                if (tabcontent[i].id[tabcontent[i].id.length - 1] == deanName[deanName.length - 1]) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
             }
             document.getElementById(deanName).style.display = "block";
             evt.currentTarget.className += " active";

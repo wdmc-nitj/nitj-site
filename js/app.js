@@ -7,9 +7,9 @@ import {
   publicationCardsScroll,
 } from './utils/app/scrollUtils.js'
 import notificationTabs from './utils/app/tabUits.js'
-import getNavbar from './navbar.js'
+// import getNavbar from './navbar.js'
 window.onscroll = navbarUtil
-window.onload = getNavbar
+// window.onload = getNavbar
 function openDropdown() {
   var dropdown = document.getElementById('dropdown')
   if (dropdown.classList.contains('hidden')) {

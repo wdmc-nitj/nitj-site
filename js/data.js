@@ -321,7 +321,7 @@ fetch('https://wdmc.onrender.com/photoGallery/')
     rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
 
     let i = 0
-
+    let link_arr = []
     images.forEach((img, key) => {
       // img.image.link
       if (i > 2) {
@@ -333,16 +333,76 @@ fetch('https://wdmc.onrender.com/photoGallery/')
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
       rows[i].append(imgContainer)
-      // imgContainer.addEventListener('click', (e) => {
-      //   const imgSample = document.getElementById('sample-img')
+      imgContainer.addEventListener('click', (e) => {
+        const imgSample = document.getElementById('sample-img')
 
-      //   imgSample.src = e.srcElement.currentSrc
-      // })
+        imgSample.src = e.srcElement.currentSrc
+        showImg()
+      })
       i++
     })
     parentDiv.append(firstRow, secondRow, thirdRow)
   })
 
-// function hideThis(e) {
+const crossbutton = document.getElementById('crossbutton')
+      crossbutton.addEventListener('click',(e) => {
+        showImg()
+    })
+
+const arrow_forward = document.getElementById('arrow_forward')
+arrow_forward.addEventListener('click',(e)=>{
+  const imgSample = document.getElementById('sample-img')
+  const imgArray = document.getElementsByClassName('gallery-image')
+  for(var i=0;i<=11;i++){
+    if(imgArray[i].src == imgSample.src){
+      imgSample.src=imgArray[i+1].src;
+      break;
+    }
+    else if(i==11){
+      imgSample.src=imgArray[0].src;
+    }
+  }
+})
+
+const arrow_back = document.getElementById('arrow_back')
+arrow_back.addEventListener('click',(e)=>{
+  const imgSample = document.getElementById('sample-img')
+  const imgArray = document.getElementsByClassName('gallery-image')
+  for(var i=11;i>=0;i--){
+    if(i==0){
+      imgSample.src=imgArray[11].src;
+    }
+    else if(imgArray[i].src == imgSample.src){
+      imgSample.src=imgArray[i-1].src;
+      break;
+    }
+  }
+})
+
+function showImg(){
+  // const body = document.getElementsByTagName('body')
+  const big_viewer = document.getElementById('big-viewer')
+  const imgSample = document.getElementById('sample-img')
+  const crossbutton = document.getElementById('crossbutton')
+  const arrow_forward = document.getElementById('arrow_forward')
+  const arrow_back = document.getElementById('arrow_back')
+  if(imgSample.classList.contains("hidden")){
+    document.body.classList.add("overflow-hidden")
+    big_viewer.classList.remove("hidden")
+    imgSample.classList.remove("hidden")
+    crossbutton.classList.remove("hidden")
+    arrow_forward.classList.remove("hidden")
+    arrow_back.classList.remove("hidden")
+  }
+  else{
+    document.body.classList.remove("overflow-hidden")
+    big_viewer.classList.add("hidden")
+    imgSample.classList.add("hidden")
+    crossbutton.classList.add("hidden")
+    arrow_forward.classList.add("hidden")
+    arrow_back.classList.add("hidden")
+  }
+}
+// function hideT{his(e) {
 //   e.querySelector('img').src = ''
 // }
