@@ -144,8 +144,15 @@
           </ol>
         </nav>
       </div>
-      <!-- <p> Code by Bhavya Mittal </p> -->
+      
       <div class="container" id="timeline">
+
+        <div id="ranking_2023"></div>
+<div id="ranking_2022"></div>
+<div id="ranking_2021"></div>
+<div id="ranking_2020"></div>
+<div id="ranking_2019"></div>
+
         <!-- <div
           class="flex flex-col lg:flex-row md:flex-row border-b-2 border-gray-300 pb-3 pt-3"
         >
@@ -337,7 +344,144 @@
 
     <script>
       async function callAPi() {
+        let result = await fetch(
+          "https://wdmc.onrender.com/yearlyRanking?id=6401332eb6728f474bfdcfe2"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("ranking_2023").innerHTML = `
+
+        <div
+          class="flex flex-col lg:flex-row md:flex-row border-b-2 border-gray-300 pb-3 pt-3"
+        >
+          <h1 class="basis-2/12 text-orange-500 font-bold text-3xl">${result[0].YearlyRanking.year}</h1>
+          <div class="flex flex-col basis-10/12 text-mf m-auto">
+        <p
+              class="hover:bg-[#0369A1] hover:scale-105 hover:shadow-2xl hover:text-white hover:p-2 hover:rounded-lg hover:cursor-pointer"
+            >
+              - ${result[0].YearlyRanking.rankings[0]}
+            </p>
+
+       
+                   
+         `;
+      }
+      callAPi();
+    </script>
+
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc.onrender.com/yearlyRanking?id=6400e14a79b324e087ae3b3f"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("ranking_2022").innerHTML = `
+
+        <div
+          class="flex flex-col lg:flex-row md:flex-row border-b-2 border-gray-300 pb-3 pt-3"
+        >
+          <h1 class="basis-2/12 text-orange-500 font-bold text-3xl">${result[0].YearlyRanking.year}</h1>
+          <div class="flex flex-col basis-10/12 text-mf m-auto">
+        <p
+              class="hover:bg-[#0369A1] hover:scale-105 hover:shadow-2xl hover:text-white hover:p-2 hover:rounded-lg hover:cursor-pointer"
+            >
+              - ${result[0].YearlyRanking.rankings[0]}
+            </p>
+
+       
+                   
+         `;
+      }
+      callAPi();
+    </script>
+  
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/yearlyRanking?id=6400e15279b324e087ae3b41"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ranking_2021").innerHTML = `
+
+      <div
+        class="flex flex-col lg:flex-row md:flex-row border-b-2 border-gray-300 pb-3 pt-3"
+      >
+        <h1 class="basis-2/12 text-orange-500 font-bold text-3xl">${result[0].YearlyRanking.year}</h1>
+        <div class="flex flex-col basis-10/12 text-mf m-auto">
+      <p
+            class="hover:bg-[#0369A1] hover:scale-105 hover:shadow-2xl hover:text-white hover:p-2 hover:rounded-lg hover:cursor-pointer"
+          >
+            - ${result[0].YearlyRanking.rankings[0]}
+          </p>
+
+     
+                 
+       `;
+    }
+    callAPi();
+  </script>
+  
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/yearlyRanking?id=6400e1fa72259fcd3f64181b"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ranking_2020").innerHTML = `
+
+      <div
+        class="flex flex-col lg:flex-row md:flex-row border-b-2 border-gray-300 pb-3 pt-3"
+      >
+        <h1 class="basis-2/12 text-orange-500 font-bold text-3xl">${result[0].YearlyRanking.year}</h1>
+        <div class="flex flex-col basis-10/12 text-mf m-auto">
+      <p
+            class="hover:bg-[#0369A1] hover:scale-105 hover:shadow-2xl hover:text-white hover:p-2 hover:rounded-lg hover:cursor-pointer"
+          >
+            - ${result[0].YearlyRanking.rankings[0]}
+          </p>
+
+     
+                 
+       `;
+    }
+    callAPi();
+  </script>
+  
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/yearlyRanking?id=6400e20172259fcd3f64181d"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ranking_2019").innerHTML = `
+
+      <div
+        class="flex flex-col lg:flex-row md:flex-row border-b-2 border-gray-300 pb-3 pt-3"
+      >
+        <h1 class="basis-2/12 text-orange-500 font-bold text-3xl">${result[0].YearlyRanking.year}</h1>
+        <div class="flex flex-col basis-10/12 text-mf m-auto">
+      <p
+            class="hover:bg-[#0369A1] hover:scale-105 hover:shadow-2xl hover:text-white hover:p-2 hover:rounded-lg hover:cursor-pointer"
+          >
+            - ${result[0].YearlyRanking.rankings[0]}
+          </p>
+
+     
+                 
+       `;
+    }
+    callAPi();
+  </script>
+    <!-- <script>
+      async function callAPi() {
         let result = await fetch("https://wdmc.onrender.com/timeline/get/all");
+
+       
         result = await result.json();
         timelist = [];
 
@@ -391,6 +535,6 @@
         document.getElementById("timeline").innerHTML = x;
       }
       callAPi();
-    </script>
+    </script> -->
   </body>
 </html>
