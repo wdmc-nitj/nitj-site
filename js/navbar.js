@@ -123,7 +123,7 @@ function navbarhelper(array,dropdown){
     const head = document.createElement('div')
     head.setAttribute('class','rounded-b-xl h-full overflow-clip  bg-accent hover:bg-orange-500 uppercase')
     head.setAttribute('id','head')
-    head.innerHTML=`<div class="p-2 text-center"><a href='/admin/index.html'>${array[0]}</a></div>`
+    head.innerHTML=`<div class="p-2 text-center">${array[0]}</div>`
 
     const listdiv = document.createElement('div')
     listdiv.setAttribute('class','h-full rounded-b-xl bg-white normal-case')
