@@ -321,18 +321,24 @@ fetch('https://wdmc.onrender.com/photoGallery/')
     rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
 
     let i = 0
-    let link_arr = []
+    let y = 1
     images.forEach((img, key) => {
       // img.image.link
       if (i > 2) {
         i = 0
       }
+      
       const imgContainer = document.createElement('div')
       imgContainer.classList.add('box')
       imgContainer.innerHTML = `
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
-      rows[i].append(imgContainer)
+        console.log(y)
+      if(y%4 == 0 && ( window.innerWidth <= 800 )){
+      }
+      else{
+        rows[i].append(imgContainer)
+      }
       imgContainer.addEventListener('click', (e) => {
         const imgSample = document.getElementById('sample-img')
 
@@ -340,6 +346,7 @@ fetch('https://wdmc.onrender.com/photoGallery/')
         showImg()
       })
       i++
+      y++
     })
     parentDiv.append(firstRow, secondRow, thirdRow)
   })
@@ -353,13 +360,26 @@ const arrow_forward = document.getElementById('arrow_forward')
 arrow_forward.addEventListener('click',(e)=>{
   const imgSample = document.getElementById('sample-img')
   const imgArray = document.getElementsByClassName('gallery-image')
-  for(var i=0;i<=11;i++){
-    if(imgArray[i].src == imgSample.src){
-      imgSample.src=imgArray[i+1].src;
-      break;
+  if(window.innerWidth<=800){
+    for(var i=0;i<=7;i++){
+      if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i+1].src;
+        break;
+      }
+      else if(i==7){
+        imgSample.src=imgArray[0].src;
+      }
     }
-    else if(i==11){
-      imgSample.src=imgArray[0].src;
+  }
+  else{
+    for(var i=0;i<=10;i++){
+      if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i+1].src;
+        break;
+      }
+      else if(i==10){
+        imgSample.src=imgArray[0].src;
+      }
     }
   }
 })
@@ -368,13 +388,26 @@ const arrow_back = document.getElementById('arrow_back')
 arrow_back.addEventListener('click',(e)=>{
   const imgSample = document.getElementById('sample-img')
   const imgArray = document.getElementsByClassName('gallery-image')
-  for(var i=11;i>=0;i--){
-    if(i==0){
-      imgSample.src=imgArray[11].src;
+  if(window.innerWidth<=800){
+    for(var i=8;i>=0;i--){
+      if(i==0){
+        imgSample.src=imgArray[8].src;
+      }
+      else if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i-1].src;
+        break;
+      }
     }
-    else if(imgArray[i].src == imgSample.src){
-      imgSample.src=imgArray[i-1].src;
-      break;
+  }
+  else{
+    for(var i=11;i>=0;i--){
+      if(i==0){
+        imgSample.src=imgArray[11].src;
+      }
+      else if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i-1].src;
+        break;
+      }
     }
   }
 })

@@ -1312,6 +1312,14 @@ sup {
   margin-top: 2.75rem;
 }
 
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[32rem\] {
+  margin-top: 32rem;
+}
+
 .block {
   display: block;
 }
