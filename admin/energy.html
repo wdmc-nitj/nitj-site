@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ICONS -->
+    <link rel="icon" type="image/x-icon" href="/public/assets/images/nitj-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS linking -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Center for Energy and Environment</title>
+    <style>
+        .bg-accent {
+            --tw-bg-opacity: 1;
+            background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(0, 0, 0, 0.3) 99.11%), url(./img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/common template/header.js" type="module"></script>
+    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-12" style="font-family: Poppins;">
+        <div>
+            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+                <p class="font2 font-bold text-[52px] lg:text-[80px] uppercase text-white leading-[1]">Academic Centers
+                </p>
+            </div>
+            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="https://nitj.netlify.app/"
+                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid cursor-pointer fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">Center for Energy and Environment</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="flex justify-center">
+            <button
+                class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <a href="https://www.nitj.ac.in/nitj_files/links/Preamble_CEE_61595.pdf"
+                    class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Preamble of cee
+                </a>
+            </button>
+            <div>
+                <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                    class="mx-2 border-2 border-green-400 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
+                    type="button">Board of Studies (BOS) Minutes <svg class="ml-2 w-4 h-4" aria-hidden="true"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg></button>
+
+                <div id="dropdown"
+                    class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                        <li>
+                            <a href="https://www.nitj.ac.in/nitj_files/links/6th_Internal_BOS_CEE_15_65513.pdf"
+                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">6th
+                                Meeting</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nitj.ac.in/nitj_files/links/5th_BOS_CEE_06_30939.pdf"
+                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">5th
+                                Meeting</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nitj.ac.in/nitj_files/links/4th_Internal_BOS_CEE_24_15208.pdf"
+                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">4th
+                                Meeting</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nitj.ac.in/nitj_files/links/3rd_internal_BOS_CEE_12_60322.pdf"
+                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">3th
+                                Meeting</a>
+                        </li>
+                    </ul>
+                </div>
+
+                </button>
+            </div>
+            <button
+                class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                <span
+                    class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    HOD : hcee@nitj.ac.in
+                </span>
+            </button>
+
+            <button
+                class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                <span
+                    class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Office : ocee@nitj.ac.in
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="mb-8" style="font-family: Poppins;">
+
+        <div class="overflow-x-auto relative mx-20">
+            <div class="w-full flex flex-col items-start my-6">
+                <p class="font2 font-semibold text-[28px] lg:text-[44px]">Faculty</p>
+                <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+            <table class="w-full text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr class=" bg-blue-50 ">
+                        <th scope="col" class="py-3 px-6">
+                            Name
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Designation
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Department
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Email ID
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Dr M K Jha
+                        </th>
+                        <td class="py-4 px-6">
+                            Professor (HAG) & Head
+                        </td>
+                        <td class="py-4 px-6">
+                            Centre for Energy and Environment
+                        </td>
+                        <td class="py-4 px-6">
+                            jhamk@nitj.ac.in
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="overflow-x-auto relative mx-20 mt-10">
+            <div class="w-full flex flex-col items-start my-6">
+                <p class="font2 font-semibold text-[28px] lg:text-[44px]">Associate Faculty</p>
+                <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
+            </div>
+            <table class=" w-full text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr class="bg-gray-200 ">
+                        <th scope="col" class="py-3 px-6">
+                            Name
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Designation
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Department
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Email ID
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Dr M K Jha
+                        </th>
+                        <td class="py-4 px-6">
+                            Professor (HAG) & Head
+                        </td>
+                        <td class="py-4 px-6">
+                            Centre for Energy and Environment
+                        </td>
+                        <td class="py-4 px-6">
+                            jhamk@nitj.ac.in
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Dr Renu Bansal
+                        </th>
+                        <td class="py-4 px-6">
+                            Associate Professor
+                        </td>
+                        <td class="py-4 px-6">
+                            Chemical Engineering
+                        </td>
+                        <td class="py-4 px-6">
+                            bansalr@nitj.ac.in
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Dr Sangeeta Garg
+                        </th>
+                        <td class="py-4 px-6">
+                            Associate Professor
+                        </td>
+                        <td class="py-4 px-6">
+                            Chemical Engineering
+                        </td>
+                        <td class="py-4 px-6">
+                            gargs@nitj.ac.in
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Dr Kiran Singh
+                        </th>
+                        <td class="py-4 px-6">
+                            Assistant Professor
+                        </td>
+                        <td class="py-4 px-6">
+                            Physics
+                        </td>
+                        <td class="py-4 px-6">
+                            singhkp@nitj.ac.in
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/common template/footer.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+</body>
+
+</html>

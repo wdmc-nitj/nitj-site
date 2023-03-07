@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ICONS -->
+    <link rel="icon" type="image/x-icon" href="/public/assets/images/nitj-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS linking -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Institute Instrumentation Center</title>
+    <style>
+        .bg-accent {
+            --tw-bg-opacity: 1;
+            background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(0, 0, 0, 0.3) 99.11%), url(./img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/common template/header.js" type="module"></script>
+    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
+        <div>
+            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+                <p class="font2 font-bold text-[32px] lg:text-[68px] uppercase text-white leading-[1]">ACADEMIC
+                    FACILITIES</p>
+            </div>
+            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="https://nitj.onrender.com/"
+                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <span class="text-lg font-medium ml-2">Home</span>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid cursor-pointer fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">Institute Instrumentation Center</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="m-2">
+            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <div class="w-full flex flex-col items-start">
+                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Institute Instrumentation Center
+                    </p>
+                    <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
+                </div>
+            </div>
+            <div class="my-8 scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <div class="border-2 border-black rounded-xl w-full">
+                    <div class="flex items-center justify-center gap-[20%] py-1 my-3 border-b-2">
+                        <span><img class="w-20" src="https://www.nitj.ac.in/nitj_files/links/nitj_18254.png"
+                                alt="..."></span>
+                        <span class="text-4xl text-orange-700 font-bold">Institute Instrumentation Center</span>
+                    </div>
+                    <div class="flex justify-center m-[4%] gap-0">
+                        <div class="flex flex-col mx-auto basis-1/6 my-2">
+                            <span id="home" onclick="handlesidenavbar('homeIIC')"
+                                class="border-l-2 border-t-2 border-b-2 border-blue-500 py-2 px-4 bg-blue-300 m-2 mr-0 cursor-pointer">Home</span>
+                            <span id="facilities" onclick="handlesidenavbar('facilitiesIIC')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Facilities</span>
+                            <span id="Proforma" onclick="handlesidenavbar('ProformaIIC')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Proforma</span>
+                            <span id="contact" onclick="handlesidenavbar('contactIIC')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Contact</span>
+                        </div>
+                        <div class="px-[8%] py-8 basis-5/6 border-2 border-blue-500 rounded-xl">
+                            <div id="homeIIC">
+                                <p class="text-justify text-lg">
+                                    <span>Institute Instrumentation Center has
+                                        been established with an aim to provide high end research
+                                        facilities to faculty/students/research scholars of the
+                                        institute. The analytical facilities of IIC are also extended to
+                                        the students, researchers and faculty members of other
+                                        Institutes and Organizations of the country as well.
+                                        Collaboration with Industries on R &amp; D and Consultancy
+                                        Projects are also welcome by the Institute.&nbsp;
+                                    </span>
+                                </p>
+                                <br>
+                                <p class="text-justify text-lg"><span>Institute Instrumentation Centre aims to -
+                                        &nbsp;</span></p>
+                                <br>
+                                <ul class="list-disc ml-8 text-justify text-lg">
+                                    <li><span>Provide facilities for
+                                            characterization, high- resolution imaging and precision
+                                            chemical analysis of different kinds of materials.</span>
+                                    </li>
+                                    <li><span>Dissipate knowledge and experience
+                                            in the above through short-term courses/seminar/workshops
+                                            etc.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="facilitiesIIC" class="hidden">
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a
+                                                href="https://www.nitj.ac.in/nitj_files/links/new_equipment_95000_32248.pdf">
+                                                <span class="text-orange-900 hover:underline">SIGMA 500VP Field
+                                                    Emission Scanning Electron Microscope with EDS and EBSD
+                                                    Sensors</span>&nbsp;
+                                                <span class="absolute pt-1"><img
+                                                        src="https://www.nitj.ac.in//images/New.gif"></span>
+                                            </a>
+                                            <br>
+                                            &nbsp;
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.nitj.ac.in/nitj_files/links/ICPMS-MS_(_AGILENT-8900_Series)_73977.pdf">
+                                                <span class="text-orange-900 hover:underline">ICPMS-MS &nbsp;(
+                                                    AGILENT-8900 Series)</span>&nbsp;
+                                                <span class="absolute pt-1"><img
+                                                        src="https://www.nitj.ac.in//images/New.gif"></span>
+                                            </a>
+                                            <br>
+                                            &nbsp;
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <h1 class="text-2xl font-bold mb-4">PAnalytical Empyrean XRD</h1>
+                                                <p class="text-justify">X-ray Diffraction (XRD) is a high-tech,
+                                                    non-destructive technique for analyzing a wide range of materials,
+                                                    including fluids, metals, minerals, polymers, catalysts, plastics,
+                                                    pharmaceuticals, thin-film coatings, ceramics, solar cells and
+                                                    semiconductors. Throughout industry and research institutions, XRD
+                                                    has become an indispensable method for materials investigation,
+                                                    characterization and quality control. Example areas of application
+                                                    include qualitative and quantitative phase analysis,
+                                                    crystallography, structure and relaxation determination, texture and
+                                                    residual stress investigations.</p>
+                                                <br>
+                                                <p class="text-justify">
+                                                    With the 3rd generation Empyrean, Malvern Panalytical has now
+                                                    redefined the concept of a multipurpose diffractometer: MultiCore
+                                                    Optics enable the largest variety of measurements without any manual
+                                                    intervention. <strong> Empyrean has the unique ability to measure
+                                                        all sample types - from powders to thin films, from
+                                                        nanomaterials to solid objects - on a single
+                                                        instrument.</strong> The world of materials science is
+                                                    constantly changing and the life of a high performance
+                                                    diffractometer is much longer than the typical horizon of any
+                                                    research project. With Empyrean, you are ready for anything the
+                                                    future holds.
+                                                </p>
+                                                <br>
+                                                <span class="flex items-center justify-center">
+                                                    <img alt=""
+                                                        src="https://www.nitj.ac.in/nitj_files/links/111_61031.jpg"
+                                                        class="w-48">
+                                                </span>
+                                                <br>
+                                                <div>
+                                                    <h1 class="text-xl font-semibold">Key Applications:</h1>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Academia</h2>
+                                                    <p class="text-justify">
+                                                        Get the best data for your publications with Empyrean; train and
+                                                        inspire your students. Acquisition of comprehensive information
+                                                        about a material is the key for successful research. Empyrean
+                                                        will give you the highest data quality, letting you see the
+                                                        finest details of your precious samples by performing
+                                                        non-destructive, cutting-edge characterization studies
+                                                    </p>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Energy storage/ batteries</h2>
+                                                    <p class="text-justify">
+                                                        Get a better understanding of your battery materials. Analysis
+                                                        of battery material using X-ray diffraction provides component
+                                                        phase purity and the crystallite size of anode and cathode
+                                                        compounds. Empyrean equipped with the GaliPIX3D detector also
+                                                        allows in situ and in operando measurements of long-lasting
+                                                        cells using hard X-radiation.
+                                                    </p>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Pharmaceuticals</h2>
+                                                    <p class="text-justify">
+                                                        Accomplish advanced characterization of your pharmaceuticals.
+                                                        X-ray powder diffraction, a rapid non-destructive analytical
+                                                        technique, is widely applied in drug discovery, formulation,
+                                                        stability testing and final product quality control. The proven
+                                                        and comprehensive method is available with 21 CFR Part 11 Audit
+                                                        Trail support. Empyrean can also perform in situ non- ambient
+                                                        analysis without manual intervention and high-throughput
+                                                        measurements on well-plates.
+                                                    </p>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Specialty chemicals</h2>
+                                                    <p class="text-justify">
+                                                        Assess crystal structure or structure-property relationship in
+                                                        crystalline and semi-crystalline compounds. Specialty chemicals,
+                                                        also referred to as effect or performance chemicals, are often
+                                                        custom-manufactured materials with unique properties or
+                                                        performance effects to materials or formulation. Empyrean can be
+                                                        used for a detailed phase identification and understanding of
+                                                        these valuable compounds.
+                                                    </p>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Forensics</h2>
+                                                    <p class="text-justify">
+                                                        Reveal the smallest traces of evidence. The use of
+                                                        non-destructive analytical instrumentation plays a key role in
+                                                        today’s forensic laboratories where full chain of custody and
+                                                        data control is desired across all stages of the process.
+                                                        Empyrean can provide information that is vital in criminal
+                                                        investigations and forensic science.
+                                                    </p>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Metals</h2>
+                                                    <p class="text-justify">
+                                                        Determine retained austenite, stress and texture during metal
+                                                        production. Process control and quality control in the metal
+                                                        industry - whether it concerns primary metals or special
+                                                        products - need rapid and accurate chemical analysis as well as
+                                                        microstructural characterization of metals and alloys. Empyrean
+                                                        can take care of these needs.
+                                                    </p>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Nanomaterials</h2>
+                                                    <p class="text-justify">
+                                                        Reveal dimensions and structures in all types of nanomaterials.
+                                                        X-ray scattering and diffraction are powerful and versatile
+                                                        nanometrology tools for the determination of nanoscale
+                                                        dimensions, shapes and structures, as well as the analysis of
+                                                        crystalline phases and local atomic structures. Empyrean
+                                                        delivers most accurate scattering data.
+                                                    </p>
+                                                    <br>
+                                                    <h2 class="text-lg font-medium mb-2">Thin film metrology</h2>
+                                                    <p class="text-justify">
+                                                        Get access to critical parameters of thin films ranging from
+                                                        ultra-thin single layers to complex multilayer stacks. X-ray
+                                                        diffraction and X-ray reflectivity can provide non-destructive,
+                                                        reliable and accurate data for the characterization of thin
+                                                        films. Empyrean enables the determination of ultra-fast
+                                                        reciprocal space maps, X-ray reflectivity and rocking curve
+                                                        analysis.
+                                                    </p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h1 class="text-3xl font-bold mb-4">XRD ANALYSIS SOFTWARE-HighScore:
+                                                </h1>
+                                                <h2 class="text-xl font-semibold">Features</h2><br>
+                                                <h2 class="text-lg font-medium mb-2">Comprehensive crystallographic
+                                                    analysis</h2>
+                                                <p>HighScore with the Plus option contains four classical indexing
+                                                    routines (Ito, Dicvol, Treor or McMaille). The unit cell refinement
+                                                    includes zero offset or sample displacement. The space group test is
+                                                    performed on either the full profile (Le Bail fit) or on indexed
+                                                    peaks. A Pawley fit to refine lattice parameters is another
+                                                    possibility.</p>
+                                                <br>
+                                                <p>Lattice and structure transformations as well as cell reductions are
+                                                    supported. An automatic standardization of non-standard space group
+                                                    settings is possible while loading such structure data.</p><br>
+                                                <p>The symmetry explorer tool contains the crystal symmetry, point- and
+                                                    Laue group, reflection conditions and special positions of all 230
+                                                    standard space groups. Additional data covers the about 150
+                                                    non-standard space groups used in the ICSD structure database.</p>
+                                                <br>
+                                                <h2 class="text-lg font-medium mb-2">Automatic classification or cluster
+                                                    analysis</h2>
+                                                <p class="text-justify">HighScore with the Plus option makes large volume data processing
+                                                    fast and easy. <br>
+                                                    Cluster analysis automatically sorts all scans of an experiment into
+                                                    closely related clusters and marks the most representative scan of
+                                                    each cluster, as well as outliers. This is useful for non-ambient
+                                                    experiments, mining samples and soil mapping, high-throughput
+                                                    screening campaigns and for monitoring the uniformity of industrial
+                                                    products.
+                                                    <br>
+                                                    A principal components analysis (PCA) helps to visualize the
+                                                    mathematically determined clusters. It shows confidence areas around
+                                                    each cluster.
+                                                    <br>
+                                                    The visual comparison of all scans in a cluster is possible as well
+                                                    as the distribution of clusters (on a measuring grid, on a well
+                                                    plate) is shown.
+                                                </p><br>
+                                                <h2 class="text-lg font-medium mb-2">Structure viewing</h2>
+                                                <p class="text-justify">With the 3D structure plotting functionality, you can choose the
+                                                    colors of atoms, polyhedral viewing, and shift, turn, roll and zoom
+                                                    the structure in order to obtain the best view.
+                                                </p><br>
+                                                <h2 class="text-lg font-medium mb-2">Structure solution</h2>
+                                                <p class="text-justify">
+                                                    HighScore with the Plus option supports the charge flipping
+                                                    algorithm and difference Fourier plots for determination of the
+                                                    crystal structure from powder diffraction data.
+                                                </p><br>
+                                                <h2 class="text-lg font-medium mb-2">Rietveld/structure refinements</h2>
+                                                <p class="text-justify">
+                                                    HighScore with the Plus option has many advantages for Rietveld
+                                                    refinements. <br><br>
+                                                    Automatic strategies and batches support the novice user to perform
+                                                    quantitative phase analysis, including the determination of an
+                                                    amorphous component. The refinement control displays a complete
+                                                    picture of all parameters, limits and constraints involved. <br> <br>
+                                                    Range checking and automatic or manual constraints ensure the
+                                                    stability and reproducibility of the refinements. No parameter
+                                                    turn-on sequence is required, the proprietary solver takes care of
+                                                    this. <br> <br>
+                                                    Three profile functions including a true Voigt function are
+                                                    supported, which is especially important for crystallite
+                                                    size-microstrain determinations. Le Bail fits are possible and
+                                                    hkl-phase fits support the inclusion of unknown structure phases.
+                                                    The 'superflip' algorithm by L. Palatinus is included to solve
+                                                    crystal structures from high-quality powder data.
+                                                </p><br>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="ProformaIIC" class="hidden">
+                                <ul class="list-disc">
+                                    <li>
+                                        <a class="text-lg hover:underline text-orange-900"
+                                            href="	https://www.nitj.ac.in/nitj_files/links/Notification_Revision_of_FESEM__XRD_System)_25_77620.pdf">User
+                                            Charges for FESEM and XRD
+                                            <span class="absolute pt-1 pl-2">
+                                                <img src="https://www.nitj.ac.in//images/New.gif">
+                                            </span>
+                                        </a>
+                                        <br>
+                                        &nbsp;
+                                    </li>
+                                    <li>
+                                        <a class="text-lg hover:underline text-orange-900"
+                                            href="https://www.nitj.ac.in/nitj_files/links/FESEM_proforma_78762.pdf">Field
+                                            Emission Scanning Electron Microscope (FESEM) Proforma
+                                            <span class="absolute pt-1 pl-2">
+                                                <img src="https://www.nitj.ac.in//images/New.gif">
+                                            </span>
+                                        </a>
+                                        <br>
+                                        &nbsp;
+                                    </li>
+                                    <li>
+                                        <a class="text-lg hover:underline text-orange-900"
+                                            href="https://www.nitj.ac.in/nitj_files/links/XRD_proforma_14536_41790.pdf">Empyrean
+                                            Powder XRD Proforma
+                                            <span class="absolute pt-1 pl-2">
+                                                <img src="https://www.nitj.ac.in//images/New.gif">
+                                            </span>
+                                        </a>
+                                        <br>
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="contactIIC" class="hidden">
+                                <span>
+                                    <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/83"><span
+                                            class="text-lg" style="color:#B22222"><strong>Dr Raman Bedi</strong></span>
+                                    </a><br>
+                                    <span style="color:#000000">Head, IIC<br>
+                                        <strong>Email:</strong>&nbsp;bedir@nitj.ac.in
+                                    </span><br>
+                                    <br>
+                                    <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/185">
+                                        <span class="text-lg" style="color:#B22222"><strong>Dr Anjireddy
+                                                Bhavanam</strong></span>
+                                    </a><br>
+                                    <span class="text-lg" style="color:#000000">Coordinator<br>
+                                        <strong>Email:&nbsp;</strong>bhavanama@nitj.ac.in
+                                    </span><br>
+                                    <br>
+                                    <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/150">
+                                        <span class="text-lg" style="color:#B22222"><strong>Dr Vickram Jeet
+                                                Singh</strong></span>
+                                    </a><br>
+                                    <span style="color:#000000">Co-coordinator<br>
+                                        <strong>Email:&nbsp;</strong>singhvj@nitj.ac.in
+                                    </span></span><br>
+                                <br>
+                                <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/150">
+                                    <span class="text-lg" style="color:#B22222"><strong>Dr Sathiya S</strong></span>
+                                </a><br>
+                                <span style="color:#000000">Co-coordinator<br>
+                                    <strong>Email:&nbsp;</strong>sathiya@nitj.ac.in
+                                </span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/common template/footer.js"></script>
+</body>
+<script>
+    const home = document.getElementById('homeIIC');
+    const home1 = document.getElementById('home');
+    const facilities = document.getElementById('facilitiesIIC');
+    const facilities1 = document.getElementById('facilities');
+    const Proforma = document.getElementById('ProformaIIC');
+    const Proforma1 = document.getElementById('Proforma');
+    const contact = document.getElementById('contactIIC');
+    const contact1 = document.getElementById('contact');
+    function handlesidenavbar(a) {
+        if (a == 'homeIIC') {
+            if (home.classList.contains('hidden')) {
+                home.classList.toggle('hidden');
+                home1.classList.toggle('border-blue-500')
+                home1.classList.toggle('bg-blue-300')
+            }
+            if (!facilities.classList.contains('hidden')) {
+                facilities.classList.toggle('hidden');
+                facilities1.classList.toggle('border-blue-500');
+                facilities1.classList.toggle('bg-blue-300');
+            }
+            if (!Proforma.classList.contains('hidden')) {
+                Proforma.classList.toggle('hidden');
+                Proforma1.classList.toggle('border-blue-500')
+                Proforma1.classList.toggle('bg-blue-300')
+            }
+            if (!contact.classList.contains('hidden')) {
+                contact.classList.toggle('hidden');
+                contact1.classList.toggle('border-blue-500')
+                contact1.classList.toggle('bg-blue-300')
+            }
+        }
+        else if (a == 'facilitiesIIC') {
+            if (!home.classList.contains('hidden')) {
+                home.classList.toggle('hidden');
+                home1.classList.toggle('border-blue-500');
+                home1.classList.toggle('bg-blue-300');
+            }
+            if (facilities.classList.contains('hidden')) {
+                facilities.classList.toggle('hidden');
+                facilities1.classList.toggle('border-blue-500');
+                facilities1.classList.toggle('bg-blue-300');
+            }
+            if (!Proforma.classList.contains('hidden')) {
+                Proforma.classList.toggle('hidden');
+                Proforma1.classList.toggle('border-blue-500')
+                Proforma1.classList.toggle('bg-blue-300')
+            }
+            if (!contact.classList.contains('hidden')) {
+                contact.classList.toggle('hidden');
+                contact1.classList.toggle('border-blue-500')
+                contact1.classList.toggle('bg-blue-300')
+            }
+        }
+        else if (a == 'ProformaIIC') {
+            if (!home.classList.contains('hidden')) {
+                home.classList.toggle('hidden');
+                home1.classList.toggle('border-blue-500');
+                home1.classList.toggle('bg-blue-300');
+            }
+            if (!facilities.classList.contains('hidden')) {
+                facilities.classList.toggle('hidden');
+                facilities1.classList.toggle('border-blue-500')
+                facilities1.classList.toggle('bg-blue-300')
+            }
+            if (Proforma.classList.contains('hidden')) {
+                Proforma.classList.toggle('hidden');
+                Proforma1.classList.toggle('border-blue-500')
+                Proforma1.classList.toggle('bg-blue-300')
+            }
+            if (!contact.classList.contains('hidden')) {
+                contact.classList.toggle('hidden');
+                contact1.classList.toggle('border-blue-500')
+                contact1.classList.toggle('bg-blue-300')
+            }
+        }
+        else if (a == 'contactIIC') {
+            if (!home.classList.contains('hidden')) {
+                home.classList.toggle('hidden');
+                home1.classList.toggle('border-blue-500');
+                home1.classList.toggle('bg-blue-300');
+            }
+            if (!facilities.classList.contains('hidden')) {
+                facilities.classList.toggle('hidden');
+                facilities1.classList.toggle('border-blue-500')
+                facilities1.classList.toggle('bg-blue-300')
+            }
+            if (!Proforma.classList.contains('hidden')) {
+                Proforma.classList.toggle('hidden');
+                Proforma1.classList.toggle('border-blue-500')
+                Proforma1.classList.toggle('bg-blue-300')
+            }
+            if (contact.classList.contains('hidden')) {
+                contact.classList.toggle('hidden');
+                contact1.classList.toggle('border-blue-500')
+                contact1.classList.toggle('bg-blue-300')
+            }
+        }
+    }
+</script>
+
+</html>

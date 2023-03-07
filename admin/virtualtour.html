@@ -87,19 +87,19 @@
 </head>
 
 <body>
-    <script src="../common template/header.js"></script>
+    <script src="/common template/header.js" type="module"></script>
 
-    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
-        <div>
-            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
                 <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Virtual Tour</p>
             </div>
-            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center">
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
                     <li class="inline-flex items-center">
-                        <a href=""
-                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
                         </a>
                     </li>
                     <li aria-current="page">
@@ -112,8 +112,11 @@
                 </ol>
             </nav>
         </div>
-
-        <iframe class="w-[85vw] h-[65vh] m-auto shadow-lg rounded-lg shadow-gray-700 " src="https://www.youtube.com/embed/fd2hUOmm8kA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <p> Code by Bhavya Mittal </p> -->
+        <iframe class="w-[85vw] h-[65vh] m-auto shadow-lg rounded-lg shadow-gray-700 "
+            src="https://www.youtube.com/embed/fd2hUOmm8kA" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 
     </div>
 

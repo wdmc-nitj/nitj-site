@@ -16,6 +16,7 @@ fetch(`${baseURL}/news/`)
     //     </p>
     //   </div>
     // </div>
+    console.log(data)
     const newsCards = document.getElementById('news-cards')
     data.forEach((news) => {
       const newsCard = document.createElement('div')
@@ -24,12 +25,14 @@ fetch(`${baseURL}/news/`)
         'rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200'
       )
       newsCard.innerHTML = `
-            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
-              <p class="w-full text-lg font-semibold line-clamp-1">${news.title}</p>
-              <p class="w-full line-clamp-2">
-                ${news.desc}
-              </p>
-            </div>
+            <a href="/template/index.html?id=${news._id}?category=news">
+              <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+                <p class="w-full text-lg font-semibold line-clamp-1">${news.title}</p>
+                <p class="w-full line-clamp-2">
+                  ${news.desc}
+                </p>
+              </div>
+            </a>
       `
       newsCards.appendChild(newsCard)
     })
@@ -97,8 +100,11 @@ function dateManipulator(data) {
 fetch(`${baseURL}/latestEvent/get/all`)
   .then((response) => response.json())
   .then((data) => {
+    let i = 6
     const cards = document.getElementById('cards')
     data.forEach((e) => {
+      i--
+      if (i <= 0) return
       const card = document.createElement('div')
       card.setAttribute('id', 'card')
       card.setAttribute('class', 'min-h-full')
@@ -275,3 +281,161 @@ fetch(`${baseURL}/ranking/get/all`)
       element.appendChild(stat)
     })
   })
+
+fetch('https://wdmc.onrender.com/publication/get/all')
+  .then((res) => res.json())
+  .then((data) => {
+    const parentDiv = document.getElementById('publication-cards')
+    data.forEach((e) => {
+      const content = e.Publication
+      const div = document.createElement('div')
+      div.setAttribute('id', 'publication-card')
+      div.innerHTML = `  
+      <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
+            <p>
+            ${content.authors} 
+            <br>
+             ${content.desc}
+            </p>
+            <a href="${content.url}"
+              class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
+              More Details
+            </a>
+          </div>`
+      e.show && parentDiv.appendChild(div)
+    })
+  })
+
+// Fetching the images in the photo gallery
+
+fetch('https://wdmc.onrender.com/photoGallery/')
+  .then((res) => res.json())
+  .then((data) => {
+    const images = data
+    console.log(data)
+    const parentDiv = document.getElementById('gallery')
+    const firstRow = document.createElement('div')
+    const secondRow = document.createElement('div')
+    const thirdRow = document.createElement('div')
+    const rows = [firstRow, secondRow, thirdRow]
+    rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
+
+    let i = 0
+    let y = 1
+    images.forEach((img, key) => {
+      // img.image.link
+      if (i > 2) {
+        i = 0
+      }
+      
+      const imgContainer = document.createElement('div')
+      imgContainer.classList.add('box')
+      imgContainer.innerHTML = `
+        <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
+        `
+        console.log(y)
+      if(y%4 == 0 && ( window.innerWidth <= 800 )){
+      }
+      else{
+        rows[i].append(imgContainer)
+      }
+      imgContainer.addEventListener('click', (e) => {
+        const imgSample = document.getElementById('sample-img')
+
+        imgSample.src = e.srcElement.currentSrc
+        showImg()
+      })
+      i++
+      y++
+    })
+    parentDiv.append(firstRow, secondRow, thirdRow)
+  })
+
+const crossbutton = document.getElementById('crossbutton')
+      crossbutton.addEventListener('click',(e) => {
+        showImg()
+    })
+
+const arrow_forward = document.getElementById('arrow_forward')
+arrow_forward.addEventListener('click',(e)=>{
+  const imgSample = document.getElementById('sample-img')
+  const imgArray = document.getElementsByClassName('gallery-image')
+  if(window.innerWidth<=800){
+    for(var i=0;i<=7;i++){
+      if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i+1].src;
+        break;
+      }
+      else if(i==7){
+        imgSample.src=imgArray[0].src;
+      }
+    }
+  }
+  else{
+    for(var i=0;i<=10;i++){
+      if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i+1].src;
+        break;
+      }
+      else if(i==10){
+        imgSample.src=imgArray[0].src;
+      }
+    }
+  }
+})
+
+const arrow_back = document.getElementById('arrow_back')
+arrow_back.addEventListener('click',(e)=>{
+  const imgSample = document.getElementById('sample-img')
+  const imgArray = document.getElementsByClassName('gallery-image')
+  if(window.innerWidth<=800){
+    for(var i=8;i>=0;i--){
+      if(i==0){
+        imgSample.src=imgArray[8].src;
+      }
+      else if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i-1].src;
+        break;
+      }
+    }
+  }
+  else{
+    for(var i=11;i>=0;i--){
+      if(i==0){
+        imgSample.src=imgArray[11].src;
+      }
+      else if(imgArray[i].src == imgSample.src){
+        imgSample.src=imgArray[i-1].src;
+        break;
+      }
+    }
+  }
+})
+
+function showImg(){
+  // const body = document.getElementsByTagName('body')
+  const big_viewer = document.getElementById('big-viewer')
+  const imgSample = document.getElementById('sample-img')
+  const crossbutton = document.getElementById('crossbutton')
+  const arrow_forward = document.getElementById('arrow_forward')
+  const arrow_back = document.getElementById('arrow_back')
+  if(imgSample.classList.contains("hidden")){
+    document.body.classList.add("overflow-hidden")
+    big_viewer.classList.remove("hidden")
+    imgSample.classList.remove("hidden")
+    crossbutton.classList.remove("hidden")
+    arrow_forward.classList.remove("hidden")
+    arrow_back.classList.remove("hidden")
+  }
+  else{
+    document.body.classList.remove("overflow-hidden")
+    big_viewer.classList.add("hidden")
+    imgSample.classList.add("hidden")
+    crossbutton.classList.add("hidden")
+    arrow_forward.classList.add("hidden")
+    arrow_back.classList.add("hidden")
+  }
+}
+// function hideT{his(e) {
+//   e.querySelector('img').src = ''
+// }

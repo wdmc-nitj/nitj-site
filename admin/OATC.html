@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ICONS -->
+    <link rel="icon" type="image/x-icon" href="/public/assets/images/nitj-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS linking -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Online Application for Transcripts and Other
+        Certificates</title>
+    <style>
+        .bg-accent {
+            --tw-bg-opacity: 1;
+            background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
+        }
+        .titlebg {
+            background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(0, 0, 0, 0.3) 99.11%), url(./img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/common template/header.js" type="module"></script>
+    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
+        <div>
+            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+                <p class="font-bold text-[52px] lg:text-[80px] uppercase text-white leading-[1]">Academic services</p>
+            </div>
+            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="https://nitj.netlify.app/"
+                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid cursor-pointer fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">Online Application for Transcripts and Other
+                                Certificates</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <div class='m-2'>
+            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <div class="w-full flex flex-col items-start">
+                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Instructions for Verification Agencies:</p>
+                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                </div>
+            </div>
+            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px] my-4">
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">​Instructions for Verification of Degree</span>
+                        <span id="oatc11-btn" onclick="handletoggleOatc('oatc11-btn','oatc11-btn2','oatc11');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc11-btn2" onclick="handletoggleOatc('oatc11-btn','oatc11-btn2','oatc11');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc11" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Verification of Degree and/or Certificates, JEE
+                                Rank, Membership of Institute bodies</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <h1 class="my-4 text-lg font-medium">Only for Verification Agencies:</h1>
+                        <a href="#" class="hover:underline">
+                            <li class="px-2 text-red-500"> Application Form for Verification of Degree/Certificates</li>
+                        </a>
+                        <div class="my-6">
+                            <h1 class="my-4 text-lg font-medium">VERIFICATION:</h1>
+                            <p class="text-justify px-2">
+                                An agency willing to verify the academic record of a student, who is a graduate from
+                                National Institute of Technology Jalandhar, can do so by sending an application on the
+                                firm’s Letter head mentioning the Purpose of the verification along with following
+                                enclosures:<br>
+                                &nbsp;&nbsp;i) Xerox copy of the certificate(s) to be verified<br>
+                                &nbsp;&nbsp;ii) Signed authorization from the candidate<br>
+                                <br>
+                            </p>
+                        </div>
+                        <div class="my-6">
+                            <h1 class="my-4 text-lg font-medium">Processing Fee for Verification:</h1>
+                            <p class="text-justify px-2">
+                                (1) Verification from Police, Government Agencies & Vigilance Clearance (CID & other
+                                intelligence agencies): NIL<br><br>
+                                (2) Any other Agency/Person:
+                            </p>
+                            <br>
+                            <p class="text-justify px-1">
+                                In India: <strong>Rs. 2,000</strong> (inclusive of Postal Charges), for each individual
+                                verification.<br><br>
+                                In Abroad: <strong> $100</strong> (inclusive of Postal Charges), for each individual
+                                verification
+                            </p>
+                        </div>
+                        <br>
+                        <div class="my-6">
+                            <h1 class="my-4 text-lg font-medium">Contact Details:</h1>
+                            <span style="color:#B22222"><em><strong>Assistant Registrar
+                                        (Academic)</strong></em></span><br>
+                            <strong><em><em>Dr.</em></em></strong><strong><em><em>&nbsp;B.R. Ambedkar National
+                                        Institute of Technology</em><br>
+                                    <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                    <em>Phone: 0181-2690302, 2690603</em><br>
+                                    <em>Email:&nbsp;</em></em></strong><span
+                                style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                            <br>
+                            May kindly note that it takes an average 15 working days from the day of receiving the
+                            above documents to process an application (this excludes postal time).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="m-2">
+            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <div class="w-full flex flex-col items-start">
+                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Instructions for Students:</p>
+                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                </div>
+            </div>
+            <div class="scroll-mt-32 flex flex-col px-4 lg:px-[11%] gap-[12px] lg:gap-[20px] my-4">
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Transcript</span>
+                        <span id="oatc21-btn" onclick="handletoggleOatc('oatc21-btn','oatc21-btn2','oatc21');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc21-btn2" onclick="handletoggleOatc('oatc21-btn','oatc21-btn2','oatc21');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc21" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Issue of Transcript</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p> </p>
+                            <ul class="list-decimal ml-8">
+                                <li><span style="color:#000000">Transcript</span><span style="color:#000000"> is
+                                        basically a verified Xerox copy of Original/ Duplicate Grade-sheet packed and
+                                        sealed in an envelope. It is prepared from Original/ Duplicate Grade- Sheet
+                                        which is normally provided by the student.</span><br>
+                                    &nbsp;</li>
+                                <li><span style="color:#000000">Transcripts are issued on payment of </span><span
+                                        style="color:#000000">fee</span><span style="color:#000000"> as mentioned
+                                        below:</span></li>
+                            </ul>
+                            <br>
+                            <p style="margin-left:.5in"><span style="color:#000000"><strong>For the 1<sup>st</sup>
+                                        Transcript:</strong></span></p>
+
+                            <p class="my-1" style="margin-left:.5in"><span style="color:#000000">In India: Rs. 1,000/- (inclusive of
+                                    Postal Charges)</span></p>
+
+                            <p style="margin-left:.5in"><span style="color:#000000">In Abroad: US $50/- (inclusive of
+                                    Postal Charges)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </p>
+                            <br>
+                            <p style="margin-left:.5in"><span style="color:#000000"><strong>More than 1
+                                        Transcript:</strong></span></p>
+
+                            <p class="my-1" style="margin-left:.5in"><span style="color:#000000">In India: Rs. 500/- per
+                                    Transcript&nbsp;(inclusive of Postal Charges)&nbsp;</span></p>
+
+                            <p style="margin-left:.5in"><span style="color:#000000">In Abroad: US $20/- per Transcript
+                                    (inclusive of Postal Charges)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </p>
+                            <br>
+                            <ol class="list-decimal ml-8 pl-2">
+                                <li><span style="color:#000000">If the student is unable to provide Original/ Duplicate
+                                        Grade-Sheet due to any reason(s), s/he can request for the issue of Duplicate
+                                        Grade-Sheet by providing following details:<br>
+                                        <br>
+                                        a) Name of the Student<br>
+                                        b) Date of birth<br>
+                                        c) Roll No.<br>
+                                        d) Year of Graduation<br>
+                                        e) Programme of study<br>
+                                        f) Department of study<br>
+                                        g) Fulfilling all the requirement for the issue of duplicate grade sheet<br>
+                                        <br>
+                                        Duplicate Grade-sheet is issued on payment of charges mentioned below per card
+                                        (in addition to</span><span style="color:#000000">above mentioned</span><span
+                                        style="color:#000000"> Transcript charges):</span></li>
+                            </ol>
+
+                            <p class="my-2" style="margin-left:.5in"><span style="color:#000000">In India: Rs.2,000/- (inclusive of
+                                    Postal Charges)</span></p>
+
+                            <p style="margin-left:.5in"><span style="color:#000000">In Abroad: US$100/- (inclusive of
+                                    Postal Charges)</span>
+                            </p>
+                            <br>
+                            <ol class="list-decimal ml-8">
+                                <li><span style="color:#000000">The Transcript shall be packed in a single and sealed
+                                        envelope.</span></li>
+                            </ol>
+
+                            <p style="margin-left:.5in">&nbsp;</p>
+
+                            <p><span style="color:#000000"><strong>Contact Details:</strong>&nbsp;</span><br>
+                                <br>
+                                <span style="color:#B22222"><strong><em>Assistant Registrar
+                                            (Academic)</em></strong></span>
+                            </p>
+
+                            <p><strong><em><span style="color:#000000">Dr.</span></em></strong><span
+                                    style="color:#000000"><strong><em> B.R. Ambedkar National Institute of
+                                            Technology<br>
+                                            G.T. Road, By-Pass Jalandhar-144011(Punjab) India<br>
+                                            Phone: 0181-2690302, 2690603<br>
+                                            Email:&nbsp;</em></strong></span><span
+                                    style="color:#B22222"><strong><em>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</em></strong></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 15 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).&nbsp;<br>
+                                    <br>
+                                    <strong>Note:</strong>&nbsp;Students who have received the final degree(s) from Guru
+                                    Nanak Dev University, Amritsar and Punjab Technical University, Jalandhar, they are
+                                    advised to contact the concerned universities for issuing of transcripts through NIT
+                                    Jalandhar for verification.</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Duplicate Degree</span>
+                        <span id="oatc22-btn" onclick="handletoggleOatc('oatc22-btn','oatc22-btn2','oatc22');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc22-btn2" onclick="handletoggleOatc('oatc22-btn','oatc22-btn2','oatc22');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc22" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Issue of Duplicate Degree Certificate</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p> </p>
+                            <p><span style="color:#000000">The duplicate Degree certificate is issued only if the
+                                    original Degree certificate is really lost or stolen.&nbsp;<br>
+                                    <br>
+                                    <strong>PROCEDURE:</strong><br>
+                                    <br>
+                                    The following procedure is to be adopted by the candidate for getting a duplicate
+                                    Degree</span><span style="color:#000000">be</span><span style="color:#000000">
+                                    issued from NIT Jalandhar:&nbsp;</span><br>
+                                &nbsp;</p>
+
+                            <ul class="list-decimal ml-8">
+                                <li><span style="color:#000000"> A student has to register an FIR on </span><span
+                                        style="color:#000000">loss</span><span style="color:#000000"> of detailed Marks
+                                        Card/Semester Grade Report and Degree.</span><br>
+                                    &nbsp;</li>
+                                <li><span style="color:#000000"> To advertise the loss in a National Daily after waiting
+                                        for 15 days should apply with a copy of the newspaper cutting.</span><br>
+                                    &nbsp;</li>
+                                <li><span style="color:#000000">To submit an affidavit on Non-Judicial Stamp paper of
+                                        Rs.10/- (see specimen).</span><br>
+                                    &nbsp;</li>
+                                <li><span style="color:#000000">To deposit/remit requisite fee in cash to the Cashier or
+                                        through Bank Draft in favour of Registrar, NIT Jalandhar.</span><br>
+                                    &nbsp;</li>
+                                <li><span style="color:#000000">Write an application addressed to “The Assistant
+                                        Registrar (Academics), NIT Jalandhar” mentioning the loss of your degree and
+                                        reference of </span><span style="color:#000000">above</span><span
+                                        style="color:#000000"> documents.</span><br>
+                                    &nbsp;</li>
+                                <li><span style="color:#000000">Attach a Xerox copy of the original Degree conferred on
+                                        you by NIT Jalandhar (if available).</span><br>
+                                    &nbsp;</li>
+                            </ul>
+
+                            <p><span style="color:#000000">Duplicate Degree certificate will be issued by the Institute
+                                    which will bear the Date of Re-Issue and the duplicate degree will be prepared as
+                                    such as original and will carry the signatures of the authorities at the time of
+                                    re-issuing the Duplicate Degree Certificate.</span></p>
+
+                            <p><span style="color:#000000">&nbsp;<br>
+                                    <strong>PAYMENT OF CHARGES:</strong><br><br>
+                                    In India: Rs.2,000/- (inclusive of Postal Charges)</span></p>
+
+                            <p class="my-1"><span style="color:#000000">In Abroad: US$100/- (inclusive of Postal
+                                    Charges)</span><br>
+                                <br>
+                                <span style="color:#000000"><strong>Contact Details :</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><strong><em>Assistant Registrar
+                                            (Academic)</em></strong></span><br>
+                                <strong><em><span style="color:#000000">Dr.</span></em></strong><span
+                                    style="color:#000000"><strong><em> B.R. Ambedkar National Institute of
+                                            Technology</em></strong><br>
+                                    <strong><em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em></strong><br>
+                                    <strong><em>Phone: 0181-2690302, 2690603</em></strong><br>
+                                    <strong><em>Email:&nbsp;</em></strong></span><span
+                                    style="color:#B22222"><strong><em>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</em></strong></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 40 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Original Degree</span>
+                        <span id="oatc23-btn" onclick="handletoggleOatc('oatc23-btn','oatc23-btn2','oatc23');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc23-btn2" onclick="handletoggleOatc('oatc23-btn','oatc23-btn2','oatc23');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc23" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Issue of Original Degree Certificate</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p> </p>
+                            <p><span style="color:#000000">Those students who have not yet collected the original Degree
+                                    certificate from the date of their convocation till date from the </span><span
+                                    style="color:#000000">Institute, may collect their Degree certificates by submitting
+                                    the NO-DUES certificate and scanned/Xerox copies of DMCs.&nbsp;<br>
+                                    <br>
+                                    <strong>PROCESSING&nbsp;CHARGES :<br>
+                                        <br>
+                                        In Person: NIL</strong><br>
+                                    <br>
+                                    If the student is unable to collect the Degree certificate in person from the
+                                    Assistant Registrar(Academics) office, Institute can post the same at his/ her
+                                    requested address (only within India) on payment of Rs. 1000/- towards
+                                    processing&nbsp;charges to be sent in India and US $50/- (outside
+                                    India).&nbsp;</span><br>
+                                <br>
+                                <span style="color:#000000"><strong>Contact Details :</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 30 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Duplicate Grade Sheet </span>
+                        <span id="oatc24-btn" onclick="handletoggleOatc('oatc24-btn','oatc24-btn2','oatc24');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc24-btn2" onclick="handletoggleOatc('oatc24-btn','oatc24-btn2','oatc24');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc24" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Issue of Duplicate Grade Sheet</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p> </p>
+                            <p><span style="color:#000000">A duplicate grade-sheet can normally be requested at any
+                                    stage of study i.e. during </span><span style="color:#000000">study</span><span
+                                    style="color:#000000"> at NIT Jalandhar or after graduating from NIT
+                                    Jalandhar.&nbsp;<br>
+                                    <br>
+                                    <strong>PROCEDURE:</strong><br>
+                                    <br>
+                                    Lodge an FIR (First Information Report) for the same to the nearest Police Station
+                                    (</span><span style="color:#000000">copy</span><span style="color:#000000"> thereof
+                                    be attached with the request).&nbsp;<br>
+                                    <br>
+                                    <strong>PROCESSING FEE:</strong><br>
+                                    <br>
+                                    A student has to pay the processing fee as per below rate:</span></p>
+
+                            <p class="my-2"><span style="color:#000000">In India: Rs. 2,000/ (inclusive of Postal
+                                    Charges)</span></p>
+
+                            <p><span style="color:#000000">In Abroad: US $100/- (inclusive of Postal
+                                    Charges)&nbsp;</span><br>
+                                <br>
+                                <br>
+                                <span style="color:#000000"><strong>Contact Details :</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 30 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Migration Certificate</span>
+                        <span id="oatc25-btn" onclick="handletoggleOatc('oatc25-btn','oatc25-btn2','oatc25');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc25-btn2" onclick="handletoggleOatc('oatc25-btn','oatc25-btn2','oatc25');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc25" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Migration Certification/Registration Card</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p><span style="color:#000000"><strong>MIGRATION CERTIFICATE:</strong><br>
+                                    <br>
+                                    Institute can issue a certificate (only one original) stating above matter and that
+                                    it has No- Objection if the requested student (with student details) who</span><span
+                                    style="color:#000000">has</span><span style="color:#000000"> completed a programme
+                                    (with Programme details) from the Institute to pursue further studies in any other
+                                    Institute/ University.&nbsp;<br>
+                                    <br>
+                                    <strong>PAYMENT OF CHARGES:</strong></span><br>
+                                <br>
+                                <span style="color:#000000">Candidate</span><span style="color:#000000"> has to pay the
+                                    processing fee as mentioned below:</span>
+                            </p>
+
+                            <p class="my-2"><span style="color:#000000"><strong>In person: </strong>Rs. 1,000/-</span>
+                            </p>
+
+                            <p><span style="color:#000000"><strong>In absentia:</strong></span></p>
+
+                            <p class="my-1"><span style="color:#000000">&nbsp;In India: Rs. 1,000/- (inclusive of Postal
+                                    Charges)</span></p>
+
+                            <p><span style="color:#000000">In Abroad: US $50/- (inclusive of Postal Charges)</span><br>
+                                <br>
+                                <br>
+                                <strong style="color:rgb(0, 0, 0)">Contact Details :</strong><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 15 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Medium of Instruction
+                            Certificate</span>
+                        <span id="oatc26-btn" onclick="handletoggleOatc('oatc26-btn','oatc26-btn2','oatc26');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc26-btn2" onclick="handletoggleOatc('oatc26-btn','oatc26-btn2','oatc26');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc26" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Certificate of Medium of Instruction</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p>
+                                <span style="color:#000000">The Institute has already issued a generalized <a
+                                        class="text-red-600 hover:underline"
+                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/index/43">Certificate for
+                                        Medium of Instruction</a> on the website of Institute. However, the Institute
+                                    can issue only one such certificate to a candidate if s/he wants to obtain
+                                    individual certificate mentioning his details.
+                                </span>
+                            </p>
+                            <br>
+                            <p><span style="color:#000000"><strong>PAYMENT OF CHARGES:</strong></span></p>
+                            <br>
+                            <p><span style="color:#000000">Candidate</span><span style="color:#000000"> has to pay the
+                                    processing fee as mentioned below:</span></p>
+
+                            <p class="my-2"><span style="color:#000000"><strong>In person: </strong>Rs. 200/-</span></p>
+
+                            <p><span style="color:#000000"><strong>In absentia:</strong></span></p>
+
+                            <p class="my-1"><span style="color:#000000">In India: Rs. 500/- (inclusive of Postal
+                                    Charges)</span></p>
+
+                            <p><span style="color:#000000">In Abroad: US$50/- (inclusive of Postal Charges)</span><br>
+                                <br>
+                                <br>
+                                <span style="color:#000000"><strong>Contact Details:</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 07 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Bonafide Certificates</span>
+                        <span id="oatc27-btn" onclick="handletoggleOatc('oatc27-btn','oatc27-btn2','oatc27');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc27-btn2" onclick="handletoggleOatc('oatc27-btn','oatc27-btn2','oatc27');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc27" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Bonafide Certificate</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p><span style="color:#000000">A Bonafide certificate indicates that a
+                                    student&nbsp;<em>(with his/ her details)</em>&nbsp;is currently
+                                    registered&nbsp;<em>(with semester details)</em>&nbsp;and studying in this Institute
+                                    in an academic programme&nbsp;<em>(with programme and department
+                                        details)</em>.&nbsp;For the students studying in the Institute, Bonafide
+                                    Certificate is issued free of cost. However, pass out students can also apply for
+                                    Bonafide Certificate if they require such certificate that s/he was registered in
+                                    the Institute and completed his course in an academic programme&nbsp;<em>(with
+                                        programme and department details).</em><br>
+                                    <br>
+                                    <strong>PROCESSING&nbsp;CHARGES:</strong><br>
+                                    <br>
+                                    If the student or his/ her representative is unable to collect the certificate in
+                                    person from the Assistant Registrar (Academics) office, Institute can post the same
+                                    at his/ her requested address on payment of:</span><br>
+                                <br>
+                                <span style="color:#000000">For</span><span style="color:#000000"> pass out
+                                    students:</span>
+                            </p>
+
+                            <p class="my-1"><span style="color:#000000">In India: Rs. 500/- (inclusive of Postal
+                                    Charges)</span></p>
+
+                            <p><span style="color:#000000">In Abroad: US$50/- (inclusive of Postal Charges)</span></p>
+
+                            <p><br>
+                                <span style="color:#000000"><strong>Contact Details:</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 5 working days from
+                                    the day of receiving the above documents to process an application (this excludes
+                                    postal time).</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Duplicate Identity Card</span>
+                        <span id="oatc28-btn" onclick="handletoggleOatc('oatc28-btn','oatc28-btn2','oatc28');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc28-btn2" onclick="handletoggleOatc('oatc28-btn','oatc28-btn2','oatc28');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc28" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Issue of Duplicate Identity Card</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p>A duplicate Identity Card may be got re-issued from the Academic Branch in case the
+                                original Identity Card is lost or it gets damaged and becomes illegible.&nbsp;<br>
+                                <br>
+                                <strong>PROCEDURE:</strong><br>
+                                <br>
+                                (1.) In case, the Identity Card gets damaged, a student can apply for duplicate Identity
+                                Card. An application in this regard is to be made to Assistant Registrar (Academic) and
+                                the damaged Identity card is to be submitted along with<span style="color:#000000"> the
+                                    application.</span>
+                            </p>
+                            <br>
+                            <p><span style="color:#000000">(2.) In case, the Identity Card is lost, the student has to
+                                    make a report to the nearest Police Station and make an application for Duplicate
+                                    Identity Card addressed to Assistant Registrar (Academic). (copy of the Police
+                                    report is to be attached with the request).&nbsp;<br>
+                                    <br>
+                                    <strong>PROCESSING FEE:</strong><br>
+                                    <br>
+                                    A student has to pay an amount of Rs.500/- as the processing fee.</span><br>
+                                <br>
+                                <br>
+                                <span style="color:#000000"><strong>Contact Details :</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 30 working days
+                                    from the day of receiving the above documents to process an application.</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Provisional Degree Certificate
+                        </span>
+                        <span id="oatc29-btn" onclick="handletoggleOatc('oatc29-btn','oatc29-btn2','oatc29');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc29-btn2" onclick="handletoggleOatc('oatc29-btn','oatc29-btn2','oatc29');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc29" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Provisional Degree Certificate</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p><span style="color:#000000">Provisional Degree Certificate is issued to the pass out
+                                    students whose Degree has not been issued as the pass out students are awarded
+                                    Degree Certificates in the convocation. Such students can make a request for issue
+                                    of Provisional Degree Certificate.</span>
+                            </p>
+                            <br>
+                            <p><span style="color:#000000">&nbsp;<strong>PAYMENT OF CHARGES:</strong></span></p>
+                            <br>
+                            <p><span style="color:#000000">Candidate</span><span style="color:#000000"> has to pay the
+                                    processing fee as mentioned below:</span></p>
+
+                            <p class="my-2"><span style="color:#000000"><strong>In person: </strong>NIL</span></p>
+
+                            <p><span style="color:#000000"><strong>In absentia:</strong></span></p>
+
+                            <p class="my-2"><span style="color:#000000">In India: Rs. 500/- (inclusive of Postal
+                                    Charges)</span></p>
+
+                            <p><span style="color:#000000">In Abroad: US$50/- (inclusive of Postal Charges)</span><br>
+                                <br>
+                                <br>
+                                <span style="color:#000000"><strong>Contact Details:</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 07 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).</span>
+                            </p>
+
+                            <p><span style="color:#000000">Note: Provisional Degree Certificate is issued to only such
+                                    students who have completed their Degree requirements. No any Provisional Degree
+                                    Certificate is </span><span style="color:#000000">issue</span><span
+                                    style="color:#000000"> to any student who has not completed his/her Degree
+                                    requirements.</span></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Character Certificate</span>
+                        <span id="oatc210-btn" onclick="handletoggleOatc('oatc210-btn','oatc210-btn2','oatc210');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc210-btn2" onclick="handletoggleOatc('oatc210-btn','oatc210-btn2','oatc210');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc210" class="pt-12 border-t-2 hidden">
+                        <div class="w-full flex flex-col items-start">
+                            <p class="font2 font-medium lg:text-[24px]">Character Certificate</p>
+                            <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+                        <div class="my-4">
+                            <p><span style="color:#000000">Provisional Degree Certificate issued by the Institute
+                                    already bears the certification of character. However, if any candidate requires
+                                    a separate Character Certificate, s/he can apply for the same.</span>
+                            </p>
+                            <br>
+                            <p>
+                                <span style="color:#000000"><strong>PROCESSING FEE:</strong><br>
+                                    <br>
+                                    A student has to pay the processing fee as per below rate:</span>
+                            </p><br>
+
+                            <p><span style="color:#000000"><strong>In India:</strong> Rs. 500/- (inclusive of Postal
+                                    Charges)</span>
+                            </p>
+
+                            <p class="mt-2"><span style="color:#000000"><strong>In Abroad:</strong> US $50/- (inclusive
+                                    of Postal
+                                    Charges)&nbsp;</span><br>
+                                <br>
+                                <br>
+                                <span style="color:#000000"><strong>Contact Details:</strong></span><br>
+                                <br>
+                                <span style="color:#B22222"><em><strong>Assistant Registrar
+                                            (Academic)</strong></em></span><br>
+                                <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                    style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                Technology</em><br>
+                                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                            <em>Phone: 0181-2690302, 2690603</em><br>
+                                            <em>Email:&nbsp;</em></em></strong></span><span
+                                    style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                <br>
+                                <span style="color:#000000">May kindly note that it takes on average 05 working days
+                                    from the day of receiving the above documents to process an application (this
+                                    excludes postal time).</span>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 py-2 border-2">
+                    <div class="flex justify-between my-2">
+                        <span class="text-lg font-medium">Instructions for Issue of Miscellaneous Certificate/Requests
+                            from pass out students</span>
+                        <span id="oatc211-btn" onclick="handletoggleOatc('oatc211-btn','oatc211-btn2','oatc211');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc211-btn2" onclick="handletoggleOatc('oatc211-btn','oatc211-btn2','oatc211');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                    </div>
+                    <div id="oatc211" class="pt-12 border-t-2 hidden">
+                        <div class="widget-item">
+                            <div class="w-full flex flex-col items-start">
+                                <p class="font2 font-medium lg:text-[24px]">Miscellaneous Certificate/Requests from Pass
+                                    out students</p>
+                                <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                            </div>
+
+                            <div class="my-4">
+                                <p>
+                                    <span style="color:#000000">The Institute receives various miscellaneous requests
+                                        from the pass out students regarding </span><span
+                                        style="color:#000000">issuance</span><span style="color:#000000"> of All
+                                        Clear Certificate without any Backlog, Attestation of DMC/Degree Certificate
+                                        (one set of copy) &amp; etc.</span>
+                                </p>
+                                <br>
+                                <p>
+                                    <span style="color:#000000"><strong>PROCESSING FEE:</strong><br>
+                                        <br>
+                                        A candidate has to pay the processing fee as per below rate for such
+                                        miscellaneous applications:</span>
+                                </p><br>
+                                <p><span style="color:#000000"><strong>In Person:</strong> Rs.200/-</span></p>
+
+                                <p class="my-2"><span style="color:#000000"><strong>In absentia:</strong></span></p>
+
+                                <p class="my-1"><span style="color:#000000">In India: Rs.500/ (inclusive of Postal
+                                        Charges)</span></p>
+
+                                <p class="my-1"><span style="color:#000000">In Abroad: US$50/- (inclusive of Postal
+                                        Charges)&nbsp;</span><br>
+                                    <br>
+                                    <br>
+                                    <span style="color:#000000"><strong>Contact Details:</strong></span><br>
+                                    <br>
+                                    <span style="color:#B22222"><em><strong>Assistant Registrar
+                                                (Academic)</strong></em></span><br>
+                                    <strong><em><em><span style="color:#000000">Dr.</span></em></em></strong><span
+                                        style="color:#000000"><strong><em><em> B.R. Ambedkar National Institute of
+                                                    Technology</em><br>
+                                                <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                                                <em>Phone: 0181-2690302, 2690603</em><br>
+                                                <em>Email:&nbsp;</em></em></strong></span><span
+                                        style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                                    <br>
+                                    <span style="color:#000000">May kindly note that it takes on average 07 working
+                                        days from the day of receiving the above documents to process an application
+                                        (this excludes postal time).</span>
+                                </p>
+                                <p></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------------------Part-3------------------------ -->
+
+        <div class="m-2 scroll-mt-32 flex flex-col px-4 lg:px-[12%]">
+            <ul class="flex flex-col gap-[12px] lg:gap-[20px] list-disc text-justify">
+                <li class="hover:underline"><a class="text-red-600"
+                        href="https://www.nitj.ac.in/nitj_files/links/Notification_(processing_fee_for_issuance_of_various_certificates)_98136.pdf">Processing
+                        Fee to be charged by the Institute for issuing of various certificates by the Academic Branch
+                        and verification of certificates</a>&nbsp;<span class="absolute pt-1"
+                        style="font-size:18px"><img src="https://www.nitj.ac.in//images/New.gif"></span>
+                </li>
+                <li class="hover:underline"><a class="text-red-600"
+                        href="https://www.nitj.ac.in/nitj_files/links/Notification_(charging_of_processing_fee)_28074.pdf">Notice
+                        regarding Processing Charges for candidates who are not able to pay charges in
+                        US&nbsp;Dollars</a>&nbsp;<span class="absolute pt-1" style="font-size:18px"><img
+                            src="https://www.nitj.ac.in//images/New.gif"></span>
+                </li>
+                <li><span style="color:#B22222"><strong>Note:</strong></span><span style="color:#000000"> Applicants are
+                        advised not to send requests for Duplicate Degree
+                        Certificate for WES purpose. The Academic Branch shall send an attested copy of the Degree
+                        Certificate as per the Institute Charges</span>.&nbsp;
+                    <span class="absolute pt-1" style="font-size:18px">
+                        <img src="https://www.nitj.ac.in//images/New.gif"></span><br>
+                    &nbsp;
+                </li>
+                <li>
+                    <span class="text-red-600" style="font-size:18px">
+                        <strong><a class="hover:underline" href="https://www.nitj.ac.in/academic/login"
+                                style="font-size:16px">Online
+                                Application Form for Transcripts and Other Certificates</a>&nbsp;
+                        </strong>
+                        <span class="absolute pt-2"><img src="https://www.nitj.ac.in//images/New.gif"></span>
+                    </span><br>
+                    <span style="font-size:12px"><span style="color:#000000"><strong>(For UG/PG Students admitted in
+                                2003 and onwards)</strong>
+                        </span>
+                    </span>
+                </li>
+                <li class="hover:underline">
+                    <a class="text-red-600" href="https://www.nitj.ac.in/academic/Instructions.pdf">Instructions for
+                        filling the Online Application Form</a>&nbsp;
+                    <span class="absolute pt-1" style="font-size:18px">
+                        <img src="https://www.nitj.ac.in//images/New.gif">
+                    </span><br>
+                    &nbsp;
+                </li>
+                <li><span style="color:#000000"><strong>URL: </strong><a class="text-red-600 hover:underline"
+                            href="http://www.nitj.ac.in/academic/login"
+                            target="_blank">http://www.nitj.ac.in/academic/login</a><br>
+                        <strong>Username:</strong> Roll No. of the Student<br>
+                        <strong>Password:</strong> Mother's Name of the Student (without "Smt." or "Mrs.”, Include
+                        spaces, if any)</span><br>
+                    &nbsp;
+                </li>
+                <li style="text-align:justify"><span style="color:#000000"><strong>For B.Tech Students admitted before
+                            2003, M.Tech (Part-Time) and PhD (All Batch),</strong> Kindly provide the below details
+                        through Email Id </span><span style="color:#B22222"><strong>webmaster@nitj.ac.in
+                        </strong></span><span style="color:#000000">and</span>&nbsp;w<span style="color:#000000">e will
+                        provide you the login credentials to apply online:</span><br>
+                    <span style="color:#000000">
+                        1. Roll No.<br>
+                        2. Name (As per Institute records)<br>
+                        3. Course<br>
+                        4. Branch<br>
+                        5. Admission Year<br>
+                        6. Father's Name<br>
+                        7. Mother's Name
+                    </span><br>
+                    <span style="color:#000000">8. Scanned Copy of Degree or&nbsp;DMC</span>
+                </li>
+            </ul>
+        </div>
+        <div class="m-2 scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[10%] gap-[32px] lg:gap-[64px]">
+            <p><span style="color:#B22222"><strong>Note:</strong></span> For any queries/complaints regarding
+                non-receipt&nbsp;of any of the above documents within the specified time as mentioned in the
+                instructions, you may contact the following between&nbsp;(10.00am to 4.00pm):<br>
+                <br>
+                <span style="color:#B22222"><strong>Mr. Neeraj</strong></span><br>
+                Assistant Registrar (Academic)<br>
+                Email: aracademic@nitj.ac.in&nbsp;<br>
+                Phone:&nbsp;0181-5037471
+            </p>
+        </div>
+    </div>
+    <script src="/common template/footer.js"></script>
+    <script src="./Oatc.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDMC Teams - NITJ</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- font-family: 'Barlow', sans-serif;
+    font-family: 'Poppins', sans-serif; -->
+
+    <style>
+        /* Customizing the Scrollbar */
+        ::-webkit-scrollbar-thumb {
+            background-color: #212121;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: gray;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 2px;
+        }
+
+        ::-webkit-resizer {
+            background-color: #ffffff;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+        }
+
+        .font2 {
+            font-family: 'Barlow', sans-serif;
+        }
+
+        :root {
+            --primary-color: #fff;
+            --background-color: #212121;
+
+            --blue-color: #0369A1;
+            --light-blue-color: #F6F6FE;
+            --purple-color: #040320;
+            --font1: 'Poppins', sans-serif;
+            --font2: 'Barlow', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-body {
+            font-family: var(--font1);
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #gal1 {
+            animation: fadeEffect 1s;
+            /* Fading effect takes 1 second */
+        }
+
+        @keyframes fadeEffect {
+
+            /* Go from zero to full opacity */
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/common template/header.js" type="module"></script>
+
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">WDMC STUDENT
+                    TEAMS</p>
+            </div>
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">WDMC STUDENT TEAMS</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <!-- <p> Code by Bhavya Mittal </p> -->
+        <div class="container">
+            <div class=" w-full flex flex-col items-start mb-8">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">WDMC Chairman</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+            <div class=" grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+                <div id="wmd_chairman">
+                  <!-- <p
+                    class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                  >
+                    Dr. Rakesh Kumar
+                  </p>
+                  <p class="text-sm">Department of Industrial & Production Engg</p>
+                  <p class="text-sm text-gray-500">
+                    Dr B R Ambedkar NIT, Jalandhar
+                  </p>
+                  <div
+                    class="w-full flex flex-row gap-2 items-center text-gray-500"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="text-sm text-gray-500 my-1">rkipe@nitj.ac.in</p>
+                  </div>
+                  <div
+                    class="w-full flex flex-row gap-2 items-center text-gray-500"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
+                  </div> -->
+                </div>
+              </div>
+        </div>
+        <div class="container gap-[20px] lg:gap-[32px] text-base text-gray-400">
+            <p>Student Names in Alphabetical Order</p>
+        </div>
+        <div id="institute-development"
+            class="scroll-mt-44 flex flex-row items-start container gap-[20px] lg:gap-[32px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Team A</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-row px-4 container">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="border-b bg-[#0369A1] text-white m-2">
+                                <tr>
+                                    <th scope="col"
+                                        class="border-b  w-fit text-xl  lg:text-lg font-medium  px-6 py-4 text-left">
+                                        S.No
+                                    </th>
+                                    <th scope="col"
+                                        class="border-b text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Name of student
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left"
+                                        style="">
+                                        Department
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left"
+                                        style="">
+                                        Type
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Faculty Mentor
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium px-6 py-4 text-left">
+                                        Tasks
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">1</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Bhavya Mittal</b>
+                                        <div class="text-xl   cursor-pointer  px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://in.linkedin.com/in/mbhavya09';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/dev-bhavya';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Electrical Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                    <td class="text-lg bg-white text-center px-6 py-4 " rowspan="9">
+                                        <b>Dr. D. Harimurugan
+
+                                        </b>
+                                        <i class="fa-brands fa-github  text-xl   cursor-pointer px-2"
+                                            onclick="location.href='https://github.com/harimurugan1989';"></i>
+                                        <p class="text-sm">(Department of Electrical
+                                            Engineering)</p>
+                                        <!-- <i class="fa-brands fa-github  text-xl   cursor-pointer px-2" onclick="location.href='https://github.com/harimurugan1989';"></i> -->
+                                    </td>
+                                    <td class="text-sm p-4 " rowspan="9">
+                                        <ul class="list-disc p-3 ">
+                                            <li>Coordination among technical teams
+                                                for common tasks</li>
+                                            <li>Development and Integration of
+                                                Home Page</li>
+                                            <li>A common template for different
+                                                web-pages</li>
+                                            <li>Page of Leadership Offices</li>
+                                            <li>Dynamic Routing</li>
+                                            <li>Administration menu complete</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">2</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Gautam Singla</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/gautam-singla-12a634211';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/ggsingla';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Instrumentation and Control Engineering
+                                    </td>
+                                    <td class="text-sm px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+                                </tr>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">3</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Pihu</b>
+                                        <div class="text-xl   cursor-pointer  px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/pihu-s-5401b2228/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/pihu24';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Electrical Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                </tr>
+
+                                <tr class="    border-b-2 border-[#0369A1] ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">4</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Ravinder Chadha</b>
+                                        <div class="text-xl   cursor-pointer  px-2">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                            <i class="fa-brands fa-github"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Electrical Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                </tr>
+                                <tr class="  ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">5</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Aashima Tyagi </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='http://www.linkedin.com/in/tyagiaashima';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/Aashimatyagi';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+                                <tr class=" ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">6</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Aditya Gupta</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/aditya-gupta-6014081bb';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/Adityagupta1625';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm ">
+                                        Industrial and Production Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+                                </tr>
+
+                                <tr class=" ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">7</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Bhavika </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/bhavika2881';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+                                </tr>
+
+                                <tr class="  ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">8</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Kashish mangal</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/kashish-mangal-95b463228/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/Kashish-gitt';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Electrical Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+                                <tr class="  ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">9</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Prince Verma</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/princeverma360/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/princeverma-ai';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Electronics and Communication Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+
+
+
+
+
+
+
+
+                            </tbody>
+                        </table>
+                        <div class="h-0.5 w-full bg-[#0369A1]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="institute-development"
+            class="scroll-mt-44 flex flex-row items-start px-4 container gap-[20px] lg:gap-[32px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Team B</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-row px-4 container">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="border-b bg-[#0369A1] text-white m-2">
+                                <tr>
+                                    <th scope="col"
+                                        class="border-b  text-xl  lg:text-lg font-medium  px-6 py-4 text-left">
+                                        S.No
+                                    </th>
+                                    <th scope="col"
+                                        class="border-b text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Name of student
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left"
+                                        style="">
+                                        Department
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left"
+                                        style="">
+                                        Type
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Faculty Mentor
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium px-6 py-4 text-left">
+                                        Tasks
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">1</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Abhinandan Gautam</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/abhinandan-gautam-4993881ba/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/AbhinandanGautam';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Computer Science Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                    <td class="text-lg justify-between bg-white text-center px-6 py-4 " rowspan="7">
+                                        <b>Dr. Amrit Pal Singh</b>
+                                        <p class="text-sm">(Department of Compter Science Engineering)</p>
+                                        <!-- <i class="fa-brands fa-github px-2 text-xl   cursor-pointer px-2" onclick="location.href='https://github.com/harimurugan1989';"></i> -->
+                                    </td>
+                                    <td class="text-sm p-4 " rowspan="7">
+                                        <ul class="list-disc p-3 ">
+                                            <li>Training and Placement Website</li>
+                                            <li>Clubs and Societies Website</li>
+                                            <li>Life at NITJ complete</li>
+                                            <li>Help Link </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">2</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Aditya Nagre </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/aditya-nagre-94a758213';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='http://github.com/AdityaNagre';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Computer Science Engineering
+                                    </td>
+                                    <td class="text-sm px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+                                </tr>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">3</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Jashandeep Singh </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/jashandeep-singh-425a54200/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/jashandeep19';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Mechanical Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                </tr>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">4</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Shubham Garg</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/shubham-garg-6232181b8/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/Sgarg4431';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Mechanical Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                </tr>
+                                <tr class="   border-b-2 border-[#0369A1]  ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">5</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Mehakdeep Singh</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https.//www.linkedin.com/in/mehakdeep-singh-23149a238/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/mehakdeepsingh109';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Industrial and Production Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                </tr>
+
+                                <tr class="   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">6</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Siddhant Gupta </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                            <i class="fa-brands fa-github"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Computer Science Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="h-0.5 w-full bg-[#0369A1]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="institute-development"
+            class="scroll-mt-44 flex flex-row items-start px-4 container gap-[20px] lg:gap-[32px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Team C</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-row px-4 container">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="border-b bg-[#0369A1] text-white m-2">
+                                <tr>
+                                    <th scope="col"
+                                        class="border-b  text-xl  lg:text-lg font-medium  px-6 py-4 text-left">
+                                        S.No
+                                    </th>
+                                    <th scope="col"
+                                        class="border-b text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Name of student
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left"
+                                        style="">
+                                        Department
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left"
+                                        style="">
+                                        Type
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Faculty Mentor
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium px-6 py-4 text-left">
+                                        Tasks
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">1</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Ayush Sharma </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/public-profile';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/Ayush-13-02';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Computer Science Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                    <td class="text-sm justify-between bg-white text-center px-6 py-4 " rowspan="7">
+                                        <b>Dr. Mohit Kumar</b>
+                                        <p class="text-sm">(Department of Information Technology)</p>
+                                        <!-- <i class="fa-brands fa-github px-2 text-xl   cursor-pointer px-2" onclick="location.href='https://github.com/harimurugan1989';"></i> -->
+                                    </td>
+                                    <td class="text-sm p-4 " rowspan="7">
+                                        <ul class="list-disc p-3 ">
+                                            <li>Department Website (Departments
+                                                and Centres)</li>
+                                            <li>Academics Menu Complete</li>
+                                            <li>Resources Link </li>
+                                            <li>Tenders Link</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">2</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Diksha </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/diksha501/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/diksha3773';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Instrumentation and Control Engineering
+                                    </td>
+                                    <td class="text-sm px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+                                </tr>
+                                <tr class="   border-b-2 border-[#0369A1]  ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">3</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Sayan Paul</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/sayan-paul5656/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/bluetinge-901';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+                                </tr>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">4</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Parteek Goyal</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/parteek-goyal-a42a88239/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/parteekcoder';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+                                <tr class="   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">5</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Yash Gupta</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/yash-gupta-56432a20a/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/YASH-GU24';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="h-0.5 w-full bg-[#0369A1]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="institute-development"
+            class="scroll-mt-44 flex flex-row items-start px-4 container gap-[20px] lg:gap-[32px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Team D</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-row px-4 container">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="border-b bg-[#0369A1] text-white m-2">
+                                <tr>
+                                    <th scope="col"
+                                        class="border-b  text-xl  lg:text-lg font-medium  px-6 py-4 text-left">
+                                        S.No
+                                    </th>
+                                    <th scope="col"
+                                        class="border-b text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Name of student
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Department
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Type
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium  px-6 py-4 text-left">
+                                        Faculty Mentor
+                                    </th>
+                                    <th scope="col" class="text-xl lg:text-lg font-medium px-6 py-4 text-left">
+                                        Tasks
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">1</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Abhay kaushik</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/abhay-kaushik-2285b6202';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/abhay57';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Electronics and Communication Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                    <td class="text-sm justify-between bg-white text-center px-6 py-4 " rowspan="7">
+                                        <b>Dr. Nisha Chaurasia </b> 
+                                        <p class="text-sm">(Department of Information Technology)</p>
+                                        <!-- <i class="fa-brands fa-github px-2 text-xl   cursor-pointer px-2" onclick="location.href='https://github.com/harimurugan1989';"></i> -->
+                                    </td>
+                                    <td class="text-sm p-4 " rowspan="7">
+                                        <ul class="list-disc p-3 ">
+                                            <li>Alumni Website</li>
+                                            <li>Admissions Menu Complete</li>
+                                            <li>Research Menu Complete</li>
+                                            <li>Jobs Link</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">2</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Jiya</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/jiya-nagpal-0b0020205';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/Jiya126';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Instrumentation and Control Engineering
+                                    </td>
+                                    <td class="text-sm px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+                                </tr>
+                                <tr class="    ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">3</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Sushant dhuria </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/sushant-dhuria-b03712203';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/sushant-dhuria';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Information technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                </tr>
+                                <tr class="  border-b-2 border-[#0369A1]   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">4</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Vishal Mourya</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/vishal-mourya-aa4937216/';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/MouryaVishal';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Frontend
+                                    </td>
+
+                                </tr>
+                                <tr class="   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">5</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Dohit Deegwal</b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/dohitdeegwal';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/dohitdeegwal';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+                                </tr>
+
+                                <tr class=" ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">6</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Kaushal Agrawal </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/kaushal-agrawal11';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://github.com/the-kaushal-agrawal';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Instrumentation and Control Engineering
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+                                <tr class="   ">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ">7</td>
+                                    <td class="text-sm flex flex-row font-light px-6 py-4 whitespace-nowrap">
+                                        <b class="text-lg">Namamish Awasthi </b>
+                                        <div class="text-xl   cursor-pointer px-2">
+                                            <i class="fa-brands fa-linkedin "
+                                                onclick="location.href='https://www.linkedin.com/in/namamish-awasthi-3b6a836b';"></i>
+                                            <i class="fa-brands fa-github"
+                                                onclick="location.href='https://www.github.com/Namamish';"></i>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4  text-sm ">
+                                        Information Technology
+                                    </td>
+                                    <td class="text-sm   px-6 py-4 whitespace-nowrap">
+                                        Backend
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="h-0.5 w-full bg-[#0369A1]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="institute-development"
+            class="scroll-mt-44 flex flex-col items-start px-4 container gap-[20px] lg:gap-[32px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Implementation and Management
+                    Team</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+
+            <div class="w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+                    <div>
+                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Mr. Bhupinderjit
+                            Singh </p>
+                        <!-- <p class="text-sm">Department of Industrial & Production Engg</p> -->
+                        <p class="text-sm text-gray-500">Scientific Officer</p>
+
+
+                    </div>
+                    <div>
+                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr. Rajeev Verma</p>
+                        <!-- <p class="text-sm">Department of Industrial & Production Engg</p> -->
+                        <p class="text-sm text-gray-500">Department of Industrial and Production Engineering</p>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="w-full">
+                  <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">Deputy Chief Warden</p>
+                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+                      <div>
+                          <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr Ranchan Chauhan</p>
+                          <p class="text-sm">Department of Industrial & Production Engg</p>
+                          <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
+                          <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                              <i class="fa-solid fa-envelope"></i>
+                              <p class="text-sm text-gray-500 my-1">dcw@nitj.ac.in</p>
+                          </div>
+                          <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                              <i class="fa-solid fa-location-dot"></i>
+                              <p class="text-sm my-1">+91-181-5037726</p>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+
+
+        </div>
+        <script src="app.js"></script>
+        <script src="./common template/footer.js"></script>
+        <script>
+            async function callAPi() {
+              let result = await fetch(
+                "https://wdmc.onrender.com/administration?id=63a750634c7ef3865628ade9"
+              );
+              result = await result.json();
+              console.log(result);
+              document.getElementById("wmd_chairman").innerHTML = `
+                <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+                            <p class="text-sm">${result[0].designation}</p>
+                            <p class="text-sm text-gray-500">${result[0].department}</p>
+                            
+                          
+               `;
+            }
+            callAPi();
+          </script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@ document.write(`
     <div class="p-[20px]">
         <div class="pb-[6px] lg:w-[85%]">
         <i class="fas fa-location-dot pr-[8px]"></i><span class="opacity-90">G.T Road, Amritsar Bypass, Jalandhar,
-            Punjab, India-144027</span>
+            Punjab, India-144024</span>
         </div>
         <div class="flex flex-row pb-[6px]">
         <i class="fas fa-envelope mt-1 pr-[8px]"></i>

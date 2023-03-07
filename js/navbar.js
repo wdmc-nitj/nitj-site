@@ -1,11 +1,12 @@
-getNavbar();
-
-async function getNavbar(){
-  let obj=await fetch('https://wdmc.onrender.com/navbar');
-  d = await obj.json();
-  console.log()
-  createNav(d)
-  createNavMob(d)
+// getNavbar()
+import createNavMob from "./navbar-mobile.js"
+export default async function getNavbar(){
+  fetch('https://wdmc.onrender.com/navbar').then(async (res)=>
+    await res.json()).then((data)=>{
+    console.log(data)
+      createNav(data)
+      createNavMob(data)
+    })
 }
 
 async function createNav(obj){
@@ -16,7 +17,7 @@ async function createNav(obj){
   const dropdown1 = document.createElement('div')
       dropdown1.setAttribute(
         'class',
-        'absolute mt-0.5 hidden gap-5 bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden gap-5 bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown1.setAttribute('id','drop-down')
       dropdown1.innerHTML = ``
@@ -31,7 +32,7 @@ async function createNav(obj){
   const dropdown2 = document.createElement('div')
       dropdown2.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-28 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-28 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown2.setAttribute('id','drop-down')
       dropdown2.innerHTML = ``
@@ -46,7 +47,7 @@ async function createNav(obj){
   const dropdown3 = document.createElement('div')
       dropdown3.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-1/3 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-1/3 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown3.setAttribute('id','drop-down')
       dropdown3.innerHTML = ``
@@ -61,7 +62,7 @@ async function createNav(obj){
   const dropdown4 = document.createElement('div')
       dropdown4.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown4.setAttribute('id','drop-down')
       dropdown4.innerHTML = ``
@@ -76,7 +77,7 @@ async function createNav(obj){
   const dropdown5 = document.createElement('div')
       dropdown5.setAttribute(
         'class',
-        'absolute mt-0.5 hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
+        'absolute hidden -translate-x-1/2 gap-5  bg-white p-5 text-sm shadow-sm group-hover:flex'
       )
       dropdown5.setAttribute('id','drop-down')
       dropdown5.innerHTML = ``
@@ -91,7 +92,7 @@ async function createNav(obj){
   const dropdown6 = document.createElement('div')
       dropdown6.setAttribute(
         'class',
-        'absolute mt-0.5 hidden gap-5 self-center  bg-white p-5 text-sm shadow-sm group-hover:flex right-0'
+        'absolute hidden gap-5 self-center  bg-white p-5 text-sm shadow-sm group-hover:flex right-0'
       )
       dropdown6.setAttribute('id','drop-down')
       dropdown6.innerHTML = ``
@@ -122,7 +123,7 @@ function navbarhelper(array,dropdown){
     const head = document.createElement('div')
     head.setAttribute('class','rounded-b-xl h-full overflow-clip  bg-accent hover:bg-orange-500 uppercase')
     head.setAttribute('id','head')
-    head.innerHTML=`<div class="p-2 text-center"><a href='/admin/index.html'>${array[0]}</a></div>`
+    head.innerHTML=`<div class="p-2 text-center">${array[0]}</div>`
 
     const listdiv = document.createElement('div')
     listdiv.setAttribute('class','h-full rounded-b-xl bg-white normal-case')
@@ -131,7 +132,7 @@ function navbarhelper(array,dropdown){
     const list = document.createElement('ul')
     list.setAttribute('class','flex flex-col min-h-full gap-1 px-2 font-normal text-black')
 
-    for(i=2;i<array.length;i++){
+    for(let i=2;i<array.length;i++){
       const listItem = document.createElement('li')
       listItem.setAttribute('class','hover:text-[#FF6600]')
       listItem.innerHTML = `<a href="${array[i]["link"]}">${array[i]["name"]}</a>

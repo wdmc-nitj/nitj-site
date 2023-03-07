@@ -46,7 +46,7 @@
         }
 
         .material-symbols-outlined {
-            font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+            font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
         }
 
         ::-webkit-scrollbar {
@@ -157,7 +157,7 @@
             margin-top: 40px;
             background-image: url("img/nitj3.jpg"),
                 linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-            -webkit-mask-image: linear-gradient(0deg, white, transparent);
+        
             background-color: #cccccc;
             height: 400px;
             background-position: 0% 28%;
@@ -185,19 +185,19 @@
 </head>
 
 <body>
-    <script src="../common template/header.js"></script>
+    <script src="/common template/header.js" type="module"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
-        <div>
-            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">About</p>
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- <p> Code by Bhavya Mittal </p> -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">About Us</p>
             </div>
-            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center">
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
                     <li class="inline-flex items-center">
-                        <a href=""
-                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
                         </a>
                     </li>
                     <li aria-current="page">
@@ -210,13 +210,15 @@
                 </ol>
             </nav>
         </div>
-
-        <div class="flex flex-col items-start px-4 lg:px-[11%] gap-[20px] lg:gap-[16px]">
+        <!-- <p> Code by Bhavya Mittal </p> -->
+        <div class="container flex flex-col items-start gap-[20px] lg:gap-[16px]">
             <div class="w-full flex flex-col items-start">
                 <p class="font2 font-medium text-[28px] lg:text-[32px]">Introduction</p>
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
             </div>
-            <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                 <div id="Introduction"></div>
+
+            <!-- <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                 Dr B R Ambedkar National Institute of Technology was established in the year 1987 as Regional
                 Engineering
                 College and was given the status of National Institute of Technology (Deemed University) by the
@@ -235,26 +237,28 @@
                 offers
                 BTech, MTech, MSc, MBA and PhD programmes in the several disciplines of Engineering, Technology and
                 Sciences.
-            </p>
+            </p> -->
         </div>
-        <div id="vision-mission" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start px-4 lg:px-[11%]">
+        <div id="vision-mission" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start container">
             <div class="basis-1/3 flex flex-col items-start gap-[20px] lg:gap-[16px]">
                 <div class="w-full flex flex-col items-start">
                     <p class="font2 font-medium text-[28px] lg:text-[32px] ">Vision</p>
                     <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
                 </div>
-                <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                <div id="Vision"></div>
+                <!-- <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     To build a rich intellectual potential embedded with interdisciplinary knowledge, human values and
                     professional ethics among the youth, aspirant of becoming engineers and technologists, so that they
                     contribute to society and create a niche for a successful career.
-                </p>
+                </p> -->
             </div>
             <div class="basis-2/3 flex flex-col items-start gap-[20px] lg:gap-[16px] mt-12 lg:pl-[80px] lg:mt-0">
                 <div class="w-full flex flex-col items-start">
                     <p class="font2 font-medium text-[28px] lg:text-[32px]">Mission</p>
                     <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
                 </div>
-                <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                <div id="Mission"></div>
+                <!-- <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     To become a leading and unique institution of higher learning, offering state-of-the-art education,
                     research and training in engineering and technology to students who are able and eager to become
                     change
@@ -264,17 +268,18 @@
                     of the nation and to accomplish its
                     integration into the global economy. To strive to be a Swachch NIT providing a guarantee of clean
                     hostel, clean mess, clean water and hygienic & wholesome food to its students.
-                </p>
+                </p> -->
             </div>
         </div>
 
-        <div id="quality-policy" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start px-4 lg:px-[11%]">
+        <div id="quality-policy" class="scroll-mt-32 flex flex-col lg:flex-row justify-between items-start container">
             <div class="basis-1/3 flex flex-col items-start gap-[28px] lg:gap-[32px]">
                 <div class="w-full flex flex-col items-start">
                     <p class="font2 font-medium text-[28px] lg:text-[32px]">Rankings</p>
                     <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
                 </div>
-                <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
+               <div id="Current_ranking"></div>
+                <!-- <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
                     <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]">52</p>
                     <p class="font-medium text-[18px] lg:text-[18px]">NIRF ENGINEERING 2022</p>
                 </div>
@@ -285,9 +290,9 @@
                 <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
                     <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]">46</p>
                     <p class="font-medium text-[18px] lg:text-[18px]">TIMES ENGINEERING 2022</p>
-                </div>
+                </div> -->
                 <div>
-                    <a class="text-accent">View all rankings <span class="text-black"> →</span></a>
+                    <a href="ranking.html" class="text-accent">View all rankings <span class="text-black"> →</span></a>
                 </div>
             </div>
             <div class="basis-2/3 flex flex-col items-start gap-[20px] lg:gap-[16px] mt-12 lg:pl-[80px] lg:mt-0">
@@ -295,26 +300,27 @@
                     <p class="font2 font-medium text-[28px] lg:text-[32px]">Quality Policy</p>
                     <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
                 </div>
-                <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                <div id="Quality"></div>
+                <!-- <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     To develop technical human resource of excellence suitable for global requirements. <br> <br>
                     To ensure good quality academic and industrial research programmes in different areas of engineering
                     and
                     technology. <br> <br>
                     To generate industry-institute synergy for shaping technical education to meet the requirement of
                     industry.
-                </p>
+                </p> -->
             </div>
         </div>
 
         <div class="lg:hidden">
-            <div class="flex flex-col items-start px-4 lg:px-[11%] lg:py-[64px] lg:gap-[48px]">
+            <div class="flex flex-col items-start container lg:py-[64px] lg:gap-[48px]">
                 <div
                     class="w-[100%] flex flex-col lg:flex-row justify-between items-center lg:items-start gap-[24px] lg:gap-[64px]">
                     <div class="basis-1/2 flex flex-row gap-[16px] lg:gap-[64px]">
                         <div
                             class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-people-group text-[1.5em] lg:text-[2em]"></i>
-                            <a href="https://dev-bhavya.github.io/nitj/oc.html">
+                            <a href="oc.html">
                                 <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
                                     LEADERSHIP</p>
                             </a>
@@ -322,8 +328,9 @@
                         <div
                             class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-building-columns text-[1.5em] lg:text-[2em]"></i>
-                            <a href="https://dev-bhavya.github.io/nitj/governors.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">GOVERNING
+                            <a href="governors.html">
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    GOVERNING
                                     BODIES</p>
                             </a>
                         </div>
@@ -332,17 +339,18 @@
                         <div
                             class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-circle-nodes text-[1.5em] lg:text-[2em]"></i>
-                            <a href="https://dev-bhavya.github.io/nitj/e-cell.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">CELLS</p>
+                            <a href="e-cell.html">
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">CELLS
+                                </p>
                             </a>
                         </div>
                         <div
-                                class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
-                                <i class="fa-solid fa-id-card-clip text-[1.5em] lg:text-[2em]"></i>
-                                <a href="https://dev-bhavya.github.io/nitj/committees.html">
-                                    <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
-                                        COMMITTEES</p>
-                                </a>
+                            class="w-[150px] h-[100px] lg:w-[250px] lg:h-[200px] tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
+                            <i class="fa-solid fa-id-card-clip text-[1.5em] lg:text-[2em]"></i>
+                            <a href="committees.html">
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    COMMITTEES</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -350,13 +358,13 @@
         </div>
 
         <div class="hidden lg:block">
-            <div class="flex flex-col items-start px-4 lg:px-[11%] lg:py-[64px] lg:gap-[48px]">
+            <div class="flex flex-col items-start container lg:py-[64px] lg:gap-[48px]">
                 <div class="w-[100%] flex flex-col lg:flex-row justify-between items-center gap-[48px]">
                     <div class="basis-1/2 flex flex-row justify-between gap-[48px]">
                         <div
                             class="py-[6%] px-[10%] basis-1/2 tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-people-group text-[1.5em] lg:text-[2em]"></i>
-                            <a href="https://dev-bhavya.github.io/nitj/oc.html">
+                            <a href="oc.html">
                                 <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
                                     LEADERSHIP<br> &nbsp;</p>
                             </a>
@@ -364,8 +372,9 @@
                         <div
                             class="py-[6%] px-[10%] basis-1/2 tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-building-columns text-[1.5em] lg:text-[2em]"></i>
-                            <a href="https://dev-bhavya.github.io/nitj/governors.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">GOVERNING
+                            <a href="governors.html">
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    GOVERNING
                                     BODIES</p>
                             </a>
                         </div>
@@ -374,15 +383,16 @@
                         <div
                             class="py-[6%] px-[10%] basis-1/2 tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-circle-nodes text-[1.5em] lg:text-[2em]"></i>
-                            <a href="https://dev-bhavya.github.io/nitj/e-cell.html">
-                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">CELLS<br>
+                            <a href="e-cell.html">
+                                <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
+                                    CELLS<br>
                                     &nbsp;</p>
                             </a>
                         </div>
                         <div
                             class="py-[6%] px-[10%] basis-1/2 tile1 flex flex-col justify-center items-center p-[16px] gap-[16px] text-white">
                             <i class="fa-solid fa-id-card-clip text-[1.5em] lg:text-[2em]"></i>
-                            <a a href="https://dev-bhavya.github.io/nitj/committees.html">
+                            <a a href="committees.html">
                                 <p class="font2 font-medium lg:text-[18px] leading-[22px] text-center uppercase">
                                     COMMITTEES<br> &nbsp;</p>
                             </a>
@@ -392,12 +402,14 @@
             </div>
         </div>
 
-        <div id="history" class="scroll-mt-32 flex flex-col items-start px-4 lg:px-[11%] gap-[20px] lg:gap-[16px] lg:text-[32px]">
+        <div id="history"
+            class="scroll-mt-32 flex flex-col items-start container gap-[20px] lg:gap-[16px] lg:text-[32px]">
             <div class="w-full flex flex-col items-start">
                 <p class="font2 font-medium text-[28px] lg:text-[32px]">Institute History</p>
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
             </div>
-            <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+            <div id="Institute_history"></div>
+            <!-- <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                 While Punjab was passing through insurgency since late 1970s, the 2nd National Policy on Education
                 introduced in May 1986, called for 'Special emphasis on the removal of disparities and to equalise
                 educational opportunity. To achieve such social integration, it promoted the establishment of new
@@ -430,10 +442,10 @@
                 <br> <br>
                 Since then, there is no looking back and the institute is marching ahead in high spirits to make a
                 remarkable contribution to the society.
-            </p>
+            </p> -->
         </div>
 
-        <div class="px-4 lg:px-[11%]">
+        <div class="container">
             <div class="container flex h-[22vh] w-full">
                 <div class="box">
                     <img src="img/ci/CI (1).jpg" />
@@ -442,7 +454,7 @@
                     <img src="img/ci/CI (2).jpg" />
                 </div>
                 <div class="box hidden lg:block">
-                    <img src="img/ci/CI (3).jpg"/>
+                    <img src="img/ci/CI (3).jpg" />
                 </div>
                 <div class="box hidden lg:block">
                     <img src="img/ci/CI (4).jpg" />
@@ -510,194 +522,13 @@
             </div> -->
         </div>
 
-        <div class="hidden lg:block timeline px-4 lg:px-[11%]">
+        <div class="hidden lg:block timeline container">
             <div class="w-full flex flex-col items-start pb-[16px]">
                 <p class="font2 font-medium lg:text-[32px]">Timeline</p>
                 <div class="bg-accent lg:w-[111px] h-[3px]"></div>
             </div>
             <div class="outer text-justify">
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">1989</h3>
-                        <p class="basis-7/10 flex items-center">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">1990</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">1995</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2002</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2004</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2006</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2007</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2009</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2010</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2013</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2015</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2017</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2018</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
-                    <div class="flex flex-row gap-[32px]">
-                        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">2019</h3>
-                        <p class="basis-7/10 flex items-center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                </div>
+                <div id="timeline"></div>
             </div>
         </div>
     </div>
@@ -705,6 +536,185 @@
 
     <script src="app.js"></script>
     <script src="../common template/footer.js"></script>
+
+    <script>
+        async function callAPi() {
+          let result = await fetch(
+            "https://wdmc.onrender.com/about?id=639ecb2bfea45fe1e20cbf3c"
+          );
+          result = await result.json();
+          console.log(result);
+          document.getElementById("Introduction").innerHTML = `
+          <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">${result[0].content}    
+            </p>
+                     
+           `;
+        }
+        callAPi();
+      </script>
+
+<script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/about?id=639ecb64fea45fe1e20cbf3e"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("Vision").innerHTML = `
+      <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">${result[0].content}
+                </p>     
+       `;
+    }
+    callAPi();
+  </script>
+<script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/about?id=639ecba2fea45fe1e20cbf42"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("Quality").innerHTML = `
+      <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                    ${result[0].content}
+                </p>      
+       `;
+    }
+    callAPi();
+  </script>
+
+
+<script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/about?id=639ecb75fea45fe1e20cbf40"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("Mission").innerHTML = `
+      <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                    ${result[0].content}
+                </p>      
+       `;
+    }
+    callAPi();
+  </script>
+
+
+<script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/about?id=639ecba2fea45fe1e20cbf42"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("Introduction").innerHTML = `
+      <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                    ${result[0].content}
+                </p>
+                 
+       `;
+    }
+    callAPi();
+  </script>
+
+<script>
+    async function callAPi() {
+      let result = await fetch("https://wdmc.onrender.com/timeline/get/all");
+      result = await result.json();
+      timelist = [];
+
+      for (let i = 0; i < result.length; i++) {
+        console.log(result[i].Timeline);
+        for (let j = 0; j < result[i].Timeline.length; j++) {
+          timelist.push(result[i].Timeline[j]);
+        }
+      }
+      timelist = timelist.filter(
+        (thing, index, self) =>
+          index === self.findIndex((t) => t[0] === thing[0])
+      );
+      timelist.sort((a, b) => a[0] - b[0]);
+      console.log(timelist);
+
+      let uniqueYear = [];
+      function getUniqueYear() {
+        for (let i = 0; i < timelist.length; i++) {
+          if (!uniqueYear.includes(timelist[i][0])) {
+            uniqueYear.push(timelist[i][0]);
+          }
+        }
+
+        uniqueYear = uniqueYear.reverse();
+      }
+      getUniqueYear();
+      console.log(uniqueYear);
+      x = "";
+      for (let i = 0; i < uniqueYear.length; i++) {
+        x += `
+        <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
+    <div class="flex flex-row gap-[32px]">
+        <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">${uniqueYear[i]}</h3>`;
+        for (let j = 0; j < timelist.length; j++) {
+          if (uniqueYear[i] == timelist[j][0]) {
+            x += `<p class="basis-7/10 flex items-center ">
+             ${timelist[j][1]}
+          </p>`;
+          }
+        }
+        x += "</div></div>";
+      }
+
+      document.getElementById("timeline").innerHTML = x;
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/yearlyRanking?id=640334ec41f4f72cbbca59d0"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("Current_ranking").innerHTML = `
+      <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
+                    <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${result[0].YearlyRanking.rankings[0][0]}</p>
+                    <p class="font-medium text-[18px] lg:text-[18px]"> ${result[0].YearlyRanking.rankings[0][1]}</p>
+                </div>
+               <br>
+               
+                <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
+                    <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${result[0].YearlyRanking.rankings[1][0]}</p>
+                    <p class="font-medium text-[18px] lg:text-[18px]"> ${result[0].YearlyRanking.rankings[1][1]}</p>
+                </div>
+                <br>
+
+                <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
+                    <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${result[0].YearlyRanking.rankings[2][0]}</p>
+                    <p class="font-medium text-[18px] lg:text-[18px]"> ${result[0].YearlyRanking.rankings[2][1]}</p>
+                </div>
+                 
+       `;
+    }
+    callAPi();
+  </script>
+<script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc.onrender.com/about?id=639ecbdbfea45fe1e20cbf44"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("Institute_history").innerHTML = `
+      <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                ${result[0].content}
+            </p>
+                 
+       `;
+    }
+    callAPi();
+  </script>
+
 </body>
 
 </html>
