@@ -232,14 +232,17 @@ fetch(`${baseURL}/administration/get/all`)
     const msg = document.createElement('div')
     msg.setAttribute(
       'class',
-      'flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6'
+      'flex flex-col space-y-6 rounded-lg bg-light-purple overflow-hidden shadow-md md:flex-row md:space-y-0 md:space-x-6'
     )
 
     // msg.setAttribute('class', 'flex flex-col')
     msg.innerHTML = `
-        <img src="${data[0].image}" class="h-32 w-32 rounded-xl shadow-lg object-cover"
-    alt="Director's Image" />
-  <div id="content" class="flex flex-col space-y-4">
+
+        <div class ="basis-4/12">
+          <img src="${data[0].image}" class="basis-4/12 h-full w-full object-cover"
+              alt="Director's Image" />
+        </div>
+  <div id="content" class="flex flex-col basis-8/12 space-y-4 p-6">
     <div class="flex space-x-4 items-center justify-start group">
       <h1 class="text-4xl font-bold text-accent">
         Director's <span class="text-dark-purple">Message</span>
@@ -282,7 +285,7 @@ fetch(`${baseURL}/ranking/get/all`)
     })
   })
 
-fetch('https://wdmc.onrender.com/publication/get/all')
+fetch(`${baseURL}/publication/get/all`)
   .then((res) => res.json())
   .then((data) => {
     const parentDiv = document.getElementById('publication-cards')
@@ -306,9 +309,11 @@ fetch('https://wdmc.onrender.com/publication/get/all')
     })
   })
 
+// Making the cards dynamic
+
 // Fetching the images in the photo gallery
 
-fetch('https://wdmc.onrender.com/photoGallery/')
+fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
     const images = data
@@ -327,16 +332,15 @@ fetch('https://wdmc.onrender.com/photoGallery/')
       if (i > 2) {
         i = 0
       }
-      
+
       const imgContainer = document.createElement('div')
       imgContainer.classList.add('box')
       imgContainer.innerHTML = `
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
-        console.log(y)
-      if(y%4 == 0 && ( window.innerWidth <= 800 )){
-      }
-      else{
+      console.log(y)
+      if (y % 4 == 0 && window.innerWidth <= 800) {
+      } else {
         rows[i].append(imgContainer)
       }
       imgContainer.addEventListener('click', (e) => {
@@ -352,88 +356,81 @@ fetch('https://wdmc.onrender.com/photoGallery/')
   })
 
 const crossbutton = document.getElementById('crossbutton')
-      crossbutton.addEventListener('click',(e) => {
-        showImg()
-    })
+crossbutton.addEventListener('click', (e) => {
+  showImg()
+})
 
 const arrow_forward = document.getElementById('arrow_forward')
-arrow_forward.addEventListener('click',(e)=>{
+arrow_forward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = document.getElementsByClassName('gallery-image')
-  if(window.innerWidth<=800){
-    for(var i=0;i<=7;i++){
-      if(imgArray[i].src == imgSample.src){
-        imgSample.src=imgArray[i+1].src;
-        break;
-      }
-      else if(i==7){
-        imgSample.src=imgArray[0].src;
+  if (window.innerWidth <= 800) {
+    for (var i = 0; i <= 7; i++) {
+      if (imgArray[i].src == imgSample.src) {
+        imgSample.src = imgArray[i + 1].src
+        break
+      } else if (i == 7) {
+        imgSample.src = imgArray[0].src
       }
     }
-  }
-  else{
-    for(var i=0;i<=10;i++){
-      if(imgArray[i].src == imgSample.src){
-        imgSample.src=imgArray[i+1].src;
-        break;
-      }
-      else if(i==10){
-        imgSample.src=imgArray[0].src;
+  } else {
+    for (var i = 0; i <= 10; i++) {
+      if (imgArray[i].src == imgSample.src) {
+        imgSample.src = imgArray[i + 1].src
+        break
+      } else if (i == 10) {
+        imgSample.src = imgArray[0].src
       }
     }
   }
 })
 
 const arrow_back = document.getElementById('arrow_back')
-arrow_back.addEventListener('click',(e)=>{
+arrow_back.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = document.getElementsByClassName('gallery-image')
-  if(window.innerWidth<=800){
-    for(var i=8;i>=0;i--){
-      if(i==0){
-        imgSample.src=imgArray[8].src;
-      }
-      else if(imgArray[i].src == imgSample.src){
-        imgSample.src=imgArray[i-1].src;
-        break;
+  if (window.innerWidth <= 800) {
+    for (var i = 8; i >= 0; i--) {
+      if (i == 0) {
+        imgSample.src = imgArray[8].src
+      } else if (imgArray[i].src == imgSample.src) {
+        imgSample.src = imgArray[i - 1].src
+        break
       }
     }
-  }
-  else{
-    for(var i=11;i>=0;i--){
-      if(i==0){
-        imgSample.src=imgArray[11].src;
-      }
-      else if(imgArray[i].src == imgSample.src){
-        imgSample.src=imgArray[i-1].src;
-        break;
+  } else {
+    for (var i = 11; i >= 0; i--) {
+      if (i == 0) {
+        imgSample.src = imgArray[11].src
+      } else if (imgArray[i].src == imgSample.src) {
+        imgSample.src = imgArray[i - 1].src
+        break
       }
     }
   }
 })
 
-function showImg(){
+function showImg() {
   // const body = document.getElementsByTagName('body')
   const big_viewer = document.getElementById('big-viewer')
   const imgSample = document.getElementById('sample-img')
   const crossbutton = document.getElementById('crossbutton')
   const arrow_forward = document.getElementById('arrow_forward')
   const arrow_back = document.getElementById('arrow_back')
-  if(imgSample.classList.contains("hidden")){
-    document.body.classList.add("overflow-hidden")
-    big_viewer.classList.remove("hidden")
-    imgSample.classList.remove("hidden")
-    crossbutton.classList.remove("hidden")
-    arrow_forward.classList.remove("hidden")
-    arrow_back.classList.remove("hidden")
-  }
-  else{
-    document.body.classList.remove("overflow-hidden")
-    big_viewer.classList.add("hidden")
-    imgSample.classList.add("hidden")
-    crossbutton.classList.add("hidden")
-    arrow_forward.classList.add("hidden")
-    arrow_back.classList.add("hidden")
+  if (imgSample.classList.contains('hidden')) {
+    document.body.classList.add('overflow-hidden')
+    big_viewer.classList.remove('hidden')
+    imgSample.classList.remove('hidden')
+    crossbutton.classList.remove('hidden')
+    arrow_forward.classList.remove('hidden')
+    arrow_back.classList.remove('hidden')
+  } else {
+    document.body.classList.remove('overflow-hidden')
+    big_viewer.classList.add('hidden')
+    imgSample.classList.add('hidden')
+    crossbutton.classList.add('hidden')
+    arrow_forward.classList.add('hidden')
+    arrow_back.classList.add('hidden')
   }
 }
 // function hideT{his(e) {
