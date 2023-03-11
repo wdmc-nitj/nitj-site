@@ -101,31 +101,47 @@
                     <p></p>
                     <br>
                     <table border="1" cellpadding="6" cellspacing="0" style="width:100%">
-                        <tbody>
+                        <tbody id="table-body-cw">
                             <tr>
                                 <td class="border border-gray-300"><strong>Name</strong></td>
                                 <td class="border border-gray-300"><strong>Designation</strong></td>
                                 <td class="border border-gray-300"><strong>Qualification</strong></td>
                                 <td class="border border-gray-300"><strong>Email</strong></td>
                             </tr>
-                            <tr>
+                            <script>
+                                async function api_call() {
+                                  var data = await fetch(
+                                    "http://localhost:8000/specialcentres/getcentre/cw"
+                                  );
+                                  var result = await data.json();
+    
+                                  var modified = result[0].faculties;
+              
+                                  for (var i in modified) {
+                                    var name = modified[i]["name"];
+                                    var designation = modified[i]["designation"];
+                                    var department = modified[i]["department"];
+                                    var email = modified[i]["email_id"];
+                                    var url = modified[i]["url"];
+                                    var qualification = modified[i]["qualification"];
+                                    document
+                                      .getElementById("table-body-cw")
+                                      .insertAdjacentHTML(
+                                        "beforeend",
+                                        `<tr>
                                 <td class="border border-gray-300"><a
-                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/77"><span
-                                            style="color:#B22222">Dr Joseph Anand Vaz</span></a></td>
-                                <td class="border border-gray-300">Professor Incharge</td>
-                                <td class="border border-gray-300">PhD</td>
-                                <td class="border border-gray-300"><a href="mailto:anandvaz@nitj.ac.in"><span
-                                            style="color:#B22222">anandvaz@nitj.ac.in</span></a></td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><a
-                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/79"><span
-                                            style="color:#B22222">Dr Dinesh Kumar Shukla</span></a></td>
-                                <td class="border border-gray-300">Head</td>
-                                <td class="border border-gray-300">PhD</td>
-                                <td class="border border-gray-300"><a href="#"><span
-                                            style="color:#B22222">shukladk@nitj.ac.in</span></a></td>
-                            </tr>
+                                        href="${url}"><span
+                                            style="color:#B22222">${name}</span></a></td>
+                                <td class="border border-gray-300">${designation}</td>
+                                <td class="border border-gray-300">${qualification}</td>
+                                <td class="border border-gray-300"><a href="mailto:${email}"><span
+                                            style="color:#B22222">${email}</span></a></td>
+                            </tr>`
+                                      );
+                                  }
+                                }
+                                api_call();
+                              </script>
                         </tbody>
                     </table>
                 </div>
@@ -143,78 +159,75 @@
                 <div class="my-8 w-full mx-auto">
                     <table border="1" cellpadding="6" cellspacing="0" class="table table-bordered table-striped"
                         style="width:100%">
-                        <tbody>
+                        <tbody id="table-body-staff">
                             <tr>
                                 <td class="border border-gray-300"><strong>Name</strong></td>
                                 <td class="border border-gray-300"><strong>Designation</strong></td>
                                 <td class="border border-gray-300"><strong>Qualification</strong></td>
                                 <td class="border border-gray-300"><strong>Shop Name</strong></td>
                             </tr>
-                            <tr>
-                                <td class="border border-gray-300"><a
-                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/77"><span
-                                            style="color:#B22222">Dr Joseph Anand Vaz</span></a></td>
-                                <td class="border border-gray-300">Professor In-Charge</td>
-                                <td class="border border-gray-300">PhD</td>
-                                <td class="border border-gray-300">Central Workshop</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><a
-                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/79"><span
-                                            style="color:#B22222">Dr Dinesh Kumar Shukla</span></a></td>
-                                <td class="border border-gray-300">HOD</td>
-                                <td class="border border-gray-300">PhD</td>
-                                <td class="border border-gray-300">Central Workshop</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><a
-                                        href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/193"><span
-                                            style="color:#B22222">Dr Gurraj Singh</span></a></td>
-                                <td class="border border-gray-300">Coordinator</td>
-                                <td class="border border-gray-300">PhD</td>
-                                <td class="border border-gray-300">Central Workshop</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><span style="color:#B22222">Mr Sukhvinder Singh</span>
+                            <script>
+                                async function api_call() {
+                                  var data = await fetch(
+                                    "http://localhost:8000/specialcentres/getcentre/cwstaff"
+                                  );
+
+                                  var result = await data.json();
+    
+                                  var modified = result[0].workers;
+
+                                  console.log(modified);
+              
+                                  for (var i in modified) {
+                                    var name = modified[i]["name"];
+                                    var designation = modified[i]["designation"];
+                                    var department = modified[i]["department"];
+                                    var shopname = modified[i]["shopname"];
+                                    var url = modified[i]["url"];
+                                    var qualification = modified[i]["qualification"];
+                                    document
+                                      .getElementById("table-body-staff")
+                                      .insertAdjacentHTML(
+                                        "beforeend",
+                                        `<tr>
+                                <td class="border border-gray-300"><span style="color:#B22222">${name}</span>
                                 </td>
-                                <td class="border border-gray-300">Co-Coordinator,&nbsp;<br>
-                                    Technical Assistant (SG-II)</td>
-                                <td class="border border-gray-300">10+2, ITI, Apprenticeship A.V.T.S</td>
-                                <td class="border border-gray-300">Central Workshop,<br>
-                                    Welding Shop</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><span style="color:#B22222">Mr Shinder Pal</span></td>
-                                <td class="border border-gray-300">Technician SG-I</td>
-                                <td class="border border-gray-300">10<sup>th</sup>, ITI</td>
-                                <td class="border border-gray-300">Carpentry Shop</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><span style="color:#B22222">Mr Gurmail Singh</span>
-                                </td>
-                                <td class="border border-gray-300">Technician SG-I</td>
-                                <td class="border border-gray-300">10+2,ITI, Diploma in Computer.</td>
-                                <td class="border border-gray-300">Fitting Shop</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><span style="color:#B22222">Mr Dev Datt</span></td>
-                                <td class="border border-gray-300">Technician SG-II</td>
-                                <td class="border border-gray-300">10+2, ITI</td>
-                                <td class="border border-gray-300">Foundry &amp; Smithy Shop</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300"><span style="color:#B22222">Mr Ranbir Singh</span></td>
-                                <td class="border border-gray-300">Technician SG-II</td>
-                                <td class="border border-gray-300">10<sup>th</sup>, ITI</td>
-                                <td class="border border-gray-300">Machine &amp; Sheet Metal Shop</td>
-                            </tr>
+                                <td class="border border-gray-300">${designation}</td>
+                                <td class="border border-gray-300">${qualification}</td>
+                                <td class="border border-gray-300">${shopname}</td>
+                            </tr>`
+                                      );
+                                  }
+                                }
+                                api_call();
+                              </script>
                         </tbody>
                     </table>
                 </div>
                 <div>
-                    <ul class="list-disc ml-8">
-                        <li><a href="https://www.nitj.ac.in/nitj_files/Workshop/shops.pdf"><span class="font-bold text-2xl hover:underline hover:text-orange-700">Various Shops in Central Workshop</span></a><br><br></li>
-                        <li><a href="https://www.nitj.ac.in/nitj_files/Workshop/equipment.pdf"><span class="font-bold text-2xl hover:underline hover:text-orange-700">List of Equipments</span></a><br><br></li>
+                    <ul id="extra-links" class="list-disc ml-8">
+                        <script>
+                            async function api_call() {
+                              var data = await fetch(
+                                "http://localhost:8000/specialcentres/getcentre/cw"
+                              );
+                              var result = await data.json();
+
+                              var modified = result[0].specialLinks;
+          
+                              for (var i in modified) {
+                                var title = modified[i]["title"];
+                                var url = modified[i]["url"];
+                                document
+                                  .getElementById("extra-links")
+                                  .insertAdjacentHTML(
+                                    "beforeend",
+                                    `<li><a href="${url}"><span class="font-bold text-2xl hover:underline hover:text-orange-700">${title}</span></a><br><br></li>`
+                                  );
+                              }
+                            }
+                            api_call();
+                          </script>
                     </ul>
                 </div>
             </div>

@@ -71,37 +71,40 @@
                     <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
                 </div>
                 <div class="w-full px-[3%]">
-                    <ul class="list-disc">
-                        <li class="relative hover:underline mb-1">
+                    <ul class="list-disc" id="rules-links">
+                        <script>
+                            async function api_call() {
+                              var data = await fetch(
+                                "http://localhost:8000/specialcentres/getcentre/rules"
+                              );
+                              var result = await data.json();
+        
+                              var modified = result[0].specialLinks;
+          
+                              for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email_id"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                var title = modified[i]["title"];
+                                document
+                                  .getElementById("rules-links")
+                                  .insertAdjacentHTML(
+                                    "beforeend",
+                                    `<li class="relative hover:underline mb-1">
                             <a class="text-[#B22222]"
-                                href="https://www.nitj.ac.in/nitj_files/links/B_10610.pdf">
-                                <span>B.Tech Regulations</span>
+                                href="${url}">
+                                <span>${title}</span>
                             </a>&nbsp;
                             <span class="absolute top-1"><img src="https://www.nitj.ac.in//images/New.gif"></span>
-                        </li>
-                        <li class="relative hover:underline mb-1">
-                            <a class="text-[#B22222]"
-                                href="https://www.nitj.ac.in/nitj_files/links/M_8600.pdf">
-                                <span>M.Tech Regulations</span></a>&nbsp;
-                            <span class="absolute top-1"><img src="https://www.nitj.ac.in//images/New.gif"></span>
-                        </li>
-                        <li class="relative hover:underline mb-1">
-                            <a class="text-[#B22222]"
-                                href="https://www.nitj.ac.in/nitj_files/links/M_65503.pdf">
-                                <span>M.Sc. Regulations</span></a>&nbsp;
-                            <span class="absolute top-1"><img src="https://www.nitj.ac.in//images/New.gif"></span>
-                        </li>
-                        <li class="relative hover:underline mb-1">
-                            <a class="text-[#B22222]"
-                                href="https://www.nitj.ac.in/nitj_files/links/MBA_Regulations_57981.pdf">
-                                <span>MBA Regulations</span></a>&nbsp;
-                            <span class="absolute top-1"><img src="https://www.nitj.ac.in//images/New.gif"></span>
-                        </li>
-                        <li class="relative hover:underline mb-1">
-                            <a href="https://www.nitj.ac.in/nitj_files/links/Ph_26826.pdf">
-                                <span class="text-[#B22222]">PhD Regulations</span></a>&nbsp;
-                            <span class="absolute top-1"><img src="https://www.nitj.ac.in//images/New.gif" alt="..."></span>
-                        </li>
+                        </li>`
+                                  );
+                              }
+                            }
+                            api_call();
+                          </script>
                     </ul>
                 </div>
             </div>

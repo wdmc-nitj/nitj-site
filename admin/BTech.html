@@ -75,29 +75,34 @@
                 <h1 class="text-lg my-4 font-medium text-[#B22222]">Four years Bachelor of Technology (B.Tech)
                     Programmes</h1>
                 <div class="ml-12">
-                    <ul class="list-disc">
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]" href="#">Bio
-                                Technology</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Chemical Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Civil Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Computer Science and Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Electrical Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Electronics and Communication Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Industrial and Production Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Information Technology&nbsp;</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Instrumentation and Control Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Mechanical Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Textile Technology</a></li>
+                    <ul class="list-disc" id="programme-btech">
+                        <script>
+                            async function api_call() {
+                              var data = await fetch(
+                                "http://localhost:8000/studyprogramme/btech"
+                              );
+                              var result = await data.json();
+        
+                              var modified = result[0].programmes[0];
+
+                              console.log(modified);
+          
+                              if(modified["years"]==4){
+                                for (var i in modified["list"]) {
+                                    var title = modified["list"][i]["title"];
+                                    var url = modified["list"][i]["url"];
+                                document
+                                  .getElementById("programme-btech")
+                                  .insertAdjacentHTML(
+                                    "beforeend",
+                                    `<li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]" href="${url}">${title}</a></li>`
+                                  );
+                              }
+                              }  
+                              
+                            }
+                            api_call();
+                          </script>
                     </ul>
                 </div>
                 <div>
