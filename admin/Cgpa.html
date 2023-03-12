@@ -71,8 +71,30 @@
                 <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
             </div>
         </div>
-        <div class="scroll-mt-32 flex flex-col px-4 lg:px-[14%] gap-[32px] my-8">
-            <a href="https://www.nitj.ac.in/nitj_files/links/CGPA_Criteria_and_Medium_of_Education-1_83375.jpg"
+        <div class="scroll-mt-32 flex flex-col px-4 lg:px-[14%] gap-[32px] my-8" id="link-cgpa">
+                <script>
+                    async function api_call() {
+                      var data = await fetch(
+                        "http://localhost:8000/specialcentres/getcentre/cgpa"
+                      );
+                      var result = await data.json();
+
+                      var modified = result[0].specialLinks;
+
+                      console.log(modified);
+  
+                      for (var i in modified) {
+                        var name = modified[i]["name"];
+                        var designation = modified[i]["designation"];
+                        var department = modified[i]["department"];
+                        var email = modified[i]["email_id"];
+                        var url = modified[i]["url"];
+                        var qualification = modified[i]["qualification"];
+                        document
+                          .getElementById("link-cgpa")
+                          .insertAdjacentHTML(
+                            "beforeend",
+                            `<a href="${url}"
                 download>
                 <div class="flex items-center justify-between border-2 border-green-500 rounded-3xl max-w-fit p-[2px]">
                     <button
@@ -82,10 +104,17 @@
                 </div>
             </a>
             <div class="my-2 border-2 border-gray-300">
-                <img src="https://www.nitj.ac.in/nitj_files/links/CGPA_Criteria_and_Medium_of_Education-1_88512.jpg"
-                    alt="...">
+                <img src="${url}" alt="...">
             </div>
         </div>
+                `
+                          );
+                      }
+                    }
+                    api_call();
+                  </script>
+            
+        
     </div>
     <script src="/common template/footer.js"></script>
 </body>

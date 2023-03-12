@@ -380,36 +380,42 @@
                                 </ul>
                             </div>
                             <div id="contactIIC" class="hidden">
-                                <span>
-                                    <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/83"><span
-                                            class="text-lg" style="color:#B22222"><strong>Dr Raman Bedi</strong></span>
+                                <span id="list-iic">
+                                    <script>
+                                        async function api_call() {
+                                          var data = await fetch(
+                                            "http://localhost:8000/specialcentres/getcentre/iic"
+                                          );
+                
+                                          var result = await data.json();
+                
+                                          var modified = result[0].faculties;
+                      
+                                          for (var i in modified) {
+                                            var name = modified[i]["name"];
+                                            var designation = modified[i]["designation"];
+                                            var department = modified[i]["department"];
+                                            var email = modified[i]["email"];
+                                            var url = modified[i]["url"];
+                                            var qualification = modified[i]["qualification"];
+                                            document
+                                              .getElementById("list-iic")
+                                              .insertAdjacentHTML(
+                                                "beforeend",
+                                                `<a href="${url}"><span
+                                            class="text-lg" style="color:#B22222"><strong>${name}</strong></span>
                                     </a><br>
-                                    <span style="color:#000000">Head, IIC<br>
-                                        <strong>Email:</strong>&nbsp;bedir@nitj.ac.in
-                                    </span><br>
+                                    <span style="color:#000000"> ${designation} <br>
+                                        <strong>Email:</strong>&nbsp;${email}
+                                    </span>
                                     <br>
-                                    <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/185">
-                                        <span class="text-lg" style="color:#B22222"><strong>Dr Anjireddy
-                                                Bhavanam</strong></span>
-                                    </a><br>
-                                    <span class="text-lg" style="color:#000000">Coordinator<br>
-                                        <strong>Email:&nbsp;</strong>bhavanama@nitj.ac.in
-                                    </span><br>
-                                    <br>
-                                    <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/150">
-                                        <span class="text-lg" style="color:#B22222"><strong>Dr Vickram Jeet
-                                                Singh</strong></span>
-                                    </a><br>
-                                    <span style="color:#000000">Co-coordinator<br>
-                                        <strong>Email:&nbsp;</strong>singhvj@nitj.ac.in
-                                    </span></span><br>
-                                <br>
-                                <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/150">
-                                    <span class="text-lg" style="color:#B22222"><strong>Dr Sathiya S</strong></span>
-                                </a><br>
-                                <span style="color:#000000">Co-coordinator<br>
-                                    <strong>Email:&nbsp;</strong>sathiya@nitj.ac.in
-                                </span></span>
+                                    <br>`
+                                              );
+                                          }
+                                        }
+                                        api_call();
+                                      </script>
+                            </span>
                             </div>
                         </div>
                     </div>

@@ -74,10 +74,32 @@
             <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
 
                 <!-- Write code here -->
-                <ul class="list-disc my-12 ml-8 mr-4">
-                    <li><a href="#" class="hover:underline hover:text-orange-700">Chemistry</a></li>
-                    <li><a href="#" class="hover:underline hover:text-orange-700">Physics</a></li>
-                    <li><a href="#" class="hover:underline hover:text-orange-700">Mathematics</a></li>
+                <ul class="list-disc my-12 ml-8 mr-4" id="msc-list">
+                    <script>
+                        async function api_call() {
+                          var data = await fetch(
+                            "http://localhost:8000/studyprogramme/msc"
+                          );
+                          var result = await data.json();
+    
+                          var modified = result[0].programmes;
+                        for(var j in modified){
+                            if(modified[j]["years"]==2){
+                            for (var i in modified[j]["list"]) {
+                                var title = modified[j]["list"][i]["title"];
+                                var url = modified[j]["list"][i]["url"];
+                            document
+                              .getElementById("msc-list")
+                              .insertAdjacentHTML(
+                                "beforeend",
+                                `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
+                              );
+                          }
+                          }
+                        }    
+                        }
+                        api_call();
+                      </script>
                 </ul>
             </div>
         </div>

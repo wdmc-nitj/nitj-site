@@ -71,27 +71,22 @@
                     <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
                 </div>
                 <div class="flex-col justify-center align-center mr-[5%]  lg:w-[80%] w-[100%] mx-8">
-                    <ul class="leading-8 list-disc">
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar_B_75760.pdf"
-                                target="_blank" class="ml-[1%] hover:text-orange-600"> B.Tech 1st Year (Admission
-                                Batch-2022) </a>
-                        </li>
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar_except_B_5567.pdf"
-                                target="_blank" class="ml-[1%] hover:text-orange-600">(Jan-May 2023) Except B.Tech 1st
-                                Year </a>
-                        </li>
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar(July-December_2022)_83830.pdf"
-                                class="ml-[1%] hover:text-orange-600"> (July-December 2022) M.Tech / MSc / MBA (1st
-                                Year)</a>
-                        </li>
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar_for_July-December,_2022_-_excluding_B_79925.pdf"
-                                target="_blank" class="ml-[1%] hover:text-orange-600">(July-December 2022) Except B.Tech
-                                1st Year</a>
-                        </li>
+                    <ul id="academic-calendar-list" class="leading-8 list-disc">
+                        <script>
+                            async function api_call(){
+                                var data = await fetch('http://localhost:8000/academicCalendar/get/all');
+                                var result = await data.json();
+
+                                for(var i in result){
+                                    var link = result[i]['url'];
+                                    var title = result[i]['title'];
+                                    const element = document.createElement("li");
+                                    element.innerHTML = `<a href="${link}" target="_blank" class="ml-[1%] hover:text-orange-600">${title}</a>`
+                                    document.getElementById('academic-calendar-list').appendChild(element);
+                                }
+                            }
+                            api_call();
+                        </script>
                     </ul>
                 </div>
             </div>

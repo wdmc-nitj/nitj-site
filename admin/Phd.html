@@ -77,30 +77,33 @@
                 <div class="mt-12">
                     <p class="text-lg"><span style="color:#000000">The Institute offers PhD programmes in all the departments in various disciplines.</span></p>
                     <br>
-                    <ul class="list-disc ml-8 mr-4">
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]" href="#">Bio
-                                Technology</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Chemical Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Civil Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Computer Science and Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Electrical Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Electronics and Communication Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Industrial and Production Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Information Technology&nbsp;</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Instrumentation and Control Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Mechanical Engineering</a></li>
-                        <li class="hover:underline"><a class="text-[#000000] hover:text-[#B22222]"
-                                href="#">Textile Technology</a></li>
-                    </ul>
+                    <ul class="list-disc ml-8 mr-4" id="phd-list">
+                        <script>
+                            async function api_call() {
+                              var data = await fetch(
+                                "http://localhost:8000/studyprogramme/phd"
+                              );
+                              var result = await data.json();
+        
+                              var modified = result[0].programmes;
+                            for(var j in modified){
+                                if(modified[j]["years"]==4){
+                                for (var i in modified[j]["list"]) {
+                                    var title = modified[j]["list"][i]["title"];
+                                    var url = modified[j]["list"][i]["url"];
+                                document
+                                  .getElementById("phd-list")
+                                  .insertAdjacentHTML(
+                                    "beforeend",
+                                    `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
+                                  );
+                              }
+                              }
+                            }    
+                            }
+                            api_call();
+                          </script>
+                        </ul>
                 </div>
             </div>
         </div>

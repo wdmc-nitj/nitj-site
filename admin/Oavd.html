@@ -63,6 +63,7 @@
             </nav>
         </div>
         <div>
+
             <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
                 <div class="w-full flex flex-col items-start">
                     <p class="font2 font-medium text-[28px] lg:text-[44px]">Verification of Degree and/or Certificates
@@ -76,16 +77,41 @@
                     <p> </p>
                     <p><strong>Only&nbsp;for Verification Agencies:</strong></p>
 
-                    <ul class="list-disc my-1 hover:underline">
-                        <li class="ml-8">
+                    <ul class="list-disc my-1 hover:underline" id="link-oavd">
+                        <script>
+                            async function api_call() {
+                              var data = await fetch(
+                                "http://localhost:8000/specialcentres/getcentre/oavd"
+                              );
+                              var result = await data.json();
+        
+                              var modified = result[0].specialLinks;
+          
+                              for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email_id"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                var title = modified[i]["title"];
+                                document
+                                  .getElementById("link-oavd")
+                                  .insertAdjacentHTML(
+                                    "beforeend",
+                                    `<li class="ml-8">
                             <strong>
-                                <a href="https://www.nitj.ac.in/verification/login" style="font-size:16px"><span
-                                        style="color:#B22222">Online Application Form for Verification of
-                                        Degree/Certificates</span>
+                                <a href="${url}" style="font-size:16px"><span
+                                        style="color:#B22222">${title}</span>
                                 </a>&nbsp;
                             </strong>
                             <span class="absolute pt-1"> <img src="https://www.nitj.ac.in//images/New.gif"></span>
-                        </li>
+                        </li>`
+                                  );
+                              }
+                            }
+                            api_call();
+                          </script>
                     </ul>
 
                     <p style="text-align:justify"><br>

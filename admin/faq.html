@@ -71,23 +71,39 @@
                     <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
                 </div>
                 <div class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%] ml-8">
-                    <ul class="list-disc leading-8 ">
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_B_Tech_students_32638.pdf"
-                                target="_blank" class="text-[#B22222] hover:underline"> B.Tech</a>
-                        </li>
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_PG_students_32862.pdf"
-                                target="_blank" class="text-[#B22222] hover:underline">M.Tech/M.Sc./MBA </a>
-                        </li>
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_PhD_students_57201.pdf"
-                                class="text-[#B22222] hover:underline"> PhD</a>
-                        </li>
-                        <li>
-                            <a href="https://www.nitj.ac.in/nitj_files/links/FAQ_for_all_Pass_out_students_61367.pdf"
-                                target="_blank" class="text-[#B22222] hover:underline">All Passout Students</a>
-                        </li>
+                    <ul class="list-disc leading-8 " id="faq-links">
+                        <script>
+                            async function api_call() {
+                              var data = await fetch(
+                                "http://localhost:8000/specialcentres/getcentre/faq"
+                              );
+                              var result = await data.json();
+        
+                              var modified = result[0].specialLinks;
+        
+                              console.log(modified);
+          
+                              for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email_id"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                var title = modified[i]["title"];
+                                document
+                                  .getElementById("faq-links")
+                                  .insertAdjacentHTML(
+                                    "beforeend",
+                                    `<li>
+                            <a href="${url}"
+                                target="_blank" class="text-[#B22222] hover:underline"> ${title}</a>
+                        </li>`
+                                  );
+                              }
+                            }
+                            api_call();
+                          </script>
                     </ul>
                 </div>
             </div>
