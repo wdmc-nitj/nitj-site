@@ -97,7 +97,7 @@
   </head>
 
   <body>
-    <script src="../common template/header.js"></script>
+    <script src="/common template/header.js" type="module"></script>
 
     <div
       class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32"
@@ -330,10 +330,8 @@
           </div>
         </div>
       </div> -->
+      </div>
     </div>
-
-    <script src="app.js"></script>
-    <script src="../common template/footer.js"></script>
 
     <script>
       async function callAPi() {
@@ -345,13 +343,15 @@
         for (let i = 0; i < result.length; i++) {
           console.log(result[i].YearlyRanking);
           timelist.push(Number(result[i].YearlyRanking.year));
-          
         }
         //sort elements in timelist in ascending order and store it in timelist
-        timelist.sort((a, b) => a[0] - b[0]);
+        timelist.sort().reverse();
         //remove duplicate values
-        timelist = timelist.filter((item, index) => timelist.indexOf(item) === index);
+        timelist = timelist.filter(
+          (item, index) => timelist.indexOf(item) === index
+        );
         console.log(timelist);
+        //
         x = "";
         for (let i = 0; i < timelist.length; i++) {
           x += `
@@ -362,13 +362,22 @@
           <div class="flex flex-col basis-10/12 text-mf m-auto">`;
           for (let j = 0; j < result.length; j++) {
             if (timelist[i] == Number(result[j].YearlyRanking.year)) {
-              x += `<p
+              for (
+                let k = 0;
+                k < result[j].YearlyRanking.rankings.length;
+                k++
+              ) {
+                x += `<p
               class="hover:bg-[#0369A1] hover:scale-105 hover:shadow-2xl hover:text-white hover:p-2 hover:rounded-lg hover:cursor-pointer"
-            >
-              - ${(result[i].YearlyRanking.rankings)}  
-            </p>`;
+            >`;
+
+                x += `- ${result[j].YearlyRanking.rankings[k]}<br>`;
+              }
             }
+
+            x += `</p>`;
           }
+
           x += "</div></div>";
         }
 
@@ -376,5 +385,8 @@
       }
       callAPi();
     </script>
+
+    <script src="app.js"></script>
+    <script src="../common template/footer.js"></script>
   </body>
 </html>
