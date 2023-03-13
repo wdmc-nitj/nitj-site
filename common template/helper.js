@@ -121,3 +121,20 @@ function openSubDropDowns(id) {
     }
   }
 }
+
+function showSearchPage(event) {
+  // console.log(event.id)
+  // if (event.id == 'search_form') {
+  //   return
+  // }
+  var search_page = document.getElementById('search_page')
+  if (search_page.classList.contains('hidden')) {
+    document.body.classList.add("overflow-hidden")
+    search_page.classList.remove('hidden')
+    search_page.classList.add('grid')
+  } else {
+    document.body.classList.remove("overflow-hidden")
+    search_page.classList.remove('grid')
+    search_page.classList.add('hidden')
+  }
+}

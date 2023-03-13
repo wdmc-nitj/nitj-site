@@ -16,7 +16,7 @@ fetch(`${baseURL}/news/`)
     //     </p>
     //   </div>
     // </div>
-    console.log(data)
+    // console.log(data)
     const newsCards = document.getElementById('news-cards')
     data.forEach((news) => {
       const newsCard = document.createElement('div')
@@ -40,7 +40,7 @@ fetch(`${baseURL}/news/`)
 fetch(`${baseURL}/testimonial/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+    // console.log(data)
     // //////////////////////
     // Original Element
     // //////////////////////
@@ -264,10 +264,10 @@ fetch(`${baseURL}/administration/get/all`)
 fetch(`${baseURL}/ranking/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+    // console.log(data)
     const statsData = data.map((stat) => stat.Ranking)
     const element = document.getElementById('placement-stats')
-    console.log(statsData)
+    // console.log(statsData)
     statsData.map((statData) => {
       // console.log(metric, stat, stat[metric])
       const stat = document.createElement('div')
@@ -311,8 +311,9 @@ fetch('https://wdmc.onrender.com/publication/get/all')
 fetch('https://wdmc.onrender.com/photoGallery/')
   .then((res) => res.json())
   .then((data) => {
-    const images = data
-    console.log(data)
+    const shuffledArray = data.sort((a, b) => 0.5 - Math.random());
+    const images = shuffledArray.slice(0,12)
+    // console.log(data)
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
     const secondRow = document.createElement('div')
@@ -333,7 +334,7 @@ fetch('https://wdmc.onrender.com/photoGallery/')
       imgContainer.innerHTML = `
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
-        console.log(y)
+
       if(y%4 == 0 && ( window.innerWidth <= 800 )){
       }
       else{

@@ -3,7 +3,7 @@ import createNavMob from "./navbar-mobile.js"
 export default async function getNavbar(){
   fetch('https://wdmc.onrender.com/navbar').then(async (res)=>
     await res.json()).then((data)=>{
-    console.log(data)
+    // console.log(data)
       createNav(data)
       createNavMob(data)
     })

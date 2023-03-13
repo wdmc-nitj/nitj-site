@@ -222,7 +222,7 @@
                     </div>
                 </div>
               </div>
-              <div class="flex basis-1/5 flex-row justify-center">
+              <div class="flex basis-1/5 flex-row justify-center" onclick="showSearchPage(this)">
                 <button type="button" id="nav-search-btn-v2"
                   class="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-accent"
                   data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search">
@@ -238,8 +238,8 @@
   </header>
   <!-- === Search bar starts === -->
   <div id="search_page"
-    class="absolute top-0 z-50 hidden h-full w-full content-center bg-transparent backdrop-blur-2xl">
-    <form id="search_form">
+    class="fixed top-0 z-50 h-screen hidden w-full content-center bg-transparent backdrop-blur-2xl" onclick="showSearchPage(this)">
+    <form id="search_form" class="z-100" onclick="showSearchPage(this)">
       <div class="flex px-28">
         <label for="search-dropdown" class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
           Email</label>
