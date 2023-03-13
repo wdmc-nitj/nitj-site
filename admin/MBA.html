@@ -72,8 +72,34 @@
                 </div>
             </div>
             <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
-                <ul class="list-disc my-12 ml-8 mr-4">
-                    <li><a href="#" class="hover:underline hover:text-orange-700">Humanities and Management</a></li>
+                <ul class="list-disc my-12 ml-8 mr-4" id="mba-list">
+                    <script>
+                        async function api_call() {
+                          var data = await fetch(
+                            "https://wdmc.onrender.com/studyprogramme/mba"
+                          );
+                          var result = await data.json();
+    
+                          var modified = result[0].programmes[0];
+
+                          console.log(modified);
+      
+                          if(modified["years"]==2){
+                            for (var i in modified["list"]) {
+                                var title = modified["list"][i]["title"];
+                                var url = modified["list"][i]["url"];
+                            document
+                              .getElementById("mba-list")
+                              .insertAdjacentHTML(
+                                "beforeend",
+                                `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
+                              );
+                          }
+                          }
+                        }
+                        api_call();
+                      </script>
+                    
                 </ul>
             </div>
         </div>

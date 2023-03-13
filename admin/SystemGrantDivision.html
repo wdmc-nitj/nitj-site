@@ -21,7 +21,7 @@
     <!-- CSS linking -->
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>CGPA Criteria and Medium of Education</title>
+    <title>System of Evaluation and Grant of Division/Class</title>
     <style>
         .bg-accent {
             --tw-bg-opacity: 1;
@@ -42,7 +42,7 @@
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-                <p class="font-bold text-[52px] lg:text-[80px] uppercase text-white leading-[1]">Academic services</p>
+                <p class="font-bold text-[52px] lg:text-[80px] uppercase text-white leading-[1]">Academic System</p>
             </div>
             <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center">
@@ -56,7 +56,7 @@
                         <div class="inline-flex items-center">
                             <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
                                 class="fa-solid cursor-pointer fa-angle-right ml-2"></i>
-                            <a href="#" class="text-lg font-medium ml-2">CGPA Criteria and Medium of Education</a>
+                            <a href="#" class="text-lg font-medium ml-2">System of Evaluation and Grant of Division/Class</a>
                         </div>
                     </li>
                 </ol>
@@ -66,35 +66,13 @@
     <div class="m-2">
         <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px]">
             <div class="w-full flex flex-col items-start">
-                <p class="font2 font-medium text-[28px] lg:text-[44px]">CGPA Criteria and Medium of Education
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">System of Evaluation and Grant of Division/Class
                 </p>
                 <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
             </div>
         </div>
-        <div class="scroll-mt-32 flex flex-col px-4 lg:px-[14%] gap-[32px] my-8" id="link-cgpa">
-                <script>
-                    async function api_call() {
-                      var data = await fetch(
-                        "https://wdmc.onrender.com/specialcentres/getcentre/cgpa"
-                      );
-                      var result = await data.json();
-
-                      var modified = result[0].specialLinks;
-
-                      console.log(modified);
-  
-                      for (var i in modified) {
-                        var name = modified[i]["name"];
-                        var designation = modified[i]["designation"];
-                        var department = modified[i]["department"];
-                        var email = modified[i]["email_id"];
-                        var url = modified[i]["url"];
-                        var qualification = modified[i]["qualification"];
-                        document
-                          .getElementById("link-cgpa")
-                          .insertAdjacentHTML(
-                            "beforeend",
-                            `<a href="${url}"
+        <div class="scroll-mt-32 flex flex-col px-4 lg:px-[14%] gap-[32px] my-8">
+            <a href="https://www.nitj.ac.in/nitj_files/links/System_of_Evaluation_and_Grant_of_Division_Class-1_91028.jpg"
                 download>
                 <div class="flex items-center justify-between border-2 border-green-500 rounded-3xl max-w-fit p-[2px]">
                     <button
@@ -104,17 +82,10 @@
                 </div>
             </a>
             <div class="my-2 border-2 border-gray-300">
-                <img src="${url}" alt="...">
+                <img src="https://www.nitj.ac.in/nitj_files/links/System_of_Evaluation_and_Grant_of_Division_Class-1_91028.jpg"
+                    alt="...">
             </div>
         </div>
-                `
-                          );
-                      }
-                    }
-                    api_call();
-                  </script>
-            
-        
     </div>
     <script src="/common template/footer.js"></script>
 </body>

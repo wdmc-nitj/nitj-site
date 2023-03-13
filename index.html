@@ -157,7 +157,16 @@
 </head>
 
 <body class="font-body relative text-dark-purple scroll-smooth">
+
   <script src="/common template/header.js" type="module"></script>
+  <button id="scroll-to-top-button"
+    class="hidden z-30 opacity-60 hover:opacity-100 transition-all bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full fixed right-0 bottom-0 mr-6 mb-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+    </svg>
+
+  </button>
 
   <div id="main-image"
     class="mt-20 min-h-[700px] h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center">
@@ -700,7 +709,8 @@
           </div> -->
         </div>
         <div class="m-[auto] mt-[15px] flex flex-col items-center gap-[15px] lg:flex-row">
-          <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/admin/explore.html">
+          <span class="text-accent-orange sr-only">Photo Gallery</span>
+          <a class=" text-accent hover:text-sky-500 lg:mr-[80px]" href="/admin/explore.html">
             <i class="fas fa-camera-alt mr-[6px] text-[24px] text-accent"></i>
             <span class="font-semibold hover:underline">View Gallery →</span>
           </a>
@@ -898,4 +908,5 @@
   <script src="./js/footer.js"></script>
   <script src="/common template/helper.js"></script>
   <!-- <script type="module" src="./js/navbar-mobile.js"></script> -->
+
 </html>
