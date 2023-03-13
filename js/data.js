@@ -295,15 +295,18 @@ fetch(`${baseURL}/publication/get/all`)
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
       <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
-            <p>
-            ${content.authors} 
-            <br>
-             ${content.desc}
-            </p>
-            <a href="${content.url}"
+            <a href="${content.url}">
+              <p>
+              <p
+              class = "inline font-semibold text-accent cursor-pointer"
+              >${content.authors}</p>&nbsp;&nbsp;
+               ${content.desc}
+              </p>
+            </a>
+          <!--  <a href="${content.url}"
               class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
               More Details
-            </a>
+            </a> -->
           </div>`
       e.show && parentDiv.appendChild(div)
     })
@@ -339,7 +342,9 @@ fetch(`${baseURL}/photoGallery/`)
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
       console.log(y)
-      if (y % 4 == 0 && window.innerWidth <= 800) {
+      if (y % 4 == 0 && window.innerWidth >= 800) {
+        rows[i].append(imgContainer)
+        i++
       } else {
         rows[i].append(imgContainer)
       }
