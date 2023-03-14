@@ -1207,10 +1207,6 @@ sup {
   margin-left: 2%;
 }
 
-.ml-\[3\%\] {
-  margin-left: 3%;
-}
-
 .ml-\[6\%\] {
   margin-left: 6%;
 }
@@ -1353,6 +1349,10 @@ sup {
 
 .mt-11 {
   margin-top: 2.75rem;
+}
+
+.ml-\[3\%\] {
+  margin-left: 3%;
 }
 
 .box-border {
