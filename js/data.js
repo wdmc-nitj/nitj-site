@@ -16,7 +16,7 @@ fetch(`${baseURL}/news/`)
     //     </p>
     //   </div>
     // </div>
-    console.log(data)
+    // console.log(data)
     const newsCards = document.getElementById('news-cards')
     data.forEach((news) => {
       const newsCard = document.createElement('div')
@@ -31,7 +31,7 @@ fetch(`${baseURL}/news/`)
                 <p class="w-full line-clamp-2">
                   ${news.desc}
                 </p>
-              </div>
+              </div
             </a>
       `
       newsCards.appendChild(newsCard)
@@ -267,10 +267,10 @@ fetch(`${baseURL}/administration/get/all`)
 fetch(`${baseURL}/ranking/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+    // console.log(data)
     const statsData = data.map((stat) => stat.Ranking)
     const element = document.getElementById('placement-stats')
-    console.log(statsData)
+    // console.log(statsData)
     statsData.map((statData) => {
       // console.log(metric, stat, stat[metric])
       const stat = document.createElement('div')
@@ -312,6 +312,48 @@ fetch(`${baseURL}/publication/get/all`)
     })
   })
 
+fetch(`${baseURL}/club/get/all`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+    const parentDiv = document.getElementById('clubs-and-socs')
+    data.forEach((e) => {
+      console.log(e)
+      // const content = e
+      const div = document.createElement('div')
+      div.setAttribute('id', 'club-card')
+      div.setAttribute(
+        'class',
+        'overflow-hidden rounded-xl bg-white w-full shadow-lg'
+      )
+      div.innerHTML = `
+                <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
+                  <div class="w-2/5 bg-[url(${e.img})] bg-cover bg-center bg-no-repeat">
+                  </div>
+                  <div class="flex flex-col p-6 w-full sm:w-3/5">
+                    <div class="flex flex-col items-start justify-start space-y-3">
+                      <h4 class="text-2xl font-bold uppercase">${e.name}</h4>
+                      <div
+                        class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+                        <p class="text-xs font-bold uppercase text-purple-500">
+                          ${e.type}&nbsp;Club
+                        </p>
+                      </div>
+                      <p class="line-clamp-3 leading-5">
+                        ${e.desc}
+                      </p>
+                    </div>
+                    <div class="mt-5 flex items-center justify-start space-x-3">
+                      <a href='#' class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+                        <span>&rarr;</span></a>
+                    </div>
+                  </div>
+                </div>
+      `
+      e.show && parentDiv.appendChild(div)
+    })
+  })
+
 // Making the cards dynamic
 
 // Fetching the images in the photo gallery
@@ -320,7 +362,7 @@ fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
     const images = data
-    console.log(data)
+    // console.log(data)
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
     const secondRow = document.createElement('div')
@@ -341,7 +383,7 @@ fetch(`${baseURL}/photoGallery/`)
       imgContainer.innerHTML = `
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
-      console.log(y)
+      // console.log(y)
       if (y % 4 == 0 && window.innerWidth >= 800) {
         rows[i].append(imgContainer)
         i++
