@@ -40,7 +40,7 @@ fetch(`${baseURL}/news/`)
 fetch(`${baseURL}/testimonial/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+    // console.log(data)
     // //////////////////////
     // Original Element
     // //////////////////////
@@ -361,7 +361,9 @@ fetch(`${baseURL}/club/get/all`)
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
-    const images = data
+
+    const shuffledArray = data.sort((a, b) => 0.5 - Math.random());
+    const images = shuffledArray.slice(0,12)
     // console.log(data)
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
@@ -383,11 +385,12 @@ fetch(`${baseURL}/photoGallery/`)
       imgContainer.innerHTML = `
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
-      // console.log(y)
-      if (y % 4 == 0 && window.innerWidth >= 800) {
-        rows[i].append(imgContainer)
-        i++
-      } else {
+
+
+      if(y%4 == 0 && ( window.innerWidth <= 800 )){
+      }
+      else{
+
         rows[i].append(imgContainer)
       }
       imgContainer.addEventListener('click', (e) => {
