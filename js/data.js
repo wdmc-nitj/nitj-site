@@ -310,14 +310,17 @@ fetch(`${baseURL}/publication/get/all`)
   })
 
 // Making the cards dynamic
-
+var size_images = 0;
+img_arr = [];
 // Fetching the images in the photo gallery
 
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
-    const shuffledArray = data.sort((a, b) => 0.5 - Math.random());
-    const images = shuffledArray.slice(0,12)
+    const images = data.sort((a, b) => 0.5 - Math.random());
+    size_images = images.length
+    img_arr = images;
+    // const images = shuffledArray.slice(0,12)
     // console.log(data)
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
@@ -330,6 +333,9 @@ fetch(`${baseURL}/photoGallery/`)
     let y = 1
     images.forEach((img, key) => {
       // img.image.link
+      if(y>12){
+        return;
+      }
       if (i > 2) {
         i = 0
       }
@@ -366,23 +372,26 @@ crossbutton.addEventListener('click', (e) => {
 const arrow_forward = document.getElementById('arrow_forward')
 arrow_forward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
-  const imgArray = document.getElementsByClassName('gallery-image')
+  const imgArray = img_arr
   if (window.innerWidth <= 800) {
-    for (var i = 0; i <= 7; i++) {
-      if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i + 1].src
+    for (var i = 0; i <= size_images-2; i++) {
+      if (imgArray[i].image.link == imgSample.src) {
+        imgSample.src = imgArray[i + 1].image.link
         break
-      } else if (i == 7) {
-        imgSample.src = imgArray[0].src
+      } else if (i == size_images-2) {
+        imgSample.src = imgArray[0].image.link
+        break
       }
     }
   } else {
-    for (var i = 0; i <= 10; i++) {
-      if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i + 1].src
+    for (var i = 0; i <= size_images-2; i++) {
+      console.log(imgArray[i].image.link)
+      if (imgArray[i].image.link == imgSample.src) {
+        imgSample.src = imgArray[i + 1].image.link
         break
-      } else if (i == 10) {
-        imgSample.src = imgArray[0].src
+      } else if (i == size_images-2) {
+        imgSample.src = imgArray[0].image.link
+        break
       }
     }
   }
@@ -391,22 +400,22 @@ arrow_forward.addEventListener('click', (e) => {
 const arrow_back = document.getElementById('arrow_back')
 arrow_back.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
-  const imgArray = document.getElementsByClassName('gallery-image')
+  const imgArray = img_arr
   if (window.innerWidth <= 800) {
-    for (var i = 8; i >= 0; i--) {
+    for (var i = size_images-2; i >= 0; i--) {
       if (i == 0) {
-        imgSample.src = imgArray[8].src
-      } else if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i - 1].src
+        imgSample.src = imgArray[size_images-2].image.link
+      } else if (imgArray[i].image.link == imgSample.src) {
+        imgSample.src = imgArray[i - 1].image.link
         break
       }
     }
   } else {
-    for (var i = 11; i >= 0; i--) {
+    for (var i = size_images-2; i >= 0; i--) {
       if (i == 0) {
-        imgSample.src = imgArray[11].src
-      } else if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i - 1].src
+        imgSample.src = imgArray[size_images-2].image.link
+      } else if (imgArray[i].image.link == imgSample.src) {
+        imgSample.src = imgArray[i - 1].image.link
         break
       }
     }
