@@ -31,7 +31,7 @@ fetch(`${baseURL}/news/`)
                 <p class="w-full line-clamp-2">
                   ${news.desc}
                 </p>
-              </div>
+              </div
             </a>
       `
       newsCards.appendChild(newsCard)
@@ -295,29 +295,77 @@ fetch(`${baseURL}/publication/get/all`)
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
       <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
-            <p>
-            ${content.authors} 
-            <br>
-             ${content.desc}
-            </p>
-            <a href="${content.url}"
+            <a href="${content.url}">
+              <p>
+              <p
+              class = "inline font-semibold text-accent cursor-pointer"
+              >${content.authors}</p>&nbsp;&nbsp;
+               ${content.desc}
+              </p>
+            </a>
+          <!--  <a href="${content.url}"
               class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
               More Details
-            </a>
+            </a> -->
           </div>`
       e.show && parentDiv.appendChild(div)
     })
   })
 
-// Making the cards dynamic
+fetch(`${baseURL}/club/get/all`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+    const parentDiv = document.getElementById('clubs-and-socs')
+    data.forEach((e) => {
+      console.log(e)
+      // const content = e
+      const div = document.createElement('div')
+      div.setAttribute('id', 'club-card')
+      div.setAttribute(
+        'class',
+        'overflow-hidden rounded-xl bg-white w-full shadow-lg'
+      )
+      div.innerHTML = `
+                <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
+                  <div class="w-2/5 bg-[url(${e.img})] bg-cover bg-center bg-no-repeat">
+                  </div>
+                  <div class="flex flex-col p-6 w-full sm:w-3/5">
+                    <div class="flex flex-col items-start justify-start space-y-3">
+                      <h4 class="text-2xl font-bold uppercase">${e.name}</h4>
+                      <div
+                        class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+                        <p class="text-xs font-bold uppercase text-purple-500">
+                          ${e.type}&nbsp;Club
+                        </p>
+                      </div>
+                      <p class="line-clamp-3 leading-5">
+                        ${e.desc}
+                      </p>
+                    </div>
+                    <div class="mt-5 flex items-center justify-start space-x-3">
+                      <a href='#' class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+                        <span>&rarr;</span></a>
+                    </div>
+                  </div>
+                </div>
+      `
+      e.show && parentDiv.appendChild(div)
+    })
+  })
 
+// Making the cards dynamic
+var size_images = 0;
+img_arr = [];
 // Fetching the images in the photo gallery
 
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
-    const shuffledArray = data.sort((a, b) => 0.5 - Math.random());
-    const images = shuffledArray.slice(0,12)
+    const images = data.sort((a, b) => 0.5 - Math.random());
+    size_images = images.length
+    img_arr = images;
+    // const images = shuffledArray.slice(0,12)
     // console.log(data)
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
@@ -330,6 +378,9 @@ fetch(`${baseURL}/photoGallery/`)
     let y = 1
     images.forEach((img, key) => {
       // img.image.link
+      if(y>12){
+        return;
+      }
       if (i > 2) {
         i = 0
       }
@@ -339,6 +390,7 @@ fetch(`${baseURL}/photoGallery/`)
       imgContainer.innerHTML = `
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
+
 
       if(y%4 == 0 && ( window.innerWidth <= 800 )){
       }
@@ -366,49 +418,30 @@ crossbutton.addEventListener('click', (e) => {
 const arrow_forward = document.getElementById('arrow_forward')
 arrow_forward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
-  const imgArray = document.getElementsByClassName('gallery-image')
-  if (window.innerWidth <= 800) {
-    for (var i = 0; i <= 7; i++) {
-      if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i + 1].src
-        break
-      } else if (i == 7) {
-        imgSample.src = imgArray[0].src
+  const imgArray = img_arr
+  for (let i = 0; i < imgArray.length; i++) {
+    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+      if (i == imgArray.length - 1) {
+        imgSample.src = imgArray[0].image.link
+      } else {
+        imgSample.src = imgArray[i + 1].image.link
       }
-    }
-  } else {
-    for (var i = 0; i <= 10; i++) {
-      if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i + 1].src
-        break
-      } else if (i == 10) {
-        imgSample.src = imgArray[0].src
-      }
+      break;
     }
   }
 })
-
-const arrow_back = document.getElementById('arrow_back')
-arrow_back.addEventListener('click', (e) => {
+const arrow_backward = document.getElementById('arrow_back')
+arrow_backward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
-  const imgArray = document.getElementsByClassName('gallery-image')
-  if (window.innerWidth <= 800) {
-    for (var i = 8; i >= 0; i--) {
+  const imgArray = img_arr
+  for (let i = 0; i < imgArray.length; i++) {
+    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
       if (i == 0) {
-        imgSample.src = imgArray[8].src
-      } else if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i - 1].src
-        break
+        imgSample.src = imgArray[imgArray.length - 1].image.link
+      } else {
+        imgSample.src = imgArray[i - 1].image.link
       }
-    }
-  } else {
-    for (var i = 11; i >= 0; i--) {
-      if (i == 0) {
-        imgSample.src = imgArray[11].src
-      } else if (imgArray[i].src == imgSample.src) {
-        imgSample.src = imgArray[i - 1].src
-        break
-      }
+      break;
     }
   }
 })

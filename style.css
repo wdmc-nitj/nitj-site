@@ -2828,6 +2828,10 @@ sup {
   background-image: url('img/support.png');
 }
 
+.bg-\[url\(\$\{e\.img\}\)\] {
+  background-image: url(${e.img});
+}
+
 .from-accent {
   --tw-gradient-from: hsla(201, 96%, 32%);
   --tw-gradient-to: hsl(201 96% 32% / 0);
