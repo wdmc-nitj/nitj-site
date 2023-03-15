@@ -31,7 +31,7 @@ fetch(`${baseURL}/news/`)
                 <p class="w-full line-clamp-2">
                   ${news.desc}
                 </p>
-              </div>
+              </div
             </a>
       `
       newsCards.appendChild(newsCard)
@@ -295,16 +295,61 @@ fetch(`${baseURL}/publication/get/all`)
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
       <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
-            <p>
-            ${content.authors} 
-            <br>
-             ${content.desc}
-            </p>
-            <a href="${content.url}"
+            <a href="${content.url}">
+              <p>
+              <p
+              class = "inline font-semibold text-accent cursor-pointer"
+              >${content.authors}</p>&nbsp;&nbsp;
+               ${content.desc}
+              </p>
+            </a>
+          <!--  <a href="${content.url}"
               class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
               More Details
-            </a>
+            </a> -->
           </div>`
+      e.show && parentDiv.appendChild(div)
+    })
+  })
+
+fetch(`${baseURL}/club/get/all`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+    const parentDiv = document.getElementById('clubs-and-socs')
+    data.forEach((e) => {
+      console.log(e)
+      // const content = e
+      const div = document.createElement('div')
+      div.setAttribute('id', 'club-card')
+      div.setAttribute(
+        'class',
+        'overflow-hidden rounded-xl bg-white w-full shadow-lg'
+      )
+      div.innerHTML = `
+                <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
+                  <div class="w-2/5 bg-[url(${e.img})] bg-cover bg-center bg-no-repeat">
+                  </div>
+                  <div class="flex flex-col p-6 w-full sm:w-3/5">
+                    <div class="flex flex-col items-start justify-start space-y-3">
+                      <h4 class="text-2xl font-bold uppercase">${e.name}</h4>
+                      <div
+                        class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+                        <p class="text-xs font-bold uppercase text-purple-500">
+                          ${e.type}&nbsp;Club
+                        </p>
+                      </div>
+                      <p class="line-clamp-3 leading-5">
+                        ${e.desc}
+                      </p>
+                    </div>
+                    <div class="mt-5 flex items-center justify-start space-x-3">
+                      <a href='#' class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+                        <span>&rarr;</span></a>
+                    </div>
+                  </div>
+                </div>
+      `
       e.show && parentDiv.appendChild(div)
     })
   })
@@ -345,6 +390,7 @@ fetch(`${baseURL}/photoGallery/`)
       imgContainer.innerHTML = `
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
+
 
       if(y%4 == 0 && ( window.innerWidth <= 800 )){
       }
