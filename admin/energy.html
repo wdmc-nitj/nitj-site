@@ -39,6 +39,7 @@
 
 <body>
     <script src="/common template/header.js" type="module"></script>
+    <script src="/common template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-12" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -151,26 +152,26 @@
                 <tbody id="faculty-id">
                     <script>
                         async function api_call() {
-                          var data = await fetch(
-                            "http://localhost:8000/specialcentres/getcentre/energy"
-                          );
+                            var data = await fetch(
+                                "http://localhost:8000/specialcentres/getcentre/energy"
+                            );
 
-                          var result = await data.json();
+                            var result = await data.json();
 
-                          var modified = result[0].faculties;
-      
-                          for (var i in modified) {
-                            var name = modified[i]["name"];
-                            var designation = modified[i]["designation"];
-                            var department = modified[i]["department"];
-                            var email = modified[i]["email"];
-                            var url = modified[i]["url"];
-                            var qualification = modified[i]["qualification"];
-                            document
-                              .getElementById("faculty-id")
-                              .insertAdjacentHTML(
-                                "beforeend",
-                                `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            var modified = result[0].faculties;
+
+                            for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                document
+                                    .getElementById("faculty-id")
+                                    .insertAdjacentHTML(
+                                        "beforeend",
+                                        `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             ${name}
                         </th>
@@ -184,11 +185,11 @@
                             ${email}
                         </td>
                     </tr>`
-                              );
-                          }
+                                    );
+                            }
                         }
                         api_call();
-                      </script>
+                    </script>
                 </tbody>
             </table>
         </div>
@@ -217,26 +218,26 @@
                 <tbody id="table-body-associate">
                     <script>
                         async function api_call() {
-                          var data = await fetch(
-                            "https://wdmc.onrender.com/specialcentres/getcentre/energy"
-                          );
+                            var data = await fetch(
+                                "https://wdmc.onrender.com/specialcentres/getcentre/energy"
+                            );
 
-                          var result = await data.json();
+                            var result = await data.json();
 
-                          var modified = result[0].faculties;
-      
-                          for (var i in modified) {
-                            var name = modified[i]["name"];
-                            var designation = modified[i]["designation"];
-                            var department = modified[i]["department"];
-                            var email = modified[i]["email"];
-                            var url = modified[i]["url"];
-                            var qualification = modified[i]["qualification"];
-                            document
-                              .getElementById("table-body-associate")
-                              .insertAdjacentHTML(
-                                "beforeend",
-                                `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            var modified = result[0].faculties;
+
+                            for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                document
+                                    .getElementById("table-body-associate")
+                                    .insertAdjacentHTML(
+                                        "beforeend",
+                                        `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             ${name}
                         </th>
@@ -250,11 +251,11 @@
                             ${email}
                         </td>
                     </tr>`
-                              );
-                          }
+                                    );
+                            }
                         }
                         api_call();
-                      </script>
+                    </script>
                 </tbody>
             </table>
         </div>

@@ -39,6 +39,7 @@
 
 <body>
     <script src="/common template/header.js" type="module"></script>
+    <script src="/common template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -72,18 +73,18 @@
             </div>
         </div>
         <div class="scroll-mt-32 flex flex-col px-4 lg:px-[14%] gap-[32px] my-8" id="link-cgpa">
-                <script>
-                    async function api_call() {
-                      var data = await fetch(
+            <script>
+                async function api_call() {
+                    var data = await fetch(
                         "https://wdmc.onrender.com/specialcentres/getcentre/cgpa"
-                      );
-                      var result = await data.json();
+                    );
+                    var result = await data.json();
 
-                      var modified = result[0].specialLinks;
+                    var modified = result[0].specialLinks;
 
-                      console.log(modified);
-  
-                      for (var i in modified) {
+                    console.log(modified);
+
+                    for (var i in modified) {
                         var name = modified[i]["name"];
                         var designation = modified[i]["designation"];
                         var department = modified[i]["department"];
@@ -91,10 +92,10 @@
                         var url = modified[i]["url"];
                         var qualification = modified[i]["qualification"];
                         document
-                          .getElementById("link-cgpa")
-                          .insertAdjacentHTML(
-                            "beforeend",
-                            `<a href="${url}"
+                            .getElementById("link-cgpa")
+                            .insertAdjacentHTML(
+                                "beforeend",
+                                `<a href="${url}"
                 download>
                 <div class="flex items-center justify-between border-2 border-green-500 rounded-3xl max-w-fit p-[2px]">
                     <button
@@ -108,15 +109,15 @@
             </div>
         </div>
                 `
-                          );
-                      }
+                            );
                     }
-                    api_call();
-                  </script>
-            
-        
-    </div>
-    <script src="/common template/footer.js"></script>
+                }
+                api_call();
+            </script>
+
+
+        </div>
+        <script src="/common template/footer.js"></script>
 </body>
 
 </html>

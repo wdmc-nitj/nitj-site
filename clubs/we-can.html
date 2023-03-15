@@ -2,565 +2,596 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon and title -->
-    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
-    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
-    <!-- RESEARCH -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google Fonts  -->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <style type="text/tailwindcss">
-        @layer utilities {
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon and title -->
+  <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
+  <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+  <!-- RESEARCH -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style type="text/tailwindcss">
+    @layer utilities {
         .content-auto {
           content-visibility: auto;
         }
       }
     </style>
-    <style>
-        body {
-            scrollbar-color: #fff #fff;
-        }
+  <style>
+    body {
+      scrollbar-color: #fff #fff;
+    }
 
-        /* Customizing the Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: rgba(30, 58, 138, 1);
-            border-radius: 10px;
-        }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(30, 58, 138, 1);
+      border-radius: 10px;
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: gray;
-        }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: gray;
+    }
 
-        ::-webkit-resizer {
-            background-color: #ffffff;
-        }
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
 
-        .material-symbols-outlined {
-            font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
-        }
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+    }
 
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            border-radius: 10px;
-        }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: gray;
-            border-radius: 10px;
-        }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: gray;
+      border-radius: 10px;
+    }
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #212121;
-        }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #212121;
+    }
 
-        /* Gallery Effects */
-        .box {
-            flex: 1;
-            overflow: hidden;
-            transition: 0.5s;
-            line-height: 0;
-        }
+    /* Gallery Effects */
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      line-height: 0;
+    }
 
-        .box>img {
-            width: 100%;
-            height: 100%;
-            border: 0.2rem solid white;
-            border-radius: 8px;
-            -o-object-fit: cover;
-            object-fit: cover;
-            transition: ease 0.75s;
-        }
+    .box>img {
+      width: 100%;
+      height: 100%;
+      border: 0.2rem solid white;
+      border-radius: 8px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: ease 0.75s;
+    }
 
-        .box:hover {
-            flex: 1 1 30%;
-            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
-            z-index: 1;
-            cursor: pointer;
-        }
+    .box:hover {
+      flex: 1 1 30%;
+      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+      z-index: 1;
+      cursor: pointer;
+    }
 
-        .box:hover>img {
-            opacity: 1;
-            width: 100%;
-            height: 100%;
-        }
+    .box:hover>img {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
 
-        .base-image {
-            margin-top: 40px;
-            background-image: url("img/nitj3.jpg"),
-                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-            mask-image: linear-gradient(0deg, white, transparent);
-            -webkit-mask-image: linear-gradient(0deg, white, transparent);
-            background-color: #cccccc;
-            height: 400px;
-            background-position: 0% 28%;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+    .base-image {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      mask-image: linear-gradient(0deg, white, transparent);
+      -webkit-mask-image: linear-gradient(0deg, white, transparent);
+      background-color: #cccccc;
+      height: 400px;
+      background-position: 0% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-        .base-image-2 {
-            margin-top: 40px;
-            background-image: url("img/nitj3.jpg"),
-                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-            background-color: #cccccc;
-            height: 300px;
-            background-position: 58% 28%;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+    .base-image-2 {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      background-color: #cccccc;
+      height: 300px;
+      background-position: 58% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-        .main-shadow {
-            text-shadow: rgb(0 0 0) 6px -1px 5px;
-        }
+    .main-shadow {
+      text-shadow: rgb(0 0 0) 6px -1px 5px;
+    }
 
-        .carousel-open:checked+.carousel-item {
-            position: static;
-            opacity: 100;
-        }
+    .carousel-open:checked+.carousel-item {
+      position: static;
+      opacity: 100;
+    }
 
-        .carousel-item {
-            -webkit-transition: opacity 0.9s ease-in-out;
-            transition: opacity 1s ease-in-out 0.2s;
-        }
+    .carousel-item {
+      -webkit-transition: opacity 0.9s ease-in-out;
+      transition: opacity 1s ease-in-out 0.2s;
+    }
 
-        #carousel-1:checked~.control-1,
-        #carousel-2:checked~.control-2,
-        #carousel-3:checked~.control-3,
-        #carousel-4:checked~.control-4 {
-            display: block;
-        }
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3,
+    #carousel-4:checked~.control-4 {
+      display: block;
+    }
 
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
-    </style>
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+  </style>
 </head>
 
 <body class="font-body text-dark-purple">
-<script src="/common template/header.js" type="module"></script>
-   
+  <script src="/common template/header.js" type="module"></script>
+  <script src="/common template/helper.js"></script>
 
-    <!-- Corousel -->
-    <div id="" style="background-image:url('https://www.annauniv.edu/scstcell/nw-img/6.jpg') ;"
-        class="mt-20 h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center">
-        <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
-            <div class="flex flex-col items-center justify-center container h-full">
-                <div class="flex flex-col gap-10">
-                    <h2 class="uppercase text-white text-4xl text-center">
-                        <span class="font-bold">NITJ</span> "WE CAN" CLUB
-                    </h2>
-                </div>
-            </div>
+
+  <!-- Corousel -->
+  <div id="" style="background-image:url('https://www.annauniv.edu/scstcell/nw-img/6.jpg') ;"
+    class="mt-20 h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center">
+    <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
+      <div class="flex flex-col items-center justify-center container h-full">
+        <div class="flex flex-col gap-10">
+          <h2 class="uppercase text-white text-4xl text-center">
+            <span class="font-bold">NITJ</span> "WE CAN" CLUB
+          </h2>
         </div>
+      </div>
     </div>
-    <!-- End - Corousel -->
+  </div>
+  <!-- End - Corousel -->
 
-    <!-- we-can club Cell start -->
-<!-- <<<<<<< HEAD -->
-<!-- ======= -->
-    <div class=" ">
-        <div class="my-2 w-12/12 mx-auto md:w-7/12  px-2">
-          <h1 class="uppercase my-4 text-blue-600 font-bold text-2xl">"WE CAN" CLUB</h1>
+  <!-- we-can club Cell start -->
+  <!-- <<<<<<< HEAD -->
+  <!-- ======= -->
+  <div class=" ">
+    <div class="my-2 w-12/12 mx-auto md:w-7/12  px-2">
+      <h1 class="uppercase my-4 text-blue-600 font-bold text-2xl">"WE CAN" CLUB</h1>
 
+    </div>
+    <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+      <h1 class="text-xl text-blue-600 font-bold">Aims and Objectives of "We Can" </h1>
+      <div class="ml-3 md:ml-6">
+        <div class="my-2">
+          1. <p class="inline">To develop intrapersonal and interpersonal skills.</p>
         </div>
-        <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
-          <h1 class="text-xl text-blue-600 font-bold">Aims and Objectives of "We Can" </h1>
-          <div class="ml-3 md:ml-6">
-            <div class="my-2">
-              1. <p class="inline">To develop intrapersonal and interpersonal skills.</p>
-            </div>
-            <div class="my-2">
-              2. <p class="inline">To promote an in-depth understanding of soft skills and English language that lies beyond the ken of the syllabus.</p>
-            </div>
-            <div class="my-2">
-              3. <p class="inline">To provide a platform to students for mutual exchange of ideas, knowledge and skills through ingenious and captivating monthly group activities such as group discussion, debate, quiz, documentary review, movie review, and role play.
-              </p>
-            </div>
-            <div class="my-2">
-              4. <p class="inline">To encourage the students to display their extra-curricular skills that would promote a healthy holistic development of the student.
-              </p>
-            </div>
-            <div class="my-2">
-              5. <p class="inline">To arrange competitions like elocution contest, essay writing, book review giving them an opportunity for self-expression.
-              </p>
-            </div>
-            <div class="my-2">
-              6. <p class="inline">To incorporate speech delivery enhancement activities.
-              </p>
-            </div>
-            <div class="my-2">
-              7. <p class="inline">To instill in the minds of the students the spirit of self-help, service sacrifice and cooperation.
-              </p>
-            </div>
-            <div class="my-2">
-              8. <p class="inline">To collaborate with other departments for extra and co-curricular activities related to language and soft skills.
-              </p>
-            </div>
-          </div>
+        <div class="my-2">
+          2. <p class="inline">To promote an in-depth understanding of soft skills and English language that lies beyond
+            the ken of the syllabus.</p>
         </div>
-        <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
-          <h1 class="text-xl font-bold text-blue-600">Reports </h1>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/Imaginato_Report_120121_6623.pdf">"IMAGINATO" organized by We Can Club on December 26, 2021</a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/event_report-_hello_robin_98370.pdf">"HELLO ROBIN" organized by We Can Club on November 13, 2021</a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/Event_Report_(Think_on_your_feet)-_We_Can_84320.pdf">"THINK ON YOUR FEET" organized by We Can Club on October 30, 2021</a></p> 
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/Event_report_bring_me_something_35695.pdf">"BRING ME SOMETHING" organized by We Can Club on October 10, 2021</a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/REPORT-_Resume_Building_Workshop_56474.pdf">"HOW TO BUILD RESUME" organized by We Can Club on April 04, 2021</a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/Event_Report-Taboo_2_62854.pdf">"TABOO - 2.0" organized by We Can Club on January 23, 2021 </a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/Mock_Interview_Event_Report-WeCan_31-01-2021_28597.pdf">"MOCK INTERVIEW" organized by We Can Club on January 31, 2021 </a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/nitj_files/links/WeCan_Shipwreck_69954.pdf">"SHIPWRECK" organized by We Can Club on October 11, 2020 </a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/361">"PRE PLACEMENT TALK" organized by We Can Club on February 26, 2020 </a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/335">"THE REALMS OF DREAMS" organized by We Can Club on February 5, 2020 </a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/330">"ICE BREAKER" organized by We Can Club on January 14, 2020 </a></p>
-          <p class="my-2"><a target="_blank" class="inline text-red-500"
-              href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/299">"EXTEMPORE" organized by We Can Club on October 23, 2019 </a></p>
-          
+        <div class="my-2">
+          3. <p class="inline">To provide a platform to students for mutual exchange of ideas, knowledge and skills
+            through ingenious and captivating monthly group activities such as group discussion, debate, quiz,
+            documentary review, movie review, and role play.
+          </p>
         </div>
-  
-        <div class="my-6 md:w-7/12 w-12/12 mx-auto px-2">
-          <div class="overflow-x-auto relative">
-            <h1 class="text-xl text-blue-600 font-bold my-2">Committee</h1>
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="py-3 text-white px-6">
-                  </th>
-                  <th scope="col" class="py-3 px-6 text-white">
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
-                  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <p class="text-sm font-bold">Patron</p>
-                  </th>
-                  <td class="py-4 px-6 text-white">
-                    <p> <span class="font-bold text-[1rem] mb-1">Prof. Rajiv Kumar Garg</span> <br>
-                      Director (I/C)<br>
-                      Dr B R Ambedkar National Institute of Technology <br>
-                      Jalandhar <br>
-                    </p>
-                  </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
-                  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <p class="text-sm font-bold">Faculty Coordinator</p>
-                  </th>
-                  <td class="py-4 px-6 text-white">
-                    <p> <span class="font-bold text-[1rem] mb-1">Dr. Sonia Chawla</span> <br>
-                      Head Training Cell <br>
-                      Dr B R Ambedkar National Institute of Technology <br>
-                      Jalandhar <br>
-                    </p>
-                  </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
-                  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <p class="text-sm font-bold">Faculty Coordinator</p>
-                  </th>
-                  <td class="py-4 px-6 text-white">
-                    <p> <span class="font-bold text-[1rem] mb-1">Dr. Shyamkiran Kaur</span> <br>
-                      Assistant Professor <br>
-                      Department of Humanities and Management <br>
-                      Dr B R Ambedkar National Institute of Technology <br>
-                      Jalandhar <br>
-                    </p>
-                  </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
-                  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <p class="text-sm font-bold">Officers of the Club</p>
-                  </th>
-                  <td class="py-4 px-6 text-white">
-                    <p>President <br> Vice-President <br> Secretary <br> Treasurer <br> Marketing Head <br> Publicity Head <br> Four Core Members <br>
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="my-2">
+          4. <p class="inline">To encourage the students to display their extra-curricular skills that would promote a
+            healthy holistic development of the student.
+          </p>
+        </div>
+        <div class="my-2">
+          5. <p class="inline">To arrange competitions like elocution contest, essay writing, book review giving them an
+            opportunity for self-expression.
+          </p>
+        </div>
+        <div class="my-2">
+          6. <p class="inline">To incorporate speech delivery enhancement activities.
+          </p>
+        </div>
+        <div class="my-2">
+          7. <p class="inline">To instill in the minds of the students the spirit of self-help, service sacrifice and
+            cooperation.
+          </p>
+        </div>
+        <div class="my-2">
+          8. <p class="inline">To collaborate with other departments for extra and co-curricular activities related to
+            language and soft skills.
+          </p>
         </div>
       </div>
+    </div>
+    <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+      <h1 class="text-xl font-bold text-blue-600">Reports </h1>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/Imaginato_Report_120121_6623.pdf">"IMAGINATO" organized by We
+          Can Club on December 26, 2021</a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/event_report-_hello_robin_98370.pdf">"HELLO ROBIN" organized by
+          We Can Club on November 13, 2021</a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/Event_Report_(Think_on_your_feet)-_We_Can_84320.pdf">"THINK ON
+          YOUR FEET" organized by We Can Club on October 30, 2021</a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/Event_report_bring_me_something_35695.pdf">"BRING ME SOMETHING"
+          organized by We Can Club on October 10, 2021</a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/REPORT-_Resume_Building_Workshop_56474.pdf">"HOW TO BUILD
+          RESUME" organized by We Can Club on April 04, 2021</a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/Event_Report-Taboo_2_62854.pdf">"TABOO - 2.0" organized by We
+          Can Club on January 23, 2021 </a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/Mock_Interview_Event_Report-WeCan_31-01-2021_28597.pdf">"MOCK
+          INTERVIEW" organized by We Can Club on January 31, 2021 </a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/nitj_files/links/WeCan_Shipwreck_69954.pdf">"SHIPWRECK" organized by We Can Club
+          on October 11, 2020 </a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/361">"PRE PLACEMENT TALK" organized by We Can Club on
+          February 26, 2020 </a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/335">"THE REALMS OF DREAMS" organized by We Can Club
+          on February 5, 2020 </a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/330">"ICE BREAKER" organized by We Can Club on January
+          14, 2020 </a></p>
+      <p class="my-2"><a target="_blank" class="inline text-red-500"
+          href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/299">"EXTEMPORE" organized by We Can Club on October
+          23, 2019 </a></p>
 
-      <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
-        <h1 class="text-xl text-blue-600 font-bold">Officers of the Club </h1>
-        <div class="ml-3 md:ml-6">
-          <div class="my-2">
-            1. <p class="inline">The Officers of the club shall consist of the following: President, Vice-President, Secretary, Treasurer, Marketing Head, Publicity Head and four Core Members.</p>
-          </div>
-          <div class="my-2">
-            2. <p class="inline">The Officers shall be appointed by the faculty coordinators for a period of six months on the basis of interview.</p>
-          </div>
-          <div class="my-2">
-            3. <p class="inline">Membership shall be confined to students/alumni of NITJ.
-            </p>
-          </div>
-          <div class="my-2">
-            4. <p class="inline">All Officers shall be eligible for re-appointment.
-            </p>
-          </div>
-          <div class="my-2">
-            5. <p class="inline">The club may appoint other Officers from time to time and under such terms as it considers appropriate.
-            </p>
-          </div>
-          <div class="my-2">
-            6. <p class="inline">The club officers shall be required to actively participate in all Club activities.
-            </p>
-          </div>
-          <div class="my-2">
-            7. <p class="inline">The club officers shall have to conduct monthly events for the enhancement of soft skills of NITJ students.
-            </p>
-          </div>
-          <div>
-          <h2 class="text-xl text-blue-600 font-bold">Meetings: </h2>
-          <div class="my-2">
-            <p class="inline">• The Committee shall meet at such times as shall be decided from time to time by the faculty coordinators thereof but no less than two meetings shall be held in any one month.
-            </p>
-          </div>
-        </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
-        <h1 class="text-xl text-blue-600 font-bold">Disciplinary Procedure </h1>
-        <div class="ml-3 md:ml-6">
-          <div class="my-2">
-            1. <p class="inline">The Disciplinary Board consists of faculty coordinators shall have the power to hear and determine any complaints against the club officers whether made by a Member of the Club or any student of NITJ.</p>
-          </div>
-          <div class="my-2">
-            2. <p class="inline">Any Member/Club Officer found to be in breach of these rules or held to have behaved in a manner damaging to the interests of the Club shall be admonished, suspended, fined, expelled or be the subject of such other penalty as the Club considers fit.</p>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
-        <h1 class="text-xl text-blue-600 font-bold">Amendment of Constitution </h1>
-        <div class="ml-3 md:ml-6">
-          <div class="my-2"><p class="inline">• Only the Patron or Faculty Coordinators will have power to alter or amend this Constitution and Rules.</p>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="mt-6 mb-12 md:w-7/12 w-12/12 mx-auto px-2">
-        <h1 class="text-xl text-blue-600 font-bold">Connect With Us </h1>
-        <div class="mt-3 ml-3 md:ml-6">
-            <span class="my-2"><a target="_blank" class="inline text-red-500"
-                href="https://www.facebook.com/We-Can-NITJ"><i class="fa-brands fa-2xl fa-square-facebook text-black"></i> We-Can-NITJ</a> &nbsp;</span>
-            <span class="my-2"><a target="_blank" class="inline text-red-500"
-                href="https://www.instagram.com/wecan_nitj/"><i class="fa-brands fa-2xl fa-square-instagram text-black"></i> wecan_nitj</a></p>
-        </div>
-        </div>
-      </div>
->>>>>>> d8d23be5727bcea0e93931020ee00f8fa520865a
-
-    <!-- we-can club Cell End -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="flex flex-col justify-between bottom-0 bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
-        <div class="flex basis-1/3 flex-col border-y-gray-300 p-[25px] lg:border-r lg:border-zinc-400">
-            <div class="flex flex-row items-center gap-x-[10px] pb-3">
-                <img src="./img/nitj-logo.png" alt="NITJ logo" class="h-[67px] w-[67px]" />
-                <p class="font-semibold text-white lg:text-[20px]">
-                    Dr. B R Ambedkar National Institute of Technology, Jalandhar
+    <div class="my-6 md:w-7/12 w-12/12 mx-auto px-2">
+      <div class="overflow-x-auto relative">
+        <h1 class="text-xl text-blue-600 font-bold my-2">Committee</h1>
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" class="py-3 text-white px-6">
+              </th>
+              <th scope="col" class="py-3 px-6 text-white">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">Patron</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1">Prof. Rajiv Kumar Garg</span> <br>
+                  Director (I/C)<br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar <br>
                 </p>
-            </div>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">Faculty Coordinator</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1">Dr. Sonia Chawla</span> <br>
+                  Head Training Cell <br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar <br>
+                </p>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">Faculty Coordinator</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p> <span class="font-bold text-[1rem] mb-1">Dr. Shyamkiran Kaur</span> <br>
+                  Assistant Professor <br>
+                  Department of Humanities and Management <br>
+                  Dr B R Ambedkar National Institute of Technology <br>
+                  Jalandhar <br>
+                </p>
+              </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-white">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <p class="text-sm font-bold">Officers of the Club</p>
+              </th>
+              <td class="py-4 px-6 text-white">
+                <p>President <br> Vice-President <br> Secretary <br> Treasurer <br> Marketing Head <br> Publicity Head
+                  <br> Four Core Members <br>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-            <div class="p-[20px]">
-                <div class="pb-[6px] lg:w-[85%]">
-                    <i class="fas fa-location-dot pr-[8px]"></i><span class="opacity-90">G.T Road, Amritsar Bypass,
-                        Jalandhar,
-                        Punjab, India-144027</span>
-                </div>
-                <div class="flex flex-row pb-[6px]">
-                    <i class="fas fa-envelope mt-1 pr-[8px]"></i>
-                    <h3 class="opacity-90">webmaster@nitj.ac.in</h3>
-                </div>
-                <div class="align-center flex flex-row pb-[14px]">
-                    <i class="fas fa-phone mt-1 pr-[8px]"></i>
-                    <h3 class="opacity-90">
-                        +91-0181-5037855, 2690301, 2690453, 3082000
-                    </h3>
-                </div>
-                <div id="social-links" class="flex flex-col bg-slate-800">
-                    <div class="flex flex-row gap-10 mt-4">
-                        <div class="text-l text-white">
-                            <a href="https://www.facebook.com/NITJofficial/" target="_blank">
-                                <i class="fa-brands fa-facebook text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://twitter.com/NITJofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                                target="_blank">
-                                <i class="fab fa-twitter text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://in.linkedin.com/school/dr-b-r-ambedkar-national-institute-of-technology-jalandhar-official/"
-                                target="_blank">
-                                <i class="fa-brands fa-linkedin text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://www.instagram.com/nitjofficial/?hl=en" target="_blank">
-                                <i class="fa-brands fa-instagram text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                        <div class="text-l text-white">
-                            <a href="https://www.youtube.com/c/NITJOfficial" target="_blank">
-                                <i class="fa-brands fa-youtube text-[21px] hover:text-yellow-300"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+    <h1 class="text-xl text-blue-600 font-bold">Officers of the Club </h1>
+    <div class="ml-3 md:ml-6">
+      <div class="my-2">
+        1. <p class="inline">The Officers of the club shall consist of the following: President, Vice-President,
+          Secretary, Treasurer, Marketing Head, Publicity Head and four Core Members.</p>
+      </div>
+      <div class="my-2">
+        2. <p class="inline">The Officers shall be appointed by the faculty coordinators for a period of six months on
+          the basis of interview.</p>
+      </div>
+      <div class="my-2">
+        3. <p class="inline">Membership shall be confined to students/alumni of NITJ.
+        </p>
+      </div>
+      <div class="my-2">
+        4. <p class="inline">All Officers shall be eligible for re-appointment.
+        </p>
+      </div>
+      <div class="my-2">
+        5. <p class="inline">The club may appoint other Officers from time to time and under such terms as it considers
+          appropriate.
+        </p>
+      </div>
+      <div class="my-2">
+        6. <p class="inline">The club officers shall be required to actively participate in all Club activities.
+        </p>
+      </div>
+      <div class="my-2">
+        7. <p class="inline">The club officers shall have to conduct monthly events for the enhancement of soft skills
+          of NITJ students.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-xl text-blue-600 font-bold">Meetings: </h2>
+        <div class="my-2">
+          <p class="inline">• The Committee shall meet at such times as shall be decided from time to time by the
+            faculty coordinators thereof but no less than two meetings shall be held in any one month.
+          </p>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="hidden basis-2/3 p-[25px] lg:block">
-            <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
-            <div class="flex flex-row p-[15px]">
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Admission</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">UnderGrad Courses</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">PostGrad Courses</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Departments</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Academic Calender</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Clubs And Societies</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Campus Life</a>
-                </div>
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Faculty</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Staff</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Recruitment</a>
-                    <br />
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Research</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Patent</a>
-                </div>
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Institute Prospectus(2019-2020)</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Annual Reports</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">MOM</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">UGC Act</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">NIT Act and statutes</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Pension</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Ministry of Education Notifications</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Annual Property Return</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">Rules/Policies</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">ARIIA(2020-2021)</a>
-                </div>
-                <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
-                    <a href="#" class="hover:text-yellow-300 hover:underline">ARIIA (2020-2021)</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">NIRF-2022</a>
-                    <a href="#" class="hover:text-yellow-300 hover:underline">NewsLetter</a>
-                </div>
-            </div>
+  <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+    <h1 class="text-xl text-blue-600 font-bold">Disciplinary Procedure </h1>
+    <div class="ml-3 md:ml-6">
+      <div class="my-2">
+        1. <p class="inline">The Disciplinary Board consists of faculty coordinators shall have the power to hear and
+          determine any complaints against the club officers whether made by a Member of the Club or any student of
+          NITJ.</p>
+      </div>
+      <div class="my-2">
+        2. <p class="inline">Any Member/Club Officer found to be in breach of these rules or held to have behaved in a
+          manner damaging to the interests of the Club shall be admonished, suspended, fined, expelled or be the subject
+          of such other penalty as the Club considers fit.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="mt-6 md:w-7/12 w-12/12 mx-auto px-2">
+    <h1 class="text-xl text-blue-600 font-bold">Amendment of Constitution </h1>
+    <div class="ml-3 md:ml-6">
+      <div class="my-2">
+        <p class="inline">• Only the Patron or Faculty Coordinators will have power to alter or amend this Constitution
+          and Rules.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="mt-6 mb-12 md:w-7/12 w-12/12 mx-auto px-2">
+    <h1 class="text-xl text-blue-600 font-bold">Connect With Us </h1>
+    <div class="mt-3 ml-3 md:ml-6">
+      <span class="my-2"><a target="_blank" class="inline text-red-500" href="https://www.facebook.com/We-Can-NITJ"><i
+            class="fa-brands fa-2xl fa-square-facebook text-black"></i> We-Can-NITJ</a> &nbsp;</span>
+      <span class="my-2"><a target="_blank" class="inline text-red-500" href="https://www.instagram.com/wecan_nitj/"><i
+            class="fa-brands fa-2xl fa-square-instagram text-black"></i> wecan_nitj</a></p>
+    </div>
+  </div>
+  </div>
+  >>>>>>> d8d23be5727bcea0e93931020ee00f8fa520865a
+
+  <!-- we-can club Cell End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="flex flex-col justify-between bottom-0 bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
+    <div class="flex basis-1/3 flex-col border-y-gray-300 p-[25px] lg:border-r lg:border-zinc-400">
+      <div class="flex flex-row items-center gap-x-[10px] pb-3">
+        <img src="./img/nitj-logo.png" alt="NITJ logo" class="h-[67px] w-[67px]" />
+        <p class="font-semibold text-white lg:text-[20px]">
+          Dr. B R Ambedkar National Institute of Technology, Jalandhar
+        </p>
+      </div>
+
+      <div class="p-[20px]">
+        <div class="pb-[6px] lg:w-[85%]">
+          <i class="fas fa-location-dot pr-[8px]"></i><span class="opacity-90">G.T Road, Amritsar Bypass,
+            Jalandhar,
+            Punjab, India-144027</span>
         </div>
+        <div class="flex flex-row pb-[6px]">
+          <i class="fas fa-envelope mt-1 pr-[8px]"></i>
+          <h3 class="opacity-90">webmaster@nitj.ac.in</h3>
+        </div>
+        <div class="align-center flex flex-row pb-[14px]">
+          <i class="fas fa-phone mt-1 pr-[8px]"></i>
+          <h3 class="opacity-90">
+            +91-0181-5037855, 2690301, 2690453, 3082000
+          </h3>
+        </div>
+        <div id="social-links" class="flex flex-col bg-slate-800">
+          <div class="flex flex-row gap-10 mt-4">
+            <div class="text-l text-white">
+              <a href="https://www.facebook.com/NITJofficial/" target="_blank">
+                <i class="fa-brands fa-facebook text-[21px] hover:text-yellow-300"></i></a>
+            </div>
+            <div class="text-l text-white">
+              <a href="https://twitter.com/NITJofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank">
+                <i class="fab fa-twitter text-[21px] hover:text-yellow-300"></i></a>
+            </div>
+            <div class="text-l text-white">
+              <a href="https://in.linkedin.com/school/dr-b-r-ambedkar-national-institute-of-technology-jalandhar-official/"
+                target="_blank">
+                <i class="fa-brands fa-linkedin text-[21px] hover:text-yellow-300"></i></a>
+            </div>
+            <div class="text-l text-white">
+              <a href="https://www.instagram.com/nitjofficial/?hl=en" target="_blank">
+                <i class="fa-brands fa-instagram text-[21px] hover:text-yellow-300"></i></a>
+            </div>
+            <div class="text-l text-white">
+              <a href="https://www.youtube.com/c/NITJOfficial" target="_blank">
+                <i class="fa-brands fa-youtube text-[21px] hover:text-yellow-300"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-    <div
-        class="border-t bottom-0 border-zinc-400 flex flex-col bg-slate-800 px-20 p-[20px] text-center text-white lg:flex-row justify-between">
-        <div class="pb-[10px] text-[12px] lg:pb-0 lg:text-[15px]">
-            &#169; Copyright 2022, All Rights Reserved NIT Jalandhar
+    <div class="hidden basis-2/3 p-[25px] lg:block">
+      <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
+      <div class="flex flex-row p-[15px]">
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+          <a href="#" class="hover:text-yellow-300 hover:underline">Admission</a>
+          <br />
+          <a href="#" class="hover:text-yellow-300 hover:underline">UnderGrad Courses</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">PostGrad Courses</a>
+          <br />
+          <a href="#" class="hover:text-yellow-300 hover:underline">Departments</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Academic Calender</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Clubs And Societies</a>
+          <br />
+          <a href="#" class="hover:text-yellow-300 hover:underline">Campus Life</a>
         </div>
-
-        <div class="text-[12px] lg:text-[15px]">
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Other NITs</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">MoU</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">GIAN</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">TEQIP</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Anti Ragging</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Terms of Use</a>
-            |
-            <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Credits</a>
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+          <a href="#" class="hover:text-yellow-300 hover:underline">Faculty</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Staff</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Recruitment</a>
+          <br />
+          <a href="#" class="hover:text-yellow-300 hover:underline">Research</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Patent</a>
         </div>
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+          <a href="#" class="hover:text-yellow-300 hover:underline">Institute Prospectus(2019-2020)</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Annual Reports</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">MOM</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">UGC Act</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">NIT Act and statutes</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Pension</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Ministry of Education Notifications</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Annual Property Return</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">Rules/Policies</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">ARIIA(2020-2021)</a>
+        </div>
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+          <a href="#" class="hover:text-yellow-300 hover:underline">ARIIA (2020-2021)</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">NIRF-2022</a>
+          <a href="#" class="hover:text-yellow-300 hover:underline">NewsLetter</a>
+        </div>
+      </div>
     </div>
-    <!-- === FOOTER Ends === -->
-    <script>
-        var slideIndex = 0;
-        carousel();
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1;
-            }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 2500);
-        }
-    </script>
-    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        var tooltipTriggerList = [].slice.call(
-            document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        );
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new Tooltip(tooltipTriggerEl);
-        });
-    </script>
+  </div>
 
-    <script src="app.js"></script>
+
+
+  <div
+    class="border-t bottom-0 border-zinc-400 flex flex-col bg-slate-800 px-20 p-[20px] text-center text-white lg:flex-row justify-between">
+    <div class="pb-[10px] text-[12px] lg:pb-0 lg:text-[15px]">
+      &#169; Copyright 2022, All Rights Reserved NIT Jalandhar
+    </div>
+
+    <div class="text-[12px] lg:text-[15px]">
+      <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Other NITs</a>
+      |
+      <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">MoU</a>
+      |
+      <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">GIAN</a>
+      |
+      <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">TEQIP</a>
+      |
+      <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Anti Ragging</a>
+      |
+      <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Terms of Use</a>
+      |
+      <a href="#" class="mx-1 hover:text-yellow-300 hover:underline lg:mx-2">Credits</a>
+    </div>
+  </div>
+  <!-- === FOOTER Ends === -->
+  <script>
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1;
+      }
+      x[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 2500);
+    }
+  </script>
+  <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
+  </script>
+
+  <script src="app.js"></script>
 </body>
 
 </html>

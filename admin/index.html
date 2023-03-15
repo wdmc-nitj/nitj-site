@@ -157,7 +157,7 @@
             margin-top: 40px;
             background-image: url("img/nitj3.jpg"),
                 linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-        
+
             background-color: #cccccc;
             height: 400px;
             background-position: 0% 28%;
@@ -186,6 +186,7 @@
 
 <body>
     <script src="/common template/header.js" type="module"></script>
+    <script src="/common template/helper.js"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <div class="titlebg">
@@ -216,7 +217,7 @@
                 <p class="font2 font-medium text-[28px] lg:text-[32px]">Introduction</p>
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
             </div>
-                 <div id="Introduction"></div>
+            <div id="Introduction"></div>
 
             <!-- <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                 Dr B R Ambedkar National Institute of Technology was established in the year 1987 as Regional
@@ -278,7 +279,7 @@
                     <p class="font2 font-medium text-[28px] lg:text-[32px]">Rankings</p>
                     <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
                 </div>
-               <div id="Current_ranking"></div>
+                <div id="Current_ranking"></div>
                 <!-- <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
                     <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]">52</p>
                     <p class="font-medium text-[18px] lg:text-[18px]">NIRF ENGINEERING 2022</p>
@@ -539,144 +540,144 @@
 
     <script>
         async function callAPi() {
-          let result = await fetch(
-            "https://wdmc.onrender.com/about?id=639ecb2bfea45fe1e20cbf3c"
-          );
-          result = await result.json();
-          console.log(result);
-          document.getElementById("Introduction").innerHTML = `
+            let result = await fetch(
+                "https://wdmc.onrender.com/about?id=639ecb2bfea45fe1e20cbf3c"
+            );
+            result = await result.json();
+            console.log(result);
+            document.getElementById("Introduction").innerHTML = `
           <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">${result[0].content}    
             </p>
                      
            `;
         }
         callAPi();
-      </script>
+    </script>
 
-<script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/about?id=639ecb64fea45fe1e20cbf3e"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("Vision").innerHTML = `
+    <script>
+        async function callAPi() {
+            let result = await fetch(
+                "https://wdmc.onrender.com/about?id=639ecb64fea45fe1e20cbf3e"
+            );
+            result = await result.json();
+            console.log(result);
+            document.getElementById("Vision").innerHTML = `
       <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">${result[0].content}
                 </p>     
        `;
-    }
-    callAPi();
-  </script>
-<script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/about?id=639ecba2fea45fe1e20cbf42"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("Quality").innerHTML = `
+        }
+        callAPi();
+    </script>
+    <script>
+        async function callAPi() {
+            let result = await fetch(
+                "https://wdmc.onrender.com/about?id=639ecba2fea45fe1e20cbf42"
+            );
+            result = await result.json();
+            console.log(result);
+            document.getElementById("Quality").innerHTML = `
       <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     ${result[0].content}
                 </p>      
        `;
-    }
-    callAPi();
-  </script>
+        }
+        callAPi();
+    </script>
 
 
-<script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/about?id=639ecb75fea45fe1e20cbf40"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("Mission").innerHTML = `
+    <script>
+        async function callAPi() {
+            let result = await fetch(
+                "https://wdmc.onrender.com/about?id=639ecb75fea45fe1e20cbf40"
+            );
+            result = await result.json();
+            console.log(result);
+            document.getElementById("Mission").innerHTML = `
       <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     ${result[0].content}
                 </p>      
        `;
-    }
-    callAPi();
-  </script>
+        }
+        callAPi();
+    </script>
 
 
-<script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/about?id=639ecba2fea45fe1e20cbf42"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("Introduction").innerHTML = `
+    <script>
+        async function callAPi() {
+            let result = await fetch(
+                "https://wdmc.onrender.com/about?id=639ecba2fea45fe1e20cbf42"
+            );
+            result = await result.json();
+            console.log(result);
+            document.getElementById("Introduction").innerHTML = `
       <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     ${result[0].content}
                 </p>
                  
        `;
-    }
-    callAPi();
-  </script>
-
-<script>
-    async function callAPi() {
-      let result = await fetch("https://wdmc.onrender.com/timeline/get/all");
-      result = await result.json();
-      timelist = [];
-
-      for (let i = 0; i < result.length; i++) {
-        console.log(result[i].Timeline);
-        for (let j = 0; j < result[i].Timeline.length; j++) {
-          timelist.push(result[i].Timeline[j]);
         }
-      }
-      timelist = timelist.filter(
-        (thing, index, self) =>
-          index === self.findIndex((t) => t[0] === thing[0])
-      );
-      timelist.sort((a, b) => a[0] - b[0]);
-      console.log(timelist);
+        callAPi();
+    </script>
 
-      let uniqueYear = [];
-      function getUniqueYear() {
-        for (let i = 0; i < timelist.length; i++) {
-          if (!uniqueYear.includes(timelist[i][0])) {
-            uniqueYear.push(timelist[i][0]);
-          }
-        }
+    <script>
+        async function callAPi() {
+            let result = await fetch("https://wdmc.onrender.com/timeline/get/all");
+            result = await result.json();
+            timelist = [];
 
-        uniqueYear = uniqueYear.reverse();
-      }
-      getUniqueYear();
-      console.log(uniqueYear);
-      x = "";
-      for (let i = 0; i < uniqueYear.length; i++) {
-        x += `
+            for (let i = 0; i < result.length; i++) {
+                console.log(result[i].Timeline);
+                for (let j = 0; j < result[i].Timeline.length; j++) {
+                    timelist.push(result[i].Timeline[j]);
+                }
+            }
+            timelist = timelist.filter(
+                (thing, index, self) =>
+                    index === self.findIndex((t) => t[0] === thing[0])
+            );
+            timelist.sort((a, b) => a[0] - b[0]);
+            console.log(timelist);
+
+            let uniqueYear = [];
+            function getUniqueYear() {
+                for (let i = 0; i < timelist.length; i++) {
+                    if (!uniqueYear.includes(timelist[i][0])) {
+                        uniqueYear.push(timelist[i][0]);
+                    }
+                }
+
+                uniqueYear = uniqueYear.reverse();
+            }
+            getUniqueYear();
+            console.log(uniqueYear);
+            x = "";
+            for (let i = 0; i < uniqueYear.length; i++) {
+                x += `
         <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
     <div class="flex flex-row gap-[32px]">
         <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">${uniqueYear[i]}</h3>`;
-        for (let j = 0; j < timelist.length; j++) {
-          if (uniqueYear[i] == timelist[j][0]) {
-            x += `<p class="basis-7/10 flex items-center ">
+                for (let j = 0; j < timelist.length; j++) {
+                    if (uniqueYear[i] == timelist[j][0]) {
+                        x += `<p class="basis-7/10 flex items-center ">
              ${timelist[j][1]}
           </p>`;
-          }
-        }
-        x += "</div></div>";
-      }
+                    }
+                }
+                x += "</div></div>";
+            }
 
-      document.getElementById("timeline").innerHTML = x;
-    }
-    callAPi();
-  </script>
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/yearlyRanking?id=640334ec41f4f72cbbca59d0"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("Current_ranking").innerHTML = `
+            document.getElementById("timeline").innerHTML = x;
+        }
+        callAPi();
+    </script>
+    <script>
+        async function callAPi() {
+            let result = await fetch(
+                "https://wdmc.onrender.com/yearlyRanking?id=640334ec41f4f72cbbca59d0"
+            );
+            result = await result.json();
+            console.log(result);
+            document.getElementById("Current_ranking").innerHTML = `
       <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
                     <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${result[0].YearlyRanking.rankings[0][0]}</p>
                     <p class="font-medium text-[18px] lg:text-[18px]"> ${result[0].YearlyRanking.rankings[0][1]}</p>
@@ -695,25 +696,25 @@
                 </div>
                  
        `;
-    }
-    callAPi();
-  </script>
-<script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/about?id=639ecbdbfea45fe1e20cbf44"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("Institute_history").innerHTML = `
+        }
+        callAPi();
+    </script>
+    <script>
+        async function callAPi() {
+            let result = await fetch(
+                "https://wdmc.onrender.com/about?id=639ecbdbfea45fe1e20cbf44"
+            );
+            result = await result.json();
+            console.log(result);
+            document.getElementById("Institute_history").innerHTML = `
       <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
                 ${result[0].content}
             </p>
                  
        `;
-    }
-    callAPi();
-  </script>
+        }
+        callAPi();
+    </script>
 
 </body>
 

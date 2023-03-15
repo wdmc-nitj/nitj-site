@@ -39,6 +39,7 @@
 
 <body>
     <script src="/common template/header.js" type="module"></script>
+    <script src="/common template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -75,31 +76,31 @@
                 <ul class="list-disc my-12 ml-8 mr-4" id="mba-list">
                     <script>
                         async function api_call() {
-                          var data = await fetch(
-                            "https://wdmc.onrender.com/studyprogramme/mba"
-                          );
-                          var result = await data.json();
-    
-                          var modified = result[0].programmes[0];
+                            var data = await fetch(
+                                "https://wdmc.onrender.com/studyprogramme/mba"
+                            );
+                            var result = await data.json();
 
-                          console.log(modified);
-      
-                          if(modified["years"]==2){
-                            for (var i in modified["list"]) {
-                                var title = modified["list"][i]["title"];
-                                var url = modified["list"][i]["url"];
-                            document
-                              .getElementById("mba-list")
-                              .insertAdjacentHTML(
-                                "beforeend",
-                                `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
-                              );
-                          }
-                          }
+                            var modified = result[0].programmes[0];
+
+                            console.log(modified);
+
+                            if (modified["years"] == 2) {
+                                for (var i in modified["list"]) {
+                                    var title = modified["list"][i]["title"];
+                                    var url = modified["list"][i]["url"];
+                                    document
+                                        .getElementById("mba-list")
+                                        .insertAdjacentHTML(
+                                            "beforeend",
+                                            `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
+                                        );
+                                }
+                            }
                         }
                         api_call();
-                      </script>
-                    
+                    </script>
+
                 </ul>
             </div>
         </div>

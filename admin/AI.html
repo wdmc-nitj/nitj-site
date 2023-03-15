@@ -39,6 +39,7 @@
 
 <body>
     <script src="/common template/header.js" type="module"></script>
+    <script src="/common template/helper.js"></script>
     <div class="mb-8">
         <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
             <div>
@@ -107,23 +108,23 @@
                     <tbody id="table-body-ai">
                         <script>
                             async function api_call() {
-                              var data = await fetch(
-                                "https://wdmc.onrender.com/specialcentres/getcentre/ai"
-                              );
-                              var result = await data.json();
+                                var data = await fetch(
+                                    "https://wdmc.onrender.com/specialcentres/getcentre/ai"
+                                );
+                                var result = await data.json();
 
-                              var modified = result[0].faculties;
-          
-                              for (var i in modified) {
-                                var name = modified[i]["name"];
-                                var designation = modified[i]["designation"];
-                                var department = modified[i]["department"];
-                                var email = modified[i]["email_id"];
-                                document
-                                  .getElementById("table-body-ai")
-                                  .insertAdjacentHTML(
-                                    "beforeend",
-                                    `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                var modified = result[0].faculties;
+
+                                for (var i in modified) {
+                                    var name = modified[i]["name"];
+                                    var designation = modified[i]["designation"];
+                                    var department = modified[i]["department"];
+                                    var email = modified[i]["email_id"];
+                                    document
+                                        .getElementById("table-body-ai")
+                                        .insertAdjacentHTML(
+                                            "beforeend",
+                                            `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 ${name}
@@ -138,11 +139,11 @@
                                 ${email}
                             </td>
                         </tr>`
-                                  );
-                              }
+                                        );
+                                }
                             }
                             api_call();
-                          </script>
+                        </script>
                     </tbody>
                 </table>
             </div>

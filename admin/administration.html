@@ -128,6 +128,7 @@
 
 <body>
     <script src="/common template/header.js" type="module"></script>
+    <script src="/common template/helper.js" async></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <div class="titlebg">
@@ -1010,7 +1011,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="international-affairs"
             class="scroll-mt-32 flex flex-col lg:flex-row container gap-[32px] lg:gap-[64px]">
             <div class="w-full flex flex-col items-start">
@@ -1684,7 +1685,7 @@
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 if (tabcontent[i].id[tabcontent[i].id.length - 1] == deanName[deanName.length - 1]) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
                 }
             }
             document.getElementById(deanName).style.display = "block";
