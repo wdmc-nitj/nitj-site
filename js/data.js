@@ -419,51 +419,29 @@ const arrow_forward = document.getElementById('arrow_forward')
 arrow_forward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = img_arr
-  if (window.innerWidth <= 800) {
-    for (var i = 0; i <= size_images-2; i++) {
-      if (imgArray[i].image.link == imgSample.src) {
-        imgSample.src = imgArray[i + 1].image.link
-        break
-      } else if (i == size_images-2) {
+  for (let i = 0; i < imgArray.length; i++) {
+    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+      if (i == imgArray.length - 1) {
         imgSample.src = imgArray[0].image.link
-        break
-      }
-    }
-  } else {
-    for (var i = 0; i <= size_images-2; i++) {
-      console.log(imgArray[i].image.link)
-      if (imgArray[i].image.link == imgSample.src) {
+      } else {
         imgSample.src = imgArray[i + 1].image.link
-        break
-      } else if (i == size_images-2) {
-        imgSample.src = imgArray[0].image.link
-        break
       }
+      break;
     }
   }
 })
-
-const arrow_back = document.getElementById('arrow_back')
-arrow_back.addEventListener('click', (e) => {
+const arrow_backward = document.getElementById('arrow_back')
+arrow_backward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = img_arr
-  if (window.innerWidth <= 800) {
-    for (var i = size_images-2; i >= 0; i--) {
+  for (let i = 0; i < imgArray.length; i++) {
+    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
       if (i == 0) {
-        imgSample.src = imgArray[size_images-2].image.link
-      } else if (imgArray[i].image.link == imgSample.src) {
+        imgSample.src = imgArray[imgArray.length - 1].image.link
+      } else {
         imgSample.src = imgArray[i - 1].image.link
-        break
       }
-    }
-  } else {
-    for (var i = size_images-2; i >= 0; i--) {
-      if (i == 0) {
-        imgSample.src = imgArray[size_images-2].image.link
-      } else if (imgArray[i].image.link == imgSample.src) {
-        imgSample.src = imgArray[i - 1].image.link
-        break
-      }
+      break;
     }
   }
 })
