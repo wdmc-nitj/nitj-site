@@ -23,105 +23,134 @@
 
 
 </head>
+<style>
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: gray;
+    }
+
+    ::-webkit-resizer {
+        background-color: #ffffff;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .font2 {
+        font-family: 'Barlow', sans-serif;
+    }
+
+    :root {
+        --primary-color: #fff;
+        --background-color: #212121;
+
+        --blue-color: #0369A1;
+        --light-blue-color: #F6F6FE;
+        --purple-color: #040320;
+        --font1: 'Poppins', sans-serif;
+        --font2: 'Barlow', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-body {
+        font-family: var(--font1);
+    }
+
+    .titlebg {
+        background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
 
 <body class="font-body text-dark-purple">
 
     <!-- Header -->
     <script type="module" src="/common template/header.js"></script>
     <!-- === Search bar ends === -->
-
-    <div id="main-image" class="mt-20 h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center animate-image-slider">
-        <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
-            <div class="flex flex-col items-center justify-center container h-full">
-                <div class="flex flex-col gap-10">
-                    <h2 class="uppercase text-white text-4xl text-center">
-                        <span class="font-bold">HEALTH AND WELLNESS</span>
-                    </h2>
-                </div>
-                <div>
-                    &nbsp;
-                </div>
-                <div>
-                    &nbsp;
-                </div>
-
-                <div id="tiles" class="flex mt-[10vh] gap-5 w-[100%] items-start align-self-start">
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> medical_services
-            </span>
-                        <a href="#COUNSELLING SERVICES" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              COUNSELLING SERVICES
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> sports_Gymnastics
-            </span>
-                        <a href="#GYMNASIUM" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              GYMNASIUM
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> health_and_safety
-            </span>
-                        <a href="#HEALTH CARE CENTER" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              HEALTH CARE CENTER
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> help
-            </span>
-                        <a href="#STUDENT GRIEVANCE CELL" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              Students Grievance 
-            </a>
-                        <a href="#STUDENT GRIEVANCE CELL" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase" style="margin-top:0px;">
-              Cell
-            </a>
-                    </div>
-
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> self_improvement
-            </span>
-                        <a href="#FIT INDIA MOVEMENT" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              FIT INDIA MOVEMENT
-            </a>
-                    </div>
-
-
-                </div>
-                <div id="tiles" class="flex mt-[10vh] gap-5 w-[90%] items-start align-self-start " style="padding-left: 375px;">
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> local_hospital
-            </span>
-                        <a href="#Empanaelled" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              Empanaelled 
-            </a>
-                        <a href="#Empanaelled" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase" style="margin-top:0px;">
-              Hospitals
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> sports_tennis
-            </span>
-                        <a href="#Sports" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-               SPORTS AND
-            </a>
-                        <a href="#Sports" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase" style="margin-top:0px;">
-              RECREATION
-            </a>
-                    </div>
-
-
-                </div>
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Health And Wellness</p>
             </div>
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center" style="margin:25px">
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#COUNSELLING SERVICES" class="text-lg font-medium ml-2"> > Counselling services</a>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#GYMNASIUM" class="text-lg font-medium ml-2"> > Gymnasium</a>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#HEALTH CARE CENTRE" class="text-lg font-medium ml-2"> > Health care centre</a>
+                        </a>
+                    </li>
+                   
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#STUDENT GRIEVANCE CELL" class="text-lg font-medium ml-2"> > Student Grievance Cell</a>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#FIT INDIA MOVEMENT" class="text-lg font-medium ml-2"> > Fit India Movement</a>
+                        </a>
+                    </li>
+                    
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#Empanaelled" class="text-lg font-medium ml-2"> > Empanaelled Hospitals</a>
+                        </a>
+                    </li>
+                   
+                    
+                </ol>
+            </nav>
         </div>
+       
+      
+
     </div>
 
-    <br><br>
+
+
+
+
 
     <!-- === Carousel section ends === -->
     <!-- === News Section Starts === -->
 
-    <div id="COUNSELLING SERVICES" class="my-20">
+    <div id="COUNSELLING SERVICES" class="my-20" style="margin:0px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
@@ -164,7 +193,7 @@
 
     <br>
 
-    <div id="GYMNASIUM" class="my-20">
+    <div id="GYMNASIUM" class="my-20"style="margin:0px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
@@ -204,7 +233,7 @@
     </div>
 
     <br>
-    <div id="HEALTH CARE CENTRE" class="my-20">
+    <div id="HEALTH CARE CENTRE" class="my-20"style="margin:0px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
@@ -245,7 +274,7 @@
     </div>
 
     <br>
-    <div id="STUDENT GRIEVANCE CELL" class="my-20">
+    <div id="STUDENT GRIEVANCE CELL" class="my-20"style="margin:0px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
@@ -288,7 +317,7 @@
     </div>
 
     <br>
-    <div id="FIT INDIA MOVEMENT" class="my-20">
+    <div id="FIT INDIA MOVEMENT" class="my-20"style="margin:0px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
@@ -325,7 +354,7 @@
         </div>
         <br>
         <br>
-        <div id="Empanaelled" class="my-20">
+        <div id="Empanaelled" class="my-20"style="margin:0px">
             <div class="container flex flex-col justify-start lg:flex-row">
                 <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                     <div class="flex items-center justify-start space-x-6">
@@ -368,7 +397,7 @@
             </div>
             <br>
             <br>
-            <div id="Sports" class="my-20">
+            <div id="Sports" class="my-20"style="margin:0px">
                 <div class="container flex flex-col justify-start lg:flex-row">
                     <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                         <div class="flex items-center justify-start space-x-6">
