@@ -251,28 +251,9 @@
     <script>
       // Image change script
       let gallery = document.getElementById("gallery");
-      let arr = [
-        "img/IMG-20220721-WA0024.jpg",
-        "img/IMG-20220721-WA0027.jpg",
-        "img/IMG-20220721-WA0023.jpg",
-        "img/IMG-20220721-WA0021.jpg",
-        "img/IMG-20220721-WA0022.jpg",
-        "img/IMG-20220721-WA0020.jpg",
-      ];
+      
 
       let k = 0;
-
-      function setgal() {
-        if (k == 6) k = 0;
-
-        console.log("Inside gal... " + k);
-        for (let i = 0; i < 6; i++) {
-          document.getElementById("gal" + `${i + 1}`).src = arr[(i + k) % 6];
-        }
-        k++;
-      }
-
-      setInterval(setgal, 7000);
     </script>
 
     <!-- <script>
@@ -291,9 +272,10 @@
   </script> -->
     <script>
       async function callAPi() {
-        let result = await fetch("https://wdmc.onrender.com/photoGallery/");
-        result = await result.json();
-
+      var result=[]
+      fetch("https://wdmc.onrender.com/photoGallery/").then((res) => res.json()).then((data) => {
+        result = data;
+      })
         x = `<div class="flex flex-wrap -m-1 md:-m-2 h-[60vh] lg:h-[80vh]">`;
 
         // document.getElementById("gallery").innerHTML = x;
