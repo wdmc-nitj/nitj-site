@@ -1,4 +1,5 @@
-fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=BTECH')
+const teamdBaseURL="teamd.onrender.com"
+fetch(`https://${teamdBaseURL}/admissions/updates/get?visible=visible&degree=BTECH`)
 .then((response) => response.json())
   .then((data) => {
     
@@ -30,7 +31,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
   })
 
 
-  fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=MTECH-CCMT')
+  fetch(`https://${teamdBaseURL}/admissions/updates/get?visible=visible&degree=MTECH-CCMT`)
   .then((response) => response.json())
     .then((data) => {
       
@@ -62,7 +63,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
     })
 
 
-    fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=MTECH-SELF')
+    fetch(`https://${teamdBaseURL}/admissions/updates/get?visible=visible&degree=MTECH-SELF`)
     .then((response) => response.json())
       .then((data) => {
         
@@ -94,7 +95,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
       })
     
 
-      fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=MSC')
+      fetch(`https://${teamdBaseURL}/admissions/updates/get?visible=visible&degree=MSC`)
       .then((response) => response.json())
         .then((data) => {
           
@@ -126,7 +127,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
         })
       
 
-        fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=MBA')
+        fetch(`https://${teamdBaseURL}/admissions/updates/get?visible=visible&degree=MBA`)
         .then((response) => response.json())
           .then((data) => {
             
@@ -157,7 +158,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
             })
           })
 
-          fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=PHD')
+          fetch(`https://${teamdBaseURL}/admissions/updates/get?visible=visible&degree=PHD`)
           .then((response) => response.json())
             .then((data) => {
               
@@ -189,7 +190,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
             })
 
 // important links
-            fetch('https://teamd.onrender.com/admissions/links/get?visible=visible')
+            fetch(`https://${teamdBaseURL}/admissions/links/get?visible=visible`)
             .then((response) => response.json())
               .then((data) => {
                 
@@ -213,7 +214,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                 })
               })
 
-              fetch('https://teamd.onrender.com/admissions/links/get?visible=visible')
+              fetch(`https://${teamdBaseURL}/admissions/links/get?visible=visible`)
               .then((response) => response.json())
                 .then((data) => {
                   
@@ -237,7 +238,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                   })
                 })
 
-                fetch('https://teamd.onrender.com/admissions/links/get?visible=visible')
+                fetch(`https://${teamdBaseURL}/admissions/links/get?visible=visible`)
                 .then((response) => response.json())
                   .then((data) => {
                     
@@ -261,7 +262,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                     })
                   })
 
-                  fetch('https://teamd.onrender.com/admissions/links/get?visible=visible')
+                  fetch(`https://${teamdBaseURL}/admissions/links/get?visible=visible`)
                   .then((response) => response.json())
                     .then((data) => {
                       
@@ -285,7 +286,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                       })
                     })
 
-                    fetch('https://teamd.onrender.com/admissions/links/get?visible=visible')
+                    fetch(`https://${teamdBaseURL}/admissions/links/get?visible=visible`)
                     .then((response) => response.json())
                       .then((data) => {
                         
@@ -309,7 +310,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                         })
                       })
 
-                      fetch('https://teamd.onrender.com/admissions/links/get?visible=visible')
+                      fetch(`https://${teamdBaseURL}/admissions/links/get?visible=visible`)
                       .then((response) => response.json())
                         .then((data) => {
                           
@@ -334,7 +335,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                         })
 
                      
-                      fetch('https://teamd.onrender.com/admissions/helplines/get?visible=visible&degree=BTECH')
+                      fetch(`https://${teamdBaseURL}/admissions/helplines/get?visible=visible&degree=BTECH`)
                       .then((response) => response.json())
                         .then((data) => {
                           
@@ -361,7 +362,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                           })
                         })
 
-                        fetch('https://teamd.onrender.com/admissions/helplines/get?visible=visible&degree=MTECH-CCMT')
+                        fetch(`https://${teamdBaseURL}/admissions/helplines/get?visible=visible&degree=MTECH-CCMT`)
                         .then((response) => response.json())
                           .then((data) => {
                             
@@ -388,7 +389,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                             })
                           })
   
-                          fetch('https://teamd.onrender.com/admissions/helplines/get?visible=visible&degree=MTECH-SELF')
+                          fetch(`https://${teamdBaseURL}/admissions/helplines/get?visible=visible&degree=MTECH-SELF`)
                           .then((response) => response.json())
                             .then((data) => {
                               
@@ -415,7 +416,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                               })
                             })
 
-                            fetch('https://teamd.onrender.com/admissions/helplines/get?visible=visible&degree=MTECH-SELF')
+                            fetch(`https://${teamdBaseURL}/admissions/helplines/get?visible=visible&degree=MTECH-SELF`)
                             .then((response) => response.json())
                               .then((data) => {
                                 
@@ -442,7 +443,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                                 })
                               })
 
-                              fetch('https://teamd.onrender.com/admissions/helplines/get?visible=visible&degree=MSC')
+                              fetch(`https://${teamdBaseURL}/admissions/helplines/get?visible=visible&degree=MSC`)
                               .then((response) => response.json())
                                 .then((data) => {
                                   
@@ -469,7 +470,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                                   })
                                 })
 
-                                fetch('https://teamd.onrender.com/admissions/helplines/get?visible=visible&degree=MBA')
+                                fetch(`https://${teamdBaseURL}/admissions/helplines/get?visible=visible&degree=MBA`)
                                 .then((response) => response.json())
                                   .then((data) => {
                                     
@@ -496,7 +497,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                                     })
                                   })
 
-                                  fetch('https://teamd.onrender.com/admissions/helplines/get?visible=visible&degree=PHD')
+                                  fetch(`https://${teamdBaseURL}/admissions/helplines/get?visible=visible&degree=PHD`)
                                   .then((response) => response.json())
                                     .then((data) => {
                                       

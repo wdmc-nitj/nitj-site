@@ -1,4 +1,4 @@
-fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=faculty')
+fetch('https://${teamdBaseURL}/recruitments/updates/categorised?category=faculty')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("faculty");
@@ -20,7 +20,7 @@ ${update.title}
     })
   
 
-    fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=nonFaculty')
+    fetch('https://${teamdBaseURL}/recruitments/updates/categorised?category=nonFaculty')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("nonFaculty");
@@ -44,7 +44,7 @@ ${update.title}
 
     
 
-    fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=faculty-contract')
+    fetch('https://${teamdBaseURL}/recruitments/updates/categorised?category=faculty-contract')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("faculty-contract");
@@ -67,7 +67,7 @@ ${update.title}
   
 
     
-    fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=nonFaculty-contract')
+    fetch('https://${teamdBaseURL}/recruitments/updates/categorised?category=nonFaculty-contract')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("nonFaculty-contract");

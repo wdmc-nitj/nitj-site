@@ -587,10 +587,11 @@
       </div>
     </div>
 
+
     <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
       <div class="lg:w-[15%] w-[25%]">
         <div
-          class="tabs p-2 rounded lg:block lg:w-[100%] w-[20%] hidden sticky top-40"
+          class="tabs p-2  lg:block lg:w-[100%] w-[20%] hidden sticky top-40"
           id="sidetab"
         >
           <ul>
@@ -622,49 +623,56 @@
         </div>
       </div>
 
-      <div
-        x-data="{dropdownMenu: false}"
-        class="block lg:hidden mx-auto w-[60%]"
-      >
-        <!-- Dropdown toggle button -->
-        <button
-          @click="dropdownMenu = ! dropdownMenu"
-          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%] mt-10 mb-4"
-        >
-          <span class="mx-auto"
-            >Select Course <i class="fa-solid fa-caret-down"></i>
-          </span>
-        </button>
-        <!-- Dropdown list -->
-        <div x-show="dropdownMenu" class="tabs2 p-2 rounded w-[100%]">
-          <ul>
-            <li class="active2 bg-blue-100 mb-1" id="resp_sidetab_btech">
-              <span class="text">B.Tech.</span>
-            </li>
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_mtech">
-              <span class="text">M.Tech. (CCMT)</span>
-            </li>
-            <li class="bg-blue-100 mb-1">
-              <span class="text">M.Tech. (Self Sponsored)</span>
-            </li>
+      
 
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_msc">
-              <span class="text">M.Sc.</span>
-            </li>
 
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_mba">
-              <span class="text">M.B.A.</span>
-            </li>
 
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_phd">
-              <span class="text">Ph.D.</span>
-            </li>
-            <li class="bg-blue-100" id="resp_sidetab_foreign_admissions">
-              <span class="text">Foreign Admissions</span>
-            </li>
-          </ul>
+      <!-- NEW DropDown -->
+      <div class="lg:hidden flex flex-col mt-[-5%] justify-center items-center ">
+        <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto mt-4 w-[60%]">
+          <!-- Dropdown toggle button -->
+          <button
+            @click="dropdownMenu = ! dropdownMenu"
+            class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4"
+          >
+            <span class="mx-auto">Select Course <i class="fa-solid fa-caret-down"></i> </span>
+          </button>
+          <!-- Dropdown list -->
+          <div
+            x-show="dropdownMenu"
+            class="tabs2  p-2 rounded w-[100%]"
+          >
+              <ul>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class="active2 bg-blue-100 mb-1">
+                  <span class="text dropContent1"  onclick=dropDownContentOnClick1() >B.Tech.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
+                  <span class="text dropContent2" onclick=dropDownContentOnClick2()>M.Tech. (CCMT)</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
+                  <span class="text dropContent3" onclick=dropDownContentOnClick3()>M.Tech. (Self Sponsored)</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent4"  onclick=dropDownContentOnClick4() >M.Sc.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent5"  onclick=dropDownContentOnClick5() >M.B.A.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent6"  onclick=dropDownContentOnClick6() >Ph.D.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent7"  onclick=dropDownContentOnClick7() >Foreign Admissions</span>
+                </li>
+              </ul>
+            
+          </div>
         </div>
-      </div>
+    
+    
+    </div>
+
+    <!-- new DropDowm -->
 
       <div class="lg:w-[80%] w-[90%] mx-auto">
         <div class="content w-[100%] mx-auto">
@@ -3092,6 +3100,11 @@
     <div class="relative bottom-0">
       <script src="../common template/footer.js"></script>
     </div>
+
+    
+
+
+
     <script>
       /*javascript for admission nav */
 
