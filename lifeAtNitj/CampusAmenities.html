@@ -26,156 +26,135 @@
 
 </head>
 
+<style>
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: gray;
+    }
+
+    ::-webkit-resizer {
+        background-color: #ffffff;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+    }
+
+    #semi-bold{
+        font-size: 17px;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+    hr{
+        color: #0369A1;
+        width: 150px;
+        border-top: 3.2px solid ;
+        
+    }
+
+    .font2 {
+        font-family: 'Barlow', sans-serif;
+    }
+
+    :root {
+        --primary-color: #fff;
+        --background-color: #212121;
+
+        --blue-color: #0369A1;
+        --light-blue-color: #F6F6FE;
+        --purple-color: #040320;
+        --font1: 'Poppins', sans-serif;
+        --font2: 'Barlow', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-body {
+        font-family: var(--font1);
+    }
+
+    .titlebg {
+        background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+
 <body class="font-body text-dark-purple">
 
     <!-- Header -->
     <script type="module" src="/common template/header.js"></script>
     <!-- === Search bar ends === -->
 
-
-    <div id="main-image" class="mt-20 h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center animate-image-slider">
-        <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
-            <div class="flex flex-col items-center justify-center container h-full">
-                <div class="flex flex-col gap-10">
-                    <h2 class="uppercase text-white text-4xl text-center">
-                        <span class="font-bold">CAMPUS AMENITIES</span>
-                    </h2>
-                </div>
-                <div>
-                    &nbsp;
-                </div>
-                <div>
-                    &nbsp;
-                </div>
-
-
-
-                <div>
-                    &nbsp;
-                </div>
-
-                <div id="tiles" class="flex mt-[10vh] gap-5 w-[90%] items-start align-self-start">
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> account_balance
-                        </span>
-                        <a href="#Banks & ATMs"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                            Bank & ATMs
-                        </a>
-                    </div>
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> store
-                        </span>
-                        <a href="#Canteen & Shops"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                            Canteen & Shops
-                        </a>
-                    </div>
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> home
-                        </span>
-                        <a href="#Center Seminar Hall"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                            Central Seminar Hall
-                        </a>
-                    </div>
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> Theaters </span>
-
-                        <a href="#Open Air Theater"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                            Open Air Theater
-                        </a>
-                    </div>
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> school
-                        </span>
-                        <a href="#Student Center"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                            Student Activity
-                        </a>
-                        <a href="#Student Center"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase"
-                            style="margin-top:0px;">
-                            Center
-                        </a>
-                    </div>
-
-
-                </div>
-                <div id="tiles" class="flex mt-[10vh] gap-5 w-[90%] items-start align-self-start "
-                    style="padding-left: 275px;">
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> local_post_office
-                        </span>
-                        <a href="#Post Office"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                            Post Office
-                        </a>
-                    </div>
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> local_shipping
-                        </span>
-                        <a href="#Daily Commute"
-                            class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-                            Daily Commute
-                        </a>
-                    </div>
-                    <div
-                        class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span
-                            class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined"
-                            style="font-size:48px;"> wifi
-                        </span>
-                        <a href="#Wi-Fi Campus"
-                            class=" group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase btn btn-secondary btn-lg page-scroll">
-                            Wi-Fi Campus
-                        </a>
-                    </div>
-                </div>
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32" style="margin-bottom:25px">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Campus Amenities</p>
             </div>
+            <nav id="semi-bold" class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
+                    <li class="">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-0">Home</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"
+                            class="fa-solid fa-angle-right ml-2 "></i>
+                            <a href="#Banks & ATMs" class="text-lg font-medium ml-2" display="inline">Banks and ATMs</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"
+                               ></i>
+                               <a href="#Canteen & Shops" class="text-lg font-medium ml-20"> <span>&#47</span> Canteens And Shops</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"
+                               "></i>
+                               <a href="#Center Seminar Hall" class="text-lg font-medium ml-20"><span>&#47</span> Central Seminar Hall</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"
+                               "></i>
+                               <a href="#Open Air Theater" class="text-lg font-medium ml-20"><span>&#47</span> Open Air Theatre</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"
+                               "></i>
+                               <a href="#Daily Commute" class="text-lg font-medium ml-20"><span>&#47</span> Daily Commute</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"
+                               c></i>
+                               <a href="#Wi-Fi Campus" class="text-lg font-medium ml-20"><span>&#47</span>  Wifi campus</a>
+                            <i style="color: rgb(128, 128, 128); font-size:12px;margin-left:0px;"></i>
+                               <a href="#Post Office" class="text-lg font-medium ml-20"><span>&#47</span>Post Office</a>
+                        </a>
+                    </li>
+                </ol>
+            </nav>
         </div>
+       
+      
+
     </div>
-    <div>
-        &nbsp; &nbsp; &nbsp;
-    </div>
-    <div>
-        &nbsp; &nbsp; &nbsp;
-    </div>
-    <div>
-        &nbsp; &nbsp; &nbsp;
-    </div>
+
+
 
     <!-- === Carousel section ends === -->
     <!-- === News Section Starts === -->
 
-    <div id="Banks & ATMs" class="my-20">
+    <div id="Banks & ATMs" class="my-20" style=" margin:50px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        Banks <span class="text-dark-purple" style="padding:0px">& ATMs</span>
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                        Banks <span class="text-dark-purple" style="padding:0px">& ATMs</span><hr>
                     </h1>
 
                 </div>
@@ -197,7 +176,7 @@
                 <h2 class="text-xl font-medium text-dark-purple">
                     <strong>Canara Bank </strong>
                 </h2>
-                <p>
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     The Canara Bank is located near the shopping center close to the residential area. One ATM is
                     located in the bank premises.
                 </p>
@@ -217,7 +196,7 @@
                     <h2 class="text-xl font-medium text-dark-purple">
                         <strong>State Bank Of India </strong>
                     </h2>
-                    <p>
+                    <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                         The Canara Bank is located near the shopping center close to the residential area. One ATM is
                         located in the bank premises.
                     </p>
@@ -232,12 +211,12 @@
         </div>
     </div>
    
-    <div id="Post Office" class="my-20">
+    <div id="Post Office" class="my-20"style=" margin:50px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        Post <span class="text-dark-purple">Office</span>
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                        Post <span class="text-dark-purple">Office</span><hr>
                     </h1>
 
                 </div>
@@ -261,7 +240,7 @@
                 <h2 class="text-xl font-medium text-dark-purple">
                     <strong>Post Office</strong>
                 </h2>
-                <p>
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     The Canara Bank is located near the shopping center close to the residential area. One ATM is
                     located in the bank premises.
                 </p>
@@ -280,12 +259,12 @@
     </div>
     <div>
     </div>
-    <div id="Canteen & Shops" class="my-20">
+    <div id="Canteen & Shops" class="my-20"style=" margin:50px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        Canteens <span class="text-dark-purple">& Shop</span>
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                        Canteens <span class="text-dark-purple">& Shop</span><hr>
                     </h1>
 
                 </div>
@@ -307,7 +286,7 @@
                 <h2 class="text-xl font-medium text-dark-purple">
                     <strong>Canteens</strong>
                 </h2>
-                <p>
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     The campus has a couple of food joints, frequented more perhaps by hostelites looking for a change
                     from hostel grub than the occasional visitor. The Campus Canteen is open from 8.30 A.M. to 8.00 P.M.
                     on all week days. A wide variety of South Indian and
@@ -330,7 +309,7 @@
                     <h2 class="text-xl font-medium text-dark-purple">
                         <strong>Shopping</strong>
                     </h2>
-                    <p>
+                    <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                         The campus has a shopping centre which cater to the needs of the students and residents. The
                         Shopping Centre is located near the residential zone and supplies groceries, provisions and
                         other essential items. There is a bookshop situated in the shopping
@@ -348,12 +327,12 @@
     </div>
     <div>
     </div>
-    <div id="Center Seminar Hall" class="my-20">
+    <div id="Center Seminar Hall" class="my-20"style=" margin:50px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        Central <span class="text-dark-purple">Seminar Hall</span>
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                        Central <span class="text-dark-purple">Seminar Hall</span><hr>
                     </h1>
 
                 </div>
@@ -375,7 +354,7 @@
                 <h2 class="text-xl font-medium text-dark-purple">
                     <strong>Central Seminar Hall</strong>
                 </h2>
-                <p>
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     The Central Seminar hall is the venue for all the important events at NIT Jalandhar. The year 2006
                     can be earmarked as the year in which this building established its presence and value for the
                     Institute by holding Convocation ceremony for the 2001-05
@@ -395,12 +374,12 @@
     </div>
     </div>
   
-    <div id="Open Air Theater" class="my-20">
+    <div id="Open Air Theater" class="my-20"style=" margin:50px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        Open <span class="text-dark-purple">Air Theater</span>
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                        Open <span class="text-dark-purple">Air Theater</span><hr>
                     </h1>
 
                 </div>
@@ -422,7 +401,7 @@
                 <h2 class="text-xl font-medium text-dark-purple">
                     <strong>Open Air Theater</strong>
                 </h2>
-                <p>
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     Open Air Theatre is venue for many events like UTKANSH, Tech Fests, International Conference, movie
                     shows etc.
                 </p>
@@ -439,12 +418,12 @@
     </div>
     </div>
     
-    <div id="Student Center" class="my-20">
+    <div id="Student Center" class="my-20"style=" margin:50px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        Students <span class="text-dark-purple">Activity Center</span>
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                        Students <span class="text-dark-purple">Activity Center</span><hr>
                     </h1>
 
                 </div>
@@ -466,7 +445,7 @@
                 <h2 class="text-xl font-medium text-dark-purple">
                     <strong>Student Activity Center</strong>
                 </h2>
-                <p>
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                     The modern fully equipped Gym Facility, Table Tennis Room, Pool Table Room, Yoga Room, Chess, and
                     Carrom Room has been set up in New Students Activity Centre (SAC) which was inaugurated by Dr Pamita
                     Awasthi and Dr Lalit K Awasthi, Director NIT Jalandhar
@@ -479,12 +458,12 @@
             </div>
         </div>
         
-        <div id="Daily Commute" class="my-20">
+        <div id="Daily Commute" class="my-20"style=" margin:50px">
             <div class="container flex flex-col justify-start lg:flex-row">
                 <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                     <div class="flex items-center justify-start space-x-6">
-                        <h1 class="uppercase text-4xl font-semibold text-accent">
-                            Daily <span class="text-dark-purple">Commute</span>
+                        <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                            Daily <span class="text-dark-purple">Commute</span><hr>
                         </h1>
 
                     </div>
@@ -507,7 +486,7 @@
                     <h2 class="text-xl font-medium text-dark-purple">
                         <strong>Daily Commute</strong>
                     </h2>
-                    <p>
+                    <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                         The Institute provides Bus transport to facilitate commuting from the campus to the city. There
                         are two regular buses. These Buses ply to and fro, every morning and evening.
                     </p>
@@ -519,12 +498,12 @@
                 </div>
             </div>
            
-            <div id="Wi-Fi Campus" class="my-20">
+            <div id="Wi-Fi Campus" class="my-20"style=" margin:50px">
                 <div class="container flex flex-col justify-start lg:flex-row">
                     <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                         <div class="flex items-center justify-start space-x-6">
-                            <h1 class="uppercase text-4xl font-semibold text-accent">
-                                Wi-Fi <span class="text-dark-purple">Campus</span>
+                            <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                            Wi-Fi <span class="text-dark-purple">Campus</span><hr>
                             </h1>
 
                         </div>
@@ -544,9 +523,9 @@
                     <div id="content" class="flex flex-col space-y-4">
 
                         <h2 class="text-xl font-medium text-dark-purple">
-                            <strong> Wi-Fi Campus</strong>
+                        <strong> Wi-Fi Campus</strong>
                         </h2>
-                        <p>
+                        <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
                             Campus-wide Wi-Fi enables students and faculty members to connect with College portal and
                             Internet at any time and any place.High-speed network with OFC across the campus provides
                             seamless connectivity to Internet for students and faculty members over

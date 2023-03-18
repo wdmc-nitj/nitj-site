@@ -55,8 +55,12 @@
       }
     </style> -->
     <style>
+      :root{
+        --font1: 'Barlow', sans-serif;
+      }
       body {
         scrollbar-color: #fff #fff;
+        font-family: var(--font1);
       }
 
       /* Customizing the Scrollbar */
@@ -587,7 +591,7 @@
       </div>
     </div>
 
-    <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
+    <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col py-[48px] px-4">
       <div class="lg:w-[15%] w-[25%]">
         <div
           class="tabs p-2 rounded lg:block lg:w-[100%] w-[20%] hidden sticky top-40"
@@ -622,49 +626,50 @@
         </div>
       </div>
 
-      <div
-        x-data="{dropdownMenu: false}"
-        class="block lg:hidden mx-auto w-[60%]"
-      >
-        <!-- Dropdown toggle button -->
-        <button
-          @click="dropdownMenu = ! dropdownMenu"
-          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%] mt-10 mb-4"
-        >
-          <span class="mx-auto"
-            >Select Course <i class="fa-solid fa-caret-down"></i>
-          </span>
-        </button>
-        <!-- Dropdown list -->
-        <div x-show="dropdownMenu" class="tabs2 p-2 rounded w-[100%]">
-          <ul>
-            <li class="active2 bg-blue-100 mb-1" id="resp_sidetab_btech">
-              <span class="text">B.Tech.</span>
-            </li>
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_mtech">
-              <span class="text">M.Tech. (CCMT)</span>
-            </li>
-            <li class="bg-blue-100 mb-1">
-              <span class="text">M.Tech. (Self Sponsored)</span>
-            </li>
-
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_msc">
-              <span class="text">M.Sc.</span>
-            </li>
-
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_mba">
-              <span class="text">M.B.A.</span>
-            </li>
-
-            <li class="bg-blue-100 mb-1" id="resp_sidetab_phd">
-              <span class="text">Ph.D.</span>
-            </li>
-            <li class="bg-blue-100" id="resp_sidetab_foreign_admissions">
-              <span class="text">Foreign Admissions</span>
-            </li>
-          </ul>
+      <div class="lg:hidden flex flex-col justify-center items-center">
+        <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto mt-4 w-[60%]">
+          <!-- Dropdown toggle button -->
+          <button
+            @click="dropdownMenu = ! dropdownMenu"
+            class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4"
+          >
+            <span class="mx-auto">Select Course <i class="fa-solid fa-caret-down"></i> </span>
+          </button>
+          <!-- Dropdown list -->
+          <div
+            x-show="dropdownMenu"
+            class="tabs2  p-2 rounded w-[100%]"
+          >
+              <ul>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class="active2 bg-blue-100 mb-1">
+                  <span class="text dropContent1">B.Tech.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
+                  <span class="text dropContent2">M.Tech. (CCMT)</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
+                  <span class="text dropContent3">M.Tech. (Self Sponsored)</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent4">M.Sc.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent5">M.B.A.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent6">Ph.D.</span>
+                </li>
+                <li x-on:click="dropdownMenu = ! dropdownMenu" class=" bg-blue-100 mb-1">
+                  <span class="text dropContent7">Foreign Admissions</span>
+                </li>
+              </ul>
+            
+          </div>
         </div>
-      </div>
+    
+    
+    </div>
+      
 
       <div class="lg:w-[80%] w-[90%] mx-auto">
         <div class="content w-[100%] mx-auto">
@@ -676,14 +681,13 @@
                 <!--start admission page guyz -->
 
                 <div
-                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold pb-2 inline font-sans"
                 >
                   <span class="text-[#2776c0]">Modes</span> of Admission
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
-                <div class="underline3 w-[100%] mb-[4%]"></div>
-
-                <div class="section flex-col">
+                <div class="section flex-col mt-4">
                   <div class="right w-[100%] mx-auto">
                     <div
                       class="modes_of_admission mb-8 flex justify-between lg:block"
@@ -762,10 +766,11 @@
 
                   <!--admission updates-->
                   <div
-                    class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                    class="heading text-[28px] font-semibold pb-2 inline font-sans"
                   >
                     <span class="text-[#2776c0]">Admission</span> Updates
                   </div>
+                  <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
                   <div
                     class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh] mb-32 lg:mb-0"
@@ -789,10 +794,11 @@
               <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
                 <div>
                   <div
-                    class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                    class="heading text-[28px] font-semibold inline font-sans"
                   >
                     <span class="text-[#2776c0]">Admission</span> Procedure
                   </div>
+                  <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                   <div class="mt-4">
                     <div
                       class="flex flex-col md:grid grid-cols-12 text-gray-50"
@@ -1103,14 +1109,13 @@
               <!--start admission page guyz -->
 
               <div
-                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                class="heading text-[28px] font-semibold pb-2 inline font-sans"
               >
                 <span class="text-[#2776c0]">Modes</span> of Admission
               </div>
+              <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
-              <div class="underline3 w-[100%] mb-[4%]"></div>
-
-              <div class="section flex-col">
+              <div class="section flex-col mt-4">
                 <div class="right w-[100%] mx-auto">
                   <div
                     class="modes_of_admission mb-8 flex justify-between lg:block"
@@ -1169,10 +1174,11 @@
 
                 <!--admission updates-->
                 <div
-                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans lg:mb-0 mb-24"
+                  class="heading text-[28px] font-semibold pb-2 inline font-sans lg:mb-0 mb-24"
                 >
                   <span class="text-[#2776c0]">Admission</span> Updates
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
                 <div
                   class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh] mb-32 lg:mb-0"
@@ -1196,10 +1202,11 @@
             <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
               <div>
                 <div
-                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Procedure
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-4">
                   <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
                     <div class="flex md:contents">
@@ -1473,10 +1480,11 @@
               <!--start admission page guyz -->
 
               <div
-                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                class="heading text-[28px] font-semibold pb-2 inline font-sans"
               >
                 <span class="text-[#2776c0]">Modes</span> of Admission
               </div>
+              <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
               <div class="underline3 w-[100%] mb-[4%]"></div>
 
@@ -1550,10 +1558,11 @@
 
                 <!--admission updates-->
                 <div
-                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold pb-2 inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Updates
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
                 <div
                   class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh]mb-32 lg:mb-0"
@@ -1576,10 +1585,11 @@
             <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
               <div>
                 <div
-                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Procedure
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-4">
                   <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
                     <div class="flex md:contents">
@@ -1853,10 +1863,11 @@
               <!--start admission page guyz -->
 
               <div
-                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                class="heading text-[28px] font-semibold pb-2 inline font-sans"
               >
                 <span class="text-[#2776c0]">Modes</span> of Admission
               </div>
+              <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
               <div class="underline3 w-[100%] mb-[4%]"></div>
 
@@ -1929,10 +1940,11 @@
 
                 <!--admission updates-->
                 <div
-                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold pb-2 inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Updates
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
                 <div
                   class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh]mb-32 lg:mb-0"
@@ -1956,10 +1968,11 @@
             <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
               <div>
                 <div
-                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Procedure
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-4">
                   <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
                     <div class="flex md:contents">
@@ -2234,10 +2247,11 @@
               <!--start admission page guyz -->
 
               <div
-                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                class="heading text-[28px] font-semibold pb-2 inline font-sans"
               >
                 <span class="text-[#2776c0]">Modes</span> of Admission
               </div>
+              <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
               <div class="underline3 w-[100%] mb-[4%]"></div>
 
@@ -2310,10 +2324,11 @@
 
                 <!--admission updates-->
                 <div
-                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold pb-2 inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Updates
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
                 <div
                   class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh]mb-32 lg:mb-0"
@@ -2337,10 +2352,11 @@
             <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
               <div>
                 <div
-                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Procedure
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-4">
                   <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
                     <div class="flex md:contents">
@@ -2587,10 +2603,11 @@
               <!--start admission page guyz -->
 
               <div
-                class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                class="heading text-[28px] font-semibold pb-2 inline font-sans"
               >
                 <span class="text-[#2776c0]">Modes</span> of Admission
               </div>
+              <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
               <div class="underline3 w-[100%] mb-[4%]"></div>
 
@@ -2666,10 +2683,11 @@
 
                 <!--admission updates-->
                 <div
-                  class="heading text-[28px] font-semibold pb-2 border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold pb-2 inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Updates
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
 
                 <div
                   class="right w-[100%] font-sans mt-8 lg:h-[50vh] h-[50vh] mb-32 lg:mb-0"
@@ -2693,10 +2711,11 @@
             <div class="lg:w-[50%] w-[80%] mx-auto mt-8 lg:mt-0">
               <div>
                 <div
-                  class="heading text-[28px] font-semibold border-black border-b-2 inline font-sans"
+                  class="heading text-[28px] font-semibold inline font-sans"
                 >
                   <span class="text-[#2776c0]">Admission</span> Procedure
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-4">
                   <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
                     <div class="flex md:contents">
@@ -2942,10 +2961,11 @@
               <!--btech-->
               <div class="">
                 <div
-                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                  class="heading text-[28px] font-semibold pb-2 font-sans"
                 >
                   <span class="text-[#2776c0]">B.Tech </span> Admission
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-3 mode flex-col mb-4">
                   <div
                     class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
@@ -2985,10 +3005,11 @@
               <!--mtech-->
               <div class="">
                 <div
-                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                  class="heading text-[28px] font-semibold pb-2 font-sans"
                 >
                   <span class="text-[#2776c0]">M.Tech</span> Admission
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-3 mode flex-col mb-4">
                   <div
                     class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
@@ -3019,10 +3040,11 @@
               <!--mtech (ccmt)-->
               <div class="">
                 <div
-                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                  class="heading text-[28px] font-semibold pb-2 font-sans"
                 >
                   <span class="text-[#2776c0]">M.Tech(CCMT)</span> Admission
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-3 mode flex-col mb-4">
                   <div
                     class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
@@ -3053,10 +3075,11 @@
               <!--mba-->
               <div class="">
                 <div
-                  class="heading text-[28px] font-semibold pb-2 font-sans underline underline-offset-[12px]"
+                  class="heading text-[28px] font-semibold pb-2 font-sans"
                 >
                   <span class="text-[#2776c0]">M.B.A </span> Admission
                 </div>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                 <div class="mt-3 mode flex-col mb-4">
                   <div
                     class="mode-head rounded-md bg-[#0369A1] inline-block p-1 shadow-md mb-2 text-[14px] text-white font-bold"
