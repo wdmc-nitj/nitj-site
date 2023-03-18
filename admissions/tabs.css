@@ -24,7 +24,7 @@
     flex-direction: column;
 	border-radius: 3px;
 	margin-bottom: 25px;
-	box-shadow: 2px 2px 2px rgb(108, 173, 235);
+	/* box-shadow: 2px 2px 2px rgb(108, 173, 235); */
 }
 
 .tabs ul li{
@@ -82,7 +82,7 @@
     flex-direction: column;
 	border-radius: 3px;
 	margin-bottom: 25px;
-	box-shadow: 2px 2px 2px rgb(108, 173, 235);
+	/* box-shadow: 2px 2px 2px rgb(108, 173, 235); */
 }
 
 .tabs2 ul li{
