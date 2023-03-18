@@ -759,6 +759,10 @@ sup {
   grid-column-start: 4;
 }
 
+.col-start-1 {
+  grid-column-start: 1;
+}
+
 .col-end-4 {
   grid-column-end: 4;
 }
@@ -771,12 +775,24 @@ sup {
   grid-column-end: 12;
 }
 
+.col-end-2 {
+  grid-column-end: 2;
+}
+
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
 
 .row-span-3 {
   grid-row: span 3 / span 3;
+}
+
+.row-start-1 {
+  grid-row-start: 1;
+}
+
+.row-end-2 {
+  grid-row-end: 2;
 }
 
 .float-left {
@@ -840,7 +856,6 @@ sup {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
 
 .my-1 {
   margin-top: 0.25rem;
@@ -982,6 +997,10 @@ sup {
 
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mb-4 {
@@ -2144,6 +2163,10 @@ sup {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -3291,6 +3314,7 @@ sup {
   padding-bottom: 0.5rem;
 }
 
+
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -3313,6 +3337,10 @@ sup {
 
 .pb-\[16px\] {
   padding-bottom: 16px;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .pb-3 {
@@ -5723,6 +5751,7 @@ sup {
     line-height: 1.75rem;
   }
 
+
   .lg\:text-\[60px\] {
     font-size: 60px;
   }
@@ -5825,12 +5854,24 @@ sup {
     font-size: 20px;
   }
 
+  .lg\:text-\[20px\] {
+    font-size: 20px;
+  }
+
   .lg\:text-\[26px\] {
     font-size: 26px;
 
   .lg\:text-\[14px\] {
     font-size: 14px;
 
+  }
+
+  .lg\:text-\[15px\] {
+    font-size: 15px;
+  }
+
+  .lg\:text-\[14px\] {
+    font-size: 14px;
   }
 
   .lg\:text-\[15px\] {
