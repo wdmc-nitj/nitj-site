@@ -135,7 +135,7 @@ function navbarhelper(array,dropdown){
     for(let i=2;i<array.length;i++){
       const listItem = document.createElement('li')
       listItem.setAttribute('class','hover:text-[#FF6600]')
-      listItem.innerHTML = `<a ${array[i]?.newPage ? "target='_blank'": ''} href="${array[i]["link"]}">${array[i]["name"]}</a>
+      listItem.innerHTML = `<a ${array[i]?.newPage ? "target='_blank'": ''} href="${array[i].link}">${array[i]["name"]}</a>
       `
       list.appendChild(listItem)
     }
