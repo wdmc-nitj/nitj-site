@@ -2844,8 +2844,8 @@ sup {
   background-image: url('img/support.png');
 }
 
-.bg-\[url\(\$\{e\.img\}\)\] {
-  background-image: url(${e.img});
+.bg-\[url\(\'https\:\/\/user-images\.githubusercontent\.com\/76390562\/226100728-61513c91-eb5c-404b-a011-11fde5798c93\.svg\'\)\] {
+  background-image: url('https://user-images.githubusercontent.com/76390562/226100728-61513c91-eb5c-404b-a011-11fde5798c93.svg');
 }
 
 .from-accent {
