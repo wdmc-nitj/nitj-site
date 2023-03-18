@@ -342,7 +342,8 @@ fetch(`${baseURL}/club/get/all`)
       )
       div.innerHTML = `
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-[url(${e.img})] bg-cover bg-center bg-no-repeat">
+                  <div class="w-2/5 bg-cover bg-center bg-no-repeat">
+                  <img src ='${e.img}' class="w-full h-full object-cover" alt="Club Image" />
                   </div>
                   <div class="flex flex-col p-6 w-full sm:w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
