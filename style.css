@@ -2990,10 +2990,6 @@ sup {
   background-image: url('img/support.png');
 }
 
-.bg-\[url\(\'https\:\/\/user-images\.githubusercontent\.com\/76390562\/226100728-61513c91-eb5c-404b-a011-11fde5798c93\.svg\'\)\] {
-  background-image: url('https://user-images.githubusercontent.com/76390562/226100728-61513c91-eb5c-404b-a011-11fde5798c93.svg');
-}
-
 .from-accent {
   --tw-gradient-from: hsla(201, 96%, 32%);
   --tw-gradient-to: hsl(201 96% 32% / 0);
