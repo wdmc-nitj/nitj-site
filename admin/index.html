@@ -445,82 +445,23 @@
             </p> -->
         </div>
 
-        <div class="container">
-            <div class="container flex h-[22vh] w-full">
-                <div class="box">
-                    <img src="img/ci/CI (1).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (2).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (3).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (4).jpg" />
-                </div>
-            </div>
-
-            <div class="container flex h-[22vh] w-full">
-                <div class="box">
-                    <img src="img/ci/CI (5).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (6).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (7).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (8).jpg" />
-                </div>
-            </div>
-
-            <div class="container flex h-[22vh] w-full">
-                <div class="box">
-                    <img src="img/ci/CI (9).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (10).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (11).jpg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (12).png" />
-                </div>
-            </div>
-
-            <div class="container flex h-[22vh] w-full">
-                <div class="box">
-                    <img src="img/ci/CI (13).png" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (14).png" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (15).png" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/CI (16).png" style="opacity: 1" />
-                </div>
-            </div>
-
-            <!-- <div class="container flex h-[22vh] w-full">
-                <div class="box">
-                    <img src="img/ci/ci (3)-min.jpeg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/ci (4)-min.jpeg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/ci (5)-min.jpeg" />
-                </div>
-                <div class="box hidden lg:block">
-                    <img src="img/ci/ci (6)-min.jpg" />
-                </div>
-            </div> -->
+        <div id="gallery" class="container">
         </div>
+        <div id="big-viewer" class="fixed top-0 w-full flex place-content-center backdrop-blur-md h-screen hidden z-50">
+            <div id="crossbutton" class="absolute w-full z-50 flex justify-end py-4 px-4 h-fit hidden cursor-pointer">
+              <div class="line bg-black w-[20px] h-[2px] rotate-45 absolute"></div>
+              <div class="line bg-black w-[20px] h-[2px] -rotate-45"></div>
+            </div>
+            <div class="flex-row flex space-x-4 w-full z-10 h-full items-center place-content-center">
+              <span id="arrow_back" class="material-symbols-outlined hidden cursor-pointer z-50">
+                arrow_back_ios
+              </span>
+              <img id="sample-img" class="w-4/6 rounded-md shadow-lg z-10 hidden grayscale" src="">
+              <span id="arrow_forward" class="material-symbols-outlined hidden cursor-pointer z-50">
+                arrow_forward_ios
+              </span>
+            </div>
+          </div>
 
         <div class="hidden lg:block timeline container">
             <div class="w-full flex flex-col items-start pb-[16px]">
@@ -551,6 +492,122 @@
            `;
         }
         callAPi();
+
+
+var size_images = 0;
+img_arr = [];
+// Fetching the images in the photo gallery
+
+fetch(`https://wdmc.onrender.com/photoGallery/?history=true`)
+  .then((res) => res.json())
+  .then((data) => {
+    const images = data.sort((a, b) => 0.5 - Math.random());
+    size_images = images.length
+    img_arr = images;
+    // const images = shuffledArray.slice(0,12)
+    // console.log(data)
+    const parentDiv = document.getElementById('gallery')
+    const firstRow = document.createElement('div')
+    const secondRow = document.createElement('div')
+    const thirdRow = document.createElement('div')
+    const rows = [firstRow, secondRow, thirdRow]
+    rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
+
+    let i = 0
+    let y = 1
+    images.forEach((img, key) => {
+      // img.image.link
+      if(y>12){
+        return;
+      }
+      if (i > 2) {
+        i = 0
+      }
+
+      const imgContainer = document.createElement('div')
+      imgContainer.classList.add('box')
+      imgContainer.innerHTML = `
+        <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
+        `
+
+
+      if(y%4 == 0 && ( window.innerWidth <= 800 )){
+      }
+      else{
+
+        rows[i].append(imgContainer)
+      }
+      imgContainer.addEventListener('click', (e) => {
+        const imgSample = document.getElementById('sample-img')
+
+        imgSample.src = e.srcElement.currentSrc
+        showImg()
+      })
+      i++
+      y++
+    })
+    parentDiv.append(firstRow, secondRow, thirdRow)
+  })
+
+const crossbutton = document.getElementById('crossbutton')
+crossbutton.addEventListener('click', (e) => {
+  showImg()
+})
+
+const arrow_forward = document.getElementById('arrow_forward')
+arrow_forward.addEventListener('click', (e) => {
+  const imgSample = document.getElementById('sample-img')
+  const imgArray = img_arr
+  for (let i = 0; i < imgArray.length; i++) {
+    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+      if (i == imgArray.length - 1) {
+        imgSample.src = imgArray[0].image.link
+      } else {
+        imgSample.src = imgArray[i + 1].image.link
+      }
+      break;
+    }
+  }
+})
+const arrow_backward = document.getElementById('arrow_back')
+arrow_backward.addEventListener('click', (e) => {
+  const imgSample = document.getElementById('sample-img')
+  const imgArray = img_arr
+  for (let i = 0; i < imgArray.length; i++) {
+    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+      if (i == 0) {
+        imgSample.src = imgArray[imgArray.length - 1].image.link
+      } else {
+        imgSample.src = imgArray[i - 1].image.link
+      }
+      break;
+    }
+  }
+})
+
+function showImg() {
+  // const body = document.getElementsByTagName('body')
+  const big_viewer = document.getElementById('big-viewer')
+  const imgSample = document.getElementById('sample-img')
+  const crossbutton = document.getElementById('crossbutton')
+  const arrow_forward = document.getElementById('arrow_forward')
+  const arrow_back = document.getElementById('arrow_back')
+  if (imgSample.classList.contains('hidden')) {
+    document.body.classList.add('overflow-hidden')
+    big_viewer.classList.remove('hidden')
+    imgSample.classList.remove('hidden')
+    crossbutton.classList.remove('hidden')
+    arrow_forward.classList.remove('hidden')
+    arrow_back.classList.remove('hidden')
+  } else {
+    document.body.classList.remove('overflow-hidden')
+    big_viewer.classList.add('hidden')
+    imgSample.classList.add('hidden')
+    crossbutton.classList.add('hidden')
+    arrow_forward.classList.add('hidden')
+    arrow_back.classList.add('hidden')
+  }
+}
       </script>
 
 <script>
