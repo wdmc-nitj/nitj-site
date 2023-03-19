@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ICONS -->
+    <link rel="icon" type="image/x-icon" href="/public/assets/images/nitj-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- CSS linking -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Curriculum</title>
+    <style>
+        .bg-accent {
+            --tw-bg-opacity: 1;
+            background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(0, 0, 0, 0.3) 99.11%), url(./img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/common template/header.js" type="module"></script>
+    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
+        <div>
+            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+                <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">Curriculum</p>
+            </div>
+            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="https://nitj.netlify.app/"
+                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="#" class="text-lg font-medium ml-2">Academics</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid cursor-pointer fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">Curriculum</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="m-2">
+            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <div class="flex w-full rounded-lg shadow-md border-t-2 border-blue-200 shadow-blue-300">
+                    <div class="min-w-fit border-r rounded-tl-lg rounded-bl-lg font-medium">
+                        <div class="border-b p-3 text-center text-lg font-semibold shadow-md mb-2">Departments\Courses</div>
+                        <div id="BT" onclick="HandleCurriculum('BT')" class="border-b p-2 cursor-pointer bg-blue-200">Bio Technology</div>
+                        <div id="CHE" onclick="HandleCurriculum('CHE')" class="border-b p-2 cursor-pointer">Chemical Engineering</div>
+                        <div id="CVE" onclick="HandleCurriculum('CVE')" class="border-b p-2 cursor-pointer">Civil Engineering</div>
+                        <div id="CSE" onclick="HandleCurriculum('CSE')" class="border-b p-2 cursor-pointer">Computer Science and Engineering</div>
+                        <div id="EE" onclick="HandleCurriculum('EE')" class="border-b p-2 cursor-pointer">Electrical Engineering</div>
+                        <div id="ECE" onclick="HandleCurriculum('ECE')" class="border-b p-2 cursor-pointer">Electronics & Comm. Engineering</div>
+                        <div id="ICE" onclick="HandleCurriculum('ICE')" class="border-b p-2 cursor-pointer">Instrumentation & Control Engineering</div>
+                        <div id="IPE" onclick="HandleCurriculum('IPE')" class="border-b p-2 cursor-pointer">Industrial & Production Engineering</div>
+                        <div id="IT" onclick="HandleCurriculum('IT')" class="border-b p-2 cursor-pointer">Information Technology</div>
+                        <div id="ME" onclick="HandleCurriculum('ME')" class="border-b p-2 cursor-pointer">Mechanical Engineering</div>
+                        <div id="MINE" onclick="HandleCurriculum('MINE')" class="border-b p-2 cursor-pointer">Mining Engineering</div>
+                        <div id="TT" onclick="HandleCurriculum('TT')" class="border-b p-2 cursor-pointer">Textile Technology</div>
+                        <div id="Ch" onclick="HandleCurriculum('Ch')" class="border-b p-2 cursor-pointer">Chemistry</div>
+                        <div id="Ph" onclick="HandleCurriculum('Ph')" class="border-b p-2 cursor-pointer">Physics</div>
+                        <div id="Math" onclick="HandleCurriculum('Math')" class="border-b p-2 cursor-pointer">Mathematics</div>
+                        <div id="HAM" onclick="HandleCurriculum('HAM')" class="border-b p-2 cursor-pointer">Humanities and Management</div>
+                        <div id="CEE" onclick="HandleCurriculum('CEE')" class="border-b p-2 cursor-pointer">Centre for Energy and Environment</div>
+                    </div>
+                    <div class="w-full border-l rounded-tr-lg rounded-br-lg">
+                        <div class="grid text-lg text-center grid-cols-4 border-b shadow-md font-semibold">
+                            <span onclick="HandleCourse('BTech')" id="BTech" class="w-full border-r p-3 cursor-pointer bg-[#0369a0]">BTech</span>
+                            <span onclick="HandleCourse('MTech')" id="MTech" class="w-full border-r p-3 cursor-pointer">MTech</span>
+                            <span onclick="HandleCourse('PhD')" id="PhD" class="w-full border-r p-3 cursor-pointer">PhD</span>
+                            <span onclick="HandleCourse('MSC')" id="MSC" class="w-full p-3 cursor-pointer rounded-tr-lg">MSC/MBA</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="text-center w-full my-12 text-3xl font-bold">Download Curriculum</div>
+                            <div id="CurriculumData" class="grid grid-cols-2 place-items-center mt-4">
+                                <div class="flex items-center border rounded-lg shadow shadow-red-300 p-2">
+                                    <span><img class="" src="/public/assets/images/pdf_downlad.png" alt="pdf dowmload"/></span>
+                                    <span>(2022 onwards)</span>
+                                </div>
+                                <div class="flex items-center justify-center border rounded-lg shadow shadow-red-300 p-2">
+                                    <span><img class="" src="/public/assets/images/pdf_downlad.png" alt="pdf dowmload"/></span>
+                                    <span>(2018 onwards)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/common template/footer.js"></script>
+    <script>
+        var Course = document.getElementById("BTech");
+        var Dept = document.getElementById("BT");
+        
+        function HandleCourse(CourseID){
+            Course.classList.remove('bg-[#0369a0]')
+            Course = document.getElementById(CourseID);
+            if(!Course.classList.contains('bg-[#0369a0]')){
+                Course.classList.add('bg-[#0369a0]');
+            }
+        }
+        function HandleCurriculum(DeptID) {
+            Dept.classList.remove('bg-blue-200')
+            Dept = document.getElementById(DeptID);
+            if(!Dept.classList.contains('bg-blue-200')){
+                Dept.classList.add('bg-blue-200');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

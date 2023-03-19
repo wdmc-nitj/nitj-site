@@ -174,14 +174,14 @@
             background-size: cover;
         }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-    <script src="../common template/header.js"></script>
+    <script src="/common template/header.js" type="module"></script>
 
     <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
-        <p class="font2 font-bold sm:text-[35px] lg:text-[60px] uppercase text-white leading-[1]">
+        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
             Technology Business Incubator
         </p>
     </div>
@@ -216,12 +216,12 @@
         </ol>
     </nav>
 
-    <div class="flex flex-col items-start p-2">
+    <div class="py-[48px]">
+    <div class="px-8 flex flex-col items-start p-2">
         <p class="font2 font-medium text-[28px] lg:text-[32px] px-2">
             Technology Business Incubator
-            <div class="bg-accent w-[20%] h-[3px] mb-4 mt-2"></div>
+            <div class="ml-2 bg-accent w-[20%] h-[5px] mb-4 mt-2"></div>
         </p>
-        
     </div>
     <div class="flex flex-row mr-[5%] ml-[5%] mb-6">
         <div class="">
@@ -249,17 +249,18 @@
                         class="fa-solid fa-arrow-up-right-from-square"></i></span> </a>
         </p>
     </div>
+</div>
+</div>
 
 
-
-
-    <div class="w-full flex flex-col items-start p-2">
-        <p class="font2 font-medium border-b-2 border-accent text-[24px] lg:text-[28px] px-2">
+    <div class="px-8 w-full flex flex-col items-start p-2">
+        <p class="font2 font-medium text-[24px] lg:text-[28px] px-2">
             Objectives of NITJ Technology Business Incubator:
         </p>
+        <div class="ml-2 bg-accent w-[20%] h-[3px] mb-4 mt-2"></div>
     </div>
 
-    <div class="mb-6">
+    <div class="mb-12">
         <ol>
             <li class="mb-2">
                 <div class="w-[80%] mx-auto bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
@@ -311,7 +312,7 @@
             </li>
         </ol>
     </div>
-    <div class="base-image hidden overflow-hidden lg:block"></div>
+    <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
     <div class="relative bottom-0">
         <script src="../common template/footer.js"></script>
     </div>
@@ -319,5 +320,6 @@
     <script src="../admin/app.js"></script>
     <script src="./tabs.js"></script>
 </body>
+
 
 </html>

@@ -87,19 +87,19 @@
 </head>
 
 <body>
-    <script src="../common template/header.js"></script>
+    <script src="/common template/header.js" type="module"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
-        <div>
-            <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
                 <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Council</p>
             </div>
-            <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center">
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
                     <li class="inline-flex items-center">
-                        <a href=""
-                            class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                            <a href="#" class="text-lg font-medium ml-2">Home</a>
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
                         </a>
                     </li>
                     <li aria-current="page">
@@ -113,12 +113,13 @@
             </nav>
         </div>
 
-
+        <!-- <p> Code by Bhavya Mittal </p> -->
         <div class="overflow-x-auto relative sm:rounded-lg mx-4 lg:px-[11%]">
             <table class="w-full text-sm text-left">
                 <caption>
                     <p class="text-justify mt-1 text-sm lg:text-lg font-normal mb-4">
-                        In order to co-ordinate the activities of all NITs, the Central Government has constituted an <a class="hover:text-accent" href="http://www.nitcouncil.org.in/">NIT Council</a>, as under:
+                        In order to co-ordinate the activities of all NITs, the Central Government has constituted an <a
+                            class="hover:text-accent" href="http://www.nitcouncil.org.in/">NIT Council</a>, as under:
                     </p>
                 </caption>
                 <thead class="text-lg text-white uppercase bg-accent">
@@ -149,91 +150,94 @@
                     </tr>
                     <tr class="lg:text-[16px]">
                         <td scope="row" class="py-4 px-6">
-                            Principal Advisor (Education), Planning Commission                        </td>
+                            Principal Advisor (Education), Planning Commission </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px] bg-gray-200">
                         <td scope="row" class="py-4 px-6">
-                            Secretary, Department of Science & Technology, Govt. of India                        </td>
+                            Secretary, Department of Science & Technology, Govt. of India </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px]">
                         <td scope="row" class="py-4 px-6">
-                            Director General, Council of Scientific & Industrial Research                        </td>
+                            Director General, Council of Scientific & Industrial Research </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px] bg-gray-200">
                         <td scope="row" class="py-4 px-6">
-                            Special Secretary/Additional Secretary/ Educational Advisor (T), Ministry of Education, Government of India                        </td>
+                            Special Secretary/Additional Secretary/ Educational Advisor (T), Ministry of Education,
+                            Government of India </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px]">
                         <td scope="row" class="py-4 px-6">
-                            Chairman, USC                        </td>
+                            Chairman, USC </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px] bg-gray-200">
                         <td scope="row" class="py-4 px-6">
-                            Chairman, AICTE                        </td>
+                            Chairman, AICTE </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px]">
                         <td scope="row" class="py-4 px-6">
-                            Financial Advisor, Ministry of Education, Government of India                        </td>
+                            Financial Advisor, Ministry of Education, Government of India </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px] bg-gray-200">
                         <td scope="row" class="py-4 px-6">
-                            Two Chairman of the Boards of the Institutes (By rotation)                        </td>
+                            Two Chairman of the Boards of the Institutes (By rotation) </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px]">
                         <td scope="row" class="py-4 px-6">
-                            Five Directors of the Institutes (By rotation)                        </td>
+                            Five Directors of the Institutes (By rotation) </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px] bg-gray-200">
                         <td scope="row" class="py-4 px-6">
-                            One Director of NIT (By rotation in alphabetic order)                        </td>
+                            One Director of NIT (By rotation in alphabetic order) </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px]">
                         <td scope="row" class="py-4 px-6">
-                            Two Secretaries of Higher/Technical, Education from States where NITs are located (By rotation)                        </td>
+                            Two Secretaries of Higher/Technical, Education from States where NITs are located (By
+                            rotation) </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px] bg-gray-200">
                         <td scope="row" class="py-4 px-6">
-                            Two persons from Industry nominated by the Central Government                        </td>
+                            Two persons from Industry nominated by the Central Government </td>
                         <td class="py-4 px-6">
                             Member
                         </td>
                     </tr>
                     <tr class="lg:text-[16px]">
                         <td scope="row" class="py-4 px-6">
-                            Joint Secretary (Technical Education), Joint Educational Adviser (T), Ministry of Education, Government of India                        
+                            Joint Secretary (Technical Education), Joint Educational Adviser (T), Ministry of Education,
+                            Government of India
                         </td>
                         <td class="py-4 px-6">
                             Member

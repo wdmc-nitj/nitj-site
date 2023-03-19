@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Favicon and title -->
     <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
 
     <title>recruitment section</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -227,12 +227,14 @@
             background-size: cover;
         }
     </style>
+<link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-    <script src="../common template/header.js"></script>
-    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-32 lg:mt-32">
-        <p class="font2 font-bold sm:text-[50px] lg:text-[60px] uppercase text-white leading-[1]">
+    <script src="/common template/header.js" type="module"></script>
+
+    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+        <p class="font2 font-bold sm:text-[30px] lg:text-[60px] uppercase text-white leading-[1]">
             STI Hub
         </p>
     </div>
@@ -266,7 +268,7 @@
             </li>
         </ol>
     </nav>
-    <div class="mt-6 mx-[10%]">
+    <div class="py-[48px] mt-6 mx-[10%]">
         <h1 class=" font-bold text-3xl text-center">
             Science & Technology Innovation(STI) Hub
         </h1>
@@ -279,7 +281,7 @@
                 </marquee>
         </div>
     </div>
-    <div class="px-4 lg:px-[11%] my-3">
+    <div class="mb-12 px-8 lg:px-[11%] my-3">
         <div class="tab">
             <button class="tablinks active" onclick="openTab(event,'home')">
                 Home
@@ -300,7 +302,7 @@
                 Media Room
             </button>
             <button class="tablinks" onclick="openTab(event,'Contacts_US')">
-                contact Us
+                Contact Us
             </button>
         </div>
 
@@ -506,7 +508,7 @@
             </div>
         </div>
     </div>
-    <div class="base-image hidden overflow-hidden lg:block"></div>
+    <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
 
         <script src="../common template/footer.js"></script>
     
@@ -533,7 +535,7 @@ var tabcontent = document.querySelectorAll(".tabcontent");
 	})
 })
   </script>
-    <script src="../js/app.js"></script>
+    <script type="module" src="../js/app.js"></script>
 </body>
 
 </html>

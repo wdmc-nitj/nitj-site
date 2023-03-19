@@ -4,7 +4,7 @@ import {
   pageTitleUpdater,
   getParams,
   normalCaseMaker,
-} from './utils.js'
+} from './utils/routingUtils.js'
 
 const [id, category] = getParams()
 
@@ -43,7 +43,15 @@ if (parseInt(id) === 0) {
   fetch(`https://wdmc.onrender.com/${category}?id=${id}`)
     .then((response) => response.json())
     .then((data) => {
-      titleDiv.innerHTML = data[0].title
+      console.log(data)
+      let title=data[0].title;
+
+      if(title===undefined) title=category;
+      
+      else title=data[0].title;
+      
+      titleDiv.innerHTML = title.charAt(0).toUpperCase() + title.slice(1);
+
       if (data[0].desc) desp.innerHTML = data[0].desc
       dateDiv.innerHTML = dateManipulator(data[0].updatedAt)
       if (data[0].image)

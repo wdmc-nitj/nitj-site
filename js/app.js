@@ -1,68 +1,15 @@
-window.onscroll = function () {
-  const insti_name_cont = document.getElementById('instituteNameContainer')
-  const institute_name = document.getElementsByClassName('institute_name')
-  const full_navbar = document.getElementsByTagName('header')
-  const logo = document.getElementById('logo_250')
-  const topbar = document.getElementById('top_bar')
-  const diff_lang = document.getElementsByClassName('mySlides')
-  // animateValueIntiator()
-  // animateValueIntiatorInstitute()
-  // resAutoScroll()
-
-  if (window.scrollY > 100) {
-    insti_name_cont.classList.remove("sm:h-20","sm:max-h-20")
-    insti_name_cont.classList.add("sm:h-10","sm:max-h-10")
-    // insti_name_cont.classList.add(' sm:max-h-20')
-    topbar.style.transform = 'translateY(-50px)'
-    for (let i = 0; i < diff_lang.length; i++) {
-      diff_lang[i].classList.remove('mt-7')
-    }
-    for (let i = 0; i < institute_name.length; i++) {
-      if (window.innerWidth > 620) {
-        logo.style.width = '90px'
-        logo.style.height = '90px'
-      }
-      logo.classList.remove('top-9')
-      logo.classList.add('top-0', 'py-4')
-      logo.classList.remove('sm:translate-y-0')
-      if (institute_name[i].classList.contains('sm:text-xl')) {
-        institute_name[i].classList.remove('sm:text-xl')
-        institute_name[i].classList.add('sm:text-lg')
-        institute_name[i].classList.add('tracking-widest')
-      } else if (institute_name[i].classList.contains('sm:text-lg')) {
-        institute_name[i].classList.remove('sm:text-lg')
-        institute_name[i].classList.add('sm:text-sm')
-        institute_name[i].classList.remove('tracking-widest')
-      }
-    }
-  } else {
-    insti_name_cont.classList.remove("sm:h-10","sm:max-h-10")
-    insti_name_cont.classList.add("sm:h-20","sm:max-h-20")
-    logo.style.width = '120px'
-    logo.style.height = '120px'
-    topbar.style.transform = 'translateY(0)'
-    for (let i = 0; i < diff_lang.length; i++) {
-      diff_lang[i].classList.add('mt-7')
-    }
-    logo.classList.add('sm:translate-y-0')
-    logo.classList.add('top-9')
-    logo.classList.remove('top-0', 'py-4')
-    for (var i = 0; i < institute_name.length; i++) {
-      // console.log(institute_name[i].classList);
-      if (institute_name[i].classList.contains('sm:text-lg')) {
-        institute_name[i].classList.remove('sm:text-lg')
-        institute_name[i].classList.add('sm:text-xl')
-        institute_name[i].classList.remove('tracking-widest')
-      } else if (institute_name[i].classList.contains('sm:text-sm')) {
-        institute_name[i].classList.remove('sm:text-sm')
-        institute_name[i].classList.add('sm:text-lg')
-        institute_name[i].classList.remove('tracking-widest')
-      } else if (institute_name[i].classList.contains('sm:text-lg')) {
-      }
-    }
-  }
-}
-
+import imgSlider from './utils/app/imgSlider.js'
+import navbarUtil from './utils/app/navUtils.js'
+import {
+  backToTop,
+  checkScrollPos,
+  newsCardsScroll,
+  publicationCardsScroll,
+} from './utils/app/scrollUtils.js'
+import notificationTabs from './utils/app/tabUits.js'
+// import getNavbar from './navbar.js'
+window.onscroll = navbarUtil
+// window.onload = getNavbar
 function openDropdown() {
   var dropdown = document.getElementById('dropdown')
   if (dropdown.classList.contains('hidden')) {
@@ -70,6 +17,24 @@ function openDropdown() {
   } else {
     dropdown.classList.add('hidden')
   }
+}
+
+// Slide Cards on Scroll
+function slideCards(e, direction) {
+  // var container = document.getElementById('cards')
+  const container = e.parentNode.querySelector('div')
+  scrollCompleted = 0
+  var slideVar = setInterval(function () {
+    if (direction == 'left') {
+      container.scrollLeft -= container.clientWidth
+    } else {
+      container.scrollLeft += container.clientWidth
+    }
+    scrollCompleted += 100
+    if (scrollCompleted >= 1000) {
+      window.clearInterval(slideVar)
+    }
+  }, 2)
 }
 
 function showSearchPage(event) {
@@ -86,100 +51,6 @@ function showSearchPage(event) {
   }
 }
 
-// Check if element is in viewport
-
-// Parallex Effect
-
-// const numbers = document.getElementById('numbers')
-
-// window.addEventListener('scroll', () => {
-//   let offset = scrollY
-//   const viewport = window.outerHeight
-//   console.log('running')
-//   if (offset >= numbers.offsetTop - viewport) {
-//     console.log('touched')
-//     numbers.style.backgroundPositionY =
-//       -(numbers.offsetTop - offset) * 0.8 + 'px'
-//   }
-// })
-
-// Old Image slider
-
-// let home = 0
-// window.onload = function () {
-//   showHome()
-// }
-// function showHome() {
-//   let i
-//   let homeslider = document.getElementsByClassName('homeslide')
-//   for (i = 0; i < homeslider.length; i++) {
-//     homeslider[i].style.display = 'none'
-//   }
-//   home++
-//   if (home > homeslider.length) {
-//     home = 1
-//   }
-//   homeslider[home - 1].style.display = 'block'
-//   setTimeout(showHome, 3000) // Change image every 3 seconds
-// }
-
-// ////////////////////////////
-// Right and left buttons on the research and news section
-
-function slideCards(direction) {
-  var container = document.getElementById('cards')
-  scrollCompleted = 0
-  var slideVar = setInterval(function () {
-    if (direction == 'left') {
-      container.scrollLeft -= container.clientWidth
-    } else {
-      container.scrollLeft += container.clientWidth
-    }
-    scrollCompleted += 100
-    if (scrollCompleted >= 1000) {
-      window.clearInterval(slideVar)
-    }
-  }, 2)
-}
-
-function slideResearch(direction) {
-  var container = document.getElementById('slides')
-  scrollComp = 0
-  var slide = setInterval(function () {
-    if (direction == 'left') {
-      container.scrollLeft -= container.clientWidth
-    } else {
-      container.scrollLeft += container.clientWidth
-    }
-    scrollComp += 10
-    if (scrollComp >= 100) {
-      window.clearInterval(slide)
-    }
-  }, 2)
-}
-// var resCards = document.getElementById('slides')
-// var stopResCards = false
-// resCards.addEventListener('mouseover', () => {
-//   stopResCards = true
-// })
-// resCards.addEventListener('mouseleave', () => {
-//   stopResCards = false
-// })
-// function resAutoScroll() {
-//   let currScroll = 0
-//   if (isInViewPort(resCards) && stopResCards) {
-//     setInterval(() => {
-//       currScroll = resCards.scrollLeft
-
-//       if (currScroll === resCards.scrollLeft + 15) {
-//         return
-//       }
-//       resCards.scrollLeft += 15
-//     }, 300)
-//   }
-// }
-
-// ///////////////////////////
 // Admission Section Tabs
 
 const openCourse = (e) => {
@@ -199,174 +70,55 @@ const openCourse = (e) => {
   document.getElementById(e.dataset.course).classList.remove('hidden')
 }
 
-const notificationTabs = (e) => {
-  let tabcontent = document.getElementsByClassName('notice-content')
-  let tablinks = document.getElementsByClassName('notif-link')
+// function notificationTabs(e) {
+//   let tabcontent = document.getElementsByClassName('notice-content')
+//   let tablinks = document.getElementsByClassName('notif-link')
 
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.add('hidden')
-  }
+//   for (let i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].classList.add('hidden')
+//   }
 
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
-    tablinks[i].classList.remove(
-      'bg-blue-100',
-      'text-accent',
-      'hover:bg-blue-200'
-    )
-  }
-  e.classList.remove('hover:bg-blue-50', 'text-slate-400')
-  e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-  document.getElementById(e.dataset.notif).classList.remove('hidden')
+//   for (let i = 0; i < tablinks.length; i++) {
+//     tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
+//     tablinks[i].classList.remove(
+//       'bg-blue-100',
+//       'text-accent',
+//       'hover:bg-blue-200'
+//     )
+//   }
+//   e.classList.remove('hover:bg-blue-50', 'text-slate-400')
+//   e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
+//   document.getElementById(e.dataset.notif).classList.remove('hidden')
+// }
+const tabLinks = document.getElementsByClassName('notif-link')
+
+window.addEventListener('load', () => {
+  notificationTabs(tabLinks[0])
+})
+
+for (const link of tabLinks) {
+  link.addEventListener('click', () => {
+    console.log(link)
+    notificationTabs(link)
+  })
 }
-
 // ///////////////////////////
 // Image Slider Animation::
 
-// const mainText = document.getElementById('main-slider-text')
-const mainImg = document.getElementById('main-image')
-const slider = [
-  ['The Place of transformation', './public/assets/images/IMG_0196.JPG'],
-  ['78th IN OVERALL NIRF RANKING', './public/assets/images/IMG_0198.JPG'],
-  ['49th IN ENGINEERING NIRF', './public/assets/images/IMG_0195.JPG'],
-]
-
-let i = 0
-setInterval(() => {
-  // mainText.innerText = slider[i % slider.length][0]
-  mainImg.style.backgroundImage = `url('${slider[i % slider.length][1]}')`
-  i++
-}, 2000)
-
-// Animate the numbers on the stats section
-// const stats = document.getElementById('placement-stats')
-// const campusStats = document.getElementById('institute-numbers')
-
-// let placeStatsVisited = false
-// let campusStatsVisited = false
-// window.addEventListener('scroll', () => {
-//   if (isInViewPort(stats) && !placeStatsVisited) {
-//     animateValueIntiator()
-//     placeStatsVisited = true
-//   }
-//   if (isInViewPort(campusStats) && !campusStatsVisited) {
-//     animateValueIntiatorInstitute()
-//     campusStatsVisited = true
-//   }
-// })
-
-function isInViewPort(el) {
-  const rect = el.getBoundingClientRect()
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  )
-}
-
-// assumes integer values for start and end
-
-// function animateValue(obj, start, end, duration) {
-//   let startTimestamp = null
-//   const step = (timestamp) => {
-//     if (!startTimestamp) startTimestamp = timestamp
-//     const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-//     obj.innerText = Math.floor(progress * (end - start) + start)
-
-//     if (progress < 1) {
-//       window.requestAnimationFrame(step)
-//     }
-//   }
-//   window.requestAnimationFrame(step)
-// }
-
-// function animateValueIntiator() {
-//   const rolling_nums = document.querySelectorAll('.number h1 span')
-//   rolling_nums.forEach((num) => {
-//     animateValue(num, 0, Number(num.innerHTML), 3000)
-//   })
-// }
-
-// function animateValueIntiatorInstitute() {
-//   const rolling_nums = document.querySelectorAll('.number-in h1 span')
-//   rolling_nums.forEach((num) => {
-//     animateValue(num, 0, Number(num.innerHTML), 3000)
-//   })
-// }
-
-// function animateValue(obj, start, end, duration) {
-//   let range = end - start
-//   let stepTime = Math.abs(Math.floor(duration / range))
-//   let startTime = new Date().getTime()
-//   let endTime = startTime + duration
-//   let timer
-//   function run() {
-//     let now = new Date().getTime()
-//     let remaining = Math.max((endTime - now) / duration, 0)
-//     let value = Math.round(end - remaining * range)
-//     obj.innerHTML = value
-//     console.log(value)
-//     if (value == end) {
-//       clearInterval(timer)
-//     }
-//   }
-//   timer = setInterval(run, stepTime)
-//   run()
-// }
+setInterval(imgSlider, 2000)
 
 // News Cards Auto Scroll
 
-const newsCardsContainer = document.getElementById('news-cards')
-let newsCardContainerTop = newsCardsContainer.scrollTop
-
-let newsDirection = true
-
 setTimeout(newsCardsScroll, 1000)
-
-function newsCardsScroll() {
-  let currTop = newsCardContainerTop
-
-  if (true) {
-    let curr = 0
-    if (newsDirection) {
-      curr = newsCardsContainer.scrollTop + 1
-    } else {
-      curr = newsCardsContainer.scrollTop - 1
-    }
-    newsCardsContainer.scrollTop = curr
-    newsCardContainerTop = curr
-  }
-  if (newsCardContainerTop == currTop) {
-    newsDirection = !newsDirection
-  }
-  setTimeout(newsCardsScroll, 15)
-}
 
 // Publication Cards Auto Scroll
 
-const publicationContainer = document.getElementById('publication-cards')
-let publicationContainerTop = publicationContainer.scrollTop
-let publicationDirection = true
-
 setTimeout(publicationCardsScroll, 1000)
 
-function publicationCardsScroll() {
-  let currTop = publicationContainerTop
+// Scroll to top Button
 
-  if (true) {
-    let curr = 0
-    if (publicationDirection) {
-      curr = publicationContainer.scrollTop + 1
-    } else {
-      curr = publicationContainer.scrollTop - 1
-    }
-    publicationContainer.scrollTop = curr
-    publicationContainerTop = curr
-  }
-  if (publicationContainerTop == currTop) {
-    publicationDirection = !publicationDirection
-  }
-  setTimeout(publicationCardsScroll, 15)
-}
+const scrollToTopButton = document.querySelector('#scroll-to-top-button')
+
+scrollToTopButton.addEventListener('click', backToTop)
+
+window.addEventListener('scroll', checkScrollPos)
