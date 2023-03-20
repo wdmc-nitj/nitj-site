@@ -113,7 +113,8 @@ function dateManipulator(data) {
 }
 fetch(`${baseURL}/latestEvent/get/all`)
   .then((response) => response.json())
-  .then((data) => {
+  .then((APIdata) => {
+    const data = APIdata.slice(0, 6)
     let i = 6
     const cards = document.getElementById('cards')
     data.forEach((e) => {
@@ -155,7 +156,8 @@ fetch(`${baseURL}/latestEvent/get/all`)
   })
 fetch(`${baseURL}/researchHighlights/get/all`)
   .then((response) => response.json())
-  .then((data) => {
+  .then((APIdata) => {
+    const data = APIdata.slice(0, 6)
     // ///////////////
     // Original Element
     // ///////////////
