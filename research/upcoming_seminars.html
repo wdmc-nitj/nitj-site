@@ -181,7 +181,60 @@
 	position: relative;
 }
 
+.tab {
+        color: white;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: hsla(201, 96%, 32%);
+      }
 
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        color: black;
+        background-color: hsla(242, 83%, 98%);
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        color: black;
+        background-color: hsla(242, 83%, 98%);
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
+      /* Transition on tab content */
+      .tabcontent {
+        animation: fadeEffect 1s;
+        /* Fading effect takes 1 second */
+      }
+      @keyframes fadeEffect {
+        /* Go from zero to full opacity */
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
 
 
 .tabs2 ul li:last-child{
@@ -277,248 +330,247 @@
       </ol>
   </nav>
 
- <div class="flex lg:flex-row lg:flex flex-col mt-11 justify-between align-middle px-[2%]">
-<div class=" flex flex-col lg:w-[45%] w-[80%] mx-auto justify-center align-middle">
-  <div class="text-[32px] lg:mb-2 mb-4 font-semibold lg:w-[70%]"> Upcoming Seminars
-  <div class="h-1 w-[60%] bg-accent"></div>  
+  <div class="px-4 lg:px-[11%] my-3 py-[48px]">
+    <div class="tab">
+        <button class="tablinks active" id="first-button" >
+            Upcoming Seminars
+        </button>
+        <button class="tablinks"  >
+            Organized Seminars
+        </button>
+    </div>
+
+    <div id="home" class="tabcontent block">
+      <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+        <ul class="list-disc w-[100%] ml-8" id="first">
+          <div class=" flex flex-col lg:w-[100%] w-[100%] mx-auto justify-center align-middle">
+            <div class="text-[32px] lg:mb-2 mb-4 font-semibold lg:w-[100%]"> Upcoming Seminars
+            <div class="h-1 w-[20%] bg-accent"></div>  
+            </div>
+          <div class="lg:flex shadow rounded-lg border w-[100%] mb-4 border-gray-400">
+              <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner mx-auto">
+                <div class="text-center tracking-wide">
+                  <!--date-->
+                  <div class="text-white font-bold text-4xl ">10</div>
+                  <div class="text-white font-normal text-2xl">March</div>
+                </div>
+              </div>
+              <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                <div class="flex flex-row lg:justify-start justify-center">
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                   <!--time-->
+                    <i class="far fa-clock"></i> 1:30 PM
+                  </div>
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                    Organiser : Department of Industrial and Production Engineering
+                  </div>
+                </div>
+                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                  7th International Conference on Production & Industrial Engineering (CPIE 2023)
+                </div>
+          
+                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                 <!--address / location-->
+                  Central Seminar Hall
+                </div>
+              </div>
+             
+            </div>
+            <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[100%] mb-4">
+              <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner  mx-auto">
+                <div class="text-center tracking-wide">
+                  <!--date-->
+                  <div class="text-white font-bold text-4xl ">07</div>
+                  <div class="text-white font-normal text-2xl">April</div>
+                </div>
+              </div>
+              <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                <div class="flex flex-row lg:justify-start justify-center">
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                   <!--time-->
+                    <i class="far fa-clock"></i> 1:30 PM
+                  </div>
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                    Organiser : Department of Textile Technology
+                  </div>
+                </div>
+                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                  3rd International Conference on "Emerging Trends on Traditional and Technical Textiles"
+                </div>
+          
+                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                 <!--address / location-->
+                  Central Seminar Hall
+                </div>
+              </div>
+             
+            </div>
+            <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[100%] mb-4">
+              <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner  mx-auto">
+                <div class="text-center tracking-wide">
+                  <!--date-->
+                  <div class="text-white font-bold text-4xl ">24</div>
+                  <div class="text-white font-normal text-2xl">Sept</div>
+                </div>
+              </div>
+              <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                <div class="flex flex-row lg:justify-start justify-center">
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                   <!--time-->
+                    <i class="far fa-clock"></i> 1:30 PM
+                  </div>
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                    Organiser : IHC
+                  </div>
+                </div>
+                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                  Title of conference
+                </div>
+          
+                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                 <!--address / location-->
+                  Central Seminar Hall
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <div id="about" class="tabcontent">
+      <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
+        <ul class="list-disc ml-8 w-[100%]" id="second">
+          <div class=" flex flex-col lg:w-[100%] w-[100%] mx-auto justify-center align-middle">
+            <div class="text-[32px] lg:mb-2 mb-4 font-semibold lg:w-[100%]"> Organized Seminars
+            <div class="h-1 w-[20%] bg-accent"></div>  
+            </div>
+          <div class="lg:flex shadow rounded-lg border w-[100%] mb-4 border-gray-400">
+              <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner mx-auto">
+                <div class="text-center tracking-wide">
+                  <!--date-->
+                  <div class="text-white font-bold text-4xl ">11</div>
+                  <div class="text-white font-normal text-2xl">June</div>
+                </div>
+              </div>
+              <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                <div class="flex flex-row lg:justify-start justify-center">
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                   <!--time-->
+                    <i class="far fa-clock"></i> 1:30 PM
+                  </div>
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                    Organiser : Department of Mechanical Engineering
+                  </div>
+                </div>
+                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                  Online 2nd International Conference on "Materials Science & Engineering" (ICMSE-2022)
+                </div>
+          
+                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                 <!--address / location-->
+                  Central Seminar Hall
+                </div>
+              </div>
+             
+            </div>
+            <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[100%] mb-4">
+              <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner  mx-auto">
+                <div class="text-center tracking-wide">
+                  <!--date-->
+                  <div class="text-white font-bold text-4xl ">24</div>
+                  <div class="text-white font-normal text-2xl">Sept</div>
+                </div>
+              </div>
+              <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                <div class="flex flex-row lg:justify-start justify-center">
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                   <!--time-->
+                    <i class="far fa-clock"></i> 1:30 PM
+                  </div>
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                    Organiser : Centre for Continuing Education
+                  </div>
+                </div>
+                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                  International Conference on "Innovation in Technology & Management"(ICITM-2022)
+                </div>
+          
+                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                 <!--address / location-->
+                  Central Seminar Hall
+                </div>
+              </div>
+             
+            </div>
+            <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[100%] mb-4">
+              <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner  mx-auto">
+                <div class="text-center tracking-wide">
+                  <!--date-->
+                  <div class="text-white font-bold text-4xl ">28</div>
+                  <div class="text-white font-normal text-2xl">April</div>
+                </div>
+              </div>
+              <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                <div class="flex flex-row lg:justify-start justify-center">
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                   <!--time-->
+                    <i class="far fa-clock"></i> 1:30 PM
+                  </div>
+                  <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                    Organiser : Centre for Continuing Education
+                  </div>
+                </div>
+                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                  International Conference on "Innovation in Technology & Management"(ICITM-2022)
+                </div>
+          
+                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                 <!--address / location-->
+                  Central Seminar Hall
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
   </div>
-<div class="lg:flex shadow rounded-lg border w-[85%] mb-4 border-gray-400">
-    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner mx-auto">
-      <div class="text-center tracking-wide">
-        <!--date-->
-        <div class="text-white font-bold text-4xl ">24</div>
-        <div class="text-white font-normal text-2xl">Sept</div>
-      </div>
-    </div>
-    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-      <div class="flex flex-row lg:justify-start justify-center">
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-         <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
-        </div>
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-          Organiser : IHC
-        </div>
-      </div>
-      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
-        Title of Seminar
-      </div>
-
-      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-       <!--address / location-->
-        Central Seminar Hall
-      </div>
-    </div>
-   
-  </div>
-  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
-    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner  mx-auto">
-      <div class="text-center tracking-wide">
-        <!--date-->
-        <div class="text-white font-bold text-4xl ">24</div>
-        <div class="text-white font-normal text-2xl">Sept</div>
-      </div>
-    </div>
-    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-      <div class="flex flex-row lg:justify-start justify-center">
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-         <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
-        </div>
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-          Organiser : IHC
-        </div>
-      </div>
-      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
-        Title of Seminar
-      </div>
-
-      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-       <!--address / location-->
-        Central Seminar Hall
-      </div>
-    </div>
-   
-  </div>
-  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
-    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner  mx-auto">
-      <div class="text-center tracking-wide">
-        <!--date-->
-        <div class="text-white font-bold text-4xl ">24</div>
-        <div class="text-white font-normal text-2xl">Sept</div>
-      </div>
-    </div>
-    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-      <div class="flex flex-row lg:justify-start justify-center">
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-         <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
-        </div>
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-          Organiser : IHC
-        </div>
-      </div>
-      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
-        Title of Seminar
-      </div>
-
-      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-       <!--address / location-->
-        Central Seminar Hall
-      </div>
-    </div>
-   
-  </div>
-</div>
-
-
-<div class=" flex flex-col lg:w-[45%]  w-[80%] mx-auto">
-  <div class="text-[32px] lg:mb-2 mb-4 font-semibold lg:w-[70%]"> Seminars Organized
-  <div class="h-1 w-[60%] bg-accent"></div>  
-  </div>
-<div class="lg:flex shadow rounded-lg border w-[85%] mb-4 border-gray-400">
-    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner">
-      <div class="text-center tracking-wide">
-        <!--date-->
-        <div class="text-white font-bold text-4xl ">24</div>
-        <div class="text-white font-normal text-2xl">Sept</div>
-      </div>
-    </div>
-    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-      <div class="flex flex-row lg:justify-start justify-center">
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-         <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
-        </div>
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-          Organiser : IHC
-        </div>
-      </div>
-      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
-        Title of Seminar
-      </div>
-
-      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-       <!--address / location-->
-        Central Seminar Hall
-      </div>
-    </div>
-   
-  </div>
-  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
-    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner">
-      <div class="text-center tracking-wide">
-        <!--date-->
-        <div class="text-white font-bold text-4xl ">24</div>
-        <div class="text-white font-normal text-2xl">Sept</div>
-      </div>
-    </div>
-    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-      <div class="flex flex-row lg:justify-start justify-center">
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-         <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
-        </div>
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-          Organiser : IHC
-        </div>
-      </div>
-      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
-        Title of Seminar
-      </div>
-
-      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-       <!--address / location-->
-        Central Seminar Hall
-      </div>
-    </div>
-   
-  </div>
-  <div class="lg:flex shadow rounded-lg border  border-gray-400 w-[85%] mb-4">
-    <div class="bg-accent rounded-lg lg:w-2/12 py-4 block h-full shadow-inner">
-      <div class="text-center tracking-wide">
-        <!--date-->
-        <div class="text-white font-bold text-4xl ">24</div>
-        <div class="text-white font-normal text-2xl">Sept</div>
-      </div>
-    </div>
-    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-      <div class="flex flex-row lg:justify-start justify-center">
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-         <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
-        </div>
-        <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-          Organiser : IHC
-        </div>
-      </div>
-      <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
-        Title of Seminar
-      </div>
-
-      <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-       <!--address / location-->
-        Central Seminar Hall
-      </div>
-    </div>
-   
-  </div>
-</div>
- </div>
-
- <div class="basis-3/5 w-[90%] mx-auto mt-4">
-  <div>
-    <div class="mb-10 flex items-center justify-start space-x-6 group">
-      <h1 class="uppercase text-4xl font-semibold text-accent">
-        Photo <span class="text-dark-purple">Gallery</span>
-      </h1>
-      <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
-        style="font-size: 40px; color: var(--accent)">
-        imagesmode
-      </span>
-    </div>
-    <div class="flex h-[22vh] w-full">
-      <div class="box">
-        <img src="./img/img5.png" />
-      </div>
-      <div class="box">
-        <img src="./img/img5.png" />
-      </div>
-      <div class="box">
-         <img src="./img/img5.png" />
-      </div>
-      <div class="box hidden lg:block">
-         <img src="./img/img5.png" />
-      </div>
-    </div>
-
-    <div class="flex h-[22vh] w-full">
-      <div class="box">
-        <img src="./img/img4.png" />
-      </div>
-      <div class="box">
-        <img src="./img/img4.png" />
-      </div>
-      <div class="box">
-        <img src="./img/img4.png" />
-      </div>
-      <div class="box hidden lg:block">
-        <img src="./img/img4.png" />
-      </div>
-    </div>
-
- 
-  </div>
- 
-</div>
 
   <!--<div class="base-image hidden overflow-hidden lg:block "></div>-->
 <div class="relative bottom-0">
 
 <script src="../common template/footer.js"></script>
 </div>
-   
-    <script src="../admin/app.js"></script>
+
+<script>
+  var tabs = document.querySelectorAll(".tablinks");
+var tabcontent = document.querySelectorAll(".tabcontent");
+  tabs.forEach(function(tab, tab_index){
+tab.addEventListener("click", function(){
+
+  tabs.forEach(function(tab){
+    tab.classList.remove("active");
+  })
+  tab.classList.add("active");
+
+  tabcontent.forEach(function(content, content_index){
+    if(content_index == tab_index){
+      content.style.display = "block";
+    }
+    else{
+      content.style.display = "none";
+    }
+  })
+
+})
+})
+</script>
+
+<script type="module" src="../admin/app.js"></script>
 
   </body>
   </html>

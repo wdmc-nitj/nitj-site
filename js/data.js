@@ -278,11 +278,12 @@ fetch(`${baseURL}/administration/get/all`)
 `
     directorMessage.appendChild(msg)
   })
-fetch(`${baseURL}/ranking/get/all`)
+fetch(`${baseURL}/placementStat/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data)
-    const statsData = data.map((stat) => stat.Ranking)
+    console.log(data)
+    data.sort((a, b) => { a.order - b.order})
+    const statsData = data.map((stat) => stat.PlacementStat)
     const element = document.getElementById('placement-stats')
     // console.log(statsData)
     statsData.map((statData) => {
@@ -291,9 +292,9 @@ fetch(`${baseURL}/ranking/get/all`)
       stat.setAttribute('class', 'number')
       stat.innerHTML = `
       <h1 class="text-5xl font-bold uppercase">${
-        Object.values(statData)[0]
+        statData.placementStatValue
       }</h1>
-      <p class="text-lg uppercase">${Object.keys(statData)[0]}</p>
+      <p class="text-lg uppercase">${statData.placementStatName}</p>
       `
       element.appendChild(stat)
     })
@@ -342,7 +343,8 @@ fetch(`${baseURL}/club/get/all`)
       )
       div.innerHTML = `
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-[url(${e.img})] bg-cover bg-center bg-no-repeat">
+                  <div class="w-2/5 bg-cover bg-center bg-no-repeat">
+                  <img src ='${e.img}' class="w-full h-full object-cover" alt="Club Image" />
                   </div>
                   <div class="flex flex-col p-6 w-full sm:w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
