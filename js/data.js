@@ -280,11 +280,12 @@ fetch(`${baseURL}/administration/get/all`)
 `
     directorMessage.appendChild(msg)
   })
-fetch(`${baseURL}/ranking/get/all`)
+fetch(`${baseURL}/placementStat/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data)
-    const statsData = data.map((stat) => stat.Ranking)
+    console.log(data)
+    data.sort((a, b) => { a.order - b.order})
+    const statsData = data.map((stat) => stat.PlacementStat)
     const element = document.getElementById('placement-stats')
     // console.log(statsData)
     statsData.map((statData) => {
@@ -293,9 +294,9 @@ fetch(`${baseURL}/ranking/get/all`)
       stat.setAttribute('class', 'number')
       stat.innerHTML = `
       <h1 class="text-5xl font-bold uppercase">${
-        Object.values(statData)[0]
+        statData.placementStatValue
       }</h1>
-      <p class="text-lg uppercase">${Object.keys(statData)[0]}</p>
+      <p class="text-lg uppercase">${statData.placementStatName}</p>
       `
       element.appendChild(stat)
     })

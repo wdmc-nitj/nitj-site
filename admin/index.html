@@ -728,30 +728,37 @@ function showImg() {
   </script>
   <script>
     async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/yearlyRanking?id=640334ec41f4f72cbbca59d0"
-      );
+      let result = await fetch("https://wdmc.onrender.com/Ranking/");
       result = await result.json();
-      console.log(result);
-      document.getElementById("Current_ranking").innerHTML = `
-      <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
-                    <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${result[0].YearlyRanking.rankings[0][0]}</p>
-                    <p class="font-medium text-[18px] lg:text-[18px]"> ${result[0].YearlyRanking.rankings[0][1]}</p>
-                </div>
-               <br>
-               
-                <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
-                    <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${result[0].YearlyRanking.rankings[1][0]}</p>
-                    <p class="font-medium text-[18px] lg:text-[18px]"> ${result[0].YearlyRanking.rankings[1][1]}</p>
-                </div>
-                <br>
+      timelist = [];
+      console.log(result.length);
 
-                <div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">
-                    <p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${result[0].YearlyRanking.rankings[2][0]}</p>
-                    <p class="font-medium text-[18px] lg:text-[18px]"> ${result[0].YearlyRanking.rankings[2][1]}</p>
-                </div>
-                 
-       `;
+      for (let i = 0; i < result.length; i++) {
+        console.log(result[i].Ranking);
+        timelist.push(Number(result[i].Ranking.rankingValue));
+      }
+      //sort elements in timelist in ascending order and store it in timelist
+      timelist.sort().reverse();
+      //remove duplicate values
+      timelist = timelist.filter(
+        (item, index) => timelist.indexOf(item) === index
+      );
+      console.log(timelist);
+      //
+      x = "";
+      for (let i = 0; i < timelist.length; i++) {
+        x += `<div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">`
+                x+=`<p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${timelist[i]}</p>`
+        for (let j = 0; j < result.length; j++) {
+          if (timelist[i] == Number(result[j].Ranking.rankingValue)) {
+              x += `<p class="font-medium text-[18px] lg:text-[18px]"> ${result[j].Ranking.rankingName}</p>`;
+        }
+
+        // x += "</div>";
+      }
+      x+="</div><br>"
+    }
+      document.getElementById("Current_ranking").innerHTML = x;
     }
     callAPi();
   </script>
