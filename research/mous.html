@@ -155,63 +155,6 @@
       z-index: 10;
     }
 
-    .active2{
-	background-color: rgb(42, 120, 193);
-}
-.tabs2 ul{
-	display: flex;
-    flex-direction: column;
-	border-radius: 3px;
-	margin-bottom: 25px;
-	box-shadow: 2px 2px 2px rgb(108, 173, 235);
-}
-
-.tabs2 ul li{
-	width: 100%;
-	padding: 10px;
-	font-family: 'Barlow', sans-serif !important;
-	border-right: 1px solid #dddddd;
-	text-align: center;
-	color: #3b3b3b;
-	font-size: 14px;
-	font-weight: 600;
-	letter-spacing: 3px;
-	cursor: pointer;
-	transition: all 0.2s ease;
-	position: relative;
-}
-
-
-
-
-.tabs2 ul li:last-child{
-	border-right: 0px;
-}
-
-.tabs2 ul li:before{
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	opacity: 0;
-	transition: all 0.2s ease;
-}
-
-
-.tabs2 ul li:hover,
-.tabs2 ul li.active2{
-	background: rgb(42, 120, 193);
-	color: #ffffff;
-	border: 2px solid rgb(82, 82, 79);
-}
-
-.tabs2 ul li:hover:before,
-.tabs2 ul li.active2:before{
-	opacity: 1;
-}
-
 @media(max-width:768px){
   .side_Bar_Hide{
     display: none;
@@ -294,13 +237,13 @@
         class="tabs2  p-2 rounded w-[100%]"
       >
           <ul>
-            <li x-on:click="dropdownMenu = ! dropdownMenu" class="active2 bg-blue-100 mb-1">
+            <li x-on:click="dropdownMenu = ! dropdownMenu" class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text dropContent1"  onclick=dropDownContentOnClick1() >International Institutes</span>
             </li>
-            <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
+            <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text dropContent2" onclick=dropDownContentOnClick2()>Industries</span>
             </li>
-            <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-blue-100 mb-1">
+            <li x-on:click="dropdownMenu = ! dropdownMenu" class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text dropContent3" onclick=dropDownContentOnClick3()>Indian Institutes</span>
             </li>
           </ul>
@@ -328,13 +271,13 @@
       id="sidetab"
     >
           <ul>
-            <li class="active2 bg-blue-100 mb-1">
+            <li class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text" >International Institutes</span>
             </li>
-            <li class="bg-blue-100 mb-1">
+            <li class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text" >Industries</span>
             </li>
-            <li class="bg-blue-100 mb-1">
+            <li class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
                 <span class="text">Indian Institutes</span>
               </li>
           </ul>
