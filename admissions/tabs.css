@@ -24,7 +24,7 @@
     flex-direction: column;
 	border-radius: 3px;
 	margin-bottom: 25px;
-	box-shadow: 2px 2px 2px rgb(108, 173, 235);
+	/* box-shadow: 2px 2px 2px rgb(108, 173, 235); */
 }
 
 .tabs ul li{
@@ -33,7 +33,7 @@
 	font-family: 'Barlow', sans-serif !important;
 	border-right: 1px solid #dddddd;
 	text-align: center;
-	color: #3b3b3b;
+	/* color: #3b3b3b; */
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 3px;
@@ -65,9 +65,8 @@
 
 .tabs ul li:hover,
 .tabs ul li.active2{
-	background: rgb(42, 120, 193);
-	color: #ffffff;
-	border: 2px solid rgb(82, 82, 79);
+	background: rgb(106, 158, 207);
+	color: black;
 }
 
 .tabs ul li:hover:before,
@@ -82,7 +81,7 @@
     flex-direction: column;
 	border-radius: 3px;
 	margin-bottom: 25px;
-	box-shadow: 2px 2px 2px rgb(108, 173, 235);
+	/* box-shadow: 2px 2px 2px rgb(108, 173, 235); */
 }
 
 .tabs2 ul li{
@@ -91,7 +90,7 @@
 	font-family: 'Barlow', sans-serif !important;
 	border-right: 1px solid #dddddd;
 	text-align: center;
-	color: #3b3b3b;
+	/* color: #3b3b3b; */
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 3px;
@@ -121,9 +120,8 @@
 
 .tabs2 ul li:hover,
 .tabs2 ul li.active2{
-	background: rgb(42, 120, 193);
-	color: #ffffff;
-	border: 2px solid rgb(82, 82, 79);
+	background: rgb(106, 158, 207);
+	color: black;
 }
 
 .tabs2 ul li:hover:before,

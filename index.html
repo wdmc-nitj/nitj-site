@@ -158,7 +158,8 @@
 
 <body class="font-body relative text-dark-purple scroll-smooth">
 
-  <script src="/common template/header.js" type="module"></script>
+  <script src="/template/header.js" type="module"></script>
+  <script src="/template/helper.js"></script>
   <button id="scroll-to-top-button"
     class="hidden z-30 opacity-60 hover:opacity-100 transition-all bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full fixed right-0 bottom-0 mr-6 mb-6">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -462,10 +463,23 @@
         </div>
       </div>
 
-      <a href="/alumni/alumni.html" title="Alumni Site" id="testimonial"
-        class="md:col-start-1 md:col-end-3 md:row-start-3 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 hover:ring-4 transition-all duration-300 gap-5 ring-accent">
+      <div title="Alumni Site" id="testimonial"
+        class="grid grid-cols-1 grid-rows-1 md:col-start-1 md:col-end-3 md:row-start-3 md:mr-6 bg-white">
         <!-- Data from API -->
-      </a>
+        <!-- <div class="card-container">
+          <div class="card">
+            <div class="card-contents card-front">
+              <div class="card-depth" id="testimonial">
+
+              </div>
+              <div class="card-contents card-back">
+                <div class="card-depth">
+
+                </div>
+              </div>
+            </div>
+          </div> -->
+      </div>
       <div id="publications"
         class="md:col-start-3 md:col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg">
         <div class="flex flex-col gap-3 mb-8">
@@ -741,8 +755,7 @@
 
   <div class="base-image hidden overflow-hidden lg:block"></div>
   <!-- === LIFE AT NITJ Ends === -->
-  <!-- === FOOTER Starts === -->
-  <!-- === FOOTER Ends === -->
+
 
   <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
   <script type="text/javascript">
@@ -788,8 +801,8 @@
   <script type="module" src="/js/app.js"></script>
   <!-- <script type="module" src="./js/navbar.js"></script> -->
   <script src="/js/footer.js"></script>
-  <script src="/common template/footer.js"></script>
-  <script src="/common template/helper.js"></script>
+  <script src="/template/footer.js"></script>
+  <script src="/template/helper.js"></script>
   <!-- <script type="module" src="./js/navbar-mobile.js"></script> -->
 
 </html>

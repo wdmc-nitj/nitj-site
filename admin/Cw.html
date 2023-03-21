@@ -38,7 +38,8 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -110,25 +111,25 @@
                             </tr>
                             <script>
                                 async function api_call() {
-                                  var data = await fetch(
-                                    "http://localhost:8000/specialcentres/getcentre/cw"
-                                  );
-                                  var result = await data.json();
-    
-                                  var modified = result[0].faculties;
-              
-                                  for (var i in modified) {
-                                    var name = modified[i]["name"];
-                                    var designation = modified[i]["designation"];
-                                    var department = modified[i]["department"];
-                                    var email = modified[i]["email_id"];
-                                    var url = modified[i]["url"];
-                                    var qualification = modified[i]["qualification"];
-                                    document
-                                      .getElementById("table-body-cw")
-                                      .insertAdjacentHTML(
-                                        "beforeend",
-                                        `<tr>
+                                    var data = await fetch(
+                                        "http://localhost:8000/specialcentres/getcentre/cw"
+                                    );
+                                    var result = await data.json();
+
+                                    var modified = result[0].faculties;
+
+                                    for (var i in modified) {
+                                        var name = modified[i]["name"];
+                                        var designation = modified[i]["designation"];
+                                        var department = modified[i]["department"];
+                                        var email = modified[i]["email_id"];
+                                        var url = modified[i]["url"];
+                                        var qualification = modified[i]["qualification"];
+                                        document
+                                            .getElementById("table-body-cw")
+                                            .insertAdjacentHTML(
+                                                "beforeend",
+                                                `<tr>
                                 <td class="border border-gray-300"><a
                                         href="${url}"><span
                                             style="color:#B22222">${name}</span></a></td>
@@ -137,11 +138,11 @@
                                 <td class="border border-gray-300"><a href="mailto:${email}"><span
                                             style="color:#B22222">${email}</span></a></td>
                             </tr>`
-                                      );
-                                  }
+                                            );
+                                    }
                                 }
                                 api_call();
-                              </script>
+                            </script>
                         </tbody>
                     </table>
                 </div>
@@ -168,39 +169,39 @@
                             </tr>
                             <script>
                                 async function api_call() {
-                                  var data = await fetch(
-                                    "https://wdmc.onrender.com/specialcentres/getcentre/cwstaff"
-                                  );
+                                    var data = await fetch(
+                                        "https://wdmc.onrender.com/specialcentres/getcentre/cwstaff"
+                                    );
 
-                                  var result = await data.json();
-    
-                                  var modified = result[0].workers;
+                                    var result = await data.json();
 
-                                  console.log(modified);
-              
-                                  for (var i in modified) {
-                                    var name = modified[i]["name"];
-                                    var designation = modified[i]["designation"];
-                                    var department = modified[i]["department"];
-                                    var shopname = modified[i]["shopname"];
-                                    var url = modified[i]["url"];
-                                    var qualification = modified[i]["qualification"];
-                                    document
-                                      .getElementById("table-body-staff")
-                                      .insertAdjacentHTML(
-                                        "beforeend",
-                                        `<tr>
+                                    var modified = result[0].workers;
+
+                                    console.log(modified);
+
+                                    for (var i in modified) {
+                                        var name = modified[i]["name"];
+                                        var designation = modified[i]["designation"];
+                                        var department = modified[i]["department"];
+                                        var shopname = modified[i]["shopname"];
+                                        var url = modified[i]["url"];
+                                        var qualification = modified[i]["qualification"];
+                                        document
+                                            .getElementById("table-body-staff")
+                                            .insertAdjacentHTML(
+                                                "beforeend",
+                                                `<tr>
                                 <td class="border border-gray-300"><span style="color:#B22222">${name}</span>
                                 </td>
                                 <td class="border border-gray-300">${designation}</td>
                                 <td class="border border-gray-300">${qualification}</td>
                                 <td class="border border-gray-300">${shopname}</td>
                             </tr>`
-                                      );
-                                  }
+                                            );
+                                    }
                                 }
                                 api_call();
-                              </script>
+                            </script>
                         </tbody>
                     </table>
                 </div>
@@ -208,32 +209,32 @@
                     <ul id="extra-links" class="list-disc ml-8">
                         <script>
                             async function api_call() {
-                              var data = await fetch(
-                                "http://localhost:8000/specialcentres/getcentre/cw"
-                              );
-                              var result = await data.json();
+                                var data = await fetch(
+                                    "http://localhost:8000/specialcentres/getcentre/cw"
+                                );
+                                var result = await data.json();
 
-                              var modified = result[0].specialLinks;
-          
-                              for (var i in modified) {
-                                var title = modified[i]["title"];
-                                var url = modified[i]["url"];
-                                document
-                                  .getElementById("extra-links")
-                                  .insertAdjacentHTML(
-                                    "beforeend",
-                                    `<li><a href="${url}"><span class="font-bold text-2xl hover:underline hover:text-orange-700">${title}</span></a><br><br></li>`
-                                  );
-                              }
+                                var modified = result[0].specialLinks;
+
+                                for (var i in modified) {
+                                    var title = modified[i]["title"];
+                                    var url = modified[i]["url"];
+                                    document
+                                        .getElementById("extra-links")
+                                        .insertAdjacentHTML(
+                                            "beforeend",
+                                            `<li><a href="${url}"><span class="font-bold text-2xl hover:underline hover:text-orange-700">${title}</span></a><br><br></li>`
+                                        );
+                                }
                             }
                             api_call();
-                          </script>
+                        </script>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
 </body>
 
 </html>

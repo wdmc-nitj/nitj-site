@@ -174,13 +174,15 @@
             background-size: cover;
         }
     </style>
-<link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
 
-    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+    <div
+        class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
         <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
             Institute Innovation Council
         </p>
@@ -215,46 +217,54 @@
             </li>
         </ol>
     </nav>
-    <div class=" mx-auto w-[90%]">
-        <div class="items-start p-2">
-            <p class="font2 font-medium text-[24px] lg:text-[32px]">
-                NIT Jalandhar's Institution Innovation Council (IIC) rated 4.5 Star by the Ministry of Education
-                <!-- <div class="bg-accent w-[20%] h-[3px] mb-4 mt-2"></div> -->
-            </p>
-        </div>
 
-        <div class="flex flex-col mb-6">
-            <div class="  bg-slate-50 rounded-r-md shadow-lg px-2 py-3 w-full">
-                Dear Faculty Members, Staff, Students and Alumni,
+    <div class="py-[48px] px-[8px]">
+        <div class=" mx-auto w-[90%]">
+            <div class="items-start p-2">
+                <p class="font2 font-semibold text-[24px] lg:text-[32px]">
+                    NIT Jalandhar's Institution Innovation Council (IIC) rated 4.5 Star by the Ministry of Education
+                    <!-- <div class="bg-accent w-[20%] h-[3px] mb-4 mt-2"></div> -->
+                </p>
             </div>
-            <div class="  bg-slate-50 rounded-r-md shadow-lg px-2 py-3 w-full">Greetings!!!!</div>
-            <div class="  bg-slate-50 rounded-r-md shadow-lg px-2 py-3 w-full">
-                I am glad to share the recent Annual Institution Innovation Council Ratings announced by Dr. Ramesh
-                Chandra Pokhriyal, Honourable Minister of Education in which Institution Innovation Council (IIC) of
-                NIT Jalandhar has achieved 4.5 Star Rating for the Annual Performance for session 2019-20.
-                <br>
-                I acknowledge and appreciate the continuous efforts of learned faculty members, staff, students and
-                alumni for this achievement. I hope this growth will continue further with everyone's efforts.
-            </div>
-        </div>
 
-        <div class="flex flex-row lg:ml-[15%] lg:mr-[15%] mb-6  bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
-
-            <div class="">
-                <img src="https://www.nitj.ac.in/nitj_files/links/Director_Sir_63744.png" alt="image">
+            <div class="py-[8px] px-[8px]">
+                <div class="flex flex-col mb-6">
+                    <div class="  bg-slate-50 rounded-r-md shadow-lg px-2 py-3 w-full">
+                        Dear Faculty Members, Staff, Students and Alumni,
+                    </div>
+                    <div class="  bg-slate-50 rounded-r-md shadow-lg px-2 py-3 w-full">Greetings!!!!</div>
+                    <div class="  bg-slate-50 rounded-r-md shadow-lg px-2 py-3 w-full">
+                        I am glad to share the recent Annual Institution Innovation Council Ratings announced by Dr.
+                        Ramesh
+                        Chandra Pokhriyal, Honourable Minister of Education in which Institution Innovation Council
+                        (IIC) of
+                        NIT Jalandhar has achieved 4.5 Star Rating for the Annual Performance for session 2019-20.
+                        <br>
+                        I acknowledge and appreciate the continuous efforts of learned faculty members, staff, students
+                        and
+                        alumni for this achievement. I hope this growth will continue further with everyone's efforts.
+                    </div>
+                </div>
             </div>
-            <div class=" flex ml-[5%]  justify-center items-center ">
-                <div class=" w-full">
-                    <p class=" font-semibold">Jai Hind Jai Bharat!!!!</p>
-                    <p>
-                        <span class=" font-semibold">Prof. Lalit K Awasthi </span> <br>
-                        Director <br>
-                        <span class=" font-semibold">Dr B R Ambedkar National Institute of Technology Jalandhar </span>
-                    </p>
+            <div class="flex flex-row lg:ml-[15%] lg:mr-[15%] mb-6  bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
+
+                <div class="">
+                    <img src="https://www.nitj.ac.in/nitj_files/links/Director_Sir_63744.png" alt="image">
+                </div>
+
+                <div class=" flex ml-[5%]  justify-center items-center ">
+                    <div class=" w-full">
+                        <p class=" font-semibold">Jai Hind Jai Bharat!!!!</p>
+                        <p>
+                            <span class=" font-semibold">Prof. Lalit K Awasthi </span> <br>
+                            Director <br>
+                            <span class=" font-semibold">Dr B R Ambedkar National Institute of Technology Jalandhar
+                            </span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
 
         <div class="ml-[15%] mr-[15%] mb-6  bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
             <a href="">
@@ -266,7 +276,7 @@
     </div>
     <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
     <div class="relative bottom-0">
-        <script src="../common template/footer.js"></script>
+        <script src="../template/footer.js"></script>
     </div>
 
     <script src="../admin/app.js"></script>
