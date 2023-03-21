@@ -15,10 +15,7 @@
   <link rel="stylesheet" href="./tabs.css">
 
   <!--alpine js-->
-  <script
-  defer
-  src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"
-></script>
+  <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 
   <!-- Google Fonts  -->
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -28,8 +25,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style type="text/tailwindcss">
-      @layer utilities {
+  <style type="text/tailwindcss">
+    @layer utilities {
         .content-auto {
           content-visibility: auto;
         }
@@ -157,200 +154,199 @@
 
 
 
-@media(max-width:768px){
-  .side_Bar_Hide{
-    display: none;
-  }
-}
-@media (min-width:768px) and (max-width:1000px) {
-  .side_Bar_Hide{
-    margin-top: 155px;
-  }
+    @media(max-width:768px) {
+      .side_Bar_Hide {
+        display: none;
+      }
+    }
 
-}
-.titlebg {
-            background: linear-gradient(90.09deg,
-                    rgba(0, 0, 0, 0.7) 0.08%,
-                    rgba(255, 255, 255, 0) 99.11%),
-                url(../admin/img/about_top.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+    @media (min-width:768px) and (max-width:1000px) {
+      .side_Bar_Hide {
+        margin-top: 155px;
+      }
+
+    }
+
+    .titlebg {
+      background: linear-gradient(90.09deg,
+          rgba(0, 0, 0, 0.7) 0.08%,
+          rgba(255, 255, 255, 0) 99.11%),
+        url(../admin/img/about_top.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   </style>
-<link rel="stylesheet" href="/style.css" />
-  </head>
+  <link rel="stylesheet" href="/style.css" />
+</head>
 
 
-  
-  <body>
-    <script src="/common template/header.js" type="module"></script>
-    
-    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
-      <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
-        Consultancy works
-      </p>
+
+<body>
+  <script src="/template/header.js" type="module"></script>
+  <script src="/template/helper.js"></script>
+
+  <div
+    class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+    <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
+      Consultancy works
+    </p>
   </div>
 
   <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-      <ol class="inline-flex items-center">
-          <li class="inline-flex items-center">
-              <a href="https://nitj.netlify.app/"
-                  class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                  <a href="#" class="text-lg font-medium ml-2">Home</a>
-              </a>
-          </li>
-          <li aria-current="page">
-              <div class="inline-flex items-center">
-                  <i style="
+    <ol class="inline-flex items-center">
+      <li class="inline-flex items-center">
+        <a href="https://nitj.netlify.app/" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+          <a href="#" class="text-lg font-medium ml-2">Home</a>
+        </a>
+      </li>
+      <li aria-current="page">
+        <div class="inline-flex items-center">
+          <i style="
               color: rgb(128, 128, 128);
               font-size: 12px;
               margin-left: 12px;
             " class="fa-solid fa-angle-right ml-2"></i>
-                  <a href="#" class="text-lg font-medium ml-2">Research</a>
-              </div>
-          </li>
-          <li aria-current="page">
-              <div class="inline-flex items-center">
-                  <i style="
+          <a href="#" class="text-lg font-medium ml-2">Research</a>
+        </div>
+      </li>
+      <li aria-current="page">
+        <div class="inline-flex items-center">
+          <i style="
               color: rgb(128, 128, 128);
               font-size: 12px;
               margin-left: 12px;
             " class="fa-solid fa-angle-right ml-2"></i>
-                  <a href="#" class="text-lg font-medium ml-2">Consultancy works</a>
-              </div>
-          </li>
-      </ol>
+          <a href="#" class="text-lg font-medium ml-2">Consultancy works</a>
+        </div>
+      </li>
+    </ol>
   </nav>
 
-<div class="py-[48px] flex justify-center">
-  <div class="hidden lg:block text-3xl font-semibold decoration-4 decoration-[#0369a0]">
-    <div class="none lg:block">
-      Consultancy Work
+  <div class="py-[48px] flex justify-center">
+    <div class="hidden lg:block text-3xl font-semibold decoration-4 decoration-[#0369a0]">
+      <div class="none lg:block">
+        Consultancy Work
+      </div>
+      <div class="bg-accent w-[60%] lg:w-[60%] h-[5px] lg:h-[5px] "></div>
     </div>
-    <div class="bg-accent w-[60%] lg:w-[60%] h-[5px] lg:h-[5px] "></div>
   </div>
-</div>
 
 
-<div class="lg:mt-[-12%] md:mt-[-3%] mt-[-28%]">
-<!-- DropDown -->
+  <div class="lg:mt-[-12%] md:mt-[-3%] mt-[-28%]">
+    <!-- DropDown -->
     <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
-    <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
-      <!-- Dropdown toggle button -->
-      <button
-        @click="dropdownMenu = ! dropdownMenu"
-        class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4"
-      >
-        <span class="mx-auto">Select Course <i class="fa-solid fa-caret-down"></i> </span>
-      </button>
-      <!-- Dropdown list -->
-      <div
-        x-show="dropdownMenu"
-        class="tabs2  p-2 rounded w-[100%]"
-      >
+      <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
+        <!-- Dropdown toggle button -->
+        <button @click="dropdownMenu = ! dropdownMenu"
+          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4">
+          <span class="mx-auto">Select Course <i class="fa-solid fa-caret-down"></i> </span>
+        </button>
+        <!-- Dropdown list -->
+        <div x-show="dropdownMenu" class="tabs2  p-2 rounded w-[100%]">
           <ul>
-            <li x-on:click="dropdownMenu = ! dropdownMenu" class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text dropContent1"  onclick=dropDownContentOnClick1() >Financial Year 2015-16</span>
+            <li x-on:click="dropdownMenu = ! dropdownMenu"
+              class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
+              <span class="text dropContent1" onclick=dropDownContentOnClick1()>Financial Year 2015-16</span>
             </li>
           </ul>
-        
+
+        </div>
       </div>
+
+      <div class="flex items-center p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
+        <span class="px-[15px]"><i class="fa-solid fa-angles-right text-[16px] "> <span
+              class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="category">Financial Year
+              2015-16</span></i></span>
+      </div>
+
+
     </div>
 
-    <div class="flex items-center p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
-        <span class="px-[15px]"><i class="fa-solid fa-angles-right text-[16px] "> <span class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="category">Financial Year 2015-16</span></i></span>
-    </div>
+    <!-- DropDown -->
 
 
-</div>
-
-<!-- DropDown -->
-
-
-<div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
-  <div
-    class="side_Bar_Hide lg:w-[15%] w-[25%]"
-  >
-    <div
-      class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
-      id="sidetab"
-    >
+    <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
+      <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
+        <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
+          id="sidetab">
           <ul>
             <li class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black1">
-              <span class="text" >Financial Year 2015-16</span>
+              <span class="text">Financial Year 2015-16</span>
             </li>
           </ul>
         </div>
       </div>
 
       <!--international institutes-->
-        <div class="content  lg:w-[80%] w-[100%]  lg:mt-[15%] md:mt-[25%] mt-[5%]">
-            <div class="tab_wrap active2 mr-8 rounded-lg shadow-sm " style="display: block;">
-              <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
-                <table class=" shadow-lg bg-white w-[100%]">
-                    <thead class="text-left">
-                        
-                      <tr>
-                        <th class="border bg-color-1 text-white px-8 py-2 w-[8%]">S. No.</th>
-                        <th class="border bg-color-1 text-white px-8 py-2 w-[12%]">Name of Faculty (Chief Consultant)</th>
-                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Client Organization</th>
-                        <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Title of Consultancy of Project</th>
-                        <th class="border bg-color-1 text-white px-8 py-2 w-[15%]">Amount Received (in Rupees)</th>
-                        <th class="border bg-color-1 text-white px-8 py-2 w-[15%]">Amount Received (in words)</th>
-                      </tr>
-                    </thead>
-                    <tbody id="consultancyData">
-                      <tr>
-                        <td class="border px-8 py-2 text-sm   ">1.</td>
-                        <td class="border px-8 py-2 text-sm   ">Dr. J.K. Ratan</td>
-                        <td class="border px-8 py-2 text-sm   ">AB Sugar Limited</td>
-                        <td class="border px-8 py-2 text-sm   ">Studies on treatment technology of ground water of AB sugar limited</td>
-                        <td class="border px-8 py-2 text-sm   ">100000</td>
-                        <td class="border px-8 py-2 text-sm   ">	One Lac Rupees</td>
+      <div class="content  lg:w-[80%] w-[100%]  lg:mt-[15%] md:mt-[25%] mt-[5%]">
+        <div class="tab_wrap active2 mr-8 rounded-lg shadow-sm " style="display: block;">
+          <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
+            <table class=" shadow-lg bg-white w-[100%]">
+              <thead class="text-left">
 
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-            </div>        
+                <tr>
+                  <th class="border bg-color-1 text-white px-8 py-2 w-[8%]">S. No.</th>
+                  <th class="border bg-color-1 text-white px-8 py-2 w-[12%]">Name of Faculty (Chief Consultant)</th>
+                  <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Client Organization</th>
+                  <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Title of Consultancy of Project</th>
+                  <th class="border bg-color-1 text-white px-8 py-2 w-[15%]">Amount Received (in Rupees)</th>
+                  <th class="border bg-color-1 text-white px-8 py-2 w-[15%]">Amount Received (in words)</th>
+                </tr>
+              </thead>
+              <tbody id="consultancyData">
+                <tr>
+                  <td class="border px-8 py-2 text-sm   ">1.</td>
+                  <td class="border px-8 py-2 text-sm   ">Dr. J.K. Ratan</td>
+                  <td class="border px-8 py-2 text-sm   ">AB Sugar Limited</td>
+                  <td class="border px-8 py-2 text-sm   ">Studies on treatment technology of ground water of AB sugar
+                    limited</td>
+                  <td class="border px-8 py-2 text-sm   ">100000</td>
+                  <td class="border px-8 py-2 text-sm   "> One Lac Rupees</td>
 
-                    
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+
+      </div>
     </div>
-</div>
-</div>
-<!--<div class="base-image hidden overflow-hidden lg:block "></div>-->
-<div class="relative bottom-0">
+  </div>
+  </div>
+  <!--<div class="base-image hidden overflow-hidden lg:block "></div>-->
+  <div class="relative bottom-0">
 
-<script src="../common template/footer.js"></script>
-</div>
-    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
-    <script>
-      function dropDownContentOnClick1(){
-        let strings = document.getElementsByClassName("dropContent1");
-        let head=document.getElementById("category");
-        
-        head.innerHTML=strings[0].innerHTML
+    <script src="../template/footer.js"></script>
+  </div>
+  <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+  <script>
+    function dropDownContentOnClick1() {
+      let strings = document.getElementsByClassName("dropContent1");
+      let head = document.getElementById("category");
+
+      head.innerHTML = strings[0].innerHTML
 
 
-     
-      }
-      function dropDownContentOnClick2(){
-        let strings = document.getElementsByClassName("dropContent2");
-        let head=document.getElementById("category");
-        console.log("asjks"+head.innerHTML)
-        head.innerHTML=strings[0].innerHTML
-      }
-      function dropDownContentOnClick3(){
-        let strings = document.getElementsByClassName("dropContent3");
-        let head=document.getElementById("category");
-        console.log("asjks"+head.innerHTML)
-        head.innerHTML=strings[0].innerHTML
-      }
-      </script>
-      <script src="data/consultancyData.js"></script>
-    <script src="../admin/app.js"></script>
+
+    }
+    function dropDownContentOnClick2() {
+      let strings = document.getElementsByClassName("dropContent2");
+      let head = document.getElementById("category");
+      console.log("asjks" + head.innerHTML)
+      head.innerHTML = strings[0].innerHTML
+    }
+    function dropDownContentOnClick3() {
+      let strings = document.getElementsByClassName("dropContent3");
+      let head = document.getElementById("category");
+      console.log("asjks" + head.innerHTML)
+      head.innerHTML = strings[0].innerHTML
+    }
+  </script>
+  <script src="data/consultancyData.js"></script>
+  <script src="../admin/app.js"></script>
   <script src="./tabs.js"></script>
-  </body>
-  </html>
+</body>
+
+</html>
