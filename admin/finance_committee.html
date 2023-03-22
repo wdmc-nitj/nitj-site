@@ -46,7 +46,7 @@
         }
 
         .material-symbols-outlined {
-            font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+            font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
         }
 
         ::-webkit-scrollbar {
@@ -90,13 +90,15 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Finance Committee</p>
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Finance Committee
+                </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
                 <ol class="container inline-flex items-center">
@@ -315,7 +317,7 @@
         </div>
     </div>
     <script src="app.js"></script>
-    <script src="../common template/footer.js"></script>
+    <script src="../template/footer.js"></script>
 
     <script>
         async function callAPi() {
@@ -327,7 +329,7 @@
             document.getElementById("senate_1").innerHTML = `
                     <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
-                            <p class="text-sm text-gray-500">${result[0].department}</p>
+                            <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology Jalandhar</p>
                             <p class="text-sm text-gray-500">${result[0].messageText}</p>
                                         
                  `;
@@ -431,7 +433,7 @@
                             </div>
                 <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
-                            <p class="text-sm text-gray-500">${result[0].department}</p>
+                            <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology</p>
                             
                `;
         }
@@ -521,9 +523,12 @@
             result = await result.json();
             console.log(result);
             document.getElementById("fc_6").innerHTML = `
-            <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                                <p class="text-sm text-gray-500 my-1">${result[0].messageText}    </p>
-                            </div>
+            <div class="w-full flex flex-col items-start mb-8">
+                            <p class="font2 font-medium text-[28px] lg:text-[44px]">
+                                ${result[0].messageText} 
+                            </p>
+                            <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
                 <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
                             <p class="text-sm text-gray-500">${result[0].department}</p>

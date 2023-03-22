@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anymous" referrerpolicy="-referrer" />
-<link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="icon" type="image/x-icon" href="../public/assets/images/logo_250.png" />
     <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
     <!-- Google Fonts  -->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -55,6 +58,7 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #212121;
         }
+
 
         /* Gallery Effects */
         .box {
@@ -172,7 +176,8 @@
 </head>
 
 <body class="font-body text-dark-purple scroll-smooth">
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
         <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
@@ -219,61 +224,71 @@
             </li>
         </ol>
     </nav>
-    <div class="">
 
-        <div class="mx-auto w-[80%] my-4 rounded-lg p-2 border-2 border-accent shadow-xl">
-            <div class="text-[24px] font-semibold text-accent">Ragging is a crime!!!</div>
-            <div>
+    <div class="py-[48px]">
+
+        <div class="mx-auto w-[80%] my-4 ">
+            <div class="font2 font-medium text-[28px] lg:text-[32px] ">Ragging is a crime!!!</div>
+            <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
+            <div class="font-normal text-gray-800 lg:text-[16px] mt-2 lg:leading-[27px] text-justify">
                 Ragging is strictly prohibited. Ragging is a cognizable offence under the law, at par with rape and
                 other atrocities against women and ill treatment of persons belonging to the SC/ST. Anyone who indulges
                 in this crime will be severely dealt with and an F.I.R will be lodged against the guilty as per Supreme
                 Court of India and Ministry of Education (Shiksha Mantralaya) directives. At the time of registration,
                 students and their parents have given and undertaking that he/she will not indulge in the unlawful
                 activity of ragging. We request all the students to be watchful and help the administration in all
-                possible ways, to root out ragging in all its forms. 
-               
+                possible ways, to root out ragging in all its forms.
+
             </div>
         </div>
 
-        <div class="mx-auto w-[80%] my-4 rounded-lg p-2   shadow-xl">
-            <div class="text-[24px] font-semibold text-accent mb-2">
+        <div class="mx-auto w-[80%] my-4">
+            <div class="text-[24px] font-semibold mb-2">
                 For any emergency, please contact the following at:
             </div>
-            <div div class="tab_wrap active2 mx-auto border-2 border-accent rounded-lg shadow-sm " style="display: block;">
-                <div class="text-center  text-accent text-2xl font-semibold"> Anti-Ragging Cell at NITJ </div>
+            <div class="bg-accent w-full lg:w-[20%] h-[1px] lg:h-[3px]"></div>
+            <div>
+                <!-- <div class="font2 font-medium text-[28px] lg:text-[32px]"> Anti-Ragging Cell at NITJ </div> -->
                 <div class="mt-3 ml-5">
                     <ol>
+
                         <li class="mb-2">
-                            <span class=" font-semibold">Dr Kapil Kumar Goyal</span> <br>
-                            Nodal Officer 
-                            <br>
-                            Phone No.:- +91-8059000377
+                            <a href="">
+                                <span class=" font-semibold">Dr Kapil Kumar Goyal</span> <br>
+                                Nodal Officer
+                                <br>
+                                Phone No.:- +91-8059000377
+                            </a>
                         </li>
                         <li class="mb-2">
-                            <span class="font-semibold">Dr Deepika Rani</span> <br>
-                            Member
-                            <br>
-                            Phone No.:- +91-8439590716
+                            <a href="">
+                                <span class="font-semibold">Dr Deepika Rani</span> <br>
+                                Member
+                                <br>
+                                Phone No.:- +91-8439590716
+                            </a>
                         </li>
                         <li class="mb-2">
-                            <span class="font-semibold">Dr Nitin Sharma</span> <br>
-                            Member 
-                            <br>
-                            Phone No.:- +91-9418573982
+                            <a href="">
+                                <span class="font-semibold">Dr Nitin Sharma</span> <br>
+                                Member
+                                <br>
+                                Phone No.:- +91-9418573982
+                            </a>
                         </li>
                     </ol>
 
                 </div>
-              </div>
+            </div>
 
         </div>
 
-         
+
 
     </div>
     <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
     <div class="relative bottom-0">
-        <script src="../common template/footer.js"></script>
+        <script src="../template/footer.js"></script>
     </div>
     <script type="module" src="../js/app.js"></script>
 

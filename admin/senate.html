@@ -46,7 +46,7 @@
     }
 
     .material-symbols-outlined {
-      font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+      font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
     }
 
     ::-webkit-scrollbar {
@@ -90,7 +90,8 @@
 </head>
 
 <body>
-  <script src="/common template/header.js" type="module"></script>
+  <script src="/template/header.js" type="module"></script>
+  <script src="/template/helper.js"></script>
 
   <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
     <div class="titlebg">
@@ -120,12 +121,6 @@
     </div>
     <!-- <p> Code by Bhavya Mittal </p> -->
     <div class="scroll-mt-44 flex flex-col items-start container gap-[20px] lg:gap-[32px]">
-      <div class="w-full flex flex-col items-start">
-        <p class="font2 font-medium text-[28px] lg:text-[44px]">
-          Members of Senate
-        </p>
-        <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
-      </div>
 
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-8">
@@ -152,6 +147,14 @@
                 <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
               </div> -->
           </div>
+
+          <div class="w-full flex flex-col items-start">
+            <p class="font2 font-medium text-[28px] lg:text-[44px]">
+              Members of Senate
+            </p>
+            <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+          </div>
+
           <div id="senate_2">
             <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
@@ -221,6 +224,17 @@
                 <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
               </div> -->
           </div>
+
+          <div class="w-full flex flex-col items-start">
+            <p class="text-accent font-medium">The Professor appointed or recognized as such by the institute for the
+              purpose of imparting instructions
+              in the
+              institute.</p>
+            <p class="font2 font-medium text-[20px] lg:text-[30px]">
+              All the Professor of NIT, Jalandhar
+            </p>
+          </div>
+
           <div id="senate_5">
             <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
@@ -250,7 +264,7 @@
   </div>
 
   <script src="app.js"></script>
-  <script src="../common template/footer.js"></script>
+  <script src="../template/footer.js"></script>
   <script>
     async function callAPi() {
       let result = await fetch(
@@ -259,10 +273,15 @@
       result = await result.json();
       console.log(result);
       document.getElementById("senate_1").innerHTML = `
-                <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+              <div class="w-full flex flex-col items-start mb-8">
+                            <p class="font2 font-medium text-[28px] lg:text-[44px]">
+                                Ex-officio Chairman of the Senate
+                            </p>
+                            <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+            <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                         <p class="text-sm">${result[0].designation}</p>
-                        <p class="text-sm text-gray-500">${result[0].department}</p>
-                        <p class="text-sm text-gray-500">${result[0].messageText}</p>
+                        <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology Jalandhar</p>
                                     
              `;
     }
@@ -276,10 +295,12 @@
       result = await result.json();
       console.log(result);
       document.getElementById("senate_2").innerHTML = `
+      <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <p class="text-sm text-gray-500 my-1">${result[0].messageText}    </p>
+                        </div>
                   <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                           <p class="text-sm">${result[0].designation}</p>
                           <p class="text-sm text-gray-500">${result[0].department}</p>
-                          <p class="text-sm text-gray-500">${result[0].messageText}</p>
                                    
                `;
     }
@@ -293,10 +314,12 @@
       result = await result.json();
       console.log(result);
       document.getElementById("senate_3").innerHTML = `
+      <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <p class="text-sm text-gray-500 my-1">${result[0].messageText}    </p>
+                        </div>
                     <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
                             <p class="text-sm text-gray-500">${result[0].department}</p>
-                            <p class="text-sm text-gray-500">${result[0].messageText}</p>
                                      
                  `;
     }
@@ -310,10 +333,12 @@
       result = await result.json();
       console.log(result);
       document.getElementById("senate_4").innerHTML = `
+      <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                            <p class="text-sm text-gray-500 my-1">${result[0].messageText}    </p>
+                        </div>
                     <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
                             <p class="text-sm text-gray-500">${result[0].department}</p>
-                            <p class="text-sm text-gray-500">${result[0].messageText}</p>
                                      
                  `;
     }
@@ -327,10 +352,15 @@
       result = await result.json();
       console.log(result);
       document.getElementById("senate_5").innerHTML = `
-                    <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
-                            <p class="text-sm">${result[0].designation}</p>
-                            <p class="text-sm text-gray-500">${result[0].department}</p>
-                            <p class="text-sm text-gray-500">${result[0].messageText}</p>
+      <div class="w-full flex flex-col items-start mb-8">
+                            <p class="font2 font-medium text-[28px] lg:text-[44px]">
+                                Member Secretary
+                            </p>
+                            <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
+            <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+                        <p class="text-sm">Registrar (I/C) & Secretary(Senate)</p>
+                        <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology Jalandhar</p>
                                      
                  `;
     }
@@ -607,8 +637,11 @@
       result = await result.json();
       console.log(result);
       document.getElementById("bwc_8").innerHTML = `
-        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <p class="text-sm text-gray-500 my-1">${result[0].messageText}    </p>
+        <div class="w-full flex flex-col items-start mb-8">
+                            <p class="font2 font-medium text-[28px] lg:text-[44px]">
+                                Member Secretary
+                            </p>
+                            <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
                         </div>
             <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                         <p class="text-sm">${result[0].designation}</p>

@@ -38,7 +38,8 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -75,53 +76,72 @@
 
                 <!-- Write code here -->
                 <div class="mt-24">
-                    <p><span  style="color:#B22222"><strong>Two years regular M.Tech Programmes (Admission Through
+                    <p><span style="color:#B22222"><strong>Two years regular M.Tech Programmes (Admission Through
                                 CCMT)</strong></span></p>
-                    <ul class="list-disc ml-8 mr-4 my-2">
-                        <li><a href="#" class="hover:underline hover:text-orange-700">Bio Technology</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Chemical Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Computer Science and Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Computer Science and Engineering (Information Security)</a>
-                        </li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Control and Instrumentation Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Design Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Thermal Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Electronics and Communication Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> VLSI Design</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Geotechnical and Geo-Environmental Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Renewable Energy</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Structural and Construction Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Industrial Engineering</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Manufacturing Technology</a></li>
-                        <li><a href="#" class="hover:underline hover:text-orange-700"> Textile Engineering and Management</a></li>
+                    <ul class="list-disc ml-8 mr-4 my-2" id="mtech-list-4">
+                        <script>
+                            async function api_call() {
+                                var data = await fetch(
+                                    "https://wdmc.onrender.com/studyprogramme/mtech"
+                                );
+                                var result = await data.json();
+
+                                var modified = result[0].programmes;
+                                for (var j in modified) {
+                                    if (modified[j]["years"] == 4) {
+                                        for (var i in modified[j]["list"]) {
+                                            var title = modified[j]["list"][i]["title"];
+                                            var url = modified[j]["list"][i]["url"];
+                                            document
+                                                .getElementById("mtech-list-4")
+                                                .insertAdjacentHTML(
+                                                    "beforeend",
+                                                    `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
+                                                );
+                                        }
+                                    }
+                                }
+                            }
+                            api_call();
+                        </script>
                     </ul>
                 </div>
                 <div>
                     <p><br>
-                        <span style="color:#B22222"><strong>Two years M.Tech Programmes (Self-Sponsored)</strong></span></p>
-                        <ul class="list-disc ml-8 mr-4 my-2">
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Artificial Intelligence</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Bio Technology</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Chemical Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Computer Science and Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Computer Science and Engineering (Information Security)</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Control and Instrumentation Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Design Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Thermal Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Electronics and Communication Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> VLSI Design</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Geotechnical and Geo-Environmental Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Renewable Energy</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Structural and Construction Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Industrial Engineering</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Manufacturing Technology</a></li>
-                            <li><a href="#" class="hover:underline hover:text-orange-700"> Textile Engineering and Management</a></li>
-                        </ul>
+                        <span style="color:#B22222"><strong>Two years M.Tech Programmes (Self-Sponsored)</strong></span>
+                    </p>
+                    <ul class="list-disc ml-8 mr-4 my-2" id="mtech-list-2">
+                        <script>
+                            async function api_call() {
+                                var data = await fetch(
+                                    "http://localhost:8000/studyprogramme/mtech"
+                                );
+                                var result = await data.json();
+
+                                var modified = result[0].programmes;
+                                for (var j in modified) {
+                                    if (modified[j]["years"] == 2) {
+                                        for (var i in modified[j]["list"]) {
+                                            var title = modified[j]["list"][i]["title"];
+                                            var url = modified[j]["list"][i]["url"];
+                                            document
+                                                .getElementById("mtech-list-2")
+                                                .insertAdjacentHTML(
+                                                    "beforeend",
+                                                    `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
+                                                );
+                                        }
+                                    }
+                                }
+                            }
+                            api_call();
+                        </script>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
 </body>
 
 </html>
