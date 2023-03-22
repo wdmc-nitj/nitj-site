@@ -38,7 +38,8 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -74,43 +75,43 @@
                     <ul class="list-disc" id="rules-links">
                         <script>
                             async function api_call() {
-                              var data = await fetch(
-                                "https://wdmc.onrender.com/specialcentres/getcentre/rules"
-                              );
-                              var result = await data.json();
-        
-                              var modified = result[0].specialLinks;
-          
-                              for (var i in modified) {
-                                var name = modified[i]["name"];
-                                var designation = modified[i]["designation"];
-                                var department = modified[i]["department"];
-                                var email = modified[i]["email_id"];
-                                var url = modified[i]["url"];
-                                var qualification = modified[i]["qualification"];
-                                var title = modified[i]["title"];
-                                document
-                                  .getElementById("rules-links")
-                                  .insertAdjacentHTML(
-                                    "beforeend",
-                                    `<li class="relative hover:underline mb-1">
+                                var data = await fetch(
+                                    "https://wdmc.onrender.com/specialcentres/getcentre/rules"
+                                );
+                                var result = await data.json();
+
+                                var modified = result[0].specialLinks;
+
+                                for (var i in modified) {
+                                    var name = modified[i]["name"];
+                                    var designation = modified[i]["designation"];
+                                    var department = modified[i]["department"];
+                                    var email = modified[i]["email_id"];
+                                    var url = modified[i]["url"];
+                                    var qualification = modified[i]["qualification"];
+                                    var title = modified[i]["title"];
+                                    document
+                                        .getElementById("rules-links")
+                                        .insertAdjacentHTML(
+                                            "beforeend",
+                                            `<li class="relative hover:underline mb-1">
                             <a class="text-[#B22222]"
                                 href="${url}">
                                 <span>${title}</span>
                             </a>&nbsp;
                             <span class="absolute top-1"><img src="https://www.nitj.ac.in//images/New.gif"></span>
                         </li>`
-                                  );
-                              }
+                                        );
+                                }
                             }
                             api_call();
-                          </script>
+                        </script>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
 </body>
 
 </html>

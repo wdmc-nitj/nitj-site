@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="icon" type="favicon" href="logo.9b9f200a.png">
-    
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="icon" type="favicon" href="img/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
+
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="https://kit.fontawesome.com/46aac33939.js" crossorigin="anonymous"></script>
+    
+    <title>Giving Back</title>
 
 
-    <title>Giving back</title>
-  <script type="module" crossorigin src="index.74d163d3.js"></script>
-  <link rel="stylesheet" href="index.c96f9c98.css">
 </head>
 <body>
 
+  <!--NAVBAR BEGINS-->
+  <nav class="bg-[#3E3C3C] lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
+    <div class="flex justify-around p-1 items-center  ">
+        <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
+          src="img/logo.png" alt="logo">
+          <div class="text-xs sm:text-base w-[17.5rem] lg:w-[19rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-white  cursor-pointer">
+            <a href="index.html"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
+          </div>
+    
+      <span class="text-3xl cursor-pointer text-white mx-2 mr-3 lg:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
 
-<!--NAVBAR BEGINS-->
-<nav class="bg-[#3E3C3C] lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
-  <div class="flex justify-around p-1 items-center  ">
-      <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
-        src="logo.9b9f200a.png" alt="logo">
-        <div class="text-xs sm:text-base w-[17.5rem] lg:w-[19rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-white  cursor-pointer"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</div>
+    <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-[#3E3C3C] w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <!--
+      <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
+      </li>
+    -->
+
+      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">CHAPTERS</a>
+      </li>
   
-    <span class="text-3xl cursor-pointer text-white mx-2 mr-3 lg:hidden block">
-      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-    </span>
-  </div>
+      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+        <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
+      </li>
+      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">DONATION STATISTICS</a>
+      </li>
 
-  <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-[#3E3C3C] w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-    <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
-      <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
-    </li>
-    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-      <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">EVENTS</a>
-    </li>
-    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-      <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
-    </li>
-    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-      <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">NEWS</a>
-    </li>
-
-    <a href="register.html">
-      <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-white rounded hover:-translate-y-1 hover:scale-110 ">
-        REGISTER
-      </button>
-    </a>
-
-  </ul>
-</nav>
+      <a href="register.html">
+        <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-white rounded hover:-translate-y-1 hover:scale-110 ">
+          REGISTER
+        </button>
+      </a>
+      
+    </ul>
+  </nav>
 <!-- NAVBAR ENDS -->
+    
 
 
 
@@ -200,9 +205,10 @@
 
 
 
+
 <!--Footer image starts-->
 <div class="w-full">
-  <img src="footer image.3185e9f5.png" alt="footer image">
+  <img src="img/footer image.png" alt="footer image">
 </div>
 <!--Footer image ends-->
 
@@ -212,7 +218,7 @@
 <div class="flex flex-col justify-between bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
     <div class="flex basis-1/3 flex-col border-y-gray-300 p-[25px] lg:border-r lg:border-zinc-400">
       <div class="flex flex-row items-center gap-x-[10px] pb-3">
-        <img src="logo.9b9f200a.png" alt="NITJ logo" class="h-[67px] w-[67px]" />
+        <img src="img/logo.png" alt="NITJ logo" class="h-[67px] w-[67px]" />
         <p class="font-semibold text-white lg:text-[20px]">
           Dr. B R Ambedkar National Institute of Technology, Jalandhar
         </p>
@@ -330,7 +336,6 @@
     </div>
   </div>
   <!-- === FOOTER Ends === -->
-
 
 
 

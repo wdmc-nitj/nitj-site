@@ -28,6 +28,7 @@
             --tw-bg-opacity: 1;
             background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
         }
+
         .titlebg {
             background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(0, 0, 0, 0.3) 99.11%), url(./img/about_top.jpg);
             background-repeat: no-repeat;
@@ -38,7 +39,8 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -74,8 +76,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">​Instructions for Verification of Degree</span>
-                        <span id="oatc11-btn" onclick="handletoggleOatc('oatc11-btn','oatc11-btn2','oatc11');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc11-btn2" onclick="handletoggleOatc('oatc11-btn','oatc11-btn2','oatc11');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc11-btn" onclick="handletoggleOatc('oatc11-btn','oatc11-btn2','oatc11');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc11-btn2" onclick="handletoggleOatc('oatc11-btn','oatc11-btn2','oatc11');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc11" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -146,8 +150,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Transcript</span>
-                        <span id="oatc21-btn" onclick="handletoggleOatc('oatc21-btn','oatc21-btn2','oatc21');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc21-btn2" onclick="handletoggleOatc('oatc21-btn','oatc21-btn2','oatc21');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc21-btn" onclick="handletoggleOatc('oatc21-btn','oatc21-btn2','oatc21');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc21-btn2" onclick="handletoggleOatc('oatc21-btn','oatc21-btn2','oatc21');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc21" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -170,7 +176,8 @@
                             <p style="margin-left:.5in"><span style="color:#000000"><strong>For the 1<sup>st</sup>
                                         Transcript:</strong></span></p>
 
-                            <p class="my-1" style="margin-left:.5in"><span style="color:#000000">In India: Rs. 1,000/- (inclusive of
+                            <p class="my-1" style="margin-left:.5in"><span style="color:#000000">In India: Rs. 1,000/-
+                                    (inclusive of
                                     Postal Charges)</span></p>
 
                             <p style="margin-left:.5in"><span style="color:#000000">In Abroad: US $50/- (inclusive of
@@ -205,7 +212,8 @@
                                         style="color:#000000"> Transcript charges):</span></li>
                             </ol>
 
-                            <p class="my-2" style="margin-left:.5in"><span style="color:#000000">In India: Rs.2,000/- (inclusive of
+                            <p class="my-2" style="margin-left:.5in"><span style="color:#000000">In India: Rs.2,000/-
+                                    (inclusive of
                                     Postal Charges)</span></p>
 
                             <p style="margin-left:.5in"><span style="color:#000000">In Abroad: US$100/- (inclusive of
@@ -249,8 +257,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Duplicate Degree</span>
-                        <span id="oatc22-btn" onclick="handletoggleOatc('oatc22-btn','oatc22-btn2','oatc22');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc22-btn2" onclick="handletoggleOatc('oatc22-btn','oatc22-btn2','oatc22');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc22-btn" onclick="handletoggleOatc('oatc22-btn','oatc22-btn2','oatc22');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc22-btn2" onclick="handletoggleOatc('oatc22-btn','oatc22-btn2','oatc22');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc22" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -328,8 +338,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Original Degree</span>
-                        <span id="oatc23-btn" onclick="handletoggleOatc('oatc23-btn','oatc23-btn2','oatc23');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc23-btn2" onclick="handletoggleOatc('oatc23-btn','oatc23-btn2','oatc23');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc23-btn" onclick="handletoggleOatc('oatc23-btn','oatc23-btn2','oatc23');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc23-btn2" onclick="handletoggleOatc('oatc23-btn','oatc23-btn2','oatc23');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc23" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -376,8 +388,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Duplicate Grade Sheet </span>
-                        <span id="oatc24-btn" onclick="handletoggleOatc('oatc24-btn','oatc24-btn2','oatc24');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc24-btn2" onclick="handletoggleOatc('oatc24-btn','oatc24-btn2','oatc24');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc24-btn" onclick="handletoggleOatc('oatc24-btn','oatc24-btn2','oatc24');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc24-btn2" onclick="handletoggleOatc('oatc24-btn','oatc24-btn2','oatc24');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc24" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -431,8 +445,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Migration Certificate</span>
-                        <span id="oatc25-btn" onclick="handletoggleOatc('oatc25-btn','oatc25-btn2','oatc25');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc25-btn2" onclick="handletoggleOatc('oatc25-btn','oatc25-btn2','oatc25');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc25-btn" onclick="handletoggleOatc('oatc25-btn','oatc25-btn2','oatc25');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc25-btn2" onclick="handletoggleOatc('oatc25-btn','oatc25-btn2','oatc25');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc25" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -489,8 +505,10 @@
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Medium of Instruction
                             Certificate</span>
-                        <span id="oatc26-btn" onclick="handletoggleOatc('oatc26-btn','oatc26-btn2','oatc26');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc26-btn2" onclick="handletoggleOatc('oatc26-btn','oatc26-btn2','oatc26');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc26-btn" onclick="handletoggleOatc('oatc26-btn','oatc26-btn2','oatc26');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc26-btn2" onclick="handletoggleOatc('oatc26-btn','oatc26-btn2','oatc26');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc26" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -546,8 +564,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Bonafide Certificates</span>
-                        <span id="oatc27-btn" onclick="handletoggleOatc('oatc27-btn','oatc27-btn2','oatc27');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc27-btn2" onclick="handletoggleOatc('oatc27-btn','oatc27-btn2','oatc27');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc27-btn" onclick="handletoggleOatc('oatc27-btn','oatc27-btn2','oatc27');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc27-btn2" onclick="handletoggleOatc('oatc27-btn','oatc27-btn2','oatc27');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc27" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -604,8 +624,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Duplicate Identity Card</span>
-                        <span id="oatc28-btn" onclick="handletoggleOatc('oatc28-btn','oatc28-btn2','oatc28');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc28-btn2" onclick="handletoggleOatc('oatc28-btn','oatc28-btn2','oatc28');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc28-btn" onclick="handletoggleOatc('oatc28-btn','oatc28-btn2','oatc28');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc28-btn2" onclick="handletoggleOatc('oatc28-btn','oatc28-btn2','oatc28');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc28" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -657,8 +679,10 @@
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Provisional Degree Certificate
                         </span>
-                        <span id="oatc29-btn" onclick="handletoggleOatc('oatc29-btn','oatc29-btn2','oatc29');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc29-btn2" onclick="handletoggleOatc('oatc29-btn','oatc29-btn2','oatc29');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc29-btn" onclick="handletoggleOatc('oatc29-btn','oatc29-btn2','oatc29');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc29-btn2" onclick="handletoggleOatc('oatc29-btn','oatc29-btn2','oatc29');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc29" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -716,8 +740,10 @@
                 <div class="w-full px-4 py-2 border-2">
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Character Certificate</span>
-                        <span id="oatc210-btn" onclick="handletoggleOatc('oatc210-btn','oatc210-btn2','oatc210');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc210-btn2" onclick="handletoggleOatc('oatc210-btn','oatc210-btn2','oatc210');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc210-btn" onclick="handletoggleOatc('oatc210-btn','oatc210-btn2','oatc210');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc210-btn2" onclick="handletoggleOatc('oatc210-btn','oatc210-btn2','oatc210');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc210" class="pt-12 border-t-2 hidden">
                         <div class="w-full flex flex-col items-start">
@@ -769,8 +795,10 @@
                     <div class="flex justify-between my-2">
                         <span class="text-lg font-medium">Instructions for Issue of Miscellaneous Certificate/Requests
                             from pass out students</span>
-                        <span id="oatc211-btn" onclick="handletoggleOatc('oatc211-btn','oatc211-btn2','oatc211');"><i class="fa-solid cursor-pointer fa-plus"></i></span>
-                        <span id="oatc211-btn2" onclick="handletoggleOatc('oatc211-btn','oatc211-btn2','oatc211');" class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
+                        <span id="oatc211-btn" onclick="handletoggleOatc('oatc211-btn','oatc211-btn2','oatc211');"><i
+                                class="fa-solid cursor-pointer fa-plus"></i></span>
+                        <span id="oatc211-btn2" onclick="handletoggleOatc('oatc211-btn','oatc211-btn2','oatc211');"
+                            class="hidden"><i class="fa-solid cursor-pointer fa-minus"></i></span>
                     </div>
                     <div id="oatc211" class="pt-12 border-t-2 hidden">
                         <div class="widget-item">
@@ -914,7 +942,7 @@
             </p>
         </div>
     </div>
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
     <script src="./Oatc.js"></script>
 </body>
 
