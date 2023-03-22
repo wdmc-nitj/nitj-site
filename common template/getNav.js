@@ -1,6 +1,6 @@
 const bodyEl = document.body
 
-fetch('/common template/navbar.html')
+fetch('/template/navbar.html')
   .then((res) => res.text())
   .then((html) => {
     const navEl = document.createElement('header')

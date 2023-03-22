@@ -127,7 +127,8 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <div class="titlebg">
@@ -399,7 +400,7 @@
                 <img src="${result[0].image}" width="185" height="237" alt="">
                           </div>
     <div class="lg:basis-3/4">
-            div class="flex flex-col items-start"> 
+           
             <p class="font2 font-semibold text-[26px] lg:text-[48px] leading-[1.3] normal-case">${result[0].name}</p>
             <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
             <div class="bg-accent w-[100%] h-[3px] mb-4 mt-2"></div>
@@ -407,21 +408,21 @@
             <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
           </div>
           </div>
    </div>
@@ -449,21 +450,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -491,21 +492,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
         </div>
         </div>
    </div>
@@ -517,7 +518,7 @@
 
     <script>
         async function callAPi() {
-            let result = await fetch('https://wdmc.onrender.com/administration?id=63aacc3759e0649df179c5a1');
+            let result = await fetch('https://wdmc.onrender.com/administration?id=64189bcb5b32c49bd602374f');
             result = await result.json();
             console.log(result);
             document.getElementById("pad3_name").innerHTML =
@@ -534,21 +535,21 @@
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Email}</p>
+            <p>${result[0].contact.email}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
            <p class="">: &nbsp; &nbsp;</p>
-           <p>${result[0].contact["Tel No."]}</p>
+           <p>${result[0].contact["telNo"]}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Fax}</p>
+            <p>${result[0].contact.fax}</p>
        </div>
        <div class="mt-1 lg:mt-4">
            <a class="text-accent transition ease-in-out duration-300 "
-               href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+               href="${result[0].profileLink}">View profile →</a>
        </div>
    </div>
 </div>
@@ -576,21 +577,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -616,21 +617,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -658,21 +659,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -684,7 +685,7 @@
 
     <script>
         async function callAPi() {
-            let result = await fetch('https://wdmc.onrender.com/administration?id=63aacc3759e0649df179c5a1');
+            let result = await fetch('https://wdmc.onrender.com/administration?id=641898845b32c49bd602371b');
             result = await result.json();
             console.log(result);
             document.getElementById("fad3_name").innerHTML =
@@ -701,21 +702,21 @@
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Email}</p>
+            <p>${result[0].contact.email}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
            <p class="">: &nbsp; &nbsp;</p>
-           <p>${result[0].contact["Tel No."]}</p>
+           <p>${result[0].contact["telNo"]}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Fax}</p>
+            <p>${result[0].contact.fax}</p>
        </div>
        <div class="mt-1 lg:mt-4">
            <a class="text-accent transition ease-in-out duration-300 "
-               href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+               href="${result[0].profileLink}">View profile →</a>
        </div>
    </div>
 </div>
@@ -744,21 +745,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -786,21 +787,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -827,21 +828,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -853,7 +854,7 @@
 
     <script>
         async function callAPi() {
-            let result = await fetch('https://wdmc.onrender.com/administration?id=63aad721184004bc94830d5b');
+            let result = await fetch('https://wdmc.onrender.com/administration?id=64189ebb5b32c49bd602379e');
             result = await result.json();
             console.log(result);
             document.getElementById("rad3_name").innerHTML =
@@ -869,21 +870,21 @@
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Email}</p>
+            <p>${result[0].contact.email}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
            <p class="">: &nbsp; &nbsp;</p>
-           <p>${result[0].contact["Tel No."]}</p>
+           <p>${result[0].contact["telNo"]}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Fax}</p>
+            <p>${result[0].contact.fax}</p>
        </div>
        <div class="mt-1 lg:mt-4">
            <a class="text-accent transition ease-in-out duration-300 "
-               href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+               href="${result[0].profileLink}">View profile →</a>
        </div>
    </div>
 </div>
@@ -913,21 +914,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -955,21 +956,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -996,21 +997,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1037,21 +1038,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1078,21 +1079,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1119,21 +1120,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1160,21 +1161,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1201,21 +1202,21 @@
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Email}</p>
+            <p>${result[0].contact.email}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
            <p class="">: &nbsp; &nbsp;</p>
-           <p>${result[0].contact["Tel No."]}</p>
+           <p>${result[0].contact["telNo"]}</p>
        </div>
        <div class="flex flex-row">
            <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
            <p class="">: &nbsp; &nbsp;</p>
-            <p>${result[0].contact.Fax}</p>
+            <p>${result[0].contact.fax}</p>
        </div>
        <div class="mt-1 lg:mt-4">
            <a class="text-accent transition ease-in-out duration-300 "
-               href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+               href="${result[0].profileLink}">View profile →</a>
        </div>
    </div>
 </div>
@@ -1245,21 +1246,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1289,21 +1290,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1332,21 +1333,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1375,21 +1376,21 @@
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Email}</p>
+                <p>${result[0].contact.email}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Phone</p>
                <p class="">: &nbsp; &nbsp;</p>
-               <p>${result[0].contact["Tel No."]}</p>
+               <p>${result[0].contact["telNo"]}</p>
            </div>
            <div class="flex flex-row">
                <p class="basis-3/12 md:basis-1/12 font-semibold">Fax</p>
                <p class="">: &nbsp; &nbsp;</p>
-                <p>${result[0].contact.Fax}</p>
+                <p>${result[0].contact.fax}</p>
            </div>
            <div class="mt-1 lg:mt-4">
                <a class="text-accent transition ease-in-out duration-300 "
-                   href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/31">View profile →</a>
+                   href="${result[0].profileLink}">View profile →</a>
            </div>
        </div>
    </div>
@@ -1400,7 +1401,7 @@
         callAPi()
     </script>
     <script src="app.js"></script>
-    <script src="../common template/footer.js"></script>
+    <script src="../template/footer.js"></script>
 
     <script>
         function openDeans() {

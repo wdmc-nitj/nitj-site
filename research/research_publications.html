@@ -174,13 +174,15 @@
             background-size: cover;
         }
     </style>
-<link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
 
-    <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
+    <div
+        class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
         <p class="font2 font-bold sm:text-[30px] lg:text-[60px] uppercase text-white leading-[1]">
             Research Publications
         </p>
@@ -223,26 +225,26 @@
     </div>
 
     <div class="">
-    <div class="overflow-x-auto relative shadow-lg rounded-lg sm:rounded-lg ml-16 mr-16  mt-4">
-        <table class="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                    <th scope="col" class="py-3 px-6 bg-accent text-white">
-                        Document Title
-                    </th>
-                    <th scope="col" class="py-3 px-6 bg-accent text-white">Authors</th>
-                    <th scope="col" class="py-3 px-6 bg-accent text-white">Year</th>
-                    <th scope="col" class="py-3 px-6 bg-accent text-white">Source</th>
-                    <th scope="col" class="py-3 px-6 bg-accent text-white">Cited By</th>
-                </tr>
-            </thead>
-            <tbody id="top10">
-                
-                <!-- Added -->
-            </tbody>
-        </table>
+        <div class="overflow-x-auto relative shadow-lg rounded-lg sm:rounded-lg ml-16 mr-16  mt-4">
+            <table class="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">
+                            Document Title
+                        </th>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">Authors</th>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">Year</th>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">Source</th>
+                        <th scope="col" class="py-3 px-6 bg-accent text-white">Cited By</th>
+                    </tr>
+                </thead>
+                <tbody id="top10">
+
+                    <!-- Added -->
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
     <div class="py-[48px] px-8 w-full flex flex-col items-start p-2">
         <p class="font2 font-medium border-b-2 border-accent text-[28px] lg:text-[32px] px-2">
@@ -252,14 +254,14 @@
 
     <div class="mb-12">
         <ol id="referredPublicationData">
-            
+
         </ol>
     </div>
     <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
     <div class="relative bottom-0">
-        <script src="../common template/footer.js"></script>
+        <script src="../template/footer.js"></script>
     </div>
-<script src="data/researchPublicationsData.js"></script>
+    <script src="data/researchPublicationsData.js"></script>
     <script src="../admin/app.js"></script>
     <script src="./tabs.js"></script>
 </body>
