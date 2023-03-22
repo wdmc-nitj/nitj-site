@@ -17,10 +17,16 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
       </a>
       </div>
       <div class="w-[15%]">
-      <img
+
+       ${update.new ?
+    `  <img
         class="h-[14px] mt-2 pr-2"
         src="./img/New.gif"
-      />
+      />`
+      : 
+      `
+    <div></div> `
+      }
       </div>
     </div>
   
