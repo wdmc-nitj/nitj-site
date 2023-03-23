@@ -1216,7 +1216,7 @@
                       <p class="text-sm text-gray-500">${result[0].department}</p>
                       <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                           <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                          <p class="text-sm text-gray-500 my-1">${result[0].contact.email}    </p>
                       </div>
                     
          `;
@@ -1237,15 +1237,15 @@
                       <p class="text-sm text-gray-500">${result[0].department}</p>
                       <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                           <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                          <p class="text-sm text-gray-500 my-1">${result[0].contact.email}    </p>
                       </div>
                       <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                         <!-- <i class="fa-solid fa-phone"></i>-->
-                         <!-- <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>-->
+                         <!-- <p class="text-sm my-1">${result[0].contact["telNo"]}</p>-->
                       </div>
                       <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                           <i class="fa-solid fa-fax"></i>
-                          <p class="text-sm my-1">${result[0].contact.Fax}</p>
+                          <p class="text-sm my-1">${result[0].contact.fax}</p>
                       </div>
          `;
     }
@@ -1481,7 +1481,7 @@
 <script>
   async function callAPi() {
     let result = await fetch(
-      "https://wdmc.onrender.com/administration?id=639ec2981abac50c0b5e1c38"
+      "https://wdmc.onrender.com/administration?id=63a750c64c7ef3865628adeb"
     );
     result = await result.json();
     console.log(result);
@@ -1491,7 +1491,26 @@
                     <p class="text-sm text-gray-500">${result[0].department}</p>
                     <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                         <i class="fa-solid fa-envelope"></i>
-                        <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                        <p class="text-sm text-gray-500 my-1">${result[0].contact.email}    </p>
+                    </div>
+       `;
+  }
+  callAPi();
+</script>
+<script>
+  async function callAPi() {
+    let result = await fetch(
+      "https://wdmc.onrender.com/administration?id=641b1726a284c86bd422a697"
+    );
+    result = await result.json();
+    console.log(result);
+    document.getElementById("icc_member_6").innerHTML = `
+        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
+                    <p class="text-sm">${result[0].designation}</p>
+                    <p class="text-sm text-gray-500">${result[0].department}</p>
+                    <div class="w-full flex flex-row gap-2 items-center text-gray-500">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p class="text-sm text-gray-500 my-1">${result[0].contact.email}    </p>
                     </div>
        `;
   }
@@ -1581,7 +1600,7 @@
   <script>
     async function callAPi() {
       let result = await fetch(
-        "https://wdmc.onrender.com/administration?id=639e77acef89635c157fdc5e"
+        "https://wdmc.onrender.com/administration?id=639ebfab1abac50c0b5e1c21"
       );
       result = await result.json();
       console.log(result);
@@ -1606,33 +1625,7 @@
     callAPi();
   </script>
   
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/administration?id=639e77acef89635c157fdc5e"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("pdn_member_1").innerHTML = `
-          <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
-                      <p class="text-sm">${result[0].designation}</p>
-                      <p class="text-sm text-gray-500">${result[0].department}</p>
-                      <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
-                      </div>
-                      <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                        <!-- <i class="fa-solid fa-phone"></i>-->
-                         <!-- <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>-->
-                      </div>
-                      <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                          <i class="fa-solid fa-fax"></i>
-                          <p class="text-sm my-1">${result[0].contact.Fax}</p>
-                      </div>
-         `;
-    }
-    callAPi();
-  </script>
+  
 <script>
   async function callAPi() {
     let result = await fetch(
@@ -1646,15 +1639,15 @@
                     <p class="text-sm text-gray-500">${result[0].department}</p>
                     <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                         <i class="fa-solid fa-envelope"></i>
-                        <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                        <p class="text-sm text-gray-500 my-1">${result[0].contact.email}    </p>
                     </div>
                     <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                       <!-- <i class="fa-solid fa-phone"></i>-->
-                       <!-- <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>-->
+                       <!-- <p class="text-sm my-1">${result[0].contact["telNo"]}</p>-->
                     </div>
                     <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                         <i class="fa-solid fa-fax"></i>
-                        <p class="text-sm my-1">${result[0].contact.Fax}</p>
+                        <p class="text-sm my-1">${result[0].contact.fax}</p>
                     </div>
        `;
   }
@@ -1797,7 +1790,7 @@
   <script>
     async function callAPi() {
       let result = await fetch(
-        "https://wdmc.onrender.com/administration?id=639eb9891abac50c0b5e1bd0"
+        "https://wdmc.onrender.com/administration?id=639ebfab1abac50c0b5e1c21"
       );
       result = await result.json();
       console.log(result);
@@ -1955,7 +1948,7 @@
   <script>
     async function callAPi() {
       let result = await fetch(
-        "https://wdmc.onrender.com/administration?id=639ec1211abac50c0b5e1c30"
+        "https://wdmc.onrender.com/administration?id=63bf8fb1deff5976397566ff"
       );
       result = await result.json();
       console.log(result);
@@ -1979,30 +1972,7 @@
 
 
   
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc.onrender.com/administration?id=639ec1211abac50c0b5e1c30"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("sm_member_3").innerHTML = `
-      <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
-                  <p class="text-sm">${result[0].designation}</p>
-                  <p class="text-sm text-gray-500">${result[0].department}</p>
-                  <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                      <i class="fa-solid fa-envelope"></i>
-                      <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
-                  </div>
-                  <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                    <!-- <i class="fa-solid fa-phone"></i>-->
-                         <!-- <p class="text-sm my-1">${result[0].contact["Tel No."]}</p>-->
-                  </div>
-                
-     `;
-    }
-    callAPi();
-  </script>
+  
   <script>
     async function callAPi() {
       let result = await fetch(
@@ -2016,7 +1986,7 @@
                   <p class="text-sm text-gray-500">${result[0].department}</p>
                   <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                       <i class="fa-solid fa-envelope"></i>
-                      <p class="text-sm text-gray-500 my-1">${result[0].contact.Email}    </p>
+                      <p class="text-sm text-gray-500 my-1">${result[0].contact.email}    </p>
                   </div>
                   <div class="w-full flex flex-row gap-2 items-center text-gray-500">
                     <!-- <i class="fa-solid fa-phone"></i>-->
