@@ -1488,12 +1488,12 @@ sup {
   height: 15vh;
 }
 
-.h-1\/6 {
-  height: 16.666667%;
-}
-
 .h-7 {
   height: 1.75rem;
+}
+
+.h-1\/6 {
+  height: 16.666667%;
 }
 
 .h-14 {
@@ -1725,6 +1725,10 @@ sup {
   width: 50%;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .w-3\/4 {
   width: 75%;
 }
@@ -1739,10 +1743,6 @@ sup {
 
 .w-\[67px\] {
   width: 67px;
-}
-
-.w-7 {
-  width: 1.75rem;
 }
 
 .w-\[50px\] {
@@ -2198,6 +2198,10 @@ sup {
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-\[100px\] {
+  gap: 100px;
 }
 
 .gap-x-\[10px\] {
@@ -5414,6 +5418,10 @@ sup {
 
   .lg\:gap-\[20px\] {
     gap: 20px;
+  }
+
+  .lg\:gap-\[100px\] {
+    gap: 100px;
   }
 
   .lg\:border-r {
