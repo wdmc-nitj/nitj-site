@@ -1,5 +1,5 @@
 // TODO : use promise.all to fetch all data at once
-const baseURL = 'https://wdmc.onrender.com'
+const baseURL = 'https://wdmc-vsj1.onrender.com'
 
 fetch(`${baseURL}/news/`)
   .then((response) => response.json())
