@@ -88,5 +88,7 @@ ${update.title}
 
     })
   
+var button=document.getElementById("facultybutton");
 
+setTimeout(() => button.click(),2000);
     

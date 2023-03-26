@@ -5,8 +5,9 @@ let newsDirection = true
 
 export function newsCardsScroll() {
   let currTop = newsCardContainerTop
+  let flag = true
 
-  if (true) {
+  if (flag) {
     let curr = 0
     if (newsDirection) {
       curr = newsCardsContainer.scrollTop + 1
@@ -15,11 +16,23 @@ export function newsCardsScroll() {
     }
     newsCardsContainer.scrollTop = curr
     newsCardContainerTop = curr
+
+    if (newsCardContainerTop == currTop) {
+      newsDirection = !newsDirection
+    }
+  } else {
+    return
   }
-  if (newsCardContainerTop == currTop) {
-    newsDirection = !newsDirection
-  }
-  setTimeout(newsCardsScroll, 15)
+  const newsTimeout = setTimeout(newsCardsScroll, 15)
+  // stop the scroll while the mouse is in the div element and restart it when the mouse leaves the div element
+  // avoid the function to be called multiple times
+  newsCardsContainer.addEventListener('mouseenter', () => {
+    clearTimeout(newsTimeout)
+  })
+  // newsCardsContainer.addEventListener('mouseleave', () => {
+  //   newsCardsScroll()
+  // }
+  // )
 }
 
 const publicationContainer = document.getElementById('publication-cards')
@@ -42,7 +55,10 @@ export function publicationCardsScroll() {
   if (publicationContainerTop == currTop) {
     publicationDirection = !publicationDirection
   }
-  setTimeout(publicationCardsScroll, 15)
+  const timer = setTimeout(publicationCardsScroll, 15)
+  publicationContainer.addEventListener('mouseenter', () => {
+    clearTimeout(timer)
+  })
 }
 
 // Scroll to top Button

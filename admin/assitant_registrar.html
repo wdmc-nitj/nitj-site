@@ -1,156 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assistant Registrars - NITJ</title>
 
-    <script src="app.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistant Registrars - NITJ</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="app.js" defer></script>
 
-    <!-- ICONS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- font-family: 'Barlow', sans-serif;
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- font-family: 'Barlow', sans-serif;
     font-family: 'Poppins', sans-serif; -->
 
-    <style>
-      /* Customizing the Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
+  <style>
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-      ::-webkit-scrollbar-thumb {
-        background-color: rgba(30, 58, 138, 1);
-        border-radius: 10px;
-      }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(30, 58, 138, 1);
+      border-radius: 10px;
+    }
 
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: gray;
-      }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: gray;
+    }
 
-      ::-webkit-resizer {
-        background-color: #ffffff;
-      }
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
 
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
-      }
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+    }
 
-      ::-webkit-scrollbar {
-        width: 4px;
-      }
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
 
-      .font2 {
-        font-family: "Barlow", sans-serif;
-      }
+    .font2 {
+      font-family: "Barlow", sans-serif;
+    }
 
-      :root {
-        --primary-color: #fff;
-        --background-color: #212121;
+    :root {
+      --primary-color: #fff;
+      --background-color: #212121;
 
-        --blue-color: #0369a1;
-        --light-blue-color: #f6f6fe;
-        --purple-color: #040320;
-        --font1: "Poppins", sans-serif;
-        --font2: "Barlow", sans-serif;
-      }
+      --blue-color: #0369a1;
+      --light-blue-color: #f6f6fe;
+      --purple-color: #040320;
+      --font1: "Poppins", sans-serif;
+      --font2: "Barlow", sans-serif;
+    }
 
-      * {
-        margin: 0;
-        padding: 0;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-      body {
-        font-family: var(--font1);
-      }
+    body {
+      font-family: var(--font1);
+    }
 
-      .titlebg {
-        background: linear-gradient(
-            90.09deg,
-            rgba(0, 0, 0, 0.7) 0.08%,
-            rgba(255, 255, 255, 0) 99.11%
-          ),
-          url(img/about_top.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
-    </style>
-  </head>
+    .titlebg {
+      background: linear-gradient(90.09deg,
+          rgba(0, 0, 0, 0.7) 0.08%,
+          rgba(255, 255, 255, 0) 99.11%),
+        url(img/about_top.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
 
-  <body>
-    <script src="./common template/header.js"></script>
+<body>
+  <script src="./template/header.js"></script>
 
-    <div class="flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
-      <div>
-        <div
-          class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]"
-        >
-          <p
-            class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]"
-          >
-            Assitant Registrars
-          </p>
-        </div>
-        <nav
-          class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black"
-          aria-label="Breadcrumb"
-        >
-          <ol class="inline-flex items-center">
-            <li class="inline-flex items-center">
-              <a
-                href="https://nitj.netlify.app/"
-                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
-              >
-                <a href="#" class="text-lg font-medium ml-2">Home</a>
-              </a>
-            </li>
-            <li aria-current="page">
-              <div class="inline-flex items-center">
-                <i
-                  style="
+  <div class="flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
+    <div>
+      <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
+        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
+          Assitant Registrars
+        </p>
+      </div>
+      <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center">
+          <li class="inline-flex items-center">
+            <a href="https://nitj.netlify.app/"
+              class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+              <a href="#" class="text-lg font-medium ml-2">Home</a>
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="inline-flex items-center">
+              <i style="
                     color: rgb(128, 128, 128);
                     font-size: 12px;
                     margin-left: 12px;
-                  "
-                  class="fa-solid fa-angle-right ml-2"
-                ></i>
-                <a href="#" class="text-lg font-medium ml-2"
-                  >Assitant Registrars</a
-                >
-              </div>
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <div class="flex flex-col">
-        <div
-          class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-          id="ar_1"
-        >
-          <!-- <div class="lg:basis-1/3 flex p-4" >
+                  " class="fa-solid fa-angle-right ml-2"></i>
+              <a href="#" class="text-lg font-medium ml-2">Assitant Registrars</a>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="flex flex-col">
+      <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_1">
+        <!-- <div class="lg:basis-1/3 flex p-4" >
                     <img src="img\neeraj.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4" >
@@ -169,17 +144,14 @@
                       
                     </div>
                 </div> -->
-        </div>
+      </div>
 
-        <div
-          class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-          id="ar_2"
-        >
-          <!-- <div class="lg:basis-1/3 flex p-4">
+      <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_2">
+        <!-- <div class="lg:basis-1/3 flex p-4">
                     <img src="img\no_profile_image.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4" id="ar_2"> -->
-          <!-- <div class="flex flex-col">
+        <!-- <div class="flex flex-col">
                         <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Ms. Poonam Arora</p>
                         <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Audit)</p>
                         <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
@@ -192,14 +164,11 @@
                         </div>
                       
                     </div> -->
-        </div>
       </div>
+    </div>
 
-      <div
-        class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-        id="ar_3"
-      >
-        <!-- <div class="lg:basis-1/3 flex p-4">
+    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_3">
+      <!-- <div class="lg:basis-1/3 flex p-4">
                     <img src="img\no_profile_image.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4">
@@ -217,13 +186,10 @@
                       
                     </div>
                 </div> -->
-      </div>
+    </div>
 
-      <div
-        class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-        id="ar_4"
-      >
-        <!-- <div class="lg:basis-1/3 flex p-4">
+    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_4">
+      <!-- <div class="lg:basis-1/3 flex p-4">
                     <img src="img\AR_Ramesh_Chand_Meena.jpeg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4">
@@ -242,13 +208,10 @@
                       
                     </div>
                 </div> -->
-      </div>
+    </div>
 
-      <div
-        class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-        id="ar_5"
-      >
-        <!-- <div class="lg:basis-1/3 flex p-4 ">
+    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_5">
+      <!-- <div class="lg:basis-1/3 flex p-4 ">
                     <img src="img\AR_Ramneek_Kumar.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4">
@@ -266,13 +229,10 @@
                       
                     </div>
                 </div> -->
-      </div>
+    </div>
 
-      <div
-        class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-        id="ar_6"
-      >
-        <!-- <div class="lg:basis-1/3 flex p-4">
+    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_6">
+      <!-- <div class="lg:basis-1/3 flex p-4">
                     <img src="img\AR_Sourav_Gupta.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4">
@@ -290,13 +250,10 @@
                       
                     </div>
                 </div> -->
-      </div>
+    </div>
 
-      <div
-        class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-        id="ar_7"
-      >
-        <!-- <div class="lg:basis-1/3 flex p-4">
+    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_7">
+      <!-- <div class="lg:basis-1/3 flex p-4">
                     <img src="img\Mr_Vijay_Narayan_50695.jpeg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4">
@@ -314,13 +271,10 @@
                       
                     </div>
                 </div> -->
-      </div>
+    </div>
 
-      <div
-        class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0"
-        id="ar_8"
-      >
-        <!-- <div class="lg:basis-1/3 flex p-4">
+    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_8">
+      <!-- <div class="lg:basis-1/3 flex p-4">
                     <img src="img\Mr_Vipan_Kumar.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
                 <div class="lg:basis-2/3 pt-14 p-4">
@@ -339,17 +293,17 @@
                       
                     </div>
                 </div> -->
-      </div>
     </div>
+  </div>
 
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=640623dfc7e8aecd5d7763dc"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_1").innerHTML = `
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=640623dfc7e8aecd5d7763dc"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_1").innerHTML = `
                         <div class="lg:basis-1/3 flex p-4" >
                     <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
                 </div>
@@ -369,18 +323,18 @@
                     </div>
                 </div>
            `;
-      }
-      callAPi();
-    </script>
+    }
+    callAPi();
+  </script>
 
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=63a750c64c7ef3865628adeb"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_2").innerHTML = `
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=63a750c64c7ef3865628adeb"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_2").innerHTML = `
                     <div class="lg:basis-1/3 flex p-4" >
                 <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
             </div>
@@ -400,18 +354,18 @@
                 </div>
             </div>
        `;
-      }
-      callAPi();
-    </script>
+    }
+    callAPi();
+  </script>
 
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=640626b7c7e8aecd5d77645d"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_3").innerHTML = `
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=640626b7c7e8aecd5d77645d"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_3").innerHTML = `
                     <div class="lg:basis-1/3 flex p-4" >
                 <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
             </div>
@@ -431,17 +385,17 @@
                 </div>
             </div>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=6406257bc7e8aecd5d77643f"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_4").innerHTML = `
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=6406257bc7e8aecd5d77643f"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_4").innerHTML = `
                     <div class="lg:basis-1/3 flex p-4" >
                 <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
             </div>
@@ -461,17 +415,17 @@
                 </div>
             </div>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=6406266fc7e8aecd5d776459"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_5").innerHTML = `
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=6406266fc7e8aecd5d776459"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_5").innerHTML = `
                     <div class="lg:basis-1/3 flex p-4" >
                 <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
             </div>
@@ -491,17 +445,17 @@
                 </div>
             </div>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=640626e0c7e8aecd5d77645f"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_6").innerHTML = `
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=640626e0c7e8aecd5d77645f"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_6").innerHTML = `
                     <div class="lg:basis-1/3 flex p-4" >
                 <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
             </div>
@@ -521,17 +475,17 @@
                 </div>
             </div>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=64062692c7e8aecd5d77645b"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_7").innerHTML = `
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=64062692c7e8aecd5d77645b"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_7").innerHTML = `
                     <div class="lg:basis-1/3 flex p-4" >
                 <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
             </div>
@@ -551,17 +505,17 @@
                 </div>
             </div>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc.onrender.com/administration?id=6406253fc7e8aecd5d776404"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("ar_8").innerHTML = `
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/administration?id=6406253fc7e8aecd5d776404"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("ar_8").innerHTML = `
                     <div class="lg:basis-1/3 flex p-4" >
                 <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
             </div>
@@ -581,11 +535,12 @@
                 </div>
             </div>
        `;
-      }
-      callAPi();
-    </script>
+    }
+    callAPi();
+  </script>
 
-    <script src="app.js"></script>
-    <script src="./common template/footer.js"></script>
-  </body>
+  <script src="app.js"></script>
+  <script src="./template/footer.js"></script>
+</body>
+
 </html>

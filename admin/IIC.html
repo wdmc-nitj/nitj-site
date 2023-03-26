@@ -38,7 +38,8 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -290,7 +291,8 @@
                                                 <br>
                                                 <h2 class="text-lg font-medium mb-2">Automatic classification or cluster
                                                     analysis</h2>
-                                                <p class="text-justify">HighScore with the Plus option makes large volume data processing
+                                                <p class="text-justify">HighScore with the Plus option makes large
+                                                    volume data processing
                                                     fast and easy. <br>
                                                     Cluster analysis automatically sorts all scans of an experiment into
                                                     closely related clusters and marks the most representative scan of
@@ -308,7 +310,8 @@
                                                     plate) is shown.
                                                 </p><br>
                                                 <h2 class="text-lg font-medium mb-2">Structure viewing</h2>
-                                                <p class="text-justify">With the 3D structure plotting functionality, you can choose the
+                                                <p class="text-justify">With the 3D structure plotting functionality,
+                                                    you can choose the
                                                     colors of atoms, polyhedral viewing, and shift, turn, roll and zoom
                                                     the structure in order to obtain the best view.
                                                 </p><br>
@@ -325,7 +328,8 @@
                                                     Automatic strategies and batches support the novice user to perform
                                                     quantitative phase analysis, including the determination of an
                                                     amorphous component. The refinement control displays a complete
-                                                    picture of all parameters, limits and constraints involved. <br> <br>
+                                                    picture of all parameters, limits and constraints involved. <br>
+                                                    <br>
                                                     Range checking and automatic or manual constraints ensure the
                                                     stability and reproducibility of the refinements. No parameter
                                                     turn-on sequence is required, the proprietary solver takes care of
@@ -383,26 +387,26 @@
                                 <span id="list-iic">
                                     <script>
                                         async function api_call() {
-                                          var data = await fetch(
-                                            "https://wdmc.onrender.com/specialcentres/getcentre/iic"
-                                          );
-                
-                                          var result = await data.json();
-                
-                                          var modified = result[0].faculties;
-                      
-                                          for (var i in modified) {
-                                            var name = modified[i]["name"];
-                                            var designation = modified[i]["designation"];
-                                            var department = modified[i]["department"];
-                                            var email = modified[i]["email"];
-                                            var url = modified[i]["url"];
-                                            var qualification = modified[i]["qualification"];
-                                            document
-                                              .getElementById("list-iic")
-                                              .insertAdjacentHTML(
-                                                "beforeend",
-                                                `<a href="${url}"><span
+                                            var data = await fetch(
+                                                "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/iic"
+                                            );
+
+                                            var result = await data.json();
+
+                                            var modified = result[0].faculties;
+
+                                            for (var i in modified) {
+                                                var name = modified[i]["name"];
+                                                var designation = modified[i]["designation"];
+                                                var department = modified[i]["department"];
+                                                var email = modified[i]["email"];
+                                                var url = modified[i]["url"];
+                                                var qualification = modified[i]["qualification"];
+                                                document
+                                                    .getElementById("list-iic")
+                                                    .insertAdjacentHTML(
+                                                        "beforeend",
+                                                        `<a href="${url}"><span
                                             class="text-lg" style="color:#B22222"><strong>${name}</strong></span>
                                     </a><br>
                                     <span style="color:#000000"> ${designation} <br>
@@ -410,12 +414,12 @@
                                     </span>
                                     <br>
                                     <br>`
-                                              );
-                                          }
+                                                    );
+                                            }
                                         }
                                         api_call();
-                                      </script>
-                            </span>
+                                    </script>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -423,7 +427,7 @@
             </div>
         </div>
     </div>
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
 </body>
 <script>
     const home = document.getElementById('homeIIC');

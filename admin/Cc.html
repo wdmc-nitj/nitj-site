@@ -38,7 +38,8 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -91,25 +92,25 @@
                             </tr>
                             <script>
                                 async function api_call() {
-                                  var data = await fetch(
-                                    "https://wdmc.onrender.com/specialcentres/getcentre/cc"
-                                  );
-                                  var result = await data.json();
-    
-                                  var modified = result[0].faculties;
-              
-                                  for (var i in modified) {
-                                    var name = modified[i]["name"];
-                                    var designation = modified[i]["designation"];
-                                    var department = modified[i]["department"];
-                                    var email = modified[i]["email_id"];
-                                    var url = modified[i]["url"];
-                                    var qualification = modified[i]["qualification"];
-                                    document
-                                      .getElementById("table-body-cc")
-                                      .insertAdjacentHTML(
-                                        "beforeend",
-                                        `<tr>
+                                    var data = await fetch(
+                                        "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/cc"
+                                    );
+                                    var result = await data.json();
+
+                                    var modified = result[0].faculties;
+
+                                    for (var i in modified) {
+                                        var name = modified[i]["name"];
+                                        var designation = modified[i]["designation"];
+                                        var department = modified[i]["department"];
+                                        var email = modified[i]["email_id"];
+                                        var url = modified[i]["url"];
+                                        var qualification = modified[i]["qualification"];
+                                        document
+                                            .getElementById("table-body-cc")
+                                            .insertAdjacentHTML(
+                                                "beforeend",
+                                                `<tr>
                                 <td class="border border-gray-300"><a
                                         href="${url}"><span
                                             style="color:#B22222">${name}</span></a></td>
@@ -118,11 +119,11 @@
                                 <td class="border border-gray-300"><a href="mailto:${email}"><span
                                             style="color:#B22222">${email}</span></a></td>
                             </tr>`
-                                      );
-                                  }
+                                            );
+                                    }
                                 }
                                 api_call();
-                              </script>
+                            </script>
                         </tbody>
                     </table>
 
@@ -471,8 +472,7 @@
                                 </td>
                                 <td class="flex flex-col items-center justify-center mx-2">
                                     <div class="w-64 h-48 flex items-center justify-center">
-                                        <a
-                                            href="https://www.nitj.ac.in/nitj_files/links/cisco_c9500-24q_34971.jpg">
+                                        <a href="https://www.nitj.ac.in/nitj_files/links/cisco_c9500-24q_34971.jpg">
                                             <img alt=""
                                                 src="https://www.nitj.ac.in/nitj_files/links/cisco_c9500-24q_34971.jpg"
                                                 style="width: 100%;">
@@ -485,8 +485,7 @@
                             <tr class="flex">
                                 <td class="flex flex-col items-center justify-center mx-2">
                                     <div class="w-64 h-48 flex items-center justify-center">
-                                        <a
-                                            href="https://www.nitj.ac.in/nitj_files/links/cisco_c9500-24y4c_99616.jpg">
+                                        <a href="https://www.nitj.ac.in/nitj_files/links/cisco_c9500-24y4c_99616.jpg">
                                             <img alt=""
                                                 src="https://www.nitj.ac.in/nitj_files/links/cisco_c9500-24y4c_99616.jpg"
                                                 style="width: 100%;">
@@ -497,8 +496,7 @@
                                 </td>
                                 <td class="flex flex-col items-center justify-center mx-2">
                                     <div class="w-64 h-48 flex items-center justify-center">
-                                        <a
-                                            href="https://www.nitj.ac.in/nitj_files/links/cisco_ws_3850-24xs_94382.jpg">
+                                        <a href="https://www.nitj.ac.in/nitj_files/links/cisco_ws_3850-24xs_94382.jpg">
                                             <img alt=""
                                                 src="https://www.nitj.ac.in/nitj_files/links/cisco_ws_3850-24xs_94382.jpg"
                                                 style="width: 100%;">
@@ -806,7 +804,7 @@
             </div>
         </div>
     </div>
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
 </body>
 
 </html>
