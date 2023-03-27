@@ -5,13 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Assistant Registrars - NITJ</title>
-
-  <script src="app.js" defer></script>
+  <title>Assistant Registrar - NITJ</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
 
   <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -31,17 +28,18 @@
 
   <style>
     /* Customizing the Scrollbar */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
     ::-webkit-scrollbar-thumb {
-      background-color: rgba(30, 58, 138, 1);
+      background-color: #212121;
       border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
       background-color: gray;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 2px;
     }
 
     ::-webkit-resizer {
@@ -50,10 +48,6 @@
 
     .material-symbols-outlined {
       font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
-    }
-
-    ::-webkit-scrollbar {
-      width: 4px;
     }
 
     .font2 {
@@ -76,7 +70,7 @@
       padding: 0;
     }
 
-    body {
+    .main-body {
       font-family: var(--font1);
     }
 
@@ -89,25 +83,43 @@
       background-position: center;
       background-size: cover;
     }
+
+    #gal1 {
+      animation: fadeEffect 1s;
+      /* Fading effect takes 1 second */
+    }
+
+    @keyframes fadeEffect {
+
+      /* Go from zero to full opacity */
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <script src="./template/header.js"></script>
+  <script src="/template/header.js" type="module"></script>
+  <script src="/template/helper.js"></script>
 
-  <div class="flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
-    <div>
-      <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
-          Assitant Registrars
+  <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+    <div class="titlebg">
+      <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+        <!-- px-4 lg:px-[11%] -->
+        <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">
+          Assistant Registrar
         </p>
       </div>
-      <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-        <ol class="inline-flex items-center">
+      <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="container inline-flex items-center">
           <li class="inline-flex items-center">
-            <a href="https://nitj.netlify.app/"
-              class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-              <a href="#" class="text-lg font-medium ml-2">Home</a>
+            <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+              <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
             </a>
           </li>
           <li aria-current="page">
@@ -117,430 +129,170 @@
                     font-size: 12px;
                     margin-left: 12px;
                   " class="fa-solid fa-angle-right ml-2"></i>
-              <a href="#" class="text-lg font-medium ml-2">Assitant Registrars</a>
+              <a href="#" class="text-lg font-medium ml-2">Assistant Registrar</a>
             </div>
           </li>
         </ol>
       </nav>
     </div>
-    <div class="flex flex-col">
-      <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_1">
-        <!-- <div class="lg:basis-1/3 flex p-4" >
-                    <img src="img\neeraj.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-                </div>
-                <div class="lg:basis-2/3 pt-14 p-4" >
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Mr. Neeraj</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Academics & Legal)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p>aracademic@nitj.ac.in
-                                    <br> arlegal@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div> -->
-      </div>
 
-      <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_2">
-        <!-- <div class="lg:basis-1/3 flex p-4">
-                    <img src="img\no_profile_image.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-                </div>
-                <div class="lg:basis-2/3 pt-14 p-4" id="ar_2"> -->
-        <!-- <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Ms. Poonam Arora</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Audit)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p> araudit@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div> -->
-      </div>
-    </div>
+ 
 
-    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_3">
-      <!-- <div class="lg:basis-1/3 flex p-4">
-                    <img src="img\no_profile_image.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-                </div>
-                <div class="lg:basis-2/3 pt-14 p-4">
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Mr. Rakesh Kakkar</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (General Administration)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p>aradministration@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div> -->
-    </div>
+    
 
-    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_4">
-      <!-- <div class="lg:basis-1/3 flex p-4">
-                    <img src="img\AR_Ramesh_Chand_Meena.jpeg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-                </div>
-                <div class="lg:basis-2/3 pt-14 p-4">
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Mr. Ramesh Chand Meena</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Billing Section)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p>arbillsection@nitj.ac.in
-                                    <br> meenarc@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div> -->
-    </div>
+ 
 
-    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_5">
-      <!-- <div class="lg:basis-1/3 flex p-4 ">
-                    <img src="img\AR_Ramneek_Kumar.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-                </div>
-                <div class="lg:basis-2/3 pt-14 p-4">
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Mr. Ramneek Kumar</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Establishment)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p>arestablishment@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div> -->
-    </div>
+    <div id="institute-development"
+    class=" flex flex-col  container">
+    <div class="w-full flex flex-col items-start">
+       
 
-    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_6">
-      <!-- <div class="lg:basis-1/3 flex p-4">
-                    <img src="img\AR_Sourav_Gupta.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
+        </div>
+        <div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+              <div >
+                <p
+                  class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                >
+                Mr. Neeraj
+                </p>
+                <p class="text-sm">Assistant Registrar (Academics & Legal)</p>
+              
+                <div
+                  class="w-full flex flex-row gap-2 items-center text-gray-500"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="text-sm text-gray-500 my-1">aracademic@nitj.ac.in,arlegal@nitj.ac.in</p>
                 </div>
-                <div class="lg:basis-2/3 pt-14 p-4">
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Mr. Sourav Gupta</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Purchase)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p>arpurchase@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div> -->
-    </div>
+              
+              </div>
+              <div >
+                <p
+                  class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                >
+                Ms. Poonam Arora
+                </p>
+                <p class="text-sm">Assistant Registrar (Audit)</p>
+                <div
+                  class="w-full flex flex-row gap-2 items-center text-gray-500"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="text-sm text-gray-500 my-1">araudit@nitj.ac.in</p>
+                </div>
+              </div>
+              <div>
+                <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+              Mr. Rakesh Kakkar
+              </p>
+              <p class="text-sm">Assistant Registrar (General Administration)</p>
+            
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">aradministration@nitj.ac.in</p>
+              </div>
+            
+              </div>
+              <div >
+                <p
+                  class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                >
+                Mr. Ramesh Chand Meena
+                </p>
+                <p class="text-sm">Assistant Registrar (Billing Section)</p>
+               
+                <div
+                  class="w-full flex flex-row gap-2 items-center text-gray-500"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="text-sm text-gray-500 my-1">arbillsection@nitj.ac.in,meenarc@nitj.ac.in</p>
+                </div>
+               
+              </div>
+              <div >
+                <p
+                  class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                >
+                Mr. Ramneek Kumar
+                </p>
+                <p class="text-sm">Assistant Registrar (Establishment)</p>
+              
+                <div
+                  class="w-full flex flex-row gap-2 items-center text-gray-500"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="text-sm text-gray-500 my-1">arestablishment@nitj.ac.in</p>
+                </div>
+               
+              </div>
 
-    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_7">
-      <!-- <div class="lg:basis-1/3 flex p-4">
-                    <img src="img\Mr_Vijay_Narayan_50695.jpeg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
+              <div >
+                <p
+                  class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                >
+                Mr. Sourav Gupta
+                </p>
+                <p class="text-sm">Assistant Registrar (Purchase) </p>
+              
+                <div
+                  class="w-full flex flex-row gap-2 items-center text-gray-500"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="text-sm text-gray-500 my-1">arpurchase@nitj.ac.in</p>
                 </div>
-                <div class="lg:basis-2/3 pt-14 p-4">
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Mr. Vijay Narayan</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Estate Office)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p> narayanv@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div> -->
-    </div>
+              
+              </div>
 
-    <div class="flex flex-col lg:flex-row border-2 border-[#ccc] lg:mx-[11%] mx-5 mt-0 mb-5 p-0" id="ar_8">
-      <!-- <div class="lg:basis-1/3 flex p-4">
-                    <img src="img\Mr_Vipan_Kumar.jpg" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
+              <div >
+                <p
+                  class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                >
+                Mr. Vijay Narayan
+                </p>
+                <p class="text-sm">Assistant Registrar (Estate Office)</p>
+              
+                <div
+                  class="w-full flex flex-row gap-2 items-center text-gray-500"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="text-sm text-gray-500 my-1">narayanv@nitj.ac.in</p>
                 </div>
-                <div class="lg:basis-2/3 pt-14 p-4">
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">Mr. Vipan Kumar</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">Assistant Registrar (Accounts & Store)</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p>araccount@nitj.ac.in
-                                    <br> arstore@nitj.ac.in</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div> -->
-    </div>
+               
+              </div>
+
+              <div >
+                <p
+                  class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+                >
+                Mr. Vipan Kumar
+                </p>
+                <p class="text-sm">Assistant Registrar (Accounts & Store)</p>
+                
+                <div
+                  class="w-full flex flex-row gap-2 items-center text-gray-500"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="text-sm text-gray-500 my-1">araccount@nitj.ac.in,arstore@nitj.ac.in</p>
+                </div>
+              
+              </div>
+
+            </div>
+          </div>
+
+</div>
+
+
   </div>
 
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=640623dfc7e8aecd5d7763dc"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_1").innerHTML = `
-                        <div class="lg:basis-1/3 flex p-4" >
-                    <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-                </div>
-                <div class="lg:basis-2/3 pt-14 p-4" >
-                    <div class="flex flex-col">
-                        <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                        <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                        <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                        <div class="w-[100%] flex flex-col gap-[4px]">
-                            <div class="flex flex-row">
-                                <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                                <p class="">: &nbsp; &nbsp;</p>
-                                <p>${result[0].contact["email"]}</p>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </div>
-           `;
-    }
-    callAPi();
-  </script>
-
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=63a750c64c7ef3865628adeb"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_2").innerHTML = `
-                    <div class="lg:basis-1/3 flex p-4" >
-                <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-            </div>
-            <div class="lg:basis-2/3 pt-14 p-4" >
-                <div class="flex flex-col">
-                    <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                    <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                    <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
-                        <div class="flex flex-row">
-                            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                            <p class="">: &nbsp; &nbsp;</p>
-                            <p>${result[0].contact["email"]}</p>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-       `;
-    }
-    callAPi();
-  </script>
-
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=640626b7c7e8aecd5d77645d"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_3").innerHTML = `
-                    <div class="lg:basis-1/3 flex p-4" >
-                <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-            </div>
-            <div class="lg:basis-2/3 pt-14 p-4" >
-                <div class="flex flex-col">
-                    <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                    <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                    <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
-                        <div class="flex flex-row">
-                            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                            <p class="">: &nbsp; &nbsp;</p>
-                            <p>${result[0].contact["email"]}</p>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-       `;
-    }
-    callAPi();
-  </script>
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=6406257bc7e8aecd5d77643f"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_4").innerHTML = `
-                    <div class="lg:basis-1/3 flex p-4" >
-                <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-            </div>
-            <div class="lg:basis-2/3 pt-14 p-4" >
-                <div class="flex flex-col">
-                    <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                    <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                    <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
-                        <div class="flex flex-row">
-                            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                            <p class="">: &nbsp; &nbsp;</p>
-                            <p>${result[0].contact["email"]}</p>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-       `;
-    }
-    callAPi();
-  </script>
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=6406266fc7e8aecd5d776459"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_5").innerHTML = `
-                    <div class="lg:basis-1/3 flex p-4" >
-                <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-            </div>
-            <div class="lg:basis-2/3 pt-14 p-4" >
-                <div class="flex flex-col">
-                    <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                    <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                    <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
-                        <div class="flex flex-row">
-                            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                            <p class="">: &nbsp; &nbsp;</p>
-                            <p>${result[0].contact["email"]}</p>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-       `;
-    }
-    callAPi();
-  </script>
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=640626e0c7e8aecd5d77645f"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_6").innerHTML = `
-                    <div class="lg:basis-1/3 flex p-4" >
-                <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-            </div>
-            <div class="lg:basis-2/3 pt-14 p-4" >
-                <div class="flex flex-col">
-                    <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                    <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                    <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
-                        <div class="flex flex-row">
-                            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                            <p class="">: &nbsp; &nbsp;</p>
-                            <p>${result[0].contact["email"]}</p>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-       `;
-    }
-    callAPi();
-  </script>
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=64062692c7e8aecd5d77645b"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_7").innerHTML = `
-                    <div class="lg:basis-1/3 flex p-4" >
-                <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-            </div>
-            <div class="lg:basis-2/3 pt-14 p-4" >
-                <div class="flex flex-col">
-                    <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                    <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                    <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
-                        <div class="flex flex-row">
-                            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                            <p class="">: &nbsp; &nbsp;</p>
-                            <p>${result[0].contact["email"]}</p>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-       `;
-    }
-    callAPi();
-  </script>
-  <script>
-    async function callAPi() {
-      let result = await fetch(
-        "https://wdmc-vsj1.onrender.com/administration?id=6406253fc7e8aecd5d776404"
-      );
-      result = await result.json();
-      console.log(result);
-      document.getElementById("ar_8").innerHTML = `
-                    <div class="lg:basis-1/3 flex p-4" >
-                <img src="${result[0].image}" class="lg:h-[256px] sm:h-[160px] md:h-[208px] lg:w-[200px]" alt="">
-            </div>
-            <div class="lg:basis-2/3 pt-14 p-4" >
-                <div class="flex flex-col">
-                    <p class="font2 font-medium text-[26px] lg:text-[48px] leading-[1.3] uppercase">${result[0].name}</p>
-                    <p class="text-gray-400 text-[12px] lg:text-[16px]">${result[0].designation}</p>
-                    <div class="bg-accent w-[90%] h-[3px] mb-4 mt-2"></div>
-                    <div class="w-[100%] flex flex-col gap-[4px]">
-                        <div class="flex flex-row">
-                            <p class="basis-3/12 md:basis-1/12 text-justify font-semibold">Email</p>
-                            <p class="">: &nbsp; &nbsp;</p>
-                            <p>${result[0].contact["email"]}</p>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-       `;
-    }
-    callAPi();
-  </script>
-
   <script src="app.js"></script>
-  <script src="./template/footer.js"></script>
+  <script src="../template/footer.js"></script>
+
+
+
 </body>
 
 </html>
