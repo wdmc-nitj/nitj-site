@@ -108,80 +108,82 @@
       position: relative;
       /* box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3); */
-    }
 
-    /* Timeline dot  */
-    .title::before {
-      content: "";
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      background: white;
-      border-radius: 999px;
-      left: -29px;
-      border: 3px solid #0369A1;
-    }
+        }
 
-    .box {
-      flex: 1;
-      overflow: hidden;
-      transition: 0.5s;
-      line-height: 0;
-    }
+        /* Timeline dot  */
+        .title::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: white;
+            border-radius: 999px;
+            left: -29px;
+            border: 3px solid #0369A1;
+        }
 
-    .box>img {
-      width: 100%;
-      height: 100%;
-      border: 0.2rem solid white;
-      border-radius: 8px;
-      -o-object-fit: cover;
-      object-fit: cover;
-      transition: ease 0.75s;
-      filter: grayscale(100%);
-    }
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            line-height: 0;
+        }
 
-    .box:hover {
-      flex: 1 1 30%;
-      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
-      z-index: 1;
-      cursor: pointer;
-    }
+        .box>img {
+            width: 100%;
+            height: 100%;
+            border: 0.2rem solid white;
+            border-radius: 8px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            transition: ease 0.75s;
+      
+        }
 
-    .box:hover>img {
-      opacity: 1;
-      width: 100%;
-      height: 100%;
-    }
+        .box:hover {
+            flex: 1 1 30%;
+            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+            z-index: 1;
+            cursor: pointer;
+        }
 
-    .base-image {
-      margin-top: 40px;
-      background-image: url("img/nitj3.jpg"),
-        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        .box:hover>img {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
 
-      background-color: #cccccc;
-      height: 400px;
-      background-position: 0% 28%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+        .base-image {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
 
-    .base-image-2 {
-      margin-top: 40px;
-      background-image: url("img/nitj3.jpg"),
-        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-      background-color: #cccccc;
-      height: 300px;
-      background-position: 58% 28%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+            background-color: #cccccc;
+            height: 400px;
+            background-position: 0% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-    @media only screen and (max-width: 1000px) {
-      .academic-timeline {
-        display: none;
-      }
-    }
-  </style>
+        .base-image-2 {
+            margin-top: 40px;
+            background-image: url("img/nitj3.jpg"),
+                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+            background-color: #cccccc;
+            height: 300px;
+            background-position: 58% 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .academic-timeline {
+                display: none;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -191,24 +193,104 @@
     <div class="titlebg">
       <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
         <!-- <p> Code by Bhavya Mittal </p> -->
-        <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Yoga Club</p>
-      </div>
-      <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-        <ol class="container inline-flex items-center">
-          <li class="inline-flex items-center">
-            <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-              <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
-            </a>
-          </li>
-          <li aria-current="page">
-            <div class="inline-flex items-center">
-              <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
-                class="fa-solid fa-angle-right ml-2"></i>
-              <a href="#" class="text-lg font-medium ml-2">About</a>
+
+        <div class="container flex flex-col items-start gap-[20px] lg:gap-[16px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[32px]">Introduction</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
             </div>
-          </li>
-        </ol>
-      </nav>
+            <div id="Introduction" style=" text-align: justify; text-justify: inter-word;">
+                The objective of a Yoga club in Institute is to promote physical and mental 
+                well-being among students through the practice of yoga. Yoga is a holistic 
+                approach to health that combines physical postures, breathing exercises, and 
+                meditation techniques to improve flexibility, strength, balance, and relaxation. 
+                By joining a Yoga club, college students can learn how to manage stress, enhance 
+                focus, boost immunity, and cultivate a sense of inner peace. Yoga also fosters a 
+                sense of community and encourages social interaction among members. The ultimate
+                 goal of a Yoga club is to empower students, faculty and staff members to lead 
+                 healthier and happier lives by incorporating the principles of yoga into their 
+                 daily routines.
+            </div>
+        </div>
+
+        <div id="quality-policy" class="container">
+            <div class="my-6 mx-auto px-2">
+              <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[32px]">Committee</p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
+              </div>
+              <div class="overflow-x-auto mt-6 relative">
+                <table class="w-full border text-sm text-left ">
+                  <tbody>
+                    <tr class="bg-white border-b  ">
+                      <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                        <p class="font2 text-[20px]">Faculty Coordinator</p>
+                      </th>
+                      <td class="py-4 px-6 text-black">
+                        <p> <span class="font2 text-[20px] mb-1">Dr Neetu Sood</span> 
+                          <br>
+                          Assistant Professor
+                          <br>
+                          Department of Electronics and Communication Engineering
+                          <br>
+                          <a href="mailto:soodn@nitj.ac.in"><u>soodn@nitj.ac.in</u></a>
+                          <br>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="bg-white border-b  ">
+                      <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                        <p class="font2 text-[20px]">Student Coordinator</p>
+                      </th>
+                      <td class="py-4 px-6 text-black">
+                        <p> <span class="font2 text-[20px] mb-1">Deepak</span> 
+                          <br>
+                          Student
+                          <br>
+                          Department of Information Technology
+                          <br>
+                          <a href="mailto:deepakm.it.20@nitj.ac.in"><u>deepakm.it.20@nitj.ac.in</u></a>
+                          <br>
+                          8557093937
+                          <br>
+                        </p>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+
+        <div class="container flex flex-col items-start gap-[20px] lg:gap-[16px]">
+
+            <div class="container">
+              <div class="container flex h-[30vh] w-full">
+                  <div class="box">
+                      <img src="img/yoga1.jpg" />
+                  </div>
+                  <div class="box hidden lg:block">
+                      <img src="img/yoga2.jpg" />
+                  </div>
+                  <div class="box hidden lg:block">
+                      <img src="img/yoga3.jpg" />
+                  </div>
+              </div>
+      
+              <div class="container flex h-[30vh] w-full" >
+                <div class="box">
+                    <img src="img/yoga4.jpg" />
+                </div>
+                <div class="box hidden lg:block">
+                    <img src="img/yoga5.jpeg" />
+                </div>
+              </div> 
+            </div>
+          
+          </div>
+
+
     </div>
 
 
