@@ -1420,6 +1420,10 @@ sup {
   border-bottom-width: 4px;
 }
 
+.border-b-5 {
+  border-bottom-width: 5px;
+}
+
 .border-l-4 {
   border-left-width: 4px;
 }

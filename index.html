@@ -158,7 +158,8 @@
 
 <body class="font-body relative text-dark-purple scroll-smooth">
 
-  <script src="/common template/header.js" type="module"></script>
+  <script src="/template/header.js" type="module"></script>
+  <script src="/template/helper.js"></script>
   <button id="scroll-to-top-button"
     class="hidden z-30 opacity-60 hover:opacity-100 transition-all bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full fixed right-0 bottom-0 mr-6 mb-6">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -277,6 +278,71 @@
             onclick="slideCards(this,'left')"></i>
           <div id="cards" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth h-[27rem]">
             <!-- Data from API -->
+
+
+            <div id="card-template"
+              class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent h-full w-60">
+              <div class="flex h-full w-full flex-col p-2.5">
+                <div class="h-44 basis-full w-full bg-slate-300 animate-pulse rounded-lg "></div>
+                <div class="flex flex-col p-4 basis-full">
+                  <div>
+                    <p class="w-[50%] h-5 rounded-lg bg-slate-300 animate-pulse">
+
+                    </p>
+                    <div class="space-y-1 mt-5">
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-[80%] h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                    </div>
+                  </div>
+                  <div class="pt-5 mt-auto whitespace-nowrap">
+                    <div class="bg-slate-300 animate-pulse w-[50%] h-5 rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="card-template"
+              class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent h-full w-60">
+              <div class="flex h-full w-full flex-col p-2.5">
+                <div class="h-44 basis-full w-full bg-slate-300 animate-pulse rounded-lg "></div>
+                <div class="flex flex-col p-4 basis-full">
+                  <div>
+                    <p class="w-[50%] h-5 rounded-lg bg-slate-300 animate-pulse">
+
+                    </p>
+                    <div class="space-y-1 mt-5">
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-[80%] h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                    </div>
+                  </div>
+                  <div class="pt-5 mt-auto whitespace-nowrap">
+                    <div class="bg-slate-300 animate-pulse w-[50%] h-5 rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="card-template"
+              class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent h-full w-60">
+              <div class="flex h-full w-full flex-col p-2.5">
+                <div class="h-44 basis-full w-full bg-slate-300 animate-pulse rounded-lg "></div>
+                <div class="flex flex-col p-4 basis-full">
+                  <div>
+                    <p class="w-[50%] h-5 rounded-lg bg-slate-300 animate-pulse">
+
+                    </p>
+                    <div class="space-y-1 mt-5">
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-[80%] h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                    </div>
+                  </div>
+                  <div class="pt-5 mt-auto whitespace-nowrap">
+                    <div class="bg-slate-300 animate-pulse w-[50%] h-5 rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
             onclick="slideCards(this,'right')"></i>
@@ -300,6 +366,37 @@
           <!-- Data from the API -->
           <!-- TODO : Add auto scrolling -->
           <!-- TODO : Add loading state -->
+          <div id="news-card-template" class="rounded-xl p-4 shadow-md bg-slate-100">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full h-7 rounded-md bg-slate-400 animate-pulse"></p>
+              <div class="w-full space-y-1">
+                <p class="w-full h-4 rounded-md bg-slate-400 animate-pulse"></p>
+                <p class="w-[80%] h-4 rounded-md bg-slate-400 animate-pulse"></p>
+              </div>
+            </div>
+
+          </div>
+          <div id="news-card-template" class="rounded-xl p-4 shadow-md bg-slate-100">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full h-7 rounded-md bg-slate-400 animate-pulse"></p>
+              <div class="w-full space-y-1">
+                <p class="w-full h-4 rounded-md bg-slate-400 animate-pulse"></p>
+                <p class="w-[80%] h-4 rounded-md bg-slate-400 animate-pulse"></p>
+              </div>
+            </div>
+
+          </div>
+          <div id="news-card-template" class="rounded-xl p-4 shadow-md bg-slate-100">
+            <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
+              <p class="w-full h-7 rounded-md bg-slate-400 animate-pulse"></p>
+              <div class="w-full space-y-1">
+                <p class="w-full h-4 rounded-md bg-slate-400 animate-pulse"></p>
+                <p class="w-[80%] h-4 rounded-md bg-slate-400 animate-pulse"></p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
         <div class="flex items-end w-fit">
           <a class="text-accent hover:text-sky-500 lg:mr-[80px]" href="/template/index.html?id=0?category=news">
@@ -315,6 +412,25 @@
 
   <div id="director-message" class="container mx-auto my-10">
     <!-- Data from API -->
+    <div class="flex flex-col space-y-6 rounded-lg bg-slate-100 p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+      <div class="h-32 w-40 rounded-xl bg-slate-300 animate-pulse"></div>
+      <div id="content" class="flex flex-col space-y-4 w-full">
+        <div class="flex space-x-4 items-center justify-start group">
+          <div class="bg-slate-300 animate-pulse rounded-lg w-full max-w-md h-10"></div>
+          <div class="bg-slate-300 h-10 w-10 animate-pulse rounded-lg"></div>
+        </div>
+        <div class="bg-slate-300 animate-pulse rounded-lg w-full max-w-md h-5"></div>
+        <div class="space-y-1">
+          <div class="bg-slate-300 animate-pulse rounded-lg w-full h-5"></div>
+          <div class="bg-slate-300 animate-pulse rounded-lg w-full h-5"></div>
+          <div class="bg-slate-300 animate-pulse rounded-lg w-[80%] h-5"></div>
+        </div>
+
+        <div class="mt-auto bg-slate-300 animate-pulse rounded-lg w-14 h-4">
+          <div class="bg-slate-300 animate-pulse rounded-lg w-14 h-4"></div>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- === Admission Section Starts === -->
 
@@ -331,28 +447,28 @@
           </span>
         </div>
         <div class="flex flex-col gap-5">
-          <a href="/admissions/index.html">
+          <a href="/admissions/index.html#btech">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">B.Tech</p>
               <p class="text-lg text-slate-500">Undergraduate Program</p>
             </div>
           </a>
-          <a href="/admissions/mtech_ccmt.html">
+          <a href="/admissions/index.html#mtech">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">M.Tech</p>
               <p class="text-lg text-slate-500">Postgraduate Program</p>
             </div>
           </a>
-          <a href="/admissions/phd.html">
+          <a href="/admissions/index.html#phd">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">PhD</p>
               <p class="text-lg text-slate-500">Doctrate Program</p>
             </div>
           </a>
-          <a href="/admissions/mba.html">
+          <a href="/admissions/index.html#mba">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">Others</p>
@@ -391,6 +507,21 @@
           <div class="w-full">
             <div id="notice" class="w-full notice-content px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
               <ul id="updates" class="w-full flex list-disc flex-col justify-between divide-y-2">
+                <div class="inline-flex flex-col items-start justify-start space-y-4">
+                  <a href="/template/index.html?id=${e._id}?category=${tabName}"
+                    class="text-xl font-semibold text-accent line-clamp-3">
+                    ${title}
+                  </a>
+
+                  <div id="date-tag" class="inline-flex items-center justify-start space-x-2">
+                    <span class="material-symbols-outlined" style="font-size: 24px">
+                      calendar_month
+                    </span>
+                    <p class="text-lg text-dark-purple/80">
+
+                    </p>
+                  </div>
+                </div>
               </ul>
               <div class="bg-white sticky bottom-0 whitespace-nowrap pt-2 -ml-4 pl-4">
 
@@ -450,6 +581,69 @@
             onclick="slideCards(this,'left')"></i>
           <div id="slides" class="scrollbar-hide flex space-x-6 overflow-x-scroll pl-1 pt-8 scroll-smooth h-[25rem]">
             <!-- Data from API -->
+            <div id="card-template"
+              class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent h-full w-60">
+              <div class="flex h-full w-full flex-col p-2.5">
+                <div class="h-44 basis-full w-full bg-slate-300 animate-pulse rounded-lg "></div>
+                <div class="flex flex-col p-4 basis-full">
+                  <div>
+                    <p class="w-[50%] h-5 rounded-lg bg-slate-300 animate-pulse">
+
+                    </p>
+                    <div class="space-y-1 mt-5">
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                    </div>
+                  </div>
+                  <div class="pt-5 mt-auto whitespace-nowrap">
+                    <div class="bg-slate-300 animate-pulse w-[50%] h-5 rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="card-template"
+              class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent h-full w-60">
+              <div class="flex h-full w-full flex-col p-2.5">
+                <div class="h-44 basis-full w-full bg-slate-300 animate-pulse rounded-lg "></div>
+                <div class="flex flex-col p-4 basis-full">
+                  <div>
+                    <p class="w-[50%] h-5 rounded-lg bg-slate-300 animate-pulse">
+
+                    </p>
+                    <div class="space-y-1 mt-5">
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                    </div>
+                  </div>
+                  <div class="pt-5 mt-auto whitespace-nowrap">
+                    <div class="bg-slate-300 animate-pulse w-[50%] h-5 rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="card-template"
+              class="flex flex-col overflow-hidden rounded-xl bg-light-purple shadow-xl border-t-4 border-b-4 border-accent h-full w-60">
+              <div class="flex h-full w-full flex-col p-2.5">
+                <div class="h-44 basis-full w-full bg-slate-300 animate-pulse rounded-lg "></div>
+                <div class="flex flex-col p-4 basis-full">
+                  <div>
+                    <p class="w-[50%] h-5 rounded-lg bg-slate-300 animate-pulse">
+
+                    </p>
+                    <div class="space-y-1 mt-5">
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                      <p class="w-full h-5 rounded-lg animate-pulse bg-slate-300"></p>
+                    </div>
+                  </div>
+                  <div class="pt-5 mt-auto whitespace-nowrap">
+                    <div class="bg-slate-300 animate-pulse w-[50%] h-5 rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <i class="fa-solid fa-angle-right self-center p-4 text-2xl cursor-pointer"
             onclick="slideCards(this,'right')"></i>
@@ -462,10 +656,23 @@
         </div>
       </div>
 
-      <a href="/alumni/alumni.html" title="Alumni Site" id="testimonial"
-        class="md:col-start-1 md:col-end-3 md:row-start-3 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 hover:ring-4 transition-all duration-300 gap-5 ring-accent">
+      <div title="Alumni Site" id="testimonial"
+        class="grid grid-cols-1 grid-rows-1 md:col-start-1 md:col-end-3 md:row-start-3 md:mr-6 bg-white">
         <!-- Data from API -->
-      </a>
+        <!-- <div class="card-container">
+          <div class="card">
+            <div class="card-contents card-front">
+              <div class="card-depth" id="testimonial">
+
+              </div>
+              <div class="card-contents card-back">
+                <div class="card-depth">
+
+                </div>
+              </div>
+            </div>
+          </div> -->
+      </div>
       <div id="publications"
         class="md:col-start-3 md:col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg">
         <div class="flex flex-col gap-3 mb-8">
@@ -741,8 +948,7 @@
 
   <div class="base-image hidden overflow-hidden lg:block"></div>
   <!-- === LIFE AT NITJ Ends === -->
-  <!-- === FOOTER Starts === -->
-  <!-- === FOOTER Ends === -->
+
 
   <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
   <script type="text/javascript">
@@ -788,8 +994,8 @@
   <script type="module" src="/js/app.js"></script>
   <!-- <script type="module" src="./js/navbar.js"></script> -->
   <script src="/js/footer.js"></script>
-  <script src="/common template/footer.js"></script>
-  <script src="/common template/helper.js"></script>
+  <script src="/template/footer.js"></script>
+  <script src="/template/helper.js"></script>
   <!-- <script type="module" src="./js/navbar-mobile.js"></script> -->
 
 </html>

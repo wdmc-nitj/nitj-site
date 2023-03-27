@@ -1,307 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anymous"
-      referrerpolicy="-referrer"
-    />
-<link rel="stylesheet" href="/style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../public/assets/images/logo_250.png"
-    />
-    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
-    <!-- Google Fonts  -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <!-- CSS linking -->
-    <link rel="stylesheet" href="../style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <style>
-      /* Customizing the Scrollbar */
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anymous" referrerpolicy="-referrer" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/x-icon" href="../public/assets/images/logo_250.png" />
+  <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- CSS linking -->
+  <link rel="stylesheet" href="../style.css" />
 
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
-      }
+  <style>
+    /* Customizing the Scrollbar */
 
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+    }
 
-      ::-webkit-resizer {
-        background-color: #ffffff;
-      }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        border-radius: 10px;
-      }
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
 
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: hsla(201, 96%, 26%);
-        border-radius: 10px;
-      }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #212121;
-      }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: hsla(201, 96%, 26%);
+      border-radius: 10px;
+    }
 
-      /* Gallery Effects */
-      .box {
-        flex: 1;
-        overflow: hidden;
-        transition: 0.5s;
-        line-height: 0;
-      }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #212121;
+    }
 
-      .box > img {
-        width: 100%;
-        height: 100%;
-        border: 0.2rem solid white;
-        border-radius: 8px;
-        -o-object-fit: cover;
-        object-fit: cover;
-        transition: ease 0.75s;
-      }
+    /* Gallery Effects */
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      line-height: 0;
+    }
 
-      .box:hover {
-        flex: 1 1 30%;
-        /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
-        z-index: 1;
-        cursor: pointer;
-      }
+    .box>img {
+      width: 100%;
+      height: 100%;
+      border: 0.2rem solid white;
+      border-radius: 8px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: ease 0.75s;
+    }
 
-      .box:hover > img {
-        opacity: 1;
-        width: 100%;
-        height: 100%;
-      }
+    .box:hover {
+      flex: 1 1 30%;
+      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+      z-index: 1;
+      cursor: pointer;
+    }
 
-      .base-image {
-        margin-top: 40px;
-        background-image: url("../public/assets/images/nitj3.jpg"),
-          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-        mask-image: linear-gradient(0deg, white, white, white, transparent);
-        -webkit-mask-image: linear-gradient(
-          0deg,
+    .box:hover>img {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .base-image {
+      margin-top: 40px;
+      background-image: url("../public/assets/images/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      mask-image: linear-gradient(0deg, white, white, white, transparent);
+      -webkit-mask-image: linear-gradient(0deg,
           white,
           white,
           white,
-          transparent
-        );
-        background-color: #cccccc;
-        height: 400px;
-        background-position: 0% 28%;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+          transparent);
+      background-color: #cccccc;
+      height: 400px;
+      background-position: 0% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-      .base-image-2 {
-        margin-top: 40px;
-        background-image: url("public/assets/images/nitj3.jpg"),
-          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-        background-color: #cccccc;
-        height: 300px;
-        background-position: 58% 28%;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+    .base-image-2 {
+      margin-top: 40px;
+      background-image: url("public/assets/images/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      background-color: #cccccc;
+      height: 300px;
+      background-position: 58% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-      .main-shadow {
-        text-shadow: rgb(0 0 0) 6px -1px 5px;
-      }
+    .main-shadow {
+      text-shadow: rgb(0 0 0) 6px -1px 5px;
+    }
 
-      .carousel-open:checked + .carousel-item {
-        position: static;
-        opacity: 100;
-      }
+    .carousel-open:checked+.carousel-item {
+      position: static;
+      opacity: 100;
+    }
 
-      .carousel-item {
-        -webkit-transition: opacity 0.9s ease-in-out;
-        transition: opacity 1s ease-in-out 0.2s;
-      }
+    .carousel-item {
+      -webkit-transition: opacity 0.9s ease-in-out;
+      transition: opacity 1s ease-in-out 0.2s;
+    }
 
-      #carousel-1:checked ~ .control-1,
-      #carousel-2:checked ~ .control-2,
-      #carousel-3:checked ~ .control-3,
-      #carousel-4:checked ~ .control-4 {
-        display: block;
-      }
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3,
+    #carousel-4:checked~.control-4 {
+      display: block;
+    }
 
-      .carousel-indicators {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        bottom: 2%;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 10;
-      }
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
 
-      #menu .menu-content ul li.selected a {
-        color: hsla(201, 96%, 26%);
-        font-weight: bold;
-        font-size: 1.5rem;
-      }
+    #menu .menu-content ul li.selected a {
+      color: hsla(201, 96%, 26%);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
 
-      #menu .menu-content .extra-links a.extra-selected {
-        font-weight: 600;
-        color: var(--dark);
-      }
-      .titlebg {
-        background: linear-gradient(
-            90.09deg,
-            rgba(0, 0, 0, 0.7) 0.08%,
-            rgba(255, 255, 255, 0) 99.11%
-          ),
-          url(../admin/img/about_top.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
-    </style>
-  </head>
+    #menu .menu-content .extra-links a.extra-selected {
+      font-weight: 600;
+      color: var(--dark);
+    }
 
-  <body class="font-body text-dark-purple scroll-smooth">
-    <script src="/common template/header.js" type="module"></script>
-    <div
-      class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32"
-    >
-      <p
-        class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]"
-      >
-    Student Life at NITJ
-      </p>
-    </div>
-    <nav
-      class="flex px-2 lg:px-[11%] bg-gray-200 py-[8px] text-black"
-      aria-label="Breadcrumb"
-    >
-      <ol class="inline-flex items-center">
-        <li class="inline-flex items-center">
-          <a
-            href="https://nitj.netlify.app/"
-            class="inline-flex items-center text-sm font-medium hover:text-gray-900"
-          >
-            <a href="#" class="text-lg font-medium ml-2">Home</a>
-          </a>
-        </li>
-        <li aria-current="page">
-          <div class="inline-flex items-center">
-            <i
-              style="
+    .titlebg {
+      background: linear-gradient(90.09deg,
+          rgba(0, 0, 0, 0.7) 0.08%,
+          rgba(255, 255, 255, 0) 99.11%),
+        url(../admin/img/about_top.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body class="font-body text-dark-purple scroll-smooth">
+  <script src="/template/header.js" type="module"></script>
+  <script src="/template/helper.js"></script>
+  <div
+    class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
+    <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
+      Student Life at NITJ
+    </p>
+  </div>
+  <nav class="flex px-2 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center">
+      <li class="inline-flex items-center">
+        <a href="https://nitj.netlify.app/" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+          <a href="#" class="text-lg font-medium ml-2">Home</a>
+        </a>
+      </li>
+      <li aria-current="page">
+        <div class="inline-flex items-center">
+          <i style="
                 color: rgb(128, 128, 128);
                 font-size: 12px;
                 margin-left: 12px;
-              "
-              class="fa-solid fa-angle-right ml-2"
-            ></i>
-            <a href="#" class="text-lg font-medium ml-2">Admissions</a>
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="inline-flex items-center">
-            <i
-              style="
+              " class="fa-solid fa-angle-right ml-2"></i>
+          <a href="#" class="text-lg font-medium ml-2">Admissions</a>
+        </div>
+      </li>
+      <li aria-current="page">
+        <div class="inline-flex items-center">
+          <i style="
                 color: rgb(128, 128, 128);
                 font-size: 12px;
                 margin-left: 12px;
-              "
-              class="fa-solid fa-angle-right ml-2"
-            ></i>
-            <a href="#" class="text-lg font-medium ml-2"
-              >Prospective Students</a
-            >
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="inline-flex items-center">
-            <i
-              style="
+              " class="fa-solid fa-angle-right ml-2"></i>
+          <a href="#" class="text-lg font-medium ml-2">Prospective Students</a>
+        </div>
+      </li>
+      <li aria-current="page">
+        <div class="inline-flex items-center">
+          <i style="
                 color: rgb(128, 128, 128);
                 font-size: 12px;
                 margin-left: 12px;
-              "
-              class="fa-solid fa-angle-right ml-2"
-            ></i>
-            <a href="#" class="text-lg font-medium ml-2">Student Life at NITJ</a>
-          </div>
-        </li>
-      </ol>
-    </nav>
-<div class="">
+              " class="fa-solid fa-angle-right ml-2"></i>
+          <a href="#" class="text-lg font-medium ml-2">Student Life at NITJ</a>
+        </div>
+      </li>
+    </ol>
+  </nav>
+  <div class="py-[48px]">
 
     <div class="mx-auto w-[90%] my-4 rounded-lg p-2 border-2 border-accent shadow-lg">
-<div class="text-[24px] font-semibold text-accent">Beautiful campus</div>
-<div>
-    The Campus of NITJ is quite beautiful. There is enough greenery in the campus. It has a big ground, basketball court, volleyball court, badminton courts in hostels. The IT building and administrative blocks are also good to look at. Hostel facility is good food is also good. There are a total 6 small hostels along with 3 mega hostels 3 are under construction. There are separate mess for vegetarian and non vegetarian students and they have option as well special food is offered twice a week. The campus has a very large gym as well.
-</div>
-<div class="text-accent font-semibold">
- <a href="/admin/virtualtour.html">   Campus Tour <i class="fa-solid fa-arrow-up-right-from-square"></i>
-</a>             
-</div>
+      <div class="text-[24px] font-semibold text-accent">Beautiful campus</div>
+      <div>
+        The Campus of NITJ is quite beautiful. There is enough greenery in the campus. It has a big ground, basketball
+        court, volleyball court, badminton courts in hostels. The IT building and administrative blocks are also good to
+        look at. Hostel facility is good food is also good. There are a total 6 small hostels along with 3 mega hostels
+        3 are under construction. There are separate mess for vegetarian and non vegetarian students and they have
+        option as well special food is offered twice a week. The campus has a very large gym as well.
+      </div>
+      <div class="text-accent font-semibold">
+        <a href="/admin/virtualtour.html"> Campus Tour <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
     </div>
 
     <div class="mx-auto w-[90%] my-4 rounded-lg p-2 border-2 border-accent shadow-lg">
-        <div class="text-[24px] font-semibold text-accent">Cultural & Technical Fest</div>
-       <div>
-        Utkansh & Techniti, the cultural & technical fests of NITJ attract colleges from the whole of North India. You get a lot of opportunity to participate in various fun & technical activities during these fests.
-       </div>
-       <div class="text-accent font-semibold">
-        <a href="">   Utkansh <i class="fa-solid fa-arrow-up-right-from-square"></i>
-       </a>             
-       </div>
-            </div>
-            <div class="mx-auto w-[90%] my-4 rounded-lg p-2 border-2 border-accent shadow-lg">
-                <div class="text-[24px] font-semibold text-accent">Placements</div>
-              <div>
-                The placements at NITJ are comparatively good for most of the branches. CS had the best placements followed by mechanical and even textile technology. So even if you are an average student you can get decent enough placement. Around 70% of students get placed in my course the highest package was 45 LPA offered by Microsoft and the lowest package was 4 LPA Average package was 8.57 in 2020 Microsoft, amazon, Deloitte, optum, Reliance Life industries, Samsung, Honda, adobe etc.
-              </div>
-              <div class="text-accent font-semibold">
-                <a href=""> Placements <i class="fa-solid fa-arrow-up-right-from-square"></i>
-               </a>             
-               </div>
-                    </div>
-                    <div class="mx-auto w-[90%] my-4 rounded-lg p-2 border-2 border-accent shadow-lg">
-                        <div class="text-[24px] font-semibold text-accent">No Ragging</div>
-<div>
-    There is almost no ragging at NITJ. There is separate hostel for 1st year students to stop ragging.
-</div>
-<div class="text-accent font-semibold">
-    <a href=""> Anti-Ragging Policy <i class="fa-solid fa-arrow-up-right-from-square"></i>
-   </a>             
-   </div>
-                            </div>
+      <div class="text-[24px] font-semibold text-accent">Cultural & Technical Fest</div>
+      <div>
+        Utkansh & Techniti, the cultural & technical fests of NITJ attract colleges from the whole of North India. You
+        get a lot of opportunity to participate in various fun & technical activities during these fests.
+      </div>
+      <div class="text-accent font-semibold">
+        <a href=""> Utkansh <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
     </div>
+    <div class="mx-auto w-[90%] my-4 rounded-lg p-2 border-2 border-accent shadow-lg">
+      <div class="text-[24px] font-semibold text-accent">Placements</div>
+      <div>
+        The placements at NITJ are comparatively good for most of the branches. CS had the best placements followed by
+        mechanical and even textile technology. So even if you are an average student you can get decent enough
+        placement. Around 70% of students get placed in my course the highest package was 45 LPA offered by Microsoft
+        and the lowest package was 4 LPA Average package was 8.57 in 2020 Microsoft, amazon, Deloitte, optum, Reliance
+        Life industries, Samsung, Honda, adobe etc.
+      </div>
+      <div class="text-accent font-semibold">
+        <a href=""> Placements <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+    <div class="mx-auto w-[90%] my-4 rounded-lg p-2 border-2 border-accent shadow-lg">
+      <div class="text-[24px] font-semibold text-accent">No Ragging</div>
+      <div>
+        There is almost no ragging at NITJ. There is separate hostel for 1st year students to stop ragging.
+      </div>
+      <div class="text-accent font-semibold">
+        <a href=""> Anti-Ragging Policy <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
-    <div class=" mx-4 my-10">
+  <div class=" mx-4 my-10">
     <div class="mb-10 ml-[4%] flex items-center justify-start space-x-6 group">
       <h1 class="uppercase text-4xl font-semibold w-fit text-accent">
         Clubs & <span class="text-dark-purple">Societies</span>
@@ -313,139 +284,143 @@
     </div>
 
 
-        <div class="flex gap-6 flex-wrap justify-center align-middle">
-          <div id="club-card " class=" md:w-[45%] w-full bg-accent rounded-xl bg-white shadow-lg flex">
-            <div class=" w-[30%]">
-              <img  src="../public/assets/images/DSC_Logo.svg" alt="">
+    <div class="flex gap-6 flex-wrap justify-center align-middle">
+      <div id="club-card " class=" md:w-[45%] w-full bg-accent rounded-xl bg-white shadow-lg flex">
+        <div class=" w-[30%]">
+          <img src="../public/assets/images/DSC_Logo.svg" alt="">
+        </div>
+        <div class="flex -mt-7 flex-col p-6 w-[60%]">
+          <div class="flex flex-col items-start justify-start space-y-3">
+            <h4 class="text-2xl font-bold uppercase">DSC NITJ</h4>
+            <div
+              class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+              <p class="text-xs font-bold uppercase text-purple-500">
+                Development Club
+              </p>
             </div>
-              <div class="flex -mt-7 flex-col p-6 w-[60%]">
-                <div class="flex flex-col items-start justify-start space-y-3">
-                  <h4 class="text-2xl font-bold uppercase">DSC NITJ</h4>
-                  <div
-                    class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
-                    <p class="text-xs font-bold uppercase text-purple-500">
-                      Development Club
-                    </p>
-                  </div>
-                  <p class="w-[90%] leading-5">
-                    The club is all about robotics. This club serves as a
-                    platform for students to enhance their robotic skills
-                    and contribute for the development of the college.
-                  </p>
-                </div>
-                <div class="mt-5 flex items-center justify-start space-x-3">
-                  <a class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
-                    <span>&rarr;</span></a>
-                </div>
-              </div>
-            </div>
-            <div id="club-card " class="md:w-[45%] w-full rounded-xl bg-white shadow-lg flex">
-              <div class=" w-[30%]">
-                <img  src="../public/assets/images/rtist_logo.png" alt="">
-              </div>
-                <div class="flex -mt-7 flex-col p-6 w-[60%]">
-                  <div class="flex flex-col items-start justify-start space-y-3">
-                    <h4 class="text-2xl font-bold uppercase">RTist</h4>
-                    <div
-                      class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
-                      <p class="text-xs font-bold uppercase text-purple-500">
-                        Robotics Club
-                      </p>
-                    </div>
-                    <p class="w-[90%] leading-5">
-                      The club is all about robotics. This club serves as a
-                        platform for students to enhance their robotic skills
-                        and contribute for the development of the college.
-                    </p>
-                  </div>
-                  <div class="mt-5 flex items-center justify-start space-x-3">
-                    <a href="../clubs/rtist.html" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
-                      <span>&rarr;</span></a>
-                  </div>
-                </div>
-              </div>
-              <div id="club-card " class="md:w-[45%] w-full rounded-xl bg-white shadow-lg flex">
-                <div class=" my-auto w-[30%]">
-                  <img  src="../public/assets/images/danceClub.png" alt="">
-                </div>
-                  <div class="flex -mt-7 flex-col p-6 w-[60%]">
-                    <div class="flex flex-col items-start justify-start space-y-3">
-                      <h4 class="text-2xl font-bold uppercase">Criminalz Crew</h4>
-                      <div
-                        class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
-                        <p class="text-xs font-bold uppercase text-purple-500">
-                          Dance Club
-                        </p>
-                      </div>
-                      <p class="w-[90%] leading-5">
-                        The club is all about robotics. This club serves as a platform
-                        for students to enhance their robotic skills and contribute for the development of the
-                        college.
-                      </p>
-                    </div>
-                    <div class="mt-5 flex items-center justify-start space-x-3">
-                      <a href="../clubs/bharat_dhwani.html" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
-                        <span>&rarr;</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div id="club-card " class="md:w-[45%] w-full rounded-xl bg-white shadow-lg flex">
-                  <div class=" w-[30%]">
-                    <img  src="../public/assets/images/mediacell_logo.png" alt="">
-                  </div>
-                    <div class="flex -mt-7 flex-col p-6 w-[60%]">
-                      <div class="flex flex-col items-start justify-start space-y-3">
-                        <h4 class="text-2xl font-bold uppercase">Mediacell</h4>
-                        <div
-                          class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
-                          <p class="text-xs font-bold uppercase text-purple-500">
-                            Reporting Club
-                          </p>
-                        </div>
-                        <p class="w-[90%] leading-5">
-                          The club is all about robotics. This club serves as a platform
-                        for students to enhance their robotic skills and contribute for the development of the
-                        college.
-                        </p>
-                      </div>
-                      <div class="mt-5 flex items-center justify-start space-x-3">
-                        <a href="../clubs/" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
-                          <span>&rarr;</span></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="club-card " class="md:w-[45%]  w-full rounded-xl bg-white shadow-lg flex">
-                    <div class=" my-auto w-[30%]">
-                      <img  src="https://akm-img-a-in.tosshub.com/aajtak/images/story/201806/yoga_c_1528875924_749x421.jpeg?size=1200:675" alt="">
-                    </div>
-                      <div class="flex -mt-7 flex-col p-6 w-[60%]">
-                        <div class="flex flex-col items-start justify-start space-y-3">
-                          <h4 class="text-2xl font-bold uppercase">Yoga</h4>
-                          <div
-                            class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
-                            <p class="text-xs font-bold uppercase text-purple-500">
-                              Yoga Club
-                            </p>
-                          </div>
-                          <p class="w-[90%] leading-5">
-                            The club is all about robotics. This club serves as a platform
-                          for students to enhance their robotic skills and contribute for the development of the
-                          college.
-                          </p>
-                        </div>
-                        <div class="mt-5 flex items-center justify-start space-x-3">
-                          <a href="../clubs/yoga.html" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
-                            <span>&rarr;</span></a>
-                        </div>
-                      </div>
-                    </div>
+            <p class="w-[90%] leading-5">
+              The club is all about robotics. This club serves as a
+              platform for students to enhance their robotic skills
+              and contribute for the development of the college.
+            </p>
+          </div>
+          <div class="mt-5 flex items-center justify-start space-x-3">
+            <a class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+              <span>&rarr;</span></a>
+          </div>
         </div>
       </div>
-    <!-- <div class="base-image hidden overflow-hidden lg:block"></div> -->
-    <div class="relative bottom-0">
-      <script src="../common template/footer.js"></script>
+      <div id="club-card " class="md:w-[45%] w-full rounded-xl bg-white shadow-lg flex">
+        <div class=" w-[30%]">
+          <img src="../public/assets/images/rtist_logo.png" alt="">
+        </div>
+        <div class="flex -mt-7 flex-col p-6 w-[60%]">
+          <div class="flex flex-col items-start justify-start space-y-3">
+            <h4 class="text-2xl font-bold uppercase">RTist</h4>
+            <div
+              class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+              <p class="text-xs font-bold uppercase text-purple-500">
+                Robotics Club
+              </p>
+            </div>
+            <p class="w-[90%] leading-5">
+              The club is all about robotics. This club serves as a
+              platform for students to enhance their robotic skills
+              and contribute for the development of the college.
+            </p>
+          </div>
+          <div class="mt-5 flex items-center justify-start space-x-3">
+            <a href="../clubs/rtist.html" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+              <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="club-card " class="md:w-[45%] w-full rounded-xl bg-white shadow-lg flex">
+        <div class=" my-auto w-[30%]">
+          <img src="../public/assets/images/danceClub.png" alt="">
+        </div>
+        <div class="flex -mt-7 flex-col p-6 w-[60%]">
+          <div class="flex flex-col items-start justify-start space-y-3">
+            <h4 class="text-2xl font-bold uppercase">Criminalz Crew</h4>
+            <div
+              class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+              <p class="text-xs font-bold uppercase text-purple-500">
+                Dance Club
+              </p>
+            </div>
+            <p class="w-[90%] leading-5">
+              The club is all about robotics. This club serves as a platform
+              for students to enhance their robotic skills and contribute for the development of the
+              college.
+            </p>
+          </div>
+          <div class="mt-5 flex items-center justify-start space-x-3">
+            <a href="../clubs/bharat_dhwani.html"
+              class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+              <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="club-card " class="md:w-[45%] w-full rounded-xl bg-white shadow-lg flex">
+        <div class=" w-[30%]">
+          <img src="../public/assets/images/mediacell_logo.png" alt="">
+        </div>
+        <div class="flex -mt-7 flex-col p-6 w-[60%]">
+          <div class="flex flex-col items-start justify-start space-y-3">
+            <h4 class="text-2xl font-bold uppercase">Mediacell</h4>
+            <div
+              class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+              <p class="text-xs font-bold uppercase text-purple-500">
+                Reporting Club
+              </p>
+            </div>
+            <p class="w-[90%] leading-5">
+              The club is all about robotics. This club serves as a platform
+              for students to enhance their robotic skills and contribute for the development of the
+              college.
+            </p>
+          </div>
+          <div class="mt-5 flex items-center justify-start space-x-3">
+            <a href="../clubs/" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+              <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="club-card " class="md:w-[45%]  w-full rounded-xl bg-white shadow-lg flex">
+        <div class=" my-auto w-[30%]">
+          <img
+            src="https://akm-img-a-in.tosshub.com/aajtak/images/story/201806/yoga_c_1528875924_749x421.jpeg?size=1200:675"
+            alt="">
+        </div>
+        <div class="flex -mt-7 flex-col p-6 w-[60%]">
+          <div class="flex flex-col items-start justify-start space-y-3">
+            <h4 class="text-2xl font-bold uppercase">Yoga</h4>
+            <div
+              class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+              <p class="text-xs font-bold uppercase text-purple-500">
+                Yoga Club
+              </p>
+            </div>
+            <p class="w-[90%] leading-5">
+              The club is all about robotics. This club serves as a platform
+              for students to enhance their robotic skills and contribute for the development of the
+              college.
+            </p>
+          </div>
+          <div class="mt-5 flex items-center justify-start space-x-3">
+            <a href="../clubs/yoga.html" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+              <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="../js/app.js"></script>
+  </div>
+  <!-- <div class="base-image hidden overflow-hidden lg:block"></div> -->
+  <div class="relative bottom-0">
+    <script src="../template/footer.js"></script>
+  </div>
+  <script type="module" src="../js/app.js"></script>
 
-    </body>
-    </html>
+</body>
+
+</html>

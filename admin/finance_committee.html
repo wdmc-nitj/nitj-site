@@ -46,7 +46,7 @@
         }
 
         .material-symbols-outlined {
-            font-variation-settings: "FILL"0, "wght"300, "grad"0, "opzs"20;
+            font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
         }
 
         ::-webkit-scrollbar {
@@ -90,13 +90,15 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Finance Committee</p>
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Finance Committee
+                </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
                 <ol class="container inline-flex items-center">
@@ -315,19 +317,19 @@
         </div>
     </div>
     <script src="app.js"></script>
-    <script src="../common template/footer.js"></script>
+    <script src="../template/footer.js"></script>
 
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639ff0f6f6453929c05e5ceb"
+                "https://wdmc-vsj1.onrender.com/administration?id=639ff0f6f6453929c05e5ceb"
             );
             result = await result.json();
             console.log(result);
             document.getElementById("senate_1").innerHTML = `
                     <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
-                            <p class="text-sm text-gray-500">${result[0].department}</p>
+                            <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology Jalandhar</p>
                             <p class="text-sm text-gray-500">${result[0].messageText}</p>
                                         
                  `;
@@ -337,7 +339,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639ff130f6453929c05e5ced"
+                "https://wdmc-vsj1.onrender.com/administration?id=639ff130f6453929c05e5ced"
             );
             result = await result.json();
             console.log(result);
@@ -354,7 +356,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639ff153f6453929c05e5cef"
+                "https://wdmc-vsj1.onrender.com/administration?id=639ff153f6453929c05e5cef"
             );
             result = await result.json();
             console.log(result);
@@ -371,7 +373,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639ff19af6453929c05e5cf1"
+                "https://wdmc-vsj1.onrender.com/administration?id=639ff19af6453929c05e5cf1"
             );
             result = await result.json();
             console.log(result);
@@ -388,7 +390,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fede4f6453929c05e5cdf"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fede4f6453929c05e5cdf"
             );
             result = await result.json();
             console.log(result);
@@ -405,7 +407,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=63ad7c9df8af1aa1bc3dac71"
+                "https://wdmc-vsj1.onrender.com/administration?id=63ad7c9df8af1aa1bc3dac71"
             );
             result = await result.json();
             console.log(result);
@@ -421,7 +423,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639feee7f6453929c05e5ce1"
+                "https://wdmc-vsj1.onrender.com/administration?id=639feee7f6453929c05e5ce1"
             );
             result = await result.json();
             console.log(result);
@@ -431,7 +433,7 @@
                             </div>
                 <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
-                            <p class="text-sm text-gray-500">${result[0].department}</p>
+                            <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology Jalandhar</p>
                             
                `;
         }
@@ -440,7 +442,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fef23f6453929c05e5ce3"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fef23f6453929c05e5ce3"
             );
             result = await result.json();
             console.log(result);
@@ -459,7 +461,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=63ad7e5af8af1aa1bc3dac86"
+                "https://wdmc-vsj1.onrender.com/administration?id=63ad7e5af8af1aa1bc3dac86"
             );
             result = await result.json();
             console.log(result);
@@ -478,7 +480,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fefa3f6453929c05e5ce7"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fefa3f6453929c05e5ce7"
             );
             result = await result.json();
             console.log(result);
@@ -497,7 +499,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fefd3f6453929c05e5ce9"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fefd3f6453929c05e5ce9"
             );
             result = await result.json();
             console.log(result);
@@ -508,6 +510,7 @@
                 <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                             <p class="text-sm">${result[0].designation}</p>
                             <p class="text-sm text-gray-500">${result[0].department}</p>
+                            <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology Jalandhar</p>
                             
                `;
         }
@@ -516,17 +519,20 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fede4f6453929c05e5cdf"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fede4f6453929c05e5cdf"
             );
             result = await result.json();
             console.log(result);
             document.getElementById("fc_6").innerHTML = `
-            <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                                <p class="text-sm text-gray-500 my-1">${result[0].messageText}    </p>
-                            </div>
+            <div class="w-full flex flex-col items-start mb-8">
+                            <p class="font2 font-medium text-[28px] lg:text-[44px]">
+                                Member Secretary
+                            </p>
+                            <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+                        </div>
                 <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
-                            <p class="text-sm">${result[0].designation}</p>
-                            <p class="text-sm text-gray-500">${result[0].department}</p>
+                            <p class="text-sm">Registrar (I/C) & Member Secretary (Finance Committee),</p>
+                            <p class="text-sm text-gray-500">Dr B R Ambedkar National Institute of Technology Jalandhar</p>
                             
                `;
         }
@@ -535,7 +541,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration/"
+                "https://wdmc-vsj1.onrender.com/administration/"
             );
             result = await result.json();
             console.log(result);
@@ -554,7 +560,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639febf6f6453929c05e5cd3"
+                "https://wdmc-vsj1.onrender.com/administration?id=639febf6f6453929c05e5cd3"
             );
             result = await result.json();
             console.log(result);
@@ -573,7 +579,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fec4cf6453929c05e5cd5"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fec4cf6453929c05e5cd5"
             );
             result = await result.json();
             console.log(result);
@@ -592,7 +598,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fec9bf6453929c05e5cd7"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fec9bf6453929c05e5cd7"
             );
             result = await result.json();
             console.log(result);
@@ -611,7 +617,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fecf8f6453929c05e5cd9"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fecf8f6453929c05e5cd9"
             );
             result = await result.json();
             console.log(result);
@@ -630,7 +636,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fed29f6453929c05e5cdb"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fed29f6453929c05e5cdb"
             );
             result = await result.json();
             console.log(result);
@@ -649,7 +655,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fedb4f6453929c05e5cdd"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fedb4f6453929c05e5cdd"
             );
             result = await result.json();
             console.log(result);
@@ -668,7 +674,7 @@
     <script>
         async function callAPi() {
             let result = await fetch(
-                "https://wdmc.onrender.com/administration?id=639fede4f6453929c05e5cdf"
+                "https://wdmc-vsj1.onrender.com/administration?id=639fede4f6453929c05e5cdf"
             );
             result = await result.json();
             console.log(result);

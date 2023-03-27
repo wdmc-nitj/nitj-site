@@ -1,33 +1,46 @@
 // TODO : use promise.all to fetch all data at once
-const baseURL = 'https://wdmc.onrender.com'
+const baseURL = 'https://wdmc-vsj1.onrender.com'
+
+function dataFilter(apiData) {
+  const data = apiData.filter((n) => n.show === true)
+  data.sort((a, b) => {
+    return b.order - a.order
+  })
+  return data
+}
 
 fetch(`${baseURL}/news/`)
   .then((response) => response.json())
-  .then((data) => {
-    // //////////////////////
-    // Original News Card Element
-    // //////////////////////
-    // <div class="rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200">
-    //   <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
-    //     <p class="w-full text-lg font-semibold">This is a headline</p>
-    //     <p class="w-full line-clamp-2">
-    //       Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-    //       ipsum dolor sit 2
-    //     </p>
-    //   </div>
-    // </div>
-    // console.log(data)
+  .then((apiData) => {
+    const data = dataFilter(apiData)
+
     const newsCards = document.getElementById('news-cards')
+    newsCards.innerHTML = ''
     data.forEach((news) => {
       const newsCard = document.createElement('div')
       newsCard.setAttribute(
         'class',
-        'rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200'
+        `relative rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200`
       )
       newsCard.innerHTML = `
+      
             <a href="/template/index.html?id=${news._id}?category=news">
               <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
-                <p class="w-full text-lg font-semibold line-clamp-1">${news.title}</p>
+              
+              <p class="w-full text-lg font-semibold line-clamp-1">
+              ${news.new ?         
+                `
+                
+                <span class="absolute -top-1 -left-1">
+                  <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                  </span>
+                </span>
+                `: ''}  
+              ${news.title}</p>
+
                 <p class="w-full line-clamp-2">
                   ${news.desc}
                 </p>
@@ -37,9 +50,11 @@ fetch(`${baseURL}/news/`)
       newsCards.appendChild(newsCard)
     })
   })
+
 fetch(`${baseURL}/testimonial/get/all`)
   .then((response) => response.json())
-  .then((data) => {
+  .then((apidata) => {
+    const data = dataFilter(apidata)
     // console.log(data)
     // //////////////////////
     // Original Element
@@ -54,25 +69,39 @@ fetch(`${baseURL}/testimonial/get/all`)
     //      <p class='ml-2 text-sm text-gray-600 font-bold'>CEO, Vector</p>
     //    </div>
     //  </div>
+    const randNums = new Array(
+      parseInt(Math.random() * data.length),
+      parseInt(Math.random() * data.length)
+    )
     const testimonial = document.getElementById('testimonial')
-    const testimonialImg = document.createElement('img')
-    testimonialImg.src = data[0].image
-    testimonialImg.setAttribute('class', 'object-cover rounded-lg h-28 w-28')
-    const testimonialCard = document.createElement('div')
-    testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
-    testimonialCard.innerHTML = `
-    
-            <div class='text-xl flex flex-col gap-5'>
-              <p>
-                ${data[0].messageText}
-              </p>
-              <div>
-                <p class='text-lg font-bold text-accent'>- ${data[0].name}</p>
-                <p class='ml-2 text-sm text-gray-600 font-bold'>${data[0].designation}</p>
-              </div>
-            </div>
+
+    randNums.forEach((randNum) => {
+      const testimonialImg = document.createElement('img')
+      testimonialImg.src = data[randNum].image
+      testimonialImg.setAttribute('class', 'object-cover rounded-lg h-28 w-28')
+      const testimonialCard = document.createElement('div')
+      const card = document.createElement('a')
+      card.href = '/alumni/alumni.html'
+      card.setAttribute(
+        'class',
+        'col-start-1 row-start-1 col-end-2 row-end-2 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 hover:ring-4 transition-all duration-300 gap-5 ring-accent'
+      )
+      testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
+      testimonialCard.innerHTML = `
+        <div class='text-xl flex flex-col gap-5'>
+          <p>
+            ${data[randNum].messageText}
+          </p>
+          <div>
+            <p class='text-lg font-bold text-accent'>- ${data[randNum].name}</p>
+            <p class='ml-2 text-sm text-gray-600 font-bold'>${data[randNum].designation}</p>
+          </div>
+        </div>
       `
-    testimonial.append(testimonialImg, testimonialCard)
+      card.append(testimonialImg, testimonialCard)
+
+      testimonial.appendChild(card)
+    })
   })
 
 function dateManipulator(data) {
@@ -99,12 +128,11 @@ function dateManipulator(data) {
 }
 fetch(`${baseURL}/latestEvent/get/all`)
   .then((response) => response.json())
-  .then((data) => {
-    let i = 6
+  .then((APIdata) => {
+    const data = dataFilter(APIdata)
     const cards = document.getElementById('cards')
+    cards.innerHTML = ''
     data.forEach((e) => {
-      i--
-      if (i <= 0) return
       const card = document.createElement('div')
       card.setAttribute('id', 'card')
       card.setAttribute('class', 'min-h-full')
@@ -141,7 +169,8 @@ fetch(`${baseURL}/latestEvent/get/all`)
   })
 fetch(`${baseURL}/researchHighlights/get/all`)
   .then((response) => response.json())
-  .then((data) => {
+  .then((APIdata) => {
+    const data = dataFilter(APIdata)
     // ///////////////
     // Original Element
     // ///////////////
@@ -170,6 +199,7 @@ fetch(`${baseURL}/researchHighlights/get/all`)
     // </div>
 
     const cards = document.getElementById('slides')
+    cards.innerHTML = ''
     data.forEach((e) => {
       const card = document.createElement('div')
       card.setAttribute('id', 'card')
@@ -228,7 +258,7 @@ fetch(`${baseURL}/administration/get/all`)
     // </div>
 
     const directorMessage = document.getElementById('director-message')
-
+    directorMessage.innerHTML = ''
     const msg = document.createElement('div')
     msg.setAttribute(
       'class',
@@ -238,37 +268,39 @@ fetch(`${baseURL}/administration/get/all`)
     // msg.setAttribute('class', 'flex flex-col')
     msg.innerHTML = `
 
-        <div class ="basis-4/12">
-          <img src="${data[0].image}" class="basis-4/12 h-full w-full object-cover"
-              alt="Director's Image" />
-        </div>
-  <div id="content" class="flex flex-col basis-8/12 space-y-4 p-6">
+        <div class="basis-4/12">
+    <img src="${data[0].image}" class="basis-4/12 h-full w-full object-cover" alt="Director's Image" />
+</div>
+<div id="content" class="flex flex-col basis-8/12 space-y-4 p-6">
     <div class="flex space-x-4 items-center justify-start group">
-      <h1 class="text-4xl font-bold text-accent">
-        Director's <span class="text-dark-purple">Message</span>
-      </h1>
-      <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
-        style="font-size: 40px; color: var(--accent)">
-        history_edu
-      </span>
+        <h1 class="text-4xl font-bold text-accent">
+            Director's <span class="text-dark-purple">Message</span>
+        </h1>
+        <span class="material-symbols-outlined group-hover:animate-shake animate-delay" style="font-size: 40px; color: var(--accent)">
+            history_edu
+        </span>
     </div>
     <h2 class="text-xl font-medium text-dark-purple">
-      ${data[0].name}
+        ${data[0].name}
     </h2>
-    <p class = "line-clamp-3">
-    ${data[0].messageText}
-      </p>
+    <p class="line-clamp-3">
+        ${data[0].messageText}
+    </p>
     <div class="mt-auto flex whitespace-nowrap items-center justify-start space-x-3">
-      <a href = "/admin/director" class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read All &rarr;</a>
+        <a href="/admin/director" class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read All &rarr;</a>
     </div>
+</div>
 `
     directorMessage.appendChild(msg)
   })
-fetch(`${baseURL}/ranking/get/all`)
+fetch(`${baseURL}/placementStat/get/all`)
   .then((response) => response.json())
   .then((data) => {
     // console.log(data)
-    const statsData = data.map((stat) => stat.Ranking)
+    data.sort((a, b) => {
+      a.order - b.order
+    })
+    const statsData = data.map((stat) => stat.PlacementStat)
     const element = document.getElementById('placement-stats')
     // console.log(statsData)
     statsData.map((statData) => {
@@ -276,10 +308,8 @@ fetch(`${baseURL}/ranking/get/all`)
       const stat = document.createElement('div')
       stat.setAttribute('class', 'number')
       stat.innerHTML = `
-      <h1 class="text-5xl font-bold uppercase">${
-        Object.values(statData)[0]
-      }</h1>
-      <p class="text-lg uppercase">${Object.keys(statData)[0]}</p>
+      <h1 class="text-5xl font-bold uppercase">${statData.placementStatValue}</h1>
+      <p class="text-lg uppercase">${statData.placementStatName}</p>
       `
       element.appendChild(stat)
     })
@@ -287,7 +317,8 @@ fetch(`${baseURL}/ranking/get/all`)
 
 fetch(`${baseURL}/publication/get/all`)
   .then((res) => res.json())
-  .then((data) => {
+  .then((apidata) => {
+    const data = dataFilter(apidata)
     const parentDiv = document.getElementById('publication-cards')
     data.forEach((e) => {
       const content = e.Publication
@@ -314,11 +345,13 @@ fetch(`${baseURL}/publication/get/all`)
 
 fetch(`${baseURL}/club/get/all`)
   .then((res) => res.json())
-  .then((data) => {
-    console.log(data)
+  .then((apidata) => {
+    // console.log(data)
+    const data = dataFilter(apidata)
+
     const parentDiv = document.getElementById('clubs-and-socs')
     data.forEach((e) => {
-      console.log(e)
+      // console.log(e)
       // const content = e
       const div = document.createElement('div')
       div.setAttribute('id', 'club-card')
@@ -328,7 +361,8 @@ fetch(`${baseURL}/club/get/all`)
       )
       div.innerHTML = `
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-[url(${e.img})] bg-cover bg-center bg-no-repeat">
+                  <div class="w-2/5 bg-cover bg-center bg-no-repeat">
+                  <img src ='${e.img}' class="w-full h-full object-cover" alt="Club Image" />
                   </div>
                   <div class="flex flex-col p-6 w-full sm:w-3/5">
                     <div class="flex flex-col items-start justify-start space-y-3">
@@ -355,16 +389,16 @@ fetch(`${baseURL}/club/get/all`)
   })
 
 // Making the cards dynamic
-var size_images = 0;
-img_arr = [];
+var size_images = 0
+img_arr = []
 // Fetching the images in the photo gallery
 
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
-    const images = data.sort((a, b) => 0.5 - Math.random());
+    const images = data.sort((a, b) => 0.5 - Math.random())
     size_images = images.length
-    img_arr = images;
+    img_arr = images
     // const images = shuffledArray.slice(0,12)
     // console.log(data)
     const parentDiv = document.getElementById('gallery')
@@ -378,8 +412,8 @@ fetch(`${baseURL}/photoGallery/`)
     let y = 1
     images.forEach((img, key) => {
       // img.image.link
-      if(y>12){
-        return;
+      if (y > 12) {
+        return
       }
       if (i > 2) {
         i = 0
@@ -391,11 +425,8 @@ fetch(`${baseURL}/photoGallery/`)
         <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
         `
 
-
-      if(y%4 == 0 && ( window.innerWidth <= 800 )){
-      }
-      else{
-
+      if (y % 4 == 0 && window.innerWidth <= 800) {
+      } else {
         rows[i].append(imgContainer)
       }
       imgContainer.addEventListener('click', (e) => {
@@ -420,13 +451,16 @@ arrow_forward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
-    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+    if (
+      imgArray[i].image.link.toLowerCase().trim() ==
+      imgSample.src.toLowerCase().trim()
+    ) {
       if (i == imgArray.length - 1) {
         imgSample.src = imgArray[0].image.link
       } else {
         imgSample.src = imgArray[i + 1].image.link
       }
-      break;
+      break
     }
   }
 })
@@ -435,13 +469,16 @@ arrow_backward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
-    if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+    if (
+      imgArray[i].image.link.toLowerCase().trim() ==
+      imgSample.src.toLowerCase().trim()
+    ) {
       if (i == 0) {
         imgSample.src = imgArray[imgArray.length - 1].image.link
       } else {
         imgSample.src = imgArray[i - 1].image.link
       }
-      break;
+      break
     }
   }
 })

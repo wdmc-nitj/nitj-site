@@ -7,126 +7,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon and title -->
 
-    <link rel="icon" type="image/x-icon" href="./common template/img/nitj-logo.png">
+    <link rel="icon" type="image/x-icon" href="./template/img/nitj-logo.png">
     <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
 
     <!-- RESEARCH -->
     <!-- Google Fonts  -->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link rel="stylesheet" href="/style.css" />
 
 
 </head>
+<style>
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: gray;
+    }
+
+    ::-webkit-resizer {
+        background-color: #ffffff;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .font1 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .font2 {
+        font-family: 'Barlow', sans-serif;
+    }
+
+    #semi-bold {
+        font-size: 15px;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    :root {
+        --primary-color: #fff;
+        --background-color: #212121;
+
+        --blue-color: #0369A1;
+        --light-blue-color: #F6F6FE;
+        --purple-color: #040320;
+        --font1: 'Poppins', sans-serif;
+        --font2: 'Barlow', sans-serif;
+    }
+
+    hr {
+        color: #0369A1;
+        width: 150px;
+        border-top: 3.2px solid;
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-body {
+        font-family: var(--font1);
+    }
+
+    .titlebg {
+        background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
 
 <body class="font-body text-dark-purple">
 
     <!-- Header -->
-    <script type="module" src="/common template/header.js"></script>
+    <script type="module" src="/template/header.js"></script>
     <!-- === Search bar ends === -->
-
-    <div id="main-image" class="mt-20 h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center animate-image-slider">
-        <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
-            <div class="flex flex-col items-center justify-center container h-full">
-                <div class="flex flex-col gap-10">
-                    <h2 class="uppercase text-white text-4xl text-center">
-                        <span class="font-bold">HEALTH AND WELLNESS</span>
-                    </h2>
-                </div>
-                <div>
-                    &nbsp;
-                </div>
-                <div>
-                    &nbsp;
-                </div>
-
-                <div id="tiles" class="flex mt-[10vh] gap-5 w-[100%] items-start align-self-start">
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> medical_services
-            </span>
-                        <a href="#COUNSELLING SERVICES" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              COUNSELLING SERVICES
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> sports_Gymnastics
-            </span>
-                        <a href="#GYMNASIUM" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              GYMNASIUM
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> health_and_safety
-            </span>
-                        <a href="#HEALTH CARE CENTER" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              HEALTH CARE CENTER
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> help
-            </span>
-                        <a href="#STUDENT GRIEVANCE CELL" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              Students Grievance 
-            </a>
-                        <a href="#STUDENT GRIEVANCE CELL" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase" style="margin-top:0px;">
-              Cell
-            </a>
-                    </div>
-
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> self_improvement
-            </span>
-                        <a href="#FIT INDIA MOVEMENT" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              FIT INDIA MOVEMENT
-            </a>
-                    </div>
-
-
-                </div>
-                <div id="tiles" class="flex mt-[10vh] gap-5 w-[90%] items-start align-self-start " style="padding-left: 375px;">
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> local_hospital
-            </span>
-                        <a href="#Empanaelled" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-              Empanaelled 
-            </a>
-                        <a href="#Empanaelled" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase" style="margin-top:0px;">
-              Hospitals
-            </a>
-                    </div>
-                    <div class="group transition delay-100 duration-300 hover:shadow-2xl hover:bg-sky-500 hover:shadow-sky-500 hover:scale-110 flex flex-col space-y-4 items-center justify-center w-1/5 h-full px-3 py-5 bg-white shadow rounded-xl">
-                        <span class="group-hover:text-white group-hover:animate-bounce animate-delay material-symbols-outlined" style="font-size:48px;"> sports_tennis
-            </span>
-                        <a href="#Sports" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase">
-               SPORTS AND
-            </a>
-                        <a href="#Sports" class=" btn btn-secondary btn-lg page-scroll group-hover:text-white text-xl whitespace-nowrap text-center text-dark-purple uppercase" style="margin-top:0px;">
-              RECREATION
-            </a>
-                    </div>
-
-
-                </div>
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32"
+        style="margin-bottom:25px">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Health And
+                    Wellness</p>
             </div>
+            <nav id="semi-bold" class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
+                    <li class="">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-0">Home</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"
+                                class="fa-solid fa-angle-right ml-2 "></i>
+                            <a href="#COUNSELLING SERVICES" class="text-lg font-medium ml-2"
+                                display="inline">Counselling Services</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;"></i>
+                            <a href="#GYMNASIUM" class="text-lg font-medium ml-20"> <span>&#47</span> Gymanasium</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;" "></i>
+                               <a href=" #HEALTH CARE CENTRE" class="text-lg font-medium ml-20"><span>&#47</span>
+                                Health Care Center</a>
+                        <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;" "></i>
+                               <a href=" #STUDENT GRIEVANCE CELL" class="text-lg font-medium ml-20"><span>&#47</span>
+                            Student Grievance Cell</a>
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;" "></i>
+                               <a href=" #FIT INDIA MOVEMENT" class="text-lg font-medium ml-20"><span>&#47</span> Fit
+                                India Movement</a>
+                                <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 0px;" c></i>
+                                <a href="#Empanaelled" class="text-lg font-medium ml-20"><span>&#47</span> Hospitals</a>
+                                <i style="color: rgb(128, 128, 128); font-size:12px;margin-left:0px;"></i>
+                                <a href="#Sports" class="text-lg font-medium ml-20"><span>&#47</span>Sports</a>
+                                </a>
+                    </li>
+                </ol>
+            </nav>
         </div>
+
+
+
     </div>
 
-    <br><br>
+
+
+
+
 
     <!-- === Carousel section ends === -->
     <!-- === News Section Starts === -->
 
-    <div id="COUNSELLING SERVICES" class="my-20">
+    <div id="COUNSELLING SERVICES" class="my-20" style="margin-top:0 px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
-                <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        COUNSELLING <span class="text-dark-purple"> SERVICES</span>
+
+
+                <div class="flex items-center justify-start space-x-6" style="border-color:blue">
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                        COUNSELLING <span>SERVICES</span>
+                        <hr>
                     </h1>
 
                 </div>
@@ -141,15 +180,19 @@
 
     <div id="Director's Corner" class="container mx-auto my-10">
 
-        <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
-            <img src="./common template/img/Educational-Counselling-1.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height:250px" />
+        <div
+            class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+            <img src="./template/img/Educational-Counselling-1.png" class="h-32 w-32 rounded-xl shadow-lg"
+                style="width: 380px; height:250px" />
             <div id="content" class="flex flex-col space-y-4">
 
                 <h2 class="text-xl font-medium text-dark-purple">
-                    Counselling Services
+                    <strong><span class="text-dark-purple"> Counselling </span>Services</strong>
                 </h2>
-                <p>
-                    The Canara Bank is located near the shopping center close to the residential area. One ATM is located in the bank premises.
+
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                    The Canara Bank is located near the shopping center close to the residential area. One ATM is
+                    located in the bank premises.
                 </p>
                 <p>
                     <strong>Phone</strong> : +91 (181) 269 0233 (Office)
@@ -164,52 +207,19 @@
 
     <br>
 
-    <div id="GYMNASIUM" class="my-20">
+
+   
+
+    
+    <div id="HEALTH CARE CENTRE" class="my-20"style="margin:0px">
+
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        GYMNASIUM <span class="text-dark-purple"></span>
-                    </h1>
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
 
-                </div>
+                        HEALTH <span class="text-dark-purple">CARE CENTRE</span><hr>
 
-
-            </div>
-
-
-        </div>
-    </div>
-
-    <div id="Director's Corner" class="container mx-auto my-10">
-
-        <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
-            <img src="./common template/img/gym.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height:250px" />
-            <div id="content" class="flex flex-col space-y-4">
-
-                <h2 class="text-xl font-medium text-dark-purple">
-                    GYMNASIUM
-                </h2>
-                <p>
-                    The campus has a couple of food joints, frequented more perhaps by hostelites looking for a change from hostel grub than the occasional visitor. The Campus Canteen is open from 8.30 A.M. to 8.00 P.M. on all week days. A wide variety of South Indian and
-                    North Indian dishes are available. A Food Point located near Biotech Department is open from 9.00 A.M. to 10.00 P.M. A variety of Indian dishes are available here.
-                </p>
-
-
-
-            </div>
-        </div>
-
-
-    </div>
-
-    <br>
-    <div id="HEALTH CARE CENTRE" class="my-20">
-        <div class="container flex flex-col justify-start lg:flex-row">
-            <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
-                <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
-                        HEALTH <span class="text-dark-purple">CARE CENTRE</span>
                     </h1>
 
                 </div>
@@ -221,17 +231,20 @@
         </div>
     </div>
     <div id="Director's Corner" class="container mx-auto my-10">
+
 
         <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
             <img src="./common template/img/health.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height:250px" />
             <div id="content" class="flex flex-col space-y-4">
 
                 <h2 class="text-xl font-medium text-dark-purple">
-                    Health Care Center
+                    <strong><span class="text-dark-purple"> Health Care Centre </span></strong> 
                 </h2>
-                <p>
-                    The Central Seminar hall is the venue for all the important events at NIT Jalandhar. The year 2006 can be earmarked as the year in which this building established its presence and value for the Institute by holding Convocation ceremony for the 2001-05
-                    batch. It was inaugarated by the Chief Guest of the ceremony Lord Swaraj Paul. Since then it has hosted many Convocations, Mega scale events like UTKANSH, Tech Fests, International Conference, etc.
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                    The dispensary is the heartbeat of the institute which provide Treatment for different diseases and also provide first aid to the injured, and also arranges different awareness camp Like cardiac camp, BMD camp etc. Different updates are been circulated for prevention from the seasonal disease.
+                    All the National Programmes such as Pulse polio, and Immunization programmes are organized with the help of Local health Authorities.
+                    Dispensary is also equipped with the Pathological lab to carry out different investigations. In case of medical emergency, the ambulance van is available 24 hours for taking patient(s) to other hospitals for the required treatment.
+
                 </p>
 
 
@@ -243,14 +256,73 @@
 
         </div>
     </div>
+    
 
     <br>
-    <div id="STUDENT GRIEVANCE CELL" class="my-20">
+
+    <div id="Empanaelled" class="my-20"style="margin:0px">
+
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+
+                        Empanaelled <span class="text-dark-purple">HOSPITALS</span><hr>
+
+                    </h1>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <div id="Director's Corner" class="container mx-auto my-10">
+
+
+        <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+            <img src="./common template/img/hospital.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height: 250px;" />
+
+            <div id="content" class="flex flex-col space-y-4">
+
+                
+                <h2 class="text-xl font-medium text-dark-purple">
+
+                    <strong><span class="text-dark-purple"> Empanaelled Hospitals </span></strong> 
+
+                </h2>
+
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
+
+                    Ministry of Health and Family Welfare Govt. of India has empanelled the below mentioned hospitals for the treatment of Central Govt. Employees covered under CS MA rules in Jalandhar. <br> <br>
+
+
+                    <li style="margin-top: 0px;">
+                        <a href="https://main.mohfw.gov.in/E-Citizen-and-Tender/csma/punjab" style="color:rgb(3 105 160);">CS MA empanelled hospitals</a>
+                    </li>
+                    <li style="margin-top: 0px;">
+                        <a href="https://cghs.nic.in/reports/view_hospital.jsp" style="color:rgb(3 105 160);">CGHS empanelled hospitals</a>
+                    </li>
+                    
+                </p>
+
+
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+    <div id="STUDENT GRIEVANCE CELL" class="my-20"style="margin:0px">
+
+        <div class="container flex flex-col justify-start lg:flex-row">
+            <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
+                <div class="flex items-center justify-start space-x-6">
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
                         STUDENT <span class="text-dark-purple">GRIEVANCE CELL</span>
+                        <hr>
                     </h1>
 
                 </div>
@@ -264,16 +336,22 @@
 
     <div id="Director's Corner" class="container mx-auto my-10">
 
-        <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
-            <img src="./common template/img/oat.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height:250px" />
+        <div
+            class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+            <img src="./template/img/oat.png" class="h-32 w-32 rounded-xl shadow-lg"
+                style="width: 380px; height:250px" />
             <div id="content" class="flex flex-col space-y-4">
 
                 <h2 class="text-xl font-medium text-dark-purple">
-                    STUDENT GRIEVANCE CELL
+                    <strong><span class="text-dark-purple"> Student Grievance Cell </span></strong>
                 </h2>
-                <p>
-                    The Student’s Grievance Cell (SGC) desires to promote and maintain a conducive and unprejudiced educational environment. The Cell enables a student to express feelings by initiating and pursuing the grievance procedure in accordance with the rules and
-                    regulations of the Institute. ‘Student’s Grievance Cell’ enquires and analyses the nature and pattern of the grievances in a strictly confidential manner. Emphasis on procedural fairness has been given with a view to “the right to
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                    The Student’s Grievance Cell (SGC) desires to promote and maintain a conducive and unprejudiced
+                    educational environment. The Cell enables a student to express feelings by initiating and pursuing
+                    the grievance procedure in accordance with the rules and
+                    regulations of the Institute. ‘Student’s Grievance Cell’ enquires and analyses the nature and
+                    pattern of the grievances in a strictly confidential manner. Emphasis on procedural fairness has
+                    been given with a view to “the right to
                     be heard and right to be treated without bias”
                 </p>
 
@@ -288,12 +366,13 @@
     </div>
 
     <br>
-    <div id="FIT INDIA MOVEMENT" class="my-20">
+    <div id="FIT INDIA MOVEMENT" class="my-20" style="margin:0px">
         <div class="container flex flex-col justify-start lg:flex-row">
             <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                 <div class="flex items-center justify-start space-x-6">
-                    <h1 class="uppercase text-4xl font-semibold text-accent">
+                    <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
                         FIT <span class="text-dark-purple">INDIA MOVEMENT</span>
+                        <hr>
                     </h1>
 
                 </div>
@@ -307,16 +386,21 @@
 
     <div id="Director's Corner" class="container mx-auto my-10">
 
-        <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
-            <img src="./common template/img/fit.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height:250px" />
+        <div
+            class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+            <img src="./template/img/fit.png" class="h-32 w-32 rounded-xl shadow-lg"
+                style="width: 380px; height:250px" />
             <div id="content" class="flex flex-col space-y-4">
 
                 <h2 class="text-xl font-medium text-dark-purple">
-                    Fit India Movement
+                    <strong><span class="text-dark-purple"> Fit India Movement </span></strong>
                 </h2>
-                <p>
-                    The modern fully equipped Gym Facility, Table Tennis Room, Pool Table Room, Yoga Room, Chess, and Carrom Room has been set up in New Students Activity Centre (SAC) which was inaugurated by Dr Pamita Awasthi and Dr Lalit K Awasthi, Director NIT Jalandhar
-                    on August 15, 2020. The infrastructure added would serve to promote health consciousness, maintain the fitness and stress buster in modern-day stressful life.
+                <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                    The modern fully equipped Gym Facility, Table Tennis Room, Pool Table Room, Yoga Room, Chess, and
+                    Carrom Room has been set up in New Students Activity Centre (SAC) which was inaugurated by Dr Pamita
+                    Awasthi and Dr Lalit K Awasthi, Director NIT Jalandhar
+                    on August 15, 2020. The infrastructure added would serve to promote health consciousness, maintain
+                    the fitness and stress buster in modern-day stressful life.
                 </p>
 
 
@@ -324,56 +408,19 @@
             </div>
         </div>
         <br>
-        <br>
-        <div id="Empanaelled" class="my-20">
-            <div class="container flex flex-col justify-start lg:flex-row">
-                <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
-                    <div class="flex items-center justify-start space-x-6">
-                        <h1 class="uppercase text-4xl font-semibold text-accent">
-                            Empanaelled <span class="text-dark-purple">HOSPITALS</span>
-                        </h1>
 
-                    </div>
+        
+       
+            
 
-
-                </div>
-
-
-            </div>
-        </div>
-        <div id="Director's Corner" class="container mx-auto my-10">
-
-            <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
-                <img src="./common template/img/hospital.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height: 250px;" />
-                <div id="content" class="flex flex-col space-y-4">
-
-                    <h2 class="text-xl font-medium text-dark-purple">
-                        Empanaelled Hospitals
-                    </h2>
-                    <p>
-                        Ministry of Health and Family Welfare Govt. of India has empanelled the below mentioned hospitals for the treatment of Central Govt. Employees covered under CS MA rules in Jalandhar. <br> <br>
-
-                        <li style="margin-top: 0px;">
-                            <a href="https://main.mohfw.gov.in/E-Citizen-and-Tender/csma/punjab" style="color:rgb(3 105 160);">CS MA empanelled hospitals</a>
-                        </li>
-                        <li style="margin-top: 0px;">
-                            <a href="https://cghs.nic.in/reports/view_hospital.jsp" style="color:rgb(3 105 160);">CGHS empanelled hospitals</a>
-                        </li>
-                        
-                    </p>
-
-
-
-                </div>
-            </div>
             <br>
-            <br>
-            <div id="Sports" class="my-20">
+            <div id="Sports" class="my-20" style="margin:0px">
                 <div class="container flex flex-col justify-start lg:flex-row">
                     <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
                         <div class="flex items-center justify-start space-x-6">
-                            <h1 class="uppercase text-4xl font-semibold text-accent">
-                                SPORTS<span class="text-dark-purple">AND RECREATION</span>
+                            <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                                SPORTS<span class="text-dark-purple"> AND RECREATION</span>
+                                <hr>
                             </h1>
 
                         </div>
@@ -386,15 +433,19 @@
             </div>
             <div id="Director's Corner" class="container mx-auto my-10">
 
-                <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
-                    <img src="./common template/img/sports.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height:250px" />
+                <div
+                    class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+                    <img src="./template/img/sports.png" class="h-32 w-32 rounded-xl shadow-lg"
+                        style="width: 380px; height:250px" />
                     <div id="content" class="flex flex-col space-y-4">
 
                         <h2 class="text-xl font-medium text-dark-purple">
-                            Sports And Recreation
+                            <strong><span class="text-dark-purple"> Sports And Recreation </span></strong>
                         </h2>
                         <p>
-                            Being a technical institute, it is expected of NIT Jalandhar to deliver the expected results and maintain its reputed standards in academics.But,we also constantly strive for excellence in sports. Gymanasium is the facility for indoor sports such as badminton,table
+                            Being a technical institute, it is expected of NIT Jalandhar to deliver the expected results
+                            and maintain its reputed standards in academics.But,we also constantly strive for excellence
+                            in sports. Gymanasium is the facility for indoor sports such as badminton,table
                             tennis etc.
                         </p>
 
@@ -408,6 +459,50 @@
 
                 <div>
 
+
+                </div>
+                <br>
+                <br>
+
+                <div id="GYMNASIUM" class="my-20"style="margin:0px">
+                    <div class="container flex flex-col justify-start lg:flex-row">
+                        <div id="announcements" class="flex w-full lg:w-2/3 flex-col space-y-6">
+                            <div class="flex items-center justify-start space-x-6">
+                                <h1 class="font2 font-medium text-[28px] lg:text-[32px]">
+                                    GYMNASIUM <span class="text-dark-purple"></span><hr>
+                                </h1>
+            
+                            </div>
+            
+            
+                        </div>
+            
+            
+                    </div>
+                </div>
+                
+            
+                <div id="Director's Corner" class="container mx-auto my-10">
+            
+                    <div class="flex flex-col space-y-6 rounded-lg bg-light-purple p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
+                        <img src="./common template/img/gym.png" class="h-32 w-32 rounded-xl shadow-lg" style="width: 380px; height:250px" />
+                        <div id="content" class="flex flex-col space-y-4">
+            
+                            
+                            <h2 class="text-xl font-medium text-dark-purple">
+                                <strong><span class="text-dark-purple"> Gymanasium </span></strong> 
+                            </h2>
+                            <p class="font-normal text-grey-800 lg:text-[16px] lg:leading-[27px] text-justify">
+                                The campus has a couple of food joints, frequented more perhaps by hostelites looking for a change from hostel grub than the occasional visitor. The Campus Canteen is open from 8.30 A.M. to 8.00 P.M. on all week days. A wide variety of South Indian and
+                                North Indian dishes are available. A Food Point located near Biotech Department is open from 9.00 A.M. to 10.00 P.M. A variety of Indian dishes are available here.
+                            </p>
+            
+            
+            
+                        </div>
+                    </div>
+            
+            
                 </div>
             </div>
         </div>
@@ -418,7 +513,7 @@
     <br><br><br>
 
     <!-- Footer -->
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
 
     <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
 

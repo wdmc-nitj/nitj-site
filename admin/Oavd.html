@@ -27,6 +27,7 @@
             --tw-bg-opacity: 1;
             background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
         }
+
         .titlebg {
             background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(0, 0, 0, 0.3) 99.11%), url(./img/about_top.jpg);
             background-repeat: no-repeat;
@@ -37,11 +38,12 @@
 </head>
 
 <body>
-    <script src="/common template/header.js" type="module"></script>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-               <p class="font-bold text-[52px] lg:text-[80px] uppercase text-white leading-[1]">Academic services</p>
+                <p class="font-bold text-[52px] lg:text-[80px] uppercase text-white leading-[1]">Academic services</p>
             </div>
             <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center">
@@ -80,26 +82,26 @@
                     <ul class="list-disc my-1 hover:underline" id="link-oavd">
                         <script>
                             async function api_call() {
-                              var data = await fetch(
-                                "https://wdmc.onrender.com/specialcentres/getcentre/oavd"
-                              );
-                              var result = await data.json();
-        
-                              var modified = result[0].specialLinks;
-          
-                              for (var i in modified) {
-                                var name = modified[i]["name"];
-                                var designation = modified[i]["designation"];
-                                var department = modified[i]["department"];
-                                var email = modified[i]["email_id"];
-                                var url = modified[i]["url"];
-                                var qualification = modified[i]["qualification"];
-                                var title = modified[i]["title"];
-                                document
-                                  .getElementById("link-oavd")
-                                  .insertAdjacentHTML(
-                                    "beforeend",
-                                    `<li class="ml-8">
+                                var data = await fetch(
+                                    "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/oavd"
+                                );
+                                var result = await data.json();
+
+                                var modified = result[0].specialLinks;
+
+                                for (var i in modified) {
+                                    var name = modified[i]["name"];
+                                    var designation = modified[i]["designation"];
+                                    var department = modified[i]["department"];
+                                    var email = modified[i]["email_id"];
+                                    var url = modified[i]["url"];
+                                    var qualification = modified[i]["qualification"];
+                                    var title = modified[i]["title"];
+                                    document
+                                        .getElementById("link-oavd")
+                                        .insertAdjacentHTML(
+                                            "beforeend",
+                                            `<li class="ml-8">
                             <strong>
                                 <a href="${url}" style="font-size:16px"><span
                                         style="color:#B22222">${title}</span>
@@ -107,11 +109,11 @@
                             </strong>
                             <span class="absolute pt-1"> <img src="https://www.nitj.ac.in//images/New.gif"></span>
                         </li>`
-                                  );
-                              }
+                                        );
+                                }
                             }
                             api_call();
-                          </script>
+                        </script>
                     </ul>
 
                     <p style="text-align:justify"><br>
@@ -126,12 +128,14 @@
                         <strong>Processing Fee for Verification:</strong>
                     </p>
 
-                    <p class="my-2">(1)&nbsp; Verification from Police, Government Agencies &amp; Vigilance Clearance (CID &amp;
+                    <p class="my-2">(1)&nbsp; Verification from Police, Government Agencies &amp; Vigilance Clearance
+                        (CID &amp;
                         other intelligence agencies): <strong>NIL</strong></p>
 
                     <p>(2)&nbsp; Any other Agency/Person:</p>
 
-                    <p class="my-2">In India: <strong>Rs. 2,000</strong>&nbsp;(inclusive of Postal Charges), for each individual
+                    <p class="my-2">In India: <strong>Rs. 2,000</strong>&nbsp;(inclusive of Postal Charges), for each
+                        individual
                         verification.</p>
 
                     <p>In Abroad: <strong>US $100</strong>&nbsp;(inclusive of Postal Charges), for each individual
@@ -157,6 +161,7 @@
             </div>
         </div>
     </div>
-    <script src="/common template/footer.js"></script>
+    <script src="/template/footer.js"></script>
 </body>
+
 </html>

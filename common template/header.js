@@ -1,8 +1,33 @@
-import getNavbar from "../js/navbar.js"
+import getNavbar from '../js/navbar.js'
 const bodyEl = document.body
 
+// <link rel="icon" type="image/x-icon" href="./public/assets/images/nitj-logo.png" />
+
+window.addEventListener('load', () => {
+  handlingPDFs()
+  // document.head.appendChild('link')
+  const newFavIcon = document.createElement('link')
+  newFavIcon.setAttribute('rel', 'icon')
+  newFavIcon.setAttribute('type', 'image/x-icon')
+  newFavIcon.setAttribute('href', '/public/assets/images/nitj-logo.png')
+  document.head.appendChild(newFavIcon)
+})
+
+function handlingPDFs() {
+  const allLinks = [...document.getElementsByTagName('a')]
+  allLinks.forEach((link) => {
+    let currSrc = link.getAttribute('href').includes('https')
+    // console.log(currSrc)
+    if (currSrc) {
+      console.log(link)
+      link.setAttribute('target', '_blank')
+    }
+    console.log(currSrc)
+  })
+}
+
 window.onscroll = navbarUtil
-fetch('/common template/navbar.html')
+fetch('/template/navbar.html')
   .then((res) => res.text())
   .then((html) => {
     const navEl = document.createElement('header')
@@ -10,6 +35,7 @@ fetch('/common template/navbar.html')
     bodyEl.prepend(navEl)
     carousel()
     getNavbar()
+    handlingPDFs()
   })
 
 let slideIndex = 0
@@ -26,7 +52,6 @@ function carousel() {
   x[slideIndex - 1].style.display = 'block'
   setTimeout(carousel, 2500)
 }
-
 
 function navbarUtil() {
   const insti_name_cont = document.getElementById('instituteNameContainer')
