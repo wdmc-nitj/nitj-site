@@ -1540,6 +1540,10 @@ sup {
   height: 11rem;
 }
 
+.h-\[30vh\] {
+  height: 30vh;
+}
+
 .max-h-\[1000px\] {
   max-height: 1000px;
 }
@@ -2198,10 +2202,6 @@ sup {
 
 .gap-1 {
   gap: 0.25rem;
-}
-
-.gap-\[100px\] {
-  gap: 100px;
 }
 
 .gap-x-\[10px\] {
@@ -3874,6 +3874,11 @@ sup {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.invert {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -5418,10 +5423,6 @@ sup {
 
   .lg\:gap-\[20px\] {
     gap: 20px;
-  }
-
-  .lg\:gap-\[100px\] {
-    gap: 100px;
   }
 
   .lg\:border-r {
