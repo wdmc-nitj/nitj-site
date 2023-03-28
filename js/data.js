@@ -406,6 +406,9 @@ fetch(`${baseURL}/photoGallery/`)
     const images = data.filter(img => {
       return img.type ==='photoGallery'
     })
+    images.sort((a, b)=>(
+      0.5 - Math. random()
+    ))
     size_images = images.length
     img_arr = images
     // const images = shuffledArray.slice(0,12)
@@ -420,7 +423,7 @@ fetch(`${baseURL}/photoGallery/`)
     let i = 0
     let y = 1
     images.forEach((img, key) => {
-      // img.image.link
+      // img.link
       if (y > 12) {
         return
       }
@@ -461,13 +464,13 @@ arrow_forward.addEventListener('click', (e) => {
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
     if (
-      imgArray[i].image.link.toLowerCase().trim() ==
+      imgArray[i].link.toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == imgArray.length - 1) {
-        imgSample.src = imgArray[0].image.link
+        imgSample.src = imgArray[0].link
       } else {
-        imgSample.src = imgArray[i + 1].image.link
+        imgSample.src = imgArray[i + 1].link
       }
       break
     }
@@ -479,13 +482,13 @@ arrow_backward.addEventListener('click', (e) => {
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
     if (
-      imgArray[i].image.link.toLowerCase().trim() ==
+      imgArray[i].link.toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == 0) {
-        imgSample.src = imgArray[imgArray.length - 1].image.link
+        imgSample.src = imgArray[imgArray.length - 1].link
       } else {
-        imgSample.src = imgArray[i - 1].image.link
+        imgSample.src = imgArray[i - 1].link
       }
       break
     }
