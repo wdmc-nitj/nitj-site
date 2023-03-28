@@ -159,7 +159,7 @@
         <div id="academic-adminstration"
             class="scroll-mt-32 flex flex-col lg:flex-row container gap-[32px] lg:gap-[64px]">
             <div class="w-full flex flex-col items-start">
-                <p class="font2 font-medium text-[28px] lg:text-[44px]">Academic Adminstration</p>
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Academic Administration</p>
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
             </div>
         </div>
@@ -552,8 +552,10 @@
             <p>${result[0].contact.fax}</p>
        </div>
        <div class="mt-1 lg:mt-4">
-           <a class="text-accent transition ease-in-out duration-300 "
-               href="${result[0].profileLink}">View profile →</a>
+               <a class="text-sm md:text-md hover:bg-accent hover:shadow-lg px-3 lg:px-4 py-2 lg:py-2 border-2 border-accent text-accent hover:text-white transition ease-in-out duration-300"
+            href="${result[0].profileLink}" target="_blank">View profile
+                            →</a>
+
        </div>
    </div>
 </div>
