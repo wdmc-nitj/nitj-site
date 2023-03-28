@@ -4,6 +4,7 @@ import {
   pageTitleUpdater,
   getParams,
   normalCaseMaker,
+  dataFilter,
 } from './utils/routingUtils.js'
 
 const [id, category] = getParams()
@@ -21,14 +22,16 @@ if (parseInt(id) === 0) {
   const list = document.getElementById('list')
   fetch(`https://wdmc-vsj1.onrender.com/${category}/get/all`)
     .then((response) => response.json())
-    .then((data) => {
+    .then((apidata) => {
+      const data = dataFilter(apidata)
       data.forEach((e) => {
         const listItem = document.createElement('li')
         listItem.setAttribute(
           'class',
           'underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2'
         )
-        listItem.innerHTML = `  <a
+        listItem.innerHTML = `  
+                <a
                   href="/template/index.html?id=${e._id}?category=${category}">
                   ${e.title}
                 </a>
