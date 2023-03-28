@@ -447,28 +447,28 @@
           </span>
         </div>
         <div class="flex flex-col gap-5">
-          <a href="/admissions/index.html">
+          <a href="/admissions/index.html#btech">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">B.Tech</p>
               <p class="text-lg text-slate-500">Undergraduate Program</p>
             </div>
           </a>
-          <a href="/admissions/mtech_ccmt.html">
+          <a href="/admissions/index.html#mtech">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">M.Tech</p>
               <p class="text-lg text-slate-500">Postgraduate Program</p>
             </div>
           </a>
-          <a href="/admissions/phd.html">
+          <a href="/admissions/index.html#phd">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">PhD</p>
               <p class="text-lg text-slate-500">Doctrate Program</p>
             </div>
           </a>
-          <a href="/admissions/mba.html">
+          <a href="/admissions/index.html#mba">
             <div
               class="ring-2 ring-slate-300 px-8 py-5 rounded-lg flex-col flex hover:ring-accent hover:bg-light-purple hover:ring-4 transition-all">
               <p class="text-3xl font-bold">Others</p>
@@ -507,6 +507,21 @@
           <div class="w-full">
             <div id="notice" class="w-full notice-content px-6 space-y-10 lg:mr-4 overflow-y-auto h-96">
               <ul id="updates" class="w-full flex list-disc flex-col justify-between divide-y-2">
+                <div class="inline-flex flex-col items-start justify-start space-y-4">
+                  <a href="/template/index.html?id=${e._id}?category=${tabName}"
+                    class="text-xl font-semibold text-accent line-clamp-3">
+                    ${title}
+                  </a>
+
+                  <div id="date-tag" class="inline-flex items-center justify-start space-x-2">
+                    <span class="material-symbols-outlined" style="font-size: 24px">
+                      calendar_month
+                    </span>
+                    <p class="text-lg text-dark-purple/80">
+
+                    </p>
+                  </div>
+                </div>
               </ul>
               <div class="bg-white sticky bottom-0 whitespace-nowrap pt-2 -ml-4 pl-4">
 
