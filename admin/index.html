@@ -680,31 +680,29 @@
       let result = await fetch("https://wdmc-vsj1.onrender.com/timeline/get/all");
       result = await result.json();
       timelist = [];
-
+      console.log(result.length);
       for (let i = 0; i < result.length; i++) {
-        console.log(result[i].Timeline);
-        for (let j = 0; j < result[i].Timeline.length; j++) {
-          timelist.push(result[i].Timeline[j]);
-        }
+        console.log(result[i].year);
+        timelist.push(result[i].year);
       }
-      timelist = timelist.filter(
-        (thing, index, self) =>
-          index === self.findIndex((t) => t[0] === thing[0])
-      );
-      timelist.sort((a, b) => a[0] - b[0]);
-      console.log(timelist);
-
+      
+      
+      
+      console.log(timelist.length);
       let uniqueYear = [];
       function getUniqueYear() {
         for (let i = 0; i < timelist.length; i++) {
-          if (!uniqueYear.includes(timelist[i][0])) {
-            uniqueYear.push(timelist[i][0]);
+          if (!uniqueYear.includes(timelist[i])) {
+            uniqueYear.push(timelist[i]);
           }
         }
 
-        uniqueYear = uniqueYear.reverse();
+        
       }
       getUniqueYear();
+      console.log(uniqueYear.length);
+      uniqueYear.sort();
+      uniqueYear.reverse();
       console.log(uniqueYear);
       x = "";
       for (let i = 0; i < uniqueYear.length; i++) {
@@ -712,11 +710,12 @@
         <div class="card shadow-lg rounded-lg ml-[20px] mb-[20px] p-[10px]">
     <div class="flex flex-row gap-[32px]">
         <h3 class="title basis-3/10 text-accent font-bold text-[40px] leading-[41px]">${uniqueYear[i]}</h3>`;
-        for (let j = 0; j < timelist.length; j++) {
-          if (uniqueYear[i] == timelist[j][0]) {
+        for (let j = 0; j < result.length; j++) {
+          if (uniqueYear[i] == result[j].year) {
             x += `<p class="basis-7/10 flex items-center ">
-             ${timelist[j][1]}
+             ${result[j].desc}
           </p>`;
+          break;
           }
         }
         x += "</div></div>";
@@ -732,7 +731,6 @@
       result = await result.json();
       timelist = [];
       console.log(result.length);
-
       for (let i = 0; i < result.length; i++) {
         console.log(result[i].Ranking);
         timelist.push(Number(result[i].Ranking.rankingValue));
@@ -746,15 +744,17 @@
       console.log(timelist);
       //
       x = "";
+
       for (let i = 0; i < timelist.length; i++) {
         x += `<div class="flex flex-row items-start gap-[16px] lg:gap-[32px]">`
         x += `<p class="text-accent font-bold text-[48px] lg:text-[54px] leading-[27px]"> ${timelist[i]}</p>`
         for (let j = 0; j < result.length; j++) {
           if (timelist[i] == Number(result[j].Ranking.rankingValue)) {
             x += `<p class="font-medium text-[18px] lg:text-[18px]"> ${result[j].Ranking.rankingName}</p>`;
+
           }
 
-          // x += "</div>";
+         
         }
         x += "</div><br>"
       }
