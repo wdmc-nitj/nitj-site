@@ -792,6 +792,10 @@ sup {
   margin: auto;
 }
 
+.m-12 {
+  margin: 3rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -900,6 +904,11 @@ sup {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .-ml-4 {
@@ -1242,6 +1251,10 @@ sup {
   margin-top: auto;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -1284,10 +1297,6 @@ sup {
 
 .h-0\.5 {
   height: 0.125rem;
-}
-
-.h-1 {
-  height: 0.25rem;
 }
 
 .h-1\/6 {
@@ -1571,6 +1580,10 @@ sup {
   width: 66.666667%;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .w-44 {
   width: 11rem;
 }
@@ -1788,10 +1801,6 @@ sup {
   width: 100vw;
 }
 
-.w-40 {
-  width: 10rem;
-}
-
 .min-w-fit {
   min-width: -moz-fit-content;
   min-width: fit-content;
@@ -1818,20 +1827,16 @@ sup {
   max-width: 32rem;
 }
 
+.max-w-md {
+  max-width: 28rem;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
 
-.max-w-\[150px\] {
-  max-width: 150px;
-}
-
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-md {
-  max-width: 28rem;
+.flex-none {
+  flex: none;
 }
 
 .flex-shrink-0 {
@@ -1998,6 +2003,14 @@ sup {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.snap-x {
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
 }
 
 .scroll-mt-32 {
@@ -4901,11 +4914,6 @@ sup {
     line-height: 2rem;
   }
 
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -5290,10 +5298,6 @@ sup {
 
   .lg\:mb-16 {
     margin-bottom: 4rem;
-  }
-
-  .lg\:mb-2 {
-    margin-bottom: 0.5rem;
   }
 
   .lg\:mb-20 {
