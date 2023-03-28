@@ -2,4 +2,3 @@ node_modules
 style.css
 # add vscode settings to gitingore
 .vscode/settings.json
-style.css
