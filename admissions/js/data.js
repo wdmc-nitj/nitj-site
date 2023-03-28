@@ -13,16 +13,20 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
         class="hover:text-orange-600 inline"
       >
         <span class="bg-[#0369A1] mr-1">|</span>
-      ${update.title}
-      </a>
-      </div>
-      <div class="w-[15%]">
-      <img
-        class="h-[14px] mt-2 pr-2"
-        src="./img/New.gif"
-      />
-      </div>
-    </div>
+        ${update.title}
+        </a>
+        </div>
+        ${update.new ?
+          ` 
+          <div class="w-[15%]">
+          <img
+              class="h-[14px] mt-2 pr-2"
+              src="./img/New.gif"
+            />`
+            : 
+            `
+          </div> `
+            }
   
       `
       ugupdates.appendChild(ugupdate)

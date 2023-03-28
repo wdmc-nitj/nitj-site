@@ -717,6 +717,10 @@ sup {
   margin-left: 20px;
 }
 
+.ml-\[26\%\] {
+  margin-left: 26%;
+}
+
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -1418,6 +1422,10 @@ sup {
 
 .border-b-4 {
   border-bottom-width: 4px;
+}
+
+.border-b-5 {
+  border-bottom-width: 5px;
 }
 
 .border-l-4 {
