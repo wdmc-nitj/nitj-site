@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,511 +10,1008 @@
     <link rel="stylesheet" href="../style.css" />
 
     <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- font-family: 'Barlow', sans-serif;
     font-family: 'Poppins', sans-serif; -->
 
     <style>
-        /* Customizing the Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+      /* Customizing the Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: rgba(30, 58, 138, 1);
-            border-radius: 10px;
-        }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+      }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: gray;
-        }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: gray;
+      }
 
-        ::-webkit-resizer {
-            background-color: #ffffff;
-        }
+      ::-webkit-resizer {
+        background-color: #ffffff;
+      }
 
-        .material-symbols-outlined {
-            font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
-        }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+      }
 
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
 
-        .font2 {
-            font-family: "Barlow", sans-serif;
-        }
+      .font2 {
+        font-family: "Barlow", sans-serif;
+      }
 
-        :root {
-            --primary-color: #fff;
-            --background-color: #212121;
+      :root {
+        --primary-color: #fff;
+        --background-color: #212121;
 
-            --blue-color: #0369a1;
-            --light-blue-color: #f6f6fe;
-            --purple-color: #040320;
-            --font1: "Poppins", sans-serif;
-            --font2: "Barlow", sans-serif;
-        }
+        --blue-color: #0369a1;
+        --light-blue-color: #f6f6fe;
+        --purple-color: #040320;
+        --font1: "Poppins", sans-serif;
+        --font2: "Barlow", sans-serif;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        .main-body {
-            font-family: var(--font1);
-        }
+      .main-body {
+        font-family: var(--font1);
+      }
 
-        .titlebg {
-            background: linear-gradient(90.09deg,
-                    rgba(0, 0, 0, 0.7) 0.08%,
-                    rgba(255, 255, 255, 0) 99.11%),
-                url(img/about_top.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+      .titlebg {
+        background: linear-gradient(
+            90.09deg,
+            rgba(0, 0, 0, 0.7) 0.08%,
+            rgba(255, 255, 255, 0) 99.11%
+          ),
+          url(img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
 
     <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
-        <div class="titlebg">
-            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
-                <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Proctorial Cell
-                </p>
-            </div>
-            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                <ol class="container inline-flex items-center">
-                    <li class="inline-flex items-center">
-                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
-                        </a>
-                    </li>
-                    <li aria-current="page">
-                        <div class="inline-flex items-center">
-                            <i style="
+      <div class="titlebg">
+        <div
+          class="container flex flex-col justify-center items-start h-[224px] py-[48px]"
+        >
+          <!-- px-4 lg:px-[11%] -->
+          <p
+            class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]"
+          >
+            Proctorial Cell
+          </p>
+        </div>
+        <nav
+          class="flex bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="container inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href=""
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="../index.html" class="text-lg font-medium ml-2"
+                  >Home</a
+                >
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
                     color: rgb(128, 128, 128);
                     font-size: 12px;
                     margin-left: 12px;
-                  " class="fa-solid fa-angle-right ml-2"></i>
-                            <a href="#" class="text-lg font-medium ml-2">Protorial Cell</a>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
+<li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">Protorial Cell</a>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <!-- <p> Code by Bhavya Mittal </p> -->
+      <div
+        id="institute-development"
+        class="scroll-mt-44 flex flex-col items-start container gap-[20px] lg:gap-[32px]"
+      >
+        <!-- <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">
+                    Hostel Administration
+                </p>
+                <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div> -->
+
+        <div class="w-full">
+          <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">
+            Proctor
+          </p>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8"
+            id="proctor"
+          >
+            <!-- <div>
+              <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Jatinder Kumar Ratan
+              </p>
+              <p class="text-sm">Associate Professor</p>
+              <p class="text-sm text-gray-500">Chemical Engineering</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">kumarj@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">+91-7986983885</p>
+              </div> -->
+            <!-- </div> -->
+          </div>
         </div>
-        <div id="institute-development"
-            class="scroll-mt-44 flex flex-col items-start container gap-[20px] lg:gap-[32px]">
-       
-            <div class="w-full">
-                <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">
-                    Proctor
-                </p>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 ">
-                    <div>
 
-                         <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">Dr. Jatinder Kumar Ratan</p>
-                         <p class="text-sm">Associate Professor</p> 
-                         <p class="text-sm text-gray-500">Chemical Engineering</p>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-
-                            <i class="fa-solid fa-envelope"></i>
-                            <p class="text-sm text-gray-500 my-1">kumarj@nitj.ac.in</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-
-                            <i class="fa-solid fa-phone"></i>
-                            <p class="text-sm my-1">+91-7986983885</p>
-                        </div> 
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full">
-                <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2 mt-3">
-                    Deputy Proctor
-                </p>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 ">
-                    <div>
-
-                        <p
+        <div class="w-full">
+          <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2 mt-3">
+            Deputy Proctor
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+            <div id="dproctor">
+              <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
               >
                 Dr. Kiran Singh
               </p>
-              <p class="text-sm">Assistant Professor</p> 
-              <p class="text-sm text-gray-500">
-                Physics
-              </p> 
-               
-              <div
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Physics</p>
 
+              <div
                 class="w-full flex flex-row gap-2 items-center text-gray-500"
               >
                 <i class="fa-solid fa-envelope"></i>
                 <p class="text-sm text-gray-500 my-1">singhkp@nitj.ac.in</p>
-              </div>
+              </div> -->
               <!-- <div
                 class="w-full flex flex-row gap-2 items-center text-gray-500"
               >
                 <i class="fa-solid fa-location-dot"></i>
                 <p class="text-sm my-1">+91-181-5037726</p>
               </div>  -->
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div id="institute-development"
-            class=" flex flex-col  container">
-            <div class="w-full flex flex-col items-start">
-                <p class="font2 text-xl lg:text-3xl uppercase mb-1 border-b-2">
-                    Assistant Proctors
-                </p>
-
-                </div>
-                <div>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Anee Mohanty
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Bio-Technology
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">mohantya@nitj.ac.in</p>
-                        </div>
-                        <!-- <div
+      <div
+        id="institute-development"
+        class="scroll-mt-32 flex flex-col items-start container gap-[20px] lg:gap-[32px] p-0"
+      >
+        <div class="w-full flex flex-col items-start">
+          <p class="font2 text-xl lg:text-3xl uppercase mb-1 border-b-2">
+            Assistant Proctors
+          </p>
+        </div>
+        <div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+            <div id="aproctor_1">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Anee Mohanty
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Bio-Technology</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">mohantya@nitj.ac.in</p>
+              </div> -->
+              <!-- <div
                           class="w-full flex flex-row gap-2 items-center text-gray-500"
                         >
                           <i class="fa-solid fa-location-dot"></i>
                           <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
                         </div> -->
-                      </div>
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Vickram Jeet Singh
-                        </p>
-                        <p class="text-sm">Assistant Professor</p>
-                        <p class="text-sm text-gray-500">
-                            Chemistry
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">singhvj@nitj.ac.in</p>
-                        </div>
-                        <!-- <div
+            </div>
+            <div id="aproctor_2">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Vickram Jeet Singh
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Chemistry</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">singhvj@nitj.ac.in</p>
+              </div> -->
+              <!-- <div
                           class="w-full flex flex-row gap-2 items-center text-gray-500"
                         >
                           <i class="fa-solid fa-location-dot"></i>
                           <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
                         </div> -->
-                      </div>
-                      <div>
-                        <p
-                        class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                      >
-                      Dr. Senthil Kasilingam
-                      </p>
-                      <p class="text-sm">Assistant Professor</p>
-                      <p class="text-sm text-gray-500">
-                        Civil Engineering
-                      </p>
-                      <div
-                        class="w-full flex flex-row gap-2 items-center text-gray-500"
-                      >
-                        <i class="fa-solid fa-envelope"></i>
-                        <p class="text-sm text-gray-500 my-1">kasilingams@nitj.ac.in</p>
-                      </div>
-                      <div
-                        class="w-full flex flex-row gap-2 items-center text-gray-500"
-                      >
-                      <i class="fa-solid fa-phone"></i>
-                        <p class="text-sm my-1">8267927382</p>
-                      </div>
-                      </div>
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Aruna Malik
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Computer Science & Engg.
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">malika@nitj.ac.in</p>
-                        </div>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                        <i class="fa-solid fa-phone"></i>
-                          <p class="text-sm my-1">0181-2690301</p>
-                        </div>
-                      </div>
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Amritpal Singh
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Computer Science & Engg.
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">apsingh@nitj.ac.in</p>
-                        </div>
-                        <!-- <div
+            </div>
+            <div id="aproctor_3">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Senthil Kasilingam
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Civil Engineering</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">kasilingams@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">8267927382</p>
+              </div> -->
+            </div>
+            <div id="aproctor_4">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Aruna Malik
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Computer Science & Engg.</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">malika@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">0181-2690301</p>
+              </div> -->
+            </div>
+            <div id="aproctor_5">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Amritpal Singh
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Computer Science & Engg.</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">apsingh@nitj.ac.in</p>
+              </div> -->
+              <!-- <div
                           class="w-full flex flex-row gap-2 items-center text-gray-500"
                         >
                         <i class="fa-solid fa-phone"></i>
                           <p class="text-sm my-1">0181-2690301</p>
                         </div> -->
-                      </div>
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Kailash Chand Sharma
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Electrical Engineering
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">sharmakc@nitj.ac.in</p>
-                        </div>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                        <i class="fa-solid fa-phone"></i>
-                          <p class="text-sm my-1">09887221353</p>
-                        </div>
-                      </div>
+            <div id="aproctor_6">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Kailash Chand Sharma
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Electrical Engineering</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">sharmakc@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">09887221353</p>
+              </div> -->
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Tarun Chaudhary
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Electronics and Comm.  Engg.
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">chaudharyt@nitj.ac.in</p>
-                        </div>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                        <i class="fa-solid fa-phone"></i>
-                          <p class="text-sm my-1">01815037628</p>
-                        </div>
-                      </div>
+            <div id="aproctor_7">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Tarun Chaudhary
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Electronics and Comm. Engg.</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">chaudharyt@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">01815037628</p>
+              </div> -->
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Shyamkiran Kaur
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Humanities and Management
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">kaursk@nitj.ac.in</p>
-                        </div>
-                        <!-- <div
+            <div id="aproctor_8">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Shyamkiran Kaur
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Humanities and Management</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">kaursk@nitj.ac.in</p>
+              </div> -->
+              <!-- <div
                           class="w-full flex flex-row gap-2 items-center text-gray-500"
                         >
                         <i class="fa-solid fa-phone"></i>
                           <p class="text-sm my-1">01815037628</p>
                         </div> -->
-                      </div>
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Narendra Kumar
-                        </p>
-                        <p class="text-sm">Assistant Professor</p>
-                        <p class="text-sm text-gray-500">
-                            Industrial & Production Engg.
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">kumarn@nitj.ac.in</p>
-                        </div>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                        <i class="fa-solid fa-phone"></i>
-                          <p class="text-sm my-1">+91-7987583937</p>
-                        </div>
-                      </div>
+            <div id="aproctor_9">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Narendra Kumar
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Industrial & Production Engg.</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">kumarn@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">+91-7987583937</p>
+              </div> -->
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Om Prakash Verma
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Instrumentation & Control Engg.
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">vermaop@nitj.ac.in</p>
-                        </div>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                        <i class="fa-solid fa-phone"></i>
-                          <p class="text-sm my-1">7579279839,01815037684, Ext. 2915</p>
-                         
-                        </div>
-                      </div>
+            <div id="aproctor_10">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Om Prakash Verma
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">
+                Instrumentation & Control Engg.
+              </p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">vermaop@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">7579279839,01815037684, Ext. 2915</p>
+              </div> -->
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Nitin Sharma
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Mechanical Engineering
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">sharman@nitj.ac.in</p>
-                        </div>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                        <i class="fa-solid fa-phone"></i>
-                          <p class="text-sm my-1">9418573982</p>
-                         
-                        </div>
-                      </div>
+            <div id="aproctor_11">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Nitin Sharma
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Mechanical Engineering</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">sharman@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <p class="text-sm my-1">9418573982</p>
+              </div> -->
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Ghanshyam Neje
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Textile Technology
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">nejegs@nitj.ac.in</p>
-                        </div>
-                        <!-- <div
+            <div id="aproctor_12">
+              <!-- <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Ghanshyam Neje
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Textile Technology</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">nejegs@nitj.ac.in</p>
+              </div> -->
+              <!-- <div
                           class="w-full flex flex-row gap-2 items-center text-gray-500"
                         >
                         <i class="fa-solid fa-phone"></i>
                           <p class="text-sm my-1">9418573982</p>
                          
                         </div> -->
-                      </div>
+            </div>
 
-                      <div >
-                        <p
-                          class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
-                        >
-                        Dr. Neha Yadav
-                        </p>
-                        <p class="text-sm">Assistant Professor </p>
-                        <p class="text-sm text-gray-500">
-                            Mathematics
-                        </p>
-                        <div
-                          class="w-full flex flex-row gap-2 items-center text-gray-500"
-                        >
-                          <i class="fa-solid fa-envelope"></i>
-                          <p class="text-sm text-gray-500 my-1">yadavn@nitj.ac.in</p>
-                        </div>
-                        <!-- <div
+            <div id="aproctor_13">
+              <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr. Neha Yadav
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">Mathematics</p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">yadavn@nitj.ac.in</p>
+              </div>
+              <!-- <div
                           class="w-full flex flex-row gap-2 items-center text-gray-500"
                         >
                         <i class="fa-solid fa-phone"></i>
                           <p class="text-sm my-1">9418573982</p>
                          
                         </div> -->
-                      </div>
-                    </div>
-                  </div>
-
+            </div>
+          </div>
         </div>
-
-
+      </div>
     </div>
     <script src="app.js"></script>
     <script src="../template/footer.js"></script>
 
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421dd1afccb4205540fb0c1"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("proctor").innerHTML = `
+        <div>
 
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
 
-</body>
+   <i class="fa-solid fa-envelope"></i>
+   <p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
 
+   <i class="fa-solid fa-phone"></i>
+   <p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+           `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421dd1afccb4205540fb0c1"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("proctor").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421dd43fccb4205540fb0c5"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("dproctor").innerHTML = `
+           <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >${result.name}
+              </p>
+              <p class="text-sm">${result.designation}</p>
+              <p class="text-sm text-gray-500">${result.department}</p>
+
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">${result.Email}</p>
+              </div>
+  
+
+       `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421dd76fccb4205540fb0c9"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_1").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421dd9ffccb4205540fb0cd"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_2").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421ddd1fccb4205540fb0d1"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_3").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e4aa5ea207ab26305b26"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_4").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e4f15ea207ab26305b2a"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_5").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e5705ea207ab26305b73"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_6").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e5bb5ea207ab26305b9d"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_7").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e5ec5ea207ab26305bb1"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_8").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e6245ea207ab26305bc0"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_9").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e6625ea207ab26305bc4"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_10").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e68b5ea207ab26305bc8"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_11").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e6b25ea207ab26305bcc"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_12").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+    <script>
+      async function callAPi() {
+        let result = await fetch(
+          "https://wdmc-vsj1.onrender.com/proctorialCell/6421e6eb5ea207ab26305bd0"
+        );
+        result = await result.json();
+        console.log(result);
+        document.getElementById("aproctor_13").innerHTML = `
+    <div>
+
+<p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
+<p class="text-sm">${result.designation}</p> 
+<p class="text-sm text-gray-500">${result.department}</p>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-envelope"></i>
+<p class="text-sm text-gray-500 my-1">${result.Email}</p>
+</div>
+<div class="w-full flex flex-row gap-2 items-center text-gray-500">
+
+<i class="fa-solid fa-phone"></i>
+<p class="text-sm my-1">${result["Tel No."]}</p>
+</div> 
+
+</div>
+
+       `;
+      }
+      callAPi();
+    </script>
+  </body>
 </html>
