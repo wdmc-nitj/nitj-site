@@ -6,57 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
     <link rel="stylesheet" href="/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" type="favicon" href="img/logo.png">
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
 
+    
+
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="jquery-3.6.3.min.js"></script>
+
     <script src="https://kit.fontawesome.com/46aac33939.js" crossorigin="anonymous"></script>
 
-
     <title>Alumni Page</title>
+
+
+    <style>
+   
+      .main {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        background: #333;
+      }
+       
+      .main img {
+        max-width: 100%;
+        vertical-align: middle;
+        border: 2px solid #0054A6;
+        box-sizing: border-box;
+        transition: opacity .2s;
+      }
+       
+      .main:hover img {
+        opacity: 0.5;
+      }
+       
+      .main img:hover {
+        opacity: 1;
+      }
+       
+      .main .single-column {
+        width: 25%;
+          animation: var(--animation, none) 16s infinite linear;
+      }
+       
+      .main .single-column:hover {
+          animation-play-state: paused;
+      }
+       
+      .main .single-column:nth-of-type(odd) {
+        align-self: flex-end;
+        --direction: 50%;
+      }
+       
+      @keyframes slide {
+        to {
+          -webkit-transform: translateY(var(--direction, -50%));
+                  transform: translateY(var(--direction, -50%));
+        }
+      }
+        </style>
+    
+    
 </head>
 <body>
 
 <!--NAVBAR BEGINS-->
-  <nav class="bg-[#3E3C3C] lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
-    <div class="flex justify-around p-1 items-center  ">
+  <nav class="fixed scroll-smooth z-50 w-full bg-white lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
+    <div class="flex justify-around p-1 items-center ">
         <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
           src="img/logo.png" alt="logo">
-          <div class="text-xs sm:text-base w-[17.5rem] lg:w-[19rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-white  cursor-pointer">
+          <div class="text-xs sm:text-base w-[30rem] lg:w-[33rem] h-[2.375rem]  ml-3 leading-5 text-[#0054A6]  cursor-pointer font-bold">
             <a href="alumni.html"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
           </div>
     
-      <span class="text-3xl cursor-pointer text-white mx-2 mr-3 lg:hidden block">
+      <span class="text-3xl cursor-pointer text-black mx-2 mr-3 lg:hidden block">
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
       </span>
     </div>
 
-    <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-[#3E3C3C] w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+    <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-white w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
       <!--
       <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
         <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
       </li>
     -->
-
+    <!--
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
         <a href="chapters.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">CHAPTERS</a>
       </li>
+    -->
   
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
+        <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
       </li>
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">DONATION STATISTICS</a>
+        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">
+          CHAPTERS</a>
+      </li>
+
+      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+        <a href="" class="text-xs xl:text-base w-auto h-[1rem] text-black font-bold hover:text-[#D3D3D3] duration-500 ">LOGIN</a>
       </li>
 
       <a href="register.html">
-        <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-white rounded hover:-translate-y-1 hover:scale-110 ">
+        <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-[#FFD66E]  rounded hover:-translate-y-1 hover:scale-110 ">
           REGISTER
         </button>
       </a>
@@ -68,51 +131,29 @@
 
 
 
-<!--Carousel BEGINS-->
 
-<div id="controls-carousel" class="relative" data-carousel="static">
-  <!-- Carousel wrapper -->
-  <div class="relative h-96 overflow-hidden rounded-lg lg:h-[40rem]">
-       <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/college_img_1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-          <img src="img/college_img_2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
+  <div class="relative flex items-center justify-center h-[130vh] mb-12 overflow-hidden">
 
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/footer image.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+    <div class="relative z-30 p-5 text-white bg-opacity-50 rounded-xl flex-none">
+      <div class="text-xl md:text-4xl lg:text-5xl font-semibold italic animate-pulse md:py-2">
+        Welcome Home!
       </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/college_img_3.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      <div class="text-base md:text-2xl lg:text-3xl font-normal ">
+        Stay connected to your Alma Mater.
       </div>
+    </div>
+    <video autoplay loop muted class="fixed -z-10 w-auto min-w-full min-h-full max-w-none ">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4"/>Your browser does not support the video tag.
+    </video>
+    <div class=" bg-white">
+
+    </div>
   </div>
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-          <span class="sr-only">Previous</span>
-      </span>
-  </button>
-  <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-          <span class="sr-only">Next</span>
-      </span>
-  </button>
-</div>
-
-<!--CarouseL ENDS-->
-
 
 
 
 <!--Student alumini relation box starts-->
-<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] rounded-xl mx-auto top-[-10rem] lg:top-[-22rem] z-40 relative shadow-xl shadow-gray-700">
+<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] rounded-xl mx-auto top-[-10rem] lg:top-[-7rem] z-40 relative shadow-xl shadow-gray-700">
 
   <h2 class="font-bold text-base sm:text-lg lg:text-2xl my-3 sm:my-5 text-black text-center font-sans">STUDENT ALUMNI RELATIONS CELL (SARC NITJ)</h2>
 
@@ -125,21 +166,21 @@
 
   <hr class="border-[3px] sm:border-[0.3rem] lg:border-[0.5rem] w-full border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
 
-  <div class="bg-[#2167A7] w-full h-40 sm:h-[12rem] lg:h-[18rem] xl:h-[19rem] border-2 lg:border-4 border-[#FFD66E] rounded-md mb-4 sm:mb-8 lg:mb-16 p-0 lg:p-4">
-    <div class="flex justify-between sm:justify-around relative top-16 sm:top-[5.5rem] lg:top-28 mx-2">
+  <div class="bg-[#2167A7] w-full h-40 sm:h-[12rem] lg:h-[18rem] xl:h-[15rem] border-2 lg:border-4 border-[#FFD66E] rounded-md mb-4 sm:mb-8 lg:mb-16 p-0 lg:p-4">
+    <div class="flex justify-between sm:justify-around relative top-16 sm:top-[5.5rem] lg:top-8 mx-2">
       <div class="w-[16vw] h-16 sm:h-[5rem] lg:h-[7rem] xl:h-[8rem] bg-[#277BC7] shadow-md static inset-y-44 rounded-md p-1 lg:p-2 text-center">
-          <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">11,000</h1>
+          <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">9,500</h1>
           <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">TOTAL ALUMINI</h1>
       </div>
 
       <div class="w-[16vw] h-16 sm:h-[5rem] lg:h-[7rem] xl:h-[8rem] bg-[#277BC7] shadow-md static inset-y-44 rounded-md p-1 lg:p-2 text-center">
-        <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">100</h1>
-        <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">CLUBS</h1>
+        <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">11</h1>
+        <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">CHAPTERS</h1>
       </div>
 
       <div class="w-[16vw] h-16 sm:h-[5rem] lg:h-[7rem] xl:h-[8rem] bg-[#277BC7] shadow-md static inset-y-44 rounded-md p-1 lg:p-2 text-center">
-        <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">134</h1>
-        <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">TOTAL ORGANISATIONS</h1>
+        <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">4,84,000</h1>
+        <h1 class="text-[#82C3FF] text-[0.3rem] sm:text-xs lg:text-sm my-1 lg:my-2">HIGHEST DONATION</h1>
       </div>
   </div>
 
@@ -150,56 +191,133 @@
 
 
 
-<!--NEWS-->
-<div id="controls-carousel" class="relative" data-carousel="static">
-  <!-- Carousel wrapper -->
-  <div class="relative h-96 overflow-hidden rounded-lg lg:h-[40rem]">
-       <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-          <img src="img/3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
+<div class="relative bg-[#fDfDfD] -top-96 w-full">
+
+  <div class="h-[75vh]">
+
   </div>
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-          <span class="sr-only">Previous</span>
-      </span>
-  </button>
-  <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-          <span class="sr-only">Next</span>
-      </span>
-  </button>
-</div>
-<!--NEWS-->
 
 
-<!--Blank space-->
-<!---
-<div class="w-[100vw] h-[7rem]">
-</div>
--->
-<!--Blank space-->
 
 
+
+
+
+
+<!-- Around the world -->
+<section id="institute-numbers" class="scroll-mt-32 group bg-cover bg-fixed bg-center bg-no-repeat"  style="background-image:url('https://static.almabaseapp.com/img/map_without_labels.c474a674d948.png');">
+  <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40">
+    
+    <div id="homepage-map-content" class="text-white grid place-items-center py-20">
+      <p id="homepage-map-heading" class="text-4xl py-8 pt-12 font-semibold">Around The World</p>
+      <p class="text-2xl pt-12 py-5 font-medium underline underline-offset-4 decoration-indigo-500">Abroad</p>
+      <div class="grid grid-cols-4 gap-6 place-items-center">    
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">USA</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Canada</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">UK</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Australia</p>
+          </div>
+        </div>    
+      </div>
+
+
+      <p class="text-2xl pt-12 py-5 font-semibold underline underline-offset-4 decoration-indigo-500">India</p>
+      <div class="grid grid-cols-6 gap-6 place-items-center pb-10">    
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Bengalore</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Pune</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Mumbai</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Hyderabad</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Delhi</p>
+          </div>
+        </div>
+
+        <div class="homepage-map-city flex gap-2">
+          <div class="homepage-map-city-icon">
+            <i class="fa fa-city"></i>
+          </div>
+          <div class="homepage-map-city-intro">
+            <p class="homepage-map-city-name text-2xl">Chandigarh</p>
+          </div>
+        </div>
+          
+          
+      </div>
+
+
+      
+  </div>
+  </div>
+</section>
 
 
 <!--RECENT EVENT STARTS-->
-<div class="p-3 sm:p-5 bg-[#f5f5f5] bg-[url('/alumni/img/recentbg.png')] bg-center ">
+<div class="p-3 sm:p-5 bg-[#f5f5f5] min-h-[55vh] bg-center ">
   
   <div class="mx-5 sm:mx-12 lg:mx-20 mt-5 sm:mt-14 lg:mt-20 flex align-middle">
     <div>
@@ -208,7 +326,7 @@
         </div>
     </div>
     <div class="w-full mt-3 lg:mt-2">
-      <hr class="border-[0.2rem] lg:border-[0.22rem] -rotate-1  border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
+      <hr class="border-[0.2rem] lg:border-[0.22rem]  border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
     </div>
   </div>
 
@@ -238,12 +356,89 @@
     </div>
   </div>
 
-
+<!---
   <button class="ml-8 sm:ml-28 lg:ml-44 mb-12 sm:mb-16 lg:mb-24 bg-white px-7 sm:px-12 py-2 sm:py-3 lg:py-4 border-2 border-[#FEB702] rounded-lg text-[#2167A7] text-sm sm:text-base hover:-translate-y-1 hover:scale-110" type="button">View All Events</button>
 
+-->
 </div>
 
 <!--RECENT EVENTS ENDS-->
+
+
+
+
+
+
+<div class="main h-[50vh] sm:h-[91vh]">
+	  
+	<div class="single-column">
+		<a href="#"><img src="./img/alumni_meet/image-000.jpg" alt="image"></a>
+		<a href="#"><img src="./img/alumni_meet/image-001.jpg" alt="image"></a>
+		<a href="#"><img src="./img/alumni_meet/image-002.jpg" alt="image"></a>
+		<a href="#"><img src="./img/alumni_meet/image-003.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-004.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-005.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-006.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-007.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-008.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-009.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-010.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-011.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-012.jpg" alt="image"></a>
+	</div>
+
+	<div class="single-column">
+		<a href="#"><img src="./img/utkansh19/1.jpg" alt="image"></a>
+		<a href="#"><img src="./img/utkansh19/2.jpg" alt="image"></a>
+		<a href="#"><img src="./img/utkansh19/3.jpg" alt="image"></a>
+		<a href="#"><img src="./img/utkansh19/4.jpg" alt="image"></a>
+    <a href="#"><img src="./img/utkansh19/5.jpg" alt="image"></a>
+    <a href="#"><img src="./img/utkansh19/7.jpg" alt="image"></a>
+    <a href="#"><img src="./img/utkansh19/8.jpg" alt="image"></a>
+    <a href="#"><img src="./img/utkansh19/9.jpg" alt="image"></a>
+    <a href="#"><img src="./img/utkansh19/10.jpg" alt="image"></a>
+    <a href="#"><img src="./img/utkansh19/11.jpg" alt="image"></a>
+    <a href="#"><img src="./img/utkansh19/12.jpg" alt="image"></a>
+	</div>
+
+	<div class="single-column">
+    <a href="#"><img src="./img/alumni_meet/image-026.jpg" alt="image"></a>
+		<a href="#"><img src="./img/alumni_meet/image-027.jpg" alt="image"></a>
+		<a href="#"><img src="./img/alumni_meet/image-028.jpg" alt="image"></a>
+		<a href="#"><img src="./img/alumni_meet/image-029.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-030.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-031.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-032.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-033.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-034.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-035.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-036.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-037.jpg" alt="image"></a>
+    <a href="#"><img src="./img/alumni_meet/image-038.jpg" alt="image"></a>
+	</div>
+	<div class="single-column">
+		<a href="#"><img src="./img/college_img/1.jpg" alt="image"></a>
+		<a href="#"><img src="./img/college_img/2.jpg" alt="image"></a>
+		<a href="#"><img src="./img/college_img/3.jpg" alt="image"></a>
+		<a href="#"><img src="./img/college_img/4.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/5.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/6.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/7.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/8.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/9.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/10.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/11.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/12.jpg" alt="image"></a>
+    <a href="#"><img src="./img/college_img/13.jpg" alt="image"></a>
+	</div>
+	
+	
+</div>
+
+
+
+
+
 
 
 
@@ -267,7 +462,7 @@
 
             <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
               <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
-                <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni image.png" alt="alumni image">
+                <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/upsanataku.png" alt="alumni image">
               </div>
 
               <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
@@ -323,15 +518,15 @@
 
         <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
           <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
-            <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni image.png" alt="alumni image">
+            <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/ajitmohan.jpg" alt="alumni image">
           </div>
 
           <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
-              <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Upasna Taku</h1>
+              <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Ajit Mohan Karimpana</h1>
           
-              <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Co founder, mobikwik</h1>
+              <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Founder of Furlenco</h1>
 
-              <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (ICE)  |  2004-2008</h2>
+              <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (Industial Engineering)  |  1996-2000</h2>
 
             <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
               <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
@@ -353,7 +548,7 @@
 
 
             <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
-              <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Management Science and Engineering from Stanford University</p>
+              <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Computer and Information Science from Temple University</p>
             </div>
 
             <div class="text-center">
@@ -380,15 +575,15 @@
 
           <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
             <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
-              <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni image.png" alt="alumni image">
+              <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/anindyaghose.jpg" alt="alumni image">
             </div>
 
             <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
-                <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Upasna Taku</h1>
+                <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Anindya Ghose</h1>
             
-                <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Co founder, mobikwik</h1>
+                <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Professor, NYU's Leonard N. Stern School of Business</h1>
 
-                <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (ICE)  |  2004-2008</h2>
+                <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech </h2>
 
               <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
                 <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
@@ -410,7 +605,7 @@
 
 
               <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
-                <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Management Science and Engineering from Stanford University</p>
+                <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MBA in Finance and Marketing from IIM Calcutta. Ph.D in Management Sciences from Carnegie Mellon University - Tepper School of Business</p>
               </div>
 
               <div class="text-center">
@@ -422,6 +617,64 @@
         </div>
 
       <!--Notable Alumni Ends-->
+
+
+
+
+    </div>
+    <!-- Item 4 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+    
+    <!--Notable Alumni starts-->
+      <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
+        <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
+          <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
+        </div>
+
+        <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
+          <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
+            <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/amitboni.jpg" alt="alumni image">
+          </div>
+
+          <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
+              <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Amit Boni</h1>
+          
+              <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Founder & CEO, ensuredit</h1>
+
+              <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (IPE) | 1996-2000</h2>
+
+            <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
+              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                  <a href="https://www.facebook.com/" target="_blank">
+                      <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
+                  </a>
+              </div>
+              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                  <a href="https://twitter.com/" target="_blank">
+                      <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
+                  </a>
+              </div>
+              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                  <a href="https://in.linkedin.com/" target="_blank" >
+                      <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
+                  </a>
+              </div>
+            </div>
+
+
+            <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
+              <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MBA in marketing from Management Development Institute, Gurgaon</p>
+            </div>
+
+            <div class="text-center">
+              <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+            </div> 
+
+          </div>
+        </div>
+      </div>
+
+    <!--Notable Alumni Ends-->
 
           
       </div>
@@ -454,9 +707,9 @@
 
 
 <!--donation-->
+<div class ="bg-white p-3">
 <div class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-[5%]">
-  <div
-    class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('/alumni/img/support.png')] bg-center bg-cover">
+  <div class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('img/support.png')] bg-center bg-cover">
     <div class="text-white text-[1.7rem]">
       <h1 class="text-3xl font-bold uppercase text-white">
         #SUPPORT <br />
@@ -474,6 +727,10 @@
     </div>
   </div>
 </div>
+</div>
+
+
+
 
 
 
@@ -613,6 +870,16 @@
 
 
 
+</div>
+
+
+
+
+
+
+
+
+
 
 <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
 
@@ -648,6 +915,16 @@
   //   return new Tooltip(tooltipTriggerEl);
   // });
 </script>
+
+
+<script>
+  [...document.querySelectorAll('.single-column')].map(column => {
+    column.style.setProperty('--animation', 'slide');
+    column.style.setProperty('height', '200%');
+    column.innerHTML = column.innerHTML + column.innerHTML;
+  });
+  </script>
+
 
 <script src="app.js"></script>
 
