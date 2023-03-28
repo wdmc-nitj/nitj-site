@@ -4,7 +4,7 @@ const baseURL = 'https://wdmc-vsj1.onrender.com'
 function dataFilter(apiData) {
   const data = apiData.filter((n) => n.show === true)
   data.sort((a, b) => {
-    a.order - b.order
+    return b.order - a.order
   })
   return data
 }
@@ -20,12 +20,27 @@ fetch(`${baseURL}/news/`)
       const newsCard = document.createElement('div')
       newsCard.setAttribute(
         'class',
-        `rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200`
+        `relative rounded-xl p-4 shadow-md odd:bg-blue-100/50 even:bg-blue-200`
       )
       newsCard.innerHTML = `
+      
             <a href="/template/index.html?id=${news._id}?category=news">
               <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
-                <p class="w-full text-lg font-semibold line-clamp-1">${news.title}</p>
+              
+              <p class="w-full text-lg font-semibold line-clamp-1">
+              ${news.new ?         
+                `
+                
+                <span class="absolute -top-1 -left-1">
+                  <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                  </span>
+                </span>
+                `: ''}  
+              ${news.title}</p>
+
                 <p class="w-full line-clamp-2">
                   ${news.desc}
                 </p>
@@ -38,7 +53,8 @@ fetch(`${baseURL}/news/`)
 
 fetch(`${baseURL}/testimonial/get/all`)
   .then((response) => response.json())
-  .then((data) => {
+  .then((apidata) => {
+    const data = dataFilter(apidata)
     // console.log(data)
     // //////////////////////
     // Original Element
@@ -113,13 +129,10 @@ function dateManipulator(data) {
 fetch(`${baseURL}/latestEvent/get/all`)
   .then((response) => response.json())
   .then((APIdata) => {
-    const data = APIdata.slice(0, 6)
-    let i = 6
+    const data = dataFilter(APIdata)
     const cards = document.getElementById('cards')
     cards.innerHTML = ''
     data.forEach((e) => {
-      i--
-      if (i <= 0) return
       const card = document.createElement('div')
       card.setAttribute('id', 'card')
       card.setAttribute('class', 'min-h-full')
@@ -157,7 +170,7 @@ fetch(`${baseURL}/latestEvent/get/all`)
 fetch(`${baseURL}/researchHighlights/get/all`)
   .then((response) => response.json())
   .then((APIdata) => {
-    const data = APIdata.slice(0, 6)
+    const data = dataFilter(APIdata)
     // ///////////////
     // Original Element
     // ///////////////
@@ -283,7 +296,7 @@ fetch(`${baseURL}/administration/get/all`)
 fetch(`${baseURL}/placementStat/get/all`)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+    // console.log(data)
     data.sort((a, b) => {
       a.order - b.order
     })
@@ -304,7 +317,8 @@ fetch(`${baseURL}/placementStat/get/all`)
 
 fetch(`${baseURL}/publication/get/all`)
   .then((res) => res.json())
-  .then((data) => {
+  .then((apidata) => {
+    const data = dataFilter(apidata)
     const parentDiv = document.getElementById('publication-cards')
     data.forEach((e) => {
       const content = e.Publication
@@ -331,11 +345,13 @@ fetch(`${baseURL}/publication/get/all`)
 
 fetch(`${baseURL}/club/get/all`)
   .then((res) => res.json())
-  .then((data) => {
-    console.log(data)
+  .then((apidata) => {
+    // console.log(data)
+    const data = dataFilter(apidata)
+
     const parentDiv = document.getElementById('clubs-and-socs')
     data.forEach((e) => {
-      console.log(e)
+      // console.log(e)
       // const content = e
       const div = document.createElement('div')
       div.setAttribute('id', 'club-card')

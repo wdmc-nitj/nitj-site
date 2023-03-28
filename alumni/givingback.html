@@ -24,46 +24,52 @@
 </head>
 <body>
 
-  <!--NAVBAR BEGINS-->
-  <nav class="bg-[#3E3C3C] lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
-    <div class="flex justify-around p-1 items-center  ">
-        <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
-          src="img/logo.png" alt="logo">
-          <div class="text-xs sm:text-base w-[17.5rem] lg:w-[19rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-white  cursor-pointer">
-            <a href="alumni.html"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
-          </div>
-    
-      <span class="text-3xl cursor-pointer text-white mx-2 mr-3 lg:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-      </span>
-    </div>
-
-    <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-[#3E3C3C] w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-      <!--
-      <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
-      </li>
-    -->
-
-      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">CHAPTERS</a>
-      </li>
+<!--NAVBAR BEGINS-->
+<nav class=" scroll-smooth z-50 w-full bg-white lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
+  <div class="flex justify-around p-1 items-center ">
+      <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
+        src="img/logo.png" alt="logo">
+        <div class="text-xs sm:text-base w-[30rem] lg:w-[33rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-[#0054A6]  cursor-pointer font-bold">
+          <a href="alumni.html"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
+        </div>
   
-      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
-      </li>
-      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">DONATION STATISTICS</a>
-      </li>
+    <span class="text-3xl cursor-pointer text-black mx-2 mr-3 lg:hidden block">
+      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+    </span>
+  </div>
 
-      <a href="register.html">
-        <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-white rounded hover:-translate-y-1 hover:scale-110 ">
-          REGISTER
-        </button>
-      </a>
-      
-    </ul>
-  </nav>
+  <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-white w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+    <!--
+    <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
+      <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
+    </li>
+  -->
+  <!--
+    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+      <a href="chapters.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">CHAPTERS</a>
+    </li>
+  -->
+
+    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+      <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
+    </li>
+    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+      <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">
+        CHAPTERS</a>
+    </li>
+
+    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
+      <a href="" class="text-xs xl:text-base w-auto h-[1rem] text-black font-bold hover:text-[#D3D3D3] duration-500 ">LOGIN</a>
+    </li>
+
+    <a href="register.html">
+      <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-[#FFD66E]  rounded hover:-translate-y-1 hover:scale-110 ">
+        REGISTER
+      </button>
+    </a>
+    
+  </ul>
+</nav>
 <!-- NAVBAR ENDS -->
     
 
@@ -206,7 +212,7 @@
 <!--donation-->
 <div class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-[5%]">
   <div
-    class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('/alumni/img/support.png')] bg-center bg-cover">
+    class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('img/support.png')] bg-center bg-cover">
     <div class="text-white text-[1.7rem]">
       <h1 class="text-3xl font-bold uppercase text-white">
         #SUPPORT <br />
