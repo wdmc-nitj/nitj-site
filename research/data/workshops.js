@@ -1,11 +1,11 @@
 
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=true&category=conference')
+fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=true&category=workshop')
 .then((response) => response.json())
   .then((data) => {
     
-    const ugupdates = document.getElementById('upcoming_conferences')
+    const ugupdates = document.getElementById('upcomingworkshop')
     data.forEach((update) => {
       const ugupdate = document.createElement('div')
       var d = new Date(update.dateTime);
@@ -52,11 +52,11 @@ fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=t
   })
 
 
-  fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=false&category=conference')
+  fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=false&category=workshop')
 .then((response) => response.json())
   .then((data) => {
     
-    const ugupdates = document.getElementById('organizedConferences')
+    const ugupdates = document.getElementById('organizedworkshop')
     data.forEach((update) => {
       const ugupdate = document.createElement('div')
       var d = new Date(update.dateTime);
