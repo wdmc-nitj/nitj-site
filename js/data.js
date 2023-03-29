@@ -24,7 +24,11 @@ fetch(`${baseURL}/news/`)
       )
       newsCard.innerHTML = `
       
-            <a href="/template/index.html?id=${news._id}?category=news">
+            <a 
+            ${
+              news?.newPage ? "target='_blank'" : ''
+            }
+            href="/template/index.html?id=${news._id}?category=news">
               <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
               
               <p class="w-full text-lg font-semibold line-clamp-1">
@@ -300,10 +304,10 @@ fetch(`${baseURL}/placementStat/get/all`)
     data.sort((a, b) => {
       a.order - b.order
     })
-    const statsData = data.map((stat) => stat.PlacementStat)
+    
     const element = document.getElementById('placement-stats')
     // console.log(statsData)
-    statsData.map((statData) => {
+    data.map((statData) => {
       // console.log(metric, stat, stat[metric])
       const stat = document.createElement('div')
       stat.setAttribute('class', 'number')
@@ -396,7 +400,15 @@ img_arr = []
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
-    const images = data.sort((a, b) => 0.5 - Math.random())
+    // console.log(data)
+
+    // const images = data.sort((a, b) => 0.5 - Math.random())
+    const images = data.filter(img => {
+      return img.type ==='photoGallery'
+    })
+    images.sort((a, b)=>(
+      0.5 - Math. random()
+    ))
     size_images = images.length
     img_arr = images
     // const images = shuffledArray.slice(0,12)
@@ -411,7 +423,7 @@ fetch(`${baseURL}/photoGallery/`)
     let i = 0
     let y = 1
     images.forEach((img, key) => {
-      // img.image.link
+      // img.link
       if (y > 12) {
         return
       }
@@ -422,7 +434,7 @@ fetch(`${baseURL}/photoGallery/`)
       const imgContainer = document.createElement('div')
       imgContainer.classList.add('box')
       imgContainer.innerHTML = `
-        <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
+        <img class= "gallery-image" data-index="${key}" src="${img.link}" />
         `
 
       if (y % 4 == 0 && window.innerWidth <= 800) {
@@ -452,13 +464,13 @@ arrow_forward.addEventListener('click', (e) => {
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
     if (
-      imgArray[i].image.link.toLowerCase().trim() ==
+      imgArray[i].link.toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == imgArray.length - 1) {
-        imgSample.src = imgArray[0].image.link
+        imgSample.src = imgArray[0].link
       } else {
-        imgSample.src = imgArray[i + 1].image.link
+        imgSample.src = imgArray[i + 1].link
       }
       break
     }
@@ -470,13 +482,13 @@ arrow_backward.addEventListener('click', (e) => {
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
     if (
-      imgArray[i].image.link.toLowerCase().trim() ==
+      imgArray[i].link.toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == 0) {
-        imgSample.src = imgArray[imgArray.length - 1].image.link
+        imgSample.src = imgArray[imgArray.length - 1].link
       } else {
-        imgSample.src = imgArray[i - 1].image.link
+        imgSample.src = imgArray[i - 1].link
       }
       break
     }
