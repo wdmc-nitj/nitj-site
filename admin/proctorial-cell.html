@@ -151,6 +151,8 @@
           </ol>
         </nav>
       </div>
+      </div>
+      
       <!-- <p> Code by Bhavya Mittal </p> -->
       <div
         id="institute-development"
@@ -169,10 +171,10 @@
           </p>
           <div
             class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8"
-            id="proctor"
+            
           >
-            <!-- <div>
-              <p
+            <div id="proctor">
+              <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
               >
                 Dr. Jatinder Kumar Ratan
@@ -537,7 +539,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("proctor").innerHTML = `
-        <div>
+    
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -553,7 +555,6 @@
    <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
            `;
       }
@@ -568,8 +569,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("proctor").innerHTML = `
-    <div>
-
+  
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
 <p class="text-sm text-gray-500">${result.department}</p>
@@ -584,7 +584,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -626,8 +625,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_1").innerHTML = `
-    <div>
-
+  
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
 <p class="text-sm text-gray-500">${result.department}</p>
@@ -642,7 +640,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -657,8 +654,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_2").innerHTML = `
-    <div>
-
+  
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
 <p class="text-sm text-gray-500">${result.department}</p>
@@ -673,7 +669,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -688,7 +683,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_3").innerHTML = `
-    <div>
+  
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -704,7 +699,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -719,7 +713,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_4").innerHTML = `
-    <div>
+
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -735,7 +729,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -750,7 +743,6 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_5").innerHTML = `
-    <div>
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -765,8 +757,6 @@
 <i class="fa-solid fa-phone"></i>
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
-
-</div>
 
        `;
       }
