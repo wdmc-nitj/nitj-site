@@ -37,15 +37,15 @@
         overflow: hidden;
         background: #333;
       }
-       
+
       .main img {
         max-width: 100%;
         vertical-align: middle;
-        border: 2px solid #0054A6;
+        border: 3px solid #FFD66E;
         box-sizing: border-box;
         transition: opacity .2s;
       }
-       
+              
       .main:hover img {
         opacity: 0.5;
       }
@@ -78,10 +78,10 @@
     
     
 </head>
-<body>
+<body class="h-screen overflow-x-hidden">
 
 <!--NAVBAR BEGINS-->
-  <nav class="fixed scroll-smooth z-50 w-full bg-white lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
+  <nav class="fixed scroll-smooth z-50 max-w-screen w-full bg-white lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
     <div class="flex justify-around p-1 items-center ">
         <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
           src="img/logo.png" alt="logo">
@@ -132,7 +132,7 @@
 
 
 
-  <div class="relative flex items-center justify-center h-[130vh] mb-12 overflow-hidden">
+  <div class="relative max-w-screen flex items-center justify-center h-[130vh] mb-12 overflow-hidden">
 
     <div class="relative z-30 p-5 text-white bg-opacity-50 rounded-xl flex-none">
       <div class="text-xl md:text-4xl lg:text-5xl font-semibold italic animate-pulse md:py-2">
@@ -153,7 +153,7 @@
 
 
 <!--Student alumini relation box starts-->
-<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] rounded-xl mx-auto top-[-10rem] lg:top-[-7rem] z-40 relative shadow-xl shadow-gray-700">
+<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] max-w-screen rounded-xl mx-auto top-[-10rem] lg:top-[-7rem] z-40 relative shadow-xl shadow-gray-700">
 
   <h2 class="font-bold text-base sm:text-lg lg:text-2xl my-3 sm:my-5 text-black text-center font-sans">STUDENT ALUMNI RELATIONS CELL (SARC NITJ)</h2>
 
@@ -191,7 +191,7 @@
 
 
 
-<div class="relative bg-[#fDfDfD] -top-96 w-full">
+<div class="max-w-screen relative bg-[#fDfDfD] -top-96 w-full">
 
   <div class="h-[75vh]">
 
@@ -205,6 +205,7 @@
 
 
 <!-- Around the world -->
+<!--
 <section id="institute-numbers" class="scroll-mt-32 group bg-cover bg-fixed bg-center bg-no-repeat"  style="background-image:url('https://static.almabaseapp.com/img/map_without_labels.c474a674d948.png');">
   <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40">
     
@@ -314,6 +315,7 @@
   </div>
   </div>
 </section>
+-->
 
 
 <!--RECENT EVENT STARTS-->
@@ -604,8 +606,8 @@
               </div>
 
 
-              <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
-                <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MBA in Finance and Marketing from IIM Calcutta. Ph.D in Management Sciences from Carnegie Mellon University - Tepper School of Business</p>
+              <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1">
+                <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MBA from IIM Calcutta. Ph.D from Carnegie Mellon University - Tepper School of Business</p>
               </div>
 
               <div class="text-center">
@@ -707,6 +709,8 @@
 
 
 <!--donation-->
+
+<!---
 <div class ="bg-white p-3">
 <div class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-[5%]">
   <div class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('img/support.png')] bg-center bg-cover">
@@ -728,7 +732,7 @@
   </div>
 </div>
 </div>
-
+-->
 
 
 
@@ -738,7 +742,7 @@
 
 <!--Footer image starts-->
 <div class="w-full">
-  <img src="img/footer image.png" alt="footer image">
+    <img src="img/footer image.png" alt="footer image">
 </div>
 <!--Footer image ends-->
 
