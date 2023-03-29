@@ -400,7 +400,7 @@ img_arr = []
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data)
+    // console.log(data)
 
     // const images = data.sort((a, b) => 0.5 - Math.random())
     const images = data.filter(img => {
