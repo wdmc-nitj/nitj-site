@@ -4023,7 +4023,7 @@ sup {
 }
 
 .animate-delay {
-  animate-delay: 100ms;
+  animation-delay: 100ms;
 }
 
 .main-slider-text {
