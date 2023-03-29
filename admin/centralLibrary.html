@@ -21,7 +21,7 @@
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>System of Evaluation and Grant of Division/Class</title>
+    <title>UMC Rules</title>
     <style>
         .bg-accent {
             --tw-bg-opacity: 1;
@@ -43,10 +43,11 @@
 <body>
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
-    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">SYSTEM OF EVALUATION AND GRANT OF DIVISION/CLASS</p>
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Frequently asked questions
+                </p>
             </div>
             <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center">
@@ -60,18 +61,16 @@
                         <div class="inline-flex items-center">
                             <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
                                 class="fa-solid cursor-pointer fa-angle-right ml-2"></i>
-                            <a href="#" class="text-lg font-medium ml-2">System of Evaluation and Grant of
-                                Division/Class</a>
+                            <a href="#" class="text-lg font-medium ml-2">Frequently Asked Questions</a>
                         </div>
                     </li>
                 </ol>
             </nav>
         </div> -->
-
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">SYSTEM OF EVALUATION AND GRANT OF DIVISION/CLASS
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Central Library
                 </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -85,38 +84,67 @@
                         <div class="inline-flex items-center">
                             <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
                                 class="fa-solid fa-angle-right ml-2"></i>
-                            <a href="#" class="text-lg font-medium ml-2">System of Evaluation and Grant of
-                                Division/Class</a>
+                            <a href="#" class="text-lg font-medium ml-2">Central Library</a>
                         </div>
                     </li>
                 </ol>
             </nav>
         </div>
+        <div class="m-2">
+            <div class="scroll-mt-32 flex flex-col px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <!-- <div class="w-full flex flex-col items-start">
+                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Frequently Asked Questions
+                    </p>
+                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                </div> -->
+                <div class="flex-col justify-center align-center">
+                    <!-- <ul class="list-disc leading-8 " id="faq-links">
+                        <script>
+                            async function api_call() {
+                                var data = await fetch(
+                                    "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/faq"
+                                );
+                                var result = await data.json();
 
-    <div class="m-2">
-        <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px]">
-            <!-- <div class="w-full flex flex-col items-start">
-                <p class="font2 font-medium text-[28px] lg:text-[44px]">System of Evaluation and Grant of Division/Class
-                </p>
-                <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
-            </div> -->
-        </div>
-        <div class="scroll-mt-32 flex flex-col px-4 lg:px-[14%] gap-[32px] my-8">
-            <!-- <a href="https://www.nitj.ac.in/nitj_files/links/System_of_Evaluation_and_Grant_of_Division_Class-1_91028.jpg"
-                download>
-                <div class="flex items-center justify-between border-2 border-green-500 rounded-3xl max-w-fit p-[2px]">
-                    <button
-                        class="bg-green-500 border rounded-full p-3 w-8 h-8 flex flex-row items-center justify-center"><i
-                            class="fa-solid fa-arrow-down"></i></button>
-                    <span class="ml-4 mr-8 italic font-bold">Download</span>
+                                var modified = result[0].specialLinks;
+
+                                console.log(modified);
+
+                                for (var i in modified) {
+                                    var name = modified[i]["name"];
+                                    var designation = modified[i]["designation"];
+                                    var department = modified[i]["department"];
+                                    var email = modified[i]["email_id"];
+                                    var url = modified[i]["url"];
+                                    var qualification = modified[i]["qualification"];
+                                    var title = modified[i]["title"];
+                                    document
+                                        .getElementById("faq-links")
+                                        .insertAdjacentHTML(
+                                            "beforeend",
+                                            `<li>
+                            <a href="${url}"
+                                target="_blank" class="text-[#B22222] hover:underline"> ${title}</a>
+                        </li>`
+                                        );
+                                }
+                            }
+                            api_call();
+                        </script>
+                        <li><a href></a></li>
+                    </ul> -->
+                    <!-- <iframe src="/admin/src/umc.pdf" width="100%" height="1000px"></iframe> -->
+                    <ul class="list-disc leading-8 " id="faq-links">
+                        <li>
+                            <a href="http://202.164.58.103/library/" class="text-[#0369a0] hover:underline">Link to Central Library</a>
+                        </li>
+                    </ul>
+                    <div class="flex flex-row my-5">
+                    <iframe src="https://www.nitj.ac.in/nitj_files/links/E-books_Access_credentiasls_45203.pdf" width="100%" height="700px"></iframe>
+                    </div>
                 </div>
-            </a> -->
-            <div class="my-2 border-2 border-gray-300">
-                <img src="https://www.nitj.ac.in/nitj_files/links/System_of_Evaluation_and_Grant_of_Division_Class-1_91028.jpg"
-                    alt="...">
             </div>
         </div>
-    </div>
     </div>
     <script src="/template/footer.js"></script>
 </body>
