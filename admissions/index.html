@@ -39,14 +39,26 @@
         }
       }
     </style> -->
+
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
-      --font1: 'Barlow', sans-serif;
+      --font1: 'Poppins', sans-serif;
+      --font2: 'Barlow', sans-serif;
+    }
+
+    .main-body {
+      font-family: var(--font1);
     }
 
     body {
       scrollbar-color: #fff #fff;
-      font-family: var(--font1);
     }
 
     /* Customizing the Scrollbar */
@@ -194,7 +206,7 @@
 <body class="font-body text-dark-purple">
   <script src="/template/header.js" type="module"></script>
   <script src="/template/helper.js"></script>
-  <div>
+  <div class="main-body">
     <div class="tab_wrap2" style="display: block" id="btechtab">
       <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
@@ -239,7 +251,7 @@
     <div class="tab_wrap2" style="display: none" id="mtechtab">
       <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
-        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
+        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
           M.TECH
         </p>
       </div>
@@ -278,7 +290,7 @@
     <div class="tab_wrap2" style="display: none">
       <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
-        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
+        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
           M.TECH (Self Sponsored)
         </p>
       </div>
@@ -317,7 +329,7 @@
     <div class="tab_wrap2" style="display: none" id="msctab">
       <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
-        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
+        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
           M.Sc.
         </p>
       </div>
@@ -356,7 +368,7 @@
     <div class="tab_wrap2" style="display: none" id="mbatab">
       <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
-        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
+        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
           M.B.A
         </p>
       </div>
@@ -395,7 +407,7 @@
     <div class="tab_wrap2" style="display: none" id="phdtab">
       <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
-        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
+        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
           PHD
         </p>
       </div>
@@ -434,7 +446,7 @@
     <div class="tab_wrap2" style="display: none" id="foreignadmissiontab">
       <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
-        <p class="font2 font-bold text-[52px] lg:text-[88px] uppercase text-white leading-[1]">
+        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
           Foreign Admissions
         </p>
       </div>
@@ -471,7 +483,7 @@
     </div>
   </div>
 
-  <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col py-[48px] px-4">
+  <div class="main-body flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col py-[48px] px-4">
     <div class="lg:w-[15%] w-[25%]">
       <div class="tabs p-2 rounded lg:block lg:w-[100%] w-[20%] hidden sticky top-40" id="sidetab">
         <ul>
@@ -1226,7 +1238,7 @@
                       <div class="h-full w-6 flex items-center justify-center">
                         <div class="h-full w-1 bg-color-1 pointer-events-none"></div>
                       </div>
-                      <div class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-300 shadow text-center">
+                      <div class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-blue-200 shadow text-center">
                         <i class="fas fa-check-circle text-white"></i>
                       </div>
                     </div>
@@ -1237,7 +1249,7 @@
                           target="_blank" class="order-1 rounded-lg shadow-xl">
                           <div>
                             <h3 class="font-bold text-white text-xl">
-                              1. JOSAA/CSAB
+                              1. Online Application Form
                             </h3>
                           </div>
                         </a>
@@ -1247,7 +1259,9 @@
                         <a href="https://josaa.admissions.nic.in/applicant/seatmatrix/seatmatrixinfo.aspx"
                           target="_blank" class="order-1 rounded-lg shadow-xl">
                           <div>
-                            <h3 class="mb-3 text-black">JOSAA/CSAB</h3>
+                            <h3 class="mb-3 text-black">
+                              Online Application Form
+                            </h3>
                           </div>
                         </a>
                       </div>
@@ -1267,34 +1281,13 @@
                     <div class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full">
                       <div class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full">
                         <h3 class="font-bold text-white text-xl">
-                          2. Institute reporting Online/Physical
+                          2. Selection Process
                         </h3>
                       </div>
                       <div class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full">
                         <ul class="text-sm leading-snug tracking-wide text-black text-opacity-100">
                           <li>
-                            <a href="" target="_blank">
-                              Online registration
-                            </a>
-                          </li>
-                          <li>
-                            <a href="" target="_blank"> Upload photo </a>
-                          </li>
-                          <li>
-                            <a href="" target="_blank"> Upload documents </a>
-                          </li>
-                          <li>
-                            <a href="" target="_blank">
-                              Document verification
-                            </a>
-                          </li>
-                          <li>
-                            <a href="" target="_blank"> Fee payment </a>
-                          </li>
-                          <li>
-                            <a href="" target="_blank">
-                              Download NITJ provisional letter
-                            </a>
+                            <a href="" target="_blank">NITJ Entrance/Text/Interview</a>
                           </li>
                         </ul>
                       </div>
@@ -1313,23 +1306,13 @@
                     <div class="col-start-4 col-end-12 my-3 mr-auto w-full">
                       <div class="bg-[#0077b6] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full">
                         <h3 class="font-bold text-white text-xl">
-                          3. Issue of:
+                          3. Fee Payment
                         </h3>
                       </div>
                       <div class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full">
                         <ul class="text-sm font-medium leading-snug tracking-wide text-black text-opacity-100">
                           <li>
-                            <a href="" target="_blank"> Roll number </a>
-                          </li>
-                          <li>
-                            <a href="" target="_blank">
-                              Official E-mail ID
-                            </a>
-                          </li>
-                          <li>
-                            <a href="" target="_blank">
-                              Internet access ID
-                            </a>
+                            <a href="" target="_blank"> Selected Canditate</a>
                           </li>
                         </ul>
                       </div>
@@ -1339,7 +1322,7 @@
                   <div class="flex md:contents">
                     <div class="col-start-2 col-end-4 mr-10 md:mx-auto relative">
                       <div class="h-full w-6 flex items-center justify-center">
-                        <div class="h-full w-1 bg-blue-300 pointer-events-none"></div>
+                        <div class="h-full w-1 bg-blue-200 pointer-events-none"></div>
                       </div>
                       <div class="w-[26px] h-[26px] absolute top-1/2 -mt-3 rounded-full bg-color-1 shadow text-center">
                         <i class="fas fa-check-circle text-white"></i>
@@ -1348,7 +1331,7 @@
                     <div class="col-start-4 col-end-12 rounded-t-xl my-3 mr-auto w-full">
                       <div class="bg-[#1c77c3] col-start-4 col-end-12 p-4 rounded-t-xl mr-auto shadow-md w-full">
                         <h3 class="font-bold text-white text-xl">
-                          4. Orientation / Commmencement of Classes
+                          4. Institute Reporting(Online/Offline)
                         </h3>
                       </div>
                       <div class="bg-blue-200 col-start-4 col-end-12 p-4 rounded-b-xl mb-3 mr-auto shadow-md w-full">

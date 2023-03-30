@@ -18,7 +18,11 @@
   <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -93,6 +97,15 @@
       opacity: 1;
       width: 100%;
       height: 100%;
+    }
+
+    :root {
+      --font1: 'Poppins', sans-serif;
+      --font2: 'Barlow', sans-serif;
+    }
+
+    .main-body {
+      font-family: var(--font1);
     }
 
     .base-image {
@@ -183,13 +196,14 @@
   <script src="/template/header.js" type="module"></script>
   <script src="/template/helper.js"></script>
 
-  <div
+  <div class="main-body">
+    <div
     class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
     <p class="font2 font-bold text-[45px] lg:text-[64px]  text-white leading-[1]">
       MoUs
     </p>
-  </div>
-  <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+    </div>
+    <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
     <ol class="inline-flex items-center">
       <li class="inline-flex items-center">
         <div class="inline-flex items-center">
@@ -217,10 +231,10 @@
         </div>
       </li>
     </ol>
-  </nav>
+    </nav>
 
-  <!-- DropDown -->
-  <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
+    <!-- DropDown -->
+    <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
     <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto mt-4 w-[60%]">
       <!-- Dropdown toggle button -->
       <button @click="dropdownMenu = ! dropdownMenu"
@@ -254,13 +268,13 @@
     </div>
 
 
-  </div>
+    </div>
 
-  <!-- DropDown -->
+    <!-- DropDown -->
 
 
 
-  <div
+    <div
     class="py-[48px] px-8 flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col mx-autoflex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col mx-auto">
     <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
       <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%]  w-[20%] hidden sticky top-40" id="sidetab">
@@ -340,6 +354,7 @@
           </table>
         </div>
       </div>
+    </div>
     </div>
   </div>
 
