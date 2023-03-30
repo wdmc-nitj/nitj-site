@@ -18,8 +18,11 @@
     <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 
     <!-- Google Fonts  -->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -97,6 +100,15 @@
             opacity: 1;
             width: 100%;
             height: 100%;
+        }
+
+        :root {
+            --font1: 'Poppins', sans-serif;
+            --font2: 'Barlow', sans-serif;
+        }
+
+        .main-body {
+            font-family: var(--font1);
         }
 
         .base-image {
@@ -181,6 +193,7 @@
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
 
+  <div class="main-body">
     <div
         class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
         <p class="font2 font-bold sm:text-[30px] lg:text-[60px] uppercase text-white leading-[1]">
@@ -259,6 +272,8 @@
 
         </ol>
     </div>
+
+  </div>
     <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
     <div class="relative bottom-0">
         <script src="../template/footer.js"></script>
