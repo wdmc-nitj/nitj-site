@@ -91,6 +91,15 @@
             height: 100%;
         }
 
+        :root {
+            --font1: 'Poppins', sans-serif;
+            --font2: 'Barlow', sans-serif;
+        }
+
+        .main-body{
+            font-family: var(--font1);
+        }
+
         .base-image {
             margin-top: 40px;
             background-image: url("../public/assets/images/nitj3.jpg"),
@@ -179,12 +188,12 @@
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
     <div
-        class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
+        class="main-body titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[100px] lg:mt-32">
         <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
             Anti Ragging
         </p>
     </div>
-    <nav class="flex px-2 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+    <nav class="main-body flex px-2 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
         <ol class="inline-flex items-center">
             <li class="inline-flex items-center">
                 <a href="https://nitj.netlify.app/"
@@ -225,7 +234,7 @@
         </ol>
     </nav>
 
-    <div class="py-[48px]">
+    <div class="main-body py-[48px]">
 
         <div class="mx-auto w-[80%] my-4 ">
             <div class="font2 font-medium text-[28px] lg:text-[32px] ">Ragging is a crime!!!</div>
