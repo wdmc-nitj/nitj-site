@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 
 @tailwind components;
@@ -27,6 +29,12 @@
 }
 
 @layer utilities {
+  .main-body {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font2 {
+    font-family: 'Barlow', sans-serif;
+  }
   .animate-delay {
     animate-delay: 100ms;
   }
