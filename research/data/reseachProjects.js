@@ -78,22 +78,13 @@ async function helperSmallScreen() {
 async function helper2() {
   const content = document.getElementById("content");
   const head = document.createElement("div");
-  head.innerHTML = `
-   
-    <div class=" rounded-lg shadow-sm w-[100%]">
-    <table class=" shadow-lg bg-white w-[100%]">
-      <thead class="text-left">
-      <tr>
-      <th class="border bg-color-1 text-white   px-8 py-2 w-[7%]">S. No.</th>
-      <th class="border bg-color-1 text-white   px-8 py-2 w-[60%]">Project Title</th>
-      <th class="border bg-color-1 text-white   px-8 py-2 w-[11%]">Year of Sanction</th>
-      <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Funding Agency</th>
-      <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Sanction Amount(Rs.In lac)</th>
-    </tr>
-      </thead>
-      </table>
-      </div>
-      `;
+  head.classList.add(
+    "rounded-lg",
+    "shadow-sm",
+    "w-[100%]",
+
+  );
+
   content.appendChild(head);
   // console.log(years.length);
   for (var i = 0; i < years.length; i++) {
@@ -110,11 +101,22 @@ async function helper2() {
         "rounded-lg",
         "shadow-sm",
         "w-[100%]",
-        "bg-pink"
+    
       );
-      tableContent.appendChild(element)
+      // tableContent.appendChild(element)
 
       const table = document.createElement("table");
+      const thead=document.createElement("thead");
+      thead.innerHTML=`
+      <tr>
+      <th class="border bg-color-1 text-white   px-8 py-2" width="7%">S. No.</th>
+      <th class="border bg-color-1 text-white   px-8 py-2" width="60%">Project Title</th>
+      <th class="border bg-color-1 text-white   px-8 py-2" width="11%">Year of Sanction</th>
+      <th class="border bg-color-1 text-white    px-8 py-2" width="11%">Funding Agency</th>
+      <th class="border bg-color-1 text-white    px-8 py-2" width="11%">Sanction Amount(Rs.In lac)</th>
+    </tr>
+      `
+      table.append(thead);
       table.classList.add("tab_wrap", "w-[100%]");
       const tbody = document.createElement("tbody");
       tbody.classList.add("text-left");
@@ -123,39 +125,63 @@ async function helper2() {
       data.forEach((update) => {
         const ugupdate = document.createElement("tr");
         ugupdate.innerHTML = `
-                  <td class="class="border  px-8 py-2 w-[7%]"">${j}</td>
-                  <td class="border px-8 py-2 w-[60%]">${update.title}</td>
-                  <td class="border    px-8 py-2 w-[11%]">${update.yearOfSanctionStart}</td>
-                  <td class="border   px-8 py-2 w-[11%]">${update.fundingAgency}</td>
-                  <td class="border    px-8 py-2 w-[11%]">${update.amountInLakhs}</td>
+        <td class="border px-8 py-2 text-sm w-[7%] ">${j}</td>
+                      <td class="border px-8 py-2 text-sm  w-[60%]">${update.title}</td>
+                      <td class="border px-8 py-2 text-sm w-[11%] ">${update.yearOfSanctionStart}</td>
+                      <td class="border px-8 py-2 text-sm w-[11%] ">${update.fundingAgency}</td>
+                      <td class="border px-8 py-2 text-sm  w-[11%]">${update.amountInLakhs}</td>
           `;
         tbody.appendChild(ugupdate);
         j++;
       });
-      content.appendChild(table);
-    } else {
+      element.appendChild(table)
+      content.appendChild(element);
+    } 
+    else {
       const res = await fetch(
         `https://teamd.onrender.com/research/sponsoredProjects/year?startYear=${years[i]}`
       );
       const data = await res.json();
+      const element = document.createElement("div");
+      element.classList.add(
+        "rounded-lg",
+        "shadow-sm",
+        "w-[100%]",
+    
+      );
+      // tableContent.appendChild(element)
+
       const table = document.createElement("table");
-      table.classList.add("tab_wrap", "w-[100%]", "hidden");
+      const thead=document.createElement("thead");
+      thead.innerHTML=`
+      <tr>
+      <th class="border bg-color-1 text-white   px-8 py-2" width="7%">S. No.</th>
+      <th class="border bg-color-1 text-white   px-8 py-2" width="60%">Project Title</th>
+      <th class="border bg-color-1 text-white   px-8 py-2" width="11%">Year of Sanction</th>
+      <th class="border bg-color-1 text-white    px-8 py-2" width="11%">Funding Agency</th>
+      <th class="border bg-color-1 text-white    px-8 py-2" width="11%">Sanction Amount(Rs.In lac)</th>
+    </tr>
+      `
+      table.append(thead);
+      table.classList.add("tab_wrap", "w-[100%]","hidden");
       const tbody = document.createElement("tbody");
+      tbody.classList.add("text-left");
       table.appendChild(tbody);
       var j = 1;
       data.forEach((update) => {
         const ugupdate = document.createElement("tr");
         ugupdate.innerHTML = `
-                      <td class="border px-8 py-2 text-sm w-[7%] ">${j}</td>
+        <td class="border px-8 py-2 text-sm w-[7%] ">${j}</td>
                       <td class="border px-8 py-2 text-sm  w-[60%]">${update.title}</td>
                       <td class="border px-8 py-2 text-sm w-[11%] ">${update.yearOfSanctionStart}</td>
                       <td class="border px-8 py-2 text-sm w-[11%] ">${update.fundingAgency}</td>
                       <td class="border px-8 py-2 text-sm  w-[11%]">${update.amountInLakhs}</td>
-              `;
+          `;
         tbody.appendChild(ugupdate);
         j++;
       });
-      content.appendChild(table);
+      element.appendChild(table)
+      content.appendChild(element);
     }
   }
 
