@@ -5,6 +5,7 @@ const faculty=document.getElementById("faculty");
 data.forEach((update) => {
     const list = document.createElement('li')
   list.innerHTML = `
+  <span class="font-bold text-4xl">.</span>
   <a
   href=${update.link}
   class="hover:text-[#FF6600]"
@@ -27,6 +28,7 @@ const faculty=document.getElementById("nonFaculty");
 data.forEach((update) => {
     const list = document.createElement('li')
   list.innerHTML = `
+  <span class="font-bold text-4xl">.</span>
   <a
   href=${update.link}
   class="hover:text-[#FF6600]"
@@ -51,6 +53,7 @@ const faculty=document.getElementById("faculty-contract");
 data.forEach((update) => {
     const list = document.createElement('li')
   list.innerHTML = `
+  <span class="font-bold text-4xl">.</span>
   <a
   href=${update.link}
   class="hover:text-[#FF6600]"
@@ -74,6 +77,7 @@ const faculty=document.getElementById("nonFaculty-contract");
 data.forEach((update) => {
     const list = document.createElement('li')
   list.innerHTML = `
+  <span class="font-bold text-4xl">.</span>
   <a
   href=${update.link}
   class="hover:text-[#FF6600]"

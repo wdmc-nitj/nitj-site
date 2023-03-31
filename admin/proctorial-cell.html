@@ -101,7 +101,7 @@
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
 
-    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
+    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 ">
       <div class="titlebg">
         <div
           class="container flex flex-col justify-center items-start h-[224px] py-[48px]"
@@ -134,8 +134,7 @@
                   style="
                     color: rgb(128, 128, 128);
                     font-size: 12px;
-                    margin-left: 12px;
-<li aria-current="page">
+                    margin-left: 12px;">
               <div class="inline-flex items-center">
                 <i
                   style="
@@ -151,6 +150,9 @@
           </ol>
         </nav>
       </div>
+      </div>
+    
+      
       <!-- <p> Code by Bhavya Mittal </p> -->
       <div
         id="institute-development"
@@ -169,10 +171,10 @@
           </p>
           <div
             class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8"
-            id="proctor"
+            
           >
-            <!-- <div>
-              <p
+            <div id="proctor">
+              <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
               >
                 Dr. Jatinder Kumar Ratan
@@ -224,18 +226,14 @@
             </div>
           </div>
         </div>
-      </div>
+      
 
-      <div
-        id="institute-development"
-        class="scroll-mt-32 flex flex-col items-start container gap-[20px] lg:gap-[32px] p-0"
-      >
-        <div class="w-full flex flex-col items-start">
-          <p class="font2 text-xl lg:text-3xl uppercase mb-1 border-b-2">
-            Assistant Proctors
+      
+      <div class="w-full">
+          <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2 mt-3">
+            Assistant Proctor
           </p>
         </div>
-        <div>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
             <div id="aproctor_1">
               <!-- <p
@@ -501,7 +499,7 @@
             </div>
 
             <div id="aproctor_13">
-              <p
+              <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
               >
                 Dr. Neha Yadav
@@ -514,7 +512,7 @@
                 <i class="fa-solid fa-envelope"></i>
                 <p class="text-sm text-gray-500 my-1">yadavn@nitj.ac.in</p>
               </div>
-              <!-- <div
+               <div
                           class="w-full flex flex-row gap-2 items-center text-gray-500"
                         >
                         <i class="fa-solid fa-phone"></i>
@@ -525,6 +523,12 @@
           </div>
         </div>
       </div>
+      </div>
+      <br>
+      <br>
+      <br>
+  
+
     </div>
     <script src="app.js"></script>
     <script src="../template/footer.js"></script>
@@ -537,7 +541,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("proctor").innerHTML = `
-        <div>
+    
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -553,7 +557,6 @@
    <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
            `;
       }
@@ -568,8 +571,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("proctor").innerHTML = `
-    <div>
-
+  
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
 <p class="text-sm text-gray-500">${result.department}</p>
@@ -584,7 +586,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -626,8 +627,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_1").innerHTML = `
-    <div>
-
+  
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
 <p class="text-sm text-gray-500">${result.department}</p>
@@ -642,7 +642,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -657,8 +656,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_2").innerHTML = `
-    <div>
-
+  
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
 <p class="text-sm text-gray-500">${result.department}</p>
@@ -673,7 +671,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -688,7 +685,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_3").innerHTML = `
-    <div>
+  
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -704,7 +701,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -719,7 +715,7 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_4").innerHTML = `
-    <div>
+
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -735,7 +731,6 @@
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
 
-</div>
 
        `;
       }
@@ -750,7 +745,6 @@
         result = await result.json();
         console.log(result);
         document.getElementById("aproctor_5").innerHTML = `
-    <div>
 
 <p class="font2 font-semibold text-2xl  lg:text-3xl text-accent my-1">${result.name}</p>
 <p class="text-sm">${result.designation}</p> 
@@ -765,8 +759,6 @@
 <i class="fa-solid fa-phone"></i>
 <p class="text-sm my-1">${result["Tel No."]}</p>
 </div> 
-
-</div>
 
        `;
       }
