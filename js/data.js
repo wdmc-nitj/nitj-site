@@ -346,7 +346,8 @@ fetch(`${baseURL}/placementStat/get/all`)
 fetch(`${baseURL}/publication/get/all`)
   .then((res) => res.json())
   .then((apidata) => {
-    const data = dataFilter(apidata)
+    const data = apidata
+    // console.log(data)
     const parentDiv = document.getElementById('publication-cards')
     data.forEach((e) => {
       const content = e.Publication
@@ -354,12 +355,13 @@ fetch(`${baseURL}/publication/get/all`)
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
       <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
-            <a href="${content.url}">
+            <a href="${content?.url || '#'}">
               <p>
               <p
-              class = "inline font-semibold text-accent cursor-pointer"
-              >${content.authors}</p>&nbsp;&nbsp;
-               ${content.desc}
+              class = "inline font-semibold text-accent cursor-pointer">
+              ${content?.authors}</p>&nbsp;&nbsp;
+
+               ${content?.desc}
               </p>
             </a>
           <!--  <a href="${content.url}"
@@ -378,6 +380,7 @@ fetch(`${baseURL}/club/get/all`)
     const data = dataFilter(apidata)
 
     const parentDiv = document.getElementById('clubs-and-socs')
+    parentDiv.innerHTML = ''
     data.forEach((e) => {
       // console.log(e)
       // const content = e
@@ -388,29 +391,29 @@ fetch(`${baseURL}/club/get/all`)
         'overflow-hidden rounded-xl bg-white w-full shadow-lg'
       )
       div.innerHTML = `
-                <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-cover bg-center bg-no-repeat">
-                  <img src ='${e.img}' class="w-full h-full object-cover" alt="Club Image" />
-                  </div>
-                  <div class="flex flex-col p-6 w-full sm:w-3/5">
-                    <div class="flex flex-col items-start justify-start space-y-3">
-                      <h4 class="text-2xl font-bold uppercase">${e.name}</h4>
-                      <div
-                        class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
-                        <p class="text-xs font-bold uppercase text-purple-500">
-                          ${e.type}&nbsp;Club
-                        </p>
-                      </div>
-                      <p class="line-clamp-3 leading-5">
-                        ${e.desc}
-                      </p>
-                    </div>
-                    <div class="mt-5 flex items-center justify-start space-x-3">
-                      <a href='#' class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
-                        <span>&rarr;</span></a>
-                    </div>
-                  </div>
-                </div>
+        <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
+          <div class="w-2/5 bg-cover bg-center bg-no-repeat">
+          <img src ='${e.img}' class="w-full h-full object-cover" alt="Club Image" />
+          </div>
+          <div class="flex flex-col p-6 w-full sm:w-3/5">
+            <div class="flex flex-col items-start justify-start space-y-3">
+              <h4 class="text-2xl font-bold uppercase">${e.name}</h4>
+              <div
+                class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+                <p class="text-xs font-bold uppercase text-purple-500">
+                  ${e.type}&nbsp;Club
+                </p>
+              </div>
+              <p class="line-clamp-3 leading-5">
+                ${e.desc}
+              </p>
+            </div>
+            <div class="mt-5 flex items-center justify-start space-x-3">
+              <a href='#' class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+                <span>&rarr;</span></a>
+            </div>
+          </div>
+        </div>
       `
       e.show && parentDiv.appendChild(div)
     })
