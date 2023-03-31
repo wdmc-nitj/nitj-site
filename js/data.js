@@ -105,8 +105,11 @@ fetch(`${baseURL}/testimonial/get/all`)
             ${data[randNum].messageText}
           </p>
           <div>
-            <p class='text-lg font-bold text-accent'>- ${data[randNum].name}</p>
-            <p class='ml-2 text-sm text-gray-600 font-bold'>${data[randNum].designation}</p>
+            <div>
+              <p class='text-lg font-bold text-accent'>- ${data[randNum].name}</p>
+              <p class='ml-2 text-sm text-gray-600 font-bold'>${data[randNum].designation}</p>
+            </div>
+            
           </div>
         </div>
       `
@@ -343,18 +346,14 @@ fetch(`${baseURL}/placementStat/get/all`)
     })
   })
 
-fetch(`${baseURL}/publication/get/all`)
+fetch(`${baseURL}/publication`)
   .then((res) => res.json())
   .then((apidata) => {
     const data = apidata
-    // console.log(data)
+    console.log(data)
     const parentDiv = document.getElementById('publication-cards')
     parentDiv.innerHTML = ''
-    data.forEach((e) => {
-      const content = e.Publication
-      if (!content.desc) {
-        return
-      }
+    data.forEach((content) => {
       const div = document.createElement('div')
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
@@ -370,7 +369,7 @@ fetch(`${baseURL}/publication/get/all`)
             </a>
         
           </div>`
-      e.show && parentDiv.appendChild(div)
+      content.show && parentDiv.appendChild(div)
     })
   })
 
@@ -393,8 +392,10 @@ fetch(`${baseURL}/club/get/all`)
       )
       div.innerHTML = `
         <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-          <div class="w-2/5 bg-cover bg-center bg-no-repeat">
-          <img src ='${e.img}' class="w-full h-full object-cover" alt="Club Image" />
+          <div class="w-full sm:w-2/5 bg-cover bg-center bg-no-repeat">
+          <img src ='${
+            e.img
+          }' class="w-full h-full object-cover" alt="Club Image" />
           </div>
           <div class="flex flex-col p-6 w-full sm:w-3/5">
             <div class="flex flex-col items-start justify-start space-y-3">
@@ -410,7 +411,9 @@ fetch(`${baseURL}/club/get/all`)
               </p>
             </div>
             <div class="mt-5 flex items-center justify-start space-x-3">
-              <a href='#' class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+              <a href="${
+                e?.url || '#'
+              }" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
                 <span>&rarr;</span></a>
             </div>
           </div>

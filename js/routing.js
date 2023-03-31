@@ -18,7 +18,8 @@ const imgContainer = document.getElementById('image')
 const dateDiv = document.getElementById('date')
 
 if (parseInt(id) === 0) {
-  titleDiv.innerHTML = 'All ' + normalCaseMaker(category)
+  titleDiv.innerHTML =
+    'All ' + normalCaseMaker(`${category}${category === 'news' ? '' : 's'}`)
   const list = document.getElementById('list')
   fetch(`https://wdmc-vsj1.onrender.com/${category}/get/all`)
     .then((response) => response.json())

@@ -161,7 +161,7 @@
       background-color: #cccccc;
       height: 400px;
       background-position: 0% 28%;
-      background-repeat: no-repeat;
+      background-repeat: no-epeat;
       background-size: cover;
     }
 
@@ -502,10 +502,10 @@
       .then((res) => res.json())
       .then((data) => {
         const images = data.filter(img => {
-          return img.type ==='history'
+          return img.type === 'history'
         })
-        images.sort((a, b)=>(
-          0.5 - Math. random()
+        images.sort((a, b) => (
+          0.5 - Math.random()
         ))
         size_images = images.length
         img_arr = images
@@ -690,9 +690,9 @@
         console.log(result[i].year);
         timelist.push(result[i].year);
       }
-      
-      
-      
+
+
+
       console.log(timelist.length);
       let uniqueYear = [];
       function getUniqueYear() {
@@ -702,7 +702,7 @@
           }
         }
 
-        
+
       }
       getUniqueYear();
       console.log(uniqueYear.length);
@@ -720,7 +720,7 @@
             x += `<p class="basis-7/10 flex items-center ">
              ${result[j].desc}
           </p>`;
-          break;
+            break;
           }
         }
         x += "</div></div>";
@@ -759,7 +759,7 @@
 
           }
 
-         
+
         }
         x += "</div><br>"
       }
