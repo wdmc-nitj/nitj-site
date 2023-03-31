@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newsletter - NITJ</title>
+    <title>Newsletters - NITJ</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css" />
@@ -112,7 +112,7 @@
           <p
             class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]"
           >
-            Newsletter
+            Newsletters
           </p>
         </div>
         <nav
@@ -140,30 +140,25 @@
                   "
                   class="fa-solid fa-angle-right ml-2"
                 ></i>
-                <a href="#" class="text-lg font-medium ml-2">Newsletter</a>
+                <a href="#" class="text-lg font-medium ml-2">Newsletters</a>
               </div>
             </li>
           </ol>
         </nav>
       </div>
 
-      <div
-        class="flex flex-col items-start px-4 lg:px-[11%] gap-[20px] lg:gap-[16px]"
-      >
+  <div class="container flex flex-col items-start gap-[20px] lg:gap-[16px]">
+
         <div class="w-full flex flex-col items-start px-4">
           <p
             id="date"
             class="font-semibold text-slate-500 text-sm lg:text-base"
           ></p>
-          <p
-            id="title"
-            class="font2 font-medium text-[28px] lg:text-[32px] leading-tight my-2"
-          >
-            All Newsletter
-          </p>
-          <div
-            class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px] rounded-full"
-          ></div>
+          <p class="font2 font-medium text-[28px] lg:text-[32px]">All Newsletters</p>
+
+          <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
+        </div>
+          <p class="font-normal text-gray-800 lg:text-[16px] lg:leading-[27px] text-justify">
           <ul
             id="list"
             class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6"
@@ -242,6 +237,7 @@
             </a>
           </li> -->
           </ul>
+        </p>
           <div id="image"></div>
           <p
             id="description"
@@ -257,13 +253,15 @@
         result = await result.json();
         result = result.filter((item) => item.resourceType === "newsLetter");
         console.log(result);
+        //reverse the item in result
+        result = result.reverse();
         let x = "";
         for (let i = 0; i < result.length; i++) {
           x += `<li
         class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"
       >
         <a
-          href="${result[i].resourceLink}"
+          href="${result[i].resourceLink}" target="_blank"
         >
           ${result[i].resourceName}
         </a>
