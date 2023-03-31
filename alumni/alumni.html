@@ -37,15 +37,15 @@
         overflow: hidden;
         background: #333;
       }
-       
+
       .main img {
         max-width: 100%;
         vertical-align: middle;
-        border: 2px solid #0054A6;
+        border: 5px solid #FFD66E;
         box-sizing: border-box;
         transition: opacity .2s;
       }
-       
+              
       .main:hover img {
         opacity: 0.5;
       }
@@ -55,7 +55,7 @@
       }
        
       .main .single-column {
-        width: 25%;
+        width: 33.33%;
           animation: var(--animation, none) 16s infinite linear;
       }
        
@@ -78,49 +78,40 @@
     
     
 </head>
-<body>
+<body class="h-screen overflow-x-hidden">
 
 <!--NAVBAR BEGINS-->
-  <nav class="fixed scroll-smooth z-50 w-full bg-white lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
+<nav class="fixed p-2 scroll-smooth z-50 max-w-screen w-full bg-white lg:flex lg:items-center lg:justify-around font-[Inter] shadow-2xl">
     <div class="flex justify-around p-1 items-center ">
-        <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
+        <img class="h-[2.2rem] w-[2.2rem] sm:h-[3.62rem] sm:w-[3.5rem] inline mx-2 lg:ml-12 cursor-pointer"
           src="img/logo.png" alt="logo">
-          <div class="text-xs sm:text-base w-[30rem] lg:w-[33rem] h-[2.375rem]  ml-3 leading-5 text-[#0054A6]  cursor-pointer font-bold">
+          <div class="text-[0.45rem] sm:text-base w-[30rem] lg:w-[33rem] ml-2 sm:ml-3 leading-5 text-[#0054A6]  cursor-pointer font-bold">
             <a href="alumni.html"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
           </div>
     
-      <span class="text-3xl cursor-pointer text-black mx-2 mr-3 lg:hidden block">
+      <span class="text-2xl sm:text-3xl cursor-pointer text-black mx-2 mr-3 lg:hidden block">
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
       </span>
     </div>
 
-    <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-white w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-      <!--
-      <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
-      </li>
-    -->
-    <!--
+    <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-white w-full lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 transition-all ease-in duration-500">
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="chapters.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">CHAPTERS</a>
+        <a href="" class=" text-[0.5rem] sm:text-xs xl:text-base w-auto text-[#0054A6] hover:text-[#D3D3D3] duration-500 ">
+          <i class="fa-solid fa-house"></i>
+        </a>
       </li>
-    -->
-  
+
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
+        <a href="givingback.html" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
       </li>
       <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">
+        <a href="#" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">
           CHAPTERS</a>
       </li>
 
-      <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-        <a href="" class="text-xs xl:text-base w-auto h-[1rem] text-black font-bold hover:text-[#D3D3D3] duration-500 ">LOGIN</a>
-      </li>
-
-      <a href="register.html">
-        <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-[#FFD66E]  rounded hover:-translate-y-1 hover:scale-110 ">
-          REGISTER
+      <a href="#">
+        <button class="bg-[#0054A6] ml-4 mb-8 mr-10 lg:mb-0 text-white text-[0.5rem] sm:text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center shadow-md border-2 border-[#FFD66E]  rounded hover:-translate-y-1 hover:scale-110 ">
+          LOGIN
         </button>
       </a>
       
@@ -132,7 +123,7 @@
 
 
 
-  <div class="relative flex items-center justify-center h-[130vh] mb-12 overflow-hidden">
+  <div class="relative max-w-screen flex items-center justify-center h-[130vh] mb-12 overflow-hidden">
 
     <div class="relative z-30 p-5 text-white bg-opacity-50 rounded-xl flex-none">
       <div class="text-xl md:text-4xl lg:text-5xl font-semibold italic animate-pulse md:py-2">
@@ -142,9 +133,9 @@
         Stay connected to your Alma Mater.
       </div>
     </div>
-    <video autoplay loop muted class="fixed -z-10 w-auto min-w-full min-h-full max-w-none ">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4"/>Your browser does not support the video tag.
-    </video>
+      <video autoplay loop muted class="fixed -z-10 w-auto min-w-full min-h-full max-w-none ">
+        <source src="img/NITJ_Campus_Aerial_View.mp4" type="video/mp4"/>Your browser does not support the video tag.
+      </video>
     <div class=" bg-white">
 
     </div>
@@ -153,20 +144,21 @@
 
 
 <!--Student alumini relation box starts-->
-<div class="bg-white py-5 sm:py-10 lg:py-16 px-5 sm:px-10 lg:px-[4.5rem] w-[68vw] rounded-xl mx-auto top-[-10rem] lg:top-[-7rem] z-40 relative shadow-xl shadow-gray-700">
-
-  <h2 class="font-bold text-base sm:text-lg lg:text-2xl my-3 sm:my-5 text-black text-center font-sans">STUDENT ALUMNI RELATIONS CELL (SARC NITJ)</h2>
+<div class="bg-white py-4 sm:py-10 lg:py-16 px-6 sm:px-10 lg:px-[4.5rem] md:w-[68vw] max-w-screen md:rounded-xl mx-auto md:top-[-10rem] lg:top-[-7rem] h-[45vh] md:h-auto z-40 relative shadow-xl shadow-gray-700">
+<div class="">
+  <h2 class="font-bold text-sm sm:text-base md:text-lg lg:text-2xl my-3 sm:my-5 text-black text-center font-sans">STUDENT ALUMNI RELATIONS CELL (SARC NITJ)</h2>
 
   
 
-  <p class=" font-normal font-[Poppins] text-xs sm:text-base lg:text-xl text-center md:tracking-wide md:leading-loose lg:leading-loose text-[#000000B2] my-5 sm:my-9 lg:my-19">
-    <i class="fa-sharp fa-solid fa-quote-left text-xl sm:text-5xl lg:text-6xl text-[#FEB7028C] mx-3"></i>
+  <p class=" font-normal font-[Poppins] text-[0.5rem] sm:text-xs md:text-base lg:text-xl text-center tracking-wide leading-loose text-[#000000B2] my-7 md:my-9 lg:my-19">
+    <i class="fa-sharp fa-solid fa-quote-left text-xl sm:text-4xl lg:text-6xl text-[#FEB7028C] mx-3"></i>
     SARC provides platform for students to interact with well settled alumni's of NITJ. It aids in gaining career advice and gives them direction towards better future by organising annual alumni meet. It renders students with career guidance and tailoring them for their future endeavours. Catering to the betterment of alumni-student relationship of Institute. To furnish alumni with a platform to interact with the students on a one to one basis and connect them with the Institute and provide career advice to prepare for the real world.
   </p>
 
-  <hr class="border-[3px] sm:border-[0.3rem] lg:border-[0.5rem] w-full border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
+  <hr class="border-[3px] sm:border-[0.25rem] lg:border-[0.5rem] w-full border-[#FFD66E] md:border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
+  </div>
 
-  <div class="bg-[#2167A7] w-full h-40 sm:h-[12rem] lg:h-[18rem] xl:h-[15rem] border-2 lg:border-4 border-[#FFD66E] rounded-md mb-4 sm:mb-8 lg:mb-16 p-0 lg:p-4">
+  <div class="hidden md:block bg-[#2167A7] w-full h-40 sm:h-[12rem] lg:h-[18rem] xl:h-[15rem] border-2 lg:border-4 border-[#FFD66E] rounded-md mb-4 sm:mb-8 lg:mb-16 p-0 lg:p-4">
     <div class="flex justify-between sm:justify-around relative top-16 sm:top-[5.5rem] lg:top-8 mx-2">
       <div class="w-[16vw] h-16 sm:h-[5rem] lg:h-[7rem] xl:h-[8rem] bg-[#277BC7] shadow-md static inset-y-44 rounded-md p-1 lg:p-2 text-center">
           <h1 class="text-white text-base sm:text-xl lg:text-3xl my-1 lg:my-2">9,500</h1>
@@ -191,9 +183,10 @@
 
 
 
-<div class="relative bg-[#fDfDfD] -top-96 w-full">
 
-  <div class="h-[75vh]">
+<div class="max-w-screen relative bg-[#fDfDfD] md:-top-96 w-full">
+
+  <div class="md:h-[75vh]">
 
   </div>
 
@@ -205,19 +198,21 @@
 
 
 <!-- Around the world -->
-<section id="institute-numbers" class="scroll-mt-32 group bg-cover bg-fixed bg-center bg-no-repeat"  style="background-image:url('https://static.almabaseapp.com/img/map_without_labels.c474a674d948.png');">
-  <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40">
+
+<section id="institute-numbers" class="scroll-mt-32 h-[45vh] sm:h-[50vh] lg:h-[90vh] group bg-cover bg-fixed bg-center bg-no-repeat" style="background-image:url('https://static.almabaseapp.com/img/map_without_labels.c474a674d948.png');">
+
+  <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40 h-[45vh] sm:h-[50vh] lg:h-[90vh] p-2">
     
-    <div id="homepage-map-content" class="text-white grid place-items-center py-20">
-      <p id="homepage-map-heading" class="text-4xl py-8 pt-12 font-semibold">Around The World</p>
-      <p class="text-2xl pt-12 py-5 font-medium underline underline-offset-4 decoration-indigo-500">Abroad</p>
-      <div class="grid grid-cols-4 gap-6 place-items-center">    
+    <div id="homepage-map-content" class="text-white grid place-items-center p-2 sm:py-4 lg:py-16 font-[Inter]">
+      <p id="homepage-map-heading" class=" text-base sm:text-2xl lg:text-4xl lg:pb-8 pt-1 sm:pt-4 font-semibold">Around The World</p>
+      <p class="text-sm sm:text-xl lg:text-2xl pt-4 lg:pt-12 py-4 sm:py-5 font-medium underline underline-offset-4 decoration-indigo-500">Abroad</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-6 place-items-center">    
         <div class="homepage-map-city flex gap-2">
           <div class="homepage-map-city-icon">
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">USA</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">USA</p>
           </div>
         </div>
 
@@ -226,7 +221,7 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Canada</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Canada</p>
           </div>
         </div>
 
@@ -235,7 +230,7 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">UK</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">UK</p>
           </div>
         </div>
 
@@ -244,20 +239,20 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Australia</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Australia</p>
           </div>
         </div>    
       </div>
 
 
-      <p class="text-2xl pt-12 py-5 font-semibold underline underline-offset-4 decoration-indigo-500">India</p>
-      <div class="grid grid-cols-6 gap-6 place-items-center pb-10">    
+      <p class="text-sm sm:text-xl lg:text-2xl pt-4 lg:pt-12 py-4 sm:py-5 font-semibold underline underline-offset-4 decoration-indigo-500">India</p>
+      <div class="grid grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4 place-items-center pb-10">    
         <div class="homepage-map-city flex gap-2">
           <div class="homepage-map-city-icon">
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Bengalore</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Bangalore</p>
           </div>
         </div>
 
@@ -266,7 +261,7 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Pune</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Pune</p>
           </div>
         </div>
 
@@ -275,7 +270,7 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Mumbai</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Mumbai</p>
           </div>
         </div>
 
@@ -284,7 +279,7 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Hyderabad</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Hyderabad</p>
           </div>
         </div>
 
@@ -293,7 +288,7 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Delhi</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Delhi</p>
           </div>
         </div>
 
@@ -302,24 +297,23 @@
             <i class="fa fa-city"></i>
           </div>
           <div class="homepage-map-city-intro">
-            <p class="homepage-map-city-name text-2xl">Chandigarh</p>
+            <p class="homepage-map-city-name text-xs sm:text-base lg:text-xl">Chandigarh</p>
           </div>
         </div>
           
           
       </div>
-
-
-      
-  </div>
+    
+    </div>
   </div>
 </section>
 
 
+
 <!--RECENT EVENT STARTS-->
-<div class="p-3 sm:p-5 bg-[#f5f5f5] min-h-[55vh] bg-center ">
+<div class="p-3 sm:p-5 bg-[#f5f5f5] h-[45vh] sm:h-[50vh] lg:h-[90vh] bg-center ">
   
-  <div class="mx-5 sm:mx-12 lg:mx-20 mt-5 sm:mt-14 lg:mt-20 flex align-middle">
+  <div class="mx-5 sm:mx-12 lg:mx-20 mt-5 sm:mt-9 lg:mt-20 flex align-middle">
     <div>
         <div class="text-[#2167A7] text-xl sm:text-2xl lg:text-[1.75rem] font-bold lg:ml-4 mb-4 lg:mb-8 w-44 sm:w-52 lg:w-64">
             RECENT EVENTS
@@ -369,23 +363,9 @@
 
 
 
-<div class="main h-[50vh] sm:h-[91vh]">
+<div class="main h-[45vh] sm:h-[50vh] lg:h-[90vh]">
 	  
-	<div class="single-column">
-		<a href="#"><img src="./img/alumni_meet/image-000.jpg" alt="image"></a>
-		<a href="#"><img src="./img/alumni_meet/image-001.jpg" alt="image"></a>
-		<a href="#"><img src="./img/alumni_meet/image-002.jpg" alt="image"></a>
-		<a href="#"><img src="./img/alumni_meet/image-003.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-004.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-005.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-006.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-007.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-008.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-009.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-010.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-011.jpg" alt="image"></a>
-    <a href="#"><img src="./img/alumni_meet/image-012.jpg" alt="image"></a>
-	</div>
+
 
 	<div class="single-column">
 		<a href="#"><img src="./img/utkansh19/1.jpg" alt="image"></a>
@@ -444,172 +424,228 @@
 
 
 
-
-<div id="default-carousel" class="relative" data-carousel="static">
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
   <!-- Carousel wrapper -->
-  <div class="relative h-[30rem] overflow-hidden rounded-lg lg:h-[50rem]">
-    <!-- Item 1 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <span class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">
+  <div class="relative h-[45vh] sm:h-[50vh] overflow-hidden rounded-lg lg:h-[90vh]">
+       <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          
+        
 
-      </span>
 
         <!--Notable Alumni starts-->
-          <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
-            <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
-              <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
-            </div>
-
-            <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
-              <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
-                <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/upsanataku.png" alt="alumni image">
-              </div>
-
-              <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
-                  <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Upasna Taku</h1>
-              
-                  <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Co founder, mobikwik</h1>
-
-                  <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (ICE)  |  2004-2008</h2>
-
-                <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
-                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                      <a href="https://www.facebook.com/" target="_blank">
-                          <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
-                      </a>
-                  </div>
-                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                      <a href="https://twitter.com/" target="_blank">
-                          <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
-                      </a>
-                  </div>
-                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                      <a href="https://in.linkedin.com/" target="_blank" >
-                          <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
-                      </a>
-                  </div>
-                </div>
-
-
-                <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
-                  <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Management Science and Engineering from Stanford University</p>
-                </div>
-
-                <div class="text-center">
-                  <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
-                </div> 
-
-              </div>
-            </div>
+        <div class="w-full h-[45vh] sm:h-[50vh] lg:h-[90vh] p-1 lg:p-5 bg-[#2167A7]">
+          <div class="w-full lg:w-[15vw] flex justify-center sm:mx-9 lg:mx-14 my-3 lg:mt-2">
+            <h1 class="text-base sm:text-xl lg:text-3xl text-white font-bold">NOTABLE ALUMNI</h1>
           </div>
 
-          <!--Notable Alumni Ends-->
-
-          
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-      <!--Notable Alumni starts-->
-      <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
-        <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
-          <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
-        </div>
-
-        <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
-          <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
-            <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/ajitmohan.jpg" alt="alumni image">
-          </div>
-
-          <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
-              <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Ajit Mohan Karimpana</h1>
-          
-              <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Founder of Furlenco</h1>
-
-              <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (Industial Engineering)  |  1996-2000</h2>
-
-            <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
-              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                  <a href="https://www.facebook.com/" target="_blank">
-                      <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
-                  </a>
-              </div>
-              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                  <a href="https://twitter.com/" target="_blank">
-                      <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
-                  </a>
-              </div>
-              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                  <a href="https://in.linkedin.com/" target="_blank" >
-                      <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
-                  </a>
-              </div>
+          <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 sm:mb-10 flex justify-center my-5">
+            <div class="max-w-[50vw] sm:max-w-[48vw] lg:max-w-[46vw] flex justify-center">
+              <img class="max-h-[23vh] sm:max-h-[30vh] lg:max-h-[60vh] rounded " src="img/alumni_img/upsanataku.png" alt="alumni image">
             </div>
 
-
-            <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
-              <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MS in Computer and Information Science from Temple University</p>
-            </div>
-
-            <div class="text-center">
-              <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
-            </div> 
-
-          </div>
-        </div>
-      </div>
-
-      <!--Notable Alumni Ends-->
-
-
-
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      
-      <!--Notable Alumni starts-->
-        <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
-          <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
-            <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
-          </div>
-
-          <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
-            <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
-              <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/anindyaghose.jpg" alt="alumni image">
-            </div>
-
-            <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
-                <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Anindya Ghose</h1>
+            <div class="w-[50vw] sm:w-[44vw] mx-3 sm:mx-5">
+                <h1 class="text-white text-sm sm:text-xl lg:text-3xl text-center font-bold lg:leading-relaxed">Upasna Taku</h1>
             
-                <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Professor, NYU's Leonard N. Stern School of Business</h1>
+                <h1 class="text-white text-[0.5rem] sm:text-xs lg:text-lg text-center uppercase lg:tracking-wider">Co founder, mobikwik</h1>
 
-                <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech </h2>
+                <h2 class= "text-white text-[0.4rem] sm:text-xs lg:text-sm text-center my-2 sm:my-3 lg:my-7 lg:tracking-wider">BTech (ICE)  |  2004-2008</h2>
 
-              <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
+              <div class="flex justify-center mt-5 sm:mt-8 lg:mt-12 text-center">
                 <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
                     <a href="https://www.facebook.com/" target="_blank">
-                        <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
+                        <i class="socialIcons fa-brands fa-facebook text-base lg:text-2xl"></i>
                     </a>
                 </div>
                 <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
                     <a href="https://twitter.com/" target="_blank">
-                        <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
+                        <i class="socialIcons fab fa-twitter text-base lg:text-2xl "></i>
                     </a>
                 </div>
                 <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
                     <a href="https://in.linkedin.com/" target="_blank" >
-                        <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
+                        <i class=" socialIcons fa-brands fa-linkedin text-base lg:text-2xl "></i>
                     </a>
                 </div>
               </div>
 
 
-              <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
-                <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MBA in Finance and Marketing from IIM Calcutta. Ph.D in Management Sciences from Carnegie Mellon University - Tepper School of Business</p>
+              <div class=" my-2 lg:my-6 mx-1 sm:mx-4 text-center p-1 sm:p-3">
+                <p class="text-white text-center text-[0.5rem] sm:text-xs lg:text-base">MS in Management Science and Engineering from Stanford University</p>
               </div>
 
               <div class="text-center">
-                <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+              </div> 
+
+            </div>
+          </div>
+        </div>
+
+        <!--Notable Alumni Ends-->
+
+      </div>
+
+      
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          
+        
+
+        <!--Notable Alumni starts-->
+        <div class="w-full h-[45vh] sm:h-[50vh] lg:h-[90vh] p-1 lg:p-5 bg-[#2167A7]">
+          <div class="w-full lg:w-[15vw] flex justify-center sm:mx-9 lg:mx-14 my-3 lg:mt-2">
+            <h1 class="text-base sm:text-xl lg:text-3xl text-white font-bold">NOTABLE ALUMNI</h1>
+          </div>
+
+          <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 sm:mb-10 flex justify-center my-5">
+            <div class="max-w-[50vw] sm:max-w-[48vw] lg:max-w-[46vw] flex justify-center">
+              <img class="max-h-[23vh] sm:max-h-[30vh] lg:max-h-[60vh] rounded" src="img/alumni_img/ajitmohan.jpg" alt="alumni image">
+            </div>
+
+            <div class="w-[50vw] sm:w-[44vw] mx-3 sm:mx-5">
+                <h1 class="text-white text-sm sm:text-xl lg:text-3xl text-center font-bold lg:leading-relaxed">Ajit Mohan Karimpana</h1>
+            
+                <h1 class="text-white text-[0.5rem] sm:text-xs lg:text-lg text-center uppercase lg:tracking-wider">Founder, Furlenco</h1>
+
+                <h2 class= "text-white text-[0.4rem] sm:text-xs lg:text-sm text-center my-2 sm:my-3 lg:my-7 lg:tracking-wider">BTech (IPE)  |  1996-2000</h2>
+
+              <div class="flex justify-center mt-5 sm:mt-8 lg:mt-12 text-center">
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="socialIcons fa-brands fa-facebook text-base lg:text-2xl"></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="socialIcons fab fa-twitter text-base lg:text-2xl "></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://in.linkedin.com/" target="_blank" >
+                        <i class=" socialIcons fa-brands fa-linkedin text-base lg:text-2xl "></i>
+                    </a>
+                </div>
+              </div>
+
+
+              <div class=" my-2 lg:my-6 mx-1 sm:mx-4 text-center p-1 sm:p-3">
+                <p class="text-white text-center text-[0.5rem] sm:text-xs lg:text-base">MS in Computer and Information Science from Temple University</p>
+              </div>
+
+              <div class="text-center">
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+              </div> 
+
+            </div>
+          </div>
+        </div>
+
+        <!--Notable Alumni Ends-->
+
+      </div>
+
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          
+        <!--Notable Alumni starts-->
+        <div class="w-full h-[45vh] sm:h-[50vh] lg:h-[90vh] p-1 lg:p-5 bg-[#2167A7]">
+          <div class="w-full lg:w-[15vw] flex justify-center sm:mx-9 lg:mx-14 my-3 lg:mt-2">
+            <h1 class="text-base sm:text-xl lg:text-3xl text-white font-bold">NOTABLE ALUMNI</h1>
+          </div>
+
+          <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 sm:mb-10 flex justify-center my-5">
+            <div class="max-w-[50vw] sm:max-w-[48vw] lg:max-w-[46vw] flex justify-center">
+              <img class="max-h-[23vh] sm:max-h-[30vh] lg:max-h-[60vh] rounded" src="img/alumni_img/anindyaghose.jpg" alt="alumni image">
+            </div>
+
+            <div class="w-[50vw] sm:w-[44vw] mx-3 sm:mx-5">
+                <h1 class="text-white text-sm sm:text-xl lg:text-3xl text-center font-bold lg:leading-relaxed">Anindya Ghose</h1>
+            
+                <h1 class="text-white text-[0.5rem] sm:text-xs lg:text-lg text-center uppercase lg:tracking-wider">Professor, NYU'S LEONARD N. STERN SCHOOL OF BUSINESS </h1>
+
+                <h2 class= "text-white text-[0.4rem] sm:text-xs lg:text-sm text-center my-2 sm:my-3 lg:my-7 lg:tracking-wider">BTech</h2>
+
+              <div class="flex justify-center mt-5 sm:mt-8 lg:mt-12 text-center">
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="socialIcons fa-brands fa-facebook text-base lg:text-2xl"></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="socialIcons fab fa-twitter text-base lg:text-2xl "></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://in.linkedin.com/" target="_blank" >
+                        <i class=" socialIcons fa-brands fa-linkedin text-base lg:text-2xl "></i>
+                    </a>
+                </div>
+              </div>
+
+
+              <div class=" my-2 lg:my-6 mx-1 sm:mx-4 text-center p-1 sm:p-3">
+                <p class="text-white text-center text-[0.5rem] sm:text-xs lg:text-base">MBA from IIM Calcutta. Ph.D from Carnegie Mellon University - Tepper School of Business</p>
+              </div>
+
+              <div class="text-center">
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+              </div> 
+
+            </div>
+          </div>
+        </div>
+
+        <!--Notable Alumni Ends-->
+
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+      <!--Notable Alumni starts-->
+        <div class="w-full h-[45vh] sm:h-[50vh] lg:h-[90vh] p-1 lg:p-5 bg-[#2167A7]">
+          <div class="w-full lg:w-[15vw] flex justify-center sm:mx-9 lg:mx-14 my-3 lg:mt-2">
+            <h1 class="text-base sm:text-xl lg:text-3xl text-white font-bold">NOTABLE ALUMNI</h1>
+          </div>
+
+          <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 sm:mb-10 flex justify-center my-5">
+            <div class="max-w-[50vw] sm:max-w-[48vw] lg:max-w-[46vw] flex justify-center">
+              <img class="max-h-[23vh] sm:max-h-[30vh] lg:max-h-[60vh] rounded" src="img/alumni_img/amitboni.jpg" alt="alumni image">
+            </div>
+
+            <div class="w-[50vw] sm:w-[44vw] mx-3 sm:mx-5">
+                <h1 class="text-white text-sm sm:text-xl lg:text-3xl text-center font-bold lg:leading-relaxed">Amit Boni</h1>
+            
+                <h1 class="text-white text-[0.5rem] sm:text-xs lg:text-lg text-center uppercase lg:tracking-wider">FOUNDER & CEO, ENSUREDIT</h1>
+
+                <h2 class= "text-white text-[0.4rem] sm:text-xs lg:text-sm text-center my-2 sm:my-3 lg:my-7 lg:tracking-wider">BTech (IPE) | 1996-2000</h2>
+
+              <div class="flex justify-center mt-5 sm:mt-8 lg:mt-12 text-center">
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="socialIcons fa-brands fa-facebook text-base lg:text-2xl"></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="socialIcons fab fa-twitter text-base lg:text-2xl "></i>
+                    </a>
+                </div>
+                <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                    <a href="https://in.linkedin.com/" target="_blank" >
+                        <i class=" socialIcons fa-brands fa-linkedin text-base lg:text-2xl "></i>
+                    </a>
+                </div>
+              </div>
+
+
+              <div class=" my-2 lg:my-6 mx-1 sm:mx-4 text-center p-1 sm:p-3">
+                <p class="text-white text-center text-[0.5rem] sm:text-xs lg:text-base">MBA in marketing from Management Development Institute, Gurgaon</p>
+              </div>
+
+              <div class="text-center">
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
               </div> 
 
             </div>
@@ -617,76 +653,79 @@
         </div>
 
       <!--Notable Alumni Ends-->
-
-
-
-
-    </div>
-    <!-- Item 4 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
     
-    <!--Notable Alumni starts-->
-      <div class="w-full sm:h-[30rem] lg:h-[50rem] p-1 lg:p-5 bg-[#2167A7]">
-        <div class="w-[25vw] sm:w-[15vw] h-[4rem] lg:h-[5.875rem] mx-4 sm:mx-9 lg:mx-14 my-5 lg:my-10">
-          <h1 class="text-xl sm:text-2xl lg:text-4xl text-white font-bold">NOTABLE ALUMNI</h1>
-        </div>
+    </div>
 
-        <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 mb-10 flex">
-          <div class="w-[50vw] sm:w-[48vw] lg:w-[46vw] text-center">
-            <img class="h-48  sm:h-[18rem] lg:h-[32rem]  " src="img/alumni_img/amitboni.jpg" alt="alumni image">
-          </div>
-
-          <div class="w-[50vw] sm:w-[44vw] sm:h-[32rem] mx-3 sm:mx-5">
-              <h1 class="text-white text-xl sm:text-2xl lg:text-4xl text-center font-bold lg:leading-relaxed">Amit Boni</h1>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
           
-              <h1 class="text-white text-xs sm:text-sm lg:text-xl text-center uppercase lg:tracking-wider">Founder & CEO, ensuredit</h1>
-
-              <h2 class= "text-white text-[0.6rem] sm:text-xs lg:text-sm text-center my-3 sm:my-5 lg:my-7 lg:tracking-wider">BTech (IPE) | 1996-2000</h2>
-
-            <div class="flex justify-center mt-5 sm:mt-8 lg:mt-16 text-center">
-              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                  <a href="https://www.facebook.com/" target="_blank">
-                      <i class="socialIcons fa-brands fa-facebook lg:text-2xl"></i>
-                  </a>
+          <!--Notable Alumni starts-->
+          <div class="w-full h-[45vh] sm:h-[50vh] lg:h-[90vh] p-1 lg:p-5 bg-[#2167A7]">
+            <div class="w-full lg:w-[15vw] flex justify-center sm:mx-9 lg:mx-14 my-3 lg:mt-2">
+              <h1 class="text-base sm:text-xl lg:text-3xl text-white font-bold">NOTABLE ALUMNI</h1>
+            </div>
+  
+            <div class="ml-4 mr-2 sm:mx-12 lg:mx-24 sm:mb-10 flex justify-center my-5">
+              <div class="max-w-[50vw] sm:max-w-[48vw] lg:max-w-[46vw] flex justify-center">
+                <img class="max-h-[23vh] sm:max-h-[30vh] lg:max-h-[60vh] rounded" src="img/alumni_img/alihyder.jpg" alt="alumni image">
               </div>
-              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                  <a href="https://twitter.com/" target="_blank">
-                      <i class="socialIcons fab fa-twitter lg:text-2xl "></i>
-                  </a>
-              </div>
-              <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                  <a href="https://in.linkedin.com/" target="_blank" >
-                      <i class=" socialIcons fa-brands fa-linkedin lg:text-2xl "></i>
-                  </a>
+  
+              <div class="w-[50vw] sm:w-[44vw] mx-3 sm:mx-5">
+                  <h1 class="text-white text-sm sm:text-xl lg:text-3xl text-center font-bold lg:leading-relaxed">Ali Hyder Rizvi</h1>
+              
+                  <h1 class="text-white text-[0.5rem] sm:text-xs lg:text-lg text-center uppercase lg:tracking-wider">Director, Morgan Stanley </h1>
+  
+                  <h2 class= "text-white text-[0.4rem] sm:text-xs lg:text-sm text-center my-2 sm:my-3 lg:my-7 lg:tracking-wider">BTech(IPE)</h2>
+  
+                <div class="flex justify-center mt-5 sm:mt-8 lg:mt-12 text-center">
+                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                      <a href="https://www.facebook.com/" target="_blank">
+                          <i class="socialIcons fa-brands fa-facebook text-base lg:text-2xl"></i>
+                      </a>
+                  </div>
+                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                      <a href="https://twitter.com/" target="_blank">
+                          <i class="socialIcons fab fa-twitter text-base lg:text-2xl "></i>
+                      </a>
+                  </div>
+                  <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
+                      <a href="https://in.linkedin.com/" target="_blank" >
+                          <i class=" socialIcons fa-brands fa-linkedin text-base lg:text-2xl "></i>
+                      </a>
+                  </div>
+                </div>
+  
+  
+                <div class=" my-2 lg:my-6 mx-1 sm:mx-4 text-center p-1 sm:p-3">
+                  <p class="text-white text-center text-[0.5rem] sm:text-xs lg:text-base">
+                    
+                  </p>
+                </div>
+  
+                <div class="text-center">
+                  <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
+                </div> 
+  
               </div>
             </div>
-
-
-            <div class="h-[5rem] lg:h-[10rem] my-2 lg:my-4 mx-1 sm:mx-5 text-center p-1 sm:p-5">
-              <p class="text-white text-center text-[0.69rem] sm:text-xs lg:text-base">MBA in marketing from Management Development Institute, Gurgaon</p>
-            </div>
-
-            <div class="text-center">
-              <button class="text-white text-xs sm:text-sm lg:text-lg my-2 bg-[#329DFF99] py-2 lg:py-3 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button">Find Alumni</button>
-            </div> 
-
           </div>
+  
+          <!--Notable Alumni Ends-->
+
         </div>
-      </div>
-
-    <!--Notable Alumni Ends-->
-
-          
-      </div>
-
 
 
   </div>
+
+
+
   <!-- Slider indicators -->
   <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
       <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
       <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
   </div>
   <!-- Slider controls -->
   <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -703,34 +742,80 @@
   </button>
 </div>
 
-<!--Notable Alumni slider view ends-->
 
 
-<!--donation-->
-<div class ="bg-white p-3">
-<div class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-[5%]">
-  <div class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('img/support.png')] bg-center bg-cover">
-    <div class="text-white text-[1.7rem]">
-      <h1 class="text-3xl font-bold uppercase text-white">
-        #SUPPORT <br />
-        <span style="
-              -webkit-text-stroke: 1px #ffffff !important;
-              -webkit-text-fill-color: transparent;
-            " class="inline-block">Growth at</span>
-        NITJ
-      </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--donation section starts-->
+
+<div class="font-[Inter] h-[90vh] sm:h-[50vh] lg:h-[90vh]">
+  <div class="mt-2 sm:mt-7 lg:mt-28 lg:mb-4 text-center p-5 sm:p-3 lg:p-5 text-xl sm:text-2xl lg:text-3xl font-bold">
+    <span class="text-[#0054A6]">Engage</span>
+    with NITJ and your fellow alumni
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-center items-center">
+    <div class="m-1 sm:m-3 lg:m-4 p-3 sm:p-4 bg-white rounded-lg sm:w-[30%] flex-col justify-center align-middle text-center">
+      <div class="text-[#0054A6]">
+        <i class="fa-sharp fa-solid fa-people-line fa-2x lg:fa-3x"></i>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base lg:text-lg font-bold">CONNECT</h2>
+      </div>
+      <div>
+        <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">Our events and programs help you connect with fellow graduate and NITJ</p>
+      </div>
+      <button class="bg-[#0054A6] rounded hover:bg-blue-700 text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4">CONNECT WITH US</button>
     </div>
-    <div class="self-center">
-      <button class="bg-blue-100 p-2 rounded-lg font-extrabold">
-        DONATE NOW &rarr;
-      </button>
+
+
+
+    <div class="m-1 sm:m-3 lg:m-4 p-3 sm:p-4 bg-white rounded-lg sm:w-[30%] flex-col justify-center align-middle text-center">
+      <div class="text-[#0054A6]">
+        <i class="fa-solid fa-handshake fa-2x lg:fa-3x"></i>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base lg:text-lg font-semibold">HIRE</h2>
+      </div>
+      <div>
+        <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">NITJ grads and students make great employees. Recruit from NITJ today!</p>
+      </div>
+      <button class="bg-[#0054A6] rounded hover:bg-blue-700 text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4">HIRE A GRAD</button>
     </div>
+
+
+
+    <div class="m-1 sm:m-3 lg:m-4 p-3 sm:p-4 bg-white rounded-lg sm:w-[30%] flex-col justify-center align-middle text-center">
+      <div class="text-[#0054A6]">
+        <i class="fas fa-light fa-hand-holding-heart fa-2x lg:fa-3x"></i>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base lg:text-lg font-semibold">GIVE</h2>
+      </div>
+      <div>
+        <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">Your annual donations provide scholarships and other support to NITJ</p>
+      </div>
+      <button class="bg-[#0054A6] rounded hover:bg-blue-700 text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4">GIVE TO NITJ</button>
+    </div>
+
+
   </div>
 </div>
-</div>
 
-
-
+<!--donation section ends-->
 
 
 
@@ -738,7 +823,7 @@
 
 <!--Footer image starts-->
 <div class="w-full">
-  <img src="img/footer image.png" alt="footer image">
+    <img src="img/footer image.png" alt="footer image">
 </div>
 <!--Footer image ends-->
 
@@ -927,6 +1012,7 @@
 
 
 <script src="app.js"></script>
+
 
 
 
