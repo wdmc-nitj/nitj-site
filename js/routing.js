@@ -24,17 +24,38 @@ if (parseInt(id) === 0) {
     .then((response) => response.json())
     .then((apidata) => {
       const data = dataFilter(apidata)
+      console.log(data)
       data.forEach((e) => {
         const listItem = document.createElement('li')
-        listItem.setAttribute(
-          'class',
-          'underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2'
-        )
+
         listItem.innerHTML = `  
                 <a
-                  href="/template/index.html?id=${e._id}?category=${category}">
-                  ${e.title}
+                class = 'underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2'
+                    ${
+                      e.newPage
+                        ? `target = "_blank" href= "${e.pdfLink}"`
+                        : `href = "/template/index.html?id=${e._id}?category=${category}"`
+                    }
+                  >
+                  ${e?.title || e?.desc}
                 </a>
+
+
+                ${
+                  e?.new
+                    ? `<div id="new-tag" class="inline-flex ml-2 items-center justify-start space-x-2">
+            <span class="material-symbols-outlined text-accent-orange">
+              auto_awesome
+            </span>
+            <p class="text-lg font-bold uppercase text-accent-orange">
+              New
+            </p>
+          </div>`
+                    : ''
+                }
+
+
+
               `
         list.appendChild(listItem)
       })
