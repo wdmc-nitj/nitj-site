@@ -86,7 +86,7 @@ fetch(`${baseURL}/testimonial/get/all`)
       parseInt(Math.random() * data.length)
     )
     const testimonial = document.getElementById('testimonial')
-
+    testimonial.innerHTML = ''
     randNums.forEach((randNum) => {
       const testimonialImg = document.createElement('img')
       testimonialImg.src = data[randNum].image
@@ -101,7 +101,7 @@ fetch(`${baseURL}/testimonial/get/all`)
       testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
       testimonialCard.innerHTML = `
         <div class='text-xl flex flex-col gap-5'>
-          <p>
+          <p class="line-clamp-3">
             ${data[randNum].messageText}
           </p>
           <div>
@@ -349,8 +349,12 @@ fetch(`${baseURL}/publication/get/all`)
     const data = apidata
     // console.log(data)
     const parentDiv = document.getElementById('publication-cards')
+    parentDiv.innerHTML = ''
     data.forEach((e) => {
       const content = e.Publication
+      if (!content.desc) {
+        return
+      }
       const div = document.createElement('div')
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
@@ -364,10 +368,7 @@ fetch(`${baseURL}/publication/get/all`)
                ${content?.desc}
               </p>
             </a>
-          <!--  <a href="${content?.url || '#'}"
-              class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-              More Details
-            </a> -->
+        
           </div>`
       e.show && parentDiv.appendChild(div)
     })
