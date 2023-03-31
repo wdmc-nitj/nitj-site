@@ -364,7 +364,7 @@ fetch(`${baseURL}/publication/get/all`)
                ${content?.desc}
               </p>
             </a>
-          <!--  <a href="${content.url}"
+          <!--  <a href="${content?.url || '#'}"
               class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
               More Details
             </a> -->
@@ -438,6 +438,7 @@ fetch(`${baseURL}/photoGallery/`)
     img_arr = images
     // const images = shuffledArray.slice(0,12)
     // console.log(data)
+
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
     const secondRow = document.createElement('div')
@@ -476,6 +477,10 @@ fetch(`${baseURL}/photoGallery/`)
       y++
     })
     parentDiv.append(firstRow, secondRow, thirdRow)
+  })
+  .finally(() => {
+    const loadingTemplate = document.getElementById('gallery-loading-template')
+    loadingTemplate.innerHTML = ''
   })
 
 const crossbutton = document.getElementById('crossbutton')
