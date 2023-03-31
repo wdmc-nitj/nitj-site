@@ -112,47 +112,111 @@
 
   <body>
     <script src="/common template/header.js" type="module"></script>
-    <div id="resources" class="relative mt-40">
-      <input id="searchbar" onkeyup="search_resources()" type="text"
-        name="search" placeholder="Search..">
+    <div id="resources" class="relative mt-44 flex flex-col items-center justify-center">
+      <div class="relative w-1/3 search-container text-blue-600">
+        <label for="searchbar" class="p-1 absolute top-0 bottom-6 left-2 bg-white text-lg transition-all duration-300 ease-in-out transform -translate-y-full pointer-events-none">Search:</label>
+        <input id="searchbar"  onkeyup="search_resources()" type="text" class="w-full border-0 rounded-lg px-4 py-3 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Search for resources...">
+      </div>
+         <div id="Big_alphabets" class="text-4xl font-bold"></div>
     </div>
     
     <script>
+    function displayWords(words, links) {
+      let sortedWords = words.sort();
+      let groupedWords = sortedWords.reduce((acc, word) => {
+        let firstLetter = word[0].toUpperCase();
+        if (!acc[firstLetter]) {
+          acc[firstLetter] = [];
+        }
+        acc[firstLetter].push(word);
+        return acc;
+      }, {});
+      for (let letter in groupedWords) {
+        let Big_alphabets_heading = document.getElementById("Big_alphabets");
+        let h2 = document.createElement('h2');
+        h2.setAttribute("class", "head text-4xl font-bold mt-2 mb-5 text-center text-gray-200 bg-gray-800 rounded-md p-2 shadow-md hover:bg-gray-700 transition duration-500 ease-in-out");
+        h2.textContent = letter;
+        Big_alphabets_heading.appendChild(h2);
+        let ul = document.createElement('ul');
+        ul.setAttribute("class", "uls text-lg font-bold flex flex-wrap justify-center items-center text-gray-800 bg-gray-200 rounded-md p-2 shadow-md hover:bg-gray-300 transition duration-500 ease-in-out");
+        for (let word of groupedWords[letter]) {
+          let li = document.createElement('li');
+          li.setAttribute("class", "resource w-1/2 text-left mb-2 ml-2 p-2 rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer transition duration-500 ease-in-out");
+          let lichild = document.createElement('a');
+          lichild.setAttribute("href", links[word]);
+          lichild.setAttribute("target", "_blank");
+          lichild.textContent = word;
+          li.appendChild(lichild);
+          ul.appendChild(li);
+          Big_alphabets_heading.appendChild(ul);
+        }
+      }
+    }
     // Make a fetch call to the API
     var resources = document.getElementById("resources");
-    fetch('https://wdmc-vsj1.onrender.com/resource/get/all')
+    fetch('https://wdmc-vsj1.onrender.com/resource')
         .then(response => response.json())
         .then(data => {
             // Create an unordered list element
-            let ul = document.createElement('ul');
+            var displayWordsArr = [] 
+            var links = {}
             data.forEach((element) => {
-                let li = document.createElement('li');
-                li.setAttribute("class", "resource");
-                li.textContent = element["resourceName"];
-                ul.appendChild(li);
+              if(element.resourceType === 'other'){
+              displayWordsArr.push(element["resourceName"])
+              links[element["resourceName"]] = element["resourceLink"]
+              }
             });
+            displayWords(displayWordsArr, links)
             // Loop through the properties of the data object
-
-            // Append the unordered list to the body of the page
-            resources.appendChild(ul);
         });
-
         function search_resources() {
-          let input = document.getElementById('searchbar').value
-          input=input.toLowerCase();
-          let x = document.getElementsByClassName('resource');
-          // console.log(x)
-          for (i = 0; i < x.length; i++) { 
-              if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                  x[i].style.display="none";
-              }
-              else {
-                  x[i].style.display="list-item";                 
-              }
-          }
-      }
+            let input = document.getElementById('searchbar').value;
+            input = input.toLowerCase();
+            let x = document.getElementsByClassName('resource');
+            let header = document.getElementsByClassName('head');
+            let uls = document.getElementsByClassName('uls');
+            for (let i = 0; i < x.length; i++) {
+                if (!x[i].innerHTML.toLowerCase().includes(input) && input != "") {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "list-item";
+                }
+            }
+            for (let j = 0; j < header.length; j++) {
+                let listItems = header[j].nextElementSibling.children;
+                let allHidden = true;
+                for (let k = 0; k < listItems.length; k++) {
+                    if (listItems[k].style.display != "none") {
+                        allHidden = false;
+                        break;
+                    }
+                }
+                if (allHidden) {
+                    header[j].style.display = "none";
+                    uls[j].setAttribute("class", "uls hidden text-lg font-bold flex flex-wrap justify-center items-center text-gray-800 bg-gray-200 rounded-md p-2 shadow-md hover:bg-gray-300 transition duration-500 ease-in-out hidden");
+
+                } else {
+                    header[j].style.display = "block";
+                    uls[j].setAttribute("class", "uls text-lg font-bold flex flex-wrap justify-center items-center text-gray-800 bg-gray-200 rounded-md p-2 shadow-md hover:bg-gray-300 transition duration-500 ease-in-out");
+                }
+            }
+        }
     </script>
     <script src="app.js"></script>
+    <script>
+      const searchInput = document.querySelector('#search');
+      const searchLabel = document.querySelector('label[for="search"]');
+
+      searchInput.addEventListener('focus', () => {
+        searchLabel.classList.add('translate-y-1/4');
+      });
+
+      searchInput.addEventListener('blur', () => {
+        if (searchInput.value === '') {
+          searchLabel.classList.remove('translate-y-1/4');
+        }
+      });
+    </script>
     <script src="../common template/footer.js"></script>
   </body>
 </html>
