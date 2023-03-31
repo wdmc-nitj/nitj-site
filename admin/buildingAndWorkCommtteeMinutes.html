@@ -252,7 +252,7 @@
         let result = await fetch("https://wdmc-vsj1.onrender.com/resource");
         result = await result.json();
         result = result.filter((item) => item.resourceType === "buildingAndWorkCommtteeMinutes");
-        console.log(result);s
+        console.log(result);
         // result = result.reverse();
         let x = "";
         for (let i = 0; i < result.length; i++) {
