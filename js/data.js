@@ -234,7 +234,7 @@ fetch(`${baseURL}/researchHighlights/get/all`)
                   }" />
                   <div class="flex flex-col justify-between p-4 basis-2/5">
                     <p class="text-lg line-clamp-3 font-semibold text-gray-900">
-                      ${e.desc}
+                      ${e.title}
                     </p>
                     <div class="mt-auto pt-5 flex whitespace-nowrap items-center justify-start space-x-3">
                       <a
