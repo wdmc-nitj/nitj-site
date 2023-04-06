@@ -15,10 +15,15 @@ async function callAPi() {
   <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
   <div class="flex flex-row p-[15px]">
       <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`;
-  for (let i = 0; i < result.length; i++) {
-
+  
+  for (let i = 0, j=0; i < result.length; i++, j<7) {
+    if(i == 1|| i== 3 || i==6){
+      x+=`</br>`
+    }
     if (result[i].column == 0) {
       x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
+
+      j+=1;
       }
 
 
@@ -27,10 +32,13 @@ async function callAPi() {
   x+=`</div>
         <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`
     
-        for (let i = 0; i < result.length; i++) {
-
+        for (let i = 0, j=0; i < result.length; i++,j<5) {
+          if(i==3){
+            x+=`</br>`
+          }
           if (result[i].column == 1) {
             x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
+            j+=1;
             }
       
       
@@ -41,9 +49,25 @@ async function callAPi() {
 
         
   
-        for (let i = 0; i < result.length; i++) {
+        for (let i = 0, j=0; i < result.length; i++, j<10) {
 
           if (result[i].column == 2) {
+            x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
+            j+=1;
+            }
+      
+      
+        }
+
+        x+=` </div>
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`
+
+
+        
+  
+        for (let i = 0; i < result.length; i++, ) {
+
+          if (result[i].column == 3) {
             x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
             }
       
