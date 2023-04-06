@@ -253,8 +253,10 @@
         result = await result.json();
         result = result.filter((item) => item.resourceType === "bogMinutes");
         console.log(result);
-        //reverse the item in result
-        // result = result.reverse();
+        //ssort the data according to the order value
+        result.sort((a, b) => {
+          return a.order - b.order;
+        });
         let x = "";
         for (let i = 0; i < result.length; i++) {
           x += `<li

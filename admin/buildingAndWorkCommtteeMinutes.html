@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Building & Work Committee Minutes - NITJ</title>
+    <title>Building & Works Committee Minutes - NITJ</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css" />
@@ -112,7 +112,7 @@
           <p
             class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]"
           >
-          Building & Work Committee Minutes
+          Building & Works Committee Minutes
           </p>
         </div>
         <nav
@@ -140,7 +140,7 @@
                   "
                   class="fa-solid fa-angle-right ml-2"
                 ></i>
-                <a href="#" class="text-lg font-medium ml-2">Building & Work Committee Minutes</a>
+                <a href="#" class="text-lg font-medium ml-2">Building & Works Committee Minutes</a>
               </div>
             </li>
           </ol>
@@ -254,6 +254,8 @@
         result = result.filter((item) => item.resourceType === "buildingAndWorkCommtteeMinutes");
         console.log(result);
         // result = result.reverse();
+                result = result.sort((a, b) => a.order - b.order);
+
         let x = "";
         for (let i = 0; i < result.length; i++) {
           x += `<li

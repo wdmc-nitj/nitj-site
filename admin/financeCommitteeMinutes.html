@@ -253,8 +253,8 @@
         result = await result.json();
         result = result.filter((item) => item.resourceType === "financeCommitteeMinutes");
         console.log(result);
-        //reverse the item in result
-        // result = result.reverse();
+        //sort the resuly by order
+        result.sort((a, b) => a.order - b.order);
         let x = "";
         for (let i = 0; i < result.length; i++) {
           x += `<li

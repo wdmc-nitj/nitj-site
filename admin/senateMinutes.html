@@ -255,6 +255,7 @@
         console.log(result);
         //reverse the item in result
         // result = result.reverse();
+        result.sort((a, b) => a.order - b.order);
         let x = "";
         for (let i = 0; i < result.length; i++) {
           x += `<li
