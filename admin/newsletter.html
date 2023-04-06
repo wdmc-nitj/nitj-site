@@ -254,6 +254,8 @@
         result = result.filter((item) => item.resourceType === "newsLetter");
         console.log(result);
         //reverse the item in result
+        
+        result.sort((a, b) => a.order - b.order);
         result = result.reverse();
         let x = "";
         for (let i = 0; i < result.length; i++) {
