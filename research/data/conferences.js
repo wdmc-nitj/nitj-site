@@ -1,6 +1,13 @@
 
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
+
+function formatTime(timeString) {
+  const [hourString, minute] = timeString.split(":");
+  const hour = +hourString % 24;
+  return (hour % 12 || 12) + ":" + minute + (hour < 12 ? "AM" : "PM");
+}
+
 fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=true&category=conference')
 .then((response) => response.json())
   .then((data) => {
@@ -9,11 +16,6 @@ fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=t
     data.forEach((update) => {
       const ugupdate = document.createElement('div')
       var d = new Date(update.dateTime);
-      console.log(d)
-      console.log(d.getDate()); // Hours
-      
-      console.log(month[d.getMonth()].substring(0, 3));
-      console.log(d.getUTCSeconds());
     ugupdate.innerHTML = `
     <div class="lg:flex shadow rounded-lg border w-[100%] mb-4 border-gray-400">
     <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner mx-auto">
@@ -28,7 +30,7 @@ fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=t
       <div class="flex flex-row lg:justify-start justify-center">
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
+          <i class="far fa-clock"></i> ${formatTime(update.dateTime.substring(11,19))}
         </div>
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           Organiser : ${update.organiser}
@@ -79,7 +81,7 @@ fetch('https://teamd.onrender.com/research/events/get?visible=visible&upcoming=t
       <div class="flex flex-row lg:justify-start justify-center">
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           <!--time-->
-          <i class="far fa-clock"></i> 1:30 PM
+          <i class="far fa-clock"></i> ${formatTime(update.dateTime.substring(11,19))}
         </div>
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           Organiser : ${update.organiser}

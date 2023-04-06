@@ -51,45 +51,6 @@ function showSearchPage(event) {
   }
 }
 
-// Admission Section Tabs
-
-const openCourse = (e) => {
-  let tabcontent = document.getElementsByClassName('courseContent')
-  let tablinks = document.getElementsByClassName('tab-link')
-
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.add('hidden')
-  }
-
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-    tablinks[i].classList.remove('bg-accent', 'text-white')
-  }
-  e.classList.remove('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-  e.classList.add('bg-accent', 'text-white')
-  document.getElementById(e.dataset.course).classList.remove('hidden')
-}
-
-// function notificationTabs(e) {
-//   let tabcontent = document.getElementsByClassName('notice-content')
-//   let tablinks = document.getElementsByClassName('notif-link')
-
-//   for (let i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].classList.add('hidden')
-//   }
-
-//   for (let i = 0; i < tablinks.length; i++) {
-//     tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
-//     tablinks[i].classList.remove(
-//       'bg-blue-100',
-//       'text-accent',
-//       'hover:bg-blue-200'
-//     )
-//   }
-//   e.classList.remove('hover:bg-blue-50', 'text-slate-400')
-//   e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-//   document.getElementById(e.dataset.notif).classList.remove('hidden')
-// }
 const tabLinks = document.getElementsByClassName('notif-link')
 
 window.addEventListener('load', () => {
@@ -114,6 +75,11 @@ setTimeout(newsCardsScroll, 1000)
 // Publication Cards Auto Scroll
 
 setTimeout(publicationCardsScroll, 1000)
+
+// Clubs Cards Auto Scroll
+
+// setTimeout(clubsCardsScroll, 1000)
+// clubsCardsScroll()
 
 // Scroll to top Button
 
