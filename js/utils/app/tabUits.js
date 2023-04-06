@@ -80,15 +80,21 @@ async function fetchTabContent(tabName, tabContainer) {
         const newUpdate = document.createElement('li')
         newUpdate.setAttribute('class', 'py-4 w-full')
         newUpdate.innerHTML = `
-          <div class="inline-flex flex-col items-start justify-start space-y-4">
+          <div class="">
             <a
-            href = "/template/index.html?id=${e._id}?category=${tabName}"
+            
+                      ${
+                        e.newPage
+                          ? `target = "_blank" href= "${e.pdfLink}"`
+                          : `href = "/template/index.html?id=${e._id}?category=${tabName}"`
+                      }
             class="text-xl font-semibold text-accent line-clamp-3">
-              ${title}
-            </a>
-            ${
-              e.new
-                ? `<div id="new-tag" class="inline-flex items-center justify-start space-x-2">
+            <p class="inline w-auto line-clamp-3">${title}</p>
+            
+              ${
+                e.new
+                  ? `
+          <div id="new-tag" class="inline-flex items-center text-accent-orange justify-start space-x-2">
             <span class="material-symbols-outlined text-accent-orange">
               auto_awesome
             </span>
@@ -96,15 +102,20 @@ async function fetchTabContent(tabName, tabContainer) {
               New
             </p>
           </div>`
-                : `<div id="date-tag" class="inline-flex items-center justify-start space-x-2">
+                  : `
+        <div id="date-tag" class="text-dark-purple font-normal text-lg inline-flex items-center justify-start space-x-2">
+        ${tabName === 'upcomingEvent' ? 'Event Data:&nbsp;' : ''}
+                 
         <span class="material-symbols-outlined" style="font-size: 24px">
           calendar_month
         </span>
-        <p class="text-lg text-dark-purple/80">
-          ${dateManipulator(e.updatedAt)}
+        <p class="text-lg">
+         ${dateManipulator(e.updatedAt)}
         </p>
       </div>`
-            }
+              }
+            </a>
+            
           </div>
         `
         tabContainer.appendChild(newUpdate)

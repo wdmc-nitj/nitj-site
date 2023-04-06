@@ -784,6 +784,10 @@ sup {
   grid-row-end: 2;
 }
 
+.-m-1{
+  margin: -0.25rem;
+}
+
 .m-1{
   margin: 0.25rem;
 }
@@ -2952,6 +2956,11 @@ sup {
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-center{
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-0{
@@ -5158,6 +5167,10 @@ sup {
     grid-row-start: 3;
   }
 
+  .md\:-m-2{
+    margin: -0.5rem;
+  }
+
   .md\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
@@ -5227,6 +5240,10 @@ sup {
 
   .md\:h-auto{
     height: auto;
+  }
+
+  .md\:w-1\/2{
+    width: 50%;
   }
 
   .md\:w-5\/12{
@@ -5973,6 +5990,11 @@ sup {
     padding-right: 5rem;
   }
 
+  .lg\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
   .lg\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -6072,6 +6094,10 @@ sup {
 
   .lg\:pt-12{
     padding-top: 3rem;
+  }
+
+  .lg\:pt-24{
+    padding-top: 6rem;
   }
 
   .lg\:pt-\[144px\]{

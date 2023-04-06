@@ -24,6 +24,7 @@ if (parseInt(id) === 0) {
   fetch(`https://wdmc-vsj1.onrender.com/${category}/get/all`)
     .then((response) => response.json())
     .then((apidata) => {
+      console.log(apidata)
       const data = dataFilter(apidata)
       console.log(data)
       data.forEach((e) => {
