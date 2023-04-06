@@ -65,7 +65,7 @@ async function callAPi() {
 
         
   
-        for (let i = 0; i < result.length; i++, ) {
+        for (let i = 0; i < result.length; i++) {
 
           if (result[i].column == 3) {
             x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
