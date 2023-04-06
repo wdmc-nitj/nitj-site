@@ -17,6 +17,7 @@ fetch(`${baseURL}/news/`)
     const newsCards = document.getElementById('news-cards')
     newsCards.innerHTML = ''
     data.forEach((news) => {
+      console.log(news)
       const newsCard = document.createElement('div')
       newsCard.setAttribute(
         'class',
@@ -25,13 +26,11 @@ fetch(`${baseURL}/news/`)
       newsCard.innerHTML = `
       
             <a 
-        
-            
-                      ${
-                        news.newPage
-                          ? `target = "_blank" href= "${news.pdfLink}"`
-                          : `href = "/template/index.html?id=${news._id}?category=latestEvent"`
-                      }
+                ${
+                  news.newPage
+                    ? `target = "_blank" href= "${news.pdfLink}"`
+                    : `href = "/template/index.html?id=${news._id}?category=news"`
+                }
             
             >
               <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
@@ -411,7 +410,9 @@ fetch(`${baseURL}/club/get/all`)
               </p>
             </div>
             <div class="mt-5 flex items-center justify-start space-x-3">
-              <a href="${
+              <a 
+              target = "_blank"
+              href="${
                 e?.url || '#'
               }" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
                 <span>&rarr;</span></a>
