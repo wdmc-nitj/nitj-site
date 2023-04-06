@@ -3,11 +3,10 @@ const bodyEl = document.body
 
 // <link rel="icon" type="image/x-icon" href="./public/assets/images/nitj-logo.png" />
 
-
 window.addEventListener('load', () => {
   handlingPDFs()
   // document.head.appendChild('link')
-  
+
   const newFavIcon = document.createElement('link')
   newFavIcon.setAttribute('rel', 'icon')
   newFavIcon.setAttribute('type', 'image/x-icon')
@@ -24,7 +23,7 @@ function handlingPDFs() {
       // console.log(link)
       link.setAttribute('target', '_blank')
     }
-    console.log(currSrc)
+    // console.log(currSrc)
   })
 }
 
@@ -55,11 +54,9 @@ fetch('/template/navbar.html')
       })
     }
 
-  scrollToTopButton.addEventListener('click', backToTop)
-  window.addEventListener('scroll', checkScrollPos)
-  // scroll to top functions
-
-
+    scrollToTopButton.addEventListener('click', backToTop)
+    window.addEventListener('scroll', checkScrollPos)
+    // scroll to top functions
   })
 
 let slideIndex = 0
@@ -141,7 +138,3 @@ function navbarUtil() {
     }
   }
 }
-
-
-
-
