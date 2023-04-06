@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- ICONS -->
     <link rel="icon" type="image/x-icon" href="/public/assets/images/nitj-logo.png" />
@@ -20,7 +21,7 @@
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Academic Regulations</title>
+    <title>Academic Calender</title>
     <style>
         .bg-accent {
             --tw-bg-opacity: 1;
@@ -42,10 +43,10 @@
 <body>
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
-    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24" style="font-family: Poppins;">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Academic Regulations
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">CALENDER
                 </p>
             </div>
             <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -53,24 +54,23 @@
                     <li class="inline-flex items-center">
                         <a href="https://nitj.netlify.app/"
                             class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                            <a href="#" class="text-lg font-medium ml-2">Academics</a>
+                            <a href="#" class="text-lg font-medium ml-2">Home</a>
                         </a>
                     </li>
                     <li aria-current="page">
                         <div class="inline-flex items-center">
                             <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
                                 class="fa-solid cursor-pointer fa-angle-right ml-2"></i>
-                            <a href="#" class="text-lg font-medium ml-2">Academic Regulations</a>
+                            <a href="#" class="text-lg font-medium ml-2">Academic Calender</a>
                         </div>
                     </li>
                 </ol>
             </nav>
         </div> -->
-
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">academic regulations
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">NIT Act and Statutes
                 </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -84,7 +84,7 @@
                         <div class="inline-flex items-center">
                             <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
                                 class="fa-solid fa-angle-right ml-2"></i>
-                            <a href="#" class="text-lg font-medium ml-2">Academic Regulations</a>
+                            <a href="#" class="text-lg font-medium ml-2">NIT Act and Statutes</a>
                         </div>
                     </li>
                 </ol>
@@ -92,47 +92,34 @@
         </div>
 
         <div class="m-2">
-            <div class="scroll-mt-32 flex flex-col px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
-                <div class="w-full flex flex-col items-start">
-                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Rules and Regulations
+            <div class="scroll-mt-32 flex flex-col px-4 lg:px-[11%] gap-[32px] lg:gap-[44px]">
+                <!-- <div class="w-full flex flex-col items-start">
+                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Calender
                     </p>
                     <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
-                </div>
-                <div class="w-full px-[3%]">
-                    <ul class="list-disc" id="rules-links">
-                        <script>
+                </div> -->
+                <div class="flex-col justify-center align-center mr-[5%]  lg:w-[80%] w-[100%] mx-8">
+                    <ul id="academic-calendar-list" class="leading-8 list-disc">
+                        <!-- <script>
                             async function api_call() {
-                                var data = await fetch(
-                                    "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/rules"
-                                );
+                                var data = await fetch('https://wdmc-vsj1.onrender.com/academicCalendar/get/all');
                                 var result = await data.json();
 
-                                var modified = result[0].specialLinks;
-
-                                for (var i in modified) {
-                                    var name = modified[i]["name"];
-                                    var designation = modified[i]["designation"];
-                                    var department = modified[i]["department"];
-                                    var email = modified[i]["email_id"];
-                                    var url = modified[i]["url"];
-                                    var qualification = modified[i]["qualification"];
-                                    var title = modified[i]["title"];
-                                    document
-                                        .getElementById("rules-links")
-                                        .insertAdjacentHTML(
-                                            "beforeend",
-                                            `<li class="relative hover:underline mb-1">
-                            <a class="text-[#B22222]"
-                                href="${url}">
-                                <span>${title}</span>
-                            </a>&nbsp;
-                            <span class="absolute top-1"><img src="https://www.nitj.ac.in//images/New.gif"></span>
-                        </li>`
-                                        );
+                                for (var i in result) {
+                                    var link = result[i]['url'];
+                                    var title = result[i]['title'];
+                                    const element = document.createElement("li");
+                                    element.innerHTML = `<a href="${link}" target="_blank" class="ml-[1%] hover:text-orange-600">${title}</a>`
+                                    document.getElementById('academic-calendar-list').appendChild(element);
                                 }
                             }
                             api_call();
-                        </script>
+                        </script> -->
+                        <li><a href="src/amended_statues_of_NITs_30016.pdf" class="hover:text-blue-500">NIT Statutes (Amendments), 2017</a></li>
+                        <li><a href="src/Comprehensive_NIT_Act_2012.pdf" class="hover:text-blue-500">Comprehensive NIT Act 2012</a></li>
+                        <li><a href="src/Gazette_Notification_NIT_(Amendment)_Act_2012.pdf" class="hover:text-blue-500">Gazette Notification NIT (Amendment) Act 2012</a></li>
+                        <li><a href="src/Gazette_Notification_NIT_Act_2007_001.pdf" class="hover:text-blue-500">Gazette Notification NIT Act 2007</a></li>
+                        <li><a href="src/NIT_Statutes.pdf" class="hover:text-blue-500">NIT Statutes</a></li>
                     </ul>
                 </div>
             </div>
