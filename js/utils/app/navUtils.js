@@ -10,6 +10,7 @@ export default function navbarUtil() {
   // resAutoScroll()
 
   if (window.scrollY > 100) {
+    document.getElementById("popup-count").style.display="none"
     insti_name_cont.classList.remove('sm:h-20', 'sm:max-h-20')
     insti_name_cont.classList.add('sm:h-10', 'sm:max-h-10')
     // insti_name_cont.classList.add(' sm:max-h-20')
