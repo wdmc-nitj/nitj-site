@@ -99,7 +99,7 @@
                 <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
             </div> -->
         </div>
-        <div class="scroll-mt-32 flex flex-col px-4 lg:px-[14%] gap-[32px] my-8" id="link-cgpa">
+        <div class="scroll-mt-32 flex flex-col px-8 lg:px-[14%] gap-[32px] my-8" id="link-cgpa">
             <script>
                 async function api_call() {
                     var data = await fetch(
@@ -122,20 +122,11 @@
                             .getElementById("link-cgpa")
                             .insertAdjacentHTML(
                                 "beforeend",
-                                `<a href="${url}"
-                download>
-                <div class="flex items-center justify-between border-2 border-green-500 rounded-3xl max-w-fit p-[2px]">
-                    <button
-                        class="bg-green-500 border rounded-full p-3 w-8 h-8 flex flex-row items-center justify-center"><i
-                            class="fa-solid fa-arrow-down"></i></button>
-                    <span class="ml-4 mr-8 italic font-bold">Download</span>
-                </div>
-            </a>
-            <div class="my-2 border-2 border-gray-300">
+                                `<a href="${url}"></a>
+            <div class="border-2 border-gray-300">
                 <img src="${url}" alt="...">
             </div>
-        </div>
-                `
+        </div>`
                             );
                     }
                 }
@@ -144,6 +135,8 @@
 
 
         </div>
+    </div>
+    </div>
         <script src="/template/footer.js"></script>
 </body>
 
