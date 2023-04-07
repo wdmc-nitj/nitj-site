@@ -35,7 +35,7 @@ function openPopup() {
 	 
 	popup.style.display = "none";
   }
-  console.log(dot.length)
+ 
   // Attach the close button click event listener
   var closeButton = document.getElementById("close-btn");
   var closeButton1 = document.getElementById("close-btn1");
