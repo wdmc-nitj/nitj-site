@@ -1,4 +1,5 @@
-fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=faculty')
+let data_url = "https://wdmc-vsj1.onrender.com/";
+fetch(`${data_url}` + 'recruitments/updates/categorised?category=faculty')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("faculty");
@@ -21,7 +22,7 @@ ${update.title}
     })
   
 
-    fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=nonFaculty')
+    fetch(`${data_url}` + 'recruitments/updates/categorised?category=nonFaculty')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("nonFaculty");
@@ -46,7 +47,7 @@ ${update.title}
 
     
 
-    fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=faculty-contract')
+    fetch(`${data_url}` + 'recruitments/updates/categorised?category=faculty-contract')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("faculty-contract");
@@ -70,7 +71,7 @@ ${update.title}
   
 
     
-    fetch('https://teamd.onrender.com/recruitments/updates/categorised?category=nonFaculty-contract')
+    fetch(`${data_url}` + 'recruitments/updates/categorised?category=nonFaculty-contract')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("nonFaculty-contract");

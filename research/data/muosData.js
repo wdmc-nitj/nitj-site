@@ -1,5 +1,5 @@
-
-fetch('https://teamd.onrender.com/MOUs/get?visible=visible&category=international_institutes')
+let data_url = "https://wdmc-vsj1.onrender.com/";
+fetch(`${data_url}` + 'MOUs/get?visible=visible&category=international_institutes')
 .then((response) => response.json())
   .then((data) => {
     const ugupdates = document.getElementById('internationalInstitutesData')
@@ -19,7 +19,7 @@ fetch('https://teamd.onrender.com/MOUs/get?visible=visible&category=internationa
   
 
 
-fetch('https://teamd.onrender.com/MOUs/get?visible=visible&category=indian_institutes')
+fetch(`${data_url}` + 'MOUs/get?visible=visible&category=indian_institutes')
 .then((response) => response.json())
   .then((data) => {
     var i=1;
@@ -38,7 +38,7 @@ fetch('https://teamd.onrender.com/MOUs/get?visible=visible&category=indian_insti
   })
 
 
-fetch('https://teamd.onrender.com/MOUs/get?visible=visible&category=industries')
+fetch(`${data_url}` + 'MOUs/get?visible=visible&category=industries')
 .then((response) => response.json())
   .then((data) => {
     var i=1;

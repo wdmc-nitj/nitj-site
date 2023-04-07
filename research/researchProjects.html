@@ -200,54 +200,42 @@
   <script src="/template/header.js" type="module"></script>
   <script src="/template/helper.js"></script>
 
-  <div class="main-body">
-    <div
-      class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
-      <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
-        Research Projects
-      </p>
-    </div>
-    <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-      <ol class="inline-flex items-center">
-        <li class="inline-flex items-center">
-          <a href="https://nitj.netlify.app/" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-            <a href="#" class="text-lg font-medium ml-2">Home</a>
-          </a>
-        </li>
-        <li aria-current="page">
-          <div class="inline-flex items-center">
-            <i style="
-              color: rgb(128, 128, 128);
-              font-size: 12px;
-              margin-left: 12px;
-            " class="fa-solid fa-angle-right ml-2"></i>
-            <a href="#" class="text-lg font-medium ml-2">Research </a>
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="inline-flex items-center">
-            <i style="
-              color: rgb(128, 128, 128);
-              font-size: 12px;
-              margin-left: 12px;
-            " class="fa-solid fa-angle-right ml-2"></i>
-            <a href="#" class="text-lg font-medium ml-2">Research Projects</a>
-          </div>
-        </li>
-      </ol>
-    </nav>
+  <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+    <div class="titlebg">
+      <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+          <!-- px-4 lg:px-[11%] -->
+          <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Research Projects
+          </p>
+      </div>
+      <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+          <ol class="container inline-flex items-center">
+              <li class="inline-flex items-center">
+                  <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                      <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                  </a>
+              </li>
+              <li aria-current="page">
+                  <div class="inline-flex items-center">
+                      <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                          class="fa-solid fa-angle-right ml-2"></i>
+                      <a href="#" class="text-lg font-medium ml-2">Research Projects</a>
+                  </div>
+              </li>
+          </ol>
+      </nav>
+  </div>
 
-    <div class="py-[48px] flex justify-center">
+    <div class="flex justify-center">
       <div class="hidden lg:block text-3xl font-semibold decoration-4 decoration-[#0369a0]">
         <div class="none lg:block">
           Research Projects
         </div>
-        <div class="bg-accent w-[60%] lg:w-[60%] h-[5px] lg:h-[5px] "></div>
+        <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
       </div>
     </div>
 
 
-    <div class="mb-8 lg:mt-[-12%] md:mt-[-3%] mt-[-28%]">
+    <div class="lg:mt-[-12%] md:mt-[-3%] mt-[-28%]">
       <!-- DropDown -->
       <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
         <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
@@ -291,7 +279,7 @@
 
 
 
-      <div class="mb-8 px-8 flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
+      <div class="px-8 flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
         <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
           <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
             id="sidetab">

@@ -234,43 +234,31 @@
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
 
-    <div
-        class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
-        <p class="font2 font-bold sm:text-[30px] lg:text-[60px] uppercase text-white leading-[1]">
-            STI Hub
-        </p>
-    </div>
-    <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-        <ol class="inline-flex items-center">
-            <li class="inline-flex items-center">
-                <a href="https://nitj.netlify.app/"
-                    class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                    <a href="#" class="text-lg font-medium ml-2">Home</a>
-                </a>
-            </li>
-            <li aria-current="page">
-                <div class="inline-flex items-center">
-                    <i style="
-                color: rgb(128, 128, 128);
-                font-size: 12px;
-                margin-left: 12px;
-              " class="fa-solid fa-angle-right ml-2"></i>
-                    <a href="#" class="text-lg font-medium ml-2">Research</a>
-                </div>
-            </li>
-            <li aria-current="page">
-                <div class="inline-flex items-center">
-                    <i style="
-                color: rgb(128, 128, 128);
-                font-size: 12px;
-                margin-left: 12px;
-              " class="fa-solid fa-angle-right ml-2"></i>
-                    <a href="#" class="text-lg font-medium ml-2">STI Hub</a>
-                </div>
-            </li>
-        </ol>
-    </nav>
-    <div class="py-[48px] mt-6 mx-[10%]">
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+        <div class="titlebg">
+        <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+            <!-- px-4 lg:px-[11%] -->
+            <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">STI HUB
+            </p>
+        </div>
+        <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+            <ol class="container inline-flex items-center">
+                <li class="inline-flex items-center">
+                    <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                        <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                    </a>
+                </li>
+                <li aria-current="page">
+                    <div class="inline-flex items-center">
+                        <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                            class="fa-solid fa-angle-right ml-2"></i>
+                        <a href="#" class="text-lg font-medium ml-2">STI HUB</a>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+        </div>
+        <div class="container">
         <h1 class=" font-bold text-3xl text-center">
             Science & Technology Innovation(STI) Hub
         </h1>
@@ -284,8 +272,8 @@
                 </span>
             </marquee>
         </div>
-    </div>
-    <div class="mb-12 px-8 lg:px-[11%] my-3">
+        </div>
+        <div class="container mb-12 my-3">
         <div class="tab">
             <button class="tablinks active" onclick="openTab(event,'home')">
                 Home
@@ -540,22 +528,7 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
         <div id="upComing_events" class="tabcontent">
             <div class="flex flex-col lg:mr-[10%] lg:ml-[10%] gap-[32px] lg:px-[16px] py-4">
                 <div>
@@ -596,6 +569,7 @@
             </div>
         </div>
     </div>
+
     <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
 
     <script src="../template/footer.js"></script>

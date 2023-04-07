@@ -1,3 +1,4 @@
+let data_url = "https://wdmc-vsj1.onrender.com/";
 const loop = function (auths, authsLink) {
   let loopdata = "";
   for (let i = 0; i < auths.length; i++) {
@@ -7,7 +8,7 @@ const loop = function (auths, authsLink) {
   return loopdata;
 };
 
-fetch("https://teamd.onrender.com/research/publications/citedResearches/top10")
+fetch(`${data_url}` + 'research/publications/citedResearches/top10')
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -50,7 +51,7 @@ fetch("https://teamd.onrender.com/research/publications/citedResearches/top10")
   });
 
 fetch(
-  "https://teamd.onrender.com/research/publications/refereedResearches/get?visible=visible"
+  `${data_url}` + 'research/publications/refereedResearches/get?visible=visible'
 )
   .then((response) => response.json())
   .then((data) => {
