@@ -347,7 +347,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                           data.forEach((update) => {
                             const helpline = document.createElement('li')
                           helpline.innerHTML = `
-                          <li class="px-1">
+                          <li class="px-1 mt-1">
                           <span class="bg-[#0369A1] text-[#0369A1] mr-1"
                             >|</span
                           ><span style="font-size: 14px"
@@ -374,7 +374,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                             data.forEach((update) => {
                               const helpline = document.createElement('li')
                             helpline.innerHTML = `
-                            <li class="px-1">
+                            <li class="px-1 mt-1">
                             <span class="bg-[#0369A1] text-[#0369A1] mr-1"
                               >|</span
                             ><span style="font-size: 14px"
@@ -401,7 +401,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                               data.forEach((update) => {
                                 const helpline = document.createElement('li')
                               helpline.innerHTML = `
-                              <li class="px-1">
+                              <li class="px-1 mt-1">
                               <span class="bg-[#0369A1] text-[#0369A1] mr-1"
                                 >|</span
                               ><span style="font-size: 14px"
@@ -428,7 +428,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                                 data.forEach((update) => {
                                   const helpline = document.createElement('li')
                                 helpline.innerHTML = `
-                                <li class="px-1">
+                                <li class="px-1 mt-1">
                                 <span class="bg-[#0369A1] text-[#0369A1] mr-1"
                                   >|</span
                                 ><span style="font-size: 14px"
@@ -455,7 +455,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                                   data.forEach((update) => {
                                     const helpline = document.createElement('li')
                                   helpline.innerHTML = `
-                                  <li class="px-1">
+                                  <li class="px-1 mt-1">
                                   <span class="bg-[#0369A1] text-[#0369A1] mr-1"
                                     >|</span
                                   ><span style="font-size: 14px"
@@ -482,7 +482,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                                     data.forEach((update) => {
                                       const helpline = document.createElement('li')
                                     helpline.innerHTML = `
-                                    <li class="px-1">
+                                    <li class="px-1 mt-1">
                                     <span class="bg-[#0369A1] text-[#0369A1] mr-1"
                                       >|</span
                                     ><span style="font-size: 14px"
@@ -509,7 +509,7 @@ fetch('https://teamd.onrender.com/admissions/updates/get?visible=visible&degree=
                                       data.forEach((update) => {
                                         const helpline = document.createElement('li')
                                       helpline.innerHTML = `
-                                      <li class="px-1">
+                                      <li class="px-1 mt-1">
                                       <span class="bg-[#0369A1] text-[#0369A1] mr-1"
                                         >|</span
                                       ><span style="font-size: 14px"
