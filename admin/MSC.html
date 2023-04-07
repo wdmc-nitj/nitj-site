@@ -33,7 +33,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-        }
+        } 
         .font2{
             font-family: 'Barlow', sans-serif;
         }
@@ -69,7 +69,7 @@
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">programme of study
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Masters of Science
                 </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -101,7 +101,7 @@
             <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
 
                 <!-- Write code here -->
-                <ul class="list-disc my-12 ml-8 mr-4" id="msc-list">
+                <ul class="list-disc my-8 ml-4 mr-2" id="msc-list">
                     <script>
                         async function api_call() {
                             var data = await fetch(
@@ -119,7 +119,7 @@
                                             .getElementById("msc-list")
                                             .insertAdjacentHTML(
                                                 "beforeend",
-                                                `<li><a href="${url}" class="hover:underline hover:text-orange-700">${title}</a></li>`
+                                                `<li><a href="${url}" class="hover:text-blue-500">${title}</a></li>`
                                             );
                                     }
                                 }
