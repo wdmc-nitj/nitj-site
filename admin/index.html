@@ -161,7 +161,7 @@
       background-color: #cccccc;
       height: 400px;
       background-position: 0% 28%;
-      background-repeat: no-repeat;
+      background-repeat: no-epeat;
       background-size: cover;
     }
 
@@ -501,9 +501,14 @@
     fetch(`https://wdmc-vsj1.onrender.com/photoGallery/?history=true`)
       .then((res) => res.json())
       .then((data) => {
-        const images = data.sort((a, b) => 0.5 - Math.random());
+        const images = data.filter(img => {
+          return img.type === 'history'
+        })
+        images.sort((a, b) => (
+          0.5 - Math.random()
+        ))
         size_images = images.length
-        img_arr = images;
+        img_arr = images
         // const images = shuffledArray.slice(0,12)
         // console.log(data)
         const parentDiv = document.getElementById('gallery')
@@ -516,7 +521,7 @@
         let i = 0
         let y = 1
         images.forEach((img, key) => {
-          // img.image.link
+          // img.link
           if (y > 12) {
             return;
           }
@@ -527,7 +532,7 @@
           const imgContainer = document.createElement('div')
           imgContainer.classList.add('box')
           imgContainer.innerHTML = `
-        <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
+        <img class= "gallery-image" data-index="${key}" src="${img.link}" />
         `
 
 
@@ -559,11 +564,11 @@
       const imgSample = document.getElementById('sample-img')
       const imgArray = img_arr
       for (let i = 0; i < imgArray.length; i++) {
-        if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+        if (imgArray[i].link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
           if (i == imgArray.length - 1) {
-            imgSample.src = imgArray[0].image.link
+            imgSample.src = imgArray[0].link
           } else {
-            imgSample.src = imgArray[i + 1].image.link
+            imgSample.src = imgArray[i + 1].link
           }
           break;
         }
@@ -574,11 +579,11 @@
       const imgSample = document.getElementById('sample-img')
       const imgArray = img_arr
       for (let i = 0; i < imgArray.length; i++) {
-        if (imgArray[i].image.link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
+        if (imgArray[i].link.toLowerCase().trim() == imgSample.src.toLowerCase().trim()) {
           if (i == 0) {
-            imgSample.src = imgArray[imgArray.length - 1].image.link
+            imgSample.src = imgArray[imgArray.length - 1].link
           } else {
-            imgSample.src = imgArray[i - 1].image.link
+            imgSample.src = imgArray[i - 1].link
           }
           break;
         }
@@ -685,9 +690,9 @@
         console.log(result[i].year);
         timelist.push(result[i].year);
       }
-      
-      
-      
+
+
+
       console.log(timelist.length);
       let uniqueYear = [];
       function getUniqueYear() {
@@ -697,7 +702,7 @@
           }
         }
 
-        
+
       }
       getUniqueYear();
       console.log(uniqueYear.length);
@@ -715,7 +720,7 @@
             x += `<p class="basis-7/10 flex items-center ">
              ${result[j].desc}
           </p>`;
-          break;
+            break;
           }
         }
         x += "</div></div>";
@@ -754,7 +759,7 @@
 
           }
 
-         
+
         }
         x += "</div><br>"
       }

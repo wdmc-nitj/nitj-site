@@ -17,7 +17,11 @@
   <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
   <!--jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <!-- Icons -->
@@ -40,6 +44,15 @@
       }
     </style> -->
   <style>
+
+    :root {
+      --font1: 'Poppins', sans-serif;
+      --font2: 'Barlow', sans-serif;
+    }
+
+    .main-body {
+      font-family: var(--font1);
+    }
     .titlebg {
       background: linear-gradient(90.09deg,
           rgba(0, 0, 0, 0.7) 0.08%,
@@ -259,13 +272,14 @@
   <script src="/template/header.js" type="module"></script>
   <script src="/template/helper.js"></script>
 
-  <div
+  <div class="main-body">
+    <div
     class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
     <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
       Jobs
     </p>
-  </div>
-  <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+    </div>
+    <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
     <ol class="inline-flex items-center">
       <li class="inline-flex items-center">
         <a href="https://nitj.netlify.app/" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
@@ -284,11 +298,11 @@
         </div>
       </li>
     </ol>
-  </nav>
+    </nav>
 
 
 
-  <div class="px-4 lg:px-[11%] my-3 py-[48px]">
+    <div class="px-4 lg:px-[11%] my-3 py-[48px]">
     <div class="tab">
       <button class="tablinks active" id="facultybutton">
         Faculty
@@ -336,7 +350,9 @@
       </div>
     </div>
 
+    </div>
   </div>
+
   <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
   <div class="relative bottom-0">
     <script src="../template/footer.js"></script>

@@ -22,49 +22,40 @@
 
 
 </head>
-<body>
+<body class="h-screen">
 
 <!--NAVBAR BEGINS-->
-<nav class=" scroll-smooth z-50 w-full bg-white lg:flex lg:items-center lg:justify-around h-[5rem] lg:py-5 font-[Inter]">
+<nav class="fixed p-2 scroll-smooth z-50 max-w-screen w-full bg-white lg:flex lg:items-center lg:justify-around font-[Inter] shadow-2xl top-0">
   <div class="flex justify-around p-1 items-center ">
-      <img class="h-[3.62rem] w-[3.5rem] inline mx-2 lg:ml-24 cursor-pointer"
+      <img class="h-[2.2rem] w-[2.2rem] sm:h-[3.62rem] sm:w-[3.5rem] inline mx-2 lg:ml-12 cursor-pointer"
         src="img/logo.png" alt="logo">
-        <div class="text-xs sm:text-base w-[30rem] lg:w-[33rem] h-[2.375rem] my-4 sm:my-5 ml-3  leading-5 text-[#0054A6]  cursor-pointer font-bold">
+        <div class="text-[0.45rem] sm:text-base w-[30rem] lg:w-[33rem] ml-2 sm:ml-3 leading-5 text-[#0054A6]  cursor-pointer font-bold">
           <a href="alumni.html"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
         </div>
   
-    <span class="text-3xl cursor-pointer text-black mx-2 mr-3 lg:hidden block">
+    <span class="text-2xl sm:text-3xl cursor-pointer text-black mx-2 mr-3 lg:hidden block">
       <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
     </span>
   </div>
 
-  <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-white w-full lg:h-[5rem] lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-    <!--
-    <li class="m-4 lg:mr-4 lg:ml-20 xl:mx-4 my-6 lg:my-0">
-      <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">ABOUT US</a>
-    </li>
-  -->
-  <!--
+  <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-white w-full lg:top-0 lg:w-auto lg:py-0 py-4 pl-7 lg:opacity-100 opacity-0 transition-all ease-in duration-500">
     <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-      <a href="chapters.html" class="text-xs xl:text-base w-auto h-[1rem] text-white hover:text-[#D3D3D3] duration-500  ">CHAPTERS</a>
+      <a href="" class=" text-[0.5rem] sm:text-xs xl:text-base w-auto text-[#0054A6] hover:text-[#D3D3D3] duration-500 ">
+        <i class="fa-solid fa-house"></i>
+      </a>
     </li>
-  -->
 
     <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-      <a href="givingback.html" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
+      <a href="givingback.html" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
     </li>
     <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-      <a href="#" class="text-xs xl:text-base w-auto h-[1rem] text-black hover:text-[#D3D3D3] duration-500 ">
+      <a href="#" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">
         CHAPTERS</a>
     </li>
 
-    <li class="m-4 lg:mr-4 xl:m-4 my-6 lg:my-0">
-      <a href="" class="text-xs xl:text-base w-auto h-[1rem] text-black font-bold hover:text-[#D3D3D3] duration-500 ">LOGIN</a>
-    </li>
-
-    <a href="register.html">
-      <button class="bg-[#0054A6] ml-4 mr-16 mb-8 lg:mb-0 text-white text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center h-[1.875rem] xl:h-10 shadow-md border border-[#FFD66E]  rounded hover:-translate-y-1 hover:scale-110 ">
-        REGISTER
+    <a href="#">
+      <button class="bg-[#0054A6] ml-4 mb-8 mr-10 lg:mb-0 text-white text-[0.5rem] sm:text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center shadow-md border-2 border-[#FFD66E]  rounded hover:-translate-y-1 hover:scale-110 ">
+        LOGIN
       </button>
     </a>
     
@@ -210,6 +201,7 @@
 
 
 <!--donation-->
+<!--
 <div class="sm:col-span-1 sm:row-span-1 lg:col-span-2 lg:row-span-1 m-4 mt-[5%]">
   <div
     class="shadow-2xl h-full relative flex justify-between rounded-md p-4 bg-[url('img/support.png')] bg-center bg-cover">
@@ -230,6 +222,67 @@
     </div>
   </div>
 </div>
+
+-->
+
+
+<!--donation section starts-->
+
+<div class="font-[Inter] h-[90vh] sm:h-[50vh] lg:h-[90vh]">
+  <div class="mt-2 sm:mt-7 lg:mt-28 lg:mb-4 text-center p-5 sm:p-3 lg:p-5 text-xl sm:text-2xl lg:text-3xl font-bold">
+    <span class="text-[#0054A6]">Engage</span>
+    with NITJ and your fellow alumni
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-center items-center">
+    <div class="m-1 sm:m-3 lg:m-4 p-3 sm:p-4 bg-white rounded-lg sm:w-[30%] flex-col justify-center align-middle text-center">
+      <div class="text-[#0054A6]">
+        <i class="fa-sharp fa-solid fa-people-line fa-2x lg:fa-3x"></i>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base lg:text-lg font-bold">CONNECT</h2>
+      </div>
+      <div>
+        <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">Our events and programs help you connect with fellow graduate and NITJ</p>
+      </div>
+      <button class="bg-[#0054A6] rounded hover:bg-blue-700 text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4">CONNECT WITH US</button>
+    </div>
+
+
+
+    <div class="m-1 sm:m-3 lg:m-4 p-3 sm:p-4 bg-white rounded-lg sm:w-[30%] flex-col justify-center align-middle text-center">
+      <div class="text-[#0054A6]">
+        <i class="fa-solid fa-handshake fa-2x lg:fa-3x"></i>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base lg:text-lg font-semibold">HIRE</h2>
+      </div>
+      <div>
+        <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">NITJ grads and students make great employees. Recruit from NITJ today!</p>
+      </div>
+      <button class="bg-[#0054A6] rounded hover:bg-blue-700 text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4">HIRE A GRAD</button>
+    </div>
+
+
+
+    <div class="m-1 sm:m-3 lg:m-4 p-3 sm:p-4 bg-white rounded-lg sm:w-[30%] flex-col justify-center align-middle text-center">
+      <div class="text-[#0054A6]">
+        <i class="fas fa-light fa-hand-holding-heart fa-2x lg:fa-3x"></i>
+      </div>
+      <div>
+        <h2 class="text-sm sm:text-base lg:text-lg font-semibold">GIVE</h2>
+      </div>
+      <div>
+        <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">Your annual donations provide scholarships and other support to NITJ</p>
+      </div>
+      <button class="bg-[#0054A6] rounded hover:bg-blue-700 text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4">GIVE TO NITJ</button>
+    </div>
+
+
+  </div>
+</div>
+
+<!--donation section ends-->
 
 
 

@@ -4,100 +4,80 @@ async function callAPi() {
   result = await result.json()
   result = result[2]
   console.log(result)
+  //sort result according to order
+  result.sort((a, b) => { 
+    return a.order - b.order
+  })
+
   // document.getElementById("quicklinks").innerHTML = footer;
+  let x=`
+  <div class="hidden basis-2/3 p-[25px] lg:block">
+  <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
+  <div class="flex flex-row p-[15px]">
+      <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`;
+  
+  for (let i = 0, j=0; i < result.length; i++, j<7) {
+    if(i == 1|| i== 3 || i==6){
+      x+=`</br>`
+    }
+    if (result[i].column == 0) {
+      x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
 
-  const links = result.links
-  const keys = Object.keys(links)
-  console.log(keys[2])
+      j+=1;
+      }
 
-  var i = 0
 
-  footer = `    
-      <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
-      
-      <div class="flex flex-row p-[15px]">
+  }
+
+  x+=`</div>
         <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`
-  for (i = 0; i < 1; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
+    
+        for (let i = 0, j=0; i < result.length; i++,j<5) {
+          if(i==3){
+            x+=`</br>`
+          }
+          if (result[i].column == 1) {
+            x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
+            j+=1;
+            }
+      
+      
+        }
+        x+=` </div>
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`
 
-  footer += '<br>'
 
-  for (i = 1; i < 3; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
+        
+  
+        for (let i = 0, j=0; i < result.length; i++, j<10) {
 
-  footer += '<br>'
+          if (result[i].column == 2) {
+            x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
+            j+=1;
+            }
+      
+      
+        }
 
-  for (i; i < 6; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
-  footer += '<br>'
-  for (i; i < 7; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
+        x+=` </div>
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`
 
-  footer +=
-    ' </div> <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">'
-  for (i; i < 10; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
-  footer += '<br>'
-  for (i; i < 12; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
-  footer +=
-    ' </div> <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">'
-  for (i; i < 22; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
-  footer +=
-    ' </div> <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">'
-  for (i; i < result.length; i++) {
-    footer +=
-      ' <a href="' +
-      links[keys[i]] +
-      '" class="hover:text-sky-500 hover:underline">' +
-      keys[i] +
-      '</a>'
-  }
-  footer += ' </div>  </div>'
 
-  document.getElementById('quicklinks').innerHTML = footer
+        
+  
+        for (let i = 0; i < result.length; i++) {
+
+          if (result[i].column == 3) {
+            x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
+            }
+      
+      
+        }
+        x+=`</div>
+        </div>
+        </div>
+        </div>`
+
+  document.getElementById('quicklinks').innerHTML = x
 }
 callAPi()

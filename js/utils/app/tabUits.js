@@ -23,28 +23,36 @@ function dateManipulator(data) {
   return FullDate
 }
 
-export default async function notificationTabs(e) {
-  // let tabcontent = document.getElementsByClassName('notice-content')
+const loadingSkeleton = `
+<li class="py-4 w-full space-y-1">
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-[80%]"></div>
+                </li>
+                <li class="py-4 w-full space-y-1">
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-[80%]"></div>
+                </li>
+                <li class="py-4 w-full space-y-1">
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-[80%]"></div>
+                </li>
+                <li class="py-4 w-full space-y-1">
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-full"></div>
+                  <div class="bg-slate-300 rounded-md animate-pulse h-4 w-[80%]"></div>
+                </li>`
+
+export default async function notificationTabs(e, subscribed) {
   let tablinks = document.getElementsByClassName('notif-link')
   const tabContainer = document.getElementById('updates')
   const currentTab = e.dataset.notif
-  // for (let i = 0; i < tabcontent.length; i++) {
-  //   tabcontent[i].classList.add('hidden')
-  // }
-  // console.log(tabContainer.innerHTML.length)
-  // if (tabContainer.innerHTML.length !== 0) {
-  //   localStorage.setItem(currentTab, tabContainer.innerHTML)
-  // }
-  tabContainer.innerHTML = ''
 
-  // if (
-  // localStorage.getItem(currentTab) &&
-  // localStorage.getItem(currentTab).length !== 0
-  // ) {
-  // tabContainer.innerHTML = localStorage.getItem(currentTab)
-  // } else {
+  tabContainer.innerHTML = loadingSkeleton
+
   fetchTabContent(e.dataset.notif, tabContainer)
-  // }
 
   for (let i = 0; i < tablinks.length; i++) {
     tablinks[i].classList.add('hover:bg-blue-50', 'text-slate-400')
@@ -56,14 +64,13 @@ export default async function notificationTabs(e) {
   }
   e.classList.remove('hover:bg-blue-50', 'text-slate-400')
   e.classList.add('bg-blue-100', 'hover:bg-blue-200', 'text-accent')
-  // document.getElementById(e.dataset.notif).classList.remove('hidden')
 }
 
 async function fetchTabContent(tabName, tabContainer) {
   fetch(`${BaseURL}/${tabName}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
+      tabContainer.innerHTML = ''
       const viewAll = document.getElementById('tab-view-all')
       data.forEach((e) => {
         let title = e.title
@@ -73,15 +80,21 @@ async function fetchTabContent(tabName, tabContainer) {
         const newUpdate = document.createElement('li')
         newUpdate.setAttribute('class', 'py-4 w-full')
         newUpdate.innerHTML = `
-          <div class="inline-flex flex-col items-start justify-start space-y-4">
+          <div class="">
             <a
-            href = "/template/index.html?id=${e._id}?category=${tabName}"
+            
+                      ${
+                        e.newPage
+                          ? `target = "_blank" href= "${e.pdfLink}"`
+                          : `href = "/template/index.html?id=${e._id}?category=${tabName}"`
+                      }
             class="text-xl font-semibold text-accent line-clamp-3">
-              ${title}
-            </a>
-            ${
-              e.new
-                ? `<div id="new-tag" class="inline-flex items-center justify-start space-x-2">
+            <p class="inline w-auto line-clamp-3">${title}</p>
+            
+              ${
+                e.new
+                  ? `
+          <div id="new-tag" class="inline-flex items-center text-accent-orange justify-start space-x-2">
             <span class="material-symbols-outlined text-accent-orange">
               auto_awesome
             </span>
@@ -89,15 +102,20 @@ async function fetchTabContent(tabName, tabContainer) {
               New
             </p>
           </div>`
-                : `<div id="date-tag" class="inline-flex items-center justify-start space-x-2">
+                  : `
+        <div id="date-tag" class="text-dark-purple font-normal text-lg inline-flex items-center justify-start space-x-2">
+        ${tabName === 'upcomingEvent' ? 'Event Data:&nbsp;' : ''}
+                 
         <span class="material-symbols-outlined" style="font-size: 24px">
           calendar_month
         </span>
-        <p class="text-lg text-dark-purple/80">
-          ${dateManipulator(e.updatedAt)}
+        <p class="text-lg">
+         ${dateManipulator(e.updatedAt)}
         </p>
       </div>`
-            }
+              }
+            </a>
+            
           </div>
         `
         tabContainer.appendChild(newUpdate)

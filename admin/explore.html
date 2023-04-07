@@ -10,6 +10,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../style.css" />
 
+  <script src="../js/data.js" defer></script>
+
   <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -28,18 +30,17 @@
 
   <style>
     /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
     ::-webkit-scrollbar-thumb {
-      background-color: #212121;
+      background-color: rgba(30, 58, 138, 1);
       border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
       background-color: gray;
-    }
-
-    ::-webkit-scrollbar {
-      width: 4px;
-      height: 2px;
     }
 
     ::-webkit-resizer {
@@ -48,6 +49,10 @@
 
     .material-symbols-outlined {
       font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
     }
 
     .font2 {
@@ -84,36 +89,121 @@
       background-size: cover;
     }
 
-    #gal1 {
-      animation: fadeEffect 1s;
-      /* Fading effect takes 1 second */
+
+    /* Gallery Effects */
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      line-height: 0;
     }
 
-    @keyframes fadeEffect {
+    .box>img {
+      width: 100%;
+      height: 100%;
+      border: 0.2rem solid white;
+      border-radius: 8px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: ease 0.75s;
+    }
 
-      /* Go from zero to full opacity */
-      from {
-        opacity: 0;
-      }
+    .box:hover {
+      flex: 1 1 30%;
+      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+      z-index: 1;
+      cursor: pointer;
+    }
 
-      to {
-        opacity: 1;
-      }
+    .box:hover>img {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .base-image {
+      margin-top: 40px;
+      background-image: url("public/assets/images/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      mask-image: linear-gradient(0deg, white, white, white, transparent);
+      -webkit-mask-image: linear-gradient(0deg,
+          white,
+          white,
+          white,
+          transparent);
+      background-color: #cccccc;
+      height: 400px;
+      background-position: 0% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .base-image-2 {
+      margin-top: 40px;
+      background-image: url("public/assets/images/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      background-color: #cccccc;
+      height: 300px;
+      background-position: 58% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .main-shadow {
+      text-shadow: rgb(0 0 0) 6px -1px 5px;
+    }
+
+    .carousel-open:checked+.carousel-item {
+      position: static;
+      opacity: 100;
+    }
+
+    .carousel-item {
+      -webkit-transition: opacity 0.9s ease-in-out;
+      transition: opacity 1s ease-in-out 0.2s;
+    }
+
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3,
+    #carousel-4:checked~.control-4 {
+      display: block;
+    }
+
+    .carousel-indicators {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+
+    #menu .menu-content ul li.selected a {
+      color: hsla(201, 96%, 26%);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    #menu .menu-content .extra-links a.extra-selected {
+      font-weight: 600;
+      color: var(--dark);
     }
   </style>
 </head>
 
 <body>
-  <script src="/template/header.js" type="module"></script>
-  <script src="/template/helper.js"></script>
+  <script src="../template/header.js" type="module"></script>
+  <script src="../template/helper.js"></script>
 
   <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
     <div class="titlebg">
       <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
         <!-- px-4 lg:px-[11%] -->
-        <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">
-          Explore NITJ
-        </p>
+        <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Explore NITJ</p>
       </div>
       <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
         <ol class="container inline-flex items-center">
@@ -125,133 +215,146 @@
           <li aria-current="page">
             <div class="inline-flex items-center">
               <i style="
-                    color: rgb(128, 128, 128);
-                    font-size: 12px;
-                    margin-left: 12px;
-                  " class="fa-solid fa-angle-right ml-2"></i>
+                        color: rgb(128, 128, 128);
+                        font-size: 12px;
+                        margin-left: 12px;
+                      " class="fa-solid fa-angle-right ml-2"></i>
               <a href="#" class="text-lg font-medium ml-2">Explore NITJ</a>
             </div>
           </li>
         </ol>
       </nav>
     </div>
-    <!-- <p> Code by Bhavya Mittal </p> -->
-    <section class="overflow-hidden text-gray-700" id="gallery">
-      <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32" id="gallery1">
-        <div class="flex flex-wrap -m-1 md:-m-2 h-[60vh] lg:h-[80vh]">
-          <div class="flex flex-wrap w-1/2">
-            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="img/IMG-20220721-WA0020.jpg" id="gal1" />
-            </div>
-            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="img/IMG-20220721-WA0021.jpg" id="gal2" />
-            </div>
-            <div class="w-full h-[40vh] lg:h-[50vh] p-1 md:p-2">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="img/IMG-20220721-WA0022.jpg" id="gal3" />
-            </div>
-          </div>
+    <!-- === LIFE AT NITJ Starts === -->
+    <div id="campus-life" class="container my-20 scroll-mt-32">
+      <div class="flex flex-col gap-10 lg:flex-row">
 
-          <div class="flex flex-wrap w-1/2">
-            <div class="w-full h-[40vh] lg:h-[50vh] p-1 md:p-2">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="img/IMG-20220721-WA0023.jpg" id="gal4" />
+
+        <div class="w-full">
+          <div id="gallery">
+            <div class="mb-10 flex items-center justify-start space-x-6 group">
+              <h1 class="uppercase text-4xl font-semibold text-accent">
+                Photo <span class="text-dark-purple">Gallery</span>
+              </h1>
+              <span class="material-symbols-outlined group-hover:animate-shake animate-delay"
+                style="font-size: 40px; color: var(--accent)">
+                imagesmode
+              </span>
             </div>
-            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="img/IMG-20220721-WA0024.jpg" id="gal5" />
-            </div>
-            <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="img/IMG-20220721-WA0027.jpg" id="gal6" />
-            </div>
+            <!-- images from API -->
+            <!-- <div class="flex h-[22vh] w-full">
+                    <div class="box">
+                    <img src="./public/assets/images/img1.png" />
+                    </div>
+                    <div class="box">
+                    <img src="./public/assets/images/img2.png" />
+                    </div>
+                    <div class="box">
+                    <img src="./public/assets/images/img3.png" />
+                    </div>
+                    <div class="box hidden lg:block">
+                    <img src="./public/assets/images/img4.png" />
+                    </div>
+                </div> -->
+
+            <!-- <div class="flex h-[22vh] w-full">
+                    <div class="box">
+                    <img src="./public/assets/images/img5.png" />
+                    </div>
+                    <div class="box">
+                    <img src="./public/assets/images/img6.png" />
+                    </div>
+                    <div class="box">
+                    <img src="./public/assets/images/img7.png" />
+                    </div>
+                    <div class="box hidden lg:block">
+                    <img src="./public/assets/images/img8.png" />
+                    </div>
+                </div> -->
+
+            <!-- <div class="flex h-[22vh] w-full">
+                    <div class="box">
+                    <img src="./public/assets/images/img9.png" />
+                    </div>
+                    <div class="box">
+                    <img src="./public/assets/images/img10.png" />
+                    </div>
+                    <div class="box">
+                    <img src="./public/assets/images/img11.png" />
+                    </div>
+                    <div class="box hidden lg:block">
+                    <img src="./public/assets/images/danceClub.png" style="opacity: 1" />
+                    </div>
+                </div> -->
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- <div class="flex gap-4 items-stretch overflow-x-scroll mx-[11%]" id="imgContainer">
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0020.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0021.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0022.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0023.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0024.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0027.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0028.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0020.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0021.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0022.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0023.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0024.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0027.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0028.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0020.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0021.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0022.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0023.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0024.jpg" alt=""></div></div>
-      <div class="inline-block"><div class="w-[250px] h-[200px] mb-6"><img class="block object-cover object-center w-full h-full rounded-lg" src="img/IMG-20220721-WA0027.jpg" alt=""></div></div>
-    </div> -->
+    </div>
+    <div id="big-viewer" class="fixed top-0 w-full flex place-content-center backdrop-blur-md h-screen hidden z-50">
+      <div id="crossbutton" class="absolute w-full z-50 flex justify-end py-4 px-4 h-fit hidden cursor-pointer">
+        <div class="line bg-black w-[20px] h-[2px] rotate-45 absolute"></div>
+        <div class="line bg-black w-[20px] h-[2px] -rotate-45"></div>
+      </div>
+      <div class="flex-row flex space-x-4 w-full z-10 h-full items-center place-content-center">
+        <span id="arrow_back" class="material-symbols-outlined hidden cursor-pointer z-50">
+          arrow_back_ios
+        </span>
+        <img id="sample-img" class="w-4/6 rounded-md shadow-lg z-10 hidden" src="">
+        <span id="arrow_forward" class="material-symbols-outlined hidden cursor-pointer z-50">
+          arrow_forward_ios
+        </span>
+      </div>
+    </div>
+    <!-- === LIFE AT NITJ Ends === -->
   </div>
-
-  <script src="app.js"></script>
-  <script src="../template/footer.js"></script>
-  <script>
-    // Image change script
-    let gallery = document.getElementById("gallery");
-
-
-    let k = 0;
-  </script>
-
-  <!-- <script>
-    // auto scroll script
-    const imgContainer = document.getElementById('imgContainer');
-    const imgScrollWidth = imgContainer.scrollWidth;
-
-    window.addEventListener('load', () => {
-      self.setInterval(() => {
-        if (imgContainer.scrollLeft !== imgScrollWidth) {
-          imgContainer.scrollTo(imgContainer.scrollLeft + 2, 0);
-        }
-      }, 1);
-    });
-    
-  </script> -->
-  <script>
-    async function callAPi() {
-      var result = []
-      fetch("https://wdmc-vsj1.onrender.com/photoGallery/").then((res) => res.json()).then((data) => {
-        result = data;
-      })
-      x = `<div class="flex flex-wrap -m-1 md:-m-2 h-[60vh] lg:h-[80vh]">`;
-
-      // document.getElementById("gallery").innerHTML = x;
-      for (let i = 0; i < result.length; i = i + 3) {
-        x += ` <div class="flex flex-wrap w-1/2">`;
-        y = 0;
-        while (y < 3) {
-          x += `
-              <div class="w-1/2 h-[20vh] lg:h-[30vh] p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  class="block object-cover object-center w-full h-full rounded-lg"
-                  src="${result[i + y].image.link}"
-                  id="gal${i + y}"
-                />
-              </div>`;
-          y++;
-        }
-
-        x += `</div>`;
+  <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
       }
-      x += "</div>";
-      document.getElementById("gallery1").innerHTML = x;
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1;
+      }
+      x[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 2500);
     }
-    callAPi();
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    //   return new Tooltip(tooltipTriggerEl);
+    // });
+    function slideCards(e, direction) {
+      // var container = document.getElementById('cards')
+      const container = e.parentNode.querySelector('div')
+      scrollCompleted = 0
+      var slideVar = setInterval(function () {
+        if (direction == 'left') {
+          container.scrollLeft -= container.clientWidth
+        } else {
+          container.scrollLeft += container.clientWidth
+        }
+        scrollCompleted += 100
+        if (scrollCompleted >= 1000) {
+          window.clearInterval(slideVar)
+        }
+      }, 2)
+    }
   </script>
+
+  <script type="module" src="../js/app.js"></script>
+  <!-- <script type="module" src="./js/navbar.js"></script> -->
+  <script src="../js/footer.js"></script>
+  <script src="../template/footer.js"></script>
+  <script src="../template/helper.js"></script>
+  <!-- <script type="module" src="./js/navbar-mobile.js"></script> -->
+
 </body>
 
 </html>
