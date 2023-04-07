@@ -402,7 +402,7 @@ fetch(`${baseURL}/club/get/all`)
               <div
                 class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
                 <p class="text-xs font-bold uppercase text-purple-500">
-                  ${e.type}&nbsp;Club
+                  ${e.type}
                 </p>
               </div>
               <p class="line-clamp-3 leading-5">
