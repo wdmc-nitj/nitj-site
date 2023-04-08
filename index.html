@@ -491,7 +491,7 @@
         </div>
         <div class="ring-2 ring-accent rounded-xl p-5 flex flex-col items-center justify-center gap-5">
           <div class="flex items-stretch rounded-full ring-2 ring-accent overflow-hidden">
-             <p data-notif="upcomingEvent"
+            <p data-notif="upcomingEvent"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-slate-400 font-semibold hover:bg-blue-50">
               Upcoming Events
             </p>
@@ -525,27 +525,34 @@
   </div>
 
   <!-- Institute in Numbers section -->
-  <a href="https://placement-q1bq.onrender.com/" title="Placement Site">
-    <section id="nitj-numbers"
-      class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] group bg-cover bg-fixed bg-center bg-no-repeat">
-      <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40">
-        <div
-          class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+
+  <section id="nitj-numbers"
+    class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] group bg-cover bg-fixed bg-center bg-no-repeat">
+    <div class="bg-dark-purple/70">
+      <div
+        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+        <div class="flex flex-col gap-4 w-fit justify-center items-start">
           <h1 class="text-5xl font-bold uppercase text-white">
             #numbers <br />
             <span style="
-                  -webkit-text-stroke: 1px #ffffff !important;
-                  -webkit-text-fill-color: transparent;
-                " class="inline-block">that prove</span>
+                    -webkit-text-stroke: 1px #ffffff !important;
+                    -webkit-text-fill-color: transparent;
+                  " class="inline-block">that prove</span>
             NITJ
           </h1>
-          <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
-            <!-- Data From API -->
-          </div>
+          <a href="https://placement-q1bq.onrender.com/"
+            class="text-sm w-fit font-semibold text-gray-900 hover:text-white flex items-center bg-white hover:bg-transparent hover:ring-2 ring-white ring-inset px-4 py-2 rounded-lg transition">
+            <span class="text-base">Placement site &rarr;</span>
+          </a>
+
+
+        </div>
+        <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
+          <!-- Data From API -->
         </div>
       </div>
-    </section>
-  </a>
+    </div>
+  </section>
   <!-- === Research Section Starts === -->
 
   <div id="research" class="my-20 scroll-mt-32">

@@ -91,11 +91,11 @@ fetch(`${baseURL}/testimonial/get/all`)
       testimonialImg.src = data[randNum].image
       testimonialImg.setAttribute('class', 'object-cover rounded-lg h-28 w-28')
       const testimonialCard = document.createElement('div')
-      const card = document.createElement('a')
-      card.href = '/alumni/alumni.html'
+      const card = document.createElement('div')
+      // card.href = '/alumni/alumni.html'
       card.setAttribute(
         'class',
-        'col-start-1 row-start-1 col-end-2 row-end-2 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 hover:ring-4 transition-all duration-300 gap-5 ring-accent'
+        'col-start-1 row-start-1 col-end-2 row-end-2 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 gap-5 ring-accent'
       )
       testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
       testimonialCard.innerHTML = `
@@ -103,13 +103,17 @@ fetch(`${baseURL}/testimonial/get/all`)
           <p class="line-clamp-3">
             ${data[randNum].messageText}
           </p>
-          <div>
+          <div class="flex justify-between">
             <div>
-              <p class='text-lg font-bold text-accent'>- ${data[randNum].name}</p>
-              <p class='ml-2 text-sm text-gray-600 font-bold'>${data[randNum].designation}</p>
+              <p class="text-lg font-bold text-accent">- ${data[randNum].name}</p>
+              <p class="ml-2 text-sm text-gray-600 font-bold">${data[randNum].designation}</p>
             </div>
-            
+            <a href="/alumni/alumni.html" class="ml-auto text-base font-semibold text-sky-500 hover:text-sky-600 flex items-center hover:bg-accent/10 px-4 py-1 rounded-lg transition">
+              <span>Alumni Site &rarr;</span>
+              
+            </a>
           </div>
+
         </div>
       `
       card.append(testimonialImg, testimonialCard)
@@ -357,7 +361,9 @@ fetch(`${baseURL}/publication`)
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
       <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
-            <a href="${content?.url || '#'}">
+            <a
+            target= "_blank"
+            href="${content?.url || '#'}">
               <p>
               <p
               class = "inline font-semibold text-accent cursor-pointer">
