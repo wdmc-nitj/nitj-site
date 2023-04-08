@@ -1,5 +1,12 @@
 # NITJ Website
 
+> :loudspeaker: **Important Update:**  
+> Starting from now, the `style.css` file is ignored by default when pushing code to GitHub. To build the `style.css` file, please run the following command locally:
+> 
+> - Using Yarn: `yarn build:css` :hammer:
+> - Using npm: `npm run build:css` :wrench:
+
+
 This is a guide to explain the working of this code and how you can contribute to this repository without causing any unexpected errors.
 
 There are some steps that you need to follow to setup this project in your own local machine.
