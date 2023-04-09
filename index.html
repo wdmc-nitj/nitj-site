@@ -168,9 +168,8 @@
     </svg>
 
   </button>
-
-  <div id="main-image"
-    class="mt-20 min-h-[700px] h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center">
+  <div class="h-28 bg-accent w-full"></div>
+  <div id="main-image" class="min-h-[700px] h-screen max-h-[1000px] transition-all duration-1000 bg-cover bg-center">
     <div class="bg-gradient-to-b from-accent to-transparent h-full w-full">
       <div class="flex flex-col items-center justify-center container h-full">
         <div class="flex flex-col gap-10">
@@ -415,18 +414,18 @@
     <div class="flex flex-col space-y-6 rounded-lg bg-slate-100 p-6 shadow-md md:flex-row md:space-y-0 md:space-x-6">
       <div class="h-32 w-40 rounded-xl bg-slate-300 animate-pulse"></div>
       <div id="content" class="flex flex-col space-y-4 w-full">
-        <div class="flex space-x-4 items-center justify-start group">
+        <div aria-hidden="true" class="flex space-x-4 items-center justify-start group">
           <div class="bg-slate-300 animate-pulse rounded-lg w-full max-w-md h-10"></div>
           <div class="bg-slate-300 h-10 w-10 animate-pulse rounded-lg"></div>
         </div>
-        <div class="bg-slate-300 animate-pulse rounded-lg w-full max-w-md h-5"></div>
-        <div class="space-y-1">
+        <div aria-hidden="true" class="bg-slate-300 animate-pulse rounded-lg w-full max-w-md h-5"></div>
+        <div aria-hidden="true" class="space-y-1">
           <div class="bg-slate-300 animate-pulse rounded-lg w-full h-5"></div>
           <div class="bg-slate-300 animate-pulse rounded-lg w-full h-5"></div>
           <div class="bg-slate-300 animate-pulse rounded-lg w-[80%] h-5"></div>
         </div>
 
-        <div class="mt-auto bg-slate-300 animate-pulse rounded-lg w-14 h-4">
+        <div aria-hidden="true" class="mt-auto bg-slate-300 animate-pulse rounded-lg w-14 h-4">
           <div class="bg-slate-300 animate-pulse rounded-lg w-14 h-4"></div>
         </div>
       </div>
@@ -491,7 +490,7 @@
         </div>
         <div class="ring-2 ring-accent rounded-xl p-5 flex flex-col items-center justify-center gap-5">
           <div class="flex items-stretch rounded-full ring-2 ring-accent overflow-hidden">
-             <p data-notif="upcomingEvent"
+            <p data-notif="upcomingEvent"
               class="notif-link cursor-pointer text-base px-6 py-1 rounded-full text-slate-400 font-semibold hover:bg-blue-50">
               Upcoming Events
             </p>
@@ -512,7 +511,7 @@
               <div class="bg-white sticky bottom-0 whitespace-nowrap pt-2 -ml-4 pl-4">
 
                 <a id="tab-view-all" class="text-accent hover:text-sky-500 lg:mr-[80px]" href="#">
-                  <span class="font-semibold underline">View All →</span>
+                  <span class="font-semibold">View All →</span>
                 </a>
               </div>
             </div>
@@ -525,31 +524,38 @@
   </div>
 
   <!-- Institute in Numbers section -->
-  <a href="https://placement-q1bq.onrender.com/" title="Placement Site">
-    <section id="nitj-numbers"
-      class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] group bg-cover bg-fixed bg-center bg-no-repeat">
-      <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40">
-        <div
-          class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+
+  <section id="nitj-numbers"
+    class="cursor-pointer my-6 scroll-mt-32 bg-[url('./public/assets/images/placementStats.jpg')] group bg-cover bg-fixed bg-center bg-no-repeat">
+    <div class="bg-dark-purple/70">
+      <div
+        class="container mx-auto flex flex-col space-y-12 md:px-10 px-4 py-10 md:flex-row md:items-center md:justify-between md:max-w-screen-xl md:space-y-0">
+        <div class="flex flex-col gap-4 w-fit justify-center items-start">
           <h1 class="text-5xl font-bold uppercase text-white">
             #numbers <br />
             <span style="
-                  -webkit-text-stroke: 1px #ffffff !important;
-                  -webkit-text-fill-color: transparent;
-                " class="inline-block">that prove</span>
+                    -webkit-text-stroke: 1px #ffffff !important;
+                    -webkit-text-fill-color: transparent;
+                  " class="inline-block">that prove</span>
             NITJ
           </h1>
-          <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
-            <!-- Data From API -->
-          </div>
+          <a href="https://placement-q1bq.onrender.com/"
+            class="text-sm w-fit font-semibold text-gray-900 hover:text-white flex items-center bg-white hover:bg-transparent hover:ring-2 ring-white ring-inset px-4 py-2 rounded-lg transition">
+            <span class="text-base">Placement site &rarr;</span>
+          </a>
+
+
+        </div>
+        <div class="grid grid-cols-2 gap-10 text-white md:max-w-sm" id="placement-stats">
+          <!-- Data From API -->
         </div>
       </div>
-    </section>
-  </a>
+    </div>
+  </section>
   <!-- === Research Section Starts === -->
 
   <div id="research" class="my-20 scroll-mt-32">
-    <div class="container grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-3">
+    <div class="container grid grid-cols-1 gap-5 md:grid-cols-3">
       <div id="announcements" class="md:col-start-1 md:col-end-3 row-span-2 flex flex-col space-y-6">
         <div class="flex items-center justify-start space-x-6 group">
           <h1 class="uppercase text-4xl font-semibold text-accent">
@@ -681,7 +687,7 @@
           </div> -->
       </div>
       <div id="publications"
-        class="md:col-start-3 md:col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg">
+        class="h-full md:col-start-3 md:col-end-4 row-span-3 py-3 px-8 h-fit border-accent border-t-4 bg-light-purple border-b-4 rounded-lg">
         <div class="flex flex-col gap-3 mb-8">
           <div class="flex items-center justify-start space-x-6 group">
             <h1 class="uppercase text-4xl font-semibold">Publications</h1>
@@ -837,7 +843,7 @@
           <div class="h-[65vh] w-full overflow-auto rounded-lg p-2">
             <div id="clubs-and-socs" class="flex w-full flex-col gap-6">
               <!-- skeleton loading template -->
-              <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
+              <div aria-hidden="true" id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
                   <div class="w-2/5 bg-slate-300 animate-pulse bg-cover bg-center">
                   </div>
@@ -858,7 +864,7 @@
                 </div>
               </div>
 
-              <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
+              <div aria-hidden="true" id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
                   <div class="w-2/5 bg-slate-300 animate-pulse bg-cover bg-center">
                   </div>
@@ -878,7 +884,7 @@
                   </div>
                 </div>
               </div>
-              <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
+              <div aria-hidden="true" id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
                 <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
                   <div class="w-2/5 bg-slate-300 animate-pulse bg-cover bg-center">
                   </div>

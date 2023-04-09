@@ -25,6 +25,8 @@ if (parseInt(id) === 0) {
     .then((response) => response.json())
     .then((apidata) => {
       console.log(apidata)
+      putCategory(category)
+
       const data = dataFilter(apidata)
       console.log(data)
       data.forEach((e) => {
@@ -70,7 +72,8 @@ if (parseInt(id) === 0) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
-      let title = data[0].title
+      let title = data[0]?.title2 || data[0].title
+      putCategory(data[0]?.title1 || category)
 
       if (title === undefined) title = category
       else title = data[0].title
@@ -87,5 +90,3 @@ if (parseInt(id) === 0) {
       console.log(err)
     })
 }
-
-putCategory(category)

@@ -53,7 +53,7 @@ fetch(`${baseURL}/news/`)
               ${news.title}</p>
 
                 <p class="w-full line-clamp-2">
-                  ${news.desc}
+                  ${news?.title2}
                 </p>
               </div
             </a>
@@ -89,13 +89,16 @@ fetch(`${baseURL}/testimonial/get/all`)
     randNums.forEach((randNum) => {
       const testimonialImg = document.createElement('img')
       testimonialImg.src = data[randNum].image
-      testimonialImg.setAttribute('class', 'object-cover rounded-lg h-28 w-28')
+      testimonialImg.setAttribute(
+        'class',
+        'object-cover rounded-lg hidden md:block max-w-[8rem] md:h-full aspect-square'
+      )
       const testimonialCard = document.createElement('div')
-      const card = document.createElement('a')
-      card.href = '/alumni/alumni.html'
+      const card = document.createElement('div')
+      // card.href = '/alumni/alumni.html'
       card.setAttribute(
         'class',
-        'col-start-1 row-start-1 col-end-2 row-end-2 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 hover:ring-4 transition-all duration-300 gap-5 ring-accent'
+        'col-start-1 row-start-1 col-end-2 row-end-2 md:mr-6 bg-white rounded-lg flex flex-col justify-center items-center md:flex-row p-5 ring-2 gap-5 ring-accent'
       )
       testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
       testimonialCard.innerHTML = `
@@ -103,13 +106,19 @@ fetch(`${baseURL}/testimonial/get/all`)
           <p class="line-clamp-3">
             ${data[randNum].messageText}
           </p>
-          <div>
+          <div class="flex justify-between">
             <div>
-              <p class='text-lg font-bold text-accent'>- ${data[randNum].name}</p>
-              <p class='ml-2 text-sm text-gray-600 font-bold'>${data[randNum].designation}</p>
+              <p class="text-lg font-bold text-accent">- ${data[randNum].name}</p>
+              <p class="ml-2 text-sm text-gray-600 font-bold">${data[randNum].designation}</p>
             </div>
-            
+            <a
+            target="_blank" 
+            href="/alumni/alumni.html" class="ml-auto text-base font-semibold bg-accent text-white hover:text-accent hover:ring-2 ring-inset ring-accent flex items-center hover:bg-white px-4 py-1 rounded-lg transition">
+              <span>Alumni Site &rarr;</span>
+              
+            </a>
           </div>
+
         </div>
       `
       card.append(testimonialImg, testimonialCard)
@@ -357,7 +366,9 @@ fetch(`${baseURL}/publication`)
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
       <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
-            <a href="${content?.url || '#'}">
+            <a
+            target= "_blank"
+            href="${content?.url || '#'}">
               <p>
               <p
               class = "inline font-semibold text-accent cursor-pointer">
@@ -376,7 +387,7 @@ fetch(`${baseURL}/club/get/all`)
   .then((res) => res.json())
   .then((apidata) => {
     // console.log(data)
-    const data = dataFilter(apidata)
+    const data = apidata.sort((a, b) => Math.random() - 0.5)
 
     const parentDiv = document.getElementById('clubs-and-socs')
     parentDiv.innerHTML = ''
@@ -405,7 +416,7 @@ fetch(`${baseURL}/club/get/all`)
                   ${e.type}
                 </p>
               </div>
-              <p class="line-clamp-3 leading-5">
+              <p class="line-clamp-2 leading-5">
                 ${e.desc}
               </p>
             </div>

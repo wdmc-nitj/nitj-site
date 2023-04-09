@@ -5,6 +5,7 @@ import {
   checkScrollPos,
   newsCardsScroll,
   publicationCardsScroll,
+  clubsCardsScroll,
 } from './utils/app/scrollUtils.js'
 import notificationTabs from './utils/app/tabUits.js'
 // import getNavbar from './navbar.js'
@@ -78,7 +79,7 @@ setTimeout(publicationCardsScroll, 1000)
 
 // Clubs Cards Auto Scroll
 
-// setTimeout(clubsCardsScroll, 1000)
+setTimeout(clubsCardsScroll, 1000)
 // clubsCardsScroll()
 
 // Scroll to top Button

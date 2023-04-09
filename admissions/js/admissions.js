@@ -1,9 +1,9 @@
 let slug = window.location.href.match(/[^#]+/g)
-
 if(slug[slug.length-1]==="btech")
 {
   location.reload;
-   document.getElementById("mtech").style.display="none";      document.getElementById("mtechss").style.display="none";
+   document.getElementById("mtech").style.display="none";  
+       document.getElementById("mtechss").style.display="none";
   document.getElementById("msc").style.display="none";
   document.getElementById("mba").style.display="none";
   document.getElementById("phd").style.display="none";

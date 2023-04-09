@@ -67,7 +67,7 @@ export default async function notificationTabs(e, subscribed) {
 }
 
 async function fetchTabContent(tabName, tabContainer) {
-  fetch(`${BaseURL}/${tabName}`)
+  fetch(`${BaseURL}/${tabName}/get/all`)
     .then((res) => res.json())
     .then((data) => {
       tabContainer.innerHTML = ''
@@ -80,42 +80,45 @@ async function fetchTabContent(tabName, tabContainer) {
         const newUpdate = document.createElement('li')
         newUpdate.setAttribute('class', 'py-4 w-full')
         newUpdate.innerHTML = `
-          <div class="">
+          <div>
             <a
-            
-                      ${
-                        e.newPage
-                          ? `target = "_blank" href= "${e.pdfLink}"`
-                          : `href = "/template/index.html?id=${e._id}?category=${tabName}"`
-                      }
-            class="text-xl font-semibold text-accent line-clamp-3">
-            <p class="inline w-auto line-clamp-3">${title}</p>
-            
               ${
-                e.new
-                  ? `
-          <div id="new-tag" class="inline-flex items-center text-accent-orange justify-start space-x-2">
-            <span class="material-symbols-outlined text-accent-orange">
+                e.newPage
+                  ? `target = "_blank" href= "${e.pdfLink}"`
+                  : `href = "/template/index.html?id=${e._id}?category=${tabName}"`
+              }
+            class="text-xl font-semibold text-accent line-clamp-3">
+            <p class="inline w-auto line-clamp-3">${title}&nbsp; 
+            
+           <!-- ${
+             e.new &&
+             `
+          <span id="new-tag" class="text-accent-orange space-x-2">
+            <span class="inline material-symbols-outlined text-accent-orange">
               auto_awesome
             </span>
             <p class="text-lg font-bold uppercase text-accent-orange">
               New
             </p>
-          </div>`
-                  : `
-        <div id="date-tag" class="text-dark-purple font-normal text-lg inline-flex items-center justify-start space-x-2">
-        ${tabName === 'upcomingEvent' ? 'Event Data:&nbsp;' : ''}
-                 
-        <span class="material-symbols-outlined" style="font-size: 24px">
-          calendar_month
-        </span>
-        <p class="text-lg">
-         ${dateManipulator(e.updatedAt)}
+          </span>`
+           } -->
         </p>
-      </div>`
-              }
-            </a>
             
+              
+            </a>
+          ${
+            tabName === 'upcomingEvent' &&
+            `<div id="date-tag" class="text-dark-purple font-normal text-lg inline-flex items-center justify-start space-x-2">
+              ${tabName === 'upcomingEvent' ? 'Event Date:&nbsp;' : ''}
+                      
+              <span class="material-symbols-outlined" style="font-size: 24px">
+                calendar_month
+              </span>
+              <p class="text-lg">
+              ${dateManipulator(e.updatedAt)}
+              </p>
+          </div>`
+          }
           </div>
         `
         tabContainer.appendChild(newUpdate)
