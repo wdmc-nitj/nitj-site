@@ -1,170 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hostel Administration - NITJ</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hostel Administration - NITJ</title>
 
-    <!-- ICONS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css" />
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- font-family: 'Barlow', sans-serif;
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- font-family: 'Barlow', sans-serif;
     font-family: 'Poppins', sans-serif; -->
 
-    <style>
-      /* Customizing the Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
+  <style>
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-      ::-webkit-scrollbar-thumb {
-        background-color: rgba(30, 58, 138, 1);
-        border-radius: 10px;
-      }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(30, 58, 138, 1);
+      border-radius: 10px;
+    }
 
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: gray;
-      }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: gray;
+    }
 
-      ::-webkit-resizer {
-        background-color: #ffffff;
-      }
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
 
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
-      }
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+    }
 
-      ::-webkit-scrollbar {
-        width: 4px;
-      }
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
 
-      .font2 {
-        font-family: "Barlow", sans-serif;
-      }
+    .font2 {
+      font-family: "Barlow", sans-serif;
+    }
 
-      :root {
-        --primary-color: #fff;
-        --background-color: #212121;
+    :root {
+      --primary-color: #fff;
+      --background-color: #212121;
 
-        --blue-color: #0369a1;
-        --light-blue-color: #f6f6fe;
-        --purple-color: #040320;
-        --font1: "Poppins", sans-serif;
-        --font2: "Barlow", sans-serif;
-      }
+      --blue-color: #0369a1;
+      --light-blue-color: #f6f6fe;
+      --purple-color: #040320;
+      --font1: "Poppins", sans-serif;
+      --font2: "Barlow", sans-serif;
+    }
 
-      * {
-        margin: 0;
-        padding: 0;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-      .main-body {
-        font-family: var(--font1);
-      }
+    .main-body {
+      font-family: var(--font1);
+    }
 
-      .titlebg {
-        background: linear-gradient(
-            90.09deg,
-            rgba(0, 0, 0, 0.7) 0.08%,
-            rgba(255, 255, 255, 0) 99.11%
-          ),
-          url(img/about_top.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
-    </style>
-  </head>
+    .titlebg {
+      background: linear-gradient(90.09deg,
+          rgba(0, 0, 0, 0.7) 0.08%,
+          rgba(255, 255, 255, 0) 99.11%),
+        url(img/about_top.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
 
-  <body>
-    <script src="/template/header.js" type="module"></script>
-    <script src="/template/helper.js"></script>
+<body>
+  <script src="/template/header.js" type="module"></script>
+  <script src="/template/helper.js"></script>
 
-    <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
-      <div class="titlebg">
-        <div
-          class="container flex flex-col justify-center items-start h-[224px] py-[48px]"
-        >
-          <!-- px-4 lg:px-[11%] -->
-          <p
-            class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]"
-          >
-            Hostel Administration
-          </p>
-        </div>
-        <nav
-          class="flex bg-gray-200 py-[8px] text-black"
-          aria-label="Breadcrumb"
-        >
-          <ol class="container inline-flex items-center">
-            <li class="inline-flex items-center">
-              <a
-                href=""
-                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
-              >
-                <a href="../index.html" class="text-lg font-medium ml-2"
-                  >Home</a
-                >
-              </a>
-            </li>
-            <li aria-current="page">
-              <div class="inline-flex items-center">
-                <i
-                  style="
+  <div class="main-body flex flex-col gap-8 lg:gap-12 mt-64 lg:mt-32 mb-24">
+    <div class="titlebg">
+      <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+        <!-- px-4 lg:px-[11%] -->
+        <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">
+          Hostel Administration
+        </p>
+      </div>
+      <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="container inline-flex items-center">
+          <li class="inline-flex items-center">
+            <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+              <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="inline-flex items-center">
+              <i style="
                     color: rgb(128, 128, 128);
                     font-size: 12px;
                     margin-left: 12px;
-                  "
-                  class="fa-solid fa-angle-right ml-2"
-                ></i>
-                <a href="#" class="text-lg font-medium ml-2"
-                  >Hostel Administration</a
-                >
-              </div>
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <!-- <p> Code by Bhavya Mittal </p> -->
-      <div
-        id="institute-development"
-        class="scroll-mt-44 flex flex-col items-start container gap-[20px] lg:gap-[32px]"
-      >
-        <!-- <div class="w-full flex flex-col items-start">
+                  " class="fa-solid fa-angle-right ml-2"></i>
+              <a href="#" class="text-lg font-medium ml-2">Hostel Administration</a>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <!-- <p> Code by Bhavya Mittal </p> -->
+    <div id="institute-development" class="scroll-mt-44 flex flex-col items-start container gap-[20px] lg:gap-[32px]">
+      <!-- <div class="w-full flex flex-col items-start">
                 <p class="font2 font-medium text-[28px] lg:text-[44px]">
                     Hostel Administration
                 </p>
                 <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
             </div> -->
 
-        <div class="w-full">
-          <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">
-            Chief Warden
-          </p>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
-            <div id="cw">
-              <!-- <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr Shailendra Bajpai</p>
+      <div class="w-full">
+        <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">
+          Chief Warden
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+          <div id="cw">
+            <!-- <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">Dr Shailendra Bajpai</p>
                          <p class="text-sm">Department of Industrial & Production Engg</p>
                         <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
                         <div class="w-full flex flex-row gap-2 items-center text-gray-500">
@@ -175,16 +147,16 @@
                             <i class="fa-solid fa-location-dot"></i>
                             <p class="text-sm my-1">0181-5037820</p>
                         </div> -->
-            </div>
           </div>
         </div>
-        <div class="w-full">
-          <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">
-            Deputy Chief Warden
-          </p>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
-            <div id="dcw">
-              <!-- <p
+      </div>
+      <div class="w-full">
+        <p class="font2 text-xl lg:text-3xl uppercase mb-2 border-b-2">
+          Deputy Chief Warden
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+          <div id="dcw">
+            <!-- <p
                 class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
               >
                 Dr Ranchan Chauhan
@@ -205,77 +177,43 @@
                 <i class="fa-solid fa-location-dot"></i>
                 <p class="text-sm my-1">+91-181-5037726</p>
               </div> -->
-            </div>
           </div>
         </div>
       </div>
-      <div
-        id="institute-development"
-        class="scroll-mt-44 flex flex-col items-start container gap-[20px] lg:gap-[32px]"
-      >
-        <div class="w-full flex flex-col items-start">
-          <p class="font2 font-medium text-[28px] lg:text-[44px]">Wardens</p>
-          <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
-        </div>
+    </div>
+    <div id="institute-development" class="scroll-mt-44 flex flex-col items-start container gap-[20px] lg:gap-[32px]">
+      <div class="w-full flex flex-col items-start">
+        <p class="font2 font-medium text-[28px] lg:text-[44px]">Wardens</p>
+        <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
       </div>
+    </div>
 
-      <div class="flex flex-col container">
-        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
-              <table class="min-w-full">
-                <thead class="border-b">
-                  <tr>
-                    <th
-                      scope="col"
-                      class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left"
-                    >
-                      #
-                    </th>
-                    <th
-                      scope="col"
-                      class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left"
-                    >
-                      Warden & Hostel
-                    </th>
-                    <th
-                      scope="col"
-                      class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left"
-                    >
-                      Phone Number
-                    </th>
-                    <th
-                      scope="col"
-                      class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left"
-                    >
-                      Email-ID
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="gh1"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      1
-                    </td>
-                    <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
-                      <b class="text-lg">Dr Rupali Satavalekar</b>
-                      <p>Girls Hostel No. 1</p>
-                    </td>
-                    <td class="text-sm px-6 py-4 whitespace-nowrap">
-                      +91-181-5037556
-                    </td>
-                    <td class="text-sm px-6 py-4 whitespace-nowrap">
-                      satavalekarr@nitj.ac.in
-                    </td> -->
-                  </tr>
-                  <tr
-                    class="border-b hover:bg-[#0369A1] hover:text-white"
-                    id="gh2"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    <div class="flex flex-col container">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="overflow-hidden">
+            <table class="min-w-full">
+              <thead class="border-b">
+                <tr>
+                  <th scope="col" class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left">
+                    #
+                  </th>
+                  <th scope="col" class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left">
+                    Warden & Hostel
+                  </th>
+                  <th scope="col" class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left">
+                    Phone Number
+                  </th>
+                  <th scope="col" class="text-xl lg:text-lg font-medium text-gray-900 px-6 py-4 text-left">
+                    Email-ID
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="gh1">
+                </tr>
+                <tr class="border-b hover:bg-[#0369A1] hover:text-white" id="gh2">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       2
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -288,12 +226,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       ranid@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="mgh"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="mgh">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       3
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -306,12 +241,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       sathiya@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="bh1"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="bh1">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       4
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -324,12 +256,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       tyagim@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="border-b hover:bg-[#0369A1] hover:text-white"
-                    id="bh2"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="border-b hover:bg-[#0369A1] hover:text-white" id="bh2">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       5
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -342,12 +271,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       singhdk@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="bh3"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="bh3">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       6
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -360,12 +286,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       panchald@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="border-b hover:bg-[#0369A1] hover:text-white"
-                    id="bh4"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="border-b hover:bg-[#0369A1] hover:text-white" id="bh4">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       7
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -378,12 +301,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       singhrp@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="bh5"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="bh5">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       8
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -396,12 +316,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       pandharenn@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="border-b hover:bg-[#0369A1] hover:text-white"
-                    id="bh6"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="border-b hover:bg-[#0369A1] hover:text-white" id="bh6">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       9
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -414,12 +331,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       shankeru@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="bh7"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="bh7">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       10
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -432,12 +346,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       ramana@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="border-b hover:bg-[#0369A1] hover:text-white"
-                    id="mbha"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="border-b hover:bg-[#0369A1] hover:text-white" id="mbha">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       11
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -450,12 +361,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       rakeshkumar@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="mbhb"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="mbhb">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       12
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -468,12 +376,9 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       sharmakp@nitj.ac.in
                     </td> -->
-                  </tr>
-                  <tr
-                    class="border-b hover:bg-[#0369A1] hover:text-white"
-                    id="mbhf"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                </tr>
+                <tr class="border-b hover:bg-[#0369A1] hover:text-white" id="mbhf">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       13
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -486,13 +391,10 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       singhm@nitj.ac.in
                     </td> -->
-                  </tr>
+                </tr>
 
-                  <tr
-                    class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white"
-                    id="mbhm"
-                  >
-                    <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                <tr class="bg-gray-100 border-b hover:bg-[#0369A1] hover:text-white" id="mbhm">
+                  <!-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       14
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -505,24 +407,24 @@
                     <td class="text-sm px-6 py-4 whitespace-nowrap">
                       dcw@nitj.ac.in
                     </td> -->
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-    <script src="app.js"></script>
-    <script src="../template/footer.js"></script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421c901fccb4205540fae95"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("cw").innerHTML = `
+  </div>
+  <script src="app.js"></script>
+  <script src="../template/footer.js"></script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421c901fccb4205540fae95"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("cw").innerHTML = `
             <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                         <p class="text-sm">${result[0].designation}</p>
                         <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
@@ -535,17 +437,17 @@
                             <p class="text-sm my-1">${result[0].qualificationYear}</p>
                         </div>
            `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421c976fccb4205540fae99"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("dcw").innerHTML = `
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421c976fccb4205540fae99"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("dcw").innerHTML = `
             <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">${result[0].name}</p>
                         <p class="text-sm">${result[0].designation}</p>
                         <p class="text-sm text-gray-500">Dr B R Ambedkar NIT, Jalandhar</p>
@@ -558,18 +460,18 @@
                             <p class="text-sm my-1">${result[0].qualificationYear}</p>
                         </div>
            `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421c9c9fccb4205540fae9d"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("gh1").innerHTML = `
-          <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421c9c9fccb4205540fae9d"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("gh1").innerHTML = `
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       1
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -583,19 +485,19 @@
                         ${result[0].qualificationUniversity}
                     </td>
          `;
-      }
+    }
 
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421ca1efccb4205540faea2"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("gh2").innerHTML = `
-          <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421ca1efccb4205540faea2"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("gh2").innerHTML = `
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       2
                     </td>
                     <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -609,19 +511,19 @@
                         ${result[0].qualificationUniversity}
                     </td>
          `;
-      }
-      callAPi();
-    </script>
+    }
+    callAPi();
+  </script>
 
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421ca69fccb4205540faea7"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("mgh").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421ca69fccb4205540faea7"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("mgh").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     3
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -635,18 +537,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421caa5fccb4205540faeae"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("bh1").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421caa5fccb4205540faeae"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("bh1").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     4
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -660,18 +562,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cadbfccb4205540faeb3"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("bh2").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cadbfccb4205540faeb3"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("bh2").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     5
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -685,18 +587,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cb0bfccb4205540faebc"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("bh3").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cb0bfccb4205540faebc"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("bh3").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     6
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -710,18 +612,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cb8cfccb4205540faec0"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("bh4").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cb8cfccb4205540faec0"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("bh4").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     7
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -735,18 +637,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cc1ffccb4205540faec4"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("bh5").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cc1ffccb4205540faec4"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("bh5").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     8
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -760,18 +662,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cc56fccb4205540faec8"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("bh6").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cc56fccb4205540faec8"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("bh6").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     8
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -785,18 +687,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cc8afccb4205540faece"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("bh7").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cc8afccb4205540faece"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("bh7").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     10
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -810,18 +712,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421ccbbfccb4205540faed2"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("mbha").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421ccbbfccb4205540faed2"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("mbha").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     11
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -835,18 +737,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cce7fccb4205540faed6"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("mbhb").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cce7fccb4205540faed6"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("mbhb").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     12
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -860,18 +762,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cd16fccb4205540faeda"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("mbhf").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cd16fccb4205540faeda"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("mbhf").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     13
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -885,18 +787,18 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-    <script>
-      async function callAPi() {
-        let result = await fetch(
-          "https://wdmc-vsj1.onrender.com/hostel/6421cd47fccb4205540faede"
-        );
-        result = await result.json();
-        console.log(result);
-        document.getElementById("mbhm").innerHTML = `
-        <<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+    }
+    callAPi();
+  </script>
+  <script>
+    async function callAPi() {
+      let result = await fetch(
+        "https://wdmc-vsj1.onrender.com/hostel/6421cd47fccb4205540faede"
+      );
+      result = await result.json();
+      console.log(result);
+      document.getElementById("mbhm").innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     14
                   </td>
                   <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -910,8 +812,9 @@
                       ${result[0].qualificationUniversity}
                   </td>
        `;
-      }
-      callAPi();
-    </script>
-  </body>
+    }
+    callAPi();
+  </script>
+</body>
+
 </html>
