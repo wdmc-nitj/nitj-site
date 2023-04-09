@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Phonebook - NITJ</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- font-family: 'Barlow', sans-serif;
+    font-family: 'Poppins', sans-serif; -->
+
+    <style>
+        /* Customizing the Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(30, 58, 138, 1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: gray;
+        }
+
+        ::-webkit-resizer {
+            background-color: #ffffff;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .font2 {
+            font-family: "Barlow", sans-serif;
+        }
+
+        :root {
+            --primary-color: #fff;
+            --background-color: #212121;
+
+            --blue-color: #0369a1;
+            --light-blue-color: #f6f6fe;
+            --purple-color: #040320;
+            --font1: "Poppins", sans-serif;
+            --font2: "Barlow", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-body {
+            font-family: var(--font1);
+        }
+
+        .titlebg {
+            background: linear-gradient(90.09deg,
+                    rgba(0, 0, 0, 0.7) 0.08%,
+                    rgba(255, 255, 255, 0) 99.11%),
+                url(img/about_top.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/template/header.js" type="module"></script>
+    <script src="/template/helper.js"></script>
+
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]"> Phonebook</p>
+            </div>
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  " class="fa-solid fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2"> Phonebook</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="container col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="widget-item" style="min-height: 1123px;">
+                        <div class="menu-content download-links">
+                            <p class="mb-8 text-center font-bold text-2xl text-accent">Contact
+                                Details of Important Functionaries of theInstitute
+                            </p>
+                            <table cellpadding="6" cellspacing="0"
+                                class="border border-slate-500 table table-bordered table-striped" style="width:100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000"><strong>S.No.</strong></span></td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p><span style="color:#000000"><strong>Designation</strong></span></p>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1" style="width:20%">
+                                            <p><span style="color:#000000"><strong>Telephone No.</strong></span></p>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p><span style="color:#000000"><strong>Emaill ID</strong></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">1.</span></td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p><span class="text-accent"><span style="font-size:18px"><strong>EPABX
+                                                            No.</strong></span></span></p>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <address>0181 - 5037855<br>
+                                                <span style="color:#000000">0181 - 2690301&nbsp;<br>
+                                                    0181 - 2690453<br>
+                                                    0181 - 3082000</span>
+                                            </address>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1" colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">2.</span></td>
+                                        <td class="border border-slate-700 text-center p-4 text-xl " colspan="3"><span
+                                                class="text-accent"><strong>Director</strong></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1">&nbsp;</td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof. Binod
+                                                Kumar Kanaujia</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">0181-2690802</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:director@nitj.ac.in"><span
+                                                    style="color:#000000">director@nitj.ac.in</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">3.</span></td>
+                                        <td class="border border-slate-700 text-center p-4 text-xl " colspan="3"><span
+                                                class="text-accent"><strong>Deans &amp;&nbsp;Associate
+                                                    Deans</strong></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">i)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof
+                                                Harsh K
+                                                Verma<br>
+                                                Dean (Academic)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037415</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:da@nitj.ac.in"><span
+                                                    style="color:#000000">da@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">vermah@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof
+                                                S K
+                                                Sinha<br>
+                                                Dean (Faculty Welfare)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037423</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:dfw@nitj.ac.in"><span
+                                                    style="color:#000000">dfw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">sinhask@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">iiii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof
+                                                J N
+                                                Chakraborty<br>
+                                                Dean (Research &amp; Consultancy)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037421</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:drc@nitj.ac.in"><span
+                                                    style="color:#000000">drc@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">chakrabortyjn@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">iv)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof
+                                                Subhash
+                                                Chander<br>
+                                                Dean (Planning &amp; Development)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037417</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:deanpd@nitj.ac.in"><span
+                                                    style="color:#000000">deanpd@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">chanders@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">v)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof
+                                                Anish Kumar
+                                                Sachdeva<br>
+                                                Dean (Students Welfare)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037419<br>
+                                                0181-5037420</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:dsw@nitj.ac.in"><span
+                                                    style="color:#000000">dsw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">asachdeva@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">vi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof&nbsp;S P
+                                                Singh<br>
+                                                Dean, Industry &amp; International Affairs</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037650</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">diia@nitj.ac.in<br>
+                                                spsingh@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">vii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr&nbsp;Rohit
+                                                Mehra<br>
+                                                Associate Dean (Academic - PG)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037736</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dapg@nitj.ac.in"><span
+                                                    style="color:#000000">as.dapg@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">mehrar@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">viii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Mamta
+                                                Khosla<br>
+                                                Associate Dean (Academic - UG)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037621</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.daug@nitj.ac.in"><span
+                                                    style="color:#000000">as.daug@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">khoslam@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ix)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Anupam
+                                                Yadav<br>
+                                                Associate Dean (Examination)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037697</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">coe@nitj.ac.in<br>
+                                                anupam@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">x)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Rajeev
+                                                Kukreja<br>
+                                                Associate Dean (Faculty Welfare-I)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037708</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dfw@nitj.ac.in"><span
+                                                    style="color:#000000">as.dfw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">kukrejar@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Harleen
+                                                Dahiya<br>
+                                                Associate Dean (Faculty Welfare-II)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037737</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dfw@nitj.ac.in"><span
+                                                    style="color:#000000">as2.dfw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">dahiyah@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Sukwinder
+                                                Singh<br>
+                                                Associate Dean (Faculty Welfare-III)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037632</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dfw@nitj.ac.in"><span
+                                                    style="color:#000000">as3.dfw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">sukwinders@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xiii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Srinivas
+                                                Tangellapalli<br>
+                                                Associate Dean (Research &amp; Consultancy-I)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-80563-00923</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.drc@nitj.ac.in"><span
+                                                    style="color:#000000">as.drc@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">srinivast@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xiv)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Ashish
+                                                Raman<br>
+                                                Associate Dean (Research &amp; Consultancy-II)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037625</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as1.drc@nitj.ac.in"><span
+                                                    style="color:#000000">as2.drc@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">ramana@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xv)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Satyender
+                                                Singh<br>
+                                                Associate Dean (Research &amp; Consultancy-III)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-7018-47897</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as1.drc@nitj.ac.in"><span
+                                                    style="color:#000000">as3.drc@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">satyenders@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xvi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Hemant
+                                                S.Chore<br>
+                                                Associate Dean (Planning &amp; Development-I)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037552</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dpd@nitj.ac.in"><span
+                                                    style="color:#000000">as.dpd@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">chorehs@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xvii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Kuldeep Singh
+                                                Nagla<br>
+                                                Associate Dean (Planning &amp; Development-II)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-94177-44002</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dpd@nitj.ac.in"><span
+                                                    style="color:#000000">as2.dpd@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">naglaks@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xviii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Kanish
+                                                Kapoor<br>
+                                                Associate Dean (Planning &amp; Development-III)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-94633-59988</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dpd@nitj.ac.in"><span
+                                                    style="color:#000000">as3.dpd@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">kapoork@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xix)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Jaspreet Kaur
+                                                Rajput<br>
+                                                Associate Dean (Students Welfare-I)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-94646-20971</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as.dsw@nitj.ac.in"><span
+                                                    style="color:#000000">as.dsw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">rajputj@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xx)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Rakesh K.
+                                                Sharma<br>
+                                                Associate Dean (Students Welfare-II)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-82880-12020</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as1.dsw@nitj.ac.in"><span
+                                                    style="color:#000000">as2.dsw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">sharmark@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xxi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Sumit
+                                                Sharma<br>
+                                                Associate Dean (Students Welfare-III)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-81468-71758</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:as1.dsw@nitj.ac.in"><span
+                                                    style="color:#000000">as3.dsw@nitj.ac.in</span></a><br>
+                                            <span style="color:#000000">sharmark@nitj.ac.in</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xxii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr M
+                                                D Roy<br>
+                                                Associate Dean (Industry &amp; International Affairs-I)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037765</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">as.diia@nitj.ac.in<br>
+                                                roymd@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xxiii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Balwinder
+                                                Raj<br>
+                                                Associate Dean (Industry &amp; International Affairs-II)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-75894-80655</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">as2.diia@nitj.ac.in<br>
+                                                rajb@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xxiv)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Kiran
+                                                Singh<br>
+                                                Associate Dean (Industry &amp; International Affairs-III)</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">0181-5037741</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">as3.diia@nitj.ac.in<br>
+                                                singhkp@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">4.</span></td>
+                                        <td class="border border-slate-700 text-center p-4 text-xl " colspan="3"><span
+                                                class="text-accent"><strong>Registrar
+                                                    (I/C)</strong></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1">&nbsp;</td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Prof. Ajay
+                                                Bansal</span></td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p><span style="color:#000000">0181-2690324</span></p>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">registrar@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">5.</span></td>
+                                        <td class="border border-slate-700 text-center p-4 text-xl " colspan="3"><span
+                                                class="text-accent"><strong>Assistant
+                                                    Registrar</strong></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">i)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Mr
+                                                Neeraj<br>
+                                                Assistant Registrar (Academic &amp; Legal)</span></td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p style="text-align:center">0181-5037471</p>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">aracademic@nitj.ac.in<br>
+                                                arlegal@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Mr
+                                                Vipan
+                                                Kumar<br>
+                                                Assistant Registrar (Accounts &amp; Store)</span></td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p><span style="color:#000000">+91-70094-36527</span></p>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">araccount@nitj.ac.in<br>
+                                                arstore@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">iii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Ms
+                                                Poonam
+                                                Arora<br>
+                                                Assistant Registrar (Audit &amp; Billing Section)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-83602-33871</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">araudit@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1">iv)</td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Mr
+                                                Ramneek
+                                                Kumar<br>
+                                                Assistant Registrar (Establishment)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-97362-53718</span></td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p><span style="color:#000000">arestablishment@nitj.ac.in</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">v)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Mr
+                                                Vijay
+                                                Narayan<br>
+                                                Assistant Registrar (Estate Office)</span></td>
+                                        <td class="border border-slate-700 text-center p-1">
+                                            <p><span style="color:#000000">+91-94789-39654</span></p>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">narayanv@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">vi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Mr
+                                                Rakesh
+                                                Kakkar<br>
+                                                Assistant Registrar (General Administration)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-75087-22690</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">aradministration@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">vii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Mr
+                                                Sourav
+                                                Gupta&nbsp;<br>
+                                                Assistant Registrar (Purchase)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-75089-38233</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">arpurchase@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">viii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Mr
+                                                Ramesh Chand
+                                                Meena<br>
+                                                Assistant Registrar (Scholarship Section)</span></td>
+                                        <td class="border border-slate-700 text-center p-1">+91-97775-50543</td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">meenarc@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">6.</span></td>
+                                        <td class="border border-slate-700 text-center p-4 text-xl " colspan="3"><span
+                                                class="text-accent"><strong>Hostel&nbsp;
+                                                    Wardens</strong></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">i)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Shailendra
+                                                Bajpai<br>
+                                                Chief Warden</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            <span style="color:#000000">+91-181-5037820</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">chiefwarden@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Ranchan
+                                                Chauhan<br>
+                                                Deputy Chief Warden</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-181-5037726</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">dcw@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">iii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Ranchan
+                                                Chauhan<br>
+                                                Warden,&nbsp;Boys Hostel No. 1</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-181-5037726</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">chauhanr@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">iv)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Nitin Naresh
+                                                Pandhare<br>
+                                                Warden,&nbsp;Boys Hostel No. 2</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-75792-00586</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">pandharenn@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">v)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Prashant
+                                                Kumar<br>
+                                                Warden,&nbsp;Boys Hostel No. 3</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-83519-76199</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">prashantk@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">vi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Mohit
+                                                Kumar<br>
+                                                Warden,&nbsp;Boys Hostel No. 4</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-86309-90560</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">kumarmohit@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">vii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Samayveer
+                                                Singh<br>
+                                                Warden,&nbsp;Boys Hostel No. 5</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-99537-41966</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">samays@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">viii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Manoj
+                                                Kumar<br>
+                                                Warden,&nbsp;Boys Hostel No. 6</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-97935-57548</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">kumarm@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ix)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr K
+                                                P
+                                                Sharma<br>
+                                                Warden,&nbsp;Boys Hostel No. 7 &amp; 7-E</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-181-2690301</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">sharmakp@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">x)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr&nbsp;Dwesh K
+                                                Singh<br>
+                                                Warden,&nbsp;Mega Hostel Boys Block - A</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-7527833773</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">singhdk@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Kapil Kumar
+                                                Goyal<br>
+                                                Warden,&nbsp;Mega Hostel Boys Block - B</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-80590-00377</span></td>
+                                        <td class="border border-slate-700 text-center p-1">goyalkk@nitj.ac.in</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Afzal
+                                                Sikander<br>
+                                                Warden,&nbsp;Mega Hostel Boys Block - F</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-98827-44651</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">afzals@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xiii)</span>
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Rakesh Kumar
+                                                (CY)<br>
+                                                Warden,&nbsp;Mega Hostel Boys Mess</span></td>
+                                        <td class="border border-slate-700 text-center p-1" style="text-align:center">
+                                            +91-73495-64686
+                                        </td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">rakeshkumar@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xiv)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Rupali
+                                                Satavalekar<br>
+                                                Warden,&nbsp;Girls Hostel No. 1</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-181-5037556</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">satavalekarr@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xv)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Deepika
+                                                Rani<br>
+                                                Warden,&nbsp;Girls Hostel No. 2 &amp; E-Type Quarters</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-181-5037601</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ranid@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">xvi)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Neelam
+                                                Rani<br>
+                                                Warden,&nbsp;Mega Hostel Girls</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-75790-79236</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ranin@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">7.</span></td>
+                                        <td class="border border-slate-700 text-center p-4 text-xl " colspan="3"><span
+                                                class="text-accent"><strong>Medical
+                                                    Officer</strong></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">i)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Tarun
+                                                Sehgal</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-98147-53537</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><a
+                                                href="mailto:sehgalt@nitj.ac.in"><span
+                                                    style="color:#000000">sehgalt@nitj.ac.in</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">8.</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                class="text-accent"><strong><span style="font-size:18px">Institute
+                                                        Ambulance</span></strong></span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-9872904823&nbsp;<br>
+                                                +91-9256147016</span></td>
+                                        <td class="border border-slate-700 text-center p-1">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">9.</span></td>
+                                        <td class="border border-slate-700 text-center p-4 text-xl " colspan="3"><span
+                                                class="text-accent"><strong>Anti Ragging
+                                                    Cell</strong></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">i)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Kapil Kumar
+                                                Goyal&nbsp;<br>
+                                                Nodal Officer</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-80590-00377</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">goyalkk@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Nitin
+                                                Sharma<br>
+                                                Member</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-94185-73982</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">sharman@nitj.ac.in</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">iii)</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">Dr
+                                                Deepika
+                                                Rani<br>
+                                                Member</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">+91-84395-90716</span></td>
+                                        <td class="border border-slate-700 text-center p-1"><span
+                                                style="color:#000000">ranid@nitj.ac.in</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p></p>
+                        </div>
+
+                    </div> <!-- /.widget-item -->
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="../template/footer.js"></script>
+
+</body>
+
+</html>
