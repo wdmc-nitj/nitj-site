@@ -83,10 +83,13 @@
 <!--NAVBAR BEGINS-->
 <nav class="fixed p-2 scroll-smooth z-50 max-w-screen w-full bg-white lg:flex lg:items-center lg:justify-around font-[Inter] shadow-2xl">
     <div class="flex justify-around p-1 items-center ">
-        <img class="h-[2.2rem] w-[2.2rem] sm:h-[3.62rem] sm:w-[3.5rem] inline mx-2 lg:ml-12 cursor-pointer"
+        <a href="/index.html" target="_blank">
+          <img class="h-[2.2rem] w-[2.2rem] sm:h-[3.62rem] sm:w-[3.5rem] inline mx-2 lg:ml-12 cursor-pointer"
           src="img/logo.png" alt="logo">
+        </a>
+
           <div class="text-[0.45rem] sm:text-base w-[30rem] lg:w-[33rem] ml-2 sm:ml-3 leading-5 text-[#0054A6]  cursor-pointer font-bold">
-            <a href="alumni.html"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
+            <a href="/index.html" target="_blank"> Dr. B.R Ambedkar National Institute of Technology Jalandhar</a>
           </div>
 
       <span class="text-2xl sm:text-3xl cursor-pointer text-black mx-2 mr-3 lg:hidden block">
@@ -96,29 +99,24 @@
 
     <ul class="lg:flex lg:items-center z-50 lg:z-auto lg:relative absolute bg-white w-full lg:top-0 lg:w-auto lg:py-0 p-4 lg:opacity-100 opacity-0 transition-all ease-in duration-500 left-0">
 
-      <li class="m-1 lg:mr-4 xl:m-4 my-3 lg:my-0 hidden lg:block">
-        <a href="#" class=" text-[0.5rem] sm:text-xs xl:text-base w-auto text-[#0054A6] hover:text-[#D3D3D3] duration-500 ">
-          <i class="fa-solid fa-house"></i>
-        </a>
-      </li>
 
-      <li class="m-1 lg:mr-4 xl:m-4 my-3 lg:my-0 block lg:hidden">
-        <a href="#" class=" text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">
-          NITJ-HOME
+      <li class="m-1 lg:mr-4 xl:m-4 my-3 lg:my-0">
+        <a href="alumni.html" class=" text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 " target="_blank">
+          SARC
         </a>
       </li>
 
       <li class="m-1 lg:mr-4 xl:m-4 my-3 lg:my-0">
-        <a href="givingback.html" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">GIVING BACK</a>
+        <a href="givingback.html" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 " target="_blank">GIVING BACK</a>
       </li>
       <li class="m-1 lg:mr-4 xl:m-4 my-3 lg:my-0">
-        <a href="#" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">
+        <a href="#chapters" class="text-[0.5rem] sm:text-xs xl:text-base w-auto text-black hover:text-[#D3D3D3] duration-500 ">
           CHAPTERS</a>
       </li>
 
-      <a href="#">
+      <a href="register.html" target="_blank">
         <button class="bg-[#0054A6] ml-1 mt-3 mb-4 mr-10 lg:mb-0 text-white text-[0.5rem] sm:text-xs xl:text-base duration-500 w-20 xl:w-24 py-2 px-2 text-center shadow-md border-2 border-[#FFD66E]  rounded hover:-translate-y-1 hover:scale-110 ">
-          LOGIN
+          REGISTER
         </button>
       </a>
 
@@ -139,12 +137,9 @@
       Stay connected to your Alma Mater.
     </div>
   </div>
-    <video autoplay loop muted class="fixed -z-10 w-auto min-w-full min-h-full max-w-none " poster="img/Campus_Aerial_view.png">
-      <source src="img/NITJ_Campus_Aerial_View.mp4" type="video/mp4"/>Your browser does not support the video tag.
-    </video>
-  <div class=" bg-white">
-
-  </div>
+  <video autoplay loop muted class="fixed -z-10 w-auto min-w-full min-h-full max-w-none " poster="img/Campus_Aerial_view.png">
+    <source src="img/NITJ_Campus_Aerial_View.mp4" type="video/mp4"/>Your browser does not support the video tag.
+  </video>
 </div>
 
 
@@ -193,7 +188,7 @@
 
 <div class="max-w-screen relative bg-[#fDfDfD] md:-top-96 w-full">
 
-  <div class="lg:h-[75vh]">
+  <div class="md:h-[75vh]">
 
   </div>
 
@@ -206,7 +201,7 @@
 
 <!-- Around the world -->
 
-<section id="institute-numbers" class="scroll-mt-32 h-[45vh] sm:h-[50vh] lg:h-[90vh] group bg-cover bg-fixed bg-center bg-no-repeat" style="background-image:url('https://static.almabaseapp.com/img/map_without_labels.c474a674d948.png');">
+<section id="chapters" class="scroll-mt-32 h-[45vh] sm:h-[50vh] lg:h-[90vh] group bg-cover bg-fixed bg-center bg-no-repeat" style="background-image:url('https://static.almabaseapp.com/img/map_without_labels.c474a674d948.png');">
 
   <div class="bg-dark-purple/70 transition-all duration-500 group-hover:bg-dark-purple/40 h-[45vh] sm:h-[50vh] lg:h-[90vh] p-2">
 
@@ -317,57 +312,6 @@
 
 
 
-<!--RECENT EVENT STARTS-->
-<div class="p-3 sm:p-5 bg-[#f5f5f5] h-[45vh] sm:h-[50vh] lg:h-[90vh] bg-center ">
-
-  <div class="mx-5 sm:mx-12 lg:mx-20 mt-5 sm:mt-6 lg:mt-20 flex align-middle">
-    <div>
-        <div class="text-[#2167A7] text-xl sm:text-2xl lg:text-[1.75rem] font-bold lg:ml-4 mb-4 lg:mb-8 w-44 sm:w-52 lg:w-64">
-            RECENT EVENTS
-        </div>
-    </div>
-    <div class="w-full mt-3 lg:mt-2">
-      <hr class="border-[0.2rem] lg:border-[0.22rem]  border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
-    </div>
-  </div>
-
-  <h2 class="text-lg sm:text-xl lg:text-[1.6rem] font-bold mt-3 md:mt-5 lg:mt-14 mb-4 sm:mb-5 lg:mb-8 mx-5 sm:mx-12 lg:ml-24 align-left">Reunite 22</h2>
-
-  <div class="mx-5 sm:mx-12 lg:mx-24 flex mb-16 lg:mb-20">
-    <div class="w-[40vw] sm:w-[25vw] lg:w-[20vw] text-[#2167A7] text-xs sm:text-sm lg:text-[1.1rem]">
-      <div class="my-1 sm:my-2">
-        <h1 class="font-semibold">17 December, 2022</h1>
-      </div>
-
-      <div class="flex my-1 sm:my-2">
-        <i class="fa-solid fa-clock mr-3 my-1"></i>
-        <h1 class="">8:30 AM</h1>
-      </div>
-
-      <div class="flex my-1 sm:my-2">
-        <i class="fa-solid fa-location-dot mr-3 my-1"></i>
-        <h1 class="">Jalandhar</h1>
-      </div>
-
-    </div>
-
-    <div class="w-[45vw] sm:w-[35vw] lg:w-[20vw]">
-
-      <p class="text-xs sm:text-sm sm:leading-6 lg:text-[1.1rem] my-1 sm:my-2">The Annual Alumni meet for the batches of 1995, 1996 and 1997. It marked the silver jubilee of the class of 1997.</p>
-    </div>
-  </div>
-
-<!---
-  <button class="ml-8 sm:ml-28 lg:ml-44 mb-12 sm:mb-16 lg:mb-24 bg-white px-7 sm:px-12 py-2 sm:py-3 lg:py-4 border-2 border-[#FEB702] rounded-lg text-[#2167A7] text-sm sm:text-base hover:-translate-y-1 hover:scale-110" type="button">View All Events</button>
-
--->
-</div>
-
-<!--RECENT EVENTS ENDS-->
-
-
-
-
 
 
 <div class="main h-[45vh] sm:h-[50vh] lg:h-[90vh]">
@@ -426,6 +370,52 @@
 
 
 
+<!--RECENT EVENT STARTS-->
+<div class="p-3 sm:p-5 bg-[#f5f5f5] h-[45vh] sm:h-[50vh] lg:h-[90vh] bg-center ">
+
+  <div class="mx-5 sm:mx-12 lg:mx-20 mt-5 sm:mt-6 lg:mt-20 flex align-middle">
+    <div>
+        <div class="text-[#2167A7] text-xl sm:text-2xl lg:text-[1.75rem] font-bold lg:ml-4 mb-4 lg:mb-8 w-44 sm:w-52 lg:w-64">
+            RECENT EVENTS
+        </div>
+    </div>
+    <div class="w-full mt-3 lg:mt-2">
+      <hr class="border-[0.2rem] lg:border-[0.22rem]  border-[#277BC7] border-solid border-t-0 border-x-0 lg:border-t-0 lg:border-x-0 rounded mb-6">
+    </div>
+  </div>
+
+  <h2 class="text-lg sm:text-xl lg:text-[1.6rem] font-bold mt-3 md:mt-5 lg:mt-14 mb-4 sm:mb-5 lg:mb-8 mx-5 sm:mx-12 lg:ml-24 align-left">Reunite 22</h2>
+
+  <div class="mx-5 sm:mx-12 lg:mx-24 flex mb-16 lg:mb-20">
+    <div class="w-[40vw] sm:w-[25vw] lg:w-[20vw] text-[#2167A7] text-xs sm:text-sm lg:text-[1.1rem]">
+      <div class="my-1 sm:my-2">
+        <h1 class="font-semibold">17 December, 2022</h1>
+      </div>
+
+      <div class="flex my-1 sm:my-2">
+        <i class="fa-solid fa-clock mr-3 my-1"></i>
+        <h1 class="">8:30 AM</h1>
+      </div>
+
+      <div class="flex my-1 sm:my-2">
+        <i class="fa-solid fa-location-dot mr-3 my-1"></i>
+        <h1 class="">Jalandhar</h1>
+      </div>
+
+    </div>
+
+    <div class="w-[45vw] sm:w-[35vw] lg:w-[20vw]">
+
+      <p class="text-xs sm:text-sm sm:leading-6 lg:text-[1.1rem] my-1 sm:my-2">The Annual Alumni meet for the batches of 1995, 1996 and 1997. It marked the silver jubilee of the class of 1997.</p>
+    </div>
+  </div>
+</div>
+
+<!--RECENT EVENTS ENDS-->
+
+
+
+
 
 
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
@@ -478,7 +468,7 @@
               </div>
 
               <div class="text-center">
-                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button"><a href="https://nitjalandhar.almaconnect.com/alumni">Find Alumni</a></button>
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button" button onclick = "window.open('https://nitjalandhar.almaconnect.com/alumni')">Find Alumni</button>
               </div>
 
             </div>
@@ -515,7 +505,7 @@
 
               <div class="flex justify-center mt-3 sm:mt-5 lg:mt-12 text-center">
                 <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.instagram.com/" target="_blank">
                         <i class="fa-brands fa-instagram text-xs sm:text-base lg:text-2xl"></i>
                     </a>
                 </div>
@@ -537,7 +527,7 @@
               </div>
 
               <div class="text-center">
-                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button"><a href="https://nitjalandhar.almaconnect.com/alumni">Find Alumni</a></button>
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button" onclick = "window.open('https://nitjalandhar.almaconnect.com/alumni')">Find Alumni</button>
               </div>
 
             </div>
@@ -593,7 +583,7 @@
               </div>
 
               <div class="text-center">
-                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button"><a href="https://nitjalandhar.almaconnect.com/alumni">Find Alumni</a></button>
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button" onclick = "window.open('https://nitjalandhar.almaconnect.com/alumni')">Find Alumni</button>
               </div>
 
             </div>
@@ -626,7 +616,7 @@
 
               <div class="flex justify-center mt-3 sm:mt-5 lg:mt-12 text-center">
                 <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.instagram.com/" target="_blank">
                       <i class="fa-brands fa-instagram text-xs sm:text-base lg:text-2xl"></i>
                     </a>
                 </div>
@@ -648,7 +638,7 @@
               </div>
 
               <div class="text-center">
-                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button"><a href="https://nitjalandhar.almaconnect.com/alumni">Find Alumni</a></button>
+                <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button" onclick = "window.open('https://nitjalandhar.almaconnect.com/alumni')">Find Alumni</button>
               </div>
 
             </div>
@@ -682,7 +672,7 @@
 
                 <div class="flex justify-center mt-3 sm:mt-5 lg:mt-12 text-center">
                   <div class="text-white hover:text-[#82C3FF] mx-1 sm:mx-2 lg:mx-4">
-                      <a href="https://www.facebook.com/" target="_blank">
+                      <a href="https://www.instagram.com/" target="_blank">
                         <i class="fa-brands fa-instagram text-xs md:text-base lg:text-2xl"></i>
                       </a>
                   </div>
@@ -706,7 +696,7 @@
                 </div>
 
                 <div class="text-center">
-                  <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button"><a href="https://nitjalandhar.almaconnect.com/alumni">Find Alumni</a></button>
+                  <button class="text-white text-[0.5rem] sm:text-xs lg:text-lg my-3 bg-[#329DFF99] py-1 px-4 sm:px-7 lg:px-14 rounded-lg border lg:border-2 border-white hover:-translate-y-1 hover:scale-110" type="button" onclick = "window.open('https://nitjalandhar.almaconnect.com/alumni')">Find Alumni</button>
                 </div>
 
               </div>
@@ -773,7 +763,7 @@
       <div>
         <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">Our events and programs help you connect with fellow graduate and NITJ</p>
       </div>
-      <button class="bg-[#0054A6] rounded hover:bg-[#5F9DF7] text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4">CONNECT WITH US</button>
+      <button class="bg-[#0054A6] rounded hover:bg-[#5F9DF7] text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4" onclick = "window.open('register.html')">CONNECT WITH US</button>
     </div>
 
 
@@ -803,7 +793,7 @@
       <div>
         <p class="text-gray-600 text-xs p-1 lg:text-base lg:p-3">Your annual donations provide scholarships and other support to NITJ</p>
       </div>
-      <button class="bg-[#0054A6] rounded hover:bg-[#5F9DF7] text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4"><a href="https://nitj.ac.in/alumni_fundraising/login">GIVE TO NITJ</a></button>
+      <button class="bg-[#0054A6] rounded hover:bg-[#5F9DF7] text-xs lg:text-base text-white font-bold w-[70%] py-2 px-3 mt-2 sm:mt-4" onclick = "window.open('https://nitj.ac.in/alumni_fundraising/login')">GIVE TO NITJ</button>
     </div>
 
 
@@ -826,7 +816,8 @@
 
 
 <!-- === FOOTER Starts === -->
-<div class=" bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
+<div class="z-10">
+  <div class=" bg-slate-800 text-white lg:flex-row lg:px-20 h-full">
   <p class="font-semibold text-white lg:text-[20px] pt-12">
     Student Alumni Relation Cell (SARC), NIT Jalandhar
   </p>
@@ -873,11 +864,10 @@
       </div>
     </div>
   </div>
-</div>
 
 
 
-<div class="border-t border-zinc-400 bg-slate-800 px-20 p-[20px] text-center text-white">
+  <div class="border-t border-zinc-400 bg-slate-800 px-20 p-[20px] text-center text-white">
 <div class="pb-[10px] text-[12px] lg:pb-0 lg:text-[15px] text-center">
   &#169; Copyright 2022, All Rights Reserved NIT Jalandhar
 </div>
@@ -897,6 +887,7 @@
   |
   <a href="#" class="mx-1 hover:text-sky-500 hover:underline lg:mx-2">Credits</a>
 </div>
+  </div>
 </div>
 <!-- === FOOTER Ends === -->
 
@@ -905,10 +896,6 @@
 
 
 </div>
-
-
-
-
 
 
 
