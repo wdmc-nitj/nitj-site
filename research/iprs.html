@@ -12,7 +12,7 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./tabs.css" />
+  
 
     <!--alpine js-->
     <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
@@ -198,7 +198,7 @@
         <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
             <!-- px-4 lg:px-[11%] -->
             <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">
-                Intellectual Property Rights
+                IPR
             </p>
         </div>
         <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -222,7 +222,7 @@
 
 
     <div class="container">
-        <div class=" font-normal font2 mt-3 text-[18px] lg:text-[20px] text-red-600">
+        <div class=" font-normal font2 mt-3 text-[18px] lg:text-[20px] text-red-600 mb-4">
             <a href="https://www.nitj.ac.in/nitj_files/links/IPR_Policy_2022_241122_6347.pdf" target="_blank"><span> <i
                         class="fa-solid fa-angles-right text-[16px] "></i> Intellectual Property Rights (IPR)
                     Policy</span></a>
@@ -230,7 +230,7 @@
 
         <div class="w-full flex flex-col items-start pt-2">
             <p class="font2 font-medium text-[26px] lg:text-[25px]">
-                List of IPR's Granted or in Process:
+                List of IPRs Granted or in Process:
             </p>
             <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
         </div>
@@ -239,38 +239,38 @@
                 <tbody>
                     <tr class="">
                         <td scope="col" class="w-[60%]">Patents Granted</td>
-                        <td class="px-12">04</td>
+                        <td class="px-12" id="patentgranted"></td>
                     </tr>
                     <tr>
                         <td scope="col" class="w-[60%]">Patents in process</td>
-                        <td class="px-12">21</td>
+                        <td class="px-12" id="patentinprocess"></td>
                     </tr>
                     <tr class="">
                         <td scope="col" class="w-[60%]">Design Granted</td>
-                        <td class="px-12">05</td>
+                        <td class="px-12" id="designgranted"></td>
                     </tr>
                     <tr>
                         <td scope="col" class="w-[60%]">Design In Process</td>
-                        <td class="px-12">01</td>
+                        <td class="px-12" id="designinprocess"></td>
                     </tr>
                     <tr class="">
                         <td scope="col" class="w-[60%]">Copyright Granted</td>
-                        <td class="px-12">07</td>
+                        <td class="px-12" id="copyrightgranted"></td>
                     </tr>
                     <tr>
                         <td scope="col" class="w-[60%]">Copyright In Process</td>
-                        <td class="px-12">02</td>
+                        <td class="px-12" id="copyrightinprocess"></td>
                     </tr>
                     <tr class="">
-                        <td scope="col" class="w-[60%]">Computer Software</td>
-                        <td class="px-12">05</td>
+                        <td scope="col" class="w-[60%]">Computer Software Granted</td>
+                        <td class="px-12" id="computergranted"></td>
+                    </tr>
+                    <tr class="">
+                        <td scope="col" class="w-[60%]">Computer Software In Process</td>
+                        <td class="px-12" id="computerinprocess"></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-
-        <div class=" text-right text-red-500  mr-4">
-            <p>Updated on 08-12-2019</p>
         </div>
 
         <div class="overflow-x-auto relative shadow-lg rounded-lg sm:rounded-lg  mr-4 mt-4 bg-pink-200 mb-8">
@@ -287,57 +287,15 @@
                         <th scope="col" class="py-3 px-6 bg-accent text-white">Inventor/ Inventors</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr class="bg-white text-gray-900 dark:text-black">
+                <tbody id="iprsbody">
+                    <!-- <tr class="bg-white text-gray-900 dark:text-black">
                         <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">1.</td>
                         <td class="py-4 px-6">Earthquake Alarm</td>
                         <td class="py-4 px-6"> <span class=" text-red-800">Granted:</span> Patent No 220748 (2004)*</td>
                         <td class="py-4 px-6">KS Nagla</td>
-                    </tr>
-                    <tr class="bg-white text-gray-900 dark:text-black">
-                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">2.</td>
-                        <td class="py-4 px-6">Mechanism to Clean Bird Dropping (Garbage) within a Cage type Poultry Farm
-                        </td>
-                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 210090 (2007)</td>
-                        <td class="py-4 px-6">KS Nagla</td>
-                    </tr>
-                    <tr class="bg-white text-gray-900 dark:text-black">
-                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">3.</td>
-                        <td class="py-4 px-6">A leg exerciser machine </td>
-                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 280792 (2014)</td>
-                        <td class="py-4 px-6">K S Nagla, Moin Uddin Amandeep S Kalra, Akshay Kathyial</td>
-                    </tr>
-                    <tr class="bg-white text-gray-900 dark:text-black">
-                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">4.</td>
-                        <td class="py-4 px-6">Intelligent Induction Hardening Machine</td>
-                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No. 320045 (2019)</td>
-                        <td class="py-4 px-6">Amit Kohli, KS Nagla, Hari Singh</td>
-                    </tr>
-                    <tr class="bg-white text-gray-900 dark:text-black">
-                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">1.</td>
-                        <td class="py-4 px-6">Earthquake Alarm</td>
-                        <td class="py-4 px-6"> <span class=" text-red-800">Granted:</span> Patent No 220748 (2004)*</td>
-                        <td class="py-4 px-6">KS Nagla</td>
-                    </tr>
-                    <tr class="bg-white text-gray-900 dark:text-black">
-                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">2.</td>
-                        <td class="py-4 px-6">Mechanism to Clean Bird Dropping (Garbage) within a Cage type Poultry Farm
-                        </td>
-                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 210090 (2007)</td>
-                        <td class="py-4 px-6">KS Nagla</td>
-                    </tr>
-                    <tr class="bg-white text-gray-900 dark:text-black">
-                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">3.</td>
-                        <td class="py-4 px-6">A leg exerciser machine </td>
-                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No 280792 (2014)</td>
-                        <td class="py-4 px-6">K S Nagla, Moin Uddin Amandeep S Kalra, Akshay Kathyial</td>
-                    </tr>
-                    <tr class="bg-white text-gray-900 dark:text-black">
-                        <td scope="row" class="py-4 px-6 text-gray-900 dark:text-black">4.</td>
-                        <td class="py-4 px-6">Intelligent Induction Hardening Machine</td>
-                        <td class="py-4 px-6"><span class=" text-red-800">Granted:</span> Patent No. 320045 (2019)</td>
-                        <td class="py-4 px-6">Amit Kohli, KS Nagla, Hari Singh</td>
-                    </tr>
+                    </tr> -->
+                   
+                 
                 </tbody>
             </table>
         </div>
@@ -361,9 +319,8 @@
         <script src="../template/footer.js"></script>
     </div>
 
+    <script src="./data/iprsData.js"></script>
     <script src="../admin/app.js"></script>
-    <script src="./tabs.js"></script>
+  
 </body>
-
-
 </html>

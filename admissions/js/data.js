@@ -2,7 +2,7 @@ let data_url = "https://wdmc-vsj1.onrender.com/";
 fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
 .then((response) => response.json())
   .then((data) => {
-    
+   
     const ugupdates = document.getElementById('ug-updates')
     data.forEach((update) => {
       const ugupdate = document.createElement('li')
@@ -53,12 +53,17 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
         ${update.title}
         </a>
         </div>
-        <div class="w-[15%]">
-        <img
-          class="h-[14px] mt-2 pr-2"
-          src="./img/New.gif"
-        />
-        </div>
+        ${update.new ?
+          ` 
+          <div class="w-[15%]">
+          <img
+              class="h-[14px] mt-2 pr-2"
+              src="./img/New.gif"
+            />`
+            : 
+            `
+          </div> `
+            }
       </div>
     
         `
@@ -85,12 +90,17 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
           ${update.title}
           </a>
           </div>
-          <div class="w-[15%]">
-          <img
-            class="h-[14px] mt-2 pr-2"
-            src="./img/New.gif"
-          />
-          </div>
+          ${update.new ?
+            ` 
+            <div class="w-[15%]">
+            <img
+                class="h-[14px] mt-2 pr-2"
+                src="./img/New.gif"
+              />`
+              : 
+              `
+            </div> `
+              }
         </div>
       
           `
@@ -117,12 +127,17 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
             ${update.title}
             </a>
             </div>
-            <div class="w-[15%]">
-            <img
-              class="h-[14px] mt-2 pr-2"
-              src="./img/New.gif"
-            />
-            </div>
+            ${update.new ?
+              ` 
+              <div class="w-[15%]">
+              <img
+                  class="h-[14px] mt-2 pr-2"
+                  src="./img/New.gif"
+                />`
+                : 
+                `
+              </div> `
+                }
           </div>
         
             `
@@ -149,12 +164,17 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
               ${update.title}
               </a>
               </div>
-              <div class="w-[15%]">
-              <img
-                class="h-[14px] mt-2 pr-2"
-                src="./img/New.gif"
-              />
-              </div>
+              ${update.new ?
+                ` 
+                <div class="w-[15%]">
+                <img
+                    class="h-[14px] mt-2 pr-2"
+                    src="./img/New.gif"
+                  />`
+                  : 
+                  `
+                </div> `
+                  }
             </div>
           
               `
@@ -180,12 +200,17 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                 ${update.title}
                 </a>
                 </div>
-                <div class="w-[15%]">
-                <img
-                  class="h-[14px] mt-2 pr-2"
-                  src="./img/New.gif"
-                />
-                </div>
+                ${update.new ?
+                  ` 
+                  <div class="w-[15%]">
+                  <img
+                      class="h-[14px] mt-2 pr-2"
+                      src="./img/New.gif"
+                    />`
+                    : 
+                    `
+                  </div> `
+                    }
               </div>
             
                 `
