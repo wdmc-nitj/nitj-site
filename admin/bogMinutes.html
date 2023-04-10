@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Board of Governor Minutes - NITJ</title>
+    <title>Board of Governors Minutes - NITJ</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css" />
@@ -112,7 +112,7 @@
           <p
             class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]"
           >
-          Board of Governor Minutes
+          Board of Governors Minutes
           </p>
         </div>
         <nav
@@ -140,7 +140,7 @@
                   "
                   class="fa-solid fa-angle-right ml-2"
                 ></i>
-                <a href="#" class="text-lg font-medium ml-2">Board of Governor Minutes</a>
+                <a href="#" class="text-lg font-medium ml-2">Board of Governors Minutes</a>
               </div>
             </li>
           </ol>
@@ -154,7 +154,7 @@
             id="date"
             class="font-semibold text-slate-500 text-sm lg:text-base"
           ></p>
-          <p class="font2 font-medium text-[28px] lg:text-[32px]">All Board of Governor Minutes</p>
+          <p class="font2 font-medium text-[28px] lg:text-[32px]">All Board of Governors Minutes</p>
 
           <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
         </div>
@@ -260,26 +260,26 @@
         let x = "";
         for (let i = 0; i < result.length; i++) {
           if(result[i].show){
-          x += `<li
-        class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"
-      >
-        <a
-          href="${result[i].resourceLink}" target="_blank"
-        >
+          x += `<li>  
+  <a class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2" target="_blank" href=${result[i].resourceName}
+">
+
           ${result[i].resourceName}
         </a>`;
         if(result[i].new){
-          x+=`<div id="new-tag" class="inline-flex ml-2 items-center justify-start space-x-2">
-            <span class="material-symbols-outlined text-accent-orange">
-              auto_awesome
-            </span>
-            <p class="text-lg font-bold uppercase text-accent-orange">
-              New
-            </p>
-          </div><li>`;
-          } else {
-            x+=`</li>`;
+          x+=  `<div id="new-tag" class="inline-flex ml-2 items-center justify-start space-x-2">
+<span class="material-symbols-outlined text-accent-orange">
+auto_awesome
+</span>
+<p class="text-lg font-bold uppercase text-accent-orange">
+New
+</p>
+</div>`
+
+;
+    
           }
+          x+=`</li>`;
     }
         }
 

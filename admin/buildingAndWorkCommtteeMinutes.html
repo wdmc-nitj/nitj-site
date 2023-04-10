@@ -154,7 +154,7 @@
             id="date"
             class="font-semibold text-slate-500 text-sm lg:text-base"
           ></p>
-          <p class="font2 font-medium text-[28px] lg:text-[32px]">All Building & Work Committee Minutes</p>
+          <p class="font2 font-medium text-[28px] lg:text-[32px]">All Building & Works Committee Minutes</p>
 
           <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
         </div>
@@ -252,33 +252,33 @@
         let result = await fetch("https://wdmc-vsj1.onrender.com/resource");
         result = await result.json();
         result = result.filter((item) => item.resourceType === "buildingAndWorkCommtteeMinutes");
-        console.log(result);s
+        console.log(result);
         // result = result.reverse();
                 result = result.sort((a, b) => a.order - b.order);
 
         let x = "";
         for (let i = 0; i < result.length; i++) {
           if(result[i].show){
-          x += `<li
-        class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"
-      >
-        <a
-          href="${result[i].resourceLink}" target="_blank"
-        >
+          x += `<li>  
+  <a class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2" target="_blank" href=${result[i].resourceName}
+">
+
           ${result[i].resourceName}
         </a>`;
         if(result[i].new){
-          x+=`<div id="new-tag" class="inline-flex ml-2 items-center justify-start space-x-2">
-            <span class="material-symbols-outlined text-accent-orange">
-              auto_awesome
-            </span>
-            <p class="text-lg font-bold uppercase text-accent-orange">
-              New
-            </p>
-          </div><li>`;
-          } else {
-            x+=`</li>`;
+          x+=  `<div id="new-tag" class="inline-flex ml-2 items-center justify-start space-x-2">
+<span class="material-symbols-outlined text-accent-orange">
+auto_awesome
+</span>
+<p class="text-lg font-bold uppercase text-accent-orange">
+New
+</p>
+</div>`
+
+;
+    
           }
+          x+=`</li>`;
     }
         }
 
