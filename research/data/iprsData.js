@@ -58,11 +58,22 @@ Computerinprocess++;
                          `
                         }
                         </span>
+
+
 ${update.iprCategory}
+
+
+${update.iprNumber ? 
+        `
+        No. - ${update.iprNumber}
+        `
+        :
+        ``
+        }
 
 ${update.grantYear ? 
 `
-NO - (${update.grantYear})
+ (${update.grantYear})
 `
 :
 ``
