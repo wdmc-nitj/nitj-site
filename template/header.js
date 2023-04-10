@@ -17,7 +17,9 @@ window.addEventListener('load', () => {
 function handlingPDFs() {
   const allLinks = [...document.getElementsByTagName('a')]
   allLinks.forEach((link) => {
-    let currSrc = link.getAttribute('href').includes('https')
+    let currSrc =
+      link.getAttribute('href').includes('pdf') ||
+      link.getAttribute('href').includes('https')
     // console.log(currSrc)
     if (currSrc) {
       // console.log(link)
