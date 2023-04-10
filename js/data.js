@@ -103,17 +103,17 @@ fetch(`${baseURL}/testimonial/get/all`)
       testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
       testimonialCard.innerHTML = `
         <div class='text-xl flex flex-col gap-5'>
-          <p class="line-clamp-3">
+          <p class="md:line-clamp-3">
             ${data[randNum].messageText}
           </p>
-          <div class="flex justify-between">
+          <div class="flex flex-col gap-4 md:flex-row justify-between">
             <div>
               <p class="text-lg font-bold text-accent">- ${data[randNum].name}</p>
               <p class="ml-2 text-sm text-gray-600 font-bold">${data[randNum].designation}</p>
             </div>
             <a
             target="_blank" 
-            href="/alumni/alumni.html" class="ml-auto text-base font-semibold bg-accent text-white hover:text-accent hover:ring-2 ring-inset ring-accent flex items-center hover:bg-white px-4 py-1 rounded-lg transition">
+            href="/alumni/alumni.html" class="md:ml-auto w-fit text-base font-semibold bg-accent text-white hover:text-accent hover:ring-2 ring-inset ring-accent flex items-center hover:bg-white px-4 py-1 rounded-lg transition">
               <span>Alumni Site &rarr;</span>
               
             </a>
@@ -357,7 +357,7 @@ fetch(`${baseURL}/placementStat/get/all`)
 fetch(`${baseURL}/publication`)
   .then((res) => res.json())
   .then((apidata) => {
-    const data = apidata
+    const data = dataFilter(apidata)
     console.log(data)
     const parentDiv = document.getElementById('publication-cards')
     parentDiv.innerHTML = ''
