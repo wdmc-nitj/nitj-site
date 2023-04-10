@@ -1,4 +1,4 @@
-let data_url = "https://wdmc-vsj1.onrender.com/";
+let data_url = "https://wdmc-vsj1.onrender.com";
 const loop = function (auths, authsLink) {
   let loopdata = "";
   for (let i = 0; i < auths.length; i++) {
@@ -8,7 +8,7 @@ const loop = function (auths, authsLink) {
   return loopdata;
 };
 
-fetch(`${data_url}` + 'research/publications/citedResearches/top10')
+fetch(`${data_url}` + '/research/publications/citedResearches/top10')
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -24,23 +24,23 @@ fetch(`${data_url}` + 'research/publications/citedResearches/top10')
 
       const ugupdate = document.createElement("tr");
       ugupdate.innerHTML = `
-                    <td scope="row" class="py-4 px-6 text-gray-900 dark:text-white">
+                    <td scope="row" class="py-4 px-2 text-gray-900 dark:text-white">
                         <a href="${update.document.link}">${
         update.document.name
       }</a>
                     </td>
               
       
-                    <td class="py-4 px-6">
+                    <td class="py-4 px-2">
                     ${loop(auths, authsLink)}
 </td>
-                    <td class="py-4 px-6">${update.year}</td>
-                    <td class="py-4 px-6">
+                    <td class="py-4 px-2">${update.year}</td>
+                    <td class="py-4 px-2">
                         <a href="${update.source.link}">${
         update.source.name
       }</a>
                     </td>
-                    <td class="py-4 px-6">${update.cites.number}</td>
+                    <td class="py-4 px-2">${update.cites.number}</td>
 
                   
     
@@ -51,7 +51,7 @@ fetch(`${data_url}` + 'research/publications/citedResearches/top10')
   });
 
 fetch(
-  `${data_url}` + 'research/publications/refereedResearches/get?visible=visible'
+  `${data_url}` + '/research/publications/refereedResearches/get?visible=visible'
 )
   .then((response) => response.json())
   .then((data) => {
