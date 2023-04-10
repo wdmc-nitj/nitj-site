@@ -1,5 +1,5 @@
-let data_url = "https://wdmc-vsj1.onrender.com/";
-fetch(`${data_url}` + 'recruitments/updates/categorised?category=faculty')
+let data_url = "https://wdmc-vsj1.onrender.com";
+fetch(`${data_url}` + '/recruitments/updates/categorised?category=faculty')
 .then((response) => response.json())
   .then((data) => {
 const faculty=document.getElementById("faculty");

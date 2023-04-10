@@ -1,5 +1,5 @@
-let data_url = "https://wdmc-vsj1.onrender.com/";
-fetch(`${data_url}` + 'MOUs/get?visible=visible&category=international_institutes')
+let data_url = "https://wdmc-vsj1.onrender.com";
+fetch(`${data_url}` + '/research/MOUs/get?visible=visible&category=international_institutes')
 .then((response) => response.json())
   .then((data) => {
     const ugupdates = document.getElementById('internationalInstitutesData')
@@ -7,10 +7,10 @@ fetch(`${data_url}` + 'MOUs/get?visible=visible&category=international_institute
     data.forEach((update) => {
       const ugupdate = document.createElement('tr')
     ugupdate.innerHTML = `
-    <td class="border px-8 py-2 text-sm whitespace-nowrap">${i}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.orgName}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.dateOfMoU}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.validity}</td>
+    <td class="border px-8 py-2 text-sm " width="7%">${i}</td>
+    <td class="border px-8 py-2 text-sm " width="62%">${update.orgName}</td>
+    <td class="border px-8 py-2 text-sm" width="16%">${update.dateOfMoU}</td>
+    <td class="border px-8 py-2 text-sm" width="15%">${update.validity}</td>
       `
       ugupdates.appendChild(ugupdate)
       i++;
@@ -19,7 +19,7 @@ fetch(`${data_url}` + 'MOUs/get?visible=visible&category=international_institute
   
 
 
-fetch(`${data_url}` + 'MOUs/get?visible=visible&category=indian_institutes')
+fetch(`${data_url}` + '/research/MOUs/get?visible=visible&category=indian_institutes')
 .then((response) => response.json())
   .then((data) => {
     var i=1;
@@ -27,10 +27,10 @@ fetch(`${data_url}` + 'MOUs/get?visible=visible&category=indian_institutes')
     data.forEach((update) => {
       const ugupdate = document.createElement('tr')
     ugupdate.innerHTML = `
-    <td class="border px-8 py-2 text-sm whitespace-nowrap">${i}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.orgName}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.dateOfMoU}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.validity}</td>
+    <td class="border px-8 py-2 text-sm " width="7%">${i}</td>
+    <td class="border px-8 py-2 text-sm " width="62%">${update.orgName}</td>
+    <td class="border px-8 py-2 text-sm" width="16%">${update.dateOfMoU}</td>
+    <td class="border px-8 py-2 text-sm" width="15%">${update.validity}</td>
       `
       ugupdates.appendChild(ugupdate)
       i++;
@@ -38,7 +38,7 @@ fetch(`${data_url}` + 'MOUs/get?visible=visible&category=indian_institutes')
   })
 
 
-fetch(`${data_url}` + 'MOUs/get?visible=visible&category=industries')
+fetch(`${data_url}` + '/research/MOUs/get?visible=visible&category=industries')
 .then((response) => response.json())
   .then((data) => {
     var i=1;
@@ -46,10 +46,10 @@ fetch(`${data_url}` + 'MOUs/get?visible=visible&category=industries')
     data.forEach((update) => {
       const ugupdate = document.createElement('tr')
     ugupdate.innerHTML = `
-    <td class="border px-8 py-2 text-sm whitespace-nowrap">${i}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.orgName}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.dateOfMoU}</td>
-                        <td class="border px-8 py-2 text-sm whitespace-nowrap">${update.validity}</td>
+    <td class="border px-8 py-2 text-sm " width="7%">${i}</td>
+    <td class="border px-8 py-2 text-sm " width="62%">${update.orgName}</td>
+    <td class="border px-8 py-2 text-sm" width="16%">${update.dateOfMoU}</td>
+    <td class="border px-8 py-2 text-sm" width="15%">${update.validity}</td>
       `
       ugupdates.appendChild(ugupdate)
       i++;

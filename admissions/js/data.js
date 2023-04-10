@@ -1,5 +1,5 @@
-let data_url = "https://wdmc-vsj1.onrender.com/";
-fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
+let data_url = "https://wdmc-vsj1.onrender.com";
+fetch(`${data_url}` + '/admissions/updates/get?visible=visible&degree=BTECH')
 .then((response) => response.json())
   .then((data) => {
    
@@ -35,7 +35,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
   })
 
 
-  fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=MTECH-CCMT')
+  fetch(`${data_url}` + '/admissions/updates/get?visible=visible&degree=MTECH-CCMT')
   .then((response) => response.json())
     .then((data) => {
       
@@ -72,7 +72,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
     })
 
 
-    fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=MTECH-SELF')
+    fetch(`${data_url}` + '/admissions/updates/get?visible=visible&degree=MTECH-SELF')
     .then((response) => response.json())
       .then((data) => {
         
@@ -109,7 +109,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
       })
     
 
-      fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=MSC')
+      fetch(`${data_url}` + '/admissions/updates/get?visible=visible&degree=MSC')
       .then((response) => response.json())
         .then((data) => {
           
@@ -146,7 +146,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
         })
       
 
-        fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=MBA')
+        fetch(`${data_url}` + '/admissions/updates/get?visible=visible&degree=MBA')
         .then((response) => response.json())
           .then((data) => {
             
@@ -182,7 +182,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
             })
           })
 
-          fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=PHD')
+          fetch(`${data_url}` + '/admissions/updates/get?visible=visible&degree=PHD')
           .then((response) => response.json())
             .then((data) => {
               
@@ -219,7 +219,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
             })
 
 // important links
-            fetch(`${data_url}` + 'admissions/links/get?visible=visible')
+            fetch(`${data_url}` + '/admissions/links/get?visible=visible')
             .then((response) => response.json())
               .then((data) => {
                 
@@ -243,7 +243,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                 })
               })
 
-              fetch(`${data_url}` + 'admissions/links/get?visible=visible')
+              fetch(`${data_url}` + '/admissions/links/get?visible=visible')
               .then((response) => response.json())
                 .then((data) => {
                   
@@ -267,7 +267,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                   })
                 })
 
-                fetch(`${data_url}` + 'admissions/links/get?visible=visible')
+                fetch(`${data_url}` + '/admissions/links/get?visible=visible')
                 .then((response) => response.json())
                   .then((data) => {
                     
@@ -291,7 +291,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                     })
                   })
 
-                  fetch(`${data_url}` + 'admissions/links/get?visible=visible')
+                  fetch(`${data_url}` + '/admissions/links/get?visible=visible')
                   .then((response) => response.json())
                     .then((data) => {
                       
@@ -315,7 +315,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                       })
                     })
 
-                    fetch(`${data_url}` + 'admissions/links/get?visible=visible')
+                    fetch(`${data_url}` + '/admissions/links/get?visible=visible')
                     .then((response) => response.json())
                       .then((data) => {
                         
@@ -339,7 +339,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                         })
                       })
 
-                      fetch(`${data_url}` + 'admissions/links/get?visible=visible')
+                      fetch(`${data_url}` + '/admissions/links/get?visible=visible')
                       .then((response) => response.json())
                         .then((data) => {
                           
@@ -364,7 +364,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                         })
 
                      
-                      fetch(`${data_url}` + 'admissions/helplines/get?visible=visible&degree=BTECH')
+                      fetch(`${data_url}` + '/admissions/helplines/get?visible=visible&degree=BTECH')
                       .then((response) => response.json())
                         .then((data) => {
                           
@@ -391,7 +391,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                           })
                         })
 
-                        fetch(`${data_url}` + 'admissions/helplines/get?visible=visible&degree=MTECH-CCMT')
+                        fetch(`${data_url}` + '/admissions/helplines/get?visible=visible&degree=MTECH-CCMT')
                         .then((response) => response.json())
                           .then((data) => {
                             
@@ -418,7 +418,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                             })
                           })
   
-                          fetch(`${data_url}` + 'admissions/helplines/get?visible=visible&degree=MTECH-SELF')
+                          fetch(`${data_url}` + '/admissions/helplines/get?visible=visible&degree=MTECH-SELF')
                           .then((response) => response.json())
                             .then((data) => {
                               
@@ -445,7 +445,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                               })
                             })
 
-                            fetch(`${data_url}` + 'admissions/helplines/get?visible=visible&degree=MTECH-SELF')
+                            fetch(`${data_url}` + '/admissions/helplines/get?visible=visible&degree=MTECH-SELF')
                             .then((response) => response.json())
                               .then((data) => {
                                 
@@ -472,7 +472,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                                 })
                               })
 
-                              fetch(`${data_url}` + 'admissions/helplines/get?visible=visible&degree=MSC')
+                              fetch(`${data_url}` + '/admissions/helplines/get?visible=visible&degree=MSC')
                               .then((response) => response.json())
                                 .then((data) => {
                                   
@@ -499,7 +499,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                                   })
                                 })
 
-                                fetch(`${data_url}` + 'admissions/helplines/get?visible=visible&degree=MBA')
+                                fetch(`${data_url}` + '/admissions/helplines/get?visible=visible&degree=MBA')
                                 .then((response) => response.json())
                                   .then((data) => {
                                     
@@ -526,7 +526,7 @@ fetch(`${data_url}` + 'admissions/updates/get?visible=visible&degree=BTECH')
                                     })
                                   })
 
-                                  fetch(`${data_url}` + 'admissions/helplines/get?visible=visible&degree=PHD')
+                                  fetch(`${data_url}` + '/admissions/helplines/get?visible=visible&degree=PHD')
                                   .then((response) => response.json())
                                     .then((data) => {
                                       

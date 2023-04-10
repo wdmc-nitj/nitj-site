@@ -1,10 +1,10 @@
-let data_url = "https://wdmc-vsj1.onrender.com/";
+let data_url = "https://wdmc-vsj1.onrender.com";
 
 var  CopyrightGranted=0,ComputerGranted=0,DesignGranted=0,PatentGranted=0,Patentinprocess=0,Designinprocess=0,Computerinprocess=0,Copyrightinprocess=0;
 
 
   async function helper() {
-    const res = await fetch(`${data_url}` + 'research/IPRs/get?visible=visible');
+    const res = await fetch(`${data_url}` + '/research/IPRs/get?visible=visible');
     const data = await res.json();
     const iprsbody = document.getElementById('iprsbody')
     var i=1;

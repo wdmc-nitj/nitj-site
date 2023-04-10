@@ -1,9 +1,9 @@
 var years;
-let data_url = "https://wdmc-vsj1.onrender.com/";
+let data_url = "https://wdmc-vsj1.onrender.com";
 
 async function helper() {
   const res = await fetch(
-    `${data_url}research/sponsoredProjects/groupedByYear`
+    `${data_url}/research/sponsoredProjects/groupedByYear`
   );
   const data = await res.json();
   years = Object.keys(data);
@@ -39,7 +39,7 @@ async function helper() {
 
 async function helperSmallScreen() {
   const res = await fetch(
-    `${data_url}research/sponsoredProjects/groupedByYear`
+    `${data_url}/research/sponsoredProjects/groupedByYear`
   );
   const data = await res.json();
   years = Object.keys(data);
@@ -93,7 +93,7 @@ async function helper2() {
     console.log(i);
     if (i == 0) {
       const res = await fetch(
-        `${data_url}research/sponsoredProjects/year?startYear=${years[i]}`
+        `${data_url}/research/sponsoredProjects/year?startYear=${years[i]}`
       );
       const data = await res.json();
       const element = document.createElement("div");
@@ -101,7 +101,6 @@ async function helper2() {
         "rounded-lg",
         "shadow-sm",
         "w-[100%]",
-    
       );
       // tableContent.appendChild(element)
 
@@ -139,7 +138,7 @@ async function helper2() {
     } 
     else {
       const res = await fetch(
-        `${data_url}research/sponsoredProjects/year?startYear=${years[i]}`
+        `${data_url}/research/sponsoredProjects/year?startYear=${years[i]}`
       );
       const data = await res.json();
       const element = document.createElement("div");
