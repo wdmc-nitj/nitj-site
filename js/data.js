@@ -439,7 +439,68 @@ fetch(`${baseURL}/club/get/all`)
 var size_images = 0
 var img_arr = []
 // Fetching the images in the photo gallery
+function load_more(){
+  fetch(`${baseURL}/photoGallery/`)
+  .then((res) => res.json())
+  .then((data) => {
+    // console.log(data)
 
+    const Images = data.sort((a, b) => 0.5 - Math.random())
+    const images = Images.filter((img) => {
+      return img.type === 'photoGallery'
+    })
+    images.sort((a, b) => 0.5 - Math.random())
+    size_images = images.length
+    img_arr = images
+    // const images = shuffledArray.slice(0,12)
+    // console.log(data)
+
+    const parentDiv = document.getElementById('gallery')
+    const firstRow = document.createElement('div')
+    const secondRow = document.createElement('div')
+    const thirdRow = document.createElement('div')
+    const rows = [firstRow, secondRow, thirdRow]
+    rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
+
+    let i = 0
+    let y = 1
+    images.forEach((img, key) => {
+      // img_arr.push(img.name)
+      // img_arr.push(img.link)
+      // img.link
+      if (y > 12) {
+        return
+      }
+      if (i > 2) {
+        i = 0
+      }
+
+      const imgContainer = document.createElement('div')
+      imgContainer.classList.add('box')
+      imgContainer.innerHTML = `
+        <img class= "gallery-image" data-index="${key}" src="${img.link}" />
+        `
+
+      if (y % 4 == 0 && window.innerWidth <= 800) {
+      } else {
+        rows[i].append(imgContainer)
+      }
+      imgContainer.addEventListener('click', (e) => {
+        const imgSample = document.getElementById('sample-img')
+
+        imgSample.src = e.srcElement.currentSrc
+        showImg()
+      })
+      i++
+      y++
+    })
+    parentDiv.append(firstRow, secondRow, thirdRow)
+  })
+  .finally(() => {
+    const loadingTemplate = document.getElementById('gallery-loading-template')
+    loadingTemplate.innerHTML = ''
+  })
+}
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
