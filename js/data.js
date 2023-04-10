@@ -437,7 +437,7 @@ fetch(`${baseURL}/club/get/all`)
 
 // Making the cards dynamic
 var size_images = 0
-img_arr = []
+var img_arr = []
 // Fetching the images in the photo gallery
 
 fetch(`${baseURL}/photoGallery/`)
@@ -451,7 +451,6 @@ fetch(`${baseURL}/photoGallery/`)
     })
     images.sort((a, b) => 0.5 - Math.random())
     size_images = images.length
-    img_arr = images
     // const images = shuffledArray.slice(0,12)
     // console.log(data)
 
@@ -465,6 +464,8 @@ fetch(`${baseURL}/photoGallery/`)
     let i = 0
     let y = 1
     images.forEach((img, key) => {
+      img_arr.push(img.name)
+      img_arr.push(img.link)
       // img.link
       if (y > 12) {
         return
@@ -508,15 +509,16 @@ const arrow_forward = document.getElementById('arrow_forward')
 arrow_forward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = img_arr
-  for (let i = 0; i < imgArray.length; i++) {
+  var imgTitle = document.getElementById('img-title')
+  for (let i = 0; i < imgArray.length; i=i+2) {
     if (
-      imgArray[i].link.toLowerCase().trim() ==
+      imgArray[i].toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == imgArray.length - 1) {
-        imgSample.src = imgArray[0].link
+        imgSample.src = imgArray[0]
       } else {
-        imgSample.src = imgArray[i + 1].link
+        imgSample.src = imgArray[i + 2]
       }
       break
     }
@@ -545,6 +547,13 @@ function showImg() {
   // const body = document.getElementsByTagName('body')
   const big_viewer = document.getElementById('big-viewer')
   const imgSample = document.getElementById('sample-img')
+  const imgTitle = document.getElementById('img-title')
+  for(var i=0;i<img_arr.length;i=i++){
+    if(img_arr[i].toLowerCase().trim() == imgSample.src.toLowerCase().trim()){
+      imgTitle.innerHTML = img_arr[i-1]
+      break
+    }
+  }
   const crossbutton = document.getElementById('crossbutton')
   const arrow_forward = document.getElementById('arrow_forward')
   const arrow_back = document.getElementById('arrow_back')

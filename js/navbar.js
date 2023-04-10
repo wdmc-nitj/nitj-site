@@ -37,7 +37,7 @@ async function createNav(obj) {
   )
   dropdown2.setAttribute('id', 'drop-down')
   dropdown2.innerHTML = ``
-  data['Acadmeics'].forEach((array) => {
+  data['Academics'].forEach((array) => {
     navbarhelper(array, dropdown2)
   })
   menu2.appendChild(Academics)
