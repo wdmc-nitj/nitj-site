@@ -52,7 +52,7 @@ document.write(`
     </div>
     </div>
 
-    <div class="hidden basis-2/3 p-[25px] lg:block">
+    <div class="hidden basis-2/3 p-[25px] lg:block" id="quicklinks">
     <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
     <div class="flex flex-row p-[15px]">
         <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
@@ -155,4 +155,6 @@ document.write(`
             document.getElementById("demo2").style.color = "#215ba7";
         }
     </script>
+    <script src="../js/footer.js"></script>
+
 `)

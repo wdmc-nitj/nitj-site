@@ -2,7 +2,7 @@ callAPi()
 async function callAPi() {
   let result = await fetch('https://wdmc-vsj1.onrender.com/footer/get/all')
   result = await result.json()
-  result = result[2]
+  // result = result[2]
   console.log(result)
   //sort result according to order
   result.sort((a, b) => { 
@@ -11,15 +11,12 @@ async function callAPi() {
 
   // document.getElementById("quicklinks").innerHTML = footer;
   let x=`
-  <div class="hidden basis-2/3 p-[25px] lg:block">
   <h2 class="my-1 text-xl font-semibold">Quick Links</h2>
-  <div class="flex flex-row p-[15px]">
-      <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`;
+    <div class="flex flex-row p-[15px]">
+        <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">
+    `;
   
   for (let i = 0, j=0; i < result.length; i++, j<7) {
-    if(i == 1|| i== 3 || i==6){
-      x+=`</br>`
-    }
     if (result[i].column == 0) {
       x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
 
@@ -33,9 +30,6 @@ async function callAPi() {
         <div class="flex basis-1/4 flex-col text-[11px] lg:text-[14px]">`
     
         for (let i = 0, j=0; i < result.length; i++,j<5) {
-          if(i==3){
-            x+=`</br>`
-          }
           if (result[i].column == 1) {
             x+=`<a href="${result[i].link}" class="hover:text-yellow-300 hover:underline">${result[i].title}</a>`
             j+=1;
@@ -80,4 +74,3 @@ async function callAPi() {
 
   document.getElementById('quicklinks').innerHTML = x
 }
-callAPi()
