@@ -258,15 +258,28 @@
         result.sort((a, b) => a.order - b.order);
         let x = "";
         for (let i = 0; i < result.length; i++) {
-          x += `<li
-        class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"
-      >
-        <a
-          href="${result[i].resourceLink}" target="_blank"
-        >
+          if(result[i].show){
+          x += `<li>  
+  <a class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2" target="_blank" href=${result[i].resourceName}
+">
+
           ${result[i].resourceName}
-        </a>
-      </li> `;
+        </a>`;
+        if(result[i].new){
+          x+=  `<div id="new-tag" class="inline-flex ml-2 items-center justify-start space-x-2">
+<span class="material-symbols-outlined text-accent-orange">
+auto_awesome
+</span>
+<p class="text-lg font-bold uppercase text-accent-orange">
+New
+</p>
+</div>`
+
+;
+    
+          }
+          x+=`</li>`;
+    }
         }
 
         document.getElementById("list").innerHTML = x;
