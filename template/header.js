@@ -24,7 +24,7 @@ function handlingPDFs() {
       // console.log(link)
       link.setAttribute('target', '_blank')
     }
-    console.log(currSrc)
+    // console.log(currSrc)
   })
 }
 
