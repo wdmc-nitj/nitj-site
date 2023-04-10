@@ -451,6 +451,7 @@ fetch(`${baseURL}/photoGallery/`)
     })
     images.sort((a, b) => 0.5 - Math.random())
     size_images = images.length
+    img_arr = images
     // const images = shuffledArray.slice(0,12)
     // console.log(data)
 
@@ -464,8 +465,8 @@ fetch(`${baseURL}/photoGallery/`)
     let i = 0
     let y = 1
     images.forEach((img, key) => {
-      img_arr.push(img.name)
-      img_arr.push(img.link)
+      // img_arr.push(img.name)
+      // img_arr.push(img.link)
       // img.link
       if (y > 12) {
         return
@@ -509,16 +510,15 @@ const arrow_forward = document.getElementById('arrow_forward')
 arrow_forward.addEventListener('click', (e) => {
   const imgSample = document.getElementById('sample-img')
   const imgArray = img_arr
-  var imgTitle = document.getElementById('img-title')
-  for (let i = 0; i < imgArray.length; i=i+2) {
+  for (let i = 0; i < imgArray.length; i++) {
     if (
-      imgArray[i].toLowerCase().trim() ==
+      imgArray[i].link.toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == imgArray.length - 1) {
-        imgSample.src = imgArray[0]
+        imgSample.src = imgArray[0].link
       } else {
-        imgSample.src = imgArray[i + 2]
+        imgSample.src = imgArray[i + 1].link
       }
       break
     }
@@ -547,13 +547,6 @@ function showImg() {
   // const body = document.getElementsByTagName('body')
   const big_viewer = document.getElementById('big-viewer')
   const imgSample = document.getElementById('sample-img')
-  const imgTitle = document.getElementById('img-title')
-  for(var i=0;i<img_arr.length;i=i++){
-    if(img_arr[i].toLowerCase().trim() == imgSample.src.toLowerCase().trim()){
-      imgTitle.innerHTML = img_arr[i-1]
-      break
-    }
-  }
   const crossbutton = document.getElementById('crossbutton')
   const arrow_forward = document.getElementById('arrow_forward')
   const arrow_back = document.getElementById('arrow_back')
