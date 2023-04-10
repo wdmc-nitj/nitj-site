@@ -55,6 +55,11 @@
 	box-shadow: 0px 0px 10px rgba(17, 24, 244, 0.569);
   
 }
+@media only screen and (max-device-width: 480px) {
+    .popup{
+		display: none;
+	}
+}
 .popup-count {
 	position: fixed;
 	top: 0;
