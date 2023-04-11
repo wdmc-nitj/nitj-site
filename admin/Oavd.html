@@ -34,15 +34,16 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
 </head>
 
 <body>
-    <script src="/template/header.js" type="module"></script>
-    <script src="/template/helper.js"></script>
+    <script src="../template/header.js" type="module"></script>
+    <script src="../template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -68,67 +69,69 @@
             </nav>
         </div>
         <div> -->
-            <div class="titlebg">
-                <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
-                    <!-- px-4 lg:px-[11%] -->
-                    <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Online Application for verification of degree
-                    </p>
-                </div>
-                <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                    <ol class="container inline-flex items-center">
-                        <li class="inline-flex items-center">
-                            <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                                <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
-                            </a>
-                        </li>
-                        <li aria-current="page">
-                            <div class="inline-flex items-center">
-                                <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
-                                    class="fa-solid fa-angle-right ml-2"></i>
-                                <a href="#" class="text-lg font-medium ml-2">Online Application for Verification of Degree</a>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Online
+                    Application for verification of degree
+                </p>
             </div>
-    
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">Online Application for Verification of
+                                Degree</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
 
 
-            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
-                <div class="w-full flex flex-col items-start">
-                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Verification of Degree/Certificates
-                    </p>
-                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
-                    <!-- <span class="my-4 text-lg">(JEE Rank, Membership of Institute bodies)</span> -->
-                </div>
+
+        <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Verification of Degree/Certificates
+                </p>
+                <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                <!-- <span class="my-4 text-lg">(JEE Rank, Membership of Institute bodies)</span> -->
             </div>
-            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px] my-4">
-                <div class="menu-content download-links">
-                    <p><strong>Only&nbsp;for Verification Agencies:</strong></p>
+        </div>
+        <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px] my-4">
+            <div class="menu-content download-links">
+                <p><strong>Only&nbsp;for Verification Agencies:</strong></p>
 
-                    <ul class="list-disc my-1 hover:underline" id="link-oavd">
-                        <script>
-                            async function api_call() {
-                                var data = await fetch(
-                                    "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/oavd"
-                                );
-                                var result = await data.json();
+                <ul class="list-disc my-1 hover:underline" id="link-oavd">
+                    <script>
+                        async function api_call() {
+                            var data = await fetch(
+                                "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/oavd"
+                            );
+                            var result = await data.json();
 
-                                var modified = result[0].specialLinks;
+                            var modified = result[0].specialLinks;
 
-                                for (var i in modified) {
-                                    var name = modified[i]["name"];
-                                    var designation = modified[i]["designation"];
-                                    var department = modified[i]["department"];
-                                    var email = modified[i]["email_id"];
-                                    var url = modified[i]["url"];
-                                    var qualification = modified[i]["qualification"];
-                                    var title = modified[i]["title"];
-                                    document
-                                        .getElementById("link-oavd")
-                                        .insertAdjacentHTML(
-                                            "beforeend",
-                                            `<li class="ml-8">
+                            for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email_id"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                var title = modified[i]["title"];
+                                document
+                                    .getElementById("link-oavd")
+                                    .insertAdjacentHTML(
+                                        "beforeend",
+                                        `<li class="ml-8">
                             <strong>
                                 <a href="${url}" style="font-size:16px"><span
                                         style="color:#B22222">${title}</span>
@@ -136,59 +139,59 @@
                             </strong>
                             <span class="absolute pt-1"> <img src="https://www.nitj.ac.in//images/New.gif"></span>
                         </li>`
-                                        );
-                                }
+                                    );
                             }
-                            api_call();
-                        </script>
-                    </ul>
+                        }
+                        api_call();
+                    </script>
+                </ul>
 
-                    <p style="text-align:justify"><br>
-                        <strong>VERIFICATION:</strong><br>
-                        <br>
-                        An agency willing to verify the academic record of a student, who is a graduate from National
-                        Institute of Technology Jalandhar, can do so by sending an application on the firm’s Letter head
-                        mentioning the Purpose of the verification along with following enclosures:<br>
-                        i) Xerox copy of the certificate(s) to be verified<br>
-                        ii) Signed authorization from the candidate<br>
-                        <br>
-                        <strong>Processing Fee for Verification:</strong>
-                    </p>
+                <p style="text-align:justify"><br>
+                    <strong>VERIFICATION:</strong><br>
+                    <br>
+                    An agency willing to verify the academic record of a student, who is a graduate from National
+                    Institute of Technology Jalandhar, can do so by sending an application on the firm’s Letter head
+                    mentioning the Purpose of the verification along with following enclosures:<br>
+                    i) Xerox copy of the certificate(s) to be verified<br>
+                    ii) Signed authorization from the candidate<br>
+                    <br>
+                    <strong>Processing Fee for Verification:</strong>
+                </p>
 
-                    <p class="my-2">(1)&nbsp; Verification from Police, Government Agencies &amp; Vigilance Clearance
-                        (CID &amp;
-                        other intelligence agencies): <strong>NIL</strong></p>
+                <p class="my-2">(1)&nbsp; Verification from Police, Government Agencies &amp; Vigilance Clearance
+                    (CID &amp;
+                    other intelligence agencies): <strong>NIL</strong></p>
 
-                    <p>(2)&nbsp; Any other Agency/Person:</p>
+                <p>(2)&nbsp; Any other Agency/Person:</p>
 
-                    <p class="my-2">In India: <strong>Rs. 2,000</strong>&nbsp;(inclusive of Postal Charges), for each
-                        individual
-                        verification.</p>
+                <p class="my-2">In India: <strong>Rs. 2,000</strong>&nbsp;(inclusive of Postal Charges), for each
+                    individual
+                    verification.</p>
 
-                    <p>In Abroad: <strong>US $100</strong>&nbsp;(inclusive of Postal Charges), for each individual
-                        verification</p>
+                <p>In Abroad: <strong>US $100</strong>&nbsp;(inclusive of Postal Charges), for each individual
+                    verification</p>
 
-                    <p>&nbsp;</p>
+                <p>&nbsp;</p>
 
-                    <p><strong>Contact Details:</strong>&nbsp;<br>
-                        <br>
-                        <span style="color:#B22222"><em><strong>Assistant Registrar (Academic)</strong></em></span><br>
-                        <strong><em><em>Dr.</em></em></strong><strong><em><em>&nbsp;B.R. Ambedkar National Institute of
-                                    Technology</em><br>
-                                <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
-                                <em>Phone: 0181-2690302, 2690603</em><br>
-                                <em>Email:&nbsp;</em></em></strong><span
-                            style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
-                        <br>
-                        May kindly note that it takes an average 15 working days from the day of receiving the above
-                        documents to process an application (this excludes postal time).
-                    </p>
-                    <p></p>
-                </div>
+                <p><strong>Contact Details:</strong>&nbsp;<br>
+                    <br>
+                    <span style="color:#B22222"><em><strong>Assistant Registrar (Academic)</strong></em></span><br>
+                    <strong><em><em>Dr.</em></em></strong><strong><em><em>&nbsp;B.R. Ambedkar National Institute of
+                                Technology</em><br>
+                            <em>G.T. Road, By-Pass Jalandhar-144011(Punjab) India</em><br>
+                            <em>Phone: 0181-2690302, 2690603</em><br>
+                            <em>Email:&nbsp;</em></em></strong><span
+                        style="color:#B22222"><em><strong>aracademic@nitj.ac.in,&nbsp;dyregistrar@nitj.ac.in</strong></em></span><br>
+                    <br>
+                    May kindly note that it takes an average 15 working days from the day of receiving the above
+                    documents to process an application (this excludes postal time).
+                </p>
+                <p></p>
             </div>
         </div>
-    
-    <script src="/template/footer.js"></script>
+    </div>
+
+    <script src="../template/footer.js"></script>
 </body>
 
 </html>

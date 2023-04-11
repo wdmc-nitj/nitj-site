@@ -1,4 +1,4 @@
-let data_url = "https://wdmc-vsj1.onrender.com/";
+let data_url = "https://wdmc-vsj1.onrender.com";
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 function formatTime(timeString) {
@@ -7,7 +7,7 @@ function formatTime(timeString) {
   return (hour % 12 || 12) + ":" + minute + (hour < 12 ? "AM" : "PM");
 }
 
-fetch(`${data_url}` + 'research/events/get?visible=visible&upcoming=true&category=workshop')
+fetch(`${data_url}` + '/research/events/get?visible=visible&upcoming=true&category=workshop')
 .then((response) => response.json())
   .then((data) => {
     

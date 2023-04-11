@@ -123,7 +123,7 @@ function openSubDropDowns(id) {
 
 let navnames = [
   'Administration',
-  'Acadmeics',
+  'Academics',
   'Admissions',
   'Research',
   'Alumni',

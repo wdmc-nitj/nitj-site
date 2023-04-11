@@ -144,7 +144,8 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
   if(slug[slug.length-1]==="btech")
   {
     location.reload;
-     document.getElementById("mtech").style.display="none";      document.getElementById("mtechss").style.display="none";
+     document.getElementById("mtech").style.display="none";    
+       document.getElementById("mtechss").style.display="none";
     document.getElementById("msc").style.display="none";
     document.getElementById("mba").style.display="none";
     document.getElementById("phd").style.display="none";
@@ -158,12 +159,16 @@ document.getElementsByClassName("active2")[1].classList.remove("active2");
     document.getElementById("phdtab").style.display="none";
     document.getElementById("foreignadmissiontab").style.display="none";
       document.getElementsByClassName("active2")[0].classList.remove("active2");
-if( document.getElementsByClassName("active2")[1])
+if( document.getElementsByClassName("active2")[0])
+  {
+    document.getElementsByClassName("active2")[0].classList.remove("active2");
+  }
+  if( document.getElementsByClassName("active2")[1])
   {
     document.getElementsByClassName("active2")[1].classList.remove("active2");
   }
     document.getElementById("btechsidetab").classList.add("active2");
-
+    document.getElementById("respbtechsidetab").classList.add("active2");
     
   }
   if(slug[slug.length-1]==="mtech")
@@ -184,11 +189,17 @@ if( document.getElementsByClassName("active2")[1])
   document.getElementById("mtechtab").style.display="block";
   document.getElementById("mtechsstab").style.display="none";
     document.getElementsByClassName("active2")[0].classList.remove("active2");
-if( document.getElementsByClassName("active2")[1])
-  {
-    document.getElementsByClassName("active2")[1].classList.remove("active2");
-  }
-  document.getElementById("mtechsidetab").classList.add("active2");
+    if( document.getElementsByClassName("active2")[0])
+    {
+      document.getElementsByClassName("active2")[0].classList.remove("active2");
+    }
+    if( document.getElementsByClassName("active2")[1])
+    {
+      document.getElementsByClassName("active2")[1].classList.remove("active2");
+    }
+      document.getElementById("mtechsidetab").classList.add("active2");
+      document.getElementById("respmtechsidetab").classList.add("active2");
+      
 
   
   }
@@ -212,15 +223,17 @@ if( document.getElementsByClassName("active2")[1])
   document.getElementById("foreignadmissiontab").style.display="none";
   document.getElementById("msctab").style.display="block";
     document.getElementsByClassName("active2")[0].classList.remove("active2");
-if( document.getElementsByClassName("active2")[1])
-  {
-    document.getElementsByClassName("active2")[1].classList.remove("active2");
-  }
-  document.getElementById("mscsidetab").classList.add("active2");
-  if( document.getElementsByClassName("active2")[1])
-  {
-    document.getElementsByClassName("active2")[1].classList.remove("active2");
-  }
+    if( document.getElementsByClassName("active2")[0])
+    {
+      document.getElementsByClassName("active2")[0].classList.remove("active2");
+    }
+    if( document.getElementsByClassName("active2")[1])
+    {
+      document.getElementsByClassName("active2")[1].classList.remove("active2");
+    }
+      document.getElementById("mscsidetab").classList.add("active2");
+      document.getElementById("respmscsidetab").classList.add("active2");
+      
   }
   else if(slug[slug.length-1]==="mba")
   {
@@ -228,7 +241,8 @@ if( document.getElementsByClassName("active2")[1])
  
   document.getElementById("btech").style.display="none";
   document.getElementById("msc").style.display="none";
-   document.getElementById("mtech").style.display="none";      document.getElementById("mtechss").style.display="none";
+   document.getElementById("mtech").style.display="none";  
+       document.getElementById("mtechss").style.display="none";
   document.getElementById("phd").style.display="none";
   document.getElementById("foreign").style.display="none";
   document.getElementById("mba").style.display="block";
@@ -240,11 +254,17 @@ if( document.getElementsByClassName("active2")[1])
   document.getElementById("foreignadmissiontab").style.display="none";
   document.getElementById("mbatab").style.display="block";
     document.getElementsByClassName("active2")[0].classList.remove("active2");
-if( document.getElementsByClassName("active2")[1])
-  {
-    document.getElementsByClassName("active2")[1].classList.remove("active2");
-  }
-  document.getElementById("mbasidetab").classList.add("active2");
+    if( document.getElementsByClassName("active2")[0])
+    {
+      document.getElementsByClassName("active2")[0].classList.remove("active2");
+    }
+    if( document.getElementsByClassName("active2")[1])
+    {
+      document.getElementsByClassName("active2")[1].classList.remove("active2");
+    }
+      document.getElementById("mbasidetab").classList.add("active2");
+      document.getElementById("respmbasidetab").classList.add("active2");
+      
 
   
   }
@@ -266,11 +286,17 @@ if( document.getElementsByClassName("active2")[1])
   document.getElementById("foreignadmissiontab").style.display="none";
   document.getElementById("phdtab").style.display="block";
     document.getElementsByClassName("active2")[0].classList.remove("active2");
-if( document.getElementsByClassName("active2")[1])
-  {
-    document.getElementsByClassName("active2")[1].classList.remove("active2");
-  }
-  document.getElementById("phdsidetab").classList.add("active2");
+    if( document.getElementsByClassName("active2")[0])
+    {
+      document.getElementsByClassName("active2")[0].classList.remove("active2");
+    }
+    if( document.getElementsByClassName("active2")[1])
+    {
+      document.getElementsByClassName("active2")[1].classList.remove("active2");
+    }
+      document.getElementById("phdsidetab").classList.add("active2");
+      document.getElementById("respphdsidetab").classList.add("active2");
+      
 
   
   }
@@ -294,11 +320,17 @@ if( document.getElementsByClassName("active2")[1])
   
   document.getElementById("foreignadmissiontab").style.display="block";
     document.getElementsByClassName("active2")[0].classList.remove("active2");
-if( document.getElementsByClassName("active2")[1])
-  {
-    document.getElementsByClassName("active2")[1].classList.remove("active2");
-  }
-  document.getElementById("foreignsidetab").classList.add("active2");
+    if( document.getElementsByClassName("active2")[0])
+    {
+      document.getElementsByClassName("active2")[0].classList.remove("active2");
+    }
+    if( document.getElementsByClassName("active2")[1])
+    {
+      document.getElementsByClassName("active2")[1].classList.remove("active2");
+    }
+      document.getElementById("foreignsidetab").classList.add("active2");
+      document.getElementById("respforeignsidetab").classList.add("active2");
+      
 
   
   }

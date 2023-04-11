@@ -1,5 +1,5 @@
-let data_url = "https://wdmc-vsj1.onrender.com/";
-fetch(`${data_url}` + 'research/consultancies/year?startYear=2015')
+let data_url = "https://wdmc-vsj1.onrender.com";
+fetch(`${data_url}` + '/research/consultancies/year?startYear=2015')
 .then((response) => response.json())
   .then((data) => {
     console.log(data)
