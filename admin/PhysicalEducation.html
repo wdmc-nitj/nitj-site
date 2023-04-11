@@ -34,10 +34,10 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
-      
     </style>
 </head>
 
@@ -70,7 +70,8 @@
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">institute instrumentation center
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Physical
+                    Education and Sports
                 </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -84,7 +85,7 @@
                         <div class="inline-flex items-center">
                             <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
                                 class="fa-solid fa-angle-right ml-2"></i>
-                            <a href="#" class="text-lg font-medium ml-2">Institute Instrumentation Center</a>
+                            <a href="#" class="text-lg font-medium ml-2">Physical Education and Sports</a>
                         </div>
                     </li>
                 </ol>
@@ -104,21 +105,29 @@
                     <div class="flex items-center justify-center gap-[20%] py-3 my-3 border-b-2">
                         <!-- <span><img class="w-20" src="https://www.nitj.ac.in/nitj_files/links/nitj_18254.png"
                                 alt="..."></span> -->
-                        <span class="text-4xl text-accent font-bold">Institute Instrumentation Center</span>
+                        <span class="text-4xl text-black-500 font-bold">Physical Education and Sports</span>
                     </div>
                     <div class="flex justify-center m-[4%] gap-0">
                         <div class="flex flex-col mx-auto basis-1/6 my-2">
-                            <span id="home" onclick="handlesidenavbar('homeIIC')"
-                                class="border-l-2 border-t-2 border-b-2 border-blue-500 py-2 px-4 bg-blue-300 m-2 mr-0 cursor-pointer">Home</span>
-                            <span id="facilities" onclick="handlesidenavbar('facilitiesIIC')"
-                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Facilities</span>
-                            <span id="Proforma" onclick="handlesidenavbar('ProformaIIC')"
-                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Proforma</span>
-                            <span id="contact" onclick="handlesidenavbar('contactIIC')"
-                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Contact</span>
+                            <span id="home" onclick="handlesidenavbar('aboutPES')"
+                                class="border-l-2 border-t-2 border-b-2 border-blue-500 py-2 px-4 bg-blue-300 m-2 mr-0 cursor-pointer">
+                                About Us</span>
+                            <span id="faculty" onclick="handlesidenavbar('facultyPES')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Faculty &
+                                Staff</span>
+                            <span id="Proforma" onclick="handlesidenavbar('facilitiesPES')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Facilities &
+                                Sports</span>
+                            <span id="contact" onclick="handlesidenavbar('tournamentPES')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Tournaments</span>
+                            <span id="contact" onclick="handlesidenavbar('achievementPES')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Sports
+                                Achievement</span>
+                            <span id="contact" onclick="handlesidenavbar('galleryPES')"
+                                class="border-l-2 border-t-2 border-b-2 py-2 px-4 m-2 mr-0 cursor-pointer">Gallery</span>
                         </div>
                         <div class="px-[8%] py-8 basis-5/6 border-2 border-blue-500 rounded-xl">
-                            <div id="homeIIC">
+                            <div id="aboutPES">
                                 <p class="text-justify text-lg">
                                     <span>Institute Instrumentation Center has
                                         been established with an aim to provide high end research
@@ -145,13 +154,13 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div id="facilitiesIIC" class="hidden">
+                            <div id="facultySide" class="hidden">
                                 <div>
                                     <ul>
                                         <li>
                                             <a
                                                 href="https://www.nitj.ac.in/nitj_files/links/new_equipment_95000_32248.pdf">
-                                                <span class="underline underline-offset-4 decoration-accent decoration-0 text-accent hover:decoration-2">SIGMA 500VP Field
+                                                <span class="text-orange-900 hover:underline">SIGMA 500VP Field
                                                     Emission Scanning Electron Microscope with EDS and EBSD
                                                     Sensors</span>&nbsp;
                                                 <span class="absolute pt-1"><img
@@ -163,7 +172,7 @@
                                         <li>
                                             <a
                                                 href="https://www.nitj.ac.in/nitj_files/links/ICPMS-MS_(_AGILENT-8900_Series)_73977.pdf">
-                                                <span class="underline underline-offset-4 decoration-accent decoration-0 text-accent hover:decoration-2">ICPMS-MS &nbsp;(
+                                                <span class="text-orange-900 hover:underline">ICPMS-MS &nbsp;(
                                                     AGILENT-8900 Series)</span>&nbsp;
                                                 <span class="absolute pt-1"><img
                                                         src="https://www.nitj.ac.in//images/New.gif"></span>
@@ -374,44 +383,36 @@
                                 </div>
                             </div>
                             <div id="ProformaIIC" class="hidden">
-                                <ul class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6">
+                                <ul class="list-disc">
                                     <li>
-                                        <a class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"
+                                        <a class="text-lg hover:underline text-orange-900"
                                             href="	https://www.nitj.ac.in/nitj_files/links/Notification_Revision_of_FESEM__XRD_System)_25_77620.pdf">User
                                             Charges for FESEM and XRD
-                                           
-                                        </a>
-                                        <span id="new-tag" class="flex text-base text-accent-orange space-x-2">
-                                            <span class="text-base material-symbols-outlined text-accent-orange">
-                                              auto_awesome
+                                            <span class="absolute pt-1 pl-2">
+                                                <img src="https://www.nitj.ac.in//images/New.gif">
                                             </span>
-                                            <p class="font-bold uppercase text-accent-orange">
-                                              New
-                                            </p>
-                                          </span>
-                    
+                                        </a>
+                                        <br>
+                                        &nbsp;
                                     </li>
                                     <li>
-                                        <a class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"
+                                        <a class="text-lg hover:underline text-orange-900"
                                             href="https://www.nitj.ac.in/nitj_files/links/FESEM_proforma_78762.pdf">Field
                                             Emission Scanning Electron Microscope (FESEM) Proforma
-                                            
-                                        </a>
-                                        <span id="new-tag" class="flex text-base text-accent-orange space-x-2">
-                                            <span class="text-base material-symbols-outlined text-accent-orange">
-                                              auto_awesome
+                                            <span class="absolute pt-1 pl-2">
+                                                <img src="https://www.nitj.ac.in//images/New.gif">
                                             </span>
-                                            <p class="font-bold uppercase text-accent-orange">
-                                              New
-                                            </p>
-                                          </span>
-                                
+                                        </a>
+                                        <br>
+                                        &nbsp;
                                     </li>
                                     <li>
-                                        <a class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"
+                                        <a class="text-lg hover:underline text-orange-900"
                                             href="https://www.nitj.ac.in/nitj_files/links/XRD_proforma_14536_41790.pdf">Empyrean
                                             Powder XRD Proforma
-                                            
+                                            <span class="absolute pt-1 pl-2">
+                                                <img src="https://www.nitj.ac.in//images/New.gif">
+                                            </span>
                                         </a>
                                         <br>
                                         &nbsp;
@@ -442,7 +443,7 @@
                                                     .insertAdjacentHTML(
                                                         "beforeend",
                                                         `<a href="${url}"><span
-                                            class="text-lg text-accent"><strong>${name}</strong></span>
+                                            class="text-lg" style="color:#B22222"><strong>${name}</strong></span>
                                     </a><br>
                                     <span style="color:#000000"> ${designation} <br>
                                         <strong>Email:</strong>&nbsp;${email}
@@ -465,10 +466,10 @@
     <script src="/template/footer.js"></script>
 </body>
 <script>
-    const home = document.getElementById('homeIIC');
-    const home1 = document.getElementById('home');
-    const facilities = document.getElementById('facilitiesIIC');
-    const facilities1 = document.getElementById('facilities');
+    const about = document.getElementById('aboutPES');
+    const about1 = document.getElementById('about');
+    const faculty = document.getElementById('facultyPES');
+    const fac1 = document.getElementById('facilities');
     const Proforma = document.getElementById('ProformaIIC');
     const Proforma1 = document.getElementById('Proforma');
     const contact = document.getElementById('contactIIC');

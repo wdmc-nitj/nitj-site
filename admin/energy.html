@@ -219,9 +219,78 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="overflow-x-auto relative mx-20">
+            <div class="w-full flex flex-col items-start my-6">
+                <p class="font2 font-semibold text-[28px] lg:text-[44px]">Joint Faculty</p>
+                <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+            <table class="w-full text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr class=" bg-blue-50 ">
+                        <th scope="col" class="py-3 px-6">
+                            Name
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Designation
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Department
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Email ID
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="faculty-id">
+                    <script>
+                        async function api_call() {
+                            var data = await fetch(
+                                "http://localhost:8000/specialcentres/getcentre/energy"
+                            );
+
+                            var result = await data.json();
+
+                            var modified = result[0].faculties;
+
+                            for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                document
+                                    .getElementById("faculty-id")
+                                    .insertAdjacentHTML(
+                                        "beforeend",
+                                        `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            ${name}
+                        </th>
+                        <td class="py-4 px-6">
+                            ${designation}
+                        </td>
+                        <td class="py-4 px-6">
+                            ${department}
+                        </td>
+                        <td class="py-4 px-6">
+                            ${email}
+                        </td>
+                    </tr>`
+                                    );
+                            }
+                        }
+                        api_call();
+                    </script>
+                </tbody>
+            </table>
+        </div>
+
+
         <div class="overflow-x-auto relative mx-20 mt-10">
             <div class="w-full flex flex-col items-start my-6">
-                <p class="font2 font-semibold text-[28px] lg:text-[44px]">Associate Faculty</p>
+                <p class="font2 font-semibold text-[28px] lg:text-[44px]">Associated Faculty</p>
                 <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
             </div>
             <table class=" w-full text-left text-gray-500 dark:text-gray-400">
@@ -285,6 +354,74 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="overflow-x-auto relative mx-20">
+            <div class="w-full flex flex-col items-start my-6">
+                <p class="font2 font-semibold text-[28px] lg:text-[44px]">Visiting Faculty</p>
+                <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+            </div>
+            <table class="w-full text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr class=" bg-blue-50 ">
+                        <th scope="col" class="py-3 px-6">
+                            Name
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Designation
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Department
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Email ID
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="faculty-id">
+                    <script>
+                        async function api_call() {
+                            var data = await fetch(
+                                "http://localhost:8000/specialcentres/getcentre/energy"
+                            );
+
+                            var result = await data.json();
+
+                            var modified = result[0].faculties;
+
+                            for (var i in modified) {
+                                var name = modified[i]["name"];
+                                var designation = modified[i]["designation"];
+                                var department = modified[i]["department"];
+                                var email = modified[i]["email"];
+                                var url = modified[i]["url"];
+                                var qualification = modified[i]["qualification"];
+                                document
+                                    .getElementById("faculty-id")
+                                    .insertAdjacentHTML(
+                                        "beforeend",
+                                        `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            ${name}
+                        </th>
+                        <td class="py-4 px-6">
+                            ${designation}
+                        </td>
+                        <td class="py-4 px-6">
+                            ${department}
+                        </td>
+                        <td class="py-4 px-6">
+                            ${email}
+                        </td>
+                    </tr>`
+                                    );
+                            }
+                        }
+                        api_call();
+                    </script>
+                </tbody>
+            </table>
+        </div>
+
     </div>
     <script src="/template/footer.js"></script>
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>

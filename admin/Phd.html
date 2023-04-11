@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Doctor of Philosophy</title>
     <style>
         .bg-accent {
@@ -106,7 +106,7 @@
                     <p class="text-lg"><span style="color:#000000">The Institute offers PhD programmes in all the
                             departments in various disciplines.</span></p>
                     <br>
-                    <ul class="list-disc ml-8 mr-4" id="phd-list">
+                    <ul class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6" id="phd-list">
                         <script>
                             async function api_call() {
                                 var data = await fetch(
@@ -124,7 +124,7 @@
                                                 .getElementById("phd-list")
                                                 .insertAdjacentHTML(
                                                     "beforeend",
-                                                    `<li><a href="${url}" class="hover:text-blue-500">${title}</a></li>`
+                                                    `<li><a href="${url}" class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2">${title}</a></li>`
                                                 );
                                         }
                                     }
