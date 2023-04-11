@@ -202,14 +202,28 @@ function displayWords(words, links) {
     }
   }
 }
+var displayWordsArr = [];
+var links = {};
+fetch('https://wdmc-vsj1.onrender.com/navbar')
+  .then(async (res) => await res.json())
+  .then((data) => {
+    Object.keys(data).forEach(key => {
+      for(let i=0;i<data[key].length;i++){
+        for(let j=2;j<data[key][i].length;j++){
+          // console.log(data[key][i][j].name)
+          // console.log(data[key][i][j].link)
+          displayWordsArr.push(data[key][i][j].name);
+          links[data[key][i][j].name] = data[key][i][j].link;
+        }
+      }
+    });
+  })
 // Make a fetch call to the API
 var resources = document.getElementById("resources");
 fetch("https://wdmc-vsj1.onrender.com/resource")
   .then((response) => response.json())
   .then((data) => {
     // Create an unordered list element
-    var displayWordsArr = [];
-    var links = {};
     data.forEach((element) => {
       if (element.resourceType === "other") {
         displayWordsArr.push(element["resourceName"]);
