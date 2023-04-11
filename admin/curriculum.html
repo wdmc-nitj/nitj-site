@@ -150,7 +150,7 @@
                                 }
                                 async function api_call() {
                                     console.log(Dept.getAttribute('id').toLowerCase());
-                                    var data = await fetch(`http://localhost:8000/curriculum/getcurriculum/${Dept.getAttribute('id').toLowerCase()}`);
+                                    var data = await fetch(`https://wdmc-vsj1.onrender.com/curriculum/getcurriculum/${Dept.getAttribute('id').toLowerCase()}`);
                                     var result = await data.json();
 
                                     console.log(result);
@@ -164,7 +164,6 @@
                                     for (var i in result) {
                                         var courseName = result[i]['courseName'];
                                         var departmentName = result[i]['departmentName'];
-
 
 
 
