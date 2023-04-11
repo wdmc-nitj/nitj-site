@@ -218,7 +218,6 @@ fetch('https://wdmc-vsj1.onrender.com/navbar')
       }
     });
   })
-// Make a fetch call to the API
 var resources = document.getElementById("resources");
 fetch("https://wdmc-vsj1.onrender.com/resource")
   .then((response) => response.json())
