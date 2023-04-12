@@ -17,7 +17,7 @@ fetch(`${baseURL}/news/`)
     const newsCards = document.getElementById('news-cards')
     newsCards.innerHTML = ''
     data.forEach((news) => {
-      console.log(news)
+      // console.log(news)
       const newsCard = document.createElement('div')
       newsCard.setAttribute(
         'class',
@@ -358,7 +358,7 @@ fetch(`${baseURL}/publication`)
   .then((res) => res.json())
   .then((apidata) => {
     const data = dataFilter(apidata)
-    console.log(data)
+    // console.log(data)
     const parentDiv = document.getElementById('publication-cards')
     parentDiv.innerHTML = ''
     data.forEach((content) => {

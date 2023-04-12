@@ -76,7 +76,6 @@ if (parseInt(id) === 0) {
       putCategory(data[0]?.title1 || category)
 
       if (title === undefined) title = category
-      else title = data[0].title
 
       titleDiv.innerHTML = title.charAt(0).toUpperCase() + title.slice(1)
 
