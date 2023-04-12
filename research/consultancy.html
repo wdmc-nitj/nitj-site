@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Favicon and title -->
   <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
-  <title>Consultancy-NITJ</title>
+  <title>Consultancy Works-NITJ</title>
   <!-- RESEARCH -->
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
@@ -189,6 +189,7 @@
       background-position: center;
       background-size: cover;
     }
+  
   </style>
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -203,7 +204,7 @@
     <div class="titlebg">
       <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
           <!-- px-4 lg:px-[11%] -->
-          <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Consultancy works
+          <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Consultancy Works
           </p>
       </div>
       <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -217,122 +218,84 @@
                   <div class="inline-flex items-center">
                       <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
                           class="fa-solid fa-angle-right ml-2"></i>
-                      <a href="#" class="text-lg font-medium ml-2">Consultancy works</a>
+                      <a href="#" class="text-lg font-medium ml-2">Consultancy Works</a>
                   </div>
               </li>
           </ol>
       </nav>
   </div>
 
-  
+    <div class="flex justify-center">
+      <div class="hidden lg:block text-3xl font-semibold decoration-4 decoration-[#0369a0]">
+        <div class="none lg:block">
+          Consultancy Works
+        </div>
+        <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+      </div>
+    </div>
 
 
     <div class="lg:mt-[-12%] md:mt-[-3%] mt-[-28%]">
-    <!-- DropDown -->
-    <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
-      <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
-        <!-- Dropdown toggle button -->
-        <button @click="dropdownMenu = ! dropdownMenu"
-          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4">
-          <span class="mx-auto">Select Course <i class="fa-solid fa-caret-down"></i> </span>
-        </button>
-        <!-- Dropdown list -->
-        <div x-show="dropdownMenu" class="tabs2  p-2 rounded w-[100%]">
-          <ul>
-            <li x-on:click="dropdownMenu = ! dropdownMenu"
-              class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text dropContent1" onclick=dropDownContentOnClick1()>Financial Year 2015-16</span>
-            </li>
-          </ul>
+      <!-- DropDown -->
+      <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
+        <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
+          <!-- Dropdown toggle button -->
+          <button @click="dropdownMenu = ! dropdownMenu"
+            class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4">
+            <span class="mx-auto">Select Financial Year <i class="fa-solid fa-caret-down"></i> </span>
+          </button>
+          <!-- Dropdown list -->
+          <div x-show="dropdownMenu" id="smallScreenSidetab" class="tabs2  p-2 rounded w-[100%]">
+            <ul>
+              <!-- DataComingFromBackend -->
+            </ul>
 
+          </div>
         </div>
-      </div>
-
-      <div class="flex items-center p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
+        
+      <div id="currentDisplay" class="hidden mx-auto items-center   p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
         <span class="px-[15px]"><i class="fa-solid fa-angles-right text-[16px] "> <span
-              class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="category">Financial Year
-              2015-16</span></i></span>
+              class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="displayYear"></span></i></span>
       </div>
 
 
-    </div>
-
-    <!-- DropDown -->
-
-
-    <div class="flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
-      <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
-        <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
-          id="sidetab">
-          <ul>
-            <li class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black1">
-              <span class="text">Financial Year 2015-16</span>
-            </li>
-          </ul>
-        </div>
       </div>
 
-      <!--international institutes-->
-      <div class="content  lg:w-[80%] w-[100%]  lg:mt-[15%] md:mt-[25%] mt-[5%]">
-        <div class="tab_wrap active2 mr-8 rounded-lg shadow-sm " style="display: block;">
-          <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
-            <table class=" shadow-lg bg-white w-[100%]">
-              <thead class="text-left">
+      <!-- DropDown -->
 
-                <tr>
-                  <th class="border bg-color-1 text-white px-8 py-2 w-[8%]">S. No.</th>
-                  <th class="border bg-color-1 text-white px-8 py-2 w-[12%]">Name of Faculty (Chief Consultant)</th>
-                  <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Client Organization</th>
-                  <th class="border bg-color-1 text-white px-8 py-2 w-[25%]">Title of Consultancy of Project</th>
-                  <th class="border bg-color-1 text-white px-8 py-2 w-[15%]">Amount Received (in Rupees)</th>
-                  <th class="border bg-color-1 text-white px-8 py-2 w-[15%]">Amount Received (in words)</th>
-                </tr>
-              </thead>
-              <tbody id="consultancyData">
-                <!-- datacomingFromBackend -->
-              </tbody>
-            </table>
+
+
+
+      <div class="px-8 flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
+        <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
+          <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
+            id="sidetab">
+            <!-- Data Coming FromBackend -->
           </div>
         </div>
 
+        <!--Ongoing Projects (2015-16) Onwards-->
+        <div class="content  lg:w-[80%] w-[100%]  lg:mt-[13%] mt-[5%] mb-5 overflow-auto " id="content" >
 
+        </div>
       </div>
     </div>
-    </div>
   </div>
-  
+
+
+ 
+
+
+
+
+
   <!--<div class="base-image hidden overflow-hidden lg:block "></div>-->
-  <div class="relative bottom-0">
 
-    <script src="../template/footer.js"></script>
-  </div>
+  <script src="../template/footer.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
-  <script>
-    function dropDownContentOnClick1() {
-      let strings = document.getElementsByClassName("dropContent1");
-      let head = document.getElementById("category");
 
-      head.innerHTML = strings[0].innerHTML
-
-
-
-    }
-    function dropDownContentOnClick2() {
-      let strings = document.getElementsByClassName("dropContent2");
-      let head = document.getElementById("category");
-      console.log("asjks" + head.innerHTML)
-      head.innerHTML = strings[0].innerHTML
-    }
-    function dropDownContentOnClick3() {
-      let strings = document.getElementsByClassName("dropContent3");
-      let head = document.getElementById("category");
-      console.log("asjks" + head.innerHTML)
-      head.innerHTML = strings[0].innerHTML
-    }
-  </script>
-  <script src="data/consultancyData.js"></script>
   <script src="../admin/app.js"></script>
-  <script src="./tabs.js"></script>
+  <script src="../research/data/consultancyData.js"></script>
 </body>
 
 </html>
