@@ -34,7 +34,8 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
@@ -43,7 +44,8 @@
 <body>
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
-    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32" style="font-family: Poppins;">
+    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32"
+        style="font-family: Poppins;">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
                 <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">CALENDER
@@ -100,6 +102,7 @@
                 </div> -->
                 <div class="flex-col justify-center align-center mr-[5%]  lg:w-[80%] w-[100%] mx-8">
                     <ul id="academic-calendar-list" class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6">
+
                         <script>
                             async function api_call() {
                                 var data = await fetch('https://wdmc-vsj1.onrender.com/academicCalendar/get/all');
@@ -120,14 +123,16 @@
                         <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar_except_B_5567.pdf" class="hover:text-red-500">Academic Calendar (Jan-May 2023) Except B.Tech 1st Year</a></li>
                         <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar(July-December_2022)_83830.pdf" class="hover:text-red-500">Academic Calendar (July-December 2022) M.Tech / MSc / MBA (1st Year)</a></li>
                         <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar_for_July-December,_2022_-_excluding_B_79925.pdf" class="hover:text-red-500">Academic Calendar (July-December 2022) Except B.Tech 1st Year </a></li>
+
                         <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Activities_Calendar_2022-2023_(1),_ODD_SEM_(excluding_B_97652.pdf" class="hover:text-red-500">Academic Activities (July-December 2022) Except B.Tech 1st Year</a></li>
                          -->
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/template/footer.js"></script>
+    <script src="../template/footer.js"></script>
 </body>
 
 </html>

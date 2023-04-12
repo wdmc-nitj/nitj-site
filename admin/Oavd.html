@@ -34,15 +34,16 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
 </head>
 
 <body>
-    <script src="/template/header.js" type="module"></script>
-    <script src="/template/helper.js"></script>
+    <script src="../template/header.js" type="module"></script>
+    <script src="../template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -68,40 +69,42 @@
             </nav>
         </div>
         <div> -->
-            <div class="titlebg">
-                <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
-                    <!-- px-4 lg:px-[11%] -->
-                    <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Online Application for verification of degree
-                    </p>
-                </div>
-                <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-                    <ol class="container inline-flex items-center">
-                        <li class="inline-flex items-center">
-                            <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                                <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
-                            </a>
-                        </li>
-                        <li aria-current="page">
-                            <div class="inline-flex items-center">
-                                <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
-                                    class="fa-solid fa-angle-right ml-2"></i>
-                                <a href="#" class="text-lg font-medium ml-2">Online Application for Verification of Degree</a>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
+        <div class="titlebg">
+            <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+                <!-- px-4 lg:px-[11%] -->
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Online
+                    Application for verification of degree
+                </p>
             </div>
-    
+            <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+                <ol class="container inline-flex items-center">
+                    <li class="inline-flex items-center">
+                        <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                            <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="inline-flex items-center">
+                            <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                                class="fa-solid fa-angle-right ml-2"></i>
+                            <a href="#" class="text-lg font-medium ml-2">Online Application for Verification of
+                                Degree</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
 
 
-            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
-                <div class="w-full flex flex-col items-start">
-                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Verification of Degree/Certificates
-                    </p>
-                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
-                    <!-- <span class="my-4 text-lg">(JEE Rank, Membership of Institute bodies)</span> -->
-                </div>
+
+        <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+            <div class="w-full flex flex-col items-start">
+                <p class="font2 font-medium text-[28px] lg:text-[44px]">Verification of Degree/Certificates
+                </p>
+                <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                <!-- <span class="my-4 text-lg">(JEE Rank, Membership of Institute bodies)</span> -->
             </div>
+
             <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px] my-4">
                 <div class="menu-content download-links">
                     <p><strong>Only&nbsp;for Verification Agencies:</strong></p>
@@ -129,6 +132,7 @@
                                         .insertAdjacentHTML(
                                             "beforeend",
                                             `<li class="ml-8">
+
                             <strong>
                                 <a href="${url}" style="font-size:16px"><span
                                     class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2">${title}</span>
@@ -136,9 +140,9 @@
                             </strong>
                             
                         </li>`
-                                        );
-                                }
+                                    );
                             }
+
                             api_call();
                         </script>
                     </ul>
@@ -185,10 +189,12 @@
                     </p>
                     <p></p>
                 </div>
+
             </div>
         </div>
-    
-    <script src="/template/footer.js"></script>
+    </div>
+
+    <script src="../template/footer.js"></script>
 </body>
 
 </html>

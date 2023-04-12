@@ -34,7 +34,8 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
@@ -44,7 +45,7 @@
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
-       
+
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
@@ -67,7 +68,7 @@
                     </li>
                 </ol>
             </nav>
-    </div>
+        </div>
 
         <div class="m-2">
             <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
@@ -120,53 +121,97 @@
                             <span onclick="HandleCourse('MSC')" id="MSC"
                                 class="w-full p-3 cursor-pointer rounded-tr-lg">MSC/MBA</span>
                         </div>
-                        <div class="mt-4">
+                        <div class="mt-4" id="curriculum-div">
                             <!-- <div class="text-center w-full my-12 text-3xl font-bold">Download Curriculum</div> -->
                             <div class="w-full flex flex-col text-center my-8">
                                 <p class="font2 font-medium text-[28px] lg:text-[44px]">Download Curriculum
                                 <div class="bg-accent w-[400px] h-[1px] lg:h-[5px] mx-auto"></div>
                                 </p>
                             </div>
-                            <div id="CurriculumData" class="grid grid-cols-2 place-items-center mt-4">
-                                <div class="flex items-center border rounded-lg shadow shadow-red-300 p-2">
-                                    <span><img class="" src="/public/assets/images/pdf_downlad.png"
-                                            alt="pdf dowmload" /></span>
-                                    <span>(2022 onwards)</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-center border rounded-lg shadow shadow-red-300 p-2">
-                                    <span><img class="" src="/public/assets/images/pdf_downlad.png"
-                                            alt="pdf dowmload" /></span>
-                                    <span>(2018 onwards)</span>
-                                </div>
-                            </div>
+                            <script>
+                                var Course = document.getElementById("BTech");
+                                var Dept = document.getElementById("BT");
+
+                                function HandleCourse(CourseID) {
+                                    Course.classList.remove('bg-[#0369a0]')
+                                    Course = document.getElementById(CourseID);
+                                    if (!Course.classList.contains('bg-[#0369a0]')) {
+                                        Course.classList.add('bg-[#0369a0]');
+                                    }
+                                    api_call();
+                                }
+                                function HandleCurriculum(DeptID) {
+                                    Dept.classList.remove('bg-blue-200')
+                                    Dept = document.getElementById(DeptID);
+                                    if (!Dept.classList.contains('bg-blue-200')) {
+                                        Dept.classList.add('bg-blue-200');
+                                    }
+                                    api_call()
+                                }
+                                async function api_call() {
+                                    console.log(Dept.getAttribute('id').toLowerCase());
+                                    var data = await fetch(`https://wdmc-vsj1.onrender.com/curriculum/getcurriculum/${Dept.getAttribute('id').toLowerCase()}`);
+                                    var result = await data.json();
+
+                                    console.log(result);
+                                    if (document.getElementById('curriculum-data')) {
+                                        document.getElementById('curriculum-data').remove();
+                                    }
+                                    const element = document.createElement('div');
+                                    element.setAttribute('class', "grid grid-cols-2 place-items-center mt-4");
+                                    element.setAttribute('id', 'curriculum-data');
+
+                                    for (var i in result) {
+                                        var courseName = result[i]['courseName'];
+                                        var departmentName = result[i]['departmentName'];
+
+
+
+                                        console.log(Course.getAttribute('id').toLowerCase(), Dept.getAttribute('id').toLowerCase());
+
+                                        if (courseName == Course.getAttribute('id').toLowerCase() && departmentName == Dept.getAttribute('id').toLowerCase()) {
+                                            element.style.visibility = "visible";
+
+
+
+                                            element.innerHTML = `
+                                            <a href="${result[i]['links']['after2022']}">
+                                    <div class="flex items-center border rounded-lg shadow shadow-red-300 p-2">
+                                        
+                                        <span><img class="" src="/public/assets/images/pdf_downlad.png"
+                                                alt="pdf dowmload" /></span>
+                                        <span>(2022 onwards)</span>
+                                        
+                                    </div>
+                                </a>
+                                    <a href="${result[i]['links']['after2018']}">
+                                    <div
+                                        class="flex items-center justify-center border rounded-lg shadow shadow-red-300 p-2">
+                                        
+                                        <span><img class="" src="/public/assets/images/pdf_downlad.png"
+                                                alt="pdf dowmload" /></span>
+                                        <span>(2018 onwards)</span>
+                                        
+                                    </div></a>`
+
+                                            document.getElementById('curriculum-div').append(element);
+                                        }
+
+                                        else {
+                                            console.log(element);
+                                            element.style.visibility = "hidden";
+                                        }
+                                    }
+                                }
+                                api_call();
+                            </script>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/template/footer.js"></script>
-    <script>
-        var Course = document.getElementById("BTech");
-        var Dept = document.getElementById("BT");
-
-        function HandleCourse(CourseID) {
-            Course.classList.remove('bg-[#0369a0]')
-            Course = document.getElementById(CourseID);
-            if (!Course.classList.contains('bg-[#0369a0]')) {
-                Course.classList.add('bg-[#0369a0]');
-            }
-        }
-        function HandleCurriculum(DeptID) {
-            Dept.classList.remove('bg-blue-200')
-            Dept = document.getElementById(DeptID);
-            if (!Dept.classList.contains('bg-blue-200')) {
-                Dept.classList.add('bg-blue-200');
-            }
-        }
-
-    </script>
+    <script src="../template/footer.js"></script>
 </body>
 
 </html>

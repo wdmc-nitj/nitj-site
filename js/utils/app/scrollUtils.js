@@ -61,6 +61,33 @@ export function publicationCardsScroll() {
   })
 }
 
+// Clubs Cards scroll
+const clubsContainer = document.getElementById('clubs-and-socs-container')
+let clubsContainerTop = clubsContainer.scrollTop
+let clubsDirection = true
+
+export function clubsCardsScroll() {
+  let currTop = clubsContainerTop
+
+  if (true) {
+    let curr = 0
+    if (clubsDirection) {
+      curr = clubsContainer.scrollTop + 1
+    } else {
+      curr = clubsContainer.scrollTop - 1
+    }
+    clubsContainer.scrollTop = curr
+    clubsContainerTop = curr
+  }
+  if (clubsContainerTop == currTop) {
+    clubsDirection = !clubsDirection
+  }
+  const timer = setTimeout(clubsCardsScroll, 15)
+  clubsContainer.addEventListener('mouseenter', () => {
+    clearTimeout(timer)
+  })
+}
+
 // Scroll to top Button
 
 const scrollToTopButton = document.querySelector('#scroll-to-top-button')

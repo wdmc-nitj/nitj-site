@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Favicon and title -->
   <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
-  <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+  <title>Research Projects-NITJ</title>
   <!-- RESEARCH -->
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
@@ -18,7 +18,11 @@
   <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 
   <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -93,6 +97,15 @@
       opacity: 1;
       width: 100%;
       height: 100%;
+    }
+
+    :root {
+      --font1: 'Poppins', sans-serif;
+      --font2: 'Barlow', sans-serif;
+    }
+
+    .main-body {
+      font-family: var(--font1);
     }
 
     .base-image {
@@ -176,6 +189,7 @@
       background-position: center;
       background-size: cover;
     }
+  
   </style>
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -186,65 +200,54 @@
   <script src="/template/header.js" type="module"></script>
   <script src="/template/helper.js"></script>
 
-  <div
-    class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
-    <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
-      Research Projects
-    </p>
-  </div>
-  <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-    <ol class="inline-flex items-center">
-      <li class="inline-flex items-center">
-        <a href="https://nitj.netlify.app/" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-          <a href="#" class="text-lg font-medium ml-2">Home</a>
-        </a>
-      </li>
-      <li aria-current="page">
-        <div class="inline-flex items-center">
-          <i style="
-              color: rgb(128, 128, 128);
-              font-size: 12px;
-              margin-left: 12px;
-            " class="fa-solid fa-angle-right ml-2"></i>
-          <a href="#" class="text-lg font-medium ml-2">Research </a>
-        </div>
-      </li>
-      <li aria-current="page">
-        <div class="inline-flex items-center">
-          <i style="
-              color: rgb(128, 128, 128);
-              font-size: 12px;
-              margin-left: 12px;
-            " class="fa-solid fa-angle-right ml-2"></i>
-          <a href="#" class="text-lg font-medium ml-2">Research Projects</a>
-        </div>
-      </li>
-    </ol>
-  </nav>
-
-  <div class="py-[48px] flex justify-center">
-    <div class="hidden lg:block text-3xl font-semibold decoration-4 decoration-[#0369a0]">
-      <div class="none lg:block">
-        Research Projects
+  <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+    <div class="titlebg">
+      <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+          <!-- px-4 lg:px-[11%] -->
+          <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Research Projects
+          </p>
       </div>
-      <div class="bg-accent w-[60%] lg:w-[60%] h-[5px] lg:h-[5px] "></div>
-    </div>
+      <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+          <ol class="container inline-flex items-center">
+              <li class="inline-flex items-center">
+                  <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                      <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                  </a>
+              </li>
+              <li aria-current="page">
+                  <div class="inline-flex items-center">
+                      <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                          class="fa-solid fa-angle-right ml-2"></i>
+                      <a href="#" class="text-lg font-medium ml-2">Research Projects</a>
+                  </div>
+              </li>
+          </ol>
+      </nav>
   </div>
 
+    <div class="flex justify-center">
+      <div class="hidden lg:block text-3xl font-semibold decoration-4 decoration-[#0369a0]">
+        <div class="none lg:block">
+          Research Projects
+        </div>
+        <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[5px]"></div>
+      </div>
+    </div>
 
-  <div class="mb-8 lg:mt-[-12%] md:mt-[-3%] mt-[-28%]">
-    <!-- DropDown -->
-    <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
-      <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
-        <!-- Dropdown toggle button -->
-        <button @click="dropdownMenu = ! dropdownMenu"
-          class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4">
-          <span class="mx-auto">Select Course <i class="fa-solid fa-caret-down"></i> </span>
-        </button>
-        <!-- Dropdown list -->
-        <div x-show="dropdownMenu" class="tabs2  p-2 rounded w-[100%]">
-          <ul>
-            <li x-on:click="dropdownMenu = ! dropdownMenu"
+
+    <div class="lg:mt-[-12%] md:mt-[-3%] mt-[-28%]">
+      <!-- DropDown -->
+      <div class="md:hidden flex flex-col mt-[-8%] justify-center items-center ">
+        <div x-data="{dropdownMenu: false}" class="block lg:hidden mx-auto lg:mt-[15%] mt-[30%] w-[60%]">
+          <!-- Dropdown toggle button -->
+          <button @click="dropdownMenu = ! dropdownMenu"
+            class="flex items-center p-2 bg-accent text-white rounded-md w-[100%]  mt-10 mb-4">
+            <span class="mx-auto">Select Ongoing Year <i class="fa-solid fa-caret-down"></i> </span>
+          </button>
+          <!-- Dropdown list -->
+          <div x-show="dropdownMenu" id="smallScreenSidetab" class="tabs2  p-2 rounded w-[100%]">
+            <ul>
+              <!-- <li x-on:click="dropdownMenu = ! dropdownMenu"
               class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text dropContent1" onclick=dropDownContentOnClick1()>Ongoing Projects (2015-16)
                 Onwards</span>
@@ -256,31 +259,31 @@
             <li x-on:click="dropdownMenu = ! dropdownMenu"
               class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text dropContent3" onclick=dropDownContentOnClick3()>Ongoing Projects (2013-14)</span>
-            </li>
-          </ul>
+            </li> -->
+            </ul>
 
+          </div>
         </div>
-      </div>
-
+        <!-- 
       <div class="flex items-center p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
         <span class="px-[15px]"><i class="fa-solid fa-angles-right text-[16px] "> <span
               class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="category">Ongoing Projects
               (2015-16) Onwards</span></i></span>
+      </div> -->
+
+
       </div>
 
-
-    </div>
-
-    <!-- DropDown -->
+      <!-- DropDown -->
 
 
 
 
-    <div class="mb-8 px-8 flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
-      <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
-        <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
-          id="sidetab">
-          <ul>
+      <div class="px-8 flex lg:flex-row w-[100%] lg:justify-between h-[100%] flex-col">
+        <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
+          <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
+            id="sidetab">
+            <!-- <ul>
             <li class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text">Ongoing Projects (2015-16) Onwards</span>
             </li>
@@ -290,239 +293,38 @@
             <li class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
               <span class="text">Ongoing Projects (2013-14)</span>
             </li>
-          </ul>
-        </div>
-      </div>
-
-      <!--Ongoing Projects (2015-16) Onwards-->
-      <div class="content  lg:w-[80%] w-[100%]  lg:mt-[15%] mt-[5%]">
-        <div class="tab_wrap w-[95%] active2 mx-auto rounded-lg shadow-sm " style="display: block;">
-          <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
-            <table class=" shadow-lg bg-white w-[100%]">
-              <thead class="text-left">
-                <tr>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[7%]">S. No.</th>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[60%]">Project Title</th>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[11%]">Year of Sanction</th>
-                  <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Funding Agency</th>
-                  <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Sanction Amount(Rs.In lac)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">1.</td>
-                  <td class="border px-8 py-2 text-sm  ">Information Security Education and Awareness Project-II</td>
-                  <td class="border px-8 py-2 text-sm  ">2015-16</td>
-                  <td class="border px-8 py-2 text-sm  ">PMU C-DAC Hyderabad</td>
-                  <td class="border px-8 py-2 text-sm  ">36.00</td>
-                </tr>
-              </tbody>
-            </table>
+          </ul> -->
           </div>
         </div>
 
+        <!--Ongoing Projects (2015-16) Onwards-->
+        <div class="content  lg:w-[80%] w-[100%]  lg:mt-[15%] mt-[5%]  overflow-auto" id="content">
 
-        <!-- Ongoing Projects (2014-15) -->
-        <div class="tab_wrap w-[95%] mx-auto rounded-lg shadow-sm" style="display: none;">
-          <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
-            <table class=" shadow-lg bg-white w-[100%]">
-              <thead class="text-left">
-                <tr>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[7%]">S. No.</th>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[60%]">Project Title</th>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[11%]">Year of Sanction</th>
-                  <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Funding Agency</th>
-                  <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Sanction Amount(Rs.In lac)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">1.</td>
-                  <td class="border px-8 py-2 text-sm  ">Generalized and Transverse momentum dependent parton
-                    distributions</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-15</td>
-                  <td class="border px-8 py-2 text-sm  ">SERB</td>
-                  <td class="border px-8 py-2 text-sm  ">13.32</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">2.</td>
-                  <td class="border px-8 py-2 text-sm  ">Some Universal Features of Nuclear Structure in Super deformed
-                    Nuclei</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-15</td>
-                  <td class="border px-8 py-2 text-sm  ">SERB</td>
-                  <td class="border px-8 py-2 text-sm  ">13.67</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">3.</td>
-                  <td class="border px-8 py-2 text-sm  ">To Strengthen the Research Facilities in the Department of
-                    Electronics & Communication Engineering</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-15</td>
-                  <td class="border px-8 py-2 text-sm  ">FIST</td>
-                  <td class="border px-8 py-2 text-sm  ">82.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">4.</td>
-                  <td class="border px-8 py-2 text-sm  ">Natural Product Inspired Design, Synthesis and Anticancer
-                    Evaluation of β-Carbonline Derivatives</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-15</td>
-                  <td class="border px-8 py-2 text-sm  ">CSIR</td>
-                  <td class="border px-8 py-2 text-sm  ">15.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">5.</td>
-                  <td class="border px-8 py-2 text-sm  "> γ-Radiation Induced Synthesis of Super-absorbents and Impact
-                    of Swift Heavy ion bombardment on the physic-chemical properties”</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-15</td>
-                  <td class="border px-8 py-2 text-sm  ">Inter University Accelerator Centre</td>
-                  <td class="border px-8 py-2 text-sm  ">10.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">6.</td>
-                  <td class="border px-8 py-2 text-sm  ">Special Man Power Development Programme for chip to system
-                    Design</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-15</td>
-                  <td class="border px-8 py-2 text-sm  ">CEERI Pilani</td>
-                  <td class="border px-8 py-2 text-sm  ">110.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">7.</td>
-                  <td class="border px-8 py-2 text-sm  ">Study of Treatment of Ground Water of A. B Sugar Ltd.</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-15</td>
-                  <td class="border px-8 py-2 text-sm  "> M/s A B Sugars Ltd</td>
-                  <td class="border px-8 py-2 text-sm  ">1.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">8.</td>
-                  <td class="border px-8 py-2 text-sm ">Measurement of Radon, Thoron and their Progeny Distribution in
-                    different types of houses in Mansa, Faridkot, and Muktsar districts of Punjab</td>
-                  <td class="border px-8 py-2 text-sm  ">2014-12</td>
-                  <td class="border px-8 py-2 text-sm  ">BRNS, BARC, Dept. of Atomic Energy</td>
-                  <td class="border px-8 py-2 text-sm  ">35.00</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Ongoing Projects (2013-14) -->
-        <div class="tab_wrap mx-auto w-[95%] rounded-lg shadow-sm" style="display: none;">
-          <div class=" overflow-auto rounded-lg shadow-sm mb-[5%]">
-            <table class=" shadow-lg bg-white w-[100%]">
-              <thead class="text-left">
-                <tr>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[7%]">S. No.</th>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[60%]">Project Title</th>
-                  <th class="border bg-color-1 text-white   px-8 py-2 w-[11%]">Year of Sanction</th>
-                  <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Funding Agency</th>
-                  <th class="border bg-color-1 text-white    px-8 py-2 w-[11%]">Sanction Amount(Rs.In lac)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">1.</td>
-                  <td class="border px-8 py-2 text-sm  "> Comparative Performance Evaluation, Emissions and Combustion
-                    Characteristics of a Compression Ignition Engine using castor Biodiesel </td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">SERB</td>
-                  <td class="border px-8 py-2 text-sm  ">14.50</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">2.</td>
-                  <td class="border px-8 py-2 text-sm  ">Dynamic Universal Testing Machine2</td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">DST</td>
-                  <td class="border px-8 py-2 text-sm  ">100.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">3.</td>
-                  <td class="border px-8 py-2 text-sm  "> Application of Building Blocks from Morita-Baylis-Hillman
-                    Chemistry for the Synthesis of Privileged Scaffolds</td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">SERB</td>
-                  <td class="border px-8 py-2 text-sm  ">123.70</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">4.</td>
-                  <td class="border px-8 py-2 text-sm  ">Design of Instrument for Positive Thread Feeding in Sewing
-                    Machine</td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">DST</td>
-                  <td class="border px-8 py-2 text-sm  ">22.11</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">5.</td>
-                  <td class="border px-8 py-2 text-sm  "> Strangeness and Charmness in Heavy Ion Collision Experiments
-                  </td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">SERB</td>
-                  <td class="border px-8 py-2 text-sm  ">11.28</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">6.</td>
-                  <td class="border px-8 py-2 text-sm  "> To strengthen PG Teaching & Research facilities in the
-                    Department (Chemistry)</td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">DST</td>
-                  <td class="border px-8 py-2 text-sm  ">42.50</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">7.</td>
-                  <td class="border px-8 py-2 text-sm  ">Electro-optic and dielectric studies in nanomaterial Dispersed
-                    Ferroelectric Liquid Crystal</td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">SERB</td>
-                  <td class="border px-8 py-2 text-sm  ">127.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">8.</td>
-                  <td class="border px-8 py-2 text-sm  "> To augments` teaching facilities in the Department (ECE)</td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">DST</td>
-                  <td class="border px-8 py-2 text-sm  ">155.00</td>
-                </tr>
-                <tr>
-                  <td class="border px-8 py-2 text-sm  ">9.</td>
-                  <td class="border px-8 py-2 text-sm  "> To augments the research facilities in the Department (ME)
-                  </td>
-                  <td class="border px-8 py-2 text-sm  ">2013-14</td>
-                  <td class="border px-8 py-2 text-sm  ">DST</td>
-                  <td class="border px-8 py-2 text-sm  ">100.00</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
         </div>
       </div>
     </div>
   </div>
-  <!--<div class="base-image hidden overflow-hidden lg:block "></div>-->
-  <div class="relative bottom-0">
 
-    <script src="../template/footer.js"></script>
-  </div>
+
+ 
+
+
+
+
+
+  <!--<div class="base-image hidden overflow-hidden lg:block "></div>-->
+
+  <script src="../template/footer.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
   <script>
     function dropDownContentOnClick1() {
       let strings = document.getElementsByClassName("dropContent1");
       let head = document.getElementById("category");
-
       head.innerHTML = strings[0].innerHTML
-
-      //   console.log(strings[i].innerHTML);
-      //   if(strings[i].innerHTML==='International Institutes'){
-      //     head.innerHTML='International Institutes';
-      //   }else if(strings[i].innerHTML==='Industries'){
-      //     head.innerHTML='Industries';
-      //   }else if(strings[i].innerHTML==='Indian Institutes'){
-      //     head.innerHTML='Indian Institutes';
-      //   }
-      // }
     }
     function dropDownContentOnClick2() {
       let strings = document.getElementsByClassName("dropContent2");
       let head = document.getElementById("category");
-      console.log("asjks" + head.innerHTML)
       head.innerHTML = strings[0].innerHTML
     }
     function dropDownContentOnClick3() {
@@ -534,7 +336,8 @@
   </script>
 
   <script src="../admin/app.js"></script>
-  <script src="./tabs.js"></script>
+
+  <script src="./data/reseachProjects.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon and title -->
     <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png" />
-    <title>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</title>
+    <title>Insititute Innovation Council</title>
     <!-- RESEARCH -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
@@ -18,8 +18,11 @@
     <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 
     <!-- Google Fonts  -->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -97,6 +100,15 @@
             opacity: 1;
             width: 100%;
             height: 100%;
+        }
+
+        :root {
+            --font1: 'Poppins', sans-serif;
+            --font2: 'Barlow', sans-serif;
+        }
+
+        .main-body {
+            font-family: var(--font1);
         }
 
         .base-image {
@@ -180,49 +192,37 @@
 <body>
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
-
-    <div
-        class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px] mt-[112px] lg:mt-32">
-        <p class="font2 font-bold text-[45px] lg:text-[64px] uppercase text-white leading-[1]">
-            Institute Innovation Council
-        </p>
+  
+  <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+    <div class="titlebg">
+        <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+            <!-- px-4 lg:px-[11%] -->
+            <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Institute Innovation Council
+            </p>
+        </div>
+        <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+            <ol class="container inline-flex items-center">
+                <li class="inline-flex items-center">
+                    <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+                        <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+                    </a>
+                </li>
+                <li aria-current="page">
+                    <div class="inline-flex items-center">
+                        <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                            class="fa-solid fa-angle-right ml-2"></i>
+                        <a href="#" class="text-lg font-medium ml-2">Institute Innovation Council</a>
+                    </div>
+                </li>
+            </ol>
+        </nav>
     </div>
-    <nav class="flex px-4 lg:px-[11%] bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-        <ol class="inline-flex items-center">
-            <li class="inline-flex items-center">
-                <a href="https://nitj.netlify.app/"
-                    class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                    <a href="#" class="text-lg font-medium ml-2">Home</a>
-                </a>
-            </li>
-            <li aria-current="page">
-                <div class="inline-flex items-center">
-                    <i style="
-                color: rgb(128, 128, 128);
-                font-size: 12px;
-                margin-left: 12px;
-              " class="fa-solid fa-angle-right ml-2"></i>
-                    <a href="#" class="text-lg font-medium ml-2">Research</a>
-                </div>
-            </li>
-            <li aria-current="page">
-                <div class="inline-flex items-center">
-                    <i style="
-                color: rgb(128, 128, 128);
-                font-size: 12px;
-                margin-left: 12px;
-              " class="fa-solid fa-angle-right ml-2"></i>
-                    <a href="#" class="text-lg font-medium ml-2">Institute Innovation Council</a>
-                </div>
-            </li>
-        </ol>
-    </nav>
 
-    <div class="py-[48px] px-[8px]">
-        <div class=" mx-auto w-[90%]">
-            <div class="items-start p-2">
+    <div class="container">
+        <div class="w-[90%]">
+            <div class="items-start">
                 <p class="font2 font-semibold text-[24px] lg:text-[32px]">
-                    NIT Jalandhar's Institution Innovation Council (IIC) rated 4.5 Star by the Ministry of Education
+                    NITJ's Institution Innovation Council (IIC) rated 4.5 Star by the Ministry of Education
                     <!-- <div class="bg-accent w-[20%] h-[3px] mb-4 mt-2"></div> -->
                 </p>
             </div>
@@ -246,24 +246,6 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-row lg:ml-[15%] lg:mr-[15%] mb-6  bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
-
-                <div class="">
-                    <img src="https://www.nitj.ac.in/nitj_files/links/Director_Sir_63744.png" alt="image">
-                </div>
-
-                <div class=" flex ml-[5%]  justify-center items-center ">
-                    <div class=" w-full">
-                        <p class=" font-semibold">Jai Hind Jai Bharat!!!!</p>
-                        <p>
-                            <span class=" font-semibold">Prof. Lalit K Awasthi </span> <br>
-                            Director <br>
-                            <span class=" font-semibold">Dr B R Ambedkar National Institute of Technology Jalandhar
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="ml-[15%] mr-[15%] mb-6  bg-slate-50 rounded-r-md shadow-lg px-2 py-3">
@@ -272,6 +254,7 @@
                     alt="IIC_Rating_Img">
             </a>
         </div>
+      </div>
 
     </div>
     <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->

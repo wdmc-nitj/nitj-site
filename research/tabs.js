@@ -2,12 +2,13 @@ var tabs = document.querySelectorAll(".tabs ul li");
 var tab_wraps = document.querySelectorAll(".tab_wrap");
 var tab_wraps2 = document.querySelectorAll(".tracking-wider");
 var tabs2=document.querySelectorAll(".tabs2 ul li");
-
+console.log(tabs);
 
 tabs.forEach(function(tab, tab_index){
+	
 	tab.addEventListener("click", function(){
-		
 		tabs.forEach(function(tab){
+			
 			tab.classList.remove("active2");
 		})
 		tab.classList.add("active2");

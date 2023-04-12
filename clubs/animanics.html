@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animaniacs- NITJ</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font-family: 'Barlow', sans-serif;
+    font-family: 'Poppins', sans-serif; -->
+
+  <style>
+    /* Customizing the Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(30, 58, 138, 1);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: gray;
+    }
+
+    ::-webkit-resizer {
+      background-color: #ffffff;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 300, "grad" 0, "opzs" 20;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .font2 {
+      font-family: 'Barlow', sans-serif;
+    }
+
+    :root {
+      --primary-color: #fff;
+      --background-color: #212121;
+
+      --blue-color: #0369A1;
+      --light-blue-color: #F6F6FE;
+      --purple-color: #040320;
+      --font1: 'Poppins', sans-serif;
+      --font2: 'Barlow', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-body {
+      font-family: var(--font1);
+    }
+
+    .titlebg {
+      background: linear-gradient(90.09deg, rgba(0, 0, 0, 0.7) 0.08%, rgba(255, 255, 255, 0) 99.11%), url(img/about_top.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .tile1 {
+      background: linear-gradient(132.04deg, rgba(255, 255, 255, 0.1) 16.87%, rgba(255, 255, 255, 0.4) 75.02%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(40px);
+      background-color: #0369A1;
+      /* Note: backdrop-filter has minimal browser support */
+      border-radius: 6px;
+      transition: all .3s ease-in-out;
+    }
+
+    .tile1:hover {
+      transform: scale(1.1);
+    }
+
+    /* Outer Layer with the timeline border */
+    .outer {
+      border-left: 3px solid #0369A1;
+    }
+
+    /* Card container */
+    .card {
+      position: relative;
+      /* box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3); */
+    }
+
+    /* Timeline dot  */
+    .title::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: white;
+      border-radius: 999px;
+      left: -29px;
+      border: 3px solid #0369A1;
+    }
+
+    .box {
+      flex: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      line-height: 0;
+    }
+
+    .box>img {
+      width: 100%;
+      height: 100%;
+      border: 0.2rem solid white;
+      border-radius: 8px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: ease 0.75s;
+      
+    }
+
+    .box:hover {
+      flex: 1 1 30%;
+      /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .box:hover>img {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .base-image {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+
+      background-color: #cccccc;
+      height: 400px;
+      background-position: 0% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .base-image-2 {
+      margin-top: 40px;
+      background-image: url("img/nitj3.jpg"),
+        linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+      background-color: #cccccc;
+      height: 300px;
+      background-position: 58% 28%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      .academic-timeline {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script src="/common template/header.js" type="module"></script>
+
+  <div class="main-body flex flex-col gap-8 lg:gap-2 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
+    <div class="titlebg">
+      <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
+        <!-- <p> Code by Bhavya Mittal </p> -->
+        <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Animaniacs Club</p>
+      </div>
+      <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
+        <ol class="container inline-flex items-center">
+          <li class="inline-flex items-center">
+            <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
+              <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="inline-flex items-center">
+              <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
+                class="fa-solid fa-angle-right ml-2"></i>
+              <a href="#" class="text-lg font-medium ml-2">About</a>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- <p> Code by Bhavya Mittal </p> -->
+
+    <div class="container flex flex-col items-start gap-[20px] lg:gap-[16px]">
+      <div class="flex md:flex-row justify-center flex-col mt-0 py-0">
+        <div class="w-full flex flex-col items-start">
+          <p class="font2 font-medium text-[28px] lg:text-[32px]">Introduction</p>
+          <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
+          <br>
+          <div class="w-full flex flex-row items-start">
+            <div class="w-12/12 md:w-5/12 px-2" style=" width: 200px;">
+              <img src="./img/IMG-20230321-WA0005 - ARUN RAJEEV.jpg "
+              alt="">
+            </div>
+            <div id="Introduction" style=" position:relative;top:-12px; text-align:justify; text-justify:inter-word; margin: 10px;">Animaniacs is the first official
+              animation club of NITJ founded by Mohit Vansal (Textile Texhnology '22). We are a creative community 
+              providing a platform for students to create and learn animation by working together in a fun and exciting 
+              atmosphere. Our vision is "to forge an environment of creativity and foster artistic growth and enrich 
+              innate talents".
+              <br>
+              
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="container w-full flex flex-col items-start">
+      <p class="font2 font-medium text-[28px] lg:text-[32px]">Social Media links :-</p>
+      <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
+    </div>
+
+    <div class="container flex" style="text-align: left;">
+     
+
+      <!-- Instagram -->
+      <a class="mr-4" style="margin-left: 10px;" href="https://instagram.com/animaniacs_official?igshid=YmMyMTA2M2Y=">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" style="color: #c13584"
+          viewBox="0 0 24 24">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+      </a>
+
+    </div>
+      
+
+    <div id="quality-policy" class="container">
+      <div class="my-6 mx-auto px-2">
+        <div class="w-full flex flex-col items-start">
+          <p class="font2 font-medium text-[28px] lg:text-[32px]">Committee</p>
+          <div class="bg-accent w-full lg:w-[111px] h-[1px] lg:h-[3px]"></div>
+        </div>
+        <div class="overflow-x-auto mt-6 relative">
+          <table class="w-full border text-sm text-left ">
+            <tbody>
+              <tr class="bg-white border-b  ">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                  <p class="font2 text-[20px]">Faculty Coordinator</p>
+                </th>
+                <td class="py-4 px-6 text-black">
+                  <p> <span class="font2 text-[20px] mb-1">Dr. Amritpal Singh</span> 
+                    <br>
+                    Assistant Professor (Grade-I)
+                    <br>
+                    Department of Computer Science & Engg.
+                    <br>
+                    <a href="mailto:apsingh@nitj.ac.in"><u>apsingh@nitj.ac.in</u></a>
+                    <br>
+                  </p>
+                </td>
+              </tr>
+              <tr class="bg-white border-b  ">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                  <p class="font2 text-[20px]">Student Coordinator</p>
+                </th>
+                <td class="py-4 px-6 text-black">
+                  <p> <span class="font2 text-[20px] mb-1">Arun Rajeev</span> 
+                    <br>
+                    4th Year
+                    <br>
+                    Department of Computer Science & Engg.
+                    <br>
+                    <a href="mailto:arunr.cs.19@nitj.ac.in"><u>arunr.cs.19@nitj.ac.in</u></a>
+                    <br>
+                    7306338391
+                    <br>
+                  </p>
+                  <br>
+                  <p> <span class="font2 text-[20px] mb-1">Farha Ismail</span> 
+                    <br>
+                    3rd Year
+                    <br>
+                    Department of Computer Science & Engg.
+                    <br>
+                    <a href="mailto:farhai.cs.20@nitj.ac.in"><u>farhai.cs.20@nitj.ac.in</u></a>
+                    <br>
+                    9633340684
+                    <br>
+                  </p>
+                  <br>
+                  <p> <span class="font2 text-[20px] mb-1">Nandini Jaryal</span> 
+                    <br>
+                    4th Year
+                    <br>
+                    Department of Computer Science & Engg.
+                    <br>
+                    <a href="mailto:nandinij.cs.19@nitj.ac.in"><u>nandinij.cs.19@nitj.ac.in</u></a>
+                    <br>
+                    7526961911
+                    <br>
+                  </p>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="container flex flex-col items-start gap-[20px] lg:gap-[16px]">
+
+      <div class="container">
+        <div class="container flex h-[30vh] w-full">
+            <div class="box">
+                <img src="img/animaniacs1.jpg" />
+            </div>
+            <div class="box hidden lg:block">
+                <img src="img/animaniacs2.jpg" />
+            </div>
+            <div class="box hidden lg:block">
+                <img src="img/animaniacs3.jpg" />
+            </div>
+        </div>
+
+        <div class="container flex h-[30vh] w-full" >
+          <div class="box">
+              <img src="img/animaniacs4.jpg" />
+          </div>
+          <div class="box hidden lg:block">
+              <img src="img/animaniacs5.jpg" />
+          </div>
+        </div> 
+      </div>
+    
+    </div>
+
+    <!-- <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+      <div className="-m-1 flex flex-wrap md:-m-2">
+        <div className="flex md:w-1/2 flex-wrap">
+          <div className="md:w-1/2 p-1 md:p-2 ">
+            <Image
+              alt="gallery"
+              className="block h-full w-full rounded-lg object-cover object-center shadow-md shadow-md"
+              src="img/animaniacs1.jpg" 
+              width={400}
+              height={400}/>
+          </div>
+          <div className="md:w-1/2 p-1 md:p-2">
+            <Image
+              alt="gallery"
+              className="block h-full w-full rounded-lg object-cover object-center shadow-md"
+              src="img/animaniacs2.jpg" 
+              width={400}
+              height={400}/>
+          </div>
+          <div className="w-full p-1 md:p-2">
+            <Image
+              alt="gallery"
+              className="block h-full w-full rounded-lg object-cover object-center shadow-md"
+              src="img/animaniacs3.jpg"
+              width={400}
+              height={400} />
+          </div>
+        </div>
+        <div className="flex w-full md:w-1/2 flex-wrap">
+          <div className="w-full p-1 md:p-2">
+            <Image
+              alt="gallery"
+              className="block h-full w-full rounded-lg object-cover object-center shadow-md"
+              src="img/animaniacs4.jpg" 
+              width={400}
+              height={400}/>
+          </div>
+          <div className="md:w-1/2 p-1 md:p-2">
+            <Image
+              alt="gallery"
+              className="block h-full w-full rounded-lg object-cover object-center shadow-md"
+              src="img/animaniacs5.jpg"
+              width={400}
+              height={400} />
+          </div>
+          <div className="md:w-1/2 p-1 md:p-2">
+            <Image
+              alt="gallery"
+              className="block h-full w-full rounded-lg object-cover object-center shadow-md"
+              src="/images/events/06.jpg"
+              width={400}
+              height={400} />
+          </div>
+        </div>
+      </div>
+    </div> -->
+    
+    
+
+  </div>
+
+
+  <script src="app.js"></script>
+  <script src="../common template/footer.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

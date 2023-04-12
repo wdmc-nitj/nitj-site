@@ -34,15 +34,16 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
 </head>
 
 <body>
-    <script src="/template/header.js" type="module"></script>
-    <script src="/template/helper.js"></script>
+    <script src="../template/header.js" type="module"></script>
+    <script src="../template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -133,21 +134,86 @@
                     </div>
                     <div class="w-full border-l rounded-tr-lg rounded-br-lg">
                         <div class="grid text-lg text-center grid-cols-4 border-b shadow-md font-semibold">
-                            <span onclick="HandleCourse('BTech')" id="BTech"
+                            <span onclick="HandleCourse('B.Tech')" id="B.Tech"
                                 class="w-full border-r p-3 cursor-pointer bg-[#0369a0]">BTech</span>
-                            <span onclick="HandleCourse('MTech')" id="MTech"
+                            <span onclick="HandleCourse('M.Tech')" id="M.Tech"
                                 class="w-full border-r p-3 cursor-pointer">MTech</span>
                             <span onclick="HandleCourse('PhD')" id="PhD"
                                 class="w-full border-r p-3 cursor-pointer">PhD</span>
                             <span onclick="HandleCourse('MSC')" id="MSC"
                                 class="w-full p-3 cursor-pointer rounded-tr-lg">MSC/MBA</span>
                         </div>
-                        <div class="mt-4">
+                        <div class="mt-4" id="tt-div">
                             <div class="w-full flex flex-col text-center my-8">
                                 <p class="font2 font-medium text-[28px] lg:text-[44px]">Time Table
                                 <div class="bg-accent w-[111px] h-[1px] lg:h-[5px] mx-auto"></div>
                                 </p>
                             </div>
+                            <script>
+                                var Course = document.getElementById("B.Tech");
+                                var Dept = document.getElementById("BT");
+                        
+                                function HandleCourse(CourseID) {
+                                    Course.classList.remove('bg-[#0369a0]')
+                                    Course = document.getElementById(CourseID);
+                                    if (!Course.classList.contains('bg-[#0369a0]')) {
+                                        Course.classList.add('bg-[#0369a0]');
+                                    }
+                                    api_call();
+                                }
+                                function HandleCurriculum(DeptID) {
+                                    Dept.classList.remove('bg-blue-200')
+                                    Dept = document.getElementById(DeptID);
+                                    if (!Dept.classList.contains('bg-blue-200')) {
+                                        Dept.classList.add('bg-blue-200');
+                                    }
+                                    api_call()
+                                }
+                                async function api_call() {
+                                    console.log(Dept.getAttribute('id').toLowerCase());
+                                    var data = await fetch(`https://wdmc-vsj1.onrender.com/dept/${Dept.getAttribute('id').toLowerCase()}/TimeTable`);
+                                    var result = await data.json();
+
+                                    console.log(result);
+                                    if(document.getElementById('tt-data')){
+                                        document.getElementById('tt-data').remove();
+                                    }
+                                    const element = document.createElement('div');
+                                    element.setAttribute('class',"grid grid-cols-2 place-items-center mt-4");
+                                    element.setAttribute('id','tt-data');
+    
+                                    for (var i in result) {
+                                        var courseName = result[i]['type'];
+                                        var departmentName = result[i]['department'];
+
+                                        console.log(courseName);
+                                        console.log(departmentName);
+
+                                        if(courseName == Course.getAttribute('id') && departmentName == Dept.getAttribute('id').toLowerCase()){
+                                            element.style.visibility =  "visible";
+
+                                            element.innerHTML = `
+                                            <a href="${result[i]['link']}">
+                                    <div class="flex items-center border rounded-lg shadow shadow-red-300 p-2">
+                                        
+                                        <span><img class="" src="/public/assets/images/pdf_downlad.png"
+                                                alt="pdf dowmload" /></span>
+                                        <span>Download</span>
+                                    </div>
+                                </a>`
+
+                                        document.getElementById('tt-div').append(element);
+                                        }
+
+                                        else{
+                                            console.log(element);
+                                            element.style.visibility = "hidden";
+                                        }
+                                    }
+                                }
+                                api_call();
+                            </script>
+<!-- 
                             <div id="CurriculumData" class="grid grid-cols-2 place-items-center mt-4">
                                 <div class="flex items-center border rounded-lg shadow shadow-red-300 p-2">
                                     <span><img class="" src="/public/assets/images/pdf_downlad.png"
@@ -160,7 +226,7 @@
                                             alt="pdf dowmload" /></span>
                                     <span>(2018 onwards)</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -168,25 +234,6 @@
         </div>
     </div>
     <script src="/template/footer.js"></script>
-    <script>
-        var Course = document.getElementById("BTech");
-        var Dept = document.getElementById("BT");
-        function HandleCourse(CourseID) {
-            Course.classList.remove('bg-[#0369a0]')
-            Course = document.getElementById(CourseID);
-            if (!Course.classList.contains('bg-[#0369a0]')) {
-                Course.classList.add('bg-[#0369a0]');
-            }
-        }
-        function HandleCurriculum(DeptID) {
-            Dept.classList.remove('bg-blue-200')
-            Dept = document.getElementById(DeptID);
-            if (!Dept.classList.contains('bg-blue-200')) {
-                Dept.classList.add('bg-blue-200');
-            }
-        }
-
-    </script>
 </body>
 
 </html>

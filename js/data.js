@@ -17,6 +17,7 @@ fetch(`${baseURL}/news/`)
     const newsCards = document.getElementById('news-cards')
     newsCards.innerHTML = ''
     data.forEach((news) => {
+      // console.log(news)
       const newsCard = document.createElement('div')
       newsCard.setAttribute(
         'class',
@@ -24,12 +25,20 @@ fetch(`${baseURL}/news/`)
       )
       newsCard.innerHTML = `
       
-            <a href="/template/index.html?id=${news._id}?category=news">
+            <a 
+                ${
+                  news.newPage
+                    ? `target = "_blank" href= "${news.pdfLink}"`
+                    : `href = "/template/index.html?id=${news._id}?category=news"`
+                }
+            
+            >
               <div class="flex flex-col items-start justify-start space-y-1 border-l-4 border-gray-800 pl-5">
               
-              <p class="w-full text-lg font-semibold line-clamp-1">
-              ${news.new ?         
-                `
+              <p class="w-full text-lg font-semibold">
+              ${
+                news.new
+                  ? `
                 
                 <span class="absolute -top-1 -left-1">
                   <span class="relative flex h-3 w-3">
@@ -38,11 +47,13 @@ fetch(`${baseURL}/news/`)
                     <span class="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
                   </span>
                 </span>
-                `: ''}  
+                `
+                  : ''
+              }  
               ${news.title}</p>
 
                 <p class="w-full line-clamp-2">
-                  ${news.desc}
+                  ${news?.title2}
                 </p>
               </div
             </a>
@@ -74,28 +85,40 @@ fetch(`${baseURL}/testimonial/get/all`)
       parseInt(Math.random() * data.length)
     )
     const testimonial = document.getElementById('testimonial')
-
+    testimonial.innerHTML = ''
     randNums.forEach((randNum) => {
       const testimonialImg = document.createElement('img')
       testimonialImg.src = data[randNum].image
-      testimonialImg.setAttribute('class', 'object-cover rounded-lg h-28 w-28')
+      testimonialImg.setAttribute(
+        'class',
+        'object-cover rounded-lg hidden md:block max-w-[8rem] md:h-full aspect-square'
+      )
       const testimonialCard = document.createElement('div')
-      const card = document.createElement('a')
-      card.href = '/alumni/alumni.html'
+      const card = document.createElement('div')
+      // card.href = '/alumni/alumni.html'
       card.setAttribute(
         'class',
-        'col-start-1 row-start-1 col-end-2 row-end-2 md:mr-6 bg-white rounded-lg flex flex-col md:flex-row p-5 ring-2 hover:ring-4 transition-all duration-300 gap-5 ring-accent'
+        'col-start-1 row-start-1 col-end-2 row-end-2 md:mr-6 bg-white rounded-lg flex flex-col justify-center items-center md:flex-row p-5 ring-2 gap-5 ring-accent'
       )
       testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
       testimonialCard.innerHTML = `
         <div class='text-xl flex flex-col gap-5'>
-          <p>
+          <p class="md:line-clamp-3">
             ${data[randNum].messageText}
           </p>
-          <div>
-            <p class='text-lg font-bold text-accent'>- ${data[randNum].name}</p>
-            <p class='ml-2 text-sm text-gray-600 font-bold'>${data[randNum].designation}</p>
+          <div class="flex flex-col gap-4 md:flex-row justify-between">
+            <div>
+              <p class="text-lg font-bold text-accent">- ${data[randNum].name}</p>
+              <p class="ml-2 text-sm text-gray-600 font-bold">${data[randNum].designation}</p>
+            </div>
+            <a
+            target="_blank" 
+            href="/alumni/alumni.html" class="md:ml-auto w-fit text-base font-semibold bg-accent text-white hover:text-accent hover:ring-2 ring-inset ring-accent flex items-center hover:bg-white px-4 py-1 rounded-lg transition">
+              <span>Alumni Site &rarr;</span>
+              
+            </a>
           </div>
+
         </div>
       `
       card.append(testimonialImg, testimonialCard)
@@ -155,10 +178,15 @@ fetch(`${baseURL}/latestEvent/get/all`)
                     </div>
                     <div class="pt-5 mt-auto whitespace-nowrap">
                       <a
-                      href = "/template/index.html?id=${
-                        e._id
-                      }?category=latestEvent" 
-                      class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More &rarr;</a>
+
+                      ${
+                        e.newPage
+                          ? `target = "_blank" href= "${e.pdfLink}"`
+                          : `href = "/template/index.html?id=${e._id}?category=latestEvent"`
+                      }
+                       
+                      class="cursor-pointer font-medium text-sky-500 hover:text-sky-600"
+                      >Read More &rarr;</a>
                     </div>
                   </div>
                 </div>
@@ -209,15 +237,26 @@ fetch(`${baseURL}/researchHighlights/get/all`)
            <div
                 class="rounded-xl h-full bg-light-purple shadow-xl border-t-4 border-b-4 border-accent w-60">
                 <div class=" h-full w-full flex flex-col p-2.5">
-                  <img class="h-44 basis-3/5 object-cover rounded-lg" src="${e.image}" />
+                  <img class="h-44 basis-3/5 object-cover rounded-lg" src="${
+                    e.image
+                  }" />
                   <div class="flex flex-col justify-between p-4 basis-2/5">
                     <p class="text-lg line-clamp-3 font-semibold text-gray-900">
-                      ${e.desc}
+                      ${e.title}
                     </p>
                     <div class="mt-auto pt-5 flex whitespace-nowrap items-center justify-start space-x-3">
                       <a
-                       href = "/template/index.html?id=${e._id}?category=researchHighlights" 
-                      class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">Read More &rarr;</a>
+
+                      ${
+                        e.newPage
+                          ? `target = "_blank" href= "${e.pdfLink}"`
+                          : `href = "/template/index.html?id=${e._id}?category=researchHighlights"`
+                      }
+                       
+                      class="cursor-pointer font-medium text-sky-500 hover:text-sky-600">
+                      
+                      Read More &rarr;
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -300,10 +339,10 @@ fetch(`${baseURL}/placementStat/get/all`)
     data.sort((a, b) => {
       a.order - b.order
     })
-    const statsData = data.map((stat) => stat.PlacementStat)
+
     const element = document.getElementById('placement-stats')
     // console.log(statsData)
-    statsData.map((statData) => {
+    data.map((statData) => {
       // console.log(metric, stat, stat[metric])
       const stat = document.createElement('div')
       stat.setAttribute('class', 'number')
@@ -315,31 +354,32 @@ fetch(`${baseURL}/placementStat/get/all`)
     })
   })
 
-fetch(`${baseURL}/publication/get/all`)
+fetch(`${baseURL}/publication`)
   .then((res) => res.json())
   .then((apidata) => {
     const data = dataFilter(apidata)
+    // console.log(data)
     const parentDiv = document.getElementById('publication-cards')
-    data.forEach((e) => {
-      const content = e.Publication
+    parentDiv.innerHTML = ''
+    data.forEach((content) => {
       const div = document.createElement('div')
       div.setAttribute('id', 'publication-card')
       div.innerHTML = `  
       <div id="publication-card" class="w-full flex flex-col gap-4 py-2">
-            <a href="${content.url}">
+            <a
+            target= "_blank"
+            href="${content?.url || '#'}">
               <p>
               <p
-              class = "inline font-semibold text-accent cursor-pointer"
-              >${content.authors}</p>&nbsp;&nbsp;
-               ${content.desc}
+              class = "inline font-semibold text-accent cursor-pointer">
+              ${content?.authors}</p>&nbsp;&nbsp;
+
+               ${content?.desc}
               </p>
             </a>
-          <!--  <a href="${content.url}"
-              class="mr-[10px] inline-block font-semibold  text-2xl text-accent cursor-pointer hover:underline hover:text-sky-500">
-              More Details
-            </a> -->
+        
           </div>`
-      e.show && parentDiv.appendChild(div)
+      content.show && parentDiv.appendChild(div)
     })
   })
 
@@ -347,9 +387,10 @@ fetch(`${baseURL}/club/get/all`)
   .then((res) => res.json())
   .then((apidata) => {
     // console.log(data)
-    const data = dataFilter(apidata)
+    const data = apidata.sort((a, b) => Math.random() - 0.5)
 
     const parentDiv = document.getElementById('clubs-and-socs')
+    parentDiv.innerHTML = ''
     data.forEach((e) => {
       // console.log(e)
       // const content = e
@@ -360,29 +401,35 @@ fetch(`${baseURL}/club/get/all`)
         'overflow-hidden rounded-xl bg-white w-full shadow-lg'
       )
       div.innerHTML = `
-                <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                  <div class="w-2/5 bg-cover bg-center bg-no-repeat">
-                  <img src ='${e.img}' class="w-full h-full object-cover" alt="Club Image" />
-                  </div>
-                  <div class="flex flex-col p-6 w-full sm:w-3/5">
-                    <div class="flex flex-col items-start justify-start space-y-3">
-                      <h4 class="text-2xl font-bold uppercase">${e.name}</h4>
-                      <div
-                        class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
-                        <p class="text-xs font-bold uppercase text-purple-500">
-                          ${e.type}&nbsp;Club
-                        </p>
-                      </div>
-                      <p class="line-clamp-3 leading-5">
-                        ${e.desc}
-                      </p>
-                    </div>
-                    <div class="mt-5 flex items-center justify-start space-x-3">
-                      <a href='#' class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
-                        <span>&rarr;</span></a>
-                    </div>
-                  </div>
-                </div>
+        <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
+          <div class="w-full sm:w-2/5 bg-cover bg-center bg-no-repeat">
+          <img src ='${
+            e.img
+          }' class="w-full h-full object-cover" alt="Club Image" />
+          </div>
+          <div class="flex flex-col p-6 w-full sm:w-3/5">
+            <div class="flex flex-col items-start justify-start space-y-3">
+              <h4 class="text-2xl font-bold uppercase">${e.name}</h4>
+              <div
+                class="flex items-start justify-start rounded-full border-2 border-purple-500 bg-purple-100 px-2 py-0.5 mt-2">
+                <p class="text-xs font-bold uppercase text-purple-500">
+                  ${e.type}
+                </p>
+              </div>
+              <p class="line-clamp-2 leading-5">
+                ${e.desc}
+              </p>
+            </div>
+            <div class="mt-5 flex items-center justify-start space-x-3">
+              <a 
+              target = "_blank"
+              href="${
+                e?.url || '#'
+              }" class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+                <span>&rarr;</span></a>
+            </div>
+          </div>
+        </div>
       `
       e.show && parentDiv.appendChild(div)
     })
@@ -390,17 +437,24 @@ fetch(`${baseURL}/club/get/all`)
 
 // Making the cards dynamic
 var size_images = 0
-img_arr = []
+var img_arr = []
 // Fetching the images in the photo gallery
-
-fetch(`${baseURL}/photoGallery/`)
+function load_more(){
+  fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {
-    const images = data.sort((a, b) => 0.5 - Math.random())
+    // console.log(data)
+
+    const Images = data.sort((a, b) => 0.5 - Math.random())
+    const images = Images.filter((img) => {
+      return img.type === 'photoGallery'
+    })
+    images.sort((a, b) => 0.5 - Math.random())
     size_images = images.length
     img_arr = images
     // const images = shuffledArray.slice(0,12)
     // console.log(data)
+
     const parentDiv = document.getElementById('gallery')
     const firstRow = document.createElement('div')
     const secondRow = document.createElement('div')
@@ -411,7 +465,9 @@ fetch(`${baseURL}/photoGallery/`)
     let i = 0
     let y = 1
     images.forEach((img, key) => {
-      // img.image.link
+      // img_arr.push(img.name)
+      // img_arr.push(img.link)
+      // img.link
       if (y > 12) {
         return
       }
@@ -422,7 +478,7 @@ fetch(`${baseURL}/photoGallery/`)
       const imgContainer = document.createElement('div')
       imgContainer.classList.add('box')
       imgContainer.innerHTML = `
-        <img class= "gallery-image" data-index="${key}" src="${img.image.link}" />
+        <img class= "gallery-image" data-index="${key}" src="${img.link}" />
         `
 
       if (y % 4 == 0 && window.innerWidth <= 800) {
@@ -440,6 +496,71 @@ fetch(`${baseURL}/photoGallery/`)
     })
     parentDiv.append(firstRow, secondRow, thirdRow)
   })
+  .finally(() => {
+    const loadingTemplate = document.getElementById('gallery-loading-template')
+    loadingTemplate.innerHTML = ''
+  })
+}
+fetch(`${baseURL}/photoGallery/`)
+  .then((res) => res.json())
+  .then((data) => {
+    // console.log(data)
+
+    // const images = data.sort((a, b) => 0.5 - Math.random())
+    const images = data.filter((img) => {
+      return img.type === 'photoGallery'
+    })
+    images.sort((a, b) => 0.5 - Math.random())
+    size_images = images.length
+    img_arr = images
+    // const images = shuffledArray.slice(0,12)
+    // console.log(data)
+
+    const parentDiv = document.getElementById('gallery')
+    const firstRow = document.createElement('div')
+    const secondRow = document.createElement('div')
+    const thirdRow = document.createElement('div')
+    const rows = [firstRow, secondRow, thirdRow]
+    rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
+
+    let i = 0
+    let y = 1
+    images.forEach((img, key) => {
+      // img_arr.push(img.name)
+      // img_arr.push(img.link)
+      // img.link
+      if (y > 12) {
+        return
+      }
+      if (i > 2) {
+        i = 0
+      }
+
+      const imgContainer = document.createElement('div')
+      imgContainer.classList.add('box')
+      imgContainer.innerHTML = `
+        <img class= "gallery-image" data-index="${key}" src="${img.link}" />
+        `
+
+      if (y % 4 == 0 && window.innerWidth <= 800) {
+      } else {
+        rows[i].append(imgContainer)
+      }
+      imgContainer.addEventListener('click', (e) => {
+        const imgSample = document.getElementById('sample-img')
+
+        imgSample.src = e.srcElement.currentSrc
+        showImg()
+      })
+      i++
+      y++
+    })
+    parentDiv.append(firstRow, secondRow, thirdRow)
+  })
+  .finally(() => {
+    const loadingTemplate = document.getElementById('gallery-loading-template')
+    loadingTemplate.innerHTML = ''
+  })
 
 const crossbutton = document.getElementById('crossbutton')
 crossbutton.addEventListener('click', (e) => {
@@ -452,13 +573,13 @@ arrow_forward.addEventListener('click', (e) => {
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
     if (
-      imgArray[i].image.link.toLowerCase().trim() ==
+      imgArray[i].link.toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == imgArray.length - 1) {
-        imgSample.src = imgArray[0].image.link
+        imgSample.src = imgArray[0].link
       } else {
-        imgSample.src = imgArray[i + 1].image.link
+        imgSample.src = imgArray[i + 1].link
       }
       break
     }
@@ -470,13 +591,13 @@ arrow_backward.addEventListener('click', (e) => {
   const imgArray = img_arr
   for (let i = 0; i < imgArray.length; i++) {
     if (
-      imgArray[i].image.link.toLowerCase().trim() ==
+      imgArray[i].link.toLowerCase().trim() ==
       imgSample.src.toLowerCase().trim()
     ) {
       if (i == 0) {
-        imgSample.src = imgArray[imgArray.length - 1].image.link
+        imgSample.src = imgArray[imgArray.length - 1].link
       } else {
-        imgSample.src = imgArray[i - 1].image.link
+        imgSample.src = imgArray[i - 1].link
       }
       break
     }

@@ -7,13 +7,12 @@ export const getParams = () => {
     })
 }
 export function dataFilter(apiData) {
-  const data = apiData.filter((n) => n.show === true)
+  const data = apiData.filter((n) => n.showviewall === true)
   data.sort((a, b) => {
     return b.order - a.order
   })
   return data
 }
-
 
 export const dateManipulator = (data) => {
   const date = new Date(data)
