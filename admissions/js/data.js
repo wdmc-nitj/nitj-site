@@ -254,7 +254,7 @@ fetch(`${data_url}` + "/admissions/updates/get?visible=visible&degree=PHD")
   });
 
 // important links
-fetch(`${data_url}` + "/admissions/links/get?visible=visible")
+fetch(`${data_url}` + "/admissions/links/get?visible=visible&degree=BTECH")
   .then((response) => response.json())
   .then((data) => {
     const important_links = document.getElementById("important_links");
@@ -262,7 +262,7 @@ fetch(`${data_url}` + "/admissions/links/get?visible=visible")
     data.forEach((update) => {
       const important_link = document.createElement("li");
       important_link.innerHTML = `
-                <li>
+                <li class="text-[12px] px-2">
                 <a
                   href=${update.link}
                   target="_blank"
@@ -275,9 +275,9 @@ fetch(`${data_url}` + "/admissions/links/get?visible=visible")
                   `;
       important_links.appendChild(important_link);
     });
-  });
+  })
 
-fetch(`${data_url}` + "/admissions/links/get?visible=visible")
+fetch(`${data_url}` + "/admissions/links/get?visible=visible&degree=MTECH_CCMT")
   .then((response) => response.json())
   .then((data) => {
     const important_links2 = document.getElementById("important_links2");
@@ -285,22 +285,22 @@ fetch(`${data_url}` + "/admissions/links/get?visible=visible")
     data.forEach((update) => {
       const important_link = document.createElement("li");
       important_link.innerHTML = `
-                  <li>
-                  <a
-                    href=${update.link}
-                    target="_blank"
-                    class="ml-[3%] hover:text-orange-600"
-                    >${update.title}</a
-                  >
-                  <hr class="border-1 border-gray-300" />
-                </li>
+      <li class="text-[12px] px-2">
+      <a
+        href=${update.link}
+        target="_blank"
+        class="ml-[3%] hover:text-orange-600"
+        >${update.title}</a
+      >
+      <hr class="border-1 border-gray-300" />
+    </li>
                 
                     `;
       important_links2.appendChild(important_link);
     });
   });
 
-fetch(`${data_url}` + "/admissions/links/get?visible=visible")
+fetch(`${data_url}` + "/admissions/links/get?visible=visible&degree=MTECH_SS")
   .then((response) => response.json())
   .then((data) => {
     const important_links3 = document.getElementById("important_links3");
@@ -308,22 +308,22 @@ fetch(`${data_url}` + "/admissions/links/get?visible=visible")
     data.forEach((update) => {
       const important_link = document.createElement("li");
       important_link.innerHTML = `
-                    <li>
-                    <a
-                      href=${update.link}
-                      target="_blank"
-                      class="ml-[3%] hover:text-orange-600"
-                      >${update.title}</a
-                    >
-                    <hr class="border-1 border-gray-300" />
-                  </li>
+      <li class="text-[12px] px-2">
+      <a
+        href=${update.link}
+        target="_blank"
+        class="ml-[3%] hover:text-orange-600"
+        >${update.title}</a
+      >
+      <hr class="border-1 border-gray-300" />
+    </li>
                   
                       `;
       important_links3.appendChild(important_link);
     });
   });
 
-fetch(`${data_url}` + "/admissions/links/get?visible=visible")
+fetch(`${data_url}` + "/admissions/links/get?visible=visible&degree=MSC")
   .then((response) => response.json())
   .then((data) => {
     const important_links4 = document.getElementById("important_links4");
@@ -331,22 +331,22 @@ fetch(`${data_url}` + "/admissions/links/get?visible=visible")
     data.forEach((update) => {
       const important_link = document.createElement("li");
       important_link.innerHTML = `
-                      <li>
-                      <a
-                        href=${update.link}
-                        target="_blank"
-                        class="ml-[3%] hover:text-orange-600"
-                        >${update.title}</a
-                      >
-                      <hr class="border-1 border-gray-300" />
-                    </li>
+      <li class="text-[12px] px-2">
+      <a
+        href=${update.link}
+        target="_blank"
+        class="ml-[3%] hover:text-orange-600"
+        >${update.title}</a
+      >
+      <hr class="border-1 border-gray-300" />
+    </li>
                     
                         `;
       important_links4.appendChild(important_link);
     });
   });
 
-fetch(`${data_url}` + "/admissions/links/get?visible=visible")
+fetch(`${data_url}` + "/admissions/links/get?visible=visible&degree=MBA")
   .then((response) => response.json())
   .then((data) => {
     const important_links5 = document.getElementById("important_links5");
@@ -354,22 +354,22 @@ fetch(`${data_url}` + "/admissions/links/get?visible=visible")
     data.forEach((update) => {
       const important_link = document.createElement("li");
       important_link.innerHTML = `
-                        <li>
-                        <a
-                          href=${update.link}
-                          target="_blank"
-                          class="ml-[3%] hover:text-orange-600"
-                          >${update.title}</a
-                        >
-                        <hr class="border-1 border-gray-300" />
-                      </li>
+      <li class="text-[12px] px-2">
+      <a
+        href=${update.link}
+        target="_blank"
+        class="ml-[3%] hover:text-orange-600"
+        >${update.title}</a
+      >
+      <hr class="border-1 border-gray-300" />
+    </li>
                       
                           `;
       important_links5.appendChild(important_link);
     });
   });
 
-fetch(`${data_url}` + "/admissions/links/get?visible=visible")
+fetch(`${data_url}` + "/admissions/links/get?visible=visible&degree=PHD")
   .then((response) => response.json())
   .then((data) => {
     const important_links6 = document.getElementById("important_links6");
@@ -377,15 +377,15 @@ fetch(`${data_url}` + "/admissions/links/get?visible=visible")
     data.forEach((update) => {
       const important_link = document.createElement("li");
       important_link.innerHTML = `
-                          <li>
-                          <a
-                            href=${update.link}
-                            target="_blank"
-                            class="ml-[3%] hover:text-orange-600"
-                            >${update.title}</a
-                          >
-                          <hr class="border-1 border-gray-300" />
-                        </li>
+      <li class="text-[12px] px-2">
+      <a
+        href=${update.link}
+        target="_blank"
+        class="ml-[3%] hover:text-orange-600"
+        >${update.title}</a
+      >
+      <hr class="border-1 border-gray-300" />
+    </li>
                         
                             `;
       important_links6.appendChild(important_link);

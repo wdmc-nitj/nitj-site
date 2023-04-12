@@ -1,428 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Favicon and title -->
-    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png">
+    <link rel="icon" type="image/x-icon" href="./img/nitj-logo.png" />
 
     <title>STI HUB-NITJ</title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <style>
-        .titlebg {
-            background: linear-gradient(90.09deg,
-                    rgba(0, 0, 0, 0.7) 0.08%,
-                    rgba(255, 255, 255, 0) 99.11%),
-                url(img/about_top.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+      .titlebg {
+        background: linear-gradient(
+            90.09deg,
+            rgba(0, 0, 0, 0.7) 0.08%,
+            rgba(255, 255, 255, 0) 99.11%
+          ),
+          url(img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      /* Style the tab */
+      .tab {
+        color: white;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: hsla(201, 96%, 32%);
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        color: black;
+        background-color: hsla(242, 83%, 98%);
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        color: black;
+        background-color: hsla(242, 83%, 98%);
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
+      /* Transition on tab content */
+      .tabcontent {
+        animation: fadeEffect 1s;
+        /* Fading effect takes 1 second */
+      }
+
+      @keyframes fadeEffect {
+        /* Go from zero to full opacity */
+        from {
+          opacity: 0;
         }
 
-        /* Style the tab */
-        .tab {
-            color: white;
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: hsla(201, 96%, 32%);
+        to {
+          opacity: 1;
         }
-
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            color: black;
-            background-color: hsla(242, 83%, 98%);
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            color: black;
-            background-color: hsla(242, 83%, 98%);
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-
-        /* Transition on tab content */
-        .tabcontent {
-            animation: fadeEffect 1s;
-            /* Fading effect takes 1 second */
-        }
-
-        @keyframes fadeEffect {
-
-            /* Go from zero to full opacity */
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
+      }
     </style>
     <style>
-        body {
-            scrollbar-color: #fff #fff;
-        }
+      body {
+        scrollbar-color: #fff #fff;
+      }
 
-        /* Customizing the Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+      /* Customizing the Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: rgba(30, 58, 138, 1);
-            border-radius: 10px;
-        }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(30, 58, 138, 1);
+        border-radius: 10px;
+      }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: gray;
-        }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: gray;
+      }
 
-        ::-webkit-resizer {
-            background-color: #ffffff;
-        }
+      ::-webkit-resizer {
+        background-color: #ffffff;
+      }
 
-        .material-symbols-outlined {
-            font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
-        }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
+      }
 
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            border-radius: 10px;
-        }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: gray;
-            border-radius: 10px;
-        }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+      }
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #212121;
-        }
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #212121;
+      }
 
-        /* Gallery Effects */
-        .box {
-            flex: 1;
-            overflow: hidden;
-            transition: 0.5s;
-            line-height: 0;
-        }
+      /* Gallery Effects */
+      .box {
+        flex: 1;
+        overflow: hidden;
+        transition: 0.5s;
+        line-height: 0;
+      }
 
-        .box>img {
-            width: 100%;
-            height: 100%;
-            border: 0.2rem solid white;
-            border-radius: 8px;
-            -o-object-fit: cover;
-            object-fit: cover;
-            transition: ease 0.75s;
-        }
+      .box > img {
+        width: 100%;
+        height: 100%;
+        border: 0.2rem solid white;
+        border-radius: 8px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        transition: ease 0.75s;
+      }
 
-        .box:hover {
-            flex: 1 1 30%;
-            /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
-            z-index: 1;
-            cursor: pointer;
-        }
+      .box:hover {
+        flex: 1 1 30%;
+        /* box-shadow: 0px 6px 6px rgba(73, 73, 73, 0.65); */
+        z-index: 1;
+        cursor: pointer;
+      }
 
-        .box:hover>img {
-            opacity: 1;
-            width: 100%;
-            height: 100%;
-        }
+      .box:hover > img {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
 
-        .base-image {
-            margin-top: 40px;
-            background-image: url("img/nitj3.jpg"),
-                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-            mask-image: linear-gradient(0deg, white, transparent);
-            -webkit-mask-image: linear-gradient(0deg, white, transparent);
-            background-color: #cccccc;
-            height: 400px;
-            background-position: 0% 28%;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+      .base-image {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        mask-image: linear-gradient(0deg, white, transparent);
+        -webkit-mask-image: linear-gradient(0deg, white, transparent);
+        background-color: #cccccc;
+        height: 400px;
+        background-position: 0% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-        .base-image-2 {
-            margin-top: 40px;
-            background-image: url("img/nitj3.jpg"),
-                linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
-            background-color: #cccccc;
-            height: 300px;
-            background-position: 58% 28%;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+      .base-image-2 {
+        margin-top: 40px;
+        background-image: url("img/nitj3.jpg"),
+          linear-gradient(rgb(255, 255, 255), rgba(4, 4, 4));
+        background-color: #cccccc;
+        height: 300px;
+        background-position: 58% 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-        .main-shadow {
-            text-shadow: rgb(0 0 0) 6px -1px 5px;
-        }
+      .main-shadow {
+        text-shadow: rgb(0 0 0) 6px -1px 5px;
+      }
 
-        .carousel-open:checked+.carousel-item {
-            position: static;
-            opacity: 100;
-        }
+      .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+      }
 
-        .carousel-item {
-            -webkit-transition: opacity 0.9s ease-in-out;
-            transition: opacity 1s ease-in-out 0.2s;
-        }
+      .carousel-item {
+        -webkit-transition: opacity 0.9s ease-in-out;
+        transition: opacity 1s ease-in-out 0.2s;
+      }
 
-        #carousel-1:checked~.control-1,
-        #carousel-2:checked~.control-2,
-        #carousel-3:checked~.control-3,
-        #carousel-4:checked~.control-4 {
-            display: block;
-        }
+      #carousel-1:checked ~ .control-1,
+      #carousel-2:checked ~ .control-2,
+      #carousel-3:checked ~ .control-3,
+      #carousel-4:checked ~ .control-4 {
+        display: block;
+      }
 
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
+      .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+      }
 
-        .titlebg {
-            background: linear-gradient(90.09deg,
-                    rgba(0, 0, 0, 0.7) 0.08%,
-                    rgba(255, 255, 255, 0) 99.11%),
-                url(../admin/img/about_top.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+      .titlebg {
+        background: linear-gradient(
+            90.09deg,
+            rgba(0, 0, 0, 0.7) 0.08%,
+            rgba(255, 255, 255, 0) 99.11%
+          ),
+          url(../admin/img/about_top.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
     </style>
     <link rel="stylesheet" href="/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
 
-    <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
-        <div class="titlebg">
-        <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
-            <!-- px-4 lg:px-[11%] -->
-            <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">STI HUB
-            </p>
+    <div
+      class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32"
+    >
+      <div class="titlebg">
+        <div
+          class="container flex flex-col justify-center items-start h-[224px] py-[48px]"
+        >
+          <!-- px-4 lg:px-[11%] -->
+          <p
+            class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]"
+          >
+            STI HUB
+          </p>
         </div>
-        <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
-            <ol class="container inline-flex items-center">
-                <li class="inline-flex items-center">
-                    <a href="" class="inline-flex items-center text-sm font-medium hover:text-gray-900">
-                        <a href="../index.html" class="text-lg font-medium ml-2">Home</a>
-                    </a>
-                </li>
-                <li aria-current="page">
-                    <div class="inline-flex items-center">
-                        <i style="color: rgb(128, 128, 128); font-size: 12px; margin-left: 12px"
-                            class="fa-solid fa-angle-right ml-2"></i>
-                        <a href="#" class="text-lg font-medium ml-2">STI HUB</a>
-                    </div>
-                </li>
-            </ol>
+        <nav
+          class="flex bg-gray-200 py-[8px] text-black"
+          aria-label="Breadcrumb"
+        >
+          <ol class="container inline-flex items-center">
+            <li class="inline-flex items-center">
+              <a
+                href=""
+                class="inline-flex items-center text-sm font-medium hover:text-gray-900"
+              >
+                <a href="../index.html" class="text-lg font-medium ml-2"
+                  >Home</a
+                >
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="inline-flex items-center">
+                <i
+                  style="
+                    color: rgb(128, 128, 128);
+                    font-size: 12px;
+                    margin-left: 12px;
+                  "
+                  class="fa-solid fa-angle-right ml-2"
+                ></i>
+                <a href="#" class="text-lg font-medium ml-2">STI HUB</a>
+              </div>
+            </li>
+          </ol>
         </nav>
-        </div>
-        <div class="container">
-        <h1 class=" font-bold text-3xl text-center">
-            Science & Technology Innovation(STI) Hub
+      </div>
+      <div class="container">
+        <h1 class="font-bold text-3xl text-center">
+          Science & Technology Innovation(STI) Hub
         </h1>
-        <p class="mt-2 text-xl text-center ">Sustainable Resource Utilization through Scientific and Technological
-            Innovation(SRUSTI)</p>
-        <p class="mt-2 text-xl text-center font-semibold text-red-500">(DST Funded Project)</p>
+        <p class="mt-2 text-xl text-center">
+          Sustainable Resource Utilization through Scientific and Technological
+          Innovation(SRUSTI)
+        </p>
+        <p class="mt-2 text-xl text-center font-semibold text-red-500">
+          (DST Funded Project)
+        </p>
         <div class="mt-3">
-            <marquee class=" text-lg" direction="left">
-                <span class="text-red-600"> The recruitment process for various posts advertised under STI-HUB has been
-                    completed and selected candidates have joined.
-                </span>
-            </marquee>
+          <marquee class="text-lg" direction="left">
+            <span class="text-red-600">
+              The recruitment process for various posts advertised under STI-HUB
+              has been completed and selected candidates have joined.
+            </span>
+          </marquee>
         </div>
-        </div>
-        <div class="container  my-3">
+      </div>
+      <div class="container my-3">
         <div class="tab">
-            <button class="tablinks active" onclick="openTab(event,'home')">
-                Home
-            </button>
-            <button class="tablinks" onclick="openTab(event,'about')">
-                About
-            </button>
-            <button class="tablinks" onclick="openTab(event,'modules')">
-                Modules
-            </button>
-            <button class="tablinks" onclick="openTab(event,'team')">
-                Team
-            </button>
-         
-            <button class="tablinks" onclick="openTab(event,'Contacts_US')">
-                Contact Us
-            </button>
+          <button class="tablinks active" onclick="openTab(event,'home')">
+            Home
+          </button>
+          <button class="tablinks" onclick="openTab(event,'about')">
+            About
+          </button>
+          <button class="tablinks" onclick="openTab(event,'modules')">
+            Modules
+          </button>
+          <button class="tablinks" onclick="openTab(event,'team')">Team</button>
+
+          <button class="tablinks" onclick="openTab(event,'Contacts_US')">
+            Contact Us
+          </button>
         </div>
 
         <div id="home" class="tabcontent block">
-            <div class="flex flex-col lg:w-[100%]  lg:px-[16px]">
-                <div class="">
-                    <img class="md:w-[100%]" src="\research\img\sti_flow_chart.jpeg" alt="_home">
-                </div>
+          <div class="flex flex-col lg:w-[100%] lg:px-[16px]">
+            <div class="">
+              <img
+                class="md:w-[100%]"
+                src="\research\img\sti_flow_chart.jpeg"
+                alt="_home"
+              />
             </div>
+          </div>
         </div>
 
         <div id="about" class="tabcontent">
-            <div class="flex flex-col gap-[32px] lg:px-[16px] py-4">
-                <div>
-                    <h2 class=" text-center text-lg font-medium">ABOUT NITJ</h2>
-                    <div>
-                        Dr B R Ambedkar National Institute of Technology was established in the year 1987 as Regional
-                        Engineering College and was given the status of National Institute of Technology (Deemed
-                        University) by the Government of India on October 17, 2002 under the aegis of Ministry of
-                        Education (Shiksha Mantralaya), New Delhi. Now the Ministry of Education (Shiksha Mantralaya),
-                        Government of India has declared the Institute as <span class=" font-bold italic ">“Institute of
-                            National Importance”</span> under the
-                        act of Parliament-2007.
-                    </div>
-                </div>
-                <div>
-                    <h2 class=" text-center text-lg font-medium">ABOUT SRUSTI</h2>
-                    <div>The project aims to establish a Science & Technology Innovation(STI) Hub for technology
-                        development and dissemination. Four project coordinators:
-                    </div>
-                    <div>
-                        <ul type=" none">
-                            <li><span class=" font-semibold">Dr. Sumer Singh Meena,</span>Principal Investigator</li>
-                            <li><span class=" font-semibold">Dr. Anee Mohanty,</span>Co-Investigator</li>
-                            <li><span class=" font-semibold">Dr. Anjireddy Bhavanam,</span>Co-Investigator</li>
-                            <li><span class=" font-semibold">Dr. Nikhil G N,</span>Co-Investigator</li>
-                        </ul>
-                    </div>
-                    <div>
-                        from multi-disciplinary research backgrounds are part of this project for the establishment of
-                        Science & Technology Innovation(STI) Hub. The hub is intended to be named as SRUSTI (Sustainable
-                        Resource Utilization through Scientific and Technological Innovation) which aims to bring
-                        holistic and sustainable technologies for the betterment of marginalized SC population.
-                    </div>
-                </div>
-                <!-- <div>
+          <div class="flex flex-col gap-[32px] lg:px-[16px] py-4">
+            <div>
+              <h2 class="text-center text-lg font-medium">ABOUT NITJ</h2>
+              <div>
+                Dr B R Ambedkar National Institute of Technology was established
+                in the year 1987 as Regional Engineering College and was given
+                the status of National Institute of Technology (Deemed
+                University) by the Government of India on October 17, 2002 under
+                the aegis of Ministry of Education (Shiksha Mantralaya), New
+                Delhi. Now the Ministry of Education (Shiksha Mantralaya),
+                Government of India has declared the Institute as
+                <span class="font-bold italic"
+                  >“Institute of National Importance”</span
+                >
+                under the act of Parliament-2007.
+              </div>
+            </div>
+            <div>
+              <h2 class="text-center text-lg font-medium">ABOUT SRUSTI</h2>
+              <div>
+                The project aims to establish a Science & Technology
+                Innovation(STI) Hub for technology development and
+                dissemination. Four project coordinators:
+              </div>
+              <div>
+                <ul type=" none">
+                  <li>
+                    <span class="font-semibold">Dr. Sumer Singh Meena,</span
+                    >Principal Investigator
+                  </li>
+                  <li>
+                    <span class="font-semibold">Dr. Anee Mohanty,</span
+                    >Co-Investigator
+                  </li>
+                  <li>
+                    <span class="font-semibold">Dr. Anjireddy Bhavanam,</span
+                    >Co-Investigator
+                  </li>
+                  <li>
+                    <span class="font-semibold">Dr. Nikhil G N,</span
+                    >Co-Investigator
+                  </li>
+                </ul>
+              </div>
+              <div>
+                from multi-disciplinary research backgrounds are part of this
+                project for the establishment of Science & Technology
+                Innovation(STI) Hub. The hub is intended to be named as SRUSTI
+                (Sustainable Resource Utilization through Scientific and
+                Technological Innovation) which aims to bring holistic and
+                sustainable technologies for the betterment of marginalized SC
+                population.
+              </div>
+            </div>
+            <!-- <div>
                     <img src="https://www.nitj.ac.in/nitj_files/links/TEAM_SRUSTI_82592.jpg" alt="">
                 </div> -->
-            </div>
+          </div>
         </div>
 
         <div id="modules" class="tabcontent">
-            <div class="flex flex-col gap-[32px] lg:px-[16px] py-4">
-                <div>
-                    <ul>
-                        <li><span class=" font-bold">SAFAL:</span> Sustainable Agricultural Farming and Allied Learning
-                        </li>
-                        <li><span class=" font-bold">SWEEP:</span> Solid Waste to Ecofriendly Energy Practices</li>
-                        <li><span class=" font-bold">SUCHNA:</span> SC/ST Upliftment Center and Hub’s Networking App
-                        </li>
-                        <li><span class=" font-bold">SAMVED:</span> SC/ST Assistance Model for Vocational and
-                            Educational Development</li>
-                    </ul>
-                </div>
-                <div class="flex flex-col">
-                    <p class=" mb-[10px]">The objectives of the modules are given below:</p>
-                    <div class="mb-[10px]">
-                        <h1 class=" font-bold">SUCHNA (SC Upliftment Center and Hub’s Networking App)</h1>
-                        <div class=" pl-[4%]">
-                            <ul>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> Govt. schemes
-                                    related to
-                                    welfare of SC population.</li>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> Hub related
-                                    activities like
-                                    training schedule, technology developed.</li>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> Pre-intervention
-                                    benchmarking
-                                    and analytics.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mb-[10px]">
-                        <h1 class=" font-bold">SAFAL (Sustainable Agricultural Farming and Allied Learning)</h1>
-                        <div class=" pl-[4%]">
-                            <ul>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i>Microalgae
-                                    cultivation using wastewater to be used as Biofertilizer
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mb-[10px]">
-                        <h1 class=" font-bold">SWEEP (Solid Waste to Eco-friendly Energy Technologies)</h1>
-                        <div class=" pl-[4%]">
-                            <ul>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> Agrowaste
-                                    processor to produce biomass pellets from agricultural residues and gasifier stove
-                                    for cooking and room heating applications.</li>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> Biogas production
-                                    from biodegradable solid waste.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mb-[10px]">
-                        <h1 class=" font-bold">SAMVED (SC Assistance Model for vocational and educational development)
-                        </h1>
-                        <div class=" pl-[4%]">
-                            <ul>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> ICT based training
-                                </li>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> Technology
-                                    dissemination developed under the proposed STI-HUB</li>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> Awareness Programs
-                                    (Farmers Camp, Health Camps, Clean Energy Sensitization program)</li>
-                                <li><i class="fa-solid fa-angles-right text-[16px] text-accent "></i> To facilitate the
-                                    dissemination of information by organising training, seminars, conferences, lecture
-                                    series, workshops etc.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+          <div class="flex flex-col gap-[32px] lg:px-[16px] py-4">
+            <div>
+              <ul>
+                <li>
+                  <span class="font-bold">SAFAL:</span> Sustainable Agricultural
+                  Farming and Allied Learning
+                </li>
+                <li>
+                  <span class="font-bold">SWEEP:</span> Solid Waste to
+                  Ecofriendly Energy Practices
+                </li>
+                <li>
+                  <span class="font-bold">SUCHNA:</span> SC/ST Upliftment Center
+                  and Hub’s Networking App
+                </li>
+                <li>
+                  <span class="font-bold">SAMVED:</span> SC/ST Assistance Model
+                  for Vocational and Educational Development
+                </li>
+              </ul>
             </div>
+            <div class="flex flex-col">
+              <p class="mb-[10px]">
+                The objectives of the modules are given below:
+              </p>
+              <div class="mb-[10px]">
+                <h1 class="font-bold">
+                  SUCHNA (SC Upliftment Center and Hub’s Networking App)
+                </h1>
+                <div class="pl-[4%]">
+                  <ul>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      Govt. schemes related to welfare of SC population.
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      Hub related activities like training schedule, technology
+                      developed.
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      Pre-intervention benchmarking and analytics.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mb-[10px]">
+                <h1 class="font-bold">
+                  SAFAL (Sustainable Agricultural Farming and Allied Learning)
+                </h1>
+                <div class="pl-[4%]">
+                  <ul>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i
+                      >Microalgae cultivation using wastewater to be used as
+                      Biofertilizer
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mb-[10px]">
+                <h1 class="font-bold">
+                  SWEEP (Solid Waste to Eco-friendly Energy Technologies)
+                </h1>
+                <div class="pl-[4%]">
+                  <ul>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      Agrowaste processor to produce biomass pellets from
+                      agricultural residues and gasifier stove for cooking and
+                      room heating applications.
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      Biogas production from biodegradable solid waste.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mb-[10px]">
+                <h1 class="font-bold">
+                  SAMVED (SC Assistance Model for vocational and educational
+                  development)
+                </h1>
+                <div class="pl-[4%]">
+                  <ul>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      ICT based training
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      Technology dissemination developed under the proposed
+                      STI-HUB
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      Awareness Programs (Farmers Camp, Health Camps, Clean
+                      Energy Sensitization program)
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-angles-right text-[16px] text-accent"
+                      ></i>
+                      To facilitate the dissemination of information by
+                      organising training, seminars, conferences, lecture
+                      series, workshops etc.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-
-
-
         <div id="team" class="tabcontent">
-            <!-- <div class="flex flex-col lg:mr-[10%] lg:ml-[10%] gap-[32px] lg:px-[16px] py-4"> -->
+          <!-- <div class="flex flex-col lg:mr-[10%] lg:ml-[10%] gap-[32px] lg:px-[16px] py-4"> -->
 
-                <!-- <div class="flex flex-row  h-[150px] shadow-md bg-[#eff9ff] rounded-lg ">
+          <!-- <div class="flex flex-row  h-[150px] shadow-md bg-[#eff9ff] rounded-lg ">
                     <div class=" w-[40%]">
                         <img class="h-full w-[60%]" src="https://www.nitj.ac.in/images/faculty/2007029824.jpg"
                             alt="image_Dr_Sumer_Singh_Meena">
@@ -436,116 +550,165 @@
                     </div>
                 </div> -->
 
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 ml-3 mt-4">
-                    <div id="">
-                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">
-                            Dr Sumer Singh Meena
-                        </p>
-                        <p class="text-sm">Assistant Professor</p>
-                        <p class="text-sm text-gray-500">
-                            Dr B R Ambedkar NIT, Jalandhar
-                        </p>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-envelope"></i>
-                            <p class="text-sm text-gray-500 my-1">meenass@nitj.ac.in; dr.ssmeena@gmail.com</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-red-400">
-                            <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/115" target="_blank" class="text-red-400">View Profile</a>
-                        </div>
-                    </div>
-
-                    <div id="">
-                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">
-                            Dr Anee Mohanty
-                        </p>
-                        <p class="text-sm">Assistant Professor</p>
-                        <p class="text-sm text-gray-500">
-                            Dr B R Ambedkar NIT, Jalandhar
-                        </p>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-envelope"></i>
-                            <p class="text-sm text-gray-500 my-1">mohantya@nitj.ac.in</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-red-400">
-                            <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/111" target="_blank" class="text-red-400">View Profile</a>
-                        </div>
-                    </div>
-
-                    <div id="">
-                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">
-                            Dr Anjireddy Bhavanam
-                        </p>
-                        <p class="text-sm">Assistant Professor</p>
-                        <p class="text-sm text-gray-500">
-                            Dr B R Ambedkar NIT, Jalandhar
-                        </p>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-envelope"></i>
-                            <p class="text-sm text-gray-500 my-1">bhavanama@nitj.ac.in</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-red-400">
-                            <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/117" target="_blank" class="text-red-400">View Profile</a>
-                        </div>
-                    </div>
-                    <div id="">
-                        <p class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1">
-                            Dr Nikhil G N
-                        </p>
-                        <p class="text-sm">Assistant Professor</p>
-                        <p class="text-sm text-gray-500">
-                            Dr B R Ambedkar NIT, Jalandhar
-                        </p>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-envelope"></i>
-                            <p class="text-sm text-gray-500 my-1">nikhilgn@nitj.ac.in</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-gray-500">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
-                        </div>
-                        <div class="w-full flex flex-row gap-2 items-center text-red-400">
-                            <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/114" target="_blank" class="text-red-400">View Profile</a>
-                        </div>
-                    </div>
-                </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 ml-3 mt-4">
+            <div id="">
+              <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr Sumer Singh Meena
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">
+                Dr B R Ambedkar NIT, Jalandhar
+              </p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">
+                  meenass@nitj.ac.in; dr.ssmeena@gmail.com
+                </p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
+              </div>
+              <div class="w-full flex flex-row gap-2 items-center text-red-400">
+                <a
+                  href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/115"
+                  target="_blank"
+                  class="text-red-400"
+                  >View Profile</a
+                >
+              </div>
             </div>
+
+            <div id="">
+              <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr Anee Mohanty
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">
+                Dr B R Ambedkar NIT, Jalandhar
+              </p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">mohantya@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
+              </div>
+              <div class="w-full flex flex-row gap-2 items-center text-red-400">
+                <a
+                  href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/111"
+                  target="_blank"
+                  class="text-red-400"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+
+            <div id="">
+              <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr Anjireddy Bhavanam
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">
+                Dr B R Ambedkar NIT, Jalandhar
+              </p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">bhavanama@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
+              </div>
+              <div class="w-full flex flex-row gap-2 items-center text-red-400">
+                <a
+                  href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/117"
+                  target="_blank"
+                  class="text-red-400"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+            <div id="">
+              <p
+                class="font2 font-semibold text-2xl lg:text-3xl text-accent my-1"
+              >
+                Dr Nikhil G N
+              </p>
+              <p class="text-sm">Assistant Professor</p>
+              <p class="text-sm text-gray-500">
+                Dr B R Ambedkar NIT, Jalandhar
+              </p>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="text-sm text-gray-500 my-1">nikhilgn@nitj.ac.in</p>
+              </div>
+              <div
+                class="w-full flex flex-row gap-2 items-center text-gray-500"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="text-sm my-1">Jalandhar, Punjab - 144027</p>
+              </div>
+              <div class="w-full flex flex-row gap-2 items-center text-red-400">
+                <a
+                  href="https://www.nitj.ac.in/index.php/nitj_cinfo/Faculty/114"
+                  target="_blank"
+                  class="text-red-400"
+                  >View Profile</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        
-     
+
         <div id="Contacts_US" class="tabcontent">
-            <div class="flex flex-col lg:mr-[10%] lg:ml-[10%] lg:px-[16px]">
-                <div>
-                    <h1 class=" font-bold text-[24px] border-b-2 border-orange-500 text-orange-500">
-                        Postal Address
-                    </h1>
-                    <div>
-                        <span class=" font-bold text-accent">Science & Technology Innovation(STI) Hub-SRUSTI</span> <br>
-                        Dr B R Ambedkar National Institute of Technology Jalandhar <br>
-                        N.I.T. Post Office <br>
-                        Jalandhar (Punjab) - 144027 <br>
-                        India <br>
-                    </div>
-                    <div>
-                        <p class="font-bold text-accent">Email ID: </p>
-                        <p>contact.stihub@nitj.ac.in </p>
-
-                    </div>
-                </div>
+          <div class="flex flex-col  lg:px-[16px]">
+            <div>
+              <h1
+                class="font-bold text-[24px] border-b-2 border-orange-500 text-orange-500"
+              >
+                Postal Address
+              </h1>
+              <div>
+                <span class="font-bold text-accent"
+                  >Science & Technology Innovation(STI) Hub-SRUSTI</span
+                >
+                <br />
+                Dr B R Ambedkar National Institute of Technology Jalandhar
+                <br />
+                N.I.T. Post Office <br />
+                Jalandhar (Punjab) - 144027 <br />
+                India <br />
+              </div>
+              <div>
+                <p class="font-bold text-accent">Email ID:</p>
+                <p>contact.stihub@nitj.ac.in</p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--<div class="base-image hidden overflow-hidden lg:block"></div>-->
@@ -553,29 +716,25 @@
     <script src="../template/footer.js"></script>
 
     <script>
-        var tabs = document.querySelectorAll(".tablinks");
-        var tabcontent = document.querySelectorAll(".tabcontent");
-        tabs.forEach(function (tab, tab_index) {
-            tab.addEventListener("click", function () {
+      var tabs = document.querySelectorAll(".tablinks");
+      var tabcontent = document.querySelectorAll(".tabcontent");
+      tabs.forEach(function (tab, tab_index) {
+        tab.addEventListener("click", function () {
+          tabs.forEach(function (tab) {
+            tab.classList.remove("active");
+          });
+          tab.classList.add("active");
 
-                tabs.forEach(function (tab) {
-                    tab.classList.remove("active");
-                })
-                tab.classList.add("active");
-
-                tabcontent.forEach(function (content, content_index) {
-                    if (content_index == tab_index) {
-                        content.style.display = "block";
-                    }
-                    else {
-                        content.style.display = "none";
-                    }
-                })
-
-            })
-        })
+          tabcontent.forEach(function (content, content_index) {
+            if (content_index == tab_index) {
+              content.style.display = "block";
+            } else {
+              content.style.display = "none";
+            }
+          });
+        });
+      });
     </script>
     <script type="module" src="../js/app.js"></script>
-</body>
-
+  </body>
 </html>
