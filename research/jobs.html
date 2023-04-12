@@ -307,13 +307,13 @@
       <button class="tablinks active" id="facultybutton">
         Faculty
       </button>
-      <button class="tablinks">
+      <button class="tablinks" id="nonfacultyButton">
         Non-Faculty
       </button>
-      <button class="tablinks">
+      <button class="tablinks" id="facultycontractButton">
         Faculty(Contract)
       </button>
-      <button class="tablinks">
+      <button class="tablinks" id="nonfacultycontractButton">
         Non-Faculty(Contract)
       </button>
       <button id="researchButton" class="tablinks">
@@ -353,9 +353,9 @@
       </div>
     </div>
 
-    <div id="researchJob" class="tabcontent">
+    <div class="tabcontent">
       <div class="flex flex-col lg:flex-row gap-[32px] lg:px-[16px] py-4">
-        <ul class="list-disc ml-8" id="nonFaculty-contract">
+        <ul class="list-disc ml-8" id="researchJob">
           
         </ul>
       </div>
@@ -374,7 +374,7 @@
     var tabcontent = document.querySelectorAll(".tabcontent");
     tabs.forEach(function (tab, tab_index) {
       tab.addEventListener("click", function () {
-console.log("yeah")
+
         tabs.forEach(function (tab) {
           tab.classList.remove("active");
         })
