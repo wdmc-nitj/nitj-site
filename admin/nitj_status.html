@@ -20,8 +20,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Academic Calender</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Nitj_Statutes</title>
     <style>
         .bg-accent {
             --tw-bg-opacity: 1;
@@ -101,8 +101,8 @@
                     <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
                 </div> -->
                 <div class="flex-col justify-center align-center mr-[5%]  lg:w-[80%] w-[100%] mx-8">
-                    <ul id="academic-calendar-list" class="leading-8 list-disc">
-                        <!-- <script>
+                    <ul id="academic-calendar-list" class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6">
+                        <script>
                             async function api_call() {
                                 var data = await fetch('https://wdmc-vsj1.onrender.com/academicCalendar/get/all');
                                 var result = await data.json();
@@ -111,22 +111,19 @@
                                     var link = result[i]['url'];
                                     var title = result[i]['title'];
                                     const element = document.createElement("li");
-                                    element.innerHTML = `<a href="${link}" target="_blank" class="ml-[1%] hover:text-orange-600">${title}</a>`
+                                    element.innerHTML = `<a href="${link}" target="_blank" class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2">${title}</a>`
                                     document.getElementById('academic-calendar-list').appendChild(element);
                                 }
                             }
                             api_call();
-                        </script> -->
-                        <li><a href="https://www.nitj.ac.in/nitj_files/links/amended_statues_of_NITs_30016.pdf"
-                                class="hover:text-blue-500">NIT Statutes (Amendments), 2017</a></li>
-                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/Comprehensive_NIT_Act_2012.pdf"
-                                class="hover:text-blue-500">Comprehensive NIT Act 2012</a></li>
-                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/Gazette_Notification_NIT_(Amendment)_Act_2012.pdf"
-                                class="hover:text-blue-500">Gazette Notification NIT (Amendment) Act 2012</a></li>
-                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/Gazette_Notification_NIT_Act_2007_001.pdf"
-                                class="hover:text-blue-500">Gazette Notification NIT Act 2007</a></li>
-                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/NIT_Statutes.pdf"
-                                class="hover:text-blue-500">NIT Statutes</a></li>
+
+                        </script>
+                        <!-- <li><a href="https://www.nitj.ac.in/nitj_files/links/amended_statues_of_NITs_30016.pdf" class="hover:text-blue-500">NIT Statutes (Amendments), 2017</a></li>
+                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/Comprehensive_NIT_Act_2012.pdf" class="hover:text-blue-500">Comprehensive NIT Act 2012</a></li>
+                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/Gazette_Notification_NIT_(Amendment)_Act_2012.pdf" class="hover:text-blue-500">Gazette Notification NIT (Amendment) Act 2012</a></li>
+                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/Gazette_Notification_NIT_Act_2007_001.pdf" class="hover:text-blue-500">Gazette Notification NIT Act 2007</a></li>
+                        <li><a href="https://www.nitj.ac.in/nitj_files/downloads/NIT-Act/NIT_Statutes.pdf" class="hover:text-blue-500">NIT Statutes</a></li> -->
+
                     </ul>
                 </div>
             </div>

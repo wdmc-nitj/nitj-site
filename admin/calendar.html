@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Academic Calender</title>
     <style>
         .bg-accent {
@@ -101,7 +101,8 @@
                     <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
                 </div> -->
                 <div class="flex-col justify-center align-center mr-[5%]  lg:w-[80%] w-[100%] mx-8">
-                    <ul id="academic-calendar-list" class="leading-8 list-disc">
+                    <ul id="academic-calendar-list" class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6">
+
                         <script>
                             async function api_call() {
                                 var data = await fetch('https://wdmc-vsj1.onrender.com/academicCalendar/get/all');
@@ -111,7 +112,7 @@
                                     var link = result[i]['url'];
                                     var title = result[i]['title'];
                                     const element = document.createElement("li");
-                                    element.innerHTML = `<a href="${link}" target="_blank" class="ml-[1%] hover:text-orange-600">${title}</a>`
+                                    element.innerHTML = `<a href="${link}" target="_blank" class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2">${title}</a>`
                                     document.getElementById('academic-calendar-list').appendChild(element);
                                 }
                             }
@@ -122,7 +123,9 @@
                         <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar_except_B_5567.pdf" class="hover:text-red-500">Academic Calendar (Jan-May 2023) Except B.Tech 1st Year</a></li>
                         <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar(July-December_2022)_83830.pdf" class="hover:text-red-500">Academic Calendar (July-December 2022) M.Tech / MSc / MBA (1st Year)</a></li>
                         <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Calendar_for_July-December,_2022_-_excluding_B_79925.pdf" class="hover:text-red-500">Academic Calendar (July-December 2022) Except B.Tech 1st Year </a></li>
-                        <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Activities_Calendar_2022-2023_(1),_ODD_SEM_(excluding_B_97652.pdf" class="hover:text-red-500">Academic Activities (July-December 2022) Except B.Tech 1st Year</a></li> -->
+
+                        <li><a href="https://www.nitj.ac.in/nitj_files/links/Academic_Activities_Calendar_2022-2023_(1),_ODD_SEM_(excluding_B_97652.pdf" class="hover:text-red-500">Academic Activities (July-December 2022) Except B.Tech 1st Year</a></li>
+                         -->
 
                     </ul>
                 </div>

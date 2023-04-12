@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Frequently Asked Questions</title>
     <style>
         .bg-accent {
@@ -100,7 +100,7 @@
                     <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
                 </div> -->
                 <div class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%] ml-8">
-                    <ul class="list-disc leading-8 " id="faq-links">
+                    <ul class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6" id="faq-links">
                         <script>
                             async function api_call() {
                                 var data = await fetch(
@@ -126,7 +126,7 @@
                                             "beforeend",
                                             `<li>
                             <a href="${url}"
-                                target="_blank" class="hover:text-blue-500"> ${title}</a>
+                                target="_blank" class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"> ${title}</a>
                         </li>`
                                         );
                                 }

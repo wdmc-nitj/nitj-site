@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Computer Workshop</title>
     <style>
         .bg-accent {
@@ -118,28 +118,30 @@
                         particular subject.</span>
                 </p>
 
-                <p style="text-align:justify"><span style="font-family:verdana,arial,sans-serif">The workshop has
-                        eight constituent shops viz, Carpentry Shop, Electrical Shop, Fitting Shop, Foundry Shop,
-                        Machine Shop, Sheet Metal Shop, Smithy Shop, Welding Shop and a part from the Tool Room
-                        facilities available in the department of Industrial and Production Engineering. The Tool
-                        Room has CNC Lathe, EDM Wire-Cut and EDM Spark Erosion Machines. Tool and Cutter Grinder is
-                        also available in the workshop.</span></p>
-                <p></p>
-                <br>
-                <table border="1" cellpadding="6" cellspacing="0" style="width:100%">
-                    <tbody id="table-body-cw">
-                        <tr>
-                            <td class="border border-gray-300"><strong>Name</strong></td>
-                            <td class="border border-gray-300"><strong>Designation</strong></td>
-                            <td class="border border-gray-300"><strong>Qualification</strong></td>
-                            <td class="border border-gray-300"><strong>Email</strong></td>
-                        </tr>
-                        <script>
-                            async function api_call() {
-                                var data = await fetch(
-                                    "http://localhost:8000/specialcentres/getcentre/cw"
-                                );
-                                var result = await data.json();
+
+                    <p style="text-align:justify"><span style="font-family:verdana,arial,sans-serif">The workshop has
+                            eight constituent shops viz, Carpentry Shop, Electrical Shop, Fitting Shop, Foundry Shop,
+                            Machine Shop, Sheet Metal Shop, Smithy Shop, Welding Shop and a part from the Tool Room
+                            facilities available in the department of Industrial and Production Engineering. The Tool
+                            Room has CNC Lathe, EDM Wire-Cut and EDM Spark Erosion Machines. Tool and Cutter Grinder is
+                            also available in the workshop.</span></p>
+                    <p></p>
+                    <br>
+                    <!-- <table border="1" cellpadding="6" cellspacing="0" style="width:100%">
+                        <tbody id="table-body-cw">
+                            <tr>
+                                <td class="border border-gray-300"><strong>Name</strong></td>
+                                <td class="border border-gray-300"><strong>Designation</strong></td>
+                                <td class="border border-gray-300"><strong>Qualification</strong></td>
+                                <td class="border border-gray-300"><strong>Email</strong></td>
+                            </tr>
+                            <script>
+                                async function api_call() {
+                                    var data = await fetch(
+                                        "http://localhost:8000/specialcentres/getcentre/cw"
+                                    );
+                                    var result = await data.json();
+
 
                                 var modified = result[0].faculties;
 
@@ -165,33 +167,74 @@
                             </tr>`
                                         );
                                 }
-                            }
-                            api_call();
-                        </script>
-                    </tbody>
-                </table>
+
+                                api_call();
+                            </script>
+                        </tbody>
+                    </table> -->
+                </div>
             </div>
         </div>
-    </div>
-    <div class="m-2">
-        <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
-            <div class="w-full flex flex-col items-start">
-                <p class="font2 font-medium text-[28px] lg:text-[44px]">Staff of Central Workshop
-                </p>
-                <div class="bg-accent w-[211px] h-[1px] lg:h-[5px]"></div>
+        <div class="m-2">
+            <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <div class="w-full flex flex-col items-start">
+                    <p class="font2 font-medium text-[28px] lg:text-[44px]">Staff of Central Workshop
+                    </p>
+                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                </div>
             </div>
-        </div>
-        <div class="scroll-mt-32 flex flex-col px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
-            <div class="my-8 w-full mx-auto">
-                <table border="1" cellpadding="6" cellspacing="0" class="table table-bordered table-striped"
-                    style="width:100%">
-                    <tbody id="table-body-staff">
-                        <tr>
-                            <td class="border border-gray-300"><strong>Name</strong></td>
-                            <td class="border border-gray-300"><strong>Designation</strong></td>
-                            <td class="border border-gray-300"><strong>Qualification</strong></td>
-                            <td class="border border-gray-300"><strong>Shop Name</strong></td>
-                        </tr>
+            <div class="scroll-mt-32 flex flex-col px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
+                <div class="my-8 w-full mx-auto">
+                    <table border="1" cellpadding="6" cellspacing="0" class="table table-bordered table-striped"
+                        style="width:100%">
+                        <tbody id="table-body-staff">
+                            <tr>
+                                <td class="border border-gray-300"><strong>Name</strong></td>
+                                <td class="border border-gray-300"><strong>Designation</strong></td>
+                                <td class="border border-gray-300"><strong>Qualification</strong></td>
+                                <td class="border border-gray-300"><strong>Shop Name</strong></td>
+                            </tr>
+                            <script>
+                                async function api_call() {
+                                    var data = await fetch(
+                                        "https://wdmc-vsj1.onrender.com/specialcentres/getcentre/cwstaff"
+                                    );
+
+                                    var result = await data.json();
+
+                                    var modified = result[0].workers;
+
+                                    console.log(modified);
+
+                                    for (var i in modified) {
+                                        var name = modified[i]["name"];
+                                        var designation = modified[i]["designation"];
+                                        var department = modified[i]["department"];
+                                        var shopname = modified[i]["shopname"];
+                                        var url = modified[i]["url"];
+                                        var qualification = modified[i]["qualification"];
+                                        document
+                                            .getElementById("table-body-staff")
+                                            .insertAdjacentHTML(
+                                                "beforeend",
+                                                `<tr>
+                                <td class="border border-gray-300"><span style="color:black">${name}</span>
+                                </td>
+                                <td class="border border-gray-300">${designation}</td>
+                                <td class="border border-gray-300">${qualification}</td>
+                                <td class="border border-gray-300">${shopname}</td>
+                            </tr>`
+                                            );
+                                    }
+                                }
+                                api_call();
+                            </script>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <ul id="extra-links" class="list-disc ml-8">
+
                         <script>
                             async function api_call() {
                                 var data = await fetch(
