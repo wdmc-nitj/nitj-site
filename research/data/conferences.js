@@ -16,6 +16,10 @@ fetch(`${data_url}` + '/research/events/get?visible=visible&upcoming=true&catego
     data.forEach((update) => {
       const ugupdate = document.createElement('div')
       var d = new Date(update.dateTime);
+      console.log(d.getTime());
+      console.log(d.getHours());
+      console.log(d.getMinutes());
+      console.log(d.getSeconds());
     ugupdate.innerHTML = `
     <div class="lg:flex shadow rounded-lg border w-[100%] mb-4 border-gray-400">
     <div class="bg-accent rounded-lg lg:w-[30%] w-[30%] py-4 block h-full shadow-inner mx-auto">
@@ -30,7 +34,7 @@ fetch(`${data_url}` + '/research/events/get?visible=visible&upcoming=true&catego
       <div class="flex flex-row lg:justify-start justify-center">
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           <!--time-->
-          <i class="far fa-clock"></i> ${formatTime(update.dateTime.substring(11,19))}
+          <i class="far fa-clock"></i> ${d.getHours()}:${d.getMinutes().toString().length==1? 0+d.getMinutes().toString():d.getMinutes()}${d.getHours()<12? "AM":"PM"}
         </div>
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           Organiser : ${update.organiser}

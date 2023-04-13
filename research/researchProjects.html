@@ -247,29 +247,16 @@
           <!-- Dropdown list -->
           <div x-show="dropdownMenu" id="smallScreenSidetab" class="tabs2  p-2 rounded w-[100%]">
             <ul>
-              <!-- <li x-on:click="dropdownMenu = ! dropdownMenu"
-              class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text dropContent1" onclick=dropDownContentOnClick1()>Ongoing Projects (2015-16)
-                Onwards</span>
-            </li>
-            <li x-on:click="dropdownMenu = ! dropdownMenu"
-              class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text dropContent2" onclick=dropDownContentOnClick2()>Ongoing Projects (2014-15)</span>
-            </li>
-            <li x-on:click="dropdownMenu = ! dropdownMenu"
-              class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text dropContent3" onclick=dropDownContentOnClick3()>Ongoing Projects (2013-14)</span>
-            </li> -->
+              <!-- fromBackend -->
             </ul>
 
           </div>
         </div>
-        <!-- 
-      <div class="flex items-center p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
+        
+      <div id="currentDisplay" class="hidden items-center p-2 bg-accent text-[12px] font-light text-white rounded-md w-[70%]  mb-4">
         <span class="px-[15px]"><i class="fa-solid fa-angles-right text-[16px] "> <span
-              class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="category">Ongoing Projects
-              (2015-16) Onwards</span></i></span>
-      </div> -->
+              class="tracking-widest text-[18px] font-sans px-[5px] font-normal" id="displayYear"></span></i></span>
+      </div>
 
 
       </div>
@@ -283,22 +270,12 @@
         <div class="side_Bar_Hide lg:w-[15%] w-[25%]">
           <div class="tabs p-2 side_Bar_Hide rounded lg:block lg:w-[100%] mt-48 w-[20%] hidden sticky top-40"
             id="sidetab">
-            <!-- <ul>
-            <li class="active2 bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text">Ongoing Projects (2015-16) Onwards</span>
-            </li>
-            <li class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text">Ongoing Projects (2014-15)</span>
-            </li>
-            <li class="bg-accent mb-1 rounded-md  text-white  hover:text-black">
-              <span class="text">Ongoing Projects (2013-14)</span>
-            </li>
-          </ul> -->
+            <!-- dataComingFromBackend -->
           </div>
         </div>
 
         <!--Ongoing Projects (2015-16) Onwards-->
-        <div class="content  lg:w-[80%] w-[100%]  lg:mt-[15%] mt-[5%]  overflow-auto" id="content">
+        <div class="content  lg:w-[80%] w-[100%]  lg:mt-[13%] mt-[5%]  overflow-auto" id="content">
 
         </div>
       </div>

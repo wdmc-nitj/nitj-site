@@ -19,7 +19,7 @@ function dateManipulator(data) {
     'DEC',
   ]
   const month = months[date.getMonth()]
-  const FullDate = month + ' ' + day + ',' + year
+  const FullDate = month + ' ' + day + ', ' + year
   return FullDate
 }
 
@@ -69,7 +69,9 @@ export default async function notificationTabs(e, subscribed) {
 async function fetchTabContent(tabName, tabContainer) {
   fetch(`${BaseURL}/${tabName}/get/all`)
     .then((res) => res.json())
-    .then((data) => {
+    .then((apidata) => {
+      // console.log(data)
+      const data = dataFilter(apidata)
       tabContainer.innerHTML = ''
       const viewAll = document.getElementById('tab-view-all')
       data.forEach((e) => {
@@ -89,40 +91,62 @@ async function fetchTabContent(tabName, tabContainer) {
               }
             class="text-xl font-semibold text-accent line-clamp-3">
             <p class="inline w-auto line-clamp-3">${title}&nbsp; 
-            
-           <!-- ${
+            </p>
+              </a>
+            <div
+            class="flex flex-col md:flex-row w-full justify-between mt-2"
+            >
+           ${
              e.new &&
              `
-          <span id="new-tag" class="text-accent-orange space-x-2">
-            <span class="inline material-symbols-outlined text-accent-orange">
+          <span id="new-tag" class="flex text-base text-accent-orange space-x-2">
+            <span class="text-base material-symbols-outlined text-accent-orange">
               auto_awesome
             </span>
-            <p class="text-lg font-bold uppercase text-accent-orange">
+            <p class="font-bold uppercase text-accent-orange">
               New
             </p>
           </span>`
-           } -->
-        </p>
+           }
+        
             
               
-            </a>
+          
           ${
-            tabName === 'upcomingEvent' &&
-            `<div id="date-tag" class="text-dark-purple font-normal text-lg inline-flex items-center justify-start space-x-2">
+            tabName === 'upcomingEvent'
+              ? `<div id="date-tag" class="text-slate-600 font-normal text-base inline-flex items-center justify-start space-x-2">
               ${tabName === 'upcomingEvent' ? 'Event Date:&nbsp;' : ''}
                       
-              <span class="material-symbols-outlined" style="font-size: 24px">
+              <span class="material-symbols-outlined text-lg">
                 calendar_month
               </span>
-              <p class="text-lg">
-              ${dateManipulator(e.updatedAt)}
+              <p>
+              ${dateManipulator(e?.startDate || e.updatedAt)}
               </p>
+             ${
+               e?.endDate
+                 ? ` <p>
+              -
+              </p>
+              <span class="material-symbols-outlined text-lg">
+                calendar_month
+              </span>
+              <p>
+              ${dateManipulator(e?.endDate)}
+              </p>`
+                 : ''
+             }
           </div>`
+              : ''
           }
+          </div>
           </div>
         `
         tabContainer.appendChild(newUpdate)
       })
       viewAll.href = `/template/index.html?id=0?category=${tabName}`
+    })
+    .catch((err) => {
+      console.log(err)
     })
 }

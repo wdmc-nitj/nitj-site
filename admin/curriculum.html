@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Curriculum</title>
     <style>
         .bg-accent {
@@ -34,7 +34,8 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
@@ -44,7 +45,7 @@
     <script src="/template/header.js" type="module"></script>
     <script src="/template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
-       
+
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
@@ -67,7 +68,7 @@
                     </li>
                 </ol>
             </nav>
-    </div>
+        </div>
 
         <div class="m-2">
             <div class="scroll-mt-32 flex flex-col lg:flex-row px-4 lg:px-[11%] gap-[32px] lg:gap-[64px]">
@@ -130,7 +131,7 @@
                             <script>
                                 var Course = document.getElementById("BTech");
                                 var Dept = document.getElementById("BT");
-                        
+
                                 function HandleCourse(CourseID) {
                                     Course.classList.remove('bg-[#0369a0]')
                                     Course = document.getElementById(CourseID);
@@ -149,30 +150,29 @@
                                 }
                                 async function api_call() {
                                     console.log(Dept.getAttribute('id').toLowerCase());
-                                    var data = await fetch(`http://localhost:8000/curriculum/getcurriculum/${Dept.getAttribute('id').toLowerCase()}`);
+                                    var data = await fetch(`https://wdmc-vsj1.onrender.com/curriculum/getcurriculum/${Dept.getAttribute('id').toLowerCase()}`);
                                     var result = await data.json();
 
                                     console.log(result);
-                                    if(document.getElementById('curriculum-data')){
+                                    if (document.getElementById('curriculum-data')) {
                                         document.getElementById('curriculum-data').remove();
                                     }
                                     const element = document.createElement('div');
-                                    element.setAttribute('class',"grid grid-cols-2 place-items-center mt-4");
-                                    element.setAttribute('id','curriculum-data');
-    
+                                    element.setAttribute('class', "grid grid-cols-2 place-items-center mt-4");
+                                    element.setAttribute('id', 'curriculum-data');
+
                                     for (var i in result) {
                                         var courseName = result[i]['courseName'];
                                         var departmentName = result[i]['departmentName'];
-                                        
 
 
 
                                         console.log(Course.getAttribute('id').toLowerCase(), Dept.getAttribute('id').toLowerCase());
 
-                                        if(courseName == Course.getAttribute('id').toLowerCase() && departmentName == Dept.getAttribute('id').toLowerCase()){
-                                            element.style.visibility =  "visible";
+                                        if (courseName == Course.getAttribute('id').toLowerCase() && departmentName == Dept.getAttribute('id').toLowerCase()) {
+                                            element.style.visibility = "visible";
 
-                                            
+
 
                                             element.innerHTML = `
                                             <a href="${result[i]['links']['after2022']}">
@@ -194,10 +194,10 @@
                                         
                                     </div></a>`
 
-                                        document.getElementById('curriculum-div').append(element);
+                                            document.getElementById('curriculum-div').append(element);
                                         }
 
-                                        else{
+                                        else {
                                             console.log(element);
                                             element.style.visibility = "hidden";
                                         }
@@ -211,7 +211,7 @@
             </div>
         </div>
     </div>
-    <script src="/template/footer.js"></script>
+    <script src="../template/footer.js"></script>
 </body>
 
 </html>

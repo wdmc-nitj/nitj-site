@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Master of Technology</title>
     <style>
         .bg-accent {
@@ -34,15 +34,16 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
 </head>
 
 <body>
-    <script src="/template/header.js" type="module"></script>
-    <script src="/template/helper.js"></script>
+    <script src="../template/header.js" type="module"></script>
+    <script src="../template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -70,7 +71,8 @@
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">masters of technology
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">masters of
+                    technology
                 </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -96,7 +98,7 @@
                 <div class="w-full flex flex-col items-start">
                     <p class="font2 font-medium text-[15px] lg:text-[40px]">Two years regular M.Tech Programmes (Through
                         CCMT)
-                        <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
                     </p>
                     <!-- <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div> -->
                 </div>
@@ -107,7 +109,7 @@
                 <div>
                     <!-- <p><span style="color:#B22222"><h1 class="text-lg my-4 font-medium text-[#B22222]">Two years regular M.Tech Programmes (Admission Through
                                 CCMT)</h1></span></p> -->
-                    <ul class="list-disc ml-8 mr-4 my-2" id="mtech-list-4">
+                    <ul class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6" id="mtech-list-4">
                         <script>
                             async function api_call() {
                                 var data = await fetch(
@@ -125,7 +127,7 @@
                                                 .getElementById("mtech-list-4")
                                                 .insertAdjacentHTML(
                                                     "beforeend",
-                                                    `<li><a href="${url}" class="x hover:text-blue-500">${title}</a></li>`
+                                                    `<li><a href="${url}" class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2">${title}</a></li>`
                                                 );
                                         }
                                     }
@@ -141,7 +143,7 @@
                         <span style="color:#B22222"><strong>Two years M.Tech Programmes (Self-Sponsored)</strong></span>
                     </p> -->
                     <p class="font2 font-medium text-[15px] lg:text-[40px]">Two years M.Tech Programmes (Self-Sponsored)
-                        <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
+                    <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
                     </p>
                     <ul class="list-disc ml-8 mr-4 my-2" id="mtech-list-2">
                         <script>
@@ -174,7 +176,7 @@
             </div>
         </div>
     </div>
-    <script src="/template/footer.js"></script>
+    <script src="../template/footer.js"></script>
 </body>
 
 </html>

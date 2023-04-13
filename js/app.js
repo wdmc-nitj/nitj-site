@@ -80,7 +80,6 @@ setTimeout(publicationCardsScroll, 1000)
 // Clubs Cards Auto Scroll
 
 setTimeout(clubsCardsScroll, 1000)
-// clubsCardsScroll()
 
 // Scroll to top Button
 

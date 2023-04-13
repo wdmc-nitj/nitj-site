@@ -82,12 +82,8 @@
 .ck-content table {
   display: table;
   border-collapse: collapse;
-  border-spacing: 2px;
-  border-color: hsla(201, 96%, 32%);
-  border-width: initial;
-  border-radius: 10px;
   margin-block: 1rem;
-  border-width: initial;
+  border: none;
 }
 
 .ck-content .table table td {
@@ -192,6 +188,10 @@
 .ck-content li {
   display: list-item;
   text-align: match-parent;
+}
+
+.ck-content li > * {
+  display: inline;
 }
 
 .ck-content ::marker {
