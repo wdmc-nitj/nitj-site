@@ -20,7 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS linking -->
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Frequently Asked Questions</title>
     <style>
         .bg-accent {
@@ -34,15 +34,16 @@
             background-position: center;
             background-size: cover;
         }
-        .font2{
+
+        .font2 {
             font-family: 'Barlow', sans-serif;
         }
     </style>
 </head>
 
 <body>
-    <script src="/template/header.js" type="module"></script>
-    <script src="/template/helper.js"></script>
+    <script src="../template/header.js" type="module"></script>
+    <script src="../template/helper.js"></script>
     <div class="main-body flex flex-col gap-8 lg:gap-12 pt-[112px] md:pt-[144px] lg:pt-[144px] lg:mb-32">
         <!-- <div>
             <div class="titlebg flex flex-col justify-center items-start h-[224px] px-4 lg:px-[11%] py-[48px]">
@@ -70,7 +71,8 @@
         <div class="titlebg">
             <div class="container flex flex-col justify-center items-start h-[224px] py-[48px]">
                 <!-- px-4 lg:px-[11%] -->
-                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Frequently asked questions
+                <p class="font2 font-bold text-[52px] lg:text-[68px] uppercase text-white leading-[1]">Frequently asked
+                    questions
                 </p>
             </div>
             <nav class="flex bg-gray-200 py-[8px] text-black" aria-label="Breadcrumb">
@@ -98,7 +100,7 @@
                     <div class="bg-accent w-[111px] h-[1px] lg:h-[5px]"></div>
                 </div> -->
                 <div class="flex-col justify-center align-center mr-[5%] lg:w-[80%] w-[100%] ml-8">
-                    <ul class="list-disc leading-8 " id="faq-links">
+                    <ul class="list-disc ml-5 text-accent flex flex-col mt-5 gap-6" id="faq-links">
                         <script>
                             async function api_call() {
                                 var data = await fetch(
@@ -124,7 +126,7 @@
                                             "beforeend",
                                             `<li>
                             <a href="${url}"
-                                target="_blank" class="hover:text-blue-500"> ${title}</a>
+                                target="_blank" class="underline underline-offset-4 decoration-accent decoration-0 hover:decoration-2"> ${title}</a>
                         </li>`
                                         );
                                 }
@@ -136,7 +138,7 @@
             </div>
         </div>
     </div>
-    <script src="/template/footer.js"></script>
+    <script src="../template/footer.js"></script>
 </body>
 
 </html>

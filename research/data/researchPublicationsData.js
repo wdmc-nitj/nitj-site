@@ -4,11 +4,11 @@ const loop = function (auths, authsLink) {
   for (let i = 0; i < auths.length; i++) {
     loopdata += `<a href="${authsLink[i]}" target="_blank">${auths[i]} </a> `;
   }
-  console.log(loopdata);
+  // console.log(loopdata);
   return loopdata;
 };
 
-fetch(`${data_url}` + '/research/publications/citedResearches/top10')
+fetch(`${data_url}` + "/research/publications/citedResearches/top10")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -51,7 +51,8 @@ fetch(`${data_url}` + '/research/publications/citedResearches/top10')
   });
 
 fetch(
-  `${data_url}` + '/research/publications/refereedResearches/get?visible=visible'
+  `${data_url}` +
+    "/research/publications/refereedResearches/get?visible=visible"
 )
   .then((response) => response.json())
   .then((data) => {

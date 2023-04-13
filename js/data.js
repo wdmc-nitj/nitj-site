@@ -17,7 +17,7 @@ fetch(`${baseURL}/news/`)
     const newsCards = document.getElementById('news-cards')
     newsCards.innerHTML = ''
     data.forEach((news) => {
-      console.log(news)
+      // console.log(news)
       const newsCard = document.createElement('div')
       newsCard.setAttribute(
         'class',
@@ -103,17 +103,17 @@ fetch(`${baseURL}/testimonial/get/all`)
       testimonialCard.setAttribute('class', 'text-xl flex flex-col gap-5')
       testimonialCard.innerHTML = `
         <div class='text-xl flex flex-col gap-5'>
-          <p class="line-clamp-3">
+          <p class="md:line-clamp-3">
             ${data[randNum].messageText}
           </p>
-          <div class="flex justify-between">
+          <div class="flex flex-col gap-4 md:flex-row justify-between">
             <div>
               <p class="text-lg font-bold text-accent">- ${data[randNum].name}</p>
               <p class="ml-2 text-sm text-gray-600 font-bold">${data[randNum].designation}</p>
             </div>
             <a
             target="_blank" 
-            href="/alumni/alumni.html" class="ml-auto text-base font-semibold bg-accent text-white hover:text-accent hover:ring-2 ring-inset ring-accent flex items-center hover:bg-white px-4 py-1 rounded-lg transition">
+            href="/alumni/alumni.html" class="md:ml-auto w-fit text-base font-semibold bg-accent text-white hover:text-accent hover:ring-2 ring-inset ring-accent flex items-center hover:bg-white px-4 py-1 rounded-lg transition">
               <span>Alumni Site &rarr;</span>
               
             </a>
@@ -357,8 +357,8 @@ fetch(`${baseURL}/placementStat/get/all`)
 fetch(`${baseURL}/publication`)
   .then((res) => res.json())
   .then((apidata) => {
-    const data = apidata
-    console.log(data)
+    const data = dataFilter(apidata)
+    // console.log(data)
     const parentDiv = document.getElementById('publication-cards')
     parentDiv.innerHTML = ''
     data.forEach((content) => {
@@ -439,7 +439,68 @@ fetch(`${baseURL}/club/get/all`)
 var size_images = 0
 var img_arr = []
 // Fetching the images in the photo gallery
+function load_more(){
+  fetch(`${baseURL}/photoGallery/`)
+  .then((res) => res.json())
+  .then((data) => {
+    // console.log(data)
 
+    const Images = data.sort((a, b) => 0.5 - Math.random())
+    const images = Images.filter((img) => {
+      return img.type === 'photoGallery'
+    })
+    images.sort((a, b) => 0.5 - Math.random())
+    size_images = images.length
+    img_arr = images
+    // const images = shuffledArray.slice(0,12)
+    // console.log(data)
+
+    const parentDiv = document.getElementById('gallery')
+    const firstRow = document.createElement('div')
+    const secondRow = document.createElement('div')
+    const thirdRow = document.createElement('div')
+    const rows = [firstRow, secondRow, thirdRow]
+    rows.map((row) => row.setAttribute('class', 'flex h-[22vh] w-full'))
+
+    let i = 0
+    let y = 1
+    images.forEach((img, key) => {
+      // img_arr.push(img.name)
+      // img_arr.push(img.link)
+      // img.link
+      if (y > 12) {
+        return
+      }
+      if (i > 2) {
+        i = 0
+      }
+
+      const imgContainer = document.createElement('div')
+      imgContainer.classList.add('box')
+      imgContainer.innerHTML = `
+        <img class= "gallery-image" data-index="${key}" src="${img.link}" />
+        `
+
+      if (y % 4 == 0 && window.innerWidth <= 800) {
+      } else {
+        rows[i].append(imgContainer)
+      }
+      imgContainer.addEventListener('click', (e) => {
+        const imgSample = document.getElementById('sample-img')
+
+        imgSample.src = e.srcElement.currentSrc
+        showImg()
+      })
+      i++
+      y++
+    })
+    parentDiv.append(firstRow, secondRow, thirdRow)
+  })
+  .finally(() => {
+    const loadingTemplate = document.getElementById('gallery-loading-template')
+    loadingTemplate.innerHTML = ''
+  })
+}
 fetch(`${baseURL}/photoGallery/`)
   .then((res) => res.json())
   .then((data) => {

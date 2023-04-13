@@ -78,7 +78,7 @@
               <p class="hidden sm:block pl-1.5 text-xs">Resources</p>
             </div>
           </a>
-          <a href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/21">
+          <a href="/admin/phonebook.html">
             <div class="flex items-center">
               <span class="material-symbols-outlined" style="
                       font-variation-settings: 'FILL' 0, 'wght' 200, 'grad' 0,
@@ -268,10 +268,12 @@
     <!-- NAV BAR ends-->
 </header>
 <!-- === Search bar starts === -->
-<div id="search_page" class="fixed inset-0 min-h-screen overflow-x-hidden overflow-y-auto z-[51] hidden w-full flex justify-center items-center flex-col gap-10 bg-slate-900/80 backdrop-blur-sm"
+<div id="search_page"
+  class="fixed inset-0 min-h-screen overflow-x-hidden overflow-y-auto z-[51] hidden w-full flex justify-center items-center flex-col gap-10 bg-slate-900/80 backdrop-blur-sm"
   onclick="showSearchPage(this)">
   <!-- <span aria-hidden="true" class="sr-only sm:w-1/2">ONLY for tailwindCSS</span> -->
-  <form id="search_form" class="sticky h-10 top-0 w-full z-[52]" onclick="showSearchPage(this)" onkeypress="checkEnter(event)" >
+  <form id="search_form" class="sticky h-10 top-0 w-full z-[52]" onclick="showSearchPage(this)"
+    onkeypress="checkEnter(event)">
     <div class="flex px-2 sm:px-28">
       <button id="dropdown-button" data-dropdown-toggle="dropdown"
         class="z-10 inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
@@ -323,7 +325,7 @@
         <input type="text" id="searchbar" onkeyup="search_resources()" onsubmit="showSearchPage(event)"
           class="z-20 block w-full rounded-r-lg border border-l-2 border-gray-300 border-l-gray-50 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:border-l-gray-700 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500"
           placeholder="Search Faculty, Books, Events, Researches..." required=" " />
-        <button type="button" onclick="display_resources()" 
+        <button type="button" onclick="display_resources()"
           class="material-symbols-outlined absolute top-0 right-0 rounded-r-lg border border-blue-700 bg-blue-700 p-1 text-2xl text-white hover:bg-blue-800">
           search
         </button>
@@ -331,10 +333,10 @@
     </div>
   </form>
   <div id="resources" class="relative z-[51] bg-transparent hidden flex flex-col p-2 items-center justify-center">
-       <div id="Big_alphabets" class="bg-transparent text-4xl font-bold"></div>
-       <div id="noresult" class="bg-transparent hidden top-44 text-2xl font-bold">
-          <div class="text-center text-white">No results found</div>
-          <div class="text-center text-white">Try searching something else</div>
-       </div>
+    <div id="Big_alphabets" class="bg-transparent text-4xl font-bold"></div>
+    <div id="noresult" class="bg-transparent hidden top-44 text-2xl font-bold">
+      <div class="text-center text-white">No results found</div>
+      <div class="text-center text-white">Try searching something else</div>
+    </div>
   </div>
 </div>

@@ -29,7 +29,7 @@ fetch(`${data_url}` + '/research/events/get?visible=visible&upcoming=true&catego
       <div class="flex flex-row lg:justify-start justify-center">
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           <!--time-->
-          <i class="far fa-clock"></i> ${formatTime(update.dateTime.substring(11,19))}
+          <i class="far fa-clock"></i> ${d.getHours()}:${d.getMinutes().toString().length==1? 0+d.getMinutes().toString():d.getMinutes()}${d.getHours()<12? "AM":"PM"}
         </div>
         <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
           Organiser : ${update.organiser}

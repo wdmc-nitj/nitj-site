@@ -62,23 +62,30 @@ export function publicationCardsScroll() {
 }
 
 // Clubs Cards scroll
-const clubsContainer = document.getElementById('clubs-and-socs')
+const clubsContainer = document.getElementById('clubs-and-socs-container')
 let clubsContainerTop = clubsContainer.scrollTop
-// let clubsDirection = true
+let clubsDirection = true
 
 export function clubsCardsScroll() {
-  let curr = 0
+  let currTop = clubsContainerTop
 
-  // let currTop = clubsContainerTop
-  // console.log('🎯', 'here', clubsContainer.scrollTop)
-  // {
-  curr = clubsContainer.scrollTop + 1
-
-  clubsContainer.scrollTop = curr
-  // }
-  // clubsContainerTop = curr
-
-  setTimeout(clubsCardsScroll, 15)
+  if (true) {
+    let curr = 0
+    if (clubsDirection) {
+      curr = clubsContainer.scrollTop + 1
+    } else {
+      curr = clubsContainer.scrollTop - 1
+    }
+    clubsContainer.scrollTop = curr
+    clubsContainerTop = curr
+  }
+  if (clubsContainerTop == currTop) {
+    clubsDirection = !clubsDirection
+  }
+  const timer = setTimeout(clubsCardsScroll, 15)
+  clubsContainer.addEventListener('mouseenter', () => {
+    clearTimeout(timer)
+  })
 }
 
 // Scroll to top Button
